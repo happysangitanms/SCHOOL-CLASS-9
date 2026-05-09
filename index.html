@@ -243,15 +243,20 @@
             overflow: hidden;
         }
 
-.subject-card[data-subject="SAHITYA_SURABHI"]  { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
-.subject-card[data-subject="ENGLISH_JASMINE"]  { background: linear-gradient(135deg, #0e7490 0%, #164e63 100%); }
-.subject-card[data-subject="GANITA_PRAKASHA"]  { background: linear-gradient(135deg, #b45309 0%, #78350f 100%); }
-.subject-card[data-subject="HINDI_KALIKA"]     { background: linear-gradient(135deg, #be185d 0%, #881337 100%); }
-.subject-card[data-subject="SANSKRIT_KALIKA"]  { background: linear-gradient(135deg, #0369a1 0%, #1e3a5f 100%); }
-.subject-card[data-subject="JIGYASHA"]         { background: linear-gradient(135deg, #1a6b3a 0%, #0d4a27 100%); }
-.subject-card[data-subject="SAMAJIKA_BIGYANA"] { background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%); }
-.subject-card[data-subject="KAUSALA_BODHA"]    { background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%); }
-.subject-card[data-subject="KRUTI"]            { background: linear-gradient(135deg, #a16207 0%, #713f12 100%); }
+.subject-card[data-subject="SAHITYA_DHARA"]      { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
+.subject-card[data-subject="ODIA_BYAKARANA"]     { background: linear-gradient(135deg, #0e7490 0%, #164e63 100%); }
+.subject-card[data-subject="ENGLISH"]            { background: linear-gradient(135deg, #b45309 0%, #78350f 100%); }
+.subject-card[data-subject="ENGLISH_BYAKARANA"]  { background: linear-gradient(135deg, #be185d 0%, #881337 100%); }
+.subject-card[data-subject="HINDI_MANJARI"]      { background: linear-gradient(135deg, #0369a1 0%, #1e3a5f 100%); }
+.subject-card[data-subject="HINDI_BYAKARANA"]    { background: linear-gradient(135deg, #1a6b3a 0%, #0d4a27 100%); }
+.subject-card[data-subject="SANSKRUTA"]          { background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%); }
+.subject-card[data-subject="SANSKRUTA_BYAKARAN"] { background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%); }
+.subject-card[data-subject="BIJAGANITA"]         { background: linear-gradient(135deg, #a16207 0%, #713f12 100%); }
+.subject-card[data-subject="JYAMITI"]            { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
+.subject-card[data-subject="JIBA_BIGYANA"]       { background: linear-gradient(135deg, #0e7490 0%, #164e63 100%); }
+.subject-card[data-subject="BHAUTIKA_BIGYANA"]   { background: linear-gradient(135deg, #b45309 0%, #78350f 100%); }
+.subject-card[data-subject="ITIHASA"]            { background: linear-gradient(135deg, #be185d 0%, #881337 100%); }
+.subject-card[data-subject="BHUGOLA"]            { background: linear-gradient(135deg, #0369a1 0%, #1e3a5f 100%); }
 
 
         .subject-card::before {
@@ -514,39 +519,54 @@
        DATA
     ════════════════════════════════════════════ */
 const subjects = {
-    'SAHITYA_SURABHI':   { name: 'ସାହିତ୍ୟ ସୁରଭି',      fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
-    'ENGLISH_JASMINE':   { name: 'ଇଂରାଜୀ ଜାସ୍ମିନ୍',    fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
-    'GANITA_PRAKASHA':   { name: 'ଗଣିତ ପ୍ରକାଶ',         fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
-    'HINDI_KALIKA':      { name: 'ହିନ୍ଦୀ କଳିକା',        fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
-    'SANSKRIT_KALIKA':   { name: 'ସଂସ୍କୃତ କଳିକା',       fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
-    'JIGYASHA':          { name: 'ଜିଜ୍ଞାଷା',             fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
-    'SAMAJIKA_BIGYANA':  { name: 'ସାମାଜିକ ବିଜ୍ଞାନ',     fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
-    'KAUSALA_BODHA':     { name: 'କୌଶଳ ବୋଧ',            fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
-    'KRUTI':             { name: 'କୃତି',                 fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' }
+    'SAHITYA_DHARA':        { name: 'ସାହିତ୍ୟ ଧାରା',              fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'ODIA_BYAKARANA':       { name: 'ଓଡ଼ିଆ ବ୍ୟାକରଣ',             fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'ENGLISH':              { name: 'ଇଂରାଜୀ',                     fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'ENGLISH_BYAKARANA':    { name: 'ଇଂରାଜୀ ବ୍ୟାକରଣ',            fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'HINDI_MANJARI':        { name: 'ହିନ୍ଦୀ ମଞ୍ଜରୀ',             fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'HINDI_BYAKARANA':      { name: 'ହିନ୍ଦୀ ବ୍ୟାକରଣ ଓ ପ୍ରୟୋଗ',  fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SANSKRUTA':            { name: 'ସଂସ୍କୃତ',                    fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SANSKRUTA_BYAKARAN':   { name: 'ସଂସ୍କୃତ ବ୍ୟାକରଣ',           fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'BIJAGANITA':           { name: 'ବୀଜଗଣିତ',                    fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'JYAMITI':              { name: 'ଜ୍ୟାମିତି',                   fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'JIBA_BIGYANA':         { name: 'ଜୀବ ବିଜ୍ଞାନ',                fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'BHAUTIKA_BIGYANA':     { name: 'ଭୌତିକ ବିଜ୍ଞାନ',              fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'ITIHASA':              { name: 'ଇତିହାସ',                     fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'BHUGOLA':              { name: 'ଭୂଗୋଳ',                      fullName: 'ନବମ ଶ୍ରେଣୀ' }
 };
 
 const classNames = {
-    'SAHITYA_SURABHI-1':  'ପାଠ-୧',
-    'ENGLISH_JASMINE-1':  'ପାଠ-୧',
-    'GANITA_PRAKASHA-1':  'ପାଠ-୧',
-    'HINDI_KALIKA-1':     'ପାଠ-୧',
-    'SANSKRIT_KALIKA-1':  'ପାଠ-୧',
-    'JIGYASHA-1':         'ପାଠ-୧',
-    'SAMAJIKA_BIGYANA-1': 'ପାଠ-୧',
-    'KAUSALA_BODHA-1':    'ପାଠ-୧',
-    'KRUTI-1':            'ପାଠ-୧',
+    'SAHITYA_DHARA-1':       'ପାଠ-୧',
+    'ODIA_BYAKARANA-1':      'ପାଠ-୧',
+    'ENGLISH-1':             'ପାଠ-୧',
+    'ENGLISH_BYAKARANA-1':   'ପାଠ-୧',
+    'HINDI_MANJARI-1':       'ପାଠ-୧',
+    'HINDI_BYAKARANA-1':     'ପାଠ-୧',
+    'SANSKRUTA-1':           'ପାଠ-୧',
+    'SANSKRUTA_BYAKARAN-1':  'ପାଠ-୧',
+    'BIJAGANITA-1':          'ପାଠ-୧',
+    'JYAMITI-1':             'ପାଠ-୧',
+    'JIBA_BIGYANA-1':        'ପାଠ-୧',
+    'BHAUTIKA_BIGYANA-1':    'ପାଠ-୧',
+    'ITIHASA-1':             'ପାଠ-୧',
+    'BHUGOLA-1':             'ପାଠ-୧',
 };
 
 const classSchedule = {
-    'SAHITYA_SURABHI-1':  { available: true },
-    'ENGLISH_JASMINE-1':  { available: true },
-    'GANITA_PRAKASHA-1':  { available: true },
-    'HINDI_KALIKA-1':     { available: true },
-    'SANSKRIT_KALIKA-1':  { available: true },
-    'JIGYASHA-1':         { available: true },
-    'SAMAJIKA_BIGYANA-1': { available: true },
-    'KAUSALA_BODHA-1':    { available: true },
-    'KRUTI-1':            { available: true },
+    'SAHITYA_DHARA-1':       { available: true },
+    'ODIA_BYAKARANA-1':      { available: true },
+    'ENGLISH-1':             { available: true },
+    'ENGLISH_BYAKARANA-1':   { available: true },
+    'HINDI_MANJARI-1':       { available: true },
+    'HINDI_BYAKARANA-1':     { available: true },
+    'SANSKRUTA-1':           { available: true },
+    'SANSKRUTA_BYAKARAN-1':  { available: true },
+    'BIJAGANITA-1':          { available: true },
+    'JYAMITI-1':             { available: true },
+    'JIBA_BIGYANA-1':        { available: true },
+    'BHAUTIKA_BIGYANA-1':    { available: true },
+    'ITIHASA-1':             { available: true },
+    'BHUGOLA-1':             { available: true },
 };
     /* ════════════════════════════════════════════
        STATE
