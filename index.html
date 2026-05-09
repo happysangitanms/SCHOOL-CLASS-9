@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Classes - Index</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Odisha e-Guru">
+    <meta name="theme-color" content="#667eea">
+    <link rel="apple-touch-icon" href="./icon-192.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 12px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 16px 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ── Logo ── */
+        .logo-wrap { text-align: center; margin-bottom: 10px; }
+        .logo-wrap img { width: 200px; max-width: 80%; height: auto; }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 0.85em;
+            font-weight: 900;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 600px) {
+            h1 { font-size: 1.1em; }
+        }
+
+        @media (min-width: 900px) {
+            h1 { font-size: 1.4em; }
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 12px;
+            font-size: 0.85em;
+        }
+
+        .search-box {
+            margin-bottom: 16px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s;
+            background: #f9fafb;
+        }
+
+        .search-box input:focus {
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        /* ── Clone / Selected Class Card ── */
+        .clone-container {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: none;
+            animation: slideDown 0.4s ease-out;
+        }
+
+        .clone-container.active {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 20px rgba(245,158,11,0.6), 0 0 0 0 rgba(245,158,11,0.7); }
+            50%       { box-shadow: 0 8px 30px rgba(245,158,11,0.8), 0 0 0 15px rgba(245,158,11,0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-8px); }
+        }
+
+        @keyframes shimmer {
+            0%   { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes rotateBorder {
+            to { transform: rotate(360deg); }
+        }
+
+        .clone-card {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+            border-radius: 14px;
+            padding: 20px 16px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: pulse 2s infinite, bounce 1.5s ease-in-out infinite;
+            box-shadow: 0 8px 20px rgba(59,130,246,0.6);
+            border: 3px solid rgba(255,255,255,0.6);
+            overflow: hidden;
+        }
+
+        .clone-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        .clone-card::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 14px;
+            padding: 3px;
+            background: linear-gradient(45deg, #f59e0b, #eab308, #f59e0b, #eab308);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rotateBorder 3s linear infinite;
+            z-index: -1;
+        }
+
+        .clone-card:active { transform: scale(0.98); }
+
+        .clone-instruction {
+            font-size: 0.75em; margin-bottom: 8px; font-weight: 600;
+            opacity: 0.95; letter-spacing: 0.5px; text-transform: uppercase;
+            background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px;
+        }
+
+        .clone-number {
+            font-size: 0.95em; font-weight: 700; margin-bottom: 6px;
+            opacity: 0.95; letter-spacing: 0.8px; text-transform: uppercase;
+        }
+
+        .clone-title {
+            font-size: 1.4em; font-weight: 700;
+            letter-spacing: 0.2px; line-height: 1.25; margin-bottom: 8px;
+        }
+
+        .clone-prompt {
+            font-size: 0.8em; font-weight: 500; opacity: 0.95; margin-top: 6px;
+            padding: 6px 14px; background: rgba(255,255,255,0.25);
+            border-radius: 8px; display: inline-block;
+        }
+
+        .clone-card .click-feedback {
+            position: absolute; inset: 0;
+            background: rgba(0,0,0,0.5); border-radius: 14px;
+            display: flex; justify-content: center; align-items: center;
+            opacity: 0; transform: scale(0.8); transition: all 0.3s ease;
+        }
+
+        .clone-card .click-feedback::before {
+            content: ''; width: 120px; height: 120px; background: white;
+            border-radius: 50%; position: absolute;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+
+        .clone-card .click-feedback::after {
+            content: ''; width: 30px; height: 60px;
+            border: solid #10b981; border-width: 0 8px 8px 0;
+            transform: rotate(45deg); display: block; z-index: 1;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .clone-card.clicked .click-feedback {
+            opacity: 1; transform: scale(1);
+        }
+
+        /* ── Main Grid ── */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        /* ── Subject Cards ── */
+        .subject-card {
+            border-radius: 16px;
+            padding: 18px 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 130px;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255,255,255,0.4);
+            overflow: hidden;
+        }
+
+.subject-card[data-subject="SAHITYA_SURABHI"]  { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
+.subject-card[data-subject="ENGLISH_JASMINE"]  { background: linear-gradient(135deg, #0e7490 0%, #164e63 100%); }
+.subject-card[data-subject="GANITA_PRAKASHA"]  { background: linear-gradient(135deg, #b45309 0%, #78350f 100%); }
+.subject-card[data-subject="HINDI_KALIKA"]     { background: linear-gradient(135deg, #be185d 0%, #881337 100%); }
+.subject-card[data-subject="SANSKRIT_KALIKA"]  { background: linear-gradient(135deg, #0369a1 0%, #1e3a5f 100%); }
+.subject-card[data-subject="JIGYASHA"]         { background: linear-gradient(135deg, #1a6b3a 0%, #0d4a27 100%); }
+.subject-card[data-subject="SAMAJIKA_BIGYANA"] { background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%); }
+.subject-card[data-subject="KAUSALA_BODHA"]    { background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%); }
+.subject-card[data-subject="KRUTI"]            { background: linear-gradient(135deg, #a16207 0%, #713f12 100%); }
+
+
+        .subject-card::before {
+            content: '';
+            position: absolute; top: -50%; right: -10%;
+            width: 150px; height: 150px;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* ── Code-2 feature: active tap animation for subject cards ── */
+        .subject-card:active {
+            transform: scale(0.96);
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+            box-shadow: 0 6px 20px rgba(29,78,216,0.5);
+        }
+
+        .subject-name      { font-size: 1.2em; font-weight: 900; letter-spacing: 0.3px; margin-bottom: 6px; line-height: 1.2; }
+        .subject-full-name { font-size: 1.0em; opacity: 0.95; font-weight: 700; line-height: 1.3; margin-top: 2px; }
+
+        /* ── Code-2 feature: subject count badge ── */
+        .subject-count {
+            margin-top: 8px;
+            font-size: 0.68em;
+            font-weight: 700;
+            background: rgba(255,255,255,0.25);
+            padding: 3px 10px;
+            border-radius: 12px;
+        }
+
+        /* ── Class Cards — updated to Code-2's deep-blue style ── */
+        .class-card {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+            border-radius: 14px;
+            padding: 16px 12px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 110px;
+            position: relative;
+            box-shadow: 0 6px 18px rgba(102,126,234,0.35);
+            border: 3px solid rgba(255,255,255,0.4);
+            overflow: hidden;
+        }
+
+        /* Code-2 radial glow inside class card */
+        .class-card::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -8%;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* Code-2 feature: active tap animation for class cards */
+        .class-card:active {
+            transform: scale(0.96);
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+            box-shadow: 0 6px 20px rgba(29,78,216,0.5);
+        }
+
+        .class-card.locked {
+            background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+            cursor: default;
+            box-shadow: 0 4px 12px rgba(156,163,175,0.3);
+        }
+
+        .class-card.selected {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 6px 16px rgba(16,185,129,0.4);
+        }
+
+        /* Code-2 style: pill badge for class number */
+        .class-number {
+            font-size: 0.72em;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            background: rgba(255,255,255,0.25);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+
+        .class-title     { font-size: 1.0em; font-weight: 700; letter-spacing: 0.2px; line-height: 1.3; padding: 0 4px; }
+        .lock-icon       { font-size: 1.3em; margin-bottom: 4px; }
+        .checkmark       { font-size: 1em; margin-left: 6px; }
+
+        .scheduled-message { font-size: 0.6em; margin-top: 6px; opacity: 0.95; line-height: 1.2; font-weight: 500; }
+        .countdown         { font-size: 0.65em; margin-top: 5px; font-weight: 700; background: rgba(255,255,255,0.25); padding: 3px 8px; border-radius: 5px; display: inline-block; letter-spacing: 0.3px; }
+
+        /* ── Code-2 feature: Coming Soon card ── */
+        .class-card.coming-soon {
+            background: linear-gradient(135deg, #1e3a8a 0%, #374151 100%);
+            box-shadow: 0 4px 12px rgba(100,116,139,0.3);
+            cursor: default;
+            border: 3px dashed rgba(255,255,255,0.45);
+        }
+
+        .coming-icon { font-size: 1.6em; margin-bottom: 6px; }
+        .coming-text { font-size: 0.78em; font-weight: 700; opacity: 0.9; line-height: 1.5; }
+
+        /* ── Misc ── */
+        .no-results { text-align: center; padding: 40px 20px; color: #9ca3af; font-size: 0.95em; display: none; }
+
+        .back-button {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 30px; padding: 12px 24px;
+            text-decoration: none; color: white; font-weight: 700; font-size: 16px;
+            box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 16px; border: none; cursor: pointer;
+        }
+
+        .back-button:active { transform: scale(0.95); }
+        .back-icon { font-size: 20px; }
+
+        .button-container { text-align: center; margin-bottom: 8px; }
+
+        /* ── PWA Modal ── */
+        .pwa-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.75); z-index: 9000;
+            justify-content: center; align-items: center; padding: 20px;
+        }
+        .pwa-overlay.active { display: flex; }
+
+        .pwa-box {
+            background: white; border-radius: 24px; padding: 32px 24px;
+            max-width: 340px; width: 100%; text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1);
+            border: 3px solid rgba(102,126,234,0.3);
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.88); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
+        }
+
+        .pwa-icon  { font-size: 3em; margin-bottom: 10px; }
+        .pwa-title { color: #667eea; font-size: 1.4em; font-weight: 900; margin-bottom: 8px; }
+        .pwa-sub   { color: #764ba2; font-size: 0.85em; font-weight: 700; margin-bottom: 18px; line-height: 1.5; }
+
+        .pwa-install {
+            display: block; width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; border: none; padding: 15px; border-radius: 14px;
+            font-size: 1em; font-weight: 800; cursor: pointer; margin-bottom: 10px;
+            box-shadow: 0 4px 15px rgba(102,126,234,0.5);
+        }
+
+        .pwa-dismiss {
+            background: none; border: none; color: #aaa;
+            font-size: 0.85em; cursor: pointer; padding: 8px; text-decoration: underline;
+        }
+
+        /* ── PWA Floating Button ── */
+        #pwaBtn {
+            display: none; position: fixed; bottom: 20px;
+            left: 50%; transform: translateX(-50%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; border: none; padding: 14px 28px;
+            border-radius: 25px; font-size: 15px; font-weight: 700; cursor: pointer;
+            box-shadow: 0 6px 20px rgba(102,126,234,0.5); z-index: 9999; white-space: nowrap;
+        }
+
+        /* ── Responsive ── */
+        @media (min-width: 600px) {
+            .container { padding: 28px 22px; max-width: 700px; }
+            .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .subject-card { min-height: 160px; padding: 28px 20px; }
+            .class-card   { min-height: 130px; padding: 20px 16px; }
+        }
+
+        @media (min-width: 900px) {
+            .container    { max-width: 1000px; padding: 40px; }
+            .grid         { gap: 18px; }
+            .subject-card { min-height: 180px; }
+            .subject-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+            .class-card:hover   { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(102,126,234,0.4); }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- ── PWA Install Modal ── -->
+<div class="pwa-overlay" id="pwaModal">
+    <div class="pwa-box">
+        <div class="pwa-icon">📲</div>
+        <h2 class="pwa-title">Install App</h2>
+        <p class="pwa-sub">Install this app on your device for quick and easy access anytime!</p>
+        <button class="pwa-install" onclick="doInstall()">⬇️ Install Now</button>
+        <button class="pwa-dismiss" onclick="dismissPwa()">Not Now</button>
+    </div>
+</div>
+
+<!-- ── PWA Floating Button ── -->
+<button id="pwaBtn" onclick="doInstall()">⬇️ Install App</button>
+
+<div class="container">
+
+    <div class="clone-container" id="cloneContainer">
+        <a href="#" class="clone-card" id="cloneCard">
+            <div class="clone-instruction">👆 Click to Enter</div>
+            <div class="clone-number">Class 1</div>
+            <div class="clone-title">Introduction</div>
+            <div class="clone-prompt">Tap here to open classroom →</div>
+        </a>
+    </div>
+
+    <!-- ── Code-2 feature: Logo ── -->
+    <div class="logo-wrap">
+        <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/LOGO.png"
+             alt="E-Vidya Academy"
+             onerror="this.style.display='none'">
+    </div>
+
+    <h1>📚 Supplementary Material 📚<br>
+        Digital Classes for Class-9 Students<br>
+        🌹 E-Vidya Academy 🌹<br>
+    </h1>
+
+
+
+    <div class="button-container">
+        <button class="back-button" id="backButton" style="display:none;">
+            <span class="back-icon">←</span>
+            <span id="backButtonText">Back</span>
+        </button>
+    </div>
+
+    <p class="subtitle" id="subtitle">Select a subject to begin</p>
+
+    <div class="search-box">
+        <input type="text" id="searchInput"
+               placeholder="🔍 Search for a class or subject..."
+               autocomplete="off">
+    </div>
+
+    <div class="grid" id="mainGrid"></div>
+
+    <div class="no-results" id="noResults">
+        No results found matching your search.
+    </div>
+
+</div><!-- /container -->
+
+<script>
+    /* ════════════════════════════════════════════
+       DATA
+    ════════════════════════════════════════════ */
+const subjects = {
+    'SAHITYA_SURABHI':   { name: 'ସାହିତ୍ୟ ସୁରଭି',      fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
+    'ENGLISH_JASMINE':   { name: 'ଇଂରାଜୀ ଜାସ୍ମିନ୍',    fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
+    'GANITA_PRAKASHA':   { name: 'ଗଣିତ ପ୍ରକାଶ',         fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
+    'HINDI_KALIKA':      { name: 'ହିନ୍ଦୀ କଳିକା',        fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
+    'SANSKRIT_KALIKA':   { name: 'ସଂସ୍କୃତ କଳିକା',       fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
+    'JIGYASHA':          { name: 'ଜିଜ୍ଞାଷା',             fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
+    'SAMAJIKA_BIGYANA':  { name: 'ସାମାଜିକ ବିଜ୍ଞାନ',     fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
+    'KAUSALA_BODHA':     { name: 'କୌଶଳ ବୋଧ',            fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' },
+    'KRUTI':             { name: 'କୃତି',                 fullName: 'ଅଷ୍ଟମ ଶ୍ରେଣୀ' }
+};
+
+const classNames = {
+    'SAHITYA_SURABHI-1':  'ପାଠ-୧',
+    'ENGLISH_JASMINE-1':  'ପାଠ-୧',
+    'GANITA_PRAKASHA-1':  'ପାଠ-୧',
+    'HINDI_KALIKA-1':     'ପାଠ-୧',
+    'SANSKRIT_KALIKA-1':  'ପାଠ-୧',
+    'JIGYASHA-1':         'ପାଠ-୧',
+    'SAMAJIKA_BIGYANA-1': 'ପାଠ-୧',
+    'KAUSALA_BODHA-1':    'ପାଠ-୧',
+    'KRUTI-1':            'ପାଠ-୧',
+};
+
+const classSchedule = {
+    'SAHITYA_SURABHI-1':  { available: true },
+    'ENGLISH_JASMINE-1':  { available: true },
+    'GANITA_PRAKASHA-1':  { available: true },
+    'HINDI_KALIKA-1':     { available: true },
+    'SANSKRIT_KALIKA-1':  { available: true },
+    'JIGYASHA-1':         { available: true },
+    'SAMAJIKA_BIGYANA-1': { available: true },
+    'KAUSALA_BODHA-1':    { available: true },
+    'KRUTI-1':            { available: true },
+};
+    /* ════════════════════════════════════════════
+       STATE
+    ════════════════════════════════════════════ */
+    let viewMode = 'subjects';
+    let selectedSubject = null;
+    let selectedClass = null;
+
+    /* ════════════════════════════════════════════
+       HELPERS
+    ════════════════════════════════════════════ */
+    function parseDate(dateStr) {
+        return new Date(dateStr.replace(' ', 'T'));
+    }
+
+    function getTimeRemaining(releaseDate) {
+        const diff = parseDate(releaseDate) - new Date();
+        if (diff <= 0) return null;
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        return d > 0 ? `${d}d ${h}h` : h > 0 ? `${h}h ${m}m` : `${m}m`;
+    }
+
+    function formatReleaseDate(dateStr) {
+        return parseDate(dateStr).toLocaleString('en-US', { month:'short', day:'numeric', hour:'numeric', minute:'2-digit', hour12:true });
+    }
+
+    function isClassAvailable(classKey) {
+        const s = classSchedule[classKey];
+        if (!s) return true;
+        if (s.available) return true;
+        if (s.releaseDate) return new Date() >= parseDate(s.releaseDate);
+        return true;
+    }
+
+    /* ════════════════════════════════════════════
+       CARD BUILDERS
+    ════════════════════════════════════════════ */
+
+    /* ── Code-2 feature: count available classes per subject ── */
+    function countAvailableClasses(subjectKey) {
+        return Object.keys(classNames)
+            .filter(k => k.startsWith(subjectKey + '-') && isClassAvailable(k))
+            .length;
+    }
+
+    function createSubjectCard(subjectKey) {
+        const sub   = subjects[subjectKey];
+        const count = countAvailableClasses(subjectKey);
+
+        const card = document.createElement('div');
+        card.className = 'subject-card';
+        card.setAttribute('data-subject', subjectKey);
+        card.setAttribute('data-search', (sub.name + ' ' + sub.fullName).toLowerCase());
+        card.onclick = () => showClasses(subjectKey);
+
+        /* Code-2 feature: count badge added below full name */
+        card.innerHTML = `
+            <div class="subject-name">${sub.name}</div>
+            <div class="subject-full-name">(${sub.fullName})</div>
+            <div class="subject-count">${count} Class${count !== 1 ? 'es' : ''} Available</div>
+        `;
+        return card;
+    }
+
+    function createClassCard(subjectKey, classNum) {
+        const classKey  = `${subjectKey}-${classNum}`;
+        const className = classNames[classKey] || `Class ${classNum}`;
+        const schedule  = classSchedule[classKey];
+        const available = isClassAvailable(classKey);
+
+        const card = document.createElement('div');
+        card.className = 'class-card';
+        card.setAttribute('data-class', classKey);
+        card.setAttribute('data-name', className);
+        card.setAttribute('data-search', ('class ' + classNum + ' ' + className).toLowerCase());
+
+        if (available) {
+            card.onclick = () => showCloneCard(subjectKey, classNum, className);
+            if (selectedClass === classKey) card.classList.add('selected');
+            card.innerHTML = `
+                <div class="class-number">Class ${classNum}</div>
+                <div class="class-title">${className}${selectedClass === classKey ? '<span class="checkmark">✓</span>' : ''}</div>
+            `;
+        } else {
+            card.classList.add('locked');
+            const countdown = getTimeRemaining(schedule.releaseDate);
+            card.innerHTML = `
+                <div class="lock-icon">🔒</div>
+                <div class="class-number">Class ${classNum}</div>
+                <div class="class-title">${className}</div>
+                <div class="scheduled-message">Available on<br>${formatReleaseDate(schedule.releaseDate)}</div>
+                ${countdown ? `<div class="countdown">⏱️ ${countdown}</div>` : ''}
+            `;
+        }
+        return card;
+    }
+
+    /* ── Code-2 feature: Coming Soon placeholder card ── */
+    function createComingSoonCard() {
+        const div = document.createElement('div');
+        div.className = 'class-card coming-soon';
+        div.innerHTML = `
+            <div class="coming-icon">🔜</div>
+            <div class="class-number">Next Class</div>
+            <div class="coming-text">Coming Soon<br>ଶୀଘ୍ର ଆସୁଛି...</div>
+        `;
+        return div;
+    }
+
+    /* ════════════════════════════════════════════
+       VIEW: SUBJECTS
+    ════════════════════════════════════════════ */
+    function showSubjects() {
+        viewMode = 'subjects';
+        selectedSubject = null;
+        selectedClass = null;
+
+        document.getElementById('subtitle').textContent = 'Select a subject to begin';
+        document.getElementById('backButton').style.display = 'none';
+        document.getElementById('cloneContainer').classList.remove('active');
+        document.getElementById('searchInput').value = '';
+        document.getElementById('noResults').style.display = 'none';
+
+        const grid = document.getElementById('mainGrid');
+        grid.innerHTML = '';
+        for (const key in subjects) grid.appendChild(createSubjectCard(key));
+    }
+
+    /* ════════════════════════════════════════════
+       VIEW: CLASSES
+    ════════════════════════════════════════════ */
+    function showClasses(subjectKey) {
+        viewMode = 'classes';
+        selectedSubject = subjectKey;
+
+        const sub = subjects[subjectKey];
+        document.getElementById('subtitle').textContent = sub.fullName;
+        document.getElementById('backButton').style.display = 'inline-flex';
+        document.getElementById('backButtonText').textContent = 'Back to Subjects';
+        document.getElementById('cloneContainer').classList.remove('active');
+        document.getElementById('searchInput').value = '';
+        document.getElementById('noResults').style.display = 'none';
+
+        const grid = document.getElementById('mainGrid');
+        grid.innerHTML = '';
+
+        Object.keys(classNames)
+            .filter(k => k.startsWith(subjectKey + '-'))
+            .forEach(k => {
+                const num = k.split('-').pop();
+                grid.appendChild(createClassCard(subjectKey, num));
+            });
+
+        /* ── Code-2 feature: always append Coming Soon card at the end ── */
+        grid.appendChild(createComingSoonCard());
+    }
+
+    /* ════════════════════════════════════════════
+       SHOW CLONE / ENTRY CARD
+    ════════════════════════════════════════════ */
+    function showCloneCard(subjectKey, classNum, className) {
+        const classKey = `${subjectKey}-${classNum}`;
+        selectedClass = classKey;
+
+        document.querySelectorAll('.class-card').forEach(c => c.classList.remove('selected'));
+        const sel = document.querySelector(`[data-class="${classKey}"]`);
+        if (sel) sel.classList.add('selected');
+
+        const oldCard = document.getElementById('cloneCard');
+        const newCard = oldCard.cloneNode(false);
+        oldCard.parentNode.replaceChild(newCard, oldCard);
+
+        newCard.href = `./${subjectKey}/CLASS-${classNum}/`;
+        newCard.innerHTML = `
+            <div class="clone-instruction">👆 Click to Enter</div>
+            <div class="clone-number">${subjectKey} - Class ${classNum}</div>
+            <div class="clone-title">${className}</div>
+            <div class="clone-prompt">Tap here to open classroom →</div>
+        `;
+
+        newCard.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!this.querySelector('.click-feedback')) {
+                const fb = document.createElement('div');
+                fb.className = 'click-feedback';
+                this.appendChild(fb);
+            }
+            this.classList.add('clicked');
+            setTimeout(() => {
+                this.classList.remove('clicked');
+                window.location.href = this.href;
+            }, 500);
+        });
+
+        document.getElementById('cloneContainer').classList.add('active');
+        setTimeout(() => {
+            document.getElementById('cloneContainer').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+    }
+
+    /* ════════════════════════════════════════════
+       BACK BUTTON
+    ════════════════════════════════════════════ */
+    document.getElementById('backButton').addEventListener('click', e => {
+        e.preventDefault();
+        showSubjects();
+    });
+
+    /* ════════════════════════════════════════════
+       SEARCH
+    ════════════════════════════════════════════ */
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        const noResults = document.getElementById('noResults');
+
+        if (!q) {
+            document.querySelectorAll('[data-search]').forEach(c => c.style.display = '');
+            noResults.style.display = 'none';
+            return;
+        }
+
+        let found = 0;
+        document.querySelectorAll('[data-search]').forEach(c => {
+            const match = c.getAttribute('data-search').includes(q);
+            c.style.display = match ? '' : 'none';
+            if (match) found++;
+        });
+        noResults.style.display = found ? 'none' : 'block';
+    });
+
+    /* ════════════════════════════════════════════
+       AUTO-REFRESH COUNTDOWN (every 60s)
+    ════════════════════════════════════════════ */
+    setInterval(() => {
+        if (viewMode === 'classes') showClasses(selectedSubject);
+    }, 60000);
+
+    /* ════════════════════════════════════════════
+       PWA
+    ════════════════════════════════════════════ */
+    let deferredPrompt;
+
+    window.addEventListener('beforeinstallprompt', e => {
+        e.preventDefault();
+        deferredPrompt = e;
+        document.getElementById('pwaBtn').style.display = 'block';
+        setTimeout(() => document.getElementById('pwaModal').classList.add('active'), 2500);
+    });
+
+    function doInstall() {
+        dismissPwa();
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(r => {
+                if (r.outcome === 'accepted') document.getElementById('pwaBtn').style.display = 'none';
+                deferredPrompt = null;
+            });
+        }
+    }
+
+ 
+    function dismissPwa() {
+        document.getElementById('pwaModal').classList.remove('active');
+    }
+
+    window.addEventListener('appinstalled', () => {
+        document.getElementById('pwaBtn').style.display = 'none';
+        dismissPwa();
+        deferredPrompt = null;
+    });
+
+    /* ════════════════════════════════════════════
+       SERVICE WORKER
+    ════════════════════════════════════════════ */
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then(r => console.log('SW registered:', r.scope))
+                .catch(e => console.log('SW error:', e));
+        });
+    }
+
+    /* ════════════════════════════════════════════
+       INIT
+    ════════════════════════════════════════════ */
+    showSubjects();
+</script>
+
+</body>
+</html>
