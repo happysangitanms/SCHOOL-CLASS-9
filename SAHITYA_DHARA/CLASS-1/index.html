@@ -9399,7 +9399,7 @@ function sbLessonMenu(){
     var b = document.createElement('button');
     b.className = 'sb-btn sb-pop';
     b.textContent = item.label;
-    b.style.cssText = 'font-size:11px; padding:10px 8px; line-height:1.4; text-align:center;';
+   b.style.cssText = 'font-size:13px; padding:12px 10px; line-height:1.5; text-align:center; min-height:60px;';
     b.onclick = function(){
       Array.from(grp.querySelectorAll('button')).forEach(function(x){ x.disabled = true; });
       addUser(LESSONS[idx].heading);
