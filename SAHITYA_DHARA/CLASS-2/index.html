@@ -2092,6 +2092,26 @@ body > div:first-child {
     touch-action: pan-y;
     will-change: transform;
 }
+
+   /* ===== Q&A-ONLY CLASSROOM MODE ===== */
+
+/* Hide "Chitra-Note" + "Pathya-Note" buttons at top */
+div:has(> button[onclick="openBookSlideshow()"]) { display: none !important; }
+
+/* Hide "Blackboard lesson" + "Exam" toggle buttons (exam now shows directly) */
+div:has(> #showLessonBtn) { display: none !important; }
+
+/* Hide "New word" + "Mind diagram" buttons */
+div:has(> #wordBtn) { display: none !important; }
+
+/* Hide "Image" + "Study Bot chat" buttons */
+div:has(> button[onclick="openImageModal()"]) { display: none !important; }
+
+/* Hide the Translator / e-Vidya Assistant dropdown menu */
+.assistant-dropdown-wrapper { display: none !important; }
+
+/* Force the exam/test buttons section to show immediately on page load */
+#examButtonsContainer { display: block !important; }     
     </style>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
