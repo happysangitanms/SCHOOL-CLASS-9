@@ -2111,7 +2111,26 @@ div:has(> button[onclick="openImageModal()"]) { display: none !important; }
 .assistant-dropdown-wrapper { display: none !important; }
 
 /* Force the exam/test buttons section to show immediately on page load */
-#examButtonsContainer { display: block !important; }     
+#examButtonsContainer { display: block !important; }    
+
+        /* Hide the first audio/video buttons row */
+#audioToggleBtn,
+#videoToggleBtn {
+    display: none !important;
+}
+
+/* Also hide their container grid */
+div:has(> #audioToggleBtn) {
+    display: none !important;
+}
+
+/* Make test/exam buttons bigger */
+.test-btn {
+    padding: 16px 10px !important;
+    font-size: 14px !important;
+    min-height: 70px !important;
+    line-height: 1.4 !important;
+}
     </style>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
