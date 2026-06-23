@@ -3383,16 +3383,243 @@ const courseData = {
   `, 
     audio: "",
 
-mermaid: [
-`%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>କଣିକାର ଗତି, ବିସରଣ<br/>ଓ ତାପର ପ୍ରଭାବ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପରୀକ୍ଷା\"]\nA --> I1[\"କାଳି ଓ ମହୁକୁ<br/>ଜଳରେ ପକାଯାଏ।\"]\nA --> I2[\"ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ<br/>ସ୍ଫଟିକ ପକାଯାଏ।\"]\nA --> I3[\"ମିଶ୍ରଣର ପରିବର୍ତ୍ତନକୁ<br/>ନିରୀକ୍ଷଣ କରାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 କଣିକାର ବ୍ୟବହାର\"]\nM --> M1[\"ପଦାର୍ଥର କଣିକା<br/>ନିରନ୍ତର ଗତି କରେ।\"]\nM --> M2[\"କଣିକାର ଗତିଜ<br/>ଶକ୍ତି ଥାଏ।\"]\nM --> M3[\"କଣିକାମାନେ ଆପେ ଆପେ<br/>ପରସ୍ପର ସହ ମିଶନ୍ତି।\"]\nM --> M4[\"କଣିକା ମଧ୍ୟରେ<br/>ଫାଙ୍କା ସ୍ଥାନ ଥାଏ।\"]\nM --> M5[\"ଅନ୍ୟ କଣିକା ସେହି<br/>ସ୍ଥାନରେ ପ୍ରବେଶ କରେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ବିସରଣ\"]\nC --> C1[\"ଦୁଇ ପଦାର୍ଥର କଣିକାର<br/>ଅନ୍ତଃମିଶ୍ରଣକୁ ବିସରଣ କୁହାଯାଏ।\"]\nC --> C2[\"କାଳି, ମହୁ ଓ ସ୍ଫଟିକର<br/>ମିଶ୍ରଣ ବିସରଣର ଉଦାହରଣ।\"]\nC --> C3[\"କଣିକାର ଗତି ଯୋଗୁଁ<br/>ବିସରଣ ସମ୍ଭବ ହୁଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+  mermaid: [
+    `%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
 
-`%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ତାପମାତ୍ରା, ଗତିଜ ଶକ୍ତି<br/>ଓ ବିସରଣର ହାର\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପର୍ଯ୍ୟବେକ୍ଷଣ\"]\nA --> I1[\"ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ<br/>ସ୍ଫଟିକ ପକାଯାଏ।\"]\nA --> I2[\"ଗରମ ଜଳରେ ସ୍ଫଟିକ<br/>ଶୀଘ୍ର ମିଶିଯାଏ।\"]\nA --> I3[\"ଥଣ୍ଡା ଜଳରେ ମିଶ୍ରଣ<br/>ଧୀରେ ଧୀରେ ହୁଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ତାପର ପ୍ରଭାବ\"]\nM --> M1[\"ତାପମାତ୍ରା ବଢ଼ିଲେ<br/>କଣିକାର ଗତି ବଢ଼େ।\"]\nM --> M2[\"ଗତିଜ ଶକ୍ତିର<br/>ପରିମାଣ ବୃଦ୍ଧି ପାଏ।\"]\nM --> M3[\"କଣିକା ଅଧିକ ଦ୍ରୁତତାରେ<br/>ଚଳନ କରନ୍ତି।\"]\nM --> M4[\"ପରସ୍ପର ମିଶ୍ରଣ<br/>ଶୀଘ୍ର ହୋଇଥାଏ।\"]\nM --> M5[\"ବିସରଣର ହାର<br/>ବୃଦ୍ଧି ପାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ତାପ ବୃଦ୍ଧି ସହିତ<br/>କଣିକାର ଗତି ବଢ଼େ।\"]\nC --> C2[\"ଗତିଜ ଶକ୍ତି ବଢ଼ିଲେ<br/>ବିସରଣ ଦ୍ରୁତ ହୁଏ।\"]\nC --> C3[\"ଗରମ ଖାଦ୍ୟର ବାସ୍ନା<br/>ଶୀଘ୍ର ଦୂରକୁ ପହଞ୍ଚେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+TITLE["📖 NOTE-1 ଓ NOTE-2:<br/>କଣିକার ଗତି ଓ ବିସରଣ"]
 
-`%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>କଣିକାମାନଙ୍କ ମଧ୍ୟରେ<br/>ଆକର୍ଷଣ ବଳ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପ୍ରମାଣ\"]\nA --> I1[\"ପିଲାମାନଙ୍କ ଚାରି ଦଳର<br/>କାର୍ଯ୍ୟକଳାପ କରାଯାଏ।\"]\nA --> I2[\"ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ<br/>ରବର ବ୍ୟାଣ୍ଡ ପରୀକ୍ଷା କରାଯାଏ।\"]\nA --> I3[\"ଜଳଧାରକୁ ବିଭକ୍ତ କରିବାକୁ<br/>ଚେଷ୍ଟା କରାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଆକର୍ଷଣ ବଳ\"]\nM --> M1[\"କଣିକାମାନେ ପରସ୍ପରକୁ<br/>ଆକର୍ଷଣ କରନ୍ତି।\"]\nM --> M2[\"ଏହି ବଳ କଣିକାକୁ<br/>ଏକାଠି ରଖେ।\"]\nM --> M3[\"ଯାହାକୁ ଭାଙ୍ଗିବା କଷ୍ଟକର<br/>ସେଠାରେ ବଳ ଅଧିକ।\"]\nM --> M4[\"ଜଳଧାର ଏକାଠି ରହିବାର<br/>କାରଣ ମଧ୍ୟ ଆକର୍ଷଣ ବଳ।\"]\nM --> M5[\"ଭିନ୍ନ ପଦାର୍ଥରେ ବଳର<br/>ସାମର୍ଥ୍ୟ ଭିନ୍ନ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଫଳାଫଳ\"]\nC --> C1[\"ପଦାର୍ଥର କଣିକାମାନେ<br/>ଅଲଗା ନୁହେଁ।\"]\nC --> C2[\"ସେମାନଙ୍କ ମଧ୍ୟରେ<br/>ଆକର୍ଷଣ ବଳ ରହିଛି।\"]\nC --> C3[\"ଆକର୍ଷଣ ବଳର ଶକ୍ତି<br/>ପଦାର୍ଥ ଭେଦରେ ଭିନ୍ନ ହୁଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+TITLE --> INTRO
 
-`%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ପଦାର୍ଥର କଣିକାର<br/>ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପଦାର୍ଥ\"]\nA --> I1[\"ପଦାର୍ଥ ଭର ଧାରଣ କରେ।\"]\nA --> I2[\"ପଦାର୍ଥ ସ୍ଥାନ ଦଖଲ କରେ।\"]\nA --> I3[\"ସମସ୍ତ ପଦାର୍ଥ କଣିକାରେ\nଗଠିତ ହୋଇଥାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 କଣିକାର ବୈଶିଷ୍ଟ୍ୟ\"]\nM --> M1[\"କଣିକା ସବୁବେଳେ<br/>ଗତିଶୀଳ ରହେ।\"]\nM --> M2[\"କଣିକାର ମଧ୍ୟରେ<br/>ଫାଙ୍କା ସ୍ଥାନ ଥାଏ।\"]\nM --> M3[\"କଣିକାମାନେ ପରସ୍ପରକୁ<br/>ଆକର୍ଷଣ କରନ୍ତି।\"]\nM --> M4[\"କଣିକାମାନେ ପରସ୍ପର ସହ<br/>ମିଶିଯାଇ ପାରନ୍ତି।\"]\nM --> M5[\"ତାପ ବୃଦ୍ଧିରେ କଣିକାର<br/>ଗତି ଅଧିକ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ସାରାଂଶ\"]\nC --> C1[\"ଗତି, ଫାଙ୍କା ସ୍ଥାନ ଓ<br/>ଆକର୍ଷଣ କଣିକାର ଗୁଣ।\"]\nC --> C2[\"ବିସରଣ କଣିକାର<br/>ଗତିର ପରିଣାମ ଅଟେ।\"]\nC --> C3[\"ଏହି ଗୁଣଗୁଡ଼ିକ ପଦାର୍ଥର<br/>ଆଚରଣକୁ ବ୍ୟାଖ୍ୟା କରେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
-],
+subgraph INTRO[ ]
+direction LR
+A["🟡 ମୂଳ ଧାରଣା"]
 
+A --> I1["ପଦାର୍ଥର କଣିକା ସବୁବେଳେ<br/>ଗତି କରୁଥାନ୍ତି ।"]
+A --> I2["ସେମାନଙ୍କର ଗତିଜ ଶକ୍ତି<br/>(kinetic energy) ଥାଏ ।"]
+A --> I3["ତାପ ବଢ଼ିଲେ ଗତି<br/>ଦ୍ରୁତ ହୋଇଥାଏ ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବିସରଣ କ'ଣ ?"]
+
+M --> M1["ଦୁଇ ପଦାର୍ଥ ଆପେ ଆପେ<br/>ମିଶିଯିବାକୁ ବିସରଣ କୁହାଯାଏ ।"]
+M --> M2["କଣିକା ମଧ୍ୟ ଫାଙ୍କା ସ୍ଥାନ<br/>ଥାଏ ।"]
+M --> M3["ଅନ୍ୟ କଣିକା ସେ ସ୍ଥାନରେ<br/>ପ୍ରବେଶ କରୁଥାଏ ।"]
+M --> M4["ଗରମ ଜଳରେ ସ୍ଫଟିକ<br/>ଶୀଘ୍ର ମିଶେ ।"]
+M --> M5["ତାପ ଦେଲେ ବିସରଣ<br/>ଦ୍ରୁତ ହୁଏ ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ମନେ ରଖ"]
+
+C --> C1["କଣିକା ଅବିରତ<br/>ଗତି କରୁଥାଏ ।"]
+C --> C2["ଗତିଜ ଶକ୍ତି ଓ ତାପ<br/>ସମ୍ପର୍କ ଘନିଷ୍ଠ ।"]
+C --> C3["ତାପ ବଢ଼ିଲେ ବିସରଣ<br/>ଶୀଘ୍ର ହୁଏ ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-3 ଓ NOTE-4:<br/>କାଳି, ମହୁ ଓ ସ୍ଫଟିକ ପରୀକ୍ଷା"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ପ୍ରୟୋଗ 1.4"]
+
+A --> I1["ଦୁଇ ଗ୍ଲାସ ଜଳରେ<br/>କାଳି ଓ ମହୁ ପକାଇବା ।"]
+A --> I2["ଗ୍ଲାସ ହଲାଇବା<br/>ନାହିଁ ।"]
+A --> I3["କାଳି ଓ ମହୁ ମିଶିବା<br/>ଲକ୍ଷ୍ୟ କରିବା ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ପ୍ରୟୋଗ 1.5"]
+
+M --> M1["ଗରମ ଓ ଥଣ୍ଡା ଜଳ<br/>ଦୁଇ ଗ୍ଲାସ ।"]
+M --> M2["ସ୍ଫଟିକ (CuSO₄ ବା KMnO₄)<br/>ପ୍ରତ୍ୟେକ ଗ୍ଲାସରେ ।"]
+M --> M3["ଗ୍ଲାସ ଗୋଳାଇବା<br/>ନାହିଁ ।"]
+M --> M4["ଗରମ ଜଳରେ ସ୍ଫଟିକ<br/>ଶୀଘ୍ର ମିଶେ ।"]
+M --> M5["ଥଣ୍ଡା ଜଳରେ<br/>ଧୀରେ ଧୀରେ ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ସିଦ୍ଧାନ୍ତ"]
+
+C --> C1["ତାପ ଅଧିକ ହେଲେ<br/>ବିସରଣ ଶୀଘ୍ର ।"]
+C --> C2["କଣିକା ମଧ୍ୟ ଫାଙ୍କ ଥାଏ<br/>ବୋଲି ଜଣାଯାଏ ।"]
+C --> C3["ଦୁଇ ଗ୍ଲାସ ତୁଳନା<br/>ଜ୍ଞାନ ଦିଏ ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-5, 6 ଓ 7:<br/>ଆକର୍ଷଣ ବଳ ଓ ଦଳ କାର୍ଯ୍ୟ"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଆକର୍ଷଣ ବଳ"]
+
+A --> I1["କଣିକାମାନଙ୍କ ମଧ୍ୟ<br/>ଆକର୍ଷଣ ବଳ ଥାଏ ।"]
+A --> I2["ଏହି ବଳ ସେମାନଙ୍କୁ<br/>ଏକାଠି ରଖେ ।"]
+A --> I3["ଭିନ୍ନ ପଦାର୍ଥରେ ଏହି<br/>ବଳ ଭିନ୍ନ ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ଚାରି ଦଳ ଖେଳ (1.6)"]
+
+M --> M1["ପ୍ରଥମ ଦଳ ଛନ୍ଦାଛନ୍ଦି<br/>ହୋଇ ରହେ ।"]
+M --> M2["ଦ୍ୱିତୀୟ ଦଳ ହାତ ଧରି<br/>ଶୃଙ୍ଖଳ ।"]
+M --> M3["ତୃତୀୟ ଦଳ ଆଙ୍ଗୁଳି<br/>ଟିପରେ ସ୍ପର୍ଶ ।"]
+M --> M4["ଚତୁର୍ଥ ଦଳ ଅନ୍ୟ ଦଳକୁ<br/>ଭାଙ୍ଗିବାକୁ ଚେଷ୍ଟା ।"]
+M --> M5["ଭାଙ୍ଗିବା କଷ୍ଟ = ଆକର୍ଷଣ<br/>ବଳ ଅଧିକ ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ମନେ ରଖ"]
+
+C --> C1["ପ୍ରଥମ ଦଳ ସବୁ ଠାରୁ<br/>ଦୃଢ଼ ।"]
+C --> C2["ପ୍ରତ୍ୟେକ ପିଲା =<br/>ଗୋଟିଏ କଣିକା ।"]
+C --> C3["ଆକର୍ଷଣ ବଳ ପଦାର୍ଥ<br/>ଭେଦରେ ଭିନ୍ନ ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-8, 9 ଓ 10:<br/>ଲୁହା, ଚକ, ରବର ଓ ଜଳ ପରୀକ୍ଷା"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ପ୍ରୟୋଗ 1.7"]
+
+A --> I1["ଲୁହା କଣ୍ଟା, ଚକ ଓ<br/>ରବର ବ୍ୟାଣ୍ଡ ।"]
+A --> I2["ଭାଙ୍ଗିବା, ଟାଣିବା<br/>ଚେଷ୍ଟା କରିବ ।"]
+A --> I3["ସବୁ ବସ୍ତୁ ସମାନ<br/>ଭାବେ ଭାଙ୍ଗେ ନାହିଁ ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ପ୍ରୟୋଗ 1.8 — ଜଳ"]
+
+M --> M1["ଟ୍ୟାପ ଜଳଧାରକୁ<br/>ଆଙ୍ଗୁଳିରେ କାଟ ।"]
+M --> M2["ଜଳ ସହଜରେ<br/>ଅଲଗା ହୁଏ ନାହିଁ ।"]
+M --> M3["ଜଳ ପୁଣି ଏକାଠି<br/>ହୋଇଯାଏ ।"]
+M --> M4["ଆକର୍ଷଣ ବଳ ଏକାଠି<br/>ରଖୁଥାଏ ।"]
+M --> M5["ଭିନ୍ନ ପଦାର୍ଥରେ ଆକର୍ଷଣ<br/>ବଳ ଭିନ୍ନ ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ସମ୍ପୂର୍ଣ୍ଣ ସିଦ୍ଧାନ୍ତ"]
+
+C --> C1["କଣିକାର ଗୁଣ: ଗତି,<br/>ଫାଙ୍କ, ଆକର୍ଷଣ, ବିସରଣ ।"]
+C --> C2["ଗରମ ଖାଦ୍ୟ ବାସ୍ନା ଶୀଘ୍ର<br/>ବିସରଣ ହୁଏ ।"]
+C --> C3["ପହଁରିବା = ଫାଙ୍କା<br/>ସ୍ଥାନ ଥିବାର ପ୍ରମାଣ ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`
+  ],
  
 mcq: {
     questions: [
