@@ -7199,7 +7199,6 @@ document.head.appendChild(printStyles);
     function toggleMedia(type) {
     const logoDisplay   = document.getElementById('logoDisplay');
     const audioDisplay  = document.getElementById('audioDisplay');
-    const audioDisplay2 = document.getElementById('audioDisplay2');
     const audioDisplay3 = document.getElementById('audioDisplay3');
     const videoDisplay  = document.getElementById('videoDisplay');
 
@@ -7227,7 +7226,6 @@ document.head.appendChild(printStyles);
         if (ap3) { ap3.pause(); ap3.currentTime = 0; }
 
         audioDisplay.style.display  = 'none';
-        audioDisplay2.style.display = 'none';
         audioDisplay3.style.display = 'none';
         videoDisplay.style.display  = 'none';
 
@@ -7246,15 +7244,6 @@ document.head.appendChild(printStyles);
         audioBtn.style.background = 'linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%)';
     }
 
-    if (type === 'audio2') {
-        if (audioDisplay2.style.display === 'flex') { hideAll(); return; }
-        hideAll();
-        logoDisplay.style.display   = 'none';
-        audioDisplay2.style.display = 'flex';
-        const ap2 = document.getElementById('audioPlayer2');
-        if (ap2) ap2.play();
-        audioBtn2.style.background = 'linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%)';
-    }
 
     if (type === 'audio3') {
         if (audioDisplay3.style.display === 'flex') { hideAll(); return; }
