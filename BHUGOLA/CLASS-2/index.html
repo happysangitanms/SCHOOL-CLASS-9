@@ -2449,7 +2449,7 @@ body > div:first-child {
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ବହି ପାଠ ବୁଝୁଛନ୍ତି ...</p>
     <audio id="audioPlayer" controls controlsList="nodownload" style="width: 100%; border-radius: 8px;">
-        <source src="https://audio.evidya.de/S9G2P3-4.mp3" type="audio/mpeg">
+        <source src="https://audio.evidya.de/S9SSG1P3-4.mp3" type="audio/mpeg">
         Your browser does not support audio.
     </audio>
 </div>
@@ -2459,7 +2459,7 @@ body > div:first-child {
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ପ୍ରଶ୍ନୋତ୍ତର ବୁଝୁଛନ୍ତି ...</p>
     <audio id="audioPlayer3" controls controlsList="nodownload" style="width: 100%; border-radius: 8px;">
-        <source src="https://audio.evidya.de/S9J2P3-4QA.mp3" type="audio/mpeg">
+        <source src="https://audio.evidya.de/S9SSG1P3-4QA.mp3" type="audio/mpeg">
         Your browser does not support audio.
     </audio>
 </div>
@@ -2469,7 +2469,7 @@ body > div:first-child {
             <iframe
                 id="videoIframe"
                 src=""
-                data-src="https://www.youtube.com/embed/rxPngCWZ0BY?playsinline=1&rel=0&modestbranding=1&autoplay=1"
+                data-src="https://www.youtube.com/embed/mVyJ35Bbj1I?playsinline=1&rel=0&modestbranding=1&autoplay=1" 
                 style="
                     display: block;
                     width: 100%;
@@ -2593,7 +2593,7 @@ body > div:first-child {
             padding: 10px;
             border-radius: 0 0 12px 12px;">
             <img 
-                src="https://audio.evidya.de/S9J2P3-4.png"
+                src="https://audio.evidya.de/S9SSG1P3-4.png"
                 alt="ଚିତ୍ର"
                 style="
                     width: 100%;
@@ -2985,222 +2985,163 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "PENINSULA",
-            odia: "ଉପଦ୍ୱୀପ",
-            emoji: "🏝️",
-            odiaUse: "ଉପଦ୍ୱୀପ ଅର୍ଥ ତିନିଦିଗରୁ ଜଳରାଶି ଦ୍ୱାରା ଘେରା ଭୂଖଣ୍ଡ । ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "LOCATED",
-            odia: "ଅବସ୍ଥିତ",
-            emoji: "📍",
-            odiaUse: "ଅବସ୍ଥିତ ଅର୍ଥ କୌଣସି ସ୍ଥାନରେ ରହିବା । ଭାରତ ଏସିଆ ମହାଦେଶରେ ଅବସ୍ଥିତ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CONTINENT",
-            odia: "ମହାଦେଶ",
-            emoji: "🌏",
-            odiaUse: "ମହାଦେଶ ଅର୍ଥ ବହୁତ ବଡ଼ ଭୂଖଣ୍ଡ । ଏସିଆ ପୃଥିବୀର ସବୁଠାରୁ ବଡ଼ ମହାଦେଶ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "WATERWAY",
-            odia: "ଜଳପଥ",
-            emoji: "🚢",
-            odiaUse: "ଜଳପଥ ଅର୍ଥ ସମୁଦ୍ର କିମ୍ବା ନଦୀ ଦେଇ ଯିବା ରାସ୍ତା । ଭାରତର ଜଳପଥ ବାଣିଜ୍ୟରେ ସାହାଯ୍ୟ କରେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "COAST",
-            odia: "ଉପକୂଳ",
-            emoji: "🏖️",
-            odiaUse: "ଉପକୂଳ ଅର୍ଥ ସମୁଦ୍ର କୂଳ । ଭାରତର ଉପକୂଳ ରେଖା ବହୁତ ଦୀର୍ଘ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "OCEAN",
-            odia: "ମହାସାଗର",
-            emoji: "🌊",
-            odiaUse: "ମହାସାଗର ଅର୍ଥ ବହୁତ ବଡ଼ ସମୁଦ୍ର । ଭାରତ ମହାସାଗର ଭାରତର ଦକ୍ଷିଣରେ ଅଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "BAY",
-            odia: "ଉପସାଗର",
-            emoji: "🌊",
-            odiaUse: "ଉପସାଗର ଅର୍ଥ ସମୁଦ୍ରର ଏକ ବଡ଼ ଅଂଶ । ବଙ୍ଗୋପସାଗର ଭାରତର ପୂର୍ବରେ ଅଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "MOUNTAIN RANGE",
-            odia: "ପର୍ବତମାଳା",
-            emoji: "⛰️",
-            odiaUse: "ପର୍ବତମାଳା ଅର୍ଥ ଅନେକ ପର୍ବତର ଶୃଙ୍ଖଳା । ହିମାଳୟ ଏକ ବିଶାଳ ପର୍ବତମାଳା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TRADE",
-            odia: "ବାଣିଜ୍ୟ",
-            emoji: "🤝",
-            odiaUse: "ବାଣିଜ୍ୟ ଅର୍ଥ କିଣାବିକା । ପ୍ରାଚୀନ କାଳରୁ ଭାରତରେ ବାଣିଜ୍ୟ ହୋଇଆସୁଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CULTURE",
-            odia: "ସାଂସ୍କୃତିକ",
-            emoji: "🎭",
-            odiaUse: "ସାଂସ୍କୃତିକ ଅର୍ଥ ସଂସ୍କୃତି ସହ ସମ୍ବନ୍ଧିତ । ଭାରତର ସାଂସ୍କୃତିକ ପରମ୍ପରା ସମୃଦ୍ଧ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SPICES",
-            odia: "ମସଲା",
-            emoji: "🌶️",
-            odiaUse: "ମସଲା ଅର୍ଥ ଖାଦ୍ୟର ସ୍ୱାଦ ବଢ଼ାଇବା ପଦାର୍ଥ । ଭାରତୀୟ ମସଲା ସାରା ବିଶ୍ୱରେ ପ୍ରସିଦ୍ଧ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "LONGITUDE",
-            odia: "ଦ୍ରାଘିମାରେଖା",
+            word: "UNIVERSAL SET",
+            odia: "ବ୍ୟାପକ ସେଟ୍",
             emoji: "🌐",
-            odiaUse: "ଦ୍ରାଘିମାରେଖା ଅର୍ଥ ଉତ୍ତରରୁ ଦକ୍ଷିଣକୁ ଯାଇଥିବା କଳ୍ପିତ ରେଖା । ଏହା ସମୟ ନିର୍ଣ୍ଣୟରେ ସାହାଯ୍ୟ କରେ ।",
+            odiaUse: "ବ୍ୟାପକ ସେଟ୍ ଅର୍ଥ ଆଲୋଚନାର ପରିସର ମଧ୍ୟରେ ପ୍ରତ୍ୟେକ ସେଟ୍ ଯାହାର ଉପସେଟ୍ ହୋଇଥାଏ । E ସେଟ୍‌କୁ ବ୍ୟାପକ ସେଟ୍ କୁହାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "LATITUDE",
-            odia: "ଅକ୍ଷାଂଶରେଖା",
+            word: "UNION",
+            odia: "ସଂଯୋଗ",
+            emoji: "🔗",
+            odiaUse: "ସଂଯୋଗ ଅର୍ଥ A ଓ B ସେଟ୍‌ର ସମସ୍ତ ଉପାଦାନକୁ ନେଇ ଗଠିତ ସେଟ୍ । ଏହାକୁ A ∪ B ଦ୍ୱାରା ସୂଚାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "INTERSECTION",
+            odia: "ଛେଦ",
+            emoji: "✂️",
+            odiaUse: "ଛେଦ ଅର୍ଥ A ଓ B ର ସାଧାରଣ ଉପାଦାନଗୁଡ଼ିକୁ ନେଇ ଗଠିତ ସେଟ୍ । ଏହାକୁ A ∩ B ଦ୍ୱାରା ସୂଚାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DIFFERENCE",
+            odia: "ଅନ୍ତର",
             emoji: "➖",
-            odiaUse: "ଅକ୍ଷାଂଶରେଖା ଅର୍ଥ ପୂର୍ବ-ପଶ୍ଚିମ ଦିଗକୁ ଯାଇଥିବା କଳ୍ପିତ ରେଖା । ଏହା ଜଳବାୟୁକୁ ପ୍ରଭାବିତ କରେ ।",
+            odiaUse: "ଅନ୍ତର ଅର୍ଥ A ସେଟ୍‌ର ଯେଉଁ ଉପାଦାନ B ରେ ନାହିଁ, ସେଗୁଡ଼ିକୁ ନେଇ ଗଠିତ ସେଟ୍ । ଏହାକୁ A − B ଦ୍ୱାରା ସୂଚାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "LOCAL TIME",
-            odia: "ସ୍ଥାନୀୟ ସମୟ",
-            emoji: "🕒",
-            odiaUse: "ସ୍ଥାନୀୟ ସମୟ ଅର୍ଥ ନିର୍ଦ୍ଦିଷ୍ଟ ସ୍ଥାନର ସମୟ । ଭିନ୍ନ ସ୍ଥାନର ସ୍ଥାନୀୟ ସମୟ ଅଲଗା ହୋଇପାରେ ।",
+            word: "DISJOINT SET",
+            odia: "ଅଣଛେଦୀ ସେଟ୍",
+            emoji: "🚫",
+            odiaUse: "ଅଣଛେଦୀ ସେଟ୍ ଅର୍ଥ ଯେଉଁ ଦୁଇଟି ସେଟ୍ ମଧ୍ୟରେ କୌଣସି ସାଧାରଣ ଉପାଦାନ ନ ଥାଏ । ଯଥା A ∩ B = φ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "STANDARD TIME",
-            odia: "ପ୍ରମାଣ ସମୟ",
-            emoji: "⏰",
-            odiaUse: "ପ୍ରମାଣ ସମୟ ଅର୍ଥ ସମଗ୍ର ଦେଶରେ ବ୍ୟବହୃତ ସମାନ ସମୟ । ଭାରତର ପ୍ରମାଣ ସମୟ ୮୨°୩୦’ ପୂର୍ବ ଦ୍ରାଘିମାରେଖା ଉପରେ ଆଧାରିତ ।",
+            word: "DISTRIBUTIVE LAW",
+            odia: "ବଣ୍ଟନ ନିୟମ",
+            emoji: "🔄",
+            odiaUse: "ବଣ୍ଟନ ନିୟମ ଅନୁସାରେ ସଂଯୋଗ ଛେଦକୁ ଓ ଛେଦ ସଂଯୋଗକୁ ବଣ୍ଟନ କରେ । ଯଥା A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SUNRISE",
-            odia: "ସୂର୍ଯ୍ୟୋଦୟ",
-            emoji: "🌅",
-            odiaUse: "ସୂର୍ଯ୍ୟୋଦୟ ଅର୍ଥ ସୂର୍ଯ୍ୟ ଉଠିବା । ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ସୂର୍ଯ୍ୟୋଦୟ ପ୍ରଥମେ ହୁଏ ।",
+            word: "BOOLEAN ALGEBRA",
+            odia: "ବୁଲିଆନ୍ ବୀଜଗଣିତ",
+            emoji: "🧮",
+            odiaUse: "ବୁଲିଆନ୍ ବୀଜଗଣିତ ଅର୍ଥ ସେଟ୍‌ମାନଙ୍କ ମଧ୍ୟରେ ଏମାନଙ୍କୁ ନେଇ ଯେଉଁ ବୀଜଗଣିତର ସୃଷ୍ଟି ହୁଏ । ଏହା George Boole ନାମରେ ନାମିତ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "BINARY OPERATION",
+            odia: "ଦ୍ୱୈତ ପ୍ରକ୍ରିୟା",
+            emoji: "👯",
+            odiaUse: "ଦ୍ୱୈତ ପ୍ରକ୍ରିୟା ଅର୍ଥ ଗୋଟିଏ ଗୋଟିଏ ସେଟ୍‌କୁ ନେଇ କରାଯାଉଥିବା ପ୍ରକ୍ରିୟା । ସଂଯୋଗ, ଛେଦ ଓ ଅନ୍ତର ତିନୋଟି ଦ୍ୱୈତ ପ୍ରକ୍ରିୟା ଅଟନ୍ତି ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
 };
   
-
 const topicsData = [
 
 {
-heading: "NOTE-1: ଭାରତର ଅବସ୍ଥିତି ଓ ଉପଦ୍ୱୀପର ଧାରଣା :-",
+heading: "NOTE-1: ଭାରତର ଅବସ୍ଥିତି (Location of India) :-",
 audioPoints: [
 {
-text: "👉 ଭାରତବର୍ଷ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ।<br>👉 ଯେଉଁ ସଂକୀର୍ଣ୍ଣ ଭୂଖଣ୍ଡ ତା’ର ତିନିଦିଗରେ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ହୋଇ ରହିଥାଏ, ତାକୁ ଉପଦ୍ୱୀପ କୁହାଯାଏ ।<br>👉 ଭାରତର ଦକ୍ଷିଣଭାଗ ସମୁଦ୍ରଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ।<br>👉 ସମୁଦ୍ର ତିନିଦିଗରୁ ଘେରି ରହିଥିବାରୁ ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି ।",
+text: "👉 ଭାରତ ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣ ଭାଗରେ ଅବସ୍ଥିତ ।<br>👉 ଭାରତ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ (1:1 ମାନଚିତ୍ରକୁ ଦେଖ) ।<br>👉 ଭାରତ ଆନ୍ତର୍ଜାତୀୟ ଜଳପଥର ଏକ ସୁବିଧାଜନକ ସ୍ଥିତିରେ ରହିଅଛି ।<br>👉 ଭାରତ ମହାସାଗର ଉପକୂଳସ୍ଥ ଅନ୍ୟ କୌଣସି ଦେଶର ଉପକୂଳ ରେଖା ଭାରତର ଉପକୂଳ ଭଳି ଏତେ ଦୀର୍ଘ ନୁହେଁ ।",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ଭାରତବର୍ଷ କେଉଁଠାରେ ଅବସ୍ଥିତ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତବର୍ଷ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ।",
-"<span style='color: red;'>Q-2:</span> ଉପଦ୍ୱୀପ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଯେଉଁ ସଂକୀର୍ଣ୍ଣ ଭୂଖଣ୍ଡ ତା’ର ତିନିଦିଗରେ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ହୋଇ ରହିଥାଏ, ତାକୁ ଉପଦ୍ୱୀପ କୁହାଯାଏ ।",
-"<span style='color: red;'>Q-3:</span> ଭାରତର ଦକ୍ଷିଣଭାଗ କେଉଁଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ଦକ୍ଷିଣଭାଗ ସମୁଦ୍ରଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ।",
-"<span style='color: red;'>Q-4:</span> ଭାରତକୁ ବୃହତ୍ ଉପଦ୍ୱୀପ କାହିଁକି କୁହାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ସମୁଦ୍ର ତିନିଦିଗରୁ ଘେରି ରହିଥିବାରୁ ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି ।"
+"<span style='color: red;'>Q-1:</span> ଭାରତ କେଉଁ ମହାଦେଶର କେଉଁ ଭାଗରେ ଅବସ୍ଥିତ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣ ଭାଗରେ ଅବସ୍ଥିତ ।",
+"<span style='color: red;'>Q-2:</span> ଭାରତ ଏସିଆ ମହାଦେଶର ଠିକ୍ କେଉଁ ସ୍ଥାନରେ ଅଛି ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ।",
+"<span style='color: red;'>Q-3:</span> ଭାରତ ମହାସାଗରରେ ଭାରତର ଅବସ୍ଥିତି କ'ଣ ବିଶେଷ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ମହାସାଗର ଉପକୂଳସ୍ଥ ଅନ୍ୟ କୌଣସି ଦେଶର ଉପକୂଳ ରେଖା ଭାରତର ଉପକୂଳ ଭଳି ଏତେ ଦୀର୍ଘ ନୁହେଁ ।",
+"<span style='color: red;'>Q-4:</span> ଭାରତ ଆନ୍ତର୍ଜାତୀୟ ଦୃଷ୍ଟିରୁ କ'ଣ ସୁବିଧା ପାଇଅଛି ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ଆନ୍ତର୍ଜାତୀୟ ଜଳପଥର ଏକ ସୁବିଧାଜନକ ସ୍ଥିତିରେ ରହିଅଛି ।"
 ]
 },
 
 {
-heading: "NOTE-2: ଭାରତର ଭୌଗୋଳିକ ସ୍ଥିତି ଓ ଉପକୂଳର ଗୁରୁତ୍ୱ :-",
+heading: "NOTE-2: ଭାରତର ଭୌଗୋଳିକ ଆକୃତି ଓ ଦକ୍ଷିଣ ଭାଗ (Shape & Southern Part of India) :-",
 audioPoints: [
 {
-text: "👉 ଭାରତର ଅବସ୍ଥିତି ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣାଂଶରେ ଆନ୍ତର୍ଜାତୀୟ ଜଳପଥର ଏକ ସୁବିଧାଜନକ ସ୍ଥିତିରେ ରହିଛି ।<br>👉 ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗରରେ ବିଭାଜିତ ହୋଇଅଛି ।<br>👉 ଉତ୍ତର ଦିଗରେ ସୁଉଚ୍ଚ ହିମାଳୟ ପର୍ବତମାଳା ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଗୁଡ଼ିକଠାରୁ ଅଲଗା ରଖିଛି ।<br>👉 ପଶ୍ଚିମ ଉପକୂଳରୁ ପଶ୍ଚିମ ଇଉରୋପ ଏବଂ ପୂର୍ବ ଉପକୂଳରୁ ପୂର୍ବ ଏସିଆ ଦେଶଗୁଡ଼ିକ ସହ ଜଳପଥରେ ସଂପର୍କ ସ୍ଥାପନ ହୋଇପାରିଛି ।<br>👉 ଭାରତର ଦୀର୍ଘ ଉପକୂଳ ରେଖା ଯୋଗୁଁ ଭାରତ ମହାସାଗରର ନାମକରଣ ଭାରତର ନାମ ଅନୁସାରେ ହୋଇଛି ।",
+text: "👉 ଭାରତର ଦକ୍ଷିଣ ଭାଗ କ୍ରମଶଃ ଅଣୋସାରିଆ ହୋଇ ସମୁଦ୍ରଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ।<br>👉 ସମୁଦ୍ର ତିନି ଦିଗରୁ ଘେରି ରହିଥିବାରୁ ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି ।<br>👉 ଏହାଫଳରେ ଭାରତ ମହାସାଗରର ଉଭୟ ଦୁଇଟି ବିସ୍ତୃତ ଜଳରାଶି — ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗରରେ ବିଭାଜିତ ହୋଇଅଛି ।<br>👉 ଦେଶର ନାମକରଣ ଭାରତ ମହାସାଗର ଆମଦେଶର ନାମାନୁସାରେ ହେବା ଯଥାର୍ଥ ହୋଇଅଛି ।",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ଭାରତର ଅବସ୍ଥିତି କେଉଁ ଦୃଷ୍ଟିରୁ ସୁବିଧାଜନକ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ଅବସ୍ଥିତି ଆନ୍ତର୍ଜାତୀୟ ଜଳପଥର ଏକ ସୁବିଧାଜନକ ସ୍ଥିତିରେ ରହିଛି ।",
-"<span style='color: red;'>Q-2:</span> ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ କେଉଁ ଦୁଇଟି ଜଳରାଶିରେ ବିଭାଜିତ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗରରେ ବିଭାଜିତ ହୋଇଅଛି ।",
-"<span style='color: red;'>Q-3:</span> ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଗୁଡ଼ିକଠାରୁ କିଏ ଅଲଗା ରଖିଛି ?<br><br><span style='color: green;'>Answer:</span> ସୁଉଚ୍ଚ ହିମାଳୟ ପର୍ବତମାଳା ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଗୁଡ଼ିକଠାରୁ ଅଲଗା ରଖିଛି ।",
-"<span style='color: red;'>Q-4:</span> ଭାରତ ମହାସାଗରର ନାମକରଣ ଭାରତର ନାମ ଅନୁସାରେ କାହିଁକି ହୋଇଛି ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ଉପକୂଳ ରେଖା ଅତ୍ୟନ୍ତ ଦୀର୍ଘ ହୋଇଥିବାରୁ ଭାରତ ମହାସାଗରର ନାମକରଣ ଭାରତର ନାମ ଅନୁସାରେ ହୋଇଛି ।"
+"<span style='color: red;'>Q-1:</span> ଭାରତ ଏକ ଉପଦ୍ୱୀପ କାହିଁକି ?<br><br><span style='color: green;'>Answer:</span> ସମୁଦ୍ର ତିନି ଦିଗରୁ ଘେରି ରହିଥିବାରୁ ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି ।",
+"<span style='color: red;'>Q-2:</span> ଭାରତ ମହାସାଗରର କେଉଁ ଦୁଇ ଜଳରାଶିରେ ଭାରତ ବିଭାଜିତ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ମହାସାଗରର ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗରରେ ଭାରତ ବିଭାଜିତ ।",
+"<span style='color: red;'>Q-3:</span> ଭାରତ ମହାସାଗରର ନାମ ଭାରତ ଅନୁସାରେ ହୋଇଛି କ'ଣ ?<br><br><span style='color: green;'>Answer:</span> ହଁ, ଭାରତ ମହାସାଗରର ନାମ ଆମ ଦେଶ ଭାରତ ର ନାମ ଅନୁସାରେ ହୋଇଛି ।",
+"<span style='color: red;'>Q-4:</span> ଭାରତର ଦକ୍ଷିଣ ଭୌଗୋଳିକ ଆକୃତି କ'ଣ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ଦକ୍ଷିଣ ଭାଗ କ୍ରମଶଃ ଅଣୋସାରିଆ ହୋଇ ସମୁଦ୍ରଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ।"
 ]
 },
 
 {
-heading: "NOTE-3: ଭାରତର ପ୍ରାଚୀନ ସମ୍ପର୍କ ଓ ସାଂସ୍କୃତିକ ପ୍ରଭାବ :-",
+heading: "NOTE-3: ହିମାଳୟ ଓ ଭାରତର ସ୍ୱତନ୍ତ୍ରତା (Himalayas & India's Uniqueness) :-",
 audioPoints: [
 {
-text: "👉 ପୃଥିବୀର ଅନେକ ଦେଶ ସହିତ ଭାରତର ସମ୍ପର୍କ ଯୁଗଯୁଗ ଧରି ରହିଆସିଛି ।<br>👉 ସ୍ଥଳପଥର ସମ୍ପର୍କ ଜଳପଥର ସମ୍ପର୍କଠାରୁ ବହୁ ପୂର୍ବରୁ ସ୍ଥାପିତ ହୋଇଥିଲା ।<br>👉 ଗିରିପଥଗୁଡ଼ିକ ପ୍ରାଚୀନ ପରିବ୍ରାଜକମାନଙ୍କୁ ଯିବାଆସିବାରେ ସୁଯୋଗ ଦେଇଥିଲା ।<br>👉 ଗମନାଗମନ ପଥ ବାଣିଜ୍ୟ, ଭାବର ଆଦାନ-ପ୍ରଦାନ ଏବଂ ସାଂସ୍କୃତିକ ବିକାଶରେ ମୁଖ୍ୟ ଭୂମିକା ଗ୍ରହଣ କରିଥିଲା ।<br>👉 ରାମାୟଣ, ଉପନିଷଦ, ପଞ୍ଚତନ୍ତ୍ର, ଭାରତୀୟ ସଂଖ୍ୟା, ଦଶମିକ ବ୍ୟବସ୍ଥା, ମସଲା ଓ ମସଲିନ୍ ବହୁ ଦେଶକୁ ପହଞ୍ଚିଥିଲା ଏବଂ ଆରବ ଓ ଇଉରୋପୀୟ ବଣିକମାନେ ଭାରତରେ ବାଣିଜ୍ୟ କରି ବସବାସ କରିଥିଲେ ।",
+text: "👉 ଉତ୍ତର ଦିଗରେ ଭାରତକୁ ଘୁଞ୍ଚ ହିମାଳୟ ପର୍ବତମାଳା ଏସିଆର ଅନ୍ୟାନ୍ୟ ଦେଶଗୁଡ଼ିଠାରୁ ଆଲଗା ରଖ୍ଖଅଛି ।<br>👉 ଏହି କାରଣରୁ ପଶ୍ଚିମ ଉପକୂଳରୁ ପଶ୍ଚିମ ଇଉରୋପ ଏବଂ ପୂର୍ବ ଉପକୂଳରୁ ପୂର୍ବ ଏସିଆ ଦେଶଗୁଡ଼ିକ ସହ ଜଳପଥରେ ସଂପର୍କ ସ୍ଥାପନ ହୋଇପାରିଛି ।<br>👉 ଭାରତ ମହାସାଗର ଉପକୂଳସ୍ଥ ଅନ୍ୟ ଦେଶ ତୁଳନାରେ ଭାରତ ଉପକୂଳ ଏତେ ଦୀର୍ଘ ।<br>👉 ଭାରତ ମହାସାଗରର ନାମକରଣ ଆମଦେଶ ନାମ ଅନୁସାରେ ହୋଇଛି ।",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ଭାରତର ସମ୍ପର୍କ ପୃଥିବୀର ଅନେକ ଦେଶ ସହ କେତେଦିନ ଧରି ରହିଛି ?<br><br><span style='color: green;'>Answer:</span> ପୃଥିବୀର ଅନେକ ଦେଶ ସହିତ ଭାରତର ସମ୍ପର୍କ ଯୁଗଯୁଗ ଧରି ରହିଆସିଛି ।",
-"<span style='color: red;'>Q-2:</span> ଜଳପଥ ପୂର୍ବରୁ କେଉଁ ପଥରେ ସମ୍ପର୍କ ସ୍ଥାପିତ ହୋଇଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ଜଳପଥ ପୂର୍ବରୁ ସ୍ଥଳପଥରେ ସମ୍ପର୍କ ସ୍ଥାପିତ ହୋଇଥିଲା ।",
-"<span style='color: red;'>Q-3:</span> ଗମନାଗମନ ପଥ କେଉଁ କ୍ଷେତ୍ରରେ ମୁଖ୍ୟ ଭୂମିକା ଗ୍ରହଣ କରିଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ଗମନାଗମନ ପଥ ବାଣିଜ୍ୟ, ଭାବର ଆଦାନ-ପ୍ରଦାନ ଏବଂ ସାଂସ୍କୃତିକ କ୍ଷେତ୍ରରେ ମୁଖ୍ୟ ଭୂମିକା ଗ୍ରହଣ କରିଥିଲା ।",
-"<span style='color: red;'>Q-4:</span> ପ୍ରାଚୀନ କାଳରେ କେଉଁ ବିଦେଶୀ ବଣିକମାନେ ଭାରତକୁ ବାଣିଜ୍ୟ ପାଇଁ ଆସୁଥିଲେ ?<br><br><span style='color: green;'>Answer:</span> ପ୍ରାଚୀନ କାଳରୁ ଆରବ ଓ ଇଉରୋପୀୟ ବଣିକମାନେ ଭାରତକୁ ବାଣିଜ୍ୟ ପାଇଁ ଆସି ବସବାସ କରିଥିଲେ ।"
+"<span style='color: red;'>Q-1:</span> ହିମାଳୟ ଭାରତ ପାଇଁ କ'ଣ ଭୂମିକା ନିଭାଉଛି ?<br><br><span style='color: green;'>Answer:</span> ହିମାଳୟ ପର୍ବତମାଳା ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଗୁଡ଼ିଠାରୁ ଆଲଗା ରଖ୍ଖଅଛି ।",
+"<span style='color: red;'>Q-2:</span> ହିମାଳୟ କାରଣରୁ ଭାରତ ଅନ୍ୟ ଦେଶ ସହ କ'ଣ ସୁବିଧା ପାଇଛି ?<br><br><span style='color: green;'>Answer:</span> ହିମାଳୟ କାରଣରୁ ଭାରତ ପଶ୍ଚିମ ଇଉରୋପ ଓ ପୂର୍ବ ଏସିଆ ଦେଶ ସହ ଜଳପଥରେ ସଂପର୍କ ସ୍ଥାପନ କରିପାରିଛି ।",
+"<span style='color: red;'>Q-3:</span> ଭାରତ ମହାସାଗରର ନାମ କ'ଣ ଭିତ୍ତିରେ ହୋଇଛି ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ମହାସାଗରର ନାମ ଭାରତ ଦେଶ ର ନାମ ଅନୁସାରେ ରଖ୍ଖାଯାଇଛି ।",
+"<span style='color: red;'>Q-4:</span> ଭାରତ ମହାସାଗର ଉପକୂଳରେ ଭାରତ ଅନ୍ୟ ଦେଶ ଅପେକ୍ଷା କ'ଣ ବିଶେଷ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ମହାସାଗର ଉପକୂଳସ୍ଥ ଅନ୍ୟ ଯେକୌଣସି ଦେଶ ଅପେକ୍ଷା ଭାରତର ଉପକୂଳ ରେଖା ଏତେ ଦୀର୍ଘ ।"
 ]
 },
 
 {
-heading: "NOTE-4: ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର :-",
+heading: "NOTE-4: ପୃଥିବୀ ସହ ଭାରତର ସଂପର୍କ (India's Relation with the World) :-",
 audioPoints: [
 {
-text: "👉 ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ମାନଚିତ୍ରରେ ପ୍ରାୟ ସମାନ (୩୦°) ଦେଖାଯାଏ ।<br>👉 କିନ୍ତୁ କିଲୋମିଟରରେ ଏହି ଦୂରତ୍ୱ ସମାନ ନୁହେଁ ।<br>👉 ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ।<br>👉 ଭାରତର ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୨୦୦ କି.ମି. ।",
+text: "👉 ପୁରାଯୁଗ ଧରି ଭାରତ ପୃଥିବୀର ଅନେକ ଦେଶ ସହ ସଂପର୍କ ରଖ୍ଖ ଆସିଅଛି ।<br>👉 ସ୍ଥଳପଥ ସଂପର୍କ ଜଳପଥ ଅପେକ୍ଷା ଆଗରୁ ହୋଇଥିଲା ।<br>👉 ଉତ୍ତରରୁ ପର୍ବତ ଫାଙ୍କ ଅନେକ ଗିରିପଥ ପ୍ରାଚୀନ ପରିବ୍ରାଜକମାନଙ୍କୁ ପଦଯାତ୍ରାରେ ଯିବା-ଆସିବାର ସୁଯୋଗ ଦେଇଥିଲା ।<br>👉 ପରେ ଜଳପଥ ପ୍ରଥମାବସ୍ଥାରେ ଏଠାରେ ଆଶ୍ରୟ ଥିଲା ।<br>👉 ଏହି ସବୁ ପଥ ବାଣିଜ୍ୟ, ଜ୍ଞାନ ଓ ଭାବର ଆଦାନ ପ୍ରଦାନ ଓ ସାଂସ୍କୃତିକ ବିକାଶ ପାଇଁ ପ୍ରାଚୀନ କାଳ ମୁଖ୍ୟ ଭୂମିକା ନେଇ ଆସିଅଛି ।",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ମାନଚିତ୍ରରେ ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର କିପରି ଦେଖାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ମାନଚିତ୍ରରେ ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ସମାନ (୩୦°) ଦେଖାଯାଏ ।",
-"<span style='color: red;'>Q-2:</span> କିଲୋମିଟରରେ ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ସମାନ କି ?<br><br><span style='color: green;'>Answer:</span> ନା, କିଲୋମିଟରରେ ଏହି ଦୂରତ୍ୱ ସମାନ ନୁହେଁ ।",
-"<span style='color: red;'>Q-3:</span> ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର କେତେ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ।",
-"<span style='color: red;'>Q-4:</span> ଭାରତର ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର କେତେ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୨୦୦ କି.ମି. ।"
+"<span style='color: red;'>Q-1:</span> ଭାରତ ପୁରାଯୁଗ ଧରି ପୃଥିବୀ ସହ କ'ଣ ଭଳି ସଂପର୍କ ରଖ୍ଖ ଆସିଛି ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ପୁରାଯୁଗ ଧରି ପୃଥିବୀର ଅନେକ ଦେଶ ସହ ବାଣିଜ୍ୟ ଓ ସାଂସ୍କୃତିକ ସଂପର୍କ ରଖ୍ଖ ଆସିଅଛି ।",
+"<span style='color: red;'>Q-2:</span> ସ୍ଥଳପଥ ଓ ଜଳପଥ ମଧ୍ୟରୁ ଆଗ ଯୋଗାଯୋଗ କ'ଣ ଦ୍ୱାରା ହୋଇଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ଜଳପଥ ଅପେକ୍ଷା ସ୍ଥଳପଥ ସଂପର୍କ ଆଗ ହୋଇଥିଲା ।",
+"<span style='color: red;'>Q-3:</span> ଗିରିପଥ ପ୍ରାଚୀନ ପରିବ୍ରାଜକଙ୍କୁ କ'ଣ ସୁଯୋଗ ଦେଇଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ଗିରିପଥ ପ୍ରାଚୀନ ପରିବ୍ରାଜକମାନଙ୍କୁ ପଦଯାତ୍ରାରେ ଯିବା-ଆସିବାର ସୁଯୋଗ ଦେଇଥିଲା ।",
+"<span style='color: red;'>Q-4:</span> ଏହି ସବୁ ପଥ ପ୍ରାଚୀନ କାଳରେ କ'ଣ ପ୍ରସାର ପାଇଁ ଉପକାରୀ ଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ଏହି ସବୁ ପଥ ବାଣିଜ୍ୟ, ଜ୍ଞାନ, ଭାବ ଆଦାନ ପ୍ରଦାନ ଓ ସାଂସ୍କୃତିକ ବିକାଶ ପାଇଁ ପ୍ରାଚୀନ କାଳ ମୁଖ୍ୟ ଭୂମିକା ନେଇ ଆସିଅଛି ।"
 ]
 },
 
 {
-heading: "NOTE-5: ଦ୍ରାଘିମାରେଖା ଓ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ :-",
+heading: "NOTE-5: ଭାରତ ଓ ବିଦେଶ ସହ ସଂପ୍ରସାରଣ (India's Cultural & Trade Spread) :-",
 audioPoints: [
 {
-text: "👉 ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ଅକ୍ଷାଂଶରେଖାଗୁଡ଼ିକ ପରି ସମାନାନ୍ତର ନୁହଁନ୍ତି ।<br>👉 ସମସ୍ତ ଦ୍ରାଘିମାରେଖା ମେରୁଠାରେ ମିଳିତ ହୁଅନ୍ତି ଏବଂ ବିଷୁବରେଖାଠାରୁ ମେରୁଆଡ଼କୁ ସେମାନଙ୍କ ମଧ୍ୟରେ ବ୍ୟବଧାନ କ୍ରମେ କମି ଶୂନ୍ୟ ହୋଇଯାଏ ।<br>👉 ଭାରତର ୩୦° ପୂର୍ବ-ପଶ୍ଚିମ ଦ୍ରାଘିମାରେଖୀୟ ବିସ୍ତାର ଯୋଗୁଁ ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ।<br>👉 ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ସୂର୍ଯ୍ୟୋଦୟ ବା ସୂର୍ଯ୍ୟାସ୍ତ ହେବାର ପ୍ରାୟ ଦୁଇ ଘଣ୍ଟା ପରେ ଦ୍ୱାରକାରେ ସୂର୍ଯ୍ୟୋଦୟ ବା ସୂର୍ଯ୍ୟାସ୍ତ ହୋଇଥାଏ ।",
+text: "👉 ରାମାୟଣ ଓ ଉପନିଷଦ ଦର୍ଶନ, ପଞ୍ଚତନ୍ତ୍ର ଗଳ୍ପ, ଭାରତୀୟ ସଂଖ୍ୟା ଓ ଦଶମିକ ବ୍ୟବସ୍ଥା ବହୁ ଦେଶରେ ପ୍ରସାର ପାଇଲା ।<br>👉 ଭାରତୀୟ ମସଲା, ମସଲିନ୍ ଏବଂ ଅନ୍ୟ ପଣ୍ୟ ଅନ୍ୟ ଦେଶରେ ବ୍ୟବସାୟ ହୋଇ ପ୍ରସିଦ୍ଧ ହେଲା ।<br>👉 ପ୍ରାଚୀନ କାଳରୁ ଆରବ ଓ ଇଉରୋପୀୟ ବଣିକ ଭାରତରେ ବ୍ୟବସାୟ ପାଇଁ ଆସି ବସବାସ କଲେ ।<br>👉 ଆଲ୍ ଜିମ୍ ଧ ଗୁମ୍ବୁଜ ଓ ମିନାର ଭଳି ଭାସ୍କର୍ଯ୍ୟ ଭାରତ ବିଭିନ୍ନ ସ୍ଥାନରେ ଦେଖ୍ଖ ମିଳେ ।",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ କି ଅକ୍ଷାଂଶରେଖା ପରି ସମାନାନ୍ତର ?<br><br><span style='color: green;'>Answer:</span> ନା, ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ଅକ୍ଷାଂଶରେଖାଗୁଡ଼ିକ ପରି ସମାନାନ୍ତର ନୁହଁନ୍ତି ।",
-"<span style='color: red;'>Q-2:</span> ସମସ୍ତ ଦ୍ରାଘିମାରେଖା କେଉଁଠାରେ ମିଳିତ ହୁଅନ୍ତି ?<br><br><span style='color: green;'>Answer:</span> ସମସ୍ତ ଦ୍ରାଘିମାରେଖା ମେରୁଠାରେ ମିଳିତ ହୁଅନ୍ତି ।",
-"<span style='color: red;'>Q-3:</span> ଭାରତର ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ କେତେ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ।",
-"<span style='color: red;'>Q-4:</span> ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ସୂର୍ଯ୍ୟୋଦୟ ପରେ ଦ୍ୱାରକାରେ ସୂର୍ଯ୍ୟୋଦୟ କେତେ ସମୟ ପରେ ହୁଏ ?<br><br><span style='color: green;'>Answer:</span> ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ସୂର୍ଯ୍ୟୋଦୟ ହେବାର ପ୍ରାୟ ଦୁଇ ଘଣ୍ଟା ପରେ ଦ୍ୱାରକାରେ ସୂର୍ଯ୍ୟୋଦୟ ହୁଏ ।"
+"<span style='color: red;'>Q-1:</span> ଭାରତର କେଉଁ ଗ୍ରନ୍ଥ ବା ଧାରଣା ବିଦେଶ ସୁଦ୍ଧା ପ୍ରଭାବ ପକ୍ଷ ଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ରାମାୟଣ, ଉପନିଷଦ, ପଞ୍ଚତନ୍ତ୍ର, ଭାରତୀୟ ସଂଖ୍ୟା ଓ ଦଶମିକ ବ୍ୟବସ୍ଥା ବିଦେଶ ସୁଦ୍ଧା ପ୍ରଭାବ ପକ୍ଷ ଥିଲା ।",
+"<span style='color: red;'>Q-2:</span> ବ୍ୟବସାୟ ଦୃଷ୍ଟିରୁ ଭାରତ ପ୍ରସିଦ୍ଧ ଥିଲା କ'ଣ ପାଇଁ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତ ମସଲା, ମସଲିନ୍ ଓ ଅନ୍ୟ ଅନେକ ପଣ୍ୟ ପାଇଁ ବ୍ୟବସାୟ ଦୃଷ୍ଟିରୁ ପ୍ରସିଦ୍ଧ ଥିଲା ।",
+"<span style='color: red;'>Q-3:</span> ଭାରତରେ ବିଦେଶୀ ଭ୍ଳୁ ବଣିକ ଆସି ଏଠାରେ କ'ଣ କରିଥିଲେ ?<br><br><span style='color: green;'>Answer:</span> ଆରବ ଓ ଇଉରୋପୀୟ ବଣିକ ଭାରତରେ ବ୍ୟବସାୟ ପାଇଁ ଆସି ବସବାସ କଲେ ।",
+"<span style='color: red;'>Q-4:</span> ବିଦେଶୀ ଶାସକ ଭାରତରେ ଆସି କ'ଣ ଛାଡ଼ ଗଲେ ?<br><br><span style='color: green;'>Answer:</span> ଆଲ୍ ଜିମ୍ ଧ ଗୁମ୍ବୁଜ ଓ ମିନାର ଭଳି ଭାସ୍କର୍ଯ୍ୟ ଭାରତ ବିଭିନ୍ନ ସ୍ଥାନରେ ଦେଖ୍ଖ ମିଳୁଛି ।"
 ]
 },
 
 {
-heading: "NOTE-6: ଭାରତୀୟ ପ୍ରମାଣ ସମୟ (IST) ଓ ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା :-",
+heading: "NOTE-6: ଭାରତର ଆକାର ଓ ବିସ୍ତାର (Size and Extent of India) :-",
 audioPoints: [
 {
-text: "👉 ଦେଶର ବିଭିନ୍ନ ସ୍ଥାନରେ ସମୟର ଭିନ୍ନତାକୁ ଦୂର କରିବା ପାଇଁ ୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବେ ଗ୍ରହଣ କରାଯାଇଛି ।<br>👉 ଏହି ଦ୍ରାଘିମାରେଖା ଉତ୍ତରପ୍ରଦେଶର ମିର୍ଜାପୁର ଉପର ଦେଇ ଯାଇଛି ।<br>👉 ଏହି ମଧ୍ୟାହ୍ନରେଖାର ସ୍ଥାନୀୟ ସମୟକୁ ‘ଭାରତୀୟ ପ୍ରମାଣ ସମୟ (Indian Standard Time)’ ବୋଲି କୁହାଯାଏ ।<br>👉 ଦକ୍ଷିଣରୁ ଉତ୍ତର ଆଡ଼କୁ ଗଲେ ଅକ୍ଷାଂଶୀୟ ବିସ୍ତାର ଦିନ ଓ ରାତିର ଅବଧିକୁ ପ୍ରଭାବିତ କରେ ।",
+text: "👉 ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ସମାନ (୩୦୦°) ।<br>👉 ଦେଶର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ।<br>👉 ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୧୦୦ କି.ମି. ।<br>👉 ଭୂଗୋଳ ଦୃଷ୍ଟିରୁ ଦ୍ରାଘିମାରେଖା ଓ ଅକ୍ଷାଂଶ ରେଖା ସମାନ୍ତର ନୁହଁ, ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ମେରୁଠାରେ ମିଳିତ ହୁଅନ୍ତି ।",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା କେଉଁ ଦ୍ରାଘିମାରେଖା ?<br><br><span style='color: green;'>Answer:</span> ୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖା ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ।",
-"<span style='color: red;'>Q-2:</span> ୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖା କେଉଁ ସ୍ଥାନ ଉପର ଦେଇ ଯାଇଛି ?<br><br><span style='color: green;'>Answer:</span> ୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖା ଉତ୍ତରପ୍ରଦେଶର ମିର୍ଜାପୁର ଉପର ଦେଇ ଯାଇଛି ।",
-"<span style='color: red;'>Q-3:</span> ଭାରତୀୟ ପ୍ରମାଣ ସମୟ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖାର ସ୍ଥାନୀୟ ସମୟକୁ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ବୋଲି କୁହାଯାଏ ।",
-"<span style='color: red;'>Q-4:</span> ଅକ୍ଷାଂଶୀୟ ବିସ୍ତାର କାହାକୁ ପ୍ରଭାବିତ କରେ ?<br><br><span style='color: green;'>Answer:</span> ଅକ୍ଷାଂଶୀୟ ବିସ୍ତାର ଦିନ ଓ ରାତିର ଅବଧିକୁ ପ୍ରଭାବିତ କରେ ।"
+"<span style='color: red;'>Q-1:</span> ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ଏକ ରଖ୍ଖ କ'ଣ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ସମାନ (୩୦°) ।",
+"<span style='color: red;'>Q-2:</span> ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର କେତେ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ।",
+"<span style='color: red;'>Q-3:</span> ଭାରତର ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର କେତେ ?<br><br><span style='color: green;'>Answer:</span> ଭାରତର ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୧୦୦ କି.ମି. ।",
+"<span style='color: red;'>Q-4:</span> ଦ୍ରାଘିମାରେଖା ଓ ଅକ୍ଷାଂଶ ରେଖା ସମାନ୍ତର କ'ଣ ?<br><br><span style='color: green;'>Answer:</span> ଦ୍ରାଘିମାରେଖା ଓ ଅକ୍ଷାଂଶ ରେଖା ସମାନ୍ତର ନୁହଁ, ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ମେରୁଠାରେ ମିଳିତ ହୁଅନ୍ତି ।"
 ]
 }
 
-    
 ];
-    
     
 const courseData = {
             teacherImage: "https://via.placeholder.com/400x300/667eea/ffffff?text=Teacher",
@@ -3271,108 +3212,22 @@ const courseData = {
     audio: "",
 
 mermaid: [
-`%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%% flowchart TD TITLE["📖 GRAPH-1:
-ଭାରତ ଓ ଏହାର
-ଭୌଗୋଳିକ ଅବସ୍ଥିତି"] TITLE --> INTRO subgraph INTRO[ ] direction LR A["🟡 ଅବସ୍ଥିତି"] A --> I1["ଭାରତ ପୂର୍ବ ଓ ପଶ୍ଚିମ
-ଏସିଆ ମଧ୍ୟଭାଗରେ ଅଛି।"] A --> I2["ଭାରତ ଏସିଆ ମହାଦେଶର
-ଦକ୍ଷିଣ ଅଂଶରେ ଅଛି।"] A --> I3["ଭାରତ ଆନ୍ତର୍ଜାତୀୟ
-ଜଳପଥ ସ୍ଥିତିରେ ଅଛି।"] end INTRO --> MAIN subgraph MAIN[ ] direction LR M["🟢 ଉପଦ୍ୱୀପ ଭାରତ"] M --> M1["ଦକ୍ଷିଣ ଭାଗ ସରୁ ହୋଇ
-ସମୁଦ୍ରକୁ ଲମ୍ବିଯାଇଛି।"] M --> M2["ତିନି ଦିଗରୁ ସମୁଦ୍ର
-ଘେରି ରହିଛି।"] M --> M3["ତିନି ଦିଗ ସମୁଦ୍ର ଦ୍ୱାରା
-ଘେରା ଭୂଖଣ୍ଡ = ଉପଦ୍ୱୀପ।"] M --> M4["ଭାରତ ଏକ ବୃହତ
-ଉପଦ୍ୱୀପ।"] M --> M5["ଉତ୍ତରରେ ହିମାଳୟ ଭାରତକୁ
-ଏସିଆରୁ ଅଲଗା ରଖେ।"] end MAIN --> CONCLUSION subgraph CONCLUSION[ ] direction LR C["🔵 ମନେରଖ"] C --> C1["ପୂର୍ବ ଉପକୂଳ: ବଙ୍ଗୋପସାଗର,
-ପଶ୍ଚିମ ଉପକୂଳ: ଆରବ ସାଗର।"] C --> C2["ଭାରତ ମହାସାଗରର ନାମ
-ଭାରତ ନାମରୁ ହୋଇଛି।"] C --> C3["ଭାରତର ଉପକୂଳ ରେଖା
-ସବୁଠୁ ଦୀର୍ଘ।"] end linkStyle 0 stroke-width:0px; linkStyle 4 stroke-width:0px; linkStyle 10 stroke-width:0px; classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold; classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold; classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold; classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold; class TITLE title; class A,I1,I2,I3 intro; class M,M1,M2,M3,M4,M5 body; class C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ<br/>ଓ ଉତ୍ପତ୍ତି\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଶବ୍ଦ ବିଶ୍ଳେଷଣ\"]\nA --> I1[\"'ଜ୍ୟା' ଶବ୍ଦର<br/>ଅର୍ଥ ପୃଥ୍ବୀ।\"]\nA --> I2[\"'ମିତି' ଶବ୍ଦର<br/>ଅର୍ଥ ମାପ।\"]\nA --> I3[\"ଜ୍ୟାମିତି ଅର୍ଥ<br/>ପୃଥ୍ବୀ ମାପ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 Geometry ଶବ୍ଦ\"]\nM --> M1[\"Geometry ଗ୍ରୀକ୍<br/>ଭାଷାରୁ ଆସିଛି।\"]\nM --> M2[\"Geo ଅର୍ଥ<br/>ପୃଥ୍ବୀ।\"]\nM --> M3[\"Metron ଅର୍ଥ<br/>ମାପ।\"]\nM --> M4[\"Geo ଓ Metron ରୁ<br/>Geometry ସୃଷ୍ଟି।\"]\nM --> M5[\"ଜ୍ୟାମିତି ଓ Geometry<br/>ଏକ ଅର୍ଥ ବହନ କରନ୍ତି।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଜ୍ୟାମିତି ଶବ୍ଦ ସଂସ୍କୃତ<br/>ଭାଷାରୁ ଆସିଛି।\"]\nC --> C2[\"Geometry ଶବ୍ଦ<br/>ଗ୍ରୀକ୍ ଭାଷାରୁ ଆସିଛି।\"]\nC --> C3[\"ଉଭୟ ଶବ୍ଦ ଭୂ-ମାପ<br/>ଅର୍ଥ ପ୍ରକାଶ କରେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-`%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%% flowchart TD TITLE["📖 GRAPH-2:
-ଭାରତର ବ୍ୟାପାର ଓ
-ଯୋଗାଯୋଗ ସଂପର୍କ"] TITLE --> INTRO subgraph INTRO[ ] direction LR A["🟡 ଯୋଗାଯୋଗ ପଥ"] A --> I1["ସ୍ଥଳ ପଥ ଯୋଗାଯୋଗ
-ଜଳ ପଥ ଆଗରୁ ହୋଇଥିଲା।"] A --> I2["ଉତ୍ତରର ଗିରି ପଥ ଦ୍ୱାରା
-ପ୍ରାଚୀନ ଯାତ୍ରୀ ଯାଉଥିଲେ।"] A --> I3["ଜଳ ପଥ ପ୍ରଥମ ଅବସ୍ଥାରେ
-ଅନ୍ତରାୟ ଥିଲା।"] end INTRO --> MAIN subgraph MAIN[ ] direction LR M["🟢 ସଂସ୍କୃତି ଓ ବ୍ୟାପାର"] M --> M1["ରାମାୟଣ, ଉପନିଷଦ ଦୂର
-ଦେଶରେ ପ୍ରଚାର ହେଲା।"] M --> M2["ପଞ୍ଚତନ୍ତ୍ର ଓ ଭାରତୀୟ ସଂଖ୍ୟା
-ଅନ୍ୟ ଦେଶ ପାଇଲା।"] M --> M3["ମସଲା ଓ ମସଲିନ ବସ୍ତ୍ରର
-ବ୍ୟାପାର ବ୍ୟାପିଲା।"] M --> M4["ଆରବ ଓ ଇଉରୋପୀୟ ବଣିକ
-ଭାରତରେ ବାସ କଲେ।"] M --> M5["ଗମ୍ବୁଜ ଓ ମିନାର ଆଜିବି
-ଭାରତରେ ଦେଖାଯାଏ।"] end MAIN --> CONCLUSION subgraph CONCLUSION[ ] direction LR C["🔵 ଫଳାଫଳ"] C --> C1["ଭାରତ ଯୁଗ ଯୁଗ ଧରି
-ଦୁନିଆ ସଙ୍ଗେ ଯୁକ୍ତ।"] C --> C2["ଜ୍ଞାନ ଓ ସଂସ୍କୃତି ଆଦାନ
-ପ୍ରଦାନ ହୋଇ ଆସୁଛି।"] C --> C3["ବ୍ୟାପାର ଓ ସଂସ୍କୃତି ଭାରତ
-ବିଶ୍ୱ ଅଗ୍ରଗତିରେ ଭୂମିକା ଦେଇଛି।"] end linkStyle 0 stroke-width:0px; linkStyle 4 stroke-width:0px; linkStyle 10 stroke-width:0px; classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold; classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold; classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold; classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold; class TITLE title; class A,I1,I2,I3 intro; class M,M1,M2,M3,M4,M5 body; class C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ଜ୍ୟାମିତି ସୃଷ୍ଟିର କାରଣ<br/>ଓ ବିକାଶ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଆବଶ୍ୟକତା\"]\nA --> I1[\"ଜମି ମାପ କରିବାର<br/>ଆବଶ୍ୟକତା ଥିଲା।\"]\nA --> I2[\"ବାସଗୃହ ଓ ରାସ୍ତା<br/>ନିର୍ମାଣ ଦରକାର ହେଲା।\"]\nA --> I3[\"ଚାଷ ପାଇଁ ଆକୃତି<br/>ଜ୍ଞାନ ଲୋଡ଼ା ହେଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଜ୍ୟାମିତି ବିକାଶ\"]\nM --> M1[\"ଆକୃତିଗତ ଜ୍ଞାନ ପରିମାର୍ଜନ<br/>ଫଳରେ ଶାସ୍ତ୍ର ଉଭବ ହେଲା।\"]\nM --> M2[\"ମାନବ ସଭ୍ୟତା ସହ<br/>ଜ୍ୟାମିତି ବୃଦ୍ଧି ପାଇଲା।\"]\nM --> M3[\"ମିଶରୀୟ ସଭ୍ୟତା ସବୁଠାରୁ<br/>ପ୍ରାଚୀନ ଉଦାହରଣ।\"]\nM --> M4[\"ପିରାମିଡ୍ ଜ୍ୟାମିତି<br/>ଜ୍ଞାନର ନିଦର୍ଶନ।\"]\nM --> M5[\"ଭାରତୀୟ ବୈଦିକ ଯୁଗରେ<br/>ଜ୍ୟାମିତି ବ୍ୟବହୃତ ହୋଇଥିଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଫଳାଫଳ\"]\nC --> C1[\"ଜ୍ୟାମିତି ଜୀବନ<br/>ଆବଶ୍ୟକତାରୁ ଜନ୍ମ ନେଇଛି।\"]\nC --> C2[\"ବ୍ୟବହାରିକ ଅଭିଜ୍ଞତା<br/>ଶାସ୍ତ୍ରକୁ ଗଢ଼ିଛି।\"]\nC --> C3[\"ସଭ୍ୟତା ସହ ଜ୍ୟାମିତି<br/>ଅଧିକ ବ୍ୟାପକ ହୋଇଛି।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-`%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%% flowchart TD TITLE["📖 GRAPH-3:
-ଭାରତର ବିସ୍ତାର
-ଓ ଦ୍ରାଘିମାରେଖା"] TITLE --> INTRO subgraph INTRO[ ] direction LR A["🟡 ଭୌଗୋଳିକ ବିସ୍ତାର"] A --> I1["ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର
-ପ୍ରାୟ ୩୦୦୦ କି.ମି.।"] A --> I2["ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର
-ପ୍ରାୟ ୩୨୦୦ କି.ମି.।"] A --> I3["ଡିଗ୍ରିରେ ବିସ୍ତାର ସମାନ
-ହେଲେ କି.ମି.ରେ ଭିନ୍ନ।"] end INTRO --> MAIN subgraph MAIN[ ] direction LR M["🟢 ଦ୍ରାଘିମାରେଖା ଓ ସମୟ"] M --> M1["ଦ୍ରାଘିମାରେଖା ମେରୁରେ
-ଏକ ବିନ୍ଦୁରେ ମିଳନ୍ତି।"] M --> M2["ବିଷୁବ ରୁ ମେରୁ ଆଡ଼କୁ
-ଦ୍ରାଘିମା ବ୍ୟବଧାନ ଘଟେ।"] M --> M3["୩୦° ଦ୍ରାଘିମା ବ୍ୟବଧାନ =
-୨ ଘଣ୍ଟା ସମୟ ଭିନ୍ନ।"] M --> M4["ଅରୁଣାଚଳ ଓ ଦ୍ୱାରକାରେ
-ସୂର୍ଯ୍ୟୋଦୟ ୨ ଘଣ୍ଟା ଫରକ।"] M --> M5["ଭାରତର ୮୨°୩୦' ପୂ. ଦ୍ରାଘିମା
-ପ୍ରମାଣ ମଧ୍ୟାହ୍ନ ରେଖା।"] end MAIN --> CONCLUSION subgraph CONCLUSION[ ] direction LR C["🔵 ଭାରତୀୟ ପ୍ରମାଣ ସମୟ"] C --> C1["IST ଭାରତ ସାରା
-ଏକ ସମୟ ଅନୁସଧାନ କରେ।"] C --> C2["ମିର୍ଜାପୁର (UP) ଉପରେ
-IST ଆଧାର ଅଟେ।"] C --> C3["ଅରୁଣାଚଳ ନାମ 'ଉଗ ସୂର୍ଯ୍ୟ ଭୂମି'
-ଯୁକ୍ତିଯୁକ୍ତ।"] end linkStyle 0 stroke-width:0px; linkStyle 4 stroke-width:0px; linkStyle 10 stroke-width:0px; classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold; classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold; classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold; classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold; class TITLE title; class A,I1,I2,I3 intro; class M,M1,M2,M3,M4,M5 body; class C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ଶୁଲ୍ବ ସୂତ୍ର ଓ<br/>ଭାରତୀୟ ଜ୍ୟାମିତି\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଶୁଲ୍ବ ସୂତ୍ର\"]\nA --> I1[\"ଶୁଲ୍ବ ଅର୍ଥ<br/>ରଜ୍ଜୁ ବା ଦଉଡ଼ି।\"]\nA --> I2[\"ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିକ<br/>ମାପ ହୋଇଥିଲା।\"]\nA --> I3[\"ଖ୍ରୀ.ପୂ. 800-500<br/>ମଧ୍ୟରେ ରଚିତ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଭାରତୀୟ ଉପଯୋଗ\"]\nM --> M1[\"ଯଜ୍ଞକୁଣ୍ଡ ନିର୍ମାଣରେ<br/>ଜ୍ୟାମିତି ପ୍ରୟୋଗ।\"]\nM --> M2[\"ପୂଜାବେଦୀ ନିର୍ମାଣରେ<br/>ଜ୍ୟାମିତି ପ୍ରୟୋଗ।\"]\nM --> M3[\"ମନ୍ଦିର ଓ ବାସଗୃହ<br/>ନିର୍ମାଣରେ ଉପଯୋଗ।\"]\nM --> M4[\"ଭାରତୀୟ ଋଷିଗଣ ଜ୍ୟାମିତିକ<br/>ସୂତ୍ର ଲିଖିଥିଲେ।\"]\nM --> M5[\"ମହେନ୍ଜୋଦାରୋ ଓ ହରପ୍ପା<br/>ଜ୍ୟାମିତି ଉଦାହରଣ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଭାରତ ଜ୍ୟାମିତିର<br/>ଅଗ୍ରଦୂତ ଥିଲା।\"]\nC --> C2[\"ଶୁଲ୍ବ ସୂତ୍ର ଭାରତୀୟ<br/>ଗଣିତର ଗୌରବ।\"]\nC --> C3[\"ଧାର୍ମିକ ଆବଶ୍ୟକତା ଜ୍ୟାମିତି<br/>ବିକାଶରେ ସହାୟ ହୋଇଥିଲା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-`%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%% flowchart TD TITLE["📖 GRAPH-4:
-ଭାରତ ଅଧ୍ୟାୟ:
-ମୁଖ୍ୟ ସାରାଂଶ"] TITLE --> INTRO subgraph INTRO[ ] direction LR A["🟡 ଭୌଗୋଳିକ ସ୍ଥିତି"] A --> I1["ଏସିଆ ମହାଦେଶ ଦକ୍ଷିଣ
-ଅଂଶ — ଭାରତ।"] A --> I2["ତିନି ଦିଗ: ଆରବ ସାଗର,
-ବଙ୍ଗୋପସାଗର, ଭାରତ ମହାସାଗର।"] A --> I3["ଉତ୍ତରରେ ହିମାଳୟ
-ଏସିଆ ସୀମା।"] end INTRO --> MAIN subgraph MAIN[ ] direction LR M["🟢 ଭୌଗୋଳିକ ଗୁରୁତ୍ୱ"] M --> M1["ଆନ୍ତର୍ଜାତୀୟ ଜଳ ପଥରେ
-ସୁବିଧା ଜନକ ଅବସ୍ଥାନ।"] M --> M2["ପୂର୍ବ ଓ ପଶ୍ଚିମ ଦେଶ
-ସଙ୍ଗ ସଂପର୍କ ସ୍ଥାପିତ।"] M --> M3["ଭାରତ ମହାସାଗରରେ
-ଦୀର୍ଘ ଉପକୂଳ ରେଖା।"] M --> M4["ମହାସାଗରରେ ଭାରତ ନାମ
-ଯଥାର୍ଥ ଅଟେ।"] M --> M5["ଅକ୍ଷାଂଶ ଦ୍ୱାରା ଦିନ ରାତ
-ଅବଧି ପ୍ରଭାବିତ।"] end MAIN --> CONCLUSION subgraph CONCLUSION[ ] direction LR C["🔵 ସ୍ଥାୟୀ ଶିକ୍ଷଣ"] C --> C1["ଭାରତ ଏକ ଉପଦ୍ୱୀପ —
-ତିନି ଦିଗ ଜଳ।"] C --> C2["IST = ୮୨°୩୦' ପୂ.
-ଦ୍ରାଘିମା ଆଧାର।"] C --> C3["ପ୍ରାଚୀନ ସ୍ଥଳ ଓ ଜଳ ପଥ
-ଭାରତ ଇତିହାସ ଗଢ଼ିଲା।"] end linkStyle 0 stroke-width:0px; linkStyle 4 stroke-width:0px; linkStyle 10 stroke-width:0px; classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold; classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold; classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold; classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold; class TITLE title; class A,I1,I2,I3 intro; class M,M1,M2,M3,M4,M5 body; class C,C1,C2,C3 conclusion;`
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଇଉକ୍ଲିଡ୍ ଓ<br/>Euclidean Geometry\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଗ୍ରୀକ୍ ବିଦ୍ୱାନ\"]\nA --> I1[\"Thales ଜ୍ୟାମିତିକ ତଥ୍ୟ<br/>ଉଦ୍ଘୋଟନ ଆରମ୍ଭ କଲେ।\"]\nA --> I2[\"ପିଥାଗୋରାସ ଓ ସକ୍ରେଟିସ<br/>ଜ୍ୟାମିତି ବିକଶିତ କଲେ।\"]\nA --> I3[\"ଗ୍ରୀକ୍ ବିଦ୍ୱାନ ଜ୍ୟାମିତିକୁ<br/>ଶାସ୍ତ୍ର ରୂପ ଦେଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଇଉକ୍ଲିଡ୍ ଙ୍କ ଅବଦାନ\"]\nM --> M1[\"ଇଉକ୍ଲିଡ୍ 'Elements'<br/>ଗ୍ରନ୍ଥ ରଚନା କଲେ।\"]\nM --> M2[\"ଗ୍ରନ୍ଥରେ ତେରଶଟି<br/>ଭାଗ ଅଛି।\"]\nM --> M3[\"ପଞ୍ଚଶଟି ଉପପାଦ୍ୟ<br/>ସ୍ଥାନ ପାଇଲା।\"]\nM --> M4[\"ଜ୍ୟାମିତିକୁ ସୁଶୃଙ୍ଖଳ<br/>ରୂପ ଦେଲେ।\"]\nM --> M5[\"ଇଉକ୍ଲିଡ୍ 'ଜ୍ୟାମିତିର ଜନକ'<br/>ଆଖ୍ୟା ପାଇଲେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଫଳାଫଳ\"]\nC --> C1[\"ଇଉକ୍ଲିଡ୍ ନାମରେ<br/>Euclidean Geometry ପ୍ରଚଳିତ।\"]\nC --> C2[\"ଏ ଜ୍ୟାମିତି ବିଦ୍ୟାଳୟ<br/>ସ୍ତରରେ ପଢ଼ାଯାଏ।\"]\nC --> C3[\"ସମତଳ ଜ୍ୟାମିତି<br/>ନାମରେ ମଧ୍ୟ ଜଣାଶୁଣା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-5:<br/>Birkhoff, Hilbert ଓ<br/>ଆଧୁନିକ ଜ୍ୟାମିତି\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଆଧୁନିକ ବିଦ୍ୱାନ\"]\nA --> I1[\"George David Birkhoff<br/>ଆମେରିକୀୟ ଗଣିତଜ୍ଞ।\"]\nA --> I2[\"David Hilbert<br/>ଜର୍ମାନୀର ଗଣିତଜ୍ଞ।\"]\nA --> I3[\"ଉଭୟ ଜ୍ୟାମିତି<br/>ପରିମାର୍ଜନ କଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଅବଦାନ\"]\nM --> M1[\"Birkhoff 1932 ମସିହାରେ<br/>ନିବନ୍ଧ ପ୍ରକାଶ କଲେ।\"]\nM --> M2[\"Scale ଓ Protractor ଆଧାରରେ<br/>ଜ୍ୟାମିତି ପ୍ରସ୍ତୁତ ହେଲା।\"]\nM --> M3[\"Hilbert ଜ୍ୟାମିତିକୁ<br/>ତାର୍କିକ ଢ଼ାଞ୍ଚା ଦେଲେ।\"]\nM --> M4[\"ଆଧୁନିକ ଜ୍ୟାମିତି Set<br/>ମାଧ୍ୟମରେ ପ୍ରକାଶ ପାଏ।\"]\nM --> M5[\"ଉଚ୍ଚ ଗଣିତ ଅଧ୍ୟୟନ<br/>ପାଇଁ ଅଧିକ ଉପଯୁକ୍ତ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ସାରାଂଶ\"]\nC --> C1[\"ଜ୍ୟାମିତି ବିଦ୍ୟାଳୟ ସ୍ତରରେ<br/>ସମତଳ ଜ୍ୟାମିତି ନାମରେ ଜଣାଯାଏ।\"]\nC --> C2[\"ଆଧୁନিक ଜ୍ୟାମିତି Set<br/>ଭିତ୍ତିକ ପ୍ରକ୍ରିୟାରେ ପ୍ରକାଶ ପାଏ।\"]\nC --> C3[\"ଉଭୟ ଧାରା ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର<br/>ଭିନ୍ନ ବିକାଶ ସ୍ତର ଦର୍ଶାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
 ],
-
 
 mcq: {
     questions: [
-
         // =========================
-        // PAGE-3 : PARAGRAPH NO.-1
-        // =========================
-        {
-            question: "ଭାରତବର୍ଷ କେଉଁ ଦୁଇ ଏସିଆ ଅଞ୍ଚଳର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ?",
-            options: [
-                "ଉତ୍ତର ଏସିଆ ଓ ଦକ୍ଷିଣ ଏସିଆ",
-                "ପୂର୍ବ ଏସିଆ ଓ ପଶ୍ଚିମ ଏସିଆ",
-                "ମଧ୍ୟ ଏସିଆ ଓ ଦକ୍ଷିଣ ଏସିଆ",
-                "ପୂର୍ବ ଏସିଆ ଓ ଉତ୍ତର ଏସିଆ"
-            ],
-            correct: 1
-        },
-        {
-            question: "ତିନିଦିଗରେ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ସଂକୀର୍ଣ୍ଣ ଭୂଖଣ୍ଡକୁ କ'ଣ କୁହାଯାଏ?",
-            options: [
-                "ଦ୍ୱୀପ",
-                "ଉପତ୍ୟକା",
-                "ଉପଦ୍ୱୀପ",
-                "ମାଳଭୂମି"
-            ],
-            correct: 2
-        },
-        {
-            question: "ଉପଦ୍ୱୀପ କେତେ ଦିଗରେ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ହୋଇଥାଏ?",
-            options: [
-                "ଦୁଇଦିଗରେ",
-                "ତିନିଦିଗରେ",
-                "ଚାରିଦିଗରେ",
-                "ଏକଦିଗରେ"
-            ],
-            correct: 1
-        },
-
-        // =========================
-        // PAGE-3 : PARAGRAPH NO.-2
+        // PAGE-3 : CONCEPT NO.-1
+        // (ଭାରତର ଅବସ୍ଥିତି)
         // =========================
         {
             question: "ଭାରତ ଏସିଆ ମହାଦେଶର କେଉଁ ଅଂଶରେ ଅବସ୍ଥିତ?",
@@ -3380,554 +3235,773 @@ mcq: {
                 "ଉତ୍ତରାଂଶରେ",
                 "ପୂର୍ବାଂଶରେ",
                 "ଦକ୍ଷିଣାଂଶରେ",
-                "ପଶ୍ଚିମାଂଶରେ"
+                "ପଶ୍ଚିମ ଅଂଶରେ"
             ],
             correct: 2
         },
+        // =========================
+        // PAGE-3 : CONCEPT NO.-2
+        // (ଭାରତ ଉପଦ୍ୱୀପ)
+        // =========================
         {
-            question: "ଭାରତକୁ କାହିଁକି ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପ କୁହାଯାଏ?",
+            question: "ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି କାରଣ କ'ଣ?",
             options: [
-                "ଏହା ପର୍ବତରେ ଘେରା",
-                "ଏହା ମରୁଭୂମିରେ ଘେରା",
-                "ଏହାର ତିନିଦିଗରେ ସମୁଦ୍ର ଘେରି ରହିଛି",
-                "ଏହା ଜଙ୍ଗଲରେ ଘେରା"
-            ],
-            correct: 2
-        },
-        {
-            question: "ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ କେଉଁ ଦୁଇ ଜଳରାଶିରେ ବିଭକ୍ତ?",
-            options: [
-                "ଲୋହିତ ସାଗର ଓ କଳା ସାଗର",
-                "ଆରବ ସାଗର ଓ ବଙ୍ଗୋପସାଗର",
-                "ଭୂମଧ୍ୟ ସାଗର ଓ କଳା ସାଗର",
-                "କାସ୍ପିଆନ୍ ସାଗର ଓ ଆରବ ସାଗର"
+                "ଦେଶର ଉତ୍ତରଭାଗ ହ୍ରଦ ଦ୍ୱାରା ଘେରି ରହିଛି",
+                "ଦେଶର ଦକ୍ଷିଣଭାଗ କ୍ରମଶଃ ଅଣ‌ୋସାରିଆ ହୋଇ ସମୁଦ୍ର ଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ଓ ସମୁଦ୍ର ତିନିଦିଗରୁ ଘେରି ରହିଛି",
+                "ଦେଶର ପୂର୍ବ ଓ ପଶ୍ଚିମ ଭାଗ ନଦୀ ଦ୍ୱାରା ଘେରା",
+                "ଦେଶ ସଂପୂର୍ଣ୍ଣ ଭୂ-ବେଷ୍ଟିତ"
             ],
             correct: 1
         },
+        // =========================
+        // PAGE-3 : CONCEPT NO.-3
+        // (ଭାରତ ମହାସାଗର ଓ ଜଳରାଶି)
+        // =========================
         {
-            question: "ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଠାରୁ କିଏ ଅଲଗା କରିଛି?",
+            question: "ଭାରତ ମହାସାଗରର ଉଭରାଂଶ ଦୁଇଟି ବିସ୍ତୀର୍ଣ୍ଣ ଜଳରାଶି କ'ଣ?",
             options: [
-                "ଆରବ ସାଗର",
-                "ବଙ୍ଗୋପସାଗର",
+                "ଗଙ୍ଗା ଓ ବ୍ରହ୍ମପୁତ୍ର",
+                "ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗର",
+                "ଲୋହିତ ସାଗର ଓ ଭୂମଧ୍ୟ ସାଗର",
+                "କଳା ସାଗର ଓ କ୍ୟାସ୍ପିୟ ସାଗର"
+            ],
+            correct: 1
+        },
+        // =========================
+        // PAGE-4(PART-1) : CONCEPT NO.-1
+        // (ହିମାଳୟ ଓ ଭାରତର ଅନନ୍ୟତା)
+        // =========================
+        {
+            question: "ଭାରତକୁ ଏସିଆର ଅନ୍ୟାନ୍ୟ ଦେଶଗୁଡ଼ିକଠାରୁ ଅଲଗା ରଖିଛି କ'ଣ?",
+            options: [
+                "ସମୁଦ୍ର",
                 "ହିମାଳୟ ପର୍ବତମାଳା",
-                "ଭାରତ ମହାସାଗର"
-            ],
-            correct: 2
-        },
-        {
-            question: "ପଶ୍ଚିମ ଉପକୂଳରୁ କେଉଁ ଅଞ୍ଚଳ ସହ ଜଳପଥରେ ସଂପର୍କ ସ୍ଥାପନ ହୋଇପାରିଛି?",
-            options: [
-                "ପୂର୍ବ ଏସିଆ",
-                "ଦକ୍ଷିଣ ଆମେରିକା",
-                "ପଶ୍ଚିମ ଇଉରୋପ",
-                "ଅଷ୍ଟ୍ରେଲିଆ"
-            ],
-            correct: 2
-        },
-        {
-            question: "ପୂର୍ବ ଉପକୂଳରୁ କେଉଁ ଅଞ୍ଚଳ ସହ ଜଳପଥରେ ସଂପର୍କ ସ୍ଥାପନ ହୋଇପାରିଛି?",
-            options: [
-                "ପଶ୍ଚିମ ଇଉରୋପ",
-                "ପୂର୍ବ ଏସିଆ",
-                "ଉତ୍ତର ଆମେରିକା",
-                "ଆଫ୍ରିକା"
+                "ବିଶାଳ ମରୁଭୂମି",
+                "ଗଭୀର ନଦୀ"
             ],
             correct: 1
         },
+        // =========================
+        // PAGE-4(PART-1) : CONCEPT NO.-2
+        // (ଭାରତ ଓ ବିଶ୍ୱ ସଂପର୍କ — ଜଳ ଓ ସ୍ଥଳ ପଥ)
+        // =========================
         {
-            question: "ଭାରତ ମହାସାଗରର ନାମକରଣ ଭାରତ ନାମାନୁସାରେ ହେବାର ମୁଖ୍ୟ କାରଣ କ'ଣ?",
+            question: "ଭାରତ ଓ ପୃଥ୍ବୀର ଅନ୍ୟ ଦେଶ ମଧ୍ୟରେ ସ୍ଥଳ ସଂପର୍କ ଅପେକ୍ଷା ଜଳ ସଂପର୍କ କେଉଁ ଦୃଷ୍ଟିରୁ ଆଗ?",
             options: [
-                "ଭାରତର ଜନସଂଖ୍ୟା ଅଧିକ",
-                "ଭାରତର ଉପକୂଳରେଖା ଅତ୍ୟନ୍ତ ଦୀର୍ଘ",
-                "ଭାରତରେ ଅଧିକ ନଦୀ ଅଛି",
-                "ଭାରତରେ ଅଧିକ ପର୍ବତ ଅଛି"
-            ],
-            correct: 1
-        },
-        {
-            question: "ଭାରତର ସହ ଅନ୍ୟ ଦେଶର ସଂପର୍କ କେବେଠାରୁ ରହିଆସିଛି?",
-            options: [
-                "କିଛି ବର୍ଷ ହେଲା",
-                "ମଧ୍ୟଯୁଗରୁ",
-                "ଯୁଗଯୁଗ ଧରି",
-                "ସ୍ୱାଧୀନତା ପରେ"
-            ],
-            correct: 2
-        },
-        {
-            question: "ଜଳପଥ ପୂର୍ବରୁ କେଉଁ ପଥରେ ସଂପର୍କ ସ୍ଥାପନ ହୋଇଥିଲା?",
-            options: [
-                "ବାୟୁପଥ",
-                "ସ୍ଥଳପଥ",
-                "ରେଳପଥ",
-                "ସମୁଦ୍ରପଥ"
-            ],
-            correct: 1
-        },
-        {
-            question: "ପ୍ରାଚୀନ ପରିବ୍ରାଜକମାନଙ୍କୁ ଯାତାୟାତର ସୁଯୋଗ କିଏ ଦେଇଥିଲା?",
-            options: [
-                "ନଦୀ",
-                "ଗିରିପଥ",
-                "ଜଙ୍ଗଲ",
-                "ମରୁଭୂମି"
-            ],
-            correct: 1
-        },
-        {
-            question: "ଗମନାଗମନ ପଥ କେଉଁ କ୍ଷେତ୍ରରେ ମୁଖ୍ୟ ଭୂମିକା ନେଇଛି?",
-            options: [
-                "କେବଳ କୃଷି",
-                "କେବଳ ଶିକ୍ଷା",
-                "ବାଣିଜ୍ୟ ଓ ସାଂସ୍କୃତିକ କ୍ଷେତ୍ର",
-                "କେବଳ ରାଜନୀତି"
-            ],
-            correct: 2
-        },
-        {
-            question: "କେଉଁ ବ୍ୟବସ୍ଥା ବହୁ ଦୂର ଦେଶରେ ପହଞ୍ଚିପାରିଲା?",
-            options: [
-                "ରୋମାନ ସଂଖ୍ୟା ବ୍ୟବସ୍ଥା",
-                "ଭାରତୀୟ ସଂଖ୍ୟା ଓ ଦଶମିକ ବ୍ୟବସ୍ଥା",
-                "ଗ୍ରୀକ ସଂଖ୍ୟା ବ୍ୟବସ୍ଥା",
-                "ଚୀନ ସଂଖ୍ୟା ବ୍ୟବସ୍ଥା"
-            ],
-            correct: 1
-        },
-        {
-            question: "ପ୍ରାଚୀନ କାଳରୁ କେଉଁମାନେ ଭାରତରେ ବାଣିଜ୍ୟ ପାଇଁ ଆସିଥିଲେ?",
-            options: [
-                "ଆରବ ଓ ଇଉରୋପୀୟ ବଣିକ",
-                "କେବଳ ଚୀନ ବଣିକ",
-                "କେବଳ ଜାପାନୀ ବଣିକ",
-                "କେବଳ ଆଫ୍ରିକୀୟ ବଣିକ"
+                "ଜଳ ସଂପର୍କ ବହୁ ପୂର୍ବରୁ ଗଢ଼ିଉଠିଥିଲା",
+                "ଜଳ ପଥ ଅଧିକ ସୁବିଧାଜନକ ଥିଲା",
+                "ସ୍ଥଳ ପଥ ଦ୍ୱାରା ଯୋଗାଯୋଗ ଆଦୌ ସମ୍ଭବ ନ ଥିଲା",
+                "ଜଳ ପଥ ଅଧିକ ଶୀଘ୍ର"
             ],
             correct: 0
         },
+        // =========================
+        // PAGE-4(PART-1) : CONCEPT NO.-3
+        // (ଭାରତ ମହାସାଗରର ନାମକରଣ)
+        // =========================
         {
-            question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ କେତେ କି.ମି.?",
+            question: "ଭାରତ ମହାସାଗରର ନାମକରଣ କାହା ନାମ ଅନୁସାରେ ହୋଇଛି?",
             options: [
-                "୨୫୦୦ କି.ମି.",
-                "୩୦୦୦ କି.ମି.",
-                "୩୨୦୦ କି.ମି.",
-                "୩୫୦୦ କି.ମି."
+                "ଏସିଆ ମହାଦେଶ",
+                "ଭାରତ",
+                "ଆଫ୍ରିକା",
+                "ଚୀନ"
             ],
             correct: 1
         },
+        // =========================
+        // PAGE-4(PART-1) : CONCEPT NO.-4
+        // (ପ୍ରାଚୀନ ବାଣିଜ୍ୟ ଓ ସାଂସ୍କୃତିକ ଆଦାନ ପ୍ରଦାନ)
+        // =========================
         {
-            question: "ଭାରତର ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ କେତେ କି.ମି.?",
+            question: "ଭାରତର ସଂଖ୍ୟା ଓ ଦଶମିକ ଗଣନା ପ୍ରଣାଳୀ କେଉଁ ଦେଶ ବା ଅଞ୍ଚଳରେ ପ୍ରଚଳିତ ହୋଇଥିଲା?",
             options: [
-                "୩୦୦୦ କି.ମି.",
-                "୩୧୦୦ କି.ମି.",
-                "୩୨୦୦ କି.ମି.",
-                "୩୪୦୦ କି.ମି."
+                "କେବଳ ଏସିଆରେ",
+                "ବହୁ ଦେଶରେ ପ୍ରଚଳିତ ହୋଇଥିଲା",
+                "କେବଳ ଇଉରୋପରେ",
+                "କେବଳ ଆଫ୍ରିକାରେ"
             ],
-            correct: 2
+            correct: 1
         },
-
         // =========================
-        // PAGE-4 : PARAGRAPH NO.-1
+        // PAGE-4(PART-1) : CONCEPT NO.-5
+        // (ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର)
         // =========================
         {
-            question: "ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ କେଉଁଠାରେ ମିଳିତ ହୁଅନ୍ତି?",
+            question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ କେତେ ଡ଼ିଗ୍ରୀ ସମାନ?",
+            options: [
+                "୨୦°",
+                "୩୦°",
+                "୪୦°",
+                "୫୦°"
+            ],
+            correct: 1
+        },
+        // =========================
+        // PAGE-4(PART-1) : CONCEPT NO.-6
+        // (ଭୌଗୋଳିକ ବ୍ୟବଧାନ — ଉତ୍ତର-ଦକ୍ଷିଣ ବନାମ ପୂର୍ବ-ପଶ୍ଚିମ)
+        // =========================
+        {
+            question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ୩୦୦୦ କି.ମି. ହେଲେ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର କେତେ?",
+            options: [
+                "ପ୍ରାୟ ୨୫୦୦ କି.ମି.",
+                "ପ୍ରାୟ ୩୧୦୦ କି.ମି.",
+                "ପ୍ରାୟ ୪୦୦୦ କି.ମି.",
+                "ପ୍ରାୟ ୨୦୦୦ କି.ମି."
+            ],
+            correct: 1
+        },
+        // =========================
+        // PAGE-4(PART-2) : CONCEPT NO.-1
+        // (ଦ୍ରାଘିମାରେଖା ଓ ଅକ୍ଷାଂଶରେଖା)
+        // =========================
+        {
+            question: "ସମସ୍ତ ଦ୍ରାଘିମାରେଖା କେଉଁଠାରେ ମିଳିତ ହୁଅନ୍ତି?",
             options: [
                 "ବିଷୁବରେଖାରେ",
-                "କର୍କଟକ୍ରାନ୍ତିରେଖାରେ",
-                "ମେରୁରେ",
-                "ମକରକ୍ରାନ୍ତିରେଖାରେ"
+                "ମେରୁ ଅଞ୍ଚଳରେ",
+                "କର୍କଟ ক্রান୍ତି ରେଖାରେ",
+                "ମଧ୍ୟ ଅକ୍ଷାଂଶ ରେଖାରେ"
             ],
-            correct: 2
+            correct: 1
         },
+        // =========================
+        // PAGE-4(PART-2) : CONCEPT NO.-2
+        // (ସ୍ଥାନୀୟ ସମୟ ବ୍ୟବଧାନ)
+        // =========================
         {
-            question: "ବିଷୁବରେଖାଠାରୁ ମେରୁଆଡ଼କୁ ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ମଧ୍ୟରେ ବ୍ୟବଧାନ କିପରି ହୁଏ?",
+            question: "ଭାରତର ୩୦° ପୂର୍ବ-ପଶ୍ଚିମ ଦ୍ରାଘିମାଂଶ ବ୍ୟବଧାନ ଯୋଗୁ ପୂର୍ବ ଓ ପଶ୍ଚିମ ପ୍ରାନ୍ତ ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟ ବ୍ୟବଧାନ କେତେ ଘଣ୍ଟା?",
             options: [
-                "ବୃଦ୍ଧି ପାଏ",
-                "ସମାନ ରହେ",
-                "କ୍ରମଶଃ ହ୍ରାସ ପାଏ",
-                "ଦ୍ୱିଗୁଣ ହୁଏ"
-            ],
-            correct: 2
-        },
-        {
-            question: "ଭାରତର ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ କେତେ?",
-            options: [
-                "୧ ଘଣ୍ଟା",
-                "୨ ଘଣ୍ଟା",
                 "୩ ଘଣ୍ଟା",
+                "୨ ଘଣ୍ଟା",
+                "୧ ଘଣ୍ଟା",
                 "୪ ଘଣ୍ଟା"
             ],
             correct: 1
         },
+        // =========================
+        // PAGE-4(PART-2) : CONCEPT NO.-3
+        // (ଭାରତୀୟ ପ୍ରମାଣ ସମୟ)
+        // =========================
         {
-            question: "ଅରୁଣାଚଳ ପ୍ରଦେଶ ତୁଳନାରେ ଦ୍ୱାରକାରେ ସୂର୍ଯ୍ୟୋଦୟ କେତେ ସମୟ ପରେ ହୁଏ?",
+            question: "ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନ ରେଖା (ମଧ୍ୟଦିନ ରେଖା) ଭାବରେ କୋଉ ଦ୍ରାଘିମାଂଶ ରେଖାକୁ ମାନ୍ୟ କରାଯାଇଛି?",
             options: [
-                "୧ ଘଣ୍ଟା",
-                "୨ ଘଣ୍ଟା",
-                "୩ ଘଣ୍ଟା",
-                "୪ ଘଣ୍ଟା"
+                "୮୨°୩୦' ପୂର୍ବ ଦ୍ରାଘିମାଂଶ",
+                "୭୫°୦' ପୂର୍ବ ଦ୍ରାଘିମାଂଶ",
+                "୯୦°୦' ପୂର୍ବ ଦ୍ରାଘିମାଂଶ",
+                "୬୮°ପୂର୍ବ ଦ୍ରାଘିମାଂଶ"
             ],
-            correct: 1
+            correct: 0
         },
+        // =========================
+        // PAGE-4(PART-2) : CONCEPT NO.-4
+        // (ଅରୁଣାଚଳ ଓ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ)
+        // =========================
         {
-            question: "ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା କେଉଁ ଦ୍ରାଘିମାରେଖା?",
+            question: "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ନିର୍ଧାରଣ ଲାଗି ମିର୍ଜ୍ଜାପୁର (ଉତ୍ତରପ୍ରଦେଶ)ର ୮୨°୩୦' ଦ୍ରାଘିମାଂଶ ରେଖାକୁ ଆଧାର ଭାବେ ନେବାର ମୁଖ୍ୟ କାରଣ କ'ଣ?",
             options: [
-                "୭୫° ପୂ.",
-                "୮୦° ପୂ.",
-                "୮୨°୩୦' ପୂ.",
-                "୯୦° ପୂ."
-            ],
-            correct: 2
-        },
-        {
-            question: "ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା କେଉଁ ସ୍ଥାନ ଉପରଦେଇ ଯାଇଛି?",
-            options: [
-                "ଦିଲ୍ଲୀ",
-                "ମୁମ୍ବାଇ",
-                "ମିର୍ଜାପୁର",
-                "କୋଲକାତା"
-            ],
-            correct: 2
-        },
-        {
-            question: "୮୨°୩୦' ପୂ. ଦ୍ରାଘିମାରେଖାର ସ୍ଥାନୀୟ ସମୟକୁ କ'ଣ କୁହାଯାଏ?",
-            options: [
-                "ଗ୍ରୀନିଚ ସମୟ",
-                "ସ୍ଥାନୀୟ ସମୟ",
-                "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ",
-                "ସୌର ସମୟ"
-            ],
-            correct: 2
-        },
-        {
-            question: "ଦକ୍ଷିଣରୁ ଉତ୍ତରକୁ ଗଲେ ଅକ୍ଷାଂଶୀୟ ବିସ୍ତାର କାହାକୁ ପ୍ରଭାବିତ କରେ?",
-            options: [
-                "ବର୍ଷାକୁ",
-                "ଦିନ ଓ ରାତିର ଅବଧିକୁ",
-                "ପବନକୁ",
-                "ଭୂମିକମ୍ପକୁ"
+                "ଏହି ସ୍ଥାନ ଭୂଗୋଳ ଦୃଷ୍ଟିରୁ ଅତ୍ୟନ୍ତ ମହତ୍ତ୍ୱପୂର୍ଣ୍ଣ",
+                "ଦେଶର ବିଭିନ୍ନ ସ୍ଥାନରେ ଭିନ୍ନ ସ୍ଥାନୀୟ ସମୟ ଥିବାରୁ ଏକ ସମ୍ପ୍ରଦାୟ ଦୂର କରିବା ଲାଗି",
+                "ଏହି ସ୍ଥାନ ଦେଶର ଉତ୍ତରରେ ଅଛି",
+                "ଅରୁଣାଚଳ ପ୍ରଦେଶ ଏହି ଅକ୍ଷରେ ଅଛି"
             ],
             correct: 1
         }
-
     ]
 },
-
-
+    
 trueFalse: {
     questions: [
-
         // =========================
-        // PAGE-3 - PARAGRAPH NO.- 1
+        // PAGE-3 - CONCEPT NO.- 1
+        // (ଭାରତର ଅବସ୍ଥିତି)
         // =========================
         {
-            question: "ଭାରତବର୍ଷ ପୂର୍ବ ଏସିଆ ଓ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ।",
+            question: "ଭାରତ ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣାଂଶରେ ଅବସ୍ଥିତ ।",
             correct: true
         },
         {
-            question: "ତିନିଦିଗରେ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ସଂକୀର୍ଣ୍ଣ ଭୂଖଣ୍ଡକୁ ଉପଦ୍ୱୀପ କୁହାଯାଏ ।",
+            question: "ଭାରତ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ।",
             correct: true
         },
-
         // =========================
-        // PAGE-3 - PARAGRAPH NO.- 2
+        // PAGE-3 - CONCEPT NO.- 2
+        // (ଭାରତ ଉପଦ୍ୱୀପ)
         // =========================
         {
-            question: "ଭାରତର ଦକ୍ଷିଣଭାଗ ସମୁଦ୍ରଆଡ଼କୁ ଲମ୍ବିଯାଇଥିବାରୁ ଏହା ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି ।",
+            question: "ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପ କାରଣ ଦେଶର ଦକ୍ଷିଣଭାଗ ସମୁଦ୍ର ଆଡ଼କୁ ଲମ୍ବିଯାଇ ତ୍ରିନିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ଘେରି ରହିଛି ।",
             correct: true
         },
         {
-            question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୨୦୦ କି.ମି. ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ।",
+            question: "ଭାରତ ଚାରିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ଘେରା ।",
             correct: false
         },
-
         // =========================
-        // PAGE-4 - PARAGRAPH NO.- 1
+        // PAGE-3 - CONCEPT NO.- 3
+        // (ଭାରତ ମହାସାଗରର ଜଳରାଶି)
         // =========================
         {
-            question: "ସମସ୍ତ ଦ୍ରାଘିମାରେଖା ମେରୁଠାରେ ମିଳିତ ହୁଅନ୍ତି ।",
+            question: "ଭାରତ ମହାସାଗରର ଉଭରାଂଶ ଦୁଇଟି ବିସ୍ତୀର୍ଣ୍ଣ ଜଳରାଶି ହେଲା ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗର ।",
+            correct: true
+        },
+        // =========================
+        // PAGE-4(PART-1) - CONCEPT NO.- 1
+        // (ହିମାଳୟ ଓ ଭାରତର ଅନନ୍ୟତା)
+        // =========================
+        {
+            question: "ହିମାଳୟ ପର୍ବତମାଳା ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଗୁଡ଼ିକଠାରୁ ଅଲଗା ରଖିଛି ।",
             correct: true
         },
         {
-            question: "୮୨°୩୦’ ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବରେ ଗ୍ରହଣ କରାଯାଇଛି ।",
+            question: "ହିମାଳୟ ପର୍ବତ ଭାରତକୁ ଦକ୍ଷିଣ ଏସିଆ ଦେଶଗୁଡ଼ିକ ସହ ସଂଯୁକ୍ତ କରିଛି ।",
+            correct: false
+        },
+        // =========================
+        // PAGE-4(PART-1) - CONCEPT NO.- 2
+        // (ଜଳ ଓ ସ୍ଥଳ ସଂପର୍କ)
+        // =========================
+        {
+            question: "ଭାରତ ଓ ଅନ୍ୟ ଦେଶ ମଧ୍ୟରେ ଜଳ ସଂପର୍କ ସ୍ଥଳ ସଂପର୍କ ଅପେକ୍ଷା ବହୁ ପୂର୍ବରୁ ଗଢ଼ି ଉଠିଥିଲା ।",
             correct: true
+        },
+        {
+            question: "ପ୍ରାଚୀନ କାଳରେ ଜଳ ପଥ ଦ୍ୱାରା ଯୋଗାଯୋଗ ଆଦୌ ସମ୍ଭବ ନ ଥିଲା ।",
+            correct: false
+        },
+        // =========================
+        // PAGE-4(PART-1) - CONCEPT NO.- 3
+        // (ଭାରତ ମହାସାଗରର ନାମକରଣ)
+        // =========================
+        {
+            question: "ଭାରତ ମହାସାଗରର ନାମ ଭାରତ ନାମ ଅନୁସାରେ ରଖାଯାଇଛି ।",
+            correct: true
+        },
+        // =========================
+        // PAGE-4(PART-1) - CONCEPT NO.- 4
+        // (ପ୍ରାଚୀନ ବାଣିଜ୍ୟ ଓ ସାଂସ୍କୃତିକ ଆଦାନ ପ୍ରଦାନ)
+        // =========================
+        {
+            question: "ପ୍ରାଚୀନ କାଳରୁ ଆରବ ଓ ଇଉରୋପୀୟ ବଣିକମାନେ ଭାରତରେ ବାଣିଜ୍ୟ ଲାଗି ଆସି ବସବାସ କରିଥିଲେ ।",
+            correct: true
+        },
+        {
+            question: "ଭାରତୀୟ ମସଲା, ମସଲିନ ଓ ଅନ୍ୟ ପଣ୍ୟ ଅନ୍ୟ ଦେଶରେ ବ୍ୟବସାୟ ହୋଇ ନ ଥିଲା ।",
+            correct: false
+        },
+        // =========================
+        // PAGE-4(PART-1) - CONCEPT NO.- 5
+        // (ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର)
+        // =========================
+        {
+            question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୦° ସମାନ ।",
+            correct: true
+        },
+        {
+            question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ସମାନ ହୋଇଥିଲେ ମଧ୍ୟ କି.ମି.ରେ ପ୍ରକାଶ କଲେ ଏହା ସମାନ ହୁଏ ।",
+            correct: false
+        },
+        // =========================
+        // PAGE-4(PART-2) - CONCEPT NO.- 1
+        // (ଦ୍ରାଘିମାରେଖା ଓ ଅକ୍ଷାଂଶରେଖା)
+        // =========================
+        {
+            question: "ସମସ୍ତ ଦ୍ରାଘିମାରେଖା ମେରୁ ଅଞ୍ଚଳରେ ମିଳିତ ହୁଅନ୍ତି ।",
+            correct: true
+        },
+        {
+            question: "ବିଷୁବ ରେଖାଠାରୁ ମେରୁ ଆଡ଼କୁ ଗଲେ ଅକ୍ଷାଂଶୀୟ ବ୍ୟବଧାନ ଦ୍ରାଘିମାରେଖା ମଧ୍ୟରେ ବ୍ୟବଧାନ ବୃଦ୍ଧି ପାଏ ।",
+            correct: false
+        },
+        // =========================
+        // PAGE-4(PART-2) - CONCEPT NO.- 2
+        // (ସ୍ଥାନୀୟ ସମୟ ବ୍ୟବଧାନ)
+        // =========================
+        {
+            question: "ଭାରତର ୩୦° ପୂର୍ବ-ପଶ୍ଚିମ ଦ୍ରାଘିମାଂଶ ବ୍ୟବଧାନ ଯୋଗୁ ପୂର୍ବ ଓ ପଶ୍ଚିମ ପ୍ରାନ୍ତ ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟ ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ।",
+            correct: true
+        },
+        {
+            question: "ଭାରତର ପୂର୍ବ ଓ ପଶ୍ଚିମ ପ୍ରାନ୍ତ ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟ ବ୍ୟବଧାନ ୩ ଘଣ୍ଟା ।",
+            correct: false
+        },
+        // =========================
+        // PAGE-4(PART-2) - CONCEPT NO.- 3
+        // (ଭାରତୀୟ ପ୍ରମାଣ ସମୟ)
+        // =========================
+        {
+            question: "୮୨°୩୦' ପୂର୍ବ ଦ୍ରାଘିମାଂଶ ରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନ ରେଖା ଭାବରେ ମାନ୍ୟ କରାଯାଇଛି ।",
+            correct: true
+        },
+        {
+            question: "ମିର୍ଜ୍ଜାପୁର (ଉତ୍ତରପ୍ରଦେଶ) ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ନିର୍ଧାରଣ ଲାଗି ଆଧାର ସ୍ଥାନ ।",
+            correct: true
+        },
+        // =========================
+        // PAGE-4(PART-2) - CONCEPT NO.- 4
+        // (ଅକ୍ଷାଂଶ ଓ ଦିନ-ରାତ ବ୍ୟବଧାନ)
+        // =========================
+        {
+            question: "ଦକ୍ଷିଣରୁ ଉତ୍ତର ଆଡ଼କୁ ଗଲେ ଅକ୍ଷାଂଶୀୟ ବ୍ୟବଧାନ ଦିନ ଓ ରାତ ଅବଧି ଉପରେ ପ୍ରଭାବ ପକାଏ ।",
+            correct: true
+        },
+        {
+            question: "ଭାରତ ସବୁ ଅଞ୍ଚଳରେ ଦିନ ଓ ରାତ ସବୁବେଳେ ସମାନ ଅବଧି ବ୍ୟାପ୍ତ ।",
+            correct: false
         }
     ]
 },
     
 fillBlanks: {
     questions: [
+        // =========================
+        //  PAGE-3 - CONCEPT NO.- 1
+        // =========================
+        {
+            question: "ଭାରତବର୍ଷ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ___ ରେ ଅବସ୍ଥିତ । (ମଧ୍ୟଭାଗ / ଶେଷଭାଗ)",
+            answer: "ମଧ୍ୟଭାଗ"
+        },
 
         // =========================
-        //  PAGE-3 - PARAGRAPH NO.- 1
+        //  PAGE-3 - CONCEPT NO.- 2
         // =========================
         {
-            question: "ଭାରତବର୍ଷ ପୂର୍ବ ଏସିଆ ଏବଂ ___ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ । (ପଶ୍ଚିମ / ଦକ୍ଷିଣ)",
-            answer: "ପଶ୍ଚିମ"
-        },
-        {
-            question: "ତିନିଦିଗରେ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ସଂକୀର୍ଣ୍ଣ ଭୂଖଣ୍ଡକୁ ___ କୁହାଯାଏ । (ଉପଦ୍ୱୀପ / ଦ୍ୱୀପ)",
+            question: "ଯେଉଁ ସ୍ଥଳଭାଗ ତ୍ରିଦିଗରେ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ହୋଇ ରହିଥାଏ, ତାକୁ ___ କୁହାଯାଏ । (ଉପଦ୍ୱୀପ / ଦ୍ୱୀପ)",
             answer: "ଉପଦ୍ୱୀପ"
         },
 
         // =========================
-        //  PAGE-3 - PARAGRAPH NO.- 2
+        //  PAGE-3 - CONCEPT NO.- 3
         // =========================
         {
-            question: "ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ___ ଓ ଆରବ ସାଗରରେ ବିଭାଜିତ ହୋଇଅଛି । (ବଙ୍ଗୋପସାଗର / ଲୋହିତ ସାଗର)",
-            answer: "ବଙ୍ଗୋପସାଗର"
-        },
-        {
-            question: "ଉତ୍ତର ଦିଗରେ ___ ପର୍ବତମାଳା ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଗୁଡ଼ିକଠାରୁ ଅଲଗା ରଖିଛି । (ହିମାଳୟ / ବିନ୍ଧ୍ୟ)",
-            answer: "ହିମାଳୟ"
-        },
-        {
-            question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ___ କି.ମି. । (୩୦୦୦ / ୩୨୦୦)",
-            answer: "୩୦୦୦"
+            question: "ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ବଙ୍ଗୋପସାଗର ଓ ___ ରେ ବିଭାଜିତ ହୋଇଅଛି । (ଆରବ ସାଗର / ଲାଲ ସାଗର)",
+            answer: "ଆରବ ସାଗର"
         },
 
         // =========================
-        //  PAGE-4 - PARAGRAPH NO.- 1
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 1
         // =========================
         {
-            question: "ଭାରତର ପୂର୍ବସ୍ଥ ଓ ପଶ୍ଚିମସ୍ଥ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ___ ଘଣ୍ଟା । (୨ / ୧)",
+            question: "ଉତ୍ତର ଦିଗରେ ଭାରତକୁ ___ ପର୍ବତମାଳା ଏସିଆର ଅନ୍ୟାନ୍ୟ ଦେଶଗୁଡ଼ିକଠାରୁ ଅଲଗା ରଖିଅଛି । (ବୃହତ ହିମାଳୟ / ବିନ୍ଧ୍ୟ)",
+            answer: "ବୃହତ ହିମାଳୟ"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 2
+        // =========================
+        {
+            question: "ଭାରତ ମହାସାଗର ଉପକୂଳସ୍ଥ ଅନ୍ୟ କୌଣସି ଦେଶର ଉପକୂଳ ରେଖା ଭାରତର ଉପକୂଳ ଭଳି ___ ନୁହେଁ, ତେଣୁ ଏହି ମହାସାଗରର ନାମକରଣ ଆମ ଦେଶ ନାମରେ ହୋଇଅଛି । (ଏତେ ଦୀର୍ଘ / ଏତେ ଛୋଟ)",
+            answer: "ଏତେ ଦୀର୍ଘ"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 3
+        // =========================
+        {
+            question: "ସ୍ଥଳପଥର ସଂପର୍କ ___ ଦ୍ୱାରା ସ୍ଥାପିତ ସଂପର୍କର ବହୁପୂର୍ବରୁ ହୋଇଥିଲା । (ଜଳପଥ / ଆକାଶପଥ)",
+            answer: "ଜଳପଥ"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 4
+        // =========================
+        {
+            question: "ରାମାୟଣ ଓ ଉପନିଷଦର ତତ୍ତ୍ୱ, ___ ର ଗଳ୍ପ, ଭାରତୀୟ ସଂଖ୍ୟା ଓ ଦଶମିକ ବ୍ୟବସ୍ଥା ବହୁଦୂର ଦେଶରେ ପହଞ୍ଚି ପାରିଲା । (ପଞ୍ଚତନ୍ତ୍ର / ମହାଭାରତ)",
+            answer: "ପଞ୍ଚତନ୍ତ୍ର"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 5
+        // =========================
+        {
+            question: "ପ୍ରାଚୀନ କାଳରୁ ଆରବ ଓ ___ ବଣିକମାନେ ଭାରତରେ ବାଣିଜ୍ୟ କାରବାର ପାଇଁ ଆସି ବସବାସ କରିଛନ୍ତି । (ଇଉରୋପୀୟ / ଆମେରିକୀୟ)",
+            answer: "ଇଉରୋପୀୟ"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 6
+        // =========================
+        {
+            question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ହେଲାବେଳେ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ___ କି.ମି. । (୩୨୦୦ / ୨୮୦୦)",
+            answer: "୩୨୦୦"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 1
+        // =========================
+        {
+            question: "ସମସ୍ତ ଦ୍ରାଘିମାରେଖା ___ ଠାରେ ମିଳିତ ହୁଅନ୍ତି ଏବଂ ଅକ୍ଷାଂଶରେଖା ଭଳି ସମାନାନ୍ତର ନୁହଁନ୍ତି । (ମେରୁ / ବିଷୁବରେଖା)",
+            answer: "ମେରୁ"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 2
+        // =========================
+        {
+            question: "ଭାରତର ୩୦° ପୂର୍ବ-ପଶ୍ଚିମ ଦ୍ରାଘିମାରେଖାୟ ବିସ୍ତାର ଯୋଗୁ ପୂର୍ବସ୍ଥ ଓ ପଶ୍ଚିମସ୍ଥ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ___ ଘଣ୍ଟା । (୨ / ୪)",
             answer: "୨"
         },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 3
+        // =========================
         {
-            question: "___ ଉପରଦେଇ ଯାଇଥିବା ୮୨°୩୦’ ପୂ. ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବେ ମାନି ନିଆଯାଇଛି । (ମିର୍ଜାପୁର / ମୁମ୍ବାଇ)",
+            question: "ଦେଶର ବିଭିନ୍ନ ସ୍ଥାନରେ ସମୟ ସଂକ୍ରାନ୍ତୀୟ ଭିନ୍ନତାକୁ ଦୂର କରିବାପାଇଁ ___ (ଉତ୍ତରପ୍ରଦେଶ) ଉପରଦେଇ ୮୨°୩୦' ପୂ. ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ହିସାବେ ମାନି ନିଆଯାଇଛି । (ମିର୍ଜାପୁର / ଲକ୍ଷ୍ନୋ)",
             answer: "ମିର୍ଜାପୁର"
         },
-        {
-            question: "୮୨°୩୦’ ପୂ. ଦ୍ରାଘିମାରେଖାର ସ୍ଥାନୀୟ ସମୟକୁ ___ ବୋଲି କୁହାଯାଏ । (ଭାରତୀୟ ପ୍ରମାଣ ସମୟ / ଗ୍ରୀନିଚ୍ ସମୟ)",
-            answer: "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ"
-        }
 
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 4
+        // =========================
+        {
+            question: "୮୨°୩୦' ପୂ. ଦ୍ରାଘିମାରେଖାର ସ୍ଥାନୀୟ ସମୟକୁ ___ ବୋଲି ଧରାଯାଇଛି । (ଭାରତୀୟ ପ୍ରମାଣ ସମୟ / ଗ୍ରୀନୱିଚ୍ ସମୟ)",
+            answer: "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 5
+        // =========================
+        {
+            question: "ଦକ୍ଷିଣରୁ ଉତ୍ତର ଆଡ଼କୁ ଗଲେ ___ ବିସ୍ତାର ଦିନ ଓ ରାତିମଧ୍ୟରେ ଅବଧିକୁ ପ୍ରଭାବିତ କରେ । (ଅକ୍ଷାଂଶୟ / ଦ୍ରାଘିମାୟ)",
+            answer: "ଅକ୍ଷାଂଶୟ"
+        }
     ]
 },
     
 matching: {
     pairs: [
-        { left: "ଭାରତବର୍ଷ", right: "🌏 ପୂର୍ବ ଏସିଆ ଓ ପଶ୍ଚିମ ଏସିଆର ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ।" },
-        { left: "ଉପଦ୍ୱୀପ", right: "🌊 ତିନିଦିଗରୁ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ଭୂଖଣ୍ଡ ।" },
-        { left: "ଭାରତ", right: "🗺️ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ଦେଶ ।" },
-        { left: "ବଙ୍ଗୋପସାଗର", right: "🌊 ଭାରତ ମହାସାଗରର ପୂର୍ବ ଜଳରାଶି ।" },
-        { left: "ଆରବ ସାଗର", right: "🌊 ଭାରତ ମହାସାଗରର ପଶ୍ଚିମ ଜଳରାଶି ।" },
-        { left: "ହିମାଳୟ ପର୍ବତମାଳା", right: "⛰️ ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଠାରୁ ଅଲଗା କରିଛି ।" },
-        { left: "ଗିରିପଥ", right: "🚶 ପ୍ରାଚୀନ ପରିବ୍ରାଜକଙ୍କ ଯାତାୟାତର ସୁଯୋଗ ଦେଇଥିଲା ।" },
-        { left: "ଗମନାଗମନ ପଥ", right: "🤝 ବାଣିଜ୍ୟ ଓ ସାଂସ୍କୃତିକ ଆଦାନ-ପ୍ରଦାନରେ ମୁଖ୍ୟ ଭୂମିକା ନେଇଛି ।" },
+        { left: "ଭାରତବର୍ଷ", right: "🗺️ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ।" },
+        { left: "ଭାରତ", right: "🌊 ଆକର୍ଷଣୀୟ ଜଳପଥର ଏକ ସୁବିଧାଜନକ ସ୍ଥିତିରେ ରହିଛି ।" },
+        { left: "ଉପଦ୍ୱୀପ", right: "🏝️ ତ୍ରିଦିଗରୁ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ସ୍ଥଳଭାଗ ।" },
+        { left: "ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗର", right: "🌐 ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶର ଦୁଇଟି ବିଶିଷ୍ଟ ଜଳରାଶି ।" },
+        { left: "ବୃହତ ହିମାଳୟ ପର୍ବତମାଳା", right: "⛰️ ଉତ୍ତର ଦିଗରେ ଭାରତକୁ ଅନ୍ୟ ଦେଶଠାରୁ ଅଲଗା ରଖିଛି ।" },
+        { left: "ଭାରତ ମହାସାଗର", right: "🇮🇳 ଭାରତ ଦେଶର ନାମାନୁସାରେ ନାମିତ ହୋଇଛି ।" },
+        { left: "ପଞ୍ଚତନ୍ତ୍ର", right: "📖 ଏହାର ଗଳ୍ପ ବହୁଦୂର ଦେଶରେ ପହଞ୍ଚିଥିଲା ।" },
+        { left: "ଭାରତୀୟ ବଣିକ", right: "🌶️ ମସଲା, ମସଲିନ୍ ଆଦି ଅନ୍ୟ ଦେଶରେ ବ୍ୟବସାୟ କରିଥିଲେ ।" },
+        { left: "ଆରବ ଓ ଇଉରୋପୀୟ ବଣିକ", right: "🏛️ ଭାରତରେ ବାଣିଜ୍ୟ ପାଇଁ ଆସି ବସବାସ କରିଥିଲେ ।" },
         { left: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର", right: "📏 ପ୍ରାୟ ୩୦୦୦ କି.ମି. ।" },
-        { left: "ଭାରତର ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର", right: "📏 ପ୍ରାୟ ୩୨୦୦ କି.ମି. ।" },
-        { left: "ଦ୍ରାଘିମାରେଖା", right: "🌐 ମେରୁଠାରେ ମିଳିତ ହୁଏ ।" },
-        { left: "ଅରୁଣାଚଳ ପ୍ରଦେଶ ଓ ଦ୍ୱାରକା", right: "🕒 ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ।" },
-        { left: "୮୨°୩୦’ ପୂ. ଦ୍ରାଘିମାରେଖା", right: "⏰ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ।" },
-        { left: "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ (IST)", right: "⌚ ୮୨°୩୦’ ପୂ. ଦ୍ରାଘିମାରେଖାର ସ୍ଥାନୀୟ ସମୟ ।" },
-        { left: "ଅକ୍ଷାଂଶୀୟ ବିସ୍ତାର", right: "🌞 ଦିନ ଓ ରାତିର ଅବଧିକୁ ପ୍ରଭାବିତ କରେ ।" }
+        { left: "ଭାରତର ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର", right: "📐 ପ୍ରାୟ ୩୨୦୦ କି.ମି. ।" },
+        { left: "ଦ୍ରାଘିମାରେଖା", right: "🧭 ମେରୁଠାରେ ମିଳିତ ହୋଇ ସମାନାନ୍ତର ନୁହଁନ୍ତି ।" },
+        { left: "ଭାରତର ୩୦° ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର", right: "⏱️ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ସୃଷ୍ଟି କରେ ।" },
+        { left: "ମିର୍ଜାପୁର", right: "📍 ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଉପରେ ଅବସ୍ଥିତ ।" },
+        { left: "୮୨°୩୦' ପୂ. ଦ୍ରାଘିମାରେଖା", right: "🕐 ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ନିର୍ଣ୍ଣୟ କରେ ।" },
+        { left: "ଅକ୍ଷାଂଶୟ ବିସ୍ତାର", right: "🌞 ଦିନ ଓ ରାତିର ଅବଧିକୁ ପ୍ରଭାବିତ କରେ ।" }
     ]
 },
+    
 arrange: {
     questions: [
-
         // =========================
-        //  PAGE-3 - PARAGRAPH NO.- 1
+        //  PAGE-3 - CONCEPT NO.- 1
         // =========================
         {
-            words: ["ଭାରତବର୍ଷ", "ମଧ୍ୟଭାଗରେ", "ଅବସ୍ଥିତ", "ଅଟେ"],
-            correct: "ଭାରତବର୍ଷ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ଅଟେ ।"
-        },
-        {
-            words: ["ଉପଦ୍ୱୀପ", "ତିନିଦିଗରେ", "ଜଳରାଶି", "ଦ୍ୱାରା", "ବେଷ୍ଟିତ", "ହୋଇଥାଏ"],
-            correct: "ଉପଦ୍ୱୀପ ତିନିଦିଗରେ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ହୋଇଥାଏ ।"
+            words: ["ଭାରତ", "ଏସିଆର", "ପ୍ରାୟ", "ମଧ୍ୟଭାଗରେ", "ଅବସ୍ଥିତ"],
+            correct: "ଭାରତ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ।"
         },
 
         // =========================
-        //  PAGE-3 - PARAGRAPH NO.- 2
+        //  PAGE-3 - CONCEPT NO.- 2
         // =========================
         {
-            words: ["ଭାରତ", "ଏକ", "ବୃହତ୍", "ଉପଦ୍ୱୀପରେ", "ପରିଣତ", "ହୋଇଛି"],
-            correct: "ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି ।"
-        },
-        {
-            words: ["ହିମାଳୟ", "ଭାରତକୁ", "ଅଲଗା", "ରଖୁଅଛି"],
-            correct: "ହିମାଳୟ ଭାରତକୁ ଅଲଗା ରଖୁଅଛି ।"
+            words: ["ଭାରତ", "ତିନିଦିଗରୁ", "ସମୁଦ୍ର", "ଦ୍ୱାରା", "ଘେରି", "ରହିଛି"],
+            correct: "ଭାରତ ତିନିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ଘେରି ରହିଛି ।"
         },
 
         // =========================
-        //  PAGE-4 - PARAGRAPH NO.- 1
+        //  PAGE-3 - CONCEPT NO.- 3
+        // =========================
+        {
+            words: ["ଭାରତ", "ମହାସାଗରର", "ଉତ୍ତରାଂଶ", "ବଙ୍ଗୋପସାଗରରେ", "ବିଭାଜିତ"],
+            correct: "ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ବଙ୍ଗୋପସାଗରରେ ବିଭାଜିତ ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 1
+        // =========================
+        {
+            words: ["ବୃହତ", "ହିମାଳୟ", "ପର୍ବତମାଳା", "ଉତ୍ତରରେ", "ଅଛି"],
+            correct: "ବୃହତ ହିମାଳୟ ପର୍ବତମାଳା ଉତ୍ତରରେ ଅଛି ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 2
+        // =========================
+        {
+            words: ["ଭାରତର", "ଉପକୂଳ", "ଏତେ", "ଦୀର୍ଘ", "ନୁହେଁ"],
+            correct: "ଭାରତର ଉପକୂଳ ଏତେ ଦୀର୍ଘ ନୁହେଁ ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 3
+        // =========================
+        {
+            words: ["ସ୍ଥଳପଥ", "ସଂପର୍କ", "ଜଳପଥ", "ପରେ", "ସୃଷ୍ଟି", "ହେଲା"],
+            correct: "ସ୍ଥଳପଥ ସଂପର୍କ ଜଳପଥ ପରେ ସୃଷ୍ଟି ହେଲା ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 4
+        // =========================
+        {
+            words: ["ପଞ୍ଚତନ୍ତ୍ର", "ଗଳ୍ପ", "ବହୁଦୂର", "ଦେଶରେ", "ପହଞ୍ଚିଲା"],
+            correct: "ପଞ୍ଚତନ୍ତ୍ର ଗଳ୍ପ ବହୁଦୂର ଦେଶରେ ପହଞ୍ଚିଲା ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 5
+        // =========================
+        {
+            words: ["ଆରବ", "ବଣିକମାନେ", "ଭାରତରେ", "ବାଣିଜ୍ୟ", "କରିଥିଲେ"],
+            correct: "ଆରବ ବଣିକମାନେ ଭାରତରେ ବାଣିଜ୍ୟ କରିଥିଲେ ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 6
+        // =========================
+        {
+            words: ["ଭାରତର", "ପୂର୍ବ-ପଶ୍ଚିମ", "ବିସ୍ତାର", "୩୦୦୦", "କି.ମି."],
+            correct: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ୩୦୦୦ କି.ମି. ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 1
         // =========================
         {
             words: ["ସମସ୍ତ", "ଦ୍ରାଘିମାରେଖା", "ମେରୁଠାରେ", "ମିଳିତ", "ହୁଅନ୍ତି"],
             correct: "ସମସ୍ତ ଦ୍ରାଘିମାରେଖା ମେରୁଠାରେ ମିଳିତ ହୁଅନ୍ତି ।"
         },
-        {
-            words: ["ଭାରତୀୟ", "ପ୍ରମାଣ", "ସମୟ", "ଧରାଯାଉଛି"],
-            correct: "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ଧରାଯାଉଛି ।"
-        }
 
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 2
+        // =========================
+        {
+            words: ["ସ୍ଥାନୀୟ", "ସମୟର", "ବ୍ୟବଧାନ", "୨", "ଘଣ୍ଟା"],
+            correct: "ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 3
+        // =========================
+        {
+            words: ["ମିର୍ଜାପୁର", "ଭାରତର", "ମଧ୍ୟାହ୍ନରେଖା", "ଉପରେ", "ଅଛି"],
+            correct: "ମିର୍ଜାପୁର ଭାରତର ମଧ୍ୟାହ୍ନରେଖା ଉପରେ ଅଛି ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 4
+        // =========================
+        {
+            words: ["ଏହାକୁ", "ଭାରତୀୟ", "ପ୍ରମାଣ", "ସମୟ", "କୁହାଯାଏ"],
+            correct: "ଏହାକୁ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ କୁହାଯାଏ ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 5
+        // =========================
+        {
+            words: ["ଅକ୍ଷାଂଶୟ", "ବିସ୍ତାର", "ଦିନ-ରାତିକୁ", "ପ୍ରଭାବିତ", "କରେ"],
+            correct: "ଅକ୍ଷାଂଶୟ ବିସ୍ତାର ଦିନ-ରାତିକୁ ପ୍ରଭାବିତ କରେ ।"
+        }
     ]
 },
     
 stq: {
     questions: [
-
         // =========================
-        // PAGE-3 - PARAGRAPH NO.- 1
+        //  PAGE-3 - CONCEPT NO.- 1
         // =========================
         {
-            question: "ଭାରତବର୍ଷ କେଉଁଠାରେ ଅବସ୍ଥିତ ?",
-            answer: "ଭାରତବର୍ଷ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ । ଏହା ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣାଂଶରେ ରହିଛି ।"
-        },
-        {
-            question: "ଉପଦ୍ୱୀପ କାହାକୁ କୁହାଯାଏ ?",
-            answer: "ଯେଉଁ ସଂକୀର୍ଣ୍ଣ ଭୂଖଣ୍ଡ ତାହାର ତିନିଦିଗରେ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ହୋଇ ରହିଥାଏ, ତାକୁ ଉପଦ୍ୱୀପ କୁହାଯାଏ ।"
+            question: "ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି କେଉଁଠାରେ ଅଛି ?",
+            answer: "ଭାରତ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ । ଏହା ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣାଂଶରେ ଆକର୍ଷଣୀୟ ଜଳପଥର ଏକ ସୁବିଧାଜନକ ସ୍ଥିତିରେ ରହିଛି ।"
         },
 
         // =========================
-        // PAGE-3 - PARAGRAPH NO.- 2
+        //  PAGE-3 - CONCEPT NO.- 2
         // =========================
         {
-            question: "ଭାରତକୁ ବୃହତ୍ ଉପଦ୍ୱୀପ କାହିଁକି କୁହାଯାଏ ?",
-            answer: "ଭାରତର ଦକ୍ଷିଣଭାଗ ସମୁଦ୍ରଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ଏବଂ ତିନିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ଘେରି ରହିଛି । ସେଥିପାଇଁ ଭାରତକୁ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପ କୁହାଯାଏ ।"
-        },
-        {
-            question: "ଭାରତର ଗମନାଗମନ ପଥ କେଉଁ କ୍ଷେତ୍ରରେ ମୁଖ୍ୟ ଭୂମିକା ଗ୍ରହଣ କରିଛି ?",
-            answer: "ଭାରତର ଗମନାଗମନ ପଥ ବାଣିଜ୍ୟ କାରବାର, ଭାବର ଆଦାନପ୍ରଦାନ ଏବଂ ସାଂସ୍କୃତିକ କ୍ଷେତ୍ରରେ ପ୍ରାଚୀନ କାଳରୁ ମୁଖ୍ୟ ଭୂମିକା ଗ୍ରହଣ କରିଆସିଛି ।"
+            question: "ଭାରତକୁ ଉପଦ୍ୱୀପ କାହିଁକି କୁହାଯାଏ ?",
+            answer: "ଭାରତର ଦକ୍ଷିଣଭାଗ ସମୁଦ୍ରଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ଏବଂ ଏହାକୁ ତିନିଦିଗରୁ ସମୁଦ୍ର ଘେରି ରହିଛି । ଏହି କାରଣରୁ ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପର ପରିଚୟ ବହନ କରେ ।"
         },
 
         // =========================
-        // PAGE-4 - PARAGRAPH NO.- 1
+        //  PAGE-3 - CONCEPT NO.- 3
         // =========================
         {
-            question: "ଭାରତର ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ କେତେ ?",
-            answer: "ଭାରତର ୩୦° ପୂର୍ବ-ପଶ୍ଚିମ ଦ୍ରାଘିମାରେଖୀୟ ବିସ୍ତାର ଯୋଗୁ ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ହୋଇଥାଏ ।"
+            question: "ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ କେତୋଟି ଜଳରାଶିରେ ବିଭାଜିତ ଓ ସେମାନଙ୍କ ନାମ କ’ଣ ?",
+            answer: "ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ଦୁଇଟି ବିଶିଷ୍ଟ ଜଳରାଶିରେ ବିଭାଜିତ ହୋଇଅଛି । ସେଗୁଡ଼ିକ ହେଲା ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗର ।"
         },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 1
+        // =========================
         {
-            question: "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ କାହାକୁ କୁହାଯାଏ ?",
-            answer: "ମିର୍ଜାପୁର ଉପରଦେଇ ଯାଇଥିବା ୮୨°୩୦’ ପୂ. ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବେ ମାନାଯାଇଛି । ଏହି ରେଖା ଉପରିସ୍ଥ ସ୍ଥାନୀୟ ସମୟକୁ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ କୁହାଯାଏ ।"
+            question: "ଉତ୍ତର ଦିଗରେ ଭାରତକୁ ଅନ୍ୟ ଦେଶଠାରୁ କିପରି ଅଲଗା ରଖାଯାଇଛି ?",
+            answer: "ଉତ୍ତର ଦିଗରେ ବୃହତ ହିମାଳୟ ପର୍ବତମାଳା ଭାରତକୁ ଏସିଆର ଅନ୍ୟାନ୍ୟ ଦେଶଗୁଡ଼ିକଠାରୁ ଅଲଗା ରଖିଅଛି । ଏହି ପର୍ବତମାଳା ଯୋଗୁ ସ୍ଥଳପଥରେ ସଂପର୍କ ସ୍ଥାପନ କଷ୍ଟସାଧ୍ୟ ହୋଇଥିଲା ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 2
+        // =========================
+        {
+            question: "ଭାରତ ମହାସାଗରର ନାମକରଣ ଭାରତ ଦେଶ ନାମରେ କାହିଁକି ହୋଇଅଛି ?",
+            answer: "ଭାରତ ମହାସାଗର ଉପକୂଳସ୍ଥ ଅନ୍ୟ କୌଣସି ଦେଶର ଉପକୂଳ ରେଖା ଭାରତର ଉପକୂଳ ଭଳି ଏତେ ଦୀର୍ଘ ନୁହେଁ । ତେଣୁ ଏହି ମହାସାଗରର ନାମକରଣ ଆମ ଦେଶର ନାମାନୁସାରେ ହେବା ସଠାର୍ଥ ହୋଇଅଛି ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 3
+        // =========================
+        {
+            question: "ସ୍ଥଳପଥ ସଂପର୍କ ଜଳପଥ ସଂପର୍କ ତୁଳନାରେ କେମିତି ଥିଲା ?",
+            answer: "ସ୍ଥଳପଥର ସଂପର୍କ ଜଳପଥ ଦ୍ୱାରା ସ୍ଥାପିତ ସଂପର୍କର ବହୁପୂର୍ବରୁ ହୋଇଥିଲା । ପାର୍ବତ୍ୟାଞ୍ଚଳରେ ଥିବା ଅନେକ ଗିରିପଥ ପ୍ରାଚୀନ ପରିବ୍ରାଜକମାନଙ୍କୁ ପଦଯାତ୍ରାରେ ଯିବାଆସିବାପାଇଁ ସୁଯୋଗ ଦେଇଥିଲା ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 4
+        // =========================
+        {
+            question: "ସାଂସ୍କୃତିକ ଆଦାନ-ପ୍ରଦାନ ଦ୍ୱାରା କେଉଁ କେଉଁ ବିଷୟ ଅନ୍ୟ ଦେଶରେ ପହଞ୍ଚିଲା ?",
+            answer: "ରାମାୟଣ ଓ ଉପନିଷଦର ତତ୍ତ୍ୱ, ପଞ୍ଚତନ୍ତ୍ରର ଗଳ୍ପ, ଭାରତୀୟ ସଂଖ୍ୟା ଓ ଦଶମିକ ବ୍ୟବସ୍ଥା ବହୁଦୂର ଦେଶରେ ପହଞ୍ଚିପାରିଲା । ଭାରତୀୟ ମସଲା, ମସଲିନ୍ ଏବଂ ଅନ୍ୟାନ୍ୟ ପଣ୍ୟଦ୍ରବ୍ୟର ବ୍ୟବସାୟ ମଧ୍ୟ ଅନ୍ୟ ଦେଶରେ ହୋଇପାରିଲା ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 5
+        // =========================
+        {
+            question: "ବିଦେଶୀ ବଣିକମାନେ ଭାରତରେ କ’ଣ କରିଥିଲେ ?",
+            answer: "ପ୍ରାଚୀନ କାଳରୁ ଆରବ ଓ ଇଉରୋପୀୟ ବଣିକମାନେ ଭାରତରେ ବାଣିଜ୍ୟ କାରବାର ପାଇଁ ଆସି ବସବାସ କରିଥିଲେ । ଆଜିମଧ୍ୟ ସେମାନଙ୍କ ତୈରୀ ଗମ୍ବୁଜ ଓ ମିନାର ଭଳି ସ୍ଥାପତ୍ୟ ଭାରତର ବିଭିନ୍ନ ସ୍ଥାନରେ ଦେଖିବାକୁ ମିଳେ ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-1) - CONCEPT NO.- 6
+        // =========================
+        {
+            question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର କେତେ ?",
+            answer: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ଅଟେ । ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୨୦୦ କି.ମି. ଅଟେ, ଯଦିଓ ଦ୍ରାଘିମାରେଖାୟ ବିସ୍ତାର ସମାନ ୩୦° ଅଟେ ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 1
+        // =========================
+        {
+            question: "ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ଅକ୍ଷାଂଶରେଖା ସହିତ କିପରି ଭିନ୍ନ ?",
+            answer: "ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ଅକ୍ଷାଂଶରେଖା ଭଳି ସମାନାନ୍ତର ନୁହଁନ୍ତି । ସମସ୍ତ ଦ୍ରାଘିମାରେଖା ମେରୁଠାରେ ମିଳିତ ହୁଅନ୍ତି ଏବଂ ବିଷୁବରେଖାଠାରୁ ମେରୁଆଡ଼କୁ ଏହାର ବ୍ୟବଧାନ କ୍ରମଶଃ ଶୂନ୍ୟ ହୋଇଯାଏ ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 2
+        // =========================
+        {
+            question: "ଭାରତର ପୂର୍ବସୀମା ଓ ପଶ୍ଚିମସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ କେତେ ?",
+            answer: "ଭାରତର ୩୦° ପୂର୍ବ-ପଶ୍ଚିମ ଦ୍ରାଘିମାରେଖାୟ ବିସ୍ତାର ଯୋଗୁ ପୂର୍ବସ୍ଥ ଓ ପଶ୍ଚିମସ୍ଥ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ଅଟେ । ଏଥିପାଇଁ ଅରୁଣାଚଳରେ ସୂର୍ଯ୍ୟୋଦୟ ଦ୍ୱାରକାଠାରୁ ଆଗରୁ ହୁଏ ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 3
+        // =========================
+        {
+            question: "ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା କେଉଁଠାରେ ଅଛି ଓ ଏହାର ଗୁରୁତ୍ୱ କ’ଣ ?",
+            answer: "ଦେଶର ବିଭିନ୍ନ ସ୍ଥାନରେ ସମୟ ସଂକ୍ରାନ୍ତୀୟ ଭିନ୍ନତାକୁ ଦୂର କରିବାପାଇଁ ମିର୍ଜାପୁର (ଉତ୍ତରପ୍ରଦେଶ) ଉପରଦେଇ ୮୨°୩୦' ପୂ. ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ହିସାବେ ମାନି ନିଆଯାଇଛି । ଏହାର ସ୍ଥାନୀୟ ସମୟକୁ ‘ଭାରତୀୟ ପ୍ରମାଣ ସମୟ’ କୁହାଯାଏ ।"
+        },
+
+        // =========================
+        //  PAGE-4 (PART-2) - CONCEPT NO.- 4
+        // =========================
+        {
+            question: "ଅକ୍ଷାଂଶୟ ବିସ୍ତାର ଦିନ ଓ ରାତିର ଅବଧିକୁ କିପରି ପ୍ରଭାବିତ କରେ ?",
+            answer: "ଦକ୍ଷିଣରୁ ଉତ୍ତର ଆଡ଼କୁ ଗଲେ ଅକ୍ଷାଂଶୟ ବିସ୍ତାର ଦିନ ଓ ରାତିମଧ୍ୟରେ ଅବଧକୁ ପ୍ରଭାବିତ କରେ । ତେଣୁ କନ୍ୟାକୁମାରୀଠାରେ ଦିନ ଓ ରାତିର ଅବଧିରେ ତାରତମ୍ୟ କମ୍ ଅନୁଭବ ହୁଏ ଅପେକ୍ଷା କାଶ୍ମୀରର ।"
         }
-
     ]
 }
 },
 ],
   
 summary: {
-    audio: "",
+    audio: "ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି ବର୍ଣ୍ଣନା କରି ବିଶ୍ୱର ଅନ୍ୟ ଦେଶ ସହିତ ଏହାର ସମ୍ପର୍କ ଏବଂ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ବିଷୟରେ ଆଲୋଚନା କର ।",
 
     content: {
-        introduction: "ଏହି ପାଠରେ ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି, ଉପଦ୍ୱୀପୀୟ ଆକାର, ଆନ୍ତର୍ଜାତୀୟ ଜଳପଥରେ ଏହାର ଗୁରୁତ୍ୱ ଏବଂ ପୃଥିବୀର ବିଭିନ୍ନ ଦେଶ ସହ ଭାରତର ସମ୍ପର୍କ ବିଷୟରେ ବର୍ଣ୍ଣନା କରାଯାଇଛି । ଏଥିସହ ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର, ଦ୍ରାଘିମା ଓ ଅକ୍ଷାଂଶର ପ୍ରଭାବ, ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ଏବଂ ଦିନ-ରାତିର ଅବଧିରେ ପରିବର୍ତ୍ତନ ବିଷୟରେ ମଧ୍ୟ ଆଲୋଚନା କରାଯାଇଛି । ଆସନ୍ତୁ ଏହାକୁ ବିସ୍ତୃତ ଭାବେ ଜାଣିବା ।",
+        introduction: "ଏହି ପାଠରେ ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି, ଏହାର ଉପଦ୍ୱୀପ ଚରିତ୍ର, ପ୍ରତିବେଶୀ ଦେଶ ସହିତ ପ୍ରାଚୀନ ସମ୍ପର୍କ ଏବଂ ଦ୍ରାଘିମା ରେଖା ଆଧାରରେ ସମୟ ନିର୍ଣ୍ଣୟ ବିଷୟରେ ବିସ୍ତୃତ ଭାବରେ ଆଲୋଚନା କରାଯାଇଛି । ଆସନ୍ତୁ ଏ ବିଷୟରେ ଜାଣିବା ।",
 
         sentences: [
-            {
-                heading: "ଭାରତର ଅବସ୍ଥିତି ଓ ଉପଦ୍ୱୀପୀୟ ଆକାର",
-                text: "ଭାରତ ପୂର୍ବ ଏସିଆ ଓ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ । ଦେଶର ଦକ୍ଷିଣଭାଗ ସମୁଦ୍ର ଆଡ଼କୁ ଲମ୍ବିଯାଇ ତିନିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ବେଷ୍ଟିତ ହୋଇଥିବାରୁ ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି । ଏହା ଭାରତକୁ ଆନ୍ତର୍ଜାତୀୟ ଜଳପଥରେ ଏକ ସୁବିଧାଜନକ ସ୍ଥାନ ପ୍ରଦାନ କରିଛି ।"
-            },
+            { heading: "ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି", text: "ଭାରତବର୍ଷ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ । ଭାରତର ଅବସ୍ଥିତି ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣାଂଶରେ ଆକର୍ଷଣୀୟ ଜଳପଥର ଏକ ସୁବିଧାଜନକ ସ୍ଥିତିରେ ରହିଆଛି । ଦେଶର ଦକ୍ଷିଣଭାଗ କ୍ରମଶଃ ଅଣ୍ଡାସରିଆ ହୋଇ ସମୁଦ୍ରକୁ ଲମ୍ୟାଇଛି ।" },
 
-            {
-                heading: "ଭାରତର ପ୍ରାକୃତିକ ସୀମା ଓ ସାମୁଦ୍ରିକ ଗୁରୁତ୍ୱ",
-                text: "ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗରରେ ବିଭକ୍ତ ହୋଇଛି । ଉତ୍ତରରେ ସୁଉଚ୍ଚ ହିମାଳୟ ପର୍ବତମାଳା ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଠାରୁ ପୃଥକ କରିଛି । ଭାରତର ଦୀର୍ଘ ଉପକୂଳ ରେଖା ପଶ୍ଚିମ ଇଉରୋପ ଓ ପୂର୍ବ ଏସିଆ ସହ ସମୁଦ୍ରପଥରେ ସମ୍ପର୍କ ସ୍ଥାପନରେ ସହାୟକ ହୋଇଛି ।"
-            },
+            { heading: "ଭାରତ ଏକ ଉପଦ୍ୱୀପ", text: "ଯେଉଁ ଭୂଖଣ୍ଡର ତିନିଦିଗ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ହୋଇ ରହିଥାଏ, ତାକୁ ଉପଦ୍ୱୀପ କୁହାଯାଏ । ଭାରତକୁ ସମୁଦ୍ର ତିନିଦିଗରୁ ଘେରି ରହିଥିବାରୁ ଏହା ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି । ଏହାଫଳରେ ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗର ନାମରେ ଦୁଇଟି ବିଶିଷ୍ଟ ଜଳରାଶିରେ ବିଭାଜିତ ହୋଇଅଛି ।" },
 
-            {
-                heading: "ବାଣିଜ୍ୟ ଓ ସାଂସ୍କୃତିକ ସମ୍ପର୍କ",
-                text: "ପ୍ରାଚୀନ କାଳରୁ ସ୍ଥଳପଥ ଓ ପରେ ଜଳପଥ ମାଧ୍ୟମରେ ଭାରତର ବିଭିନ୍ନ ଦେଶ ସହ ସମ୍ପର୍କ ସ୍ଥାପିତ ହୋଇଥିଲା । ଏହି ପଥଗୁଡ଼ିକ ଦ୍ୱାରା ବାଣିଜ୍ୟ, ଜ୍ଞାନ ଓ ସଂସ୍କୃତିର ଆଦାନ-ପ୍ରଦାନ ହୋଇଥିଲା । ଭାରତୀୟ ମସଲା, ମସଲିନ୍, ଦଶମିକ ବ୍ୟବସ୍ଥା, ପଞ୍ଚତନ୍ତ୍ର ଓ ରାମାୟଣର ତତ୍ତ୍ୱ ବିଶ୍ୱର ବିଭିନ୍ନ ଦେଶକୁ ପହଞ୍ଚିଥିଲା ।"
-            },
+            { heading: "ହିମାଲୟ ଓ ଭାରତ ମହାସାଗରର ନାମକରଣ", text: "ଉତ୍ତର ଦିଗରେ ଭାରତକୁ ବୃହତ ହିମାଲୟ ପର୍ବତମାଳା ଏସିଆର ଅନ୍ୟାନ୍ୟ ଦେଶଗୁଡ଼ିକଠାରୁ ଅଲଗା ରଖିଅଛି । ଏହି କାରଣରୁ ପଶ୍ଚିମ ଉପକୂଳରୁ ପଶ୍ଚିମ ଇଉରୋପ ଏବଂ ପୂର୍ବ ଉପକୂଳରୁ ପୂର୍ବ ଏସିଆ ଦେଶଗୁଡ଼ିକ ସହ ଜଳପଥରେ ସଂପର୍କ ସ୍ଥାପନ ହୋଇପାରିଛି । ଭାରତ ମହାସାଗର ଉପକୂଳସ୍ଥ ଅନ୍ୟ କୌଣସି ଦେଶର ଉପକୂଳରେଖା ଭାରତର ଉପକୂଳ ଭଳି ଏତେ ଦୀର୍ଘ ନୁହେଁ, ତେଣୁ ଏହି ମହାସାଗରର ନାମକରଣ ଆମ ଦେଶର ନାମାନୁସାରେ ହେବା ଯଥାର୍ଥ ହୋଇଅଛି ।" },
 
-            {
-                heading: "ଭାରତର ବିସ୍ତାର ଓ ଦ୍ରାଘିମାର ପ୍ରଭାବ",
-                text: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୨୦୦ କି.ମି. । ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ମେରୁଠାରେ ମିଳିଥିବାରୁ ସେମାନଙ୍କ ମଧ୍ୟର ବ୍ୟବଧାନ କ୍ରମେ କମିଯାଏ । ଏହି କାରଣରୁ ମାନଚିତ୍ରରେ ବିସ୍ତାର ପ୍ରାୟ ସମାନ ଦେଖାଯାଇଥିଲେ ମଧ୍ୟ ବାସ୍ତବ କିଲୋମିଟର ଦୂରତାରେ ପାର୍ଥକ୍ୟ ରହିଛି ।"
-            },
+            { heading: "ପ୍ରାଚୀନ ସମ୍ପର୍କ ଓ ବାଣିଜ୍ୟ", text: "ପୃଥିବୀର ଅନେକ ଦେଶ ସହିତ ଭାରତର ସଂପର୍କ ଯୁଗଯୁଗ ଧରି ରହିଆସିଛି ଏବଂ ସ୍ଥଳପଥର ସଂପର୍କ ଜଳପଥ ସ୍ଥାପନ ହେବା ପୂର୍ବରୁ ହୋଇଥିଲା । ଉତ୍ତରସ୍ଥ ପାର୍ବତ୍ୟାଞ୍ଚଳରେ ଥିବା ଅନେକ ଗିରିପଥ ପ୍ରାଚୀନ ପରିବ୍ରାଜକମାନଙ୍କୁ ପଦଯାତ୍ରାରେ ଯିବାଆସିବାପାଇଁ ସୁଯୋଗ ଦେଇଥିଲା । ଏହି ଗମନାଗମନ ପଥ ବାଣିଜ୍ୟ କାରବାର ଓ ସାଂସ୍କୃତିକ ଆଦାନ ପ୍ରଦାନରେ ପ୍ରାଚୀନ କାଳରୁ ମୁଖ୍ୟ ଭୂମିକା ଗ୍ରହଣ କରି ଆସିଅଛି, ଯାହାଦ୍ୱାରା ରାମାୟଣ, ଉପନିଷଦ, ପଞ୍ଚତନ୍ତ୍ର ଓ ଭାରତୀୟ ସଂଖ୍ୟା ବ୍ୟବସ୍ଥା ବହୁଦୂର ଦେଶରେ ପହଞ୍ଚିପାରିଲା ।" },
 
-            {
-                heading: "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ",
-                text: "ଭାରତର ୩୦° ଦ୍ରାଘିମା ବିସ୍ତାର ଯୋଗୁ ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମା ମଧ୍ୟରେ ପ୍ରାୟ ଦୁଇ ଘଣ୍ଟାର ସ୍ଥାନୀୟ ସମୟ ପାର୍ଥକ୍ୟ ଦେଖାଯାଏ । ଏହି ଅସୁବିଧା ଦୂର କରିବା ପାଇଁ ମିର୍ଜାପୁର ଉପର ଦେଇ ଯାଇଥିବା ୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବେ ଗ୍ରହଣ କରାଯାଇଛି । ଏହାର ସ୍ଥାନୀୟ ସମୟକୁ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ବୋଲି କୁହାଯାଏ ।"
-            },
+            { heading: "ଭାରତର ବିସ୍ତାର", text: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ସମାନ, ଅର୍ଥାତ୍ ୩୦° । କିନ୍ତୁ ଏହି ଦୁରତ୍ୱକୁ କିଲୋମିଟରରେ ପ୍ରକାଶ କଲେ ଏହା ସମାନ ହୁଏ ନାହିଁ; ଦେଶର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କିଲୋମିଟର ହେଲାବେଳେ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୭୦୦ କିଲୋମିଟର । ଏପରି ବ୍ୟବଧାନ ହେବାର କାରଣ ହେଲା ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ଅକ୍ଷାଂଶରେଖା ଭଳି ସମାନାନ୍ତର ନୁହଁନ୍ତି, ଆଉ ବିଷୁବରେଖାଠାରୁ ମେରୁଆଡ଼କୁ ଗଲେ ସେମାନଙ୍କ ମଧ୍ୟରେ ବ୍ୟବଧାନ କ୍ରମଶଃ ହ୍ରାସ ପାଇ ମେରୁରେ ଶୂନ୍ୟ ହୋଇଯାଏ ।" },
 
-            {
-                heading: "ଅକ୍ଷାଂଶର ପ୍ରଭାବ",
-                text: "ଦକ୍ଷିଣରୁ ଉତ୍ତରକୁ ଯିବା ସହିତ ଅକ୍ଷାଂଶୀୟ ବିସ୍ତାର ଦିନ ଓ ରାତିର ଅବଧିକୁ ପ୍ରଭାବିତ କରେ । କନ୍ୟାକୁମାରୀରେ ଦିନ ଓ ରାତିର ଅବଧିରେ ପ୍ରାୟ କୌଣସି ତାରତମ୍ୟ ଅନୁଭବ ହୁଏ ନାହିଁ । କିନ୍ତୁ କାଶ୍ମୀରରେ ଅକ୍ଷାଂଶର ପ୍ରଭାବ ଅଧିକ ଥିବାରୁ ଦିନ ଓ ରାତିର ଅବଧିରେ ସ୍ପଷ୍ଟ ପାର୍ଥକ୍ୟ ଦେଖାଯାଏ ।"
-            }
+            { heading: "ଦ୍ରାଘିମା ରେଖା ଓ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ", text: "ଭାରତର ୩୦° ପୂର୍ବ-ପଶ୍ଚିମ ଦ୍ରାଘିମାରେଖାୟ ବିସ୍ତାର ଯୋଗୁ ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମାରେ ଥିବା ଦୁଇ ସ୍ଥାନ ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ରହିଥାଏ, ଯାହାଦ୍ୱାରା ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ସୂର୍ଯ୍ୟୋଦୟ ହେବାର ଦୁଇ ଘଣ୍ଟା ପରେ ଦ୍ୱାରକାରେ ସୂର୍ଯ୍ୟୋଦୟ ହୋଇଥାଏ । ଦେଶର ବିଭିନ୍ନ ସ୍ଥାନରେ ସମୟ ସଂକ୍ରାନ୍ତ ଭିନ୍ନତାକୁ ଦୂର କରିବାପାଇଁ ମିର୍ଜାପୁର ଉପରଦେଇ ଯାଉଥିବା ୮୨°୩୦' ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବେ ମାନି ନିଆଯାଇଛି ଏବଂ ଏହାର ସ୍ଥାନୀୟ ସମୟକୁ 'ଭାରତୀୟ ପ୍ରମାଣ ସମୟ' ବୋଲି ଧରାଯାଇଛି । ଦକ୍ଷିଣରୁ ଉତ୍ତର ଆଡ଼କୁ ଗଲେ ଅକ୍ଷାଂଶୟ ବିସ୍ତାର ଦିନ ଓ ରାତିର ଅବଧିକୁ ପ୍ରଭାବିତ କରେ ।" }
         ],
 
-        conclusion: "ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି, ଉପଦ୍ୱୀପୀୟ ଆକାର ଏବଂ ଦୀର୍ଘ ଉପକୂଳ ରେଖା ଏହାକୁ ବାଣିଜ୍ୟ, ସଂସ୍କୃତି ଓ ଆନ୍ତର୍ଜାତୀୟ ସମ୍ପର୍କରେ ବିଶେଷ ସ୍ଥାନ ପ୍ରଦାନ କରିଛି । ଦ୍ରାଘିମା ଓ ଅକ୍ଷାଂଶର ବିସ୍ତାର ଭାରତର ସମୟ ଓ ଦିନ-ରାତିର ଅବଧିକୁ ପ୍ରଭାବିତ କରେ । ସମଗ୍ର ଦେଶରେ ଏକ ସମାନ ସମୟ ବ୍ୟବସ୍ଥା ପାଇଁ ୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ଭାରତୀୟ ପ୍ରମାଣ ସମୟର ଆଧାର ଭାବେ ଗ୍ରହଣ କରାଯାଇଛି ।"
+        conclusion: "ଏହି ପାଠରୁ ଜଣାପଡ଼େ ଯେ ଭାରତ ଏସିଆର ଏକ ସୁବିଧାଜନକ ଭୌଗୋଳିକ ସ୍ଥିତିରେ ଅବସ୍ଥିତ ଏବଂ ଏକ ଉପଦ୍ୱୀପ ଭାବେ ତିନିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ବେଷ୍ଟିତ ଅଟେ । ହିମାଲୟ ପର୍ବତମାଳା ଓ ସମୁଦ୍ର ଭାରତକୁ ବିଶିଷ୍ଟ ପରିଚୟ ପ୍ରଦାନ କରିଥିବାବେଳେ ପ୍ରାଚୀନ ଜଳପଥ ଓ ସ୍ଥଳପଥ ଭାରତର ବାଣିଜ୍ୟ ଓ ସାଂସ୍କୃତିକ ସମ୍ପର୍କକୁ ବିଶ୍ୱର ଅନ୍ୟ ଦେଶ ସହିତ ଦୃଢ଼ କରିଛି । ଦେଶର ଦ୍ରାଘିମା ବିସ୍ତାର ଆଧାରରେ ନିର୍ଣ୍ଣୀତ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ସମଗ୍ର ଦେଶରେ ସମୟ ସଂକ୍ରାନ୍ତ ଏକତା ଆଣିଥାଏ ।"
     },
     
 questions: [
 {
 audio: "",
-question: "ଭାରତକୁ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପ କାହିଁକି କୁହାଯାଏ ?",
-introduction: "ଭାରତର ଦକ୍ଷିଣ ଭାଗ ସମୁଦ୍ର ଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ଏବଂ ତିନିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ବେଷ୍ଟିତ । ଏହାର କାରଣଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି ବର୍ଣ୍ଣନା କର ।",
+introduction: "ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି ସମ୍ବନ୍ଧୀୟ କେତେକ ମୁଖ୍ୟ ବିଷୟ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
 points: [
-"ଉପଦ୍ୱୀପ ହେଉଛି ତିନିଦିଗରୁ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ଭୂଖଣ୍ଡ ।",
-"ଭାରତର ଦକ୍ଷିଣ ଭାଗ ସମୁଦ୍ର ଆଡ଼କୁ ଲମ୍ବିଯାଇଛି ।",
-"ଭାରତକୁ ତିନିଦିଗରୁ ସମୁଦ୍ର ଘେରି ରହିଛି ।",
-"ଏହି କାରଣରୁ ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି ।",
-"ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗରରେ ବିଭକ୍ତ ହୋଇଛି ।"
+"ଭାରତବର୍ଷ ପୂର୍ବ ଏସିଆ ଏବଂ ପଶ୍ଚିମ ଏସିଆର ପ୍ରାୟ ମଧ୍ୟଭାଗରେ ଅବସ୍ଥିତ ।",
+"ଭାରତର ଅବସ୍ଥିତି ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣାଂଶରେ ।",
+"ଏହା ଆକର୍ଷଣୀୟ ଜଳପଥର ଏକ ସୁବିଧାଜନକ ସ୍ଥିତିରେ ରହିଆଛି ।",
+"ଦେଶର ଦକ୍ଷିଣଭାଗ କ୍ରମଶଃ ଅଣ୍ଡାସରିଆ ହୋଇ ସମୁଦ୍ରକୁ ଲମ୍ୟାଇଛି ।",
+"ଏହାଦ୍ୱାରା ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି ।"
 ],
-conclusion: "ତିନିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ବେଷ୍ଟିତ ଥିବାରୁ ଭାରତକୁ ବୃହତ୍ ଉପଦ୍ୱୀପ କୁହାଯାଏ । ଏହି ଅବସ୍ଥିତି ଭାରତକୁ ସାମୁଦ୍ରିକ ଦୃଷ୍ଟିରୁ ବିଶେଷ ଗୁରୁତ୍ୱ ପ୍ରଦାନ କରିଛି ।"
+conclusion: "ଭାରତ ଏସିଆ ମହାଦେଶର ଏକ ସୁବିଧାଜନକ ସ୍ଥିତିରେ ଅବସ୍ଥିତ । ଏହାର ଦକ୍ଷିଣ ଭାଗ ସମୁଦ୍ର ଆଡ଼କୁ ଲମ୍ୟି ରହିବାରୁ ଏହା ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପର ସ୍ୱରୂପ ଧାରଣ କରିଛି ।"
 },
 {
 audio: "",
-question: "ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତିର ଗୁରୁତ୍ୱ କ'ଣ ?",
-introduction: "ଭାରତର ଅବସ୍ଥିତି ଆନ୍ତର୍ଜାତୀୟ ଜଳପଥ ଓ ବିଭିନ୍ନ ଦେଶ ସହ ସମ୍ପର୍କ ସ୍ଥାପନରେ ସହାୟକ ହୋଇଛି । ଏହାର ଗୁରୁତ୍ୱଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "ଉପଦ୍ୱୀପ କାହାକୁ କୁହାଯାଏ ? ଭାରତ କିପରି ଏକ ଉପଦ୍ୱୀପ ?",
+introduction: "ଉପଦ୍ୱୀପର ପରିଭାଷା ଏବଂ ଭାରତ କିପରି ଏକ ଉପଦ୍ୱୀପ ତାହାର ବ୍ୟାଖ୍ୟା ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
 points: [
-"ଭାରତ ଏସିଆର ଦକ୍ଷିଣାଂଶରେ ଅବସ୍ଥିତ ।",
-"ଏହା ଆନ୍ତର୍ଜାତୀୟ ଜଳପଥର ସୁବିଧାଜନକ ସ୍ଥାନରେ ରହିଛି ।",
-"ହିମାଳୟ ଭାରତକୁ ଏସିଆର ଅନ୍ୟ ଦେଶଠାରୁ ପୃଥକ କରିଛି ।",
-"ଜଳପଥ ମାଧ୍ୟମରେ ପଶ୍ଚିମ ଇଉରୋପ ଓ ପୂର୍ବ ଏସିଆ ସହ ସମ୍ପର୍କ ସ୍ଥାପିତ ହୋଇଛି ।",
-"ବାଣିଜ୍ୟ ଓ ସାଂସ୍କୃତିକ ଆଦାନପ୍ରଦାନରେ ଏହା ବିଶେଷ ସହାୟକ ହୋଇଛି ।"
+"ଯେଉଁ ଭୂଖଣ୍ଡର ତିନିଦିଗ ଜଳରାଶି ଦ୍ୱାରା ବେଷ୍ଟିତ ହୋଇ ରହିଥାଏ, ତାକୁ ଉପଦ୍ୱୀପ କୁହାଯାଏ ।",
+"ଭାରତକୁ ସମୁଦ୍ର ତିନିଦିଗରୁ ଘେରି ରହିଥାଏ ।",
+"ଏହାଫଳରେ ଭାରତ ଏକ ବୃହତ୍ ଉପଦ୍ୱୀପରେ ପରିଣତ ହୋଇଛି ।",
+"ଭାରତ ମହାସାଗରର ଉତ୍ତରାଂଶ ବଙ୍ଗୋପସାଗର ଓ ଆରବ ସାଗର ନାମରେ ବିଭାଜିତ ହୋଇଅଛି ।",
+"ଉତ୍ତର ଦିଗରେ ବୃହତ ହିମାଲୟ ପର୍ବତମାଳା ଭାରତକୁ ଅନ୍ୟ ଦେଶଠାରୁ ଅଲଗା ରଖିଅଛି ।"
 ],
-conclusion: "ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି ଦେଶକୁ ବାଣିଜ୍ୟ ଓ ଯୋଗାଯୋଗରେ ବିଶେଷ ସୁବିଧା ପ୍ରଦାନ କରିଛି । ଏହା ଭାରତର ସାଂସ୍କୃତିକ ଓ ଆର୍ଥିକ ବିକାଶରେ ମଧ୍ୟ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଭୂମିକା ନେଇଛି ।"
+conclusion: "ତିନିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ବେଷ୍ଟିତ ଭୂଖଣ୍ଡକୁ ଉପଦ୍ୱୀପ କୁହାଯାଏ । ଭାରତ ତିନିଦିଗରୁ ସମୁଦ୍ର ଦ୍ୱାରା ଘେରି ରହିଥିବାରୁ ଏହା ଏକ ଉପଦ୍ୱୀପ ଭାବେ ପରିଗଣିତ ହୁଏ ।"
 },
 {
 audio: "",
-question: "ଭାରତରେ ପ୍ରାଚୀନ କାଳରୁ ଗମନାଗମନ ପଥର ଗୁରୁତ୍ୱ କ'ଣ ଥିଲା ?",
-introduction: "ପ୍ରାଚୀନ କାଳରୁ ଭାରତର ଗମନାଗମନ ପଥ ବାଣିଜ୍ୟ, ଭାବ ବିନିମୟ ଓ ସଂସ୍କୃତିର ପ୍ରସାରରେ ସହାୟକ ହୋଇଥିଲା । ଏହାର ମୁଖ୍ୟ ଦିଗଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "ଭାରତ ମହାସାଗରର ନାମକରଣ ଭାରତ ନାମରେ ହେବାର କାରଣ କ'ଣ ?",
+introduction: "ଭାରତ ମହାସାଗରର ନାମକରଣ ଭାରତ ନାମରେ ହେବାର କାରଣଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
 points: [
-"ପାର୍ବତ୍ୟ ଗିରିପଥ ପ୍ରାଚୀନ ପରିବ୍ରାଜକଙ୍କ ଯାତାୟାତରେ ସହାୟକ ଥିଲା ।",
-"ଗମନାଗମନ ପଥ ବାଣିଜ୍ୟ କାରବାରକୁ ବିକଶିତ କରିଥିଲା ।",
-"ଭାବ ଓ ସଂସ୍କୃତିର ଆଦାନପ୍ରଦାନ ହୋଇଥିଲା ।",
-"ଭାରତୀୟ ଜ୍ଞାନ, ସଂଖ୍ୟା ଓ ଦଶମିକ ବ୍ୟବସ୍ଥା ବହୁ ଦେଶରେ ପହଞ୍ଚିଥିଲା ।",
-"ଭାରତୀୟ ମସଲା, ମସଲିନ୍ ଓ ଅନ୍ୟାନ୍ୟ ପଦାର୍ଥର ବ୍ୟବସାୟ ବିଦେଶରେ ହୋଇଥିଲା ।"
+"ଭାରତକୁ ସମୁଦ୍ର ତିନିଦିଗରୁ ଘେରି ରହିଥାଏ ।",
+"ଭାରତ ମହାସାଗର ଉପକୂଳସ୍ଥ ଅନ୍ୟ କୌଣସି ଦେଶର ଉପକୂଳରେଖା ଭାରତର ଭଳି ଦୀର୍ଘ ନୁହେଁ ।",
+"ଭାରତର ଉପକୂଳ ରେଖା ସର୍ବାଧିକ ଦୀର୍ଘ ।",
+"ତେଣୁ ଏହି ମହାସାଗରର ନାମକରଣ ଆମ ଦେଶର ନାମାନୁସାରେ ହୋଇଛି ।",
+"ଏହା ଯଥାର୍ଥ ବୋଲି ବିବେଚିତ ହୋଇଅଛି ।"
 ],
-conclusion: "ପ୍ରାଚୀନ ଗମନାଗମନ ପଥ ଭାରତର ବାଣିଜ୍ୟ ଓ ସଂସ୍କୃତିର ବିକାଶରେ ବହୁତ ବଡ଼ ଭୂମିକା ନେଇଥିଲା । ଏହା ମାଧ୍ୟମରେ ଭାରତର ଜ୍ଞାନ ଓ ପରମ୍ପରା ବିଶ୍ୱର ବିଭିନ୍ନ ଦେଶକୁ ପହଞ୍ଚିପାରିଥିଲା ।"
+conclusion: "ଭାରତ ମହାସାଗରର ତୀରବର୍ତ୍ତୀ ଦେଶଗୁଡ଼ିକ ମଧ୍ୟରେ ଭାରତର ଉପକୂଳ ରେଖା ସବୁଠାରୁ ଦୀର୍ଘ । ଏହି କାରଣରୁ ଏହି ମହାସାଗରର ନାମ ଭାରତ ନାମରେ ରଖାଯିବା ଯଥାର୍ଥ ହୋଇଛି ।"
 },
 {
 audio: "",
-question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ଏବଂ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୨୦୦ କି.ମି. କାହିଁକି ?",
-introduction: "ଦ୍ରାଘିମାରେଖା ଓ ଅକ୍ଷାଂଶରେଖାର ଗଠନ ଯୋଗୁଁ ଭାରତର ବିସ୍ତାର କିଲୋମିଟରରେ ସମାନ ହୁଏ ନାହିଁ । ଏହାର କାରଣଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ଡିଗ୍ରୀରେ ସମାନ ହେଲେ ମଧ୍ୟ କିଲୋମିଟରରେ ସମାନ ହୁଏ ନାହିଁ କାହିଁକି ?",
+introduction: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାରରେ ଥିବା ବ୍ୟବଧାନର କାରଣଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
 points: [
-"ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ସମାନାନ୍ତର ନୁହଁନ୍ତି ।",
-"ସମସ୍ତ ଦ୍ରାଘିମାରେଖା ମେରୁଠାରେ ମିଳିତ ହୁଅନ୍ତି ।",
-"ମେରୁ ଆଡ଼କୁ ଦ୍ରାଘିମାରେଖା ମଧ୍ୟର ବ୍ୟବଧାନ କମିଯାଏ ।",
-"ସେଥିପାଇଁ ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କି.ମି. ।",
-"ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୨୦୦ କି.ମି. ହୋଇଛି ।"
+"ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଓ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ସମାନ (୩୦°) ।",
+"ଦେଶର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ପ୍ରାୟ ୩୦୦୦ କିଲୋମିଟର ।",
+"ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ପ୍ରାୟ ୩୭୦୦ କିଲୋମିଟର ।",
+"ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ଅକ୍ଷାଂଶରେଖା ଭଳି ସମାନାନ୍ତର ନୁହଁନ୍ତି ।",
+"ବିଷୁବରେଖାଠାରୁ ମେରୁଆଡ଼କୁ ଗଲେ ଦ୍ରାଘିମାରେଖା ମଧ୍ୟରେ ବ୍ୟବଧାନ କ୍ରମଶଃ ହ୍ରାସ ପାଇ ମେରୁରେ ଶୂନ୍ୟ ହୋଇଯାଏ ।"
 ],
-conclusion: "ଦ୍ରାଘିମାରେଖାର ବ୍ୟବଧାନ ସବୁ ସ୍ଥାନରେ ସମାନ ନ ଥିବାରୁ ଏହି ପାର୍ଥକ୍ୟ ଦେଖାଯାଏ । ତେଣୁ ମାନଚିତ୍ରରେ ସମାନ ଦେଖାଯାଉଥିବା ବିସ୍ତାର କିଲୋମିଟରରେ ସମାନ ହୁଏ ନାହିଁ ।"
+conclusion: "ଡିଗ୍ରୀ ହିସାବରେ ସମାନ ବିସ୍ତାର ସତ୍ତ୍ୱେ ଦ୍ରାଘିମାରେଖାଗୁଡ଼ିକ ସମାନାନ୍ତର ନ ହେବାରୁ କିଲୋମିଟର ହିସାବରେ ବ୍ୟବଧାନ ଭିନ୍ନ ହୋଇଥାଏ । ତେଣୁ ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ତୁଳନାରେ ଉତ୍ତର-ଦକ୍ଷିଣ ବିସ୍ତାର ଅଧିକ ।"
 },
 {
 audio: "",
-question: "ଭାରତର ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମା ମଧ୍ୟରେ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ କାହିଁକି ହୁଏ ?",
-introduction: "ଭାରତର ଦ୍ରାଘିମାରେଖୀୟ ବିସ୍ତାର ଯୋଗୁଁ ପୂର୍ବ ଓ ପଶ୍ଚିମ ସୀମାରେ ସ୍ଥାନୀୟ ସମୟର ପାର୍ଥକ୍ୟ ଦେଖାଯାଏ । ଏହାର କାରଣଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ (Indian Standard Time) କିପରି ନିର୍ଣ୍ଣୀତ ହୋଇଛି ?",
+introduction: "ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ନିର୍ଣ୍ଣୟ ସମ୍ବନ୍ଧୀୟ ବିଷୟଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
 points: [
-"ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଦ୍ରାଘିମାରେଖୀୟ ବିସ୍ତାର ପ୍ରାୟ ୩୦° ।",
-"ଏହି କାରଣରୁ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ହୁଏ ।",
-"ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ସୂର୍ଯ୍ୟୋଦୟ ପ୍ରଥମେ ହୁଏ ।",
-"ଦ୍ୱାରକାରେ ପ୍ରାୟ ଦୁଇ ଘଣ୍ଟା ପରେ ସୂର୍ଯ୍ୟୋଦୟ ହୁଏ ।",
-"ଏହା ଦ୍ରାଘିମାରେଖାର ପ୍ରଭାବ ଯୋଗୁଁ ଘଟିଥାଏ ।"
+"ଭାରତର ୩୦° ପୂର୍ବ-ପଶ୍ଚିମ ବିସ୍ତାର ଯୋଗୁ ସ୍ଥାନୀୟ ସମୟର ବ୍ୟବଧାନ ୨ ଘଣ୍ଟା ରହିଥାଏ ।",
+"ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ସୂର୍ଯ୍ୟୋଦୟ ହେବାର ଦୁଇ ଘଣ୍ଟା ପରେ ଦ୍ୱାରକାରେ ସୂର୍ଯ୍ୟୋଦୟ ହୁଏ ।",
+"ସମୟ ସଂକ୍ରାନ୍ତ ଭିନ୍ନତାକୁ ଦୂର କରିବାପାଇଁ ମିର୍ଜାପୁର ଉପରଦେଇ ଯାଉଥିବା ୮୨°୩୦' ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବେ ମାନି ନିଆଯାଇଛି ।",
+"ଏହାର ସ୍ଥାନୀୟ ସମୟକୁ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ବୋଲି ଧରାଯାଇଛି ।",
+"ଏହି ପ୍ରମାଣ ସମୟ ସମଗ୍ର ଦେଶରେ ପ୍ରଯୋଗ ହୋଇଥାଏ ।"
 ],
-conclusion: "ଭାରତର ପୂର୍ବ-ପଶ୍ଚିମ ଦ୍ରାଘିମାରେଖୀୟ ବିସ୍ତାର ଯୋଗୁଁ ସ୍ଥାନୀୟ ସମୟର ପାର୍ଥକ୍ୟ ଦେଖାଯାଏ । ଏହି କାରଣରୁ ପୂର୍ବ ଭାଗରେ ସୂର୍ଯ୍ୟୋଦୟ ଓ ସୂର୍ଯ୍ୟାସ୍ତ ପଶ୍ଚିମ ଭାଗଠାରୁ ପୂର୍ବରୁ ହୋଇଥାଏ ।"
-},
-{
-audio: "",
-question: "୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା କାହିଁକି ମାନାଯାଇଛି ?",
-introduction: "ଦେଶର ସମସ୍ତ ସ୍ଥାନରେ ସମୟର ଏକରୂପତା ରଖିବା ପାଇଁ ୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବେ ଗ୍ରହଣ କରାଯାଇଛି । ଏହାର କାରଣଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
-points: [
-"ଦେଶର ବିଭିନ୍ନ ସ୍ଥାନରେ ସ୍ଥାନୀୟ ସମୟ ଭିନ୍ନ ହୋଇଥାଏ ।",
-"ଏହି ଭିନ୍ନତା ଦୂର କରିବା ଆବଶ୍ୟକ ଥିଲା ।",
-"ମିର୍ଜାପୁର ଉପର ଦେଇ ଯାଇଥିବା ୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖା ବାଛାଯାଇଛି ।",
-"ଏହାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା କୁହାଯାଏ ।",
-"ଏହାର ସ୍ଥାନୀୟ ସମୟକୁ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ବୋଲି ଧରାଯାଏ ।"
-],
-conclusion: "ସମଗ୍ର ଦେଶରେ ଏକ ସମାନ ସମୟ ବ୍ୟବସ୍ଥା ରଖିବା ପାଇଁ ୮୨°୩୦′ ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବେ ଗ୍ରହଣ କରାଯାଇଛି । ଏହା ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ନିର୍ଦ୍ଧାରଣର ଆଧାର ଅଟେ ।"
+conclusion: "ମିର୍ଜାପୁର ଉପରଦେଇ ଯାଉଥିବା ୮୨°୩୦' ପୂର୍ବ ଦ୍ରାଘିମାରେଖାକୁ ଭାରତର ପ୍ରମାଣ ମଧ୍ୟାହ୍ନରେଖା ଭାବେ ସ୍ଥିର କରାଯାଇଛି । ଏହାର ସ୍ଥାନୀୟ ସମୟକୁ ଭାରତୀୟ ପ୍ରମାଣ ସମୟ ବୋଲି କୁହାଯାଏ ଯାହା ସମଗ୍ର ଦେଶରେ ସମୟ ଏକତା ବଜାୟ ରଖିଥାଏ ।"
 }
 ]
                 
@@ -5459,7 +5533,7 @@ function createSummaryTest() {
     
     let html = `<div class="summary-content active">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - ଭାରତର ଆକାର ଓ ଅବସ୍ଥିତି ଭାରତର ଭୌଗୋଳିକ, ବାଣିଜ୍ୟିକ ଏବଂ ସାଂସ୍କୃତିକ ମହତ୍ତ୍ୱକୁ କିପରି ପ୍ରଭାବିତ କରିଛି?</h2>
+            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - ଏସିଆ ଓ ଆଫ୍ରିକାରେ ଉପନିବେଶବାଦ ବିସ୍ତାର ପାଇଁ ପରିବହନ ଓ ଯୋଗାଯୋଗର ଉନ୍ନତି, ଦୁର୍ବଳ ଶାସନ, ଧର୍ମ ଓ ସଂସ୍କୃତିର ପ୍ରଚାର ଏବଂ ଅନ୍ୟାନ୍ୟ ଅନୁକୂଳ ପରିସ୍ଥିତି କିପରି ଦାୟୀ ଥିଲା?</h2>
             ${summaryAudioButton}
         </div>
         
@@ -6434,7 +6508,7 @@ let certificateData = {
     examDate: '',
     examDay: '',
     examTime: '',
-    className: 'HISTORY-IX: CLASS-2',
+    className: 'GEOGRAPHY-IX: CLASS-2',
     scores: {
         mcq: { scored: 0, total: 0, percentage: 0 },
         tf: { scored: 0, total: 0, percentage: 0 },
@@ -7340,7 +7414,7 @@ function closeMermaidModal() {
 // Just change PDF_FILE_ID for each lesson!
 // ============================================
 
-const PDF_URL = 'https://audio.evidya.de/S9G2P3-4.pdf';
+const PDF_URL = 'https://audio.evidya.de/S9SSG1P3-4.pdf';
 
 let bookCur = 0;
 let bookPdfDoc = null;
