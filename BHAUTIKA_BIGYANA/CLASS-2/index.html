@@ -5833,13 +5833,14 @@ function openWhatsAppHelp() {
     const rollNumber  = sessionData.rollNumber || 'N/A';
 
     let topicContext = '';
-    if (typeof currentTopicIndex !== 'undefined' && typeof topicsData !== 'undefined' && topicsData[currentTopicIndex]) {
-        topicContext = topicsData[currentTopicIndex].heading.replace(/:-$/, '');
+    if (typeof window.getSbCurrentLesson === 'function') {
+        const heading = window.getSbCurrentLesson();
+        if (heading) topicContext = heading.replace(/:-$/, '');
     }
 
     const message =
         `🙏 ନମସ୍କାର ଆଜ୍ଞା,\n\n` +
-        `ମୁଁ ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ପାଠ ପଢୁଛି ଏବଂ ସାହାଯ୍ୟ ଦରକାର ।\n\n` +
+        `ମୁଁ ଇ-ବିଦ୍ୟା ଏକାଡେମି ର ଜଣେ ବିଦ୍ୟାର୍ଥୀ । ମୋର ସାହାଯ୍ୟ ଦରକାର ।\n\n` +
         `👤 ନାମ: ${studentName}\n` +
         `🆔 ରୋଲ୍ ନମ୍ବର: ${rollNumber}\n` +
         `🏫 ଶ୍ରେଣୀ: ${APP_CONFIG.sreni}\n` +
@@ -8162,6 +8163,7 @@ function buildLessons(raw){
 
 var LESSONS = buildLessons(topicsData);
 var typing = false, typTimer = null;
+var sbCurrentLessonIndex = 0;   // NEW: tracks which lesson the bot is currently teaching
 var sbChat = document.getElementById('sbChat');
 var sbStatus = document.getElementById('sbStatus');
 var sbProg = document.getElementById('sbProg');
@@ -8302,6 +8304,7 @@ function sbLessonMenu(){
 }
 
 function sbTeachLesson(idx){
+  sbCurrentLessonIndex = idx;   // NEW: remember which lesson is active
   var lesson = LESSONS[idx];
   updateProg(idx, LESSONS.length);
   addBot('📖 '+lesson.heading+'\n\n ବହୁତ ଭଲ । ଏହା ଏକ ସୁନ୍ଦର ନୋଟ୍ । ଏହି ନୋଟ୍ ଟି ମୋର ବହୁତ ପସନ୍ଦ । ଆସନ୍ତୁ, ପ୍ରଥମେ ସାଙ୍ଗ ହୋଇ ଏହି ନୋଟ୍ କୁ ପଢିବା ।', function(){
@@ -8405,6 +8408,12 @@ window.openStudyBot = function(){
 window.closeSB = function(){
   document.getElementById('studyBotModal').style.display = 'none';
   document.body.style.overflow = '';
+};
+
+    window.getSbCurrentLesson = function(){
+  return (typeof LESSONS !== 'undefined' && LESSONS[sbCurrentLessonIndex])
+    ? LESSONS[sbCurrentLessonIndex].heading
+    : '';
 };
 
 window.sbReset = function(){
