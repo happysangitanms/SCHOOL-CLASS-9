@@ -5708,6 +5708,7 @@ function createQuestionTest() {
 }
 
 function updateProgress() {
+    if (!progressFill) return; // avoid crash if this element doesn't exist in this file
     const progress = ((currentSentence + 1) / courseData.sentences.length) * 100;
     progressFill.style.width = progress + '%';
 }
