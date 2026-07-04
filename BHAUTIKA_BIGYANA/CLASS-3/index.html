@@ -2092,67 +2092,6 @@ body > div:first-child {
     touch-action: pan-y;
     will-change: transform;
 }
-
-   /* Hides: ଚିତ୍ର-ନୋଟ୍ ଦେଖିବା (Picture Notes) button */
-div:has(> button[onclick="openBookSlideshow()"]) { display: none !important; }
-
-/* Hides: ପାଠ୍ୟ-ନୋଟ୍ ପଢିବା (Text Notes) button */
-div:has(> button[onclick="openSlides()"]) { display: none !important; }
-
-/* Hides: କଳାପଟାରେ ପଢିବା (Blackboard Lesson) button */
-div:has(> #showLessonBtn) { display: none !important; }
-
-/* Hides: ପରୀକ୍ଷା ଦେବା (Exam) button */
-div:has(> #examSectionBtn) { display: none !important; }
-
-
-    /* Hides: ବିକଳ୍ପ ଉତ୍ତରଯୁକ୍ତ ପ୍ରଶ୍ନ (MCQ) button */
-#mcqBtn { display: none !important; }
-
-        /* Hides: ସତ୍ୟ/ମିଥ୍ୟା (True/False) button */
-#tfBtn { display: none !important; }
-
-        /* Hides: ଶୂନ୍ୟାସ୍ଥାନ ପୂରଣ (Fill in Blanks) button */
-#fibBtn { display: none !important; }
-
-        /* Hides: ଶବ୍ଦ ମେଳ କରାଇବା (Matching) button */
-#matchBtn { display: none !important; }
-
-        /* Hides: ଶବ୍ଦକୁ ସଜାଇବା (Arrange Words) button */
-#arrangeBtn { display: none !important; }
-
-        /* Hides: ଅତି ସଂକ୍ଷିପ୍ତ ପ୍ରଶ୍ନୋତ୍ତର (STQ) button */
-#stqBtn { display: none !important; }
-
-        /* Hides: ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ (Long Answer/Summary) button */
-#summaryBtn { display: none !important; }
-
-        /* Hides: ସଂକ୍ଷିପ୍ତ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ (Short Answer) button */
-#questionBtn { display: none !important; }
-
-        /* Hides: 🏆 ସାର୍ଟିଫିକେଟ୍ (Certificate) button */
-#practiceBtn { display: none !important; }
-
-
-        /* Hides: 🎧 ଆସନ୍ତୁ, ପ୍ରଶ୍ନୋତ୍ତର ଶୁଣି ମନେରଖିବା (Audio 3) button */
-#audioToggleBtn3 { display: none !important; }
-
-        /* Hides: ନୂତନ-ଶବ୍ଦ ଜାଣିବା (New Word) button */
-#wordBtn { display: none !important; }
-
-        /* Hides: ମନରେ ଚିତ୍ର ଆଙ୍କିବା (Mind Diagram) button */
-#mermaidBtn { display: none !important; }
-
-        /* Hides: 🖼️ ସାରଚିତ୍ର ଦେଖିବା (Image) button */
-button[onclick="openImageModal()"] { display: none !important; }
-
-        /* Hides: 🎓 ଚାଟିଙ୍ଗ୍ କରି ପଢିବା (Study Bot Chat) button */
-button[onclick="openStudyBot()"] { display: none !important; }
-
-        /* Hides: the entire ପଢିବା ସମୟରେ... (Translator/e-Vidya) dropdown */
-.assistant-dropdown-wrapper { display: none !important; }
-        
-        
     </style>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
@@ -2179,7 +2118,7 @@ button[onclick="openStudyBot()"] { display: none !important; }
         
         <div class="consent-box">
             <input type="checkbox" id="consentCheck">
-            <label for="consentCheck">I agree to device tracking, usage monitoring, audio playback, internet access, data storage, and all <a href="https://e-vidya-legal-policies.pages.dev/" target="_blank">terms & conditions</a> of E-Vidya Academy.</label>
+           <label for="consentCheck">I agree to device tracking, usage monitoring, audio playback, internet access, data storage, use of WhatsApp to contact my teacher for academic help (which will share my name, roll number, class and subject), and all <a href="https://e-vidya-legal-policies.pages.dev/" target="_blank">terms & conditions</a> of E-Vidya Academy.</label>
         </div>
        <button id="loginBtn" class="login-btn">ଉପରୋକ୍ତ ଛୋଟ ବାକ୍ସରେ କ୍ଲିକ୍ କରିସାରିବା ପରେ ଏଠାରେ କ୍ଲିକ୍ କରି କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରନ୍ତୁ ।</button>
         <div id="loginError" class="login-error"></div>
@@ -2510,7 +2449,7 @@ button[onclick="openStudyBot()"] { display: none !important; }
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ବହି ପାଠ ବୁଝୁଛନ୍ତି ...</p>
     <audio id="audioPlayer" controls controlsList="nodownload" style="width: 100%; border-radius: 8px;">
-        <source src="https://audio.evidya.de/S9SCP3P5-7.mp3" type="audio/mpeg">
+        <source src="https://audio.evidya.de/S9PS2P3-4.mp3" type="audio/mpeg">
         Your browser does not support audio.
     </audio>
 </div>
@@ -2520,7 +2459,7 @@ button[onclick="openStudyBot()"] { display: none !important; }
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ପ୍ରଶ୍ନୋତ୍ତର ବୁଝୁଛନ୍ତି ...</p>
     <audio id="audioPlayer3" controls controlsList="nodownload" style="width: 100%; border-radius: 8px;">
-        <source src="https://audio.evidya.de/S9SCP3P5-7QA.mp3" type="audio/mpeg">
+        <source src="https://audio.evidya.de/S9PS2P3-4QA.mp3" type="audio/mpeg">
         Your browser does not support audio.
     </audio>
 </div>
@@ -2530,7 +2469,7 @@ button[onclick="openStudyBot()"] { display: none !important; }
             <iframe
                 id="videoIframe"
                 src=""
-                data-src="https://www.youtube.com/embed/1RyLgIeVU7Y?playsinline=1&rel=0&modestbranding=1&autoplay=1"
+                data-src="https://www.youtube.com/embed/Y-ouPRcmGJ0?playsinline=1&rel=0&modestbranding=1&autoplay=1"
                 style="
                     display: block;
                     width: 100%;
@@ -2654,7 +2593,7 @@ button[onclick="openStudyBot()"] { display: none !important; }
             padding: 10px;
             border-radius: 0 0 12px 12px;">
             <img 
-                src="https://audio.evidya.de/S9SCP3P5-7.png"
+                src="https://audio.evidya.de/S9PS2P3-4.png"
                 alt="ଚିତ୍ର"
                 style="
                     width: 100%;
@@ -2686,13 +2625,34 @@ button[onclick="openStudyBot()"] { display: none !important; }
     </div>
   </div>
 
-  <!-- Progress strip -->
+<!-- Progress strip -->
   <div style="height:3px;background:rgba(255,255,255,.15);flex-shrink:0;">
     <div id="sbProg" style="height:100%;background:#fff;transition:width .4s;width:0%;"></div>
   </div>
 
   <!-- THE ENTIRE CHAT — scrolls freely, buttons live here too -->
 <div id="sbChat" style="flex:1;overflow-y:auto;padding:12px 10px 24px;display:flex;flex-direction:column;gap:10px;-webkit-overflow-scrolling:touch;font-weight:700;text-align:justify;"></div>
+
+  <!-- WHATSAPP HELP BAR — always visible at bottom of chat -->
+  <div id="sbWhatsappBar" onclick="openWhatsAppHelp()" style="
+      flex-shrink:0;
+      background:#1e88e5;
+      padding:10px 14px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      cursor:pointer;
+      box-shadow:0 -2px 8px rgba(0,0,0,0.15);
+  ">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="white" style="flex-shrink:0;">
+        <path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.005a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.4-5.63zM12.05 18.4h-.003a6.5 6.5 0 01-3.32-.91l-.24-.14-2.47.65.66-2.4-.16-.25a6.55 6.55 0 01-1-3.49 6.6 6.6 0 016.6-6.6 6.5 6.5 0 014.66 1.93 6.55 6.55 0 011.94 4.67 6.6 6.6 0 01-6.6 6.55zm3.6-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.32-.1-.45.1-.13.2-.5.64-.62.77-.11.13-.23.15-.43.05-.2-.1-.83-.31-1.58-.98-.58-.52-.98-1.16-1.1-1.36-.11-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.11.13-.2.2-.32.06-.13.03-.24-.02-.34-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6s.7 1.86.8 1.99c.1.13 1.37 2.1 3.33 2.94.47.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.16-.46.16-.86.11-.94-.05-.08-.18-.13-.38-.23z"/>
+      </svg>
+      <div style="flex:1; color:white;">
+          <div style="font-size:15px; font-weight:800;">ଅଟକିଗଲେ ? ଶିକ୍ଷକଙ୍କ ସହ WhatsApp ରେ କଥା ହୁଅନ୍ତୁ । </div>
+          <div style="font-size:15px; opacity:0.9; font-weight:500;">Tap to chat with your teacher directly</div>
+      </div>
+      <div style="color:white; font-size:20px;">›</div>
+  </div>
 </div>
 
 <style>
@@ -2854,6 +2814,16 @@ button[onclick="openStudyBot()"] { display: none !important; }
     </div>  
 <script>  
 
+// ============================================
+// PER-FILE CONFIG — EDIT THESE 3 LINES ONLY
+// FOR EACH SUBJECT/CLASS COPY OF THIS FILE
+// ============================================
+const APP_CONFIG = {
+    sreni: "ନବମ ଶ୍ରେଣୀ",
+    subject: "ସାମାଜିକ ବିଜ୍ଞାନ",
+    classCode: "SAMAJIK BIGYAAN: CLASS-1"
+};
+
     
 // Global variable to store animation frame ID
 window.alphabetAnimationFrame = null;
@@ -2960,11 +2930,12 @@ document.getElementById('loginBtn').addEventListener('click', async function() {
 
         // SUCCESS - show welcome message
         const studentName = data.name || rollNumber;
+        sessionData.studentName = studentName;
         const welcomeOverlay = document.createElement('div');
         welcomeOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;text-align:center;padding:20px;';
         welcomeOverlay.innerHTML = '<div style="color:white;font-size:28px;margin-bottom:15px;">🌹</div>'
             + '<div style="color:white;font-size:22px;font-weight:bold;">ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '!</div>'
-            + '<div style="color:rgba(255,255,255,0.85);font-size:16px;margin-top:12px;">ଆପଣ ନବମ ଶ୍ରେଣୀ କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିଛନ୍ତି ।</div>'
+        + '<div style="color:rgba(255,255,255,0.85);font-size:16px;margin-top:12px;">ଆପଣ ' + APP_CONFIG.sreni + ' କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିଛନ୍ତି ।</div>'
             + '<div style="color:rgba(255,255,255,0.7);font-size:13px;margin-top:8px;">(ଏବେ ଆପଣଙ୍କ ପାଠ ସାମଗ୍ରୀ ଲୋଡ୍ ହେଉଛି)</div>';
         document.body.appendChild(welcomeOverlay);
 
@@ -5852,6 +5823,63 @@ function closeAssistant(containerId) {
     container.classList.remove('active');
 }
 
+// ============================================
+// WHATSAPP HELP FUNCTION
+// ============================================
+
+function openWhatsAppHelp() {
+    const phone = '916372296357';
+
+    const studentName = sessionData.studentName || 'ଛାତ୍ର';
+    const rollNumber  = sessionData.rollNumber || 'N/A';
+
+    let topicContext = '';
+    if (typeof window.getSbCurrentLesson === 'function') {
+        const heading = window.getSbCurrentLesson();
+        if (heading) topicContext = heading.replace(/:-$/, '');
+    }
+
+ const message =
+        `🙏 ନମସ୍କାର ଆଜ୍ଞା,\n\n` +
+        `ମୁଁ ଇ-ବିଦ୍ୟା ଏକାଡେମି ର ଜଣେ ବିଦ୍ୟାର୍ଥୀ । ମୋର ସାହାଯ୍ୟ ଦରକାର ।\n\n` +
+        `👤 ନାମ: ${studentName}\n` +
+        `🆔 ରୋଲ୍ ନମ୍ବର: ${rollNumber}\n` +
+        `🏫 ଶ୍ରେଣୀ: ${APP_CONFIG.sreni}\n` +
+        `📘 ବିଷୟ: ${APP_CONFIG.subject}\n` +
+        (topicContext ? `📖 ବର୍ତ୍ତମାନ ପଢୁଥିବା ନୋଟ୍: ${topicContext}\n` : '') +
+        `\nଦୟାକରି ମୋତେ ସାହାଯ୍ୟ କରନ୍ତୁ ।`;
+
+    function proceedToWhatsApp() {
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // ✅ CONSENT CONFIRMATION BEFORE OPENING WHATSAPP
+    const confirmMsg =
+        "ଶିକ୍ଷକଙ୍କ ସହିତ ଯୋଗାଯୋଗ କରିବା ପାଇଁ ମୁଁ ଏବେ ଆପଣଙ୍କୁ ଆପଣଙ୍କ ହ୍ଵାଟ୍ସ-ଆପ୍ ସ୍କ୍ରୀନ୍ କୁ ନେଇଯିବି ।\n\nଆପଣ ଆଗକୁ ବଢିବାକୁ ଚାହୁଁଛନ୍ତି କି ?";
+    const userConfirmed = window.confirm(confirmMsg);
+
+    if (!userConfirmed) {
+        return; // student declined — nothing happens
+    }
+
+  function proceedToWhatsAppWithDelay() {
+        addBot("⏳ ଅପେକ୍ଷା କରନ୍ତୁ... WhatsApp ଖୋଲୁଛି...");
+        setTimeout(proceedToWhatsApp, 3000);
+    }
+
+    const botModal = document.getElementById('studyBotModal');
+    const botIsOpen = botModal && botModal.style.display !== 'none';
+
+    if (botIsOpen && typeof window.sbEncourage === 'function') {
+        window.sbEncourage(studentName, proceedToWhatsAppWithDelay);
+    } else {
+        proceedToWhatsAppWithDelay();
+    }
+}
+
+window.openWhatsAppHelp = openWhatsAppHelp;
+    
+
 // Handle assistant selection from dropdown
 document.querySelectorAll('.dropdown-item').forEach(item => {
     item.addEventListener('click', (e) => {
@@ -6666,7 +6694,7 @@ let certificateData = {
     examDate: '',
     examDay: '',
     examTime: '',
-    className: 'BHAUTIK BIGYAAN: CLASS-3',
+    className: APP_CONFIG.classCode,
     scores: {
         mcq: { scored: 0, total: 0, percentage: 0 },
         tf: { scored: 0, total: 0, percentage: 0 },
@@ -7572,7 +7600,7 @@ function closeMermaidModal() {
 // Just change PDF_FILE_ID for each lesson!
 // ============================================
 
-const PDF_URL = 'https://audio.evidya.de/S9SCP3P5-7.pdf';
+const PDF_URL = 'https://audio.evidya.de/S9PS2P3-4.pdf';
 
 let bookCur = 0;
 let bookPdfDoc = null;
@@ -8162,6 +8190,7 @@ function buildLessons(raw){
 
 var LESSONS = buildLessons(topicsData);
 var typing = false, typTimer = null;
+var sbCurrentLessonIndex = 0;   // NEW: tracks which lesson the bot is currently teaching
 var sbChat = document.getElementById('sbChat');
 var sbStatus = document.getElementById('sbStatus');
 var sbProg = document.getElementById('sbProg');
@@ -8302,6 +8331,7 @@ function sbLessonMenu(){
 }
 
 function sbTeachLesson(idx){
+  sbCurrentLessonIndex = idx;   // NEW: remember which lesson is active
   var lesson = LESSONS[idx];
   updateProg(idx, LESSONS.length);
   addBot('📖 '+lesson.heading+'\n\n ବହୁତ ଭଲ । ଏହା ଏକ ସୁନ୍ଦର ନୋଟ୍ । ଏହି ନୋଟ୍ ଟି ମୋର ବହୁତ ପସନ୍ଦ । ଆସନ୍ତୁ, ପ୍ରଥମେ ସାଙ୍ଗ ହୋଇ ଏହି ନୋଟ୍ କୁ ପଢିବା ।', function(){
@@ -8405,6 +8435,21 @@ window.openStudyBot = function(){
 window.closeSB = function(){
   document.getElementById('studyBotModal').style.display = 'none';
   document.body.style.overflow = '';
+};
+
+    window.getSbCurrentLesson = function(){
+  return (typeof LESSONS !== 'undefined' && LESSONS[sbCurrentLessonIndex])
+    ? LESSONS[sbCurrentLessonIndex].heading
+    : '';
+};
+
+    window.sbEncourage = function(studentName, callback){
+  var msgs = [
+    studentName + ' ଆଜ୍ଞା, ଚିନ୍ତା କରନ୍ତୁ ନାହିଁ 🌹 ମୋତେ ମାତ୍ର କିଛି ସେକେଣ୍ଡ ସମୟ ଦିଅନ୍ତୁ । ମୁଁ ଆପଣଙ୍କୁ ଶିକ୍ଷକଙ୍କ ପାଖକୁ ନେଇଯାଉଛି । ସେ ବ୍ୟସ୍ତ ଥାଇପାରନ୍ତି । ଯେତେବେଳେ ଉପଲବ୍ଧ ହେବେ, ନିଶ୍ଚିତ ଉତ୍ତର ଦେବେ । ସେହି ପର୍ଯ୍ୟନ୍ତ ପଢା ଜାରି ରଖନ୍ତୁ, ଆପଣ ବହୁତ ଭଲ ପଢୁଛନ୍ତି ! 💪',
+    studentName + ' ଆଜ୍ଞା, 🌹 ମୋତେ ମାତ୍ର କିଛି ସେକେଣ୍ଡ ସମୟ ଦିଅନ୍ତୁ । ମୁଁ ଆପଣଙ୍କୁ ଶିକ୍ଷକଙ୍କ ପାଖକୁ ନେଇଯାଉଛି । ସେ ବ୍ୟସ୍ତ ଥାଇପାରନ୍ତି । ଯେତେବେଳେ ଉପଲବ୍ଧ ହେବେ, ନିଶ୍ଚିତ ଉତ୍ତର ଦେବେ । 🌟'
+  ];
+  var msg = msgs[Math.floor(Math.random()*msgs.length)];
+  addBot(msg, callback);
 };
 
 window.sbReset = function(){
