@@ -8224,7 +8224,7 @@ function step(){
     if(i < clean.length){
       bub.textContent += clean[i];
       var ch = clean[i]; i++;
-      var spd = (ch==='।'||ch==='.')?200 : (ch===','||ch==='?')?130 : (ch==='\n')?250 : 45;
+      var spd = (ch==='।'||ch==='.')?160 : (ch===','||ch==='?')?100 : (ch==='\n')?200 : 35;
       typTimer = setTimeout(step, spd);
       scrollBot();
     } else {
