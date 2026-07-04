@@ -5826,6 +5826,7 @@ function closeAssistant(containerId) {
 // ============================================
 // WHATSAPP HELP FUNCTION
 // ============================================
+
 function openWhatsAppHelp() {
     const phone = '916372296357';
 
@@ -5838,7 +5839,7 @@ function openWhatsAppHelp() {
         if (heading) topicContext = heading.replace(/:-$/, '');
     }
 
-    const message =
+ const message =
         `🙏 ନମସ୍କାର ଆଜ୍ଞା,\n\n` +
         `ମୁଁ ଇ-ବିଦ୍ୟା ଏକାଡେମି ର ଜଣେ ବିଦ୍ୟାର୍ଥୀ । ମୋର ସାହାଯ୍ୟ ଦରକାର ।\n\n` +
         `👤 ନାମ: ${studentName}\n` +
@@ -5848,10 +5849,22 @@ function openWhatsAppHelp() {
         (topicContext ? `📖 ବର୍ତ୍ତମାନ ପଢୁଥିବା ନୋଟ୍: ${topicContext}\n` : '') +
         `\nଦୟାକରି ମୋତେ ସାହାଯ୍ୟ କରନ୍ତୁ ।`;
 
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    function proceedToWhatsApp() {
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    const botModal = document.getElementById('studyBotModal');
+    const botIsOpen = botModal && botModal.style.display !== 'none';
+
+    if (botIsOpen && typeof window.sbEncourage === 'function') {
+        window.sbEncourage(studentName, proceedToWhatsApp);
+    } else {
+        proceedToWhatsApp();
+    }
 }
 
 window.openWhatsAppHelp = openWhatsAppHelp;
+
 
 // Handle assistant selection from dropdown
 document.querySelectorAll('.dropdown-item').forEach(item => {
@@ -8414,6 +8427,15 @@ window.closeSB = function(){
   return (typeof LESSONS !== 'undefined' && LESSONS[sbCurrentLessonIndex])
     ? LESSONS[sbCurrentLessonIndex].heading
     : '';
+};
+
+    window.sbEncourage = function(studentName, callback){
+  var msgs = [
+    studentName + ' ଆଜ୍ଞା, ଚିନ୍ତା କରନ୍ତୁ ନାହିଁ 🌹 ମୁଁ ଆପଣଙ୍କ ପ୍ରଶ୍ନ ଶିକ୍ଷକଙ୍କ ପାଖକୁ ପଠାଇଦେଉଛି । ସେ ଯେତେବେଳେ ଉପଲବ୍ଧ ହେବେ, ନିଶ୍ଚିତ ଉତ୍ତର ଦେବେ । ସେହି ପର୍ଯ୍ୟନ୍ତ ପଢା ଜାରି ରଖନ୍ତୁ, ଆପଣ ବହୁତ ଭଲ କରୁଛନ୍ତି ! 💪',
+    studentName + ' ଆଜ୍ଞା, ଆପଣଙ୍କ ପ୍ରଶ୍ନ ଶିକ୍ଷକଙ୍କ ପାଖରେ ପହଞ୍ଚିଗଲା 📩 ଅଳ୍ପ ସମୟ ମଧ୍ୟରେ ଉତ୍ତର ମିଳିବ । ଏହି ପର୍ଯ୍ୟନ୍ତ ମୋ ସହିତ ପଢା ଜାରି ରଖନ୍ତୁ, ଆପଣ ଠିକ୍ ପଥରେ ଅଛନ୍ତି ! 🌟'
+  ];
+  var msg = msgs[Math.floor(Math.random()*msgs.length)];
+  addBot(msg, callback);
 };
 
 window.sbReset = function(){
