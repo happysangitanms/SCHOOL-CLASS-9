@@ -5827,10 +5827,6 @@ function closeAssistant(containerId) {
 // ============================================
 // WHATSAPP HELP FUNCTION
 // ============================================
-
-// ============================================
-// WHATSAPP HELP FUNCTION
-// ============================================
 function openWhatsAppHelp() {
     const phone = '916372296357';
     const studentName = sessionData.studentName || 'ଛାତ୍ର';
@@ -5850,31 +5846,29 @@ function openWhatsAppHelp() {
         (topicContext ? `📖 ବର୍ତ୍ତମାନ ପଢୁଥିବା ନୋଟ୍: ${topicContext}\n` : '') +
         `\nଦୟାକରି ମୋତେ ସାହାଯ୍ୟ କରନ୍ତୁ ।`;
 
-    // ✅ CONSENT CONFIRMATION BEFORE OPENING WHATSAPP
     const confirmMsg =
         "ଶିକ୍ଷକଙ୍କ ସହିତ ଯୋଗାଯୋଗ କରିବା ପାଇଁ ମୁଁ ଏବେ ଆପଣଙ୍କୁ ଆପଣଙ୍କ ହ୍ଵାଟ୍ସ-ଆପ୍ ସ୍କ୍ରୀନ୍ କୁ ନେଇଯିବି ।\n\nଆପଣ ଆଗକୁ ବଢିବାକୁ ଚାହୁଁଛନ୍ତି କି ?";
     const userConfirmed = window.confirm(confirmMsg);
     if (!userConfirmed) {
-        return; // student declined — nothing happens
+        return;
     }
 
-    // ✅ Open a blank window IMMEDIATELY (inside the click) so browser doesn't block it.
-    // We'll redirect it to WhatsApp after the delay.
-    const waWindow = window.open('', '_blank');
+    // ✅ Open the tab IMMEDIATELY (still counts as user-triggered — confirm() is synchronous)
+    const waWindow = window.open('about:blank', '_blank');
 
     function proceedToWhatsApp() {
         const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-        if (waWindow) {
+        if (waWindow && !waWindow.closed) {
             waWindow.location.href = url;
         } else {
-            // fallback if popup was still blocked
-            window.open(url, '_blank');
+            // Popup was blocked or closed — fall back to same-tab navigation
+            window.location.href = url;
         }
     }
 
     function proceedToWhatsAppWithDelay() {
         if (typeof window.sbShowMessage === 'function') {
-            window.sbShowMessage("⏳ ଦୟାକରି ଅପେକ୍ଷା କରନ୍ତୁ... WhatsApp ଖୋଲୁଛି...");
+            window.sbShowMessage("⏳ ଅପେକ୍ଷା କରନ୍ତୁ... WhatsApp ଖୋଲୁଛି...");
         }
         setTimeout(proceedToWhatsApp, 3000);
     }
@@ -5889,7 +5883,6 @@ function openWhatsAppHelp() {
     }
 }
 window.openWhatsAppHelp = openWhatsAppHelp;
-
 
 
 // Handle assistant selection from dropdown
