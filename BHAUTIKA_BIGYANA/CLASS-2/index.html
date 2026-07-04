@@ -2625,13 +2625,34 @@ body > div:first-child {
     </div>
   </div>
 
-  <!-- Progress strip -->
+<!-- Progress strip -->
   <div style="height:3px;background:rgba(255,255,255,.15);flex-shrink:0;">
     <div id="sbProg" style="height:100%;background:#fff;transition:width .4s;width:0%;"></div>
   </div>
 
   <!-- THE ENTIRE CHAT — scrolls freely, buttons live here too -->
 <div id="sbChat" style="flex:1;overflow-y:auto;padding:12px 10px 24px;display:flex;flex-direction:column;gap:10px;-webkit-overflow-scrolling:touch;font-weight:700;text-align:justify;"></div>
+
+  <!-- WHATSAPP HELP BAR — always visible at bottom of chat -->
+  <div id="sbWhatsappBar" onclick="openWhatsAppHelp()" style="
+      flex-shrink:0;
+      background:#25D366;
+      padding:10px 14px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      cursor:pointer;
+      box-shadow:0 -2px 8px rgba(0,0,0,0.15);
+  ">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="white" style="flex-shrink:0;">
+        <path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.005a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.4-5.63zM12.05 18.4h-.003a6.5 6.5 0 01-3.32-.91l-.24-.14-2.47.65.66-2.4-.16-.25a6.55 6.55 0 01-1-3.49 6.6 6.6 0 016.6-6.6 6.5 6.5 0 014.66 1.93 6.55 6.55 0 011.94 4.67 6.6 6.6 0 01-6.6 6.55zm3.6-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.32-.1-.45.1-.13.2-.5.64-.62.77-.11.13-.23.15-.43.05-.2-.1-.83-.31-1.58-.98-.58-.52-.98-1.16-1.1-1.36-.11-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.11.13-.2.2-.32.06-.13.03-.24-.02-.34-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6s.7 1.86.8 1.99c.1.13 1.37 2.1 3.33 2.94.47.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.16-.46.16-.86.11-.94-.05-.08-.18-.13-.38-.23z"/>
+      </svg>
+      <div style="flex:1; color:white;">
+          <div style="font-size:13px; font-weight:800;">ଅଟକିଗଲେ ? ଶିକ୍ଷକଙ୍କ ସହ WhatsApp ରେ କଥା ହୁଅନ୍ତୁ</div>
+          <div style="font-size:11px; opacity:0.9; font-weight:500;">Tap to chat with your teacher directly</div>
+      </div>
+      <div style="color:white; font-size:20px;">›</div>
+  </div>
 </div>
 
 <style>
@@ -2793,6 +2814,16 @@ body > div:first-child {
     </div>  
 <script>  
 
+// ============================================
+// PER-FILE CONFIG — EDIT THESE 3 LINES ONLY
+// FOR EACH SUBJECT/CLASS COPY OF THIS FILE
+// ============================================
+const APP_CONFIG = {
+    sreni: "ନବମ ଶ୍ରେଣୀ",
+    subject: "ସାମାଜିକ ବିଜ୍ଞାନ",
+    classCode: "SAMAJIK BIGYAAN: CLASS-1"
+};
+
     
 // Global variable to store animation frame ID
 window.alphabetAnimationFrame = null;
@@ -2899,11 +2930,12 @@ document.getElementById('loginBtn').addEventListener('click', async function() {
 
         // SUCCESS - show welcome message
         const studentName = data.name || rollNumber;
+        sessionData.studentName = studentName;
         const welcomeOverlay = document.createElement('div');
         welcomeOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;text-align:center;padding:20px;';
         welcomeOverlay.innerHTML = '<div style="color:white;font-size:28px;margin-bottom:15px;">🌹</div>'
             + '<div style="color:white;font-size:22px;font-weight:bold;">ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '!</div>'
-            + '<div style="color:rgba(255,255,255,0.85);font-size:16px;margin-top:12px;">ଆପଣ ନବମ ଶ୍ରେଣୀ କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିଛନ୍ତି ।</div>'
+        + '<div style="color:rgba(255,255,255,0.85);font-size:16px;margin-top:12px;">ଆପଣ ' + APP_CONFIG.sreni + ' କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିଛନ୍ତି ।</div>'
             + '<div style="color:rgba(255,255,255,0.7);font-size:13px;margin-top:8px;">(ଏବେ ଆପଣଙ୍କ ପାଠ ସାମଗ୍ରୀ ଲୋଡ୍ ହେଉଛି)</div>';
         document.body.appendChild(welcomeOverlay);
 
@@ -5791,6 +5823,35 @@ function closeAssistant(containerId) {
     container.classList.remove('active');
 }
 
+// ============================================
+// WHATSAPP HELP FUNCTION
+// ============================================
+function openWhatsAppHelp() {
+    const phone = '916372296357';
+
+    const studentName = sessionData.studentName || 'ଛାତ୍ର';
+    const rollNumber  = sessionData.rollNumber || 'N/A';
+
+    let topicContext = '';
+    if (typeof currentTopicIndex !== 'undefined' && typeof topicsData !== 'undefined' && topicsData[currentTopicIndex]) {
+        topicContext = topicsData[currentTopicIndex].heading.replace(/:-$/, '');
+    }
+
+    const message =
+        `🙏 ନମସ୍କାର ଆଜ୍ଞା,\n\n` +
+        `ମୁଁ ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ପାଠ ପଢୁଛି ଏବଂ ସାହାଯ୍ୟ ଦରକାର ।\n\n` +
+        `👤 ନାମ: ${studentName}\n` +
+        `🆔 ରୋଲ୍ ନମ୍ବର: ${rollNumber}\n` +
+        `🏫 ଶ୍ରେଣୀ: ${APP_CONFIG.sreni}\n` +
+        `📘 ବିଷୟ: ${APP_CONFIG.subject}\n` +
+        (topicContext ? `📖 ବର୍ତ୍ତମାନ ପଢୁଥିବା ନୋଟ୍: ${topicContext}\n` : '') +
+        `\nଦୟାକରି ମୋତେ ସାହାଯ୍ୟ କରନ୍ତୁ ।`;
+
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+}
+
+window.openWhatsAppHelp = openWhatsAppHelp;
+
 // Handle assistant selection from dropdown
 document.querySelectorAll('.dropdown-item').forEach(item => {
     item.addEventListener('click', (e) => {
@@ -6605,7 +6666,7 @@ let certificateData = {
     examDate: '',
     examDay: '',
     examTime: '',
-    className: 'SAMAJIK BIGYAAN: CLASS-1',
+    className: APP_CONFIG.classCode,
     scores: {
         mcq: { scored: 0, total: 0, percentage: 0 },
         tf: { scored: 0, total: 0, percentage: 0 },
