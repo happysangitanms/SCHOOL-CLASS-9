@@ -2838,8 +2838,30 @@ window.addEventListener('load', () => {
 
 function openCertificateFromExam() {
     calculateCertificateScores();
-    loadStudentDetails();
+    loadStudentDetails(); // fills form fields from localStorage if previously saved
+
+    // Auto-fill student name from login session if the field is still empty
+    const nameField = document.getElementById('studentName');
+    const fatherField = document.getElementById('fatherName');
+    const addressField = document.getElementById('studentAddress');
+
+    if (!nameField.value) {
+        nameField.value = sessionData.studentName || sessionData.rollNumber || 'ଛାତ୍ର/ଛାତ୍ରୀ';
+    }
+    if (!fatherField.value) {
+        fatherField.value = 'N/A';
+    }
+    if (!addressField.value) {
+        addressField.value = 'N/A';
+    }
+
+    // Hide the form so the student never sees input fields
+    document.querySelector('.certificate-form').style.display = 'none';
+
     document.getElementById('certificateModal').classList.add('active');
+
+    // Directly generate the certificate — no button click needed
+    generateCertificate();
 }
 
 
@@ -6817,15 +6839,9 @@ function saveStudentDetails(name, fatherName, address) {
 }
 
 function generateCertificate() {
-    const studentName = document.getElementById('studentName').value.trim();
-    const fatherName = document.getElementById('fatherName').value.trim();
-    const studentAddress = document.getElementById('studentAddress').value.trim();
-    
-    if (!studentName || !fatherName || !studentAddress) {
-        alert('ଦୟାକରି ସମସ୍ତ ତଥ୍ୟ ପୂରଣ କରନ୍ତୁ');
-        return;
-    }
-    
+    const studentName = document.getElementById('studentName').value.trim() || sessionData.studentName || 'ଛାତ୍ର/ଛାତ୍ରୀ';
+    const fatherName = document.getElementById('fatherName').value.trim() || 'N/A';
+    const studentAddress = document.getElementById('studentAddress').value.trim() || 'N/A';
     // Save details
     saveStudentDetails(studentName, fatherName, studentAddress);
     
