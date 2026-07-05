@@ -913,7 +913,7 @@ const classSchedule = {
         e.preventDefault();
         deferredPrompt = e;
         document.getElementById('pwaBtn').style.display = 'block';
-        setTimeout(() => document.getElementById('pwaModal').classList.add('active'), 2500);
+        document.getElementById('pwaModal').classList.add('active');
     });
 
     function doInstall() {
@@ -963,9 +963,9 @@ const classSchedule = {
 
         document.getElementById('iosInstallBtn').style.display = 'block';
 
-        if (!alreadyDismissed) {
-            setTimeout(showIosModal, 2500);
-        }
+      if (!alreadyDismissed) {
+    showIosModal();
+}
     }
 
     /* ════════════════════════════════════════════
