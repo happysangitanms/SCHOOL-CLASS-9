@@ -2832,7 +2832,6 @@ function openCertificateFromExam() {
     generateCertificate();
 }
 
-
 // =============================================
 // FIREBASE CONFIGURATION - e-Vidya Academy
 // =============================================
@@ -6905,12 +6904,12 @@ function generateCertificate() {
     </div>
 </div>
         
-        <div class="download-buttons">
+     <div class="download-buttons">
             <button class="download-btn download-pdf" onclick="downloadCertificateAsPDF()">
                 📄 PDF ଡାଉନଲୋଡ୍
             </button>
-            <button class="download-btn download-image" onclick="downloadCertificateAsImage()">
-                🖼️ ଚିତ୍ର ଡାଉନଲୋଡ୍
+            <button class="download-btn share-whatsapp" onclick="shareCertificateOnWhatsApp()" style="background:#25D366;color:white;">
+                📤 WhatsApp ରେ ସେୟାର୍
             </button>
         </div>
     `;
@@ -7057,133 +7056,33 @@ function generatePDFFromHTML(element, buttons, loadingMsg) {
         setTimeout(captureAndConvert, 300);
     }
 }
-    
-function downloadCertificateAsImage() {
-    const certificate = document.getElementById('certificatePreview');
-    const buttons = document.querySelector('.download-buttons');
-    
-    // Hide download buttons
-    if (buttons) buttons.style.display = 'none';
-    
-    // Show loading message
-    const loadingMsg = document.createElement('div');
-    loadingMsg.id = 'loadingMsg';
-    loadingMsg.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 999999; font-weight: bold;';
-    loadingMsg.textContent = '📥 ଡାଉନଲୋଡ୍ ହେଉଛି...';
-    document.body.appendChild(loadingMsg);
-    
-    // Check if html2canvas is available
-    if (typeof html2canvas === 'undefined') {
-        loadingMsg.textContent = '⏳ ଦୟାକରି ଅପେକ୍ଷା କରନ୍ତୁ...';
-        
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
-        script.onload = () => {
-            preloadAndCapture(certificate, buttons, loadingMsg);
-        };
-        script.onerror = () => {
-            loadingMsg.remove();
-            alert('ଲୋଡିଂ ବିଫଳ ହେଲା। ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।');
-            if (buttons) buttons.style.display = 'grid';
-        };
-        document.head.appendChild(script);
-    } else {
-        preloadAndCapture(certificate, buttons, loadingMsg);
-    }
-}
 
-function preloadAndCapture(element, buttons, loadingMsg) {
-    // Find logo image
-    const logoImg = element.querySelector('.cert-logo img');
-    
-    if (logoImg && !logoImg.complete) {
-        // Logo not loaded yet, wait for it
-        logoImg.onload = () => {
-            setTimeout(() => {
-                captureAndDownload(element, buttons, loadingMsg);
-            }, 500);
-        };
-        
-        logoImg.onerror = () => {
-            console.warn('Logo failed to load, proceeding anyway');
-            captureAndDownload(element, buttons, loadingMsg);
-        };
-        
-        // Force reload if needed
-        const currentSrc = logoImg.src;
-        logoImg.src = '';
-        logoImg.src = currentSrc;
-    } else {
-        // Logo already loaded or doesn't exist
-        setTimeout(() => {
-            captureAndDownload(element, buttons, loadingMsg);
-        }, 300);
-    }
-}
 
-function captureAndDownload(element, buttons, loadingMsg) {
-    html2canvas(element, {
-        scale: 3,
-        backgroundColor: '#ffffff',
-        logging: false,
-        useCORS: true,
-        allowTaint: true,
-        foreignObjectRendering: false,
-        imageTimeout: 0,
-        removeContainer: true,
-        width: element.scrollWidth,
-        height: element.scrollHeight,
-        onclone: function(clonedDoc) {
-            // Ensure logo is visible in cloned document
-            const clonedLogo = clonedDoc.querySelector('.cert-logo img');
-            if (clonedLogo) {
-                clonedLogo.style.display = 'block';
-                clonedLogo.style.maxWidth = '200px';
-                clonedLogo.style.height = 'auto';
-            }
-        }
-    }).then(canvas => {
-        try {
-            const link = document.createElement('a');
-            const fileName = `Certificate_${certificateData.studentName.replace(/\s+/g, '_')}_${Date.now()}.png`;
-            link.download = fileName;
-            link.href = canvas.toDataURL('image/png', 1.0);
-            link.click();
-            
-            // Remove loading message
-            if (loadingMsg && loadingMsg.parentNode) {
-                loadingMsg.remove();
-            }
-            
-            // Show success message
-            const successMsg = document.createElement('div');
-            successMsg.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #4CAF50; color: white; padding: 15px 25px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 999999; font-weight: bold;';
-            successMsg.textContent = '✅ ଡାଉନଲୋଡ୍ ସଫଳ!';
-            document.body.appendChild(successMsg);
-            
-            setTimeout(() => {
-                successMsg.remove();
-            }, 2000);
-            
-        } catch (err) {
-            console.error('Download error:', err);
-            alert('ଡାଉନଲୋଡ୍ ରେ ସମସ୍ୟା');
-        } finally {
-            // Show buttons again
-            if (buttons) buttons.style.display = 'grid';
-        }
-    }).catch(err => {
-        console.error('Capture error:', err);
-        
-        if (loadingMsg && loadingMsg.parentNode) {
-            loadingMsg.remove();
-        }
-        
-        alert('ଚିତ୍ର ସୃଷ୍ଟିରେ ସମସ୍ୟା। ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।');
-        
-        if (buttons) buttons.style.display = 'grid';
-    });
+    // ============================================
+// SHARE CERTIFICATE ON WHATSAPP (TEXT ONLY)
+// ============================================
+function shareCertificateOnWhatsApp() {
+    const phone = '916372296357';
+
+    const message =
+        `🏆 *ସାର୍ଟିଫିକେଟ୍ ଓ ମାର୍କଶୀଟ୍*\n\n` +
+        `👤 ନାମ: ${certificateData.studentName}\n` +
+        `🆔 ରୋଲ୍ ନମ୍ବର: ${certificateData.rollNumber}\n` +
+        `📘 ଶ୍ରେଣୀ/ପାଠ: ${certificateData.className}\n` +
+        `📅 ପରୀକ୍ଷା ତାରିଖ: ${certificateData.examDay}, ${certificateData.examDate}\n` +
+        `⏰ ପରୀକ୍ଷା ସମୟ: ${certificateData.examTime}\n\n` +
+        `📊 *ମାର୍କଶୀଟ୍:*\n` +
+        `▪️ ବିକଳ୍ପଯୁକ୍ତ ପ୍ରଶ୍ନ: ${certificateData.scores.mcq.scored}/${certificateData.scores.mcq.total} (${certificateData.scores.mcq.percentage}%)\n` +
+        `▪️ ସତ୍ୟ/ମିଥ୍ୟା: ${certificateData.scores.tf.scored}/${certificateData.scores.tf.total} (${certificateData.scores.tf.percentage}%)\n` +
+        `▪️ ଶୂନ୍ୟସ୍ଥାନ ପୂରଣ: ${certificateData.scores.fib.scored}/${certificateData.scores.fib.total} (${certificateData.scores.fib.percentage}%)\n` +
+        `▪️ ମେଳ କରିବା: ${certificateData.scores.matching.scored}/${certificateData.scores.matching.total} (${certificateData.scores.matching.percentage}%)\n` +
+        `▪️ ସଜାଇବା: ${certificateData.scores.arrange.scored}/${certificateData.scores.arrange.total} (${certificateData.scores.arrange.percentage}%)\n\n` +
+        `✅ *ସମୁଦାୟ: ${certificateData.totalScored}/${certificateData.totalMarks} (${certificateData.overallPercentage}%)*\n\n` +
+        `🌹 ଇ-ବିଦ୍ୟା ଏକାଡେମି`;
+
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
 }
+    
 
 // Print styles for PDF
 const printStyles = document.createElement('style');
