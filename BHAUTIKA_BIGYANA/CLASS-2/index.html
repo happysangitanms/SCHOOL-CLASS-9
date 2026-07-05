@@ -2774,30 +2774,13 @@ body > div:first-child {
         </div>
         
         <div class="certificate-body">
-            <!-- Privacy Notice -->
-            <div class="privacy-notice">
-                <strong>🔒 ଗୋପନୀୟତା ସୂଚନା (Privacy Notice):</strong><br>
-                ଆପଣଙ୍କ ବ୍ୟକ୍ତିଗତ ସୂଚନା କେବଳ ଆପଣଙ୍କ ବ୍ରାଉଜରରେ ସଂରକ୍ଷିତ ରହିବ ଏବଂ କେବଳ ସାର୍ଟିଫିକେଟ୍ ପ୍ରସ୍ତୁତି ପାଇଁ ବ୍ୟବହୃତ ହେବ । ଇ-ବିଦ୍ୟା ଏକାଡେମି ଏହି ତଥ୍ୟ ସଂଗ୍ରହ କରେ ନାହିଁ ଏବଂ ତଥ୍ୟ ସମ୍ବନ୍ଧୀୟ କୌଣସି ସମସ୍ୟା ପାଇଁ ଦାୟୀ ନୁହେଁ ।<br><br>
-                <strong>Your personal information will be stored only in your browser's local storage and used solely for certificate generation. Odisha e-Guru does not collect this data and is not responsible for any data-related issues.</strong>
-            </div>
             
-            <!-- Student Details Form -->
-            <div class="certificate-form">
-                <div class="form-group">
-                    <label>ଛାତ୍ର/ଛାତ୍ରୀଙ୍କ ନାମ (Student's Name) *</label>
-                    <input type="text" id="studentName" placeholder="Enter your name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>ପିତାଙ୍କ ନାମ (Father's Name) *</label>
-                    <input type="text" id="fatherName" placeholder="Enter father's name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>ଠିକଣା (Address) *</label>
-                    <input type="text" id="studentAddress" placeholder="Enter your address" required>
-                </div>
-                
+            
+        <!-- Student Details Form (hidden - fields removed, only name kept internally) -->
+            <div class="certificate-form" style="display:none;">
+                <input type="hidden" id="studentName">
+                <input type="hidden" id="fatherName">
+                <input type="hidden" id="studentAddress">
                 <button class="generate-btn" onclick="generateCertificate()">
                     ସାର୍ଟିଫିକେଟ୍ ତିଆରି କରନ୍ତୁ (Generate Certificate)
                 </button>
