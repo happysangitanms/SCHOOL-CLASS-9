@@ -2092,6 +2092,75 @@ body > div:first-child {
     touch-action: pan-y;
     will-change: transform;
 }
+
+
+
+
+      /* Hides: ଚିତ୍ର-ନୋଟ୍ ଦେଖିବା (Picture Notes) button */
+div:has(> button[onclick="openBookSlideshow()"]) { display: none !important; }
+
+/* Hides: ପାଠ୍ୟ-ନୋଟ୍ ପଢିବା (Text Notes) button */
+div:has(> button[onclick="openSlides()"]) { display: none !important; }
+
+/* Hides: କଳାପଟାରେ ପଢିବା (Blackboard Lesson) button */
+div:has(> #showLessonBtn) { display: none !important; }
+
+/* Hides: ପରୀକ୍ଷା ଦେବା (Exam) button */
+div:has(> #examSectionBtn) { display: none !important; }
+
+
+    /* Hides: ବିକଳ୍ପ ଉତ୍ତରଯୁକ୍ତ ପ୍ରଶ୍ନ (MCQ) button */
+#mcqBtn { display: none !important; }
+
+        /* Hides: ସତ୍ୟ/ମିଥ୍ୟା (True/False) button */
+#tfBtn { display: none !important; }
+
+        /* Hides: ଶୂନ୍ୟାସ୍ଥାନ ପୂରଣ (Fill in Blanks) button */
+#fibBtn { display: none !important; }
+
+        /* Hides: ଶବ୍ଦ ମେଳ କରାଇବା (Matching) button */
+#matchBtn { display: none !important; }
+
+        /* Hides: ଶବ୍ଦକୁ ସଜାଇବା (Arrange Words) button */
+#arrangeBtn { display: none !important; }
+
+        /* Hides: ଅତି ସଂକ୍ଷିପ୍ତ ପ୍ରଶ୍ନୋତ୍ତର (STQ) button */
+#stqBtn { display: none !important; }
+
+        /* Hides: ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ (Long Answer/Summary) button */
+#summaryBtn { display: none !important; }
+
+        /* Hides: ସଂକ୍ଷିପ୍ତ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ (Short Answer) button */
+#questionBtn { display: none !important; }
+
+        /* Hides: 🏆 ସାର୍ଟିଫିକେଟ୍ (Certificate) button */
+#practiceBtn { display: none !important; }
+
+        /* Hides: ଆସନ୍ତୁ, ବହି ପାଠ ବୁଝିବା (Audio) button */
+#audioToggleBtn { display: none !important; }
+
+        /* Hides: ଭିଡିଓ ଦେଖିବା (Video) button */
+#videoToggleBtn { display: none !important; }
+
+        /* Hides: 🎧 ଆସନ୍ତୁ, ପ୍ରଶ୍ନୋତ୍ତର ଶୁଣି ମନେରଖିବା (Audio 3) button */
+#audioToggleBtn3 { display: none !important; }
+
+        /* Hides: ନୂତନ-ଶବ୍ଦ ଜାଣିବା (New Word) button */
+#wordBtn { display: none !important; }
+
+        /* Hides: ମନରେ ଚିତ୍ର ଆଙ୍କିବା (Mind Diagram) button */
+#mermaidBtn { display: none !important; }
+
+        /* Hides: 🖼️ ସାରଚିତ୍ର ଦେଖିବା (Image) button */
+button[onclick="openImageModal()"] { display: none !important; }
+
+        /* Hides: 🎓 ଚାଟିଙ୍ଗ୍ କରି ପଢିବା (Study Bot Chat) button */
+button[onclick="openStudyBot()"] { display: none !important; }
+
+        /* Hides: the entire ପଢିବା ସମୟରେ... (Translator/e-Vidya) dropdown */
+.assistant-dropdown-wrapper { display: none !important; }
+             
+        
     </style>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
