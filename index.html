@@ -574,8 +574,13 @@
     ════════════════════════════════════════════ */
 const subjects = {
     'SAHITYA_DHARA':        { name: 'ସାହିତ୍ୟ ଧାରା',              fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'ODIA_BYAKARANA':        { name: 'ସାହିତ୍ୟ ବ୍ଯାକରଣ',              fullName: 'ନବମ ଶ୍ରେଣୀ' },
     'ENGLISH':              { name: 'ଇଂରାଜୀ',                     fullName: 'ନବମ ଶ୍ରେଣୀ' },
     'ENGLISH_BYAKARANA':    { name: 'ଇଂରାଜୀ ବ୍ୟାକରଣ',            fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SANSKRUTA':              { name: 'ସଂସ୍କୃତ',                     fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SANSKRUTA_BYAKARAN':    { name: 'ସଂସ୍କୃତ ବ୍ୟାକରଣ',            fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'HINDI_MANJARI':         { name: 'ହିନ୍ଦୀ',                     fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'HINDI_BYAKARANA':    { name: 'ହିନ୍ଦୀ ବ୍ୟାକରଣ',            fullName: 'ନବମ ଶ୍ରେଣୀ' },
     'BIJAGANITA':           { name: 'ବୀଜଗଣିତ',                    fullName: 'ନବମ ଶ୍ରେଣୀ' },
     'JYAMITI':              { name: 'ଜ୍ୟାମିତି',                   fullName: 'ନବମ ଶ୍ରେଣୀ' },
     'JIBA_BIGYANA':         { name: 'ଜୀବ ବିଜ୍ଞାନ',                fullName: 'ନବମ ଶ୍ରେଣୀ' },
@@ -588,6 +593,10 @@ const classNames = {
     'SAHITYA_DHARA-1':       'ଅଧ୍ୟାୟ-1:<br>କାହା ମୁଖ ଅନାଇ ବଞ୍ଚିବି<br>(ବହି ପୃଷ୍ଠା ୧-୩)',
     'SAHITYA_DHARA-2':       'ଅଧ୍ୟାୟ-1:<br>କାହା ମୁଖ ଅନାଇ ବଞ୍ଚିବି<br>(ବହି ପୃଷ୍ଠା ୪-୭)',
     'SAHITYA_DHARA-3':       'ଅଧ୍ୟାୟ-2:<br>ପଦ୍ମ<br>(ବହି ପୃଷ୍ଠା ୮-୧୦)',
+
+    'ODIA_BYAKARANA-1':       'ଅଧ୍ୟାୟ-1:<br>ଶବ୍ଦ ଗଠନ<br>(ବହି ପୃଷ୍ଠା ୧)',
+    'ODIA_BYAKARANA-2':       'ଅଧ୍ୟାୟ-1:<br>ଶବ୍ଦ ଗଠନ<br>(ବହି ପୃଷ୍ଠା ୨)',
+    'ODIA_BYAKARANA-3':       'ଅଧ୍ୟାୟ-1:<br>ଶବ୍ଦ ଗଠନ<br>(ବହି ପୃଷ୍ଠା ୩-୪)',
     
     'ENGLISH-1':             'Chapter-1:<br>The Priceless Gift<br>(ବହି ପୃଷ୍ଠା 1-2)',
     'ENGLISH-2':             'Chapter-1:<br>The Priceless Gift<br>(ବହି ପୃଷ୍ଠା 3-4)',
@@ -596,6 +605,19 @@ const classNames = {
     'ENGLISH_BYAKARANA-1':   'Chapter-1:<br>Parts of a sentence<br>(ବହି ପୃଷ୍ଠା 1-2)',
     'ENGLISH_BYAKARANA-2':   'Chapter-1:<br>Parts of a sentence<br>(ବହି ପୃଷ୍ଠା 3-5)',
     'ENGLISH_BYAKARANA-3':   'Chapter-1:<br>Parts of a sentence<br>(ବହି ପୃଷ୍ଠା 6-7)',
+
+    'SANSKRUTA-1':           'ଅଧ୍ୟାୟ-1:<br>ସିଂହଶଶକ କଥା<br>(ବହି ପୃଷ୍ଠା ୨-୩)',
+
+
+    'SANSKRUTA_BYAKARAN-1':       'ଅଧ୍ୟାୟ-1:<br>ବର୍ଣ୍ଣ<br>(ବହି ପୃଷ୍ଠା ୧-୨)',
+    'SANSKRUTA_BYAKARAN-2':       'ଅଧ୍ୟାୟ-1:<br>ବର୍ଣ୍ଣ<br>(ବହି ପୃଷ୍ଠା ୨)',
+    'SANSKRUTA_BYAKARAN-3':       'ଅଧ୍ୟାୟ-1:<br>ବର୍ଣ୍ଣ<br>(ବହି ପୃଷ୍ଠା ୩-୫)',
+
+    'HINDI_MANJARI-1':           'ଅଧ୍ୟାୟ-1:<br>କବୀର ଦାସ<br>(ବହି ପୃଷ୍ଠା ୧-୨)',
+    
+    'HINDI_BYAKARANA-1':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୧-୨)',
+    'HINDI_BYAKARANA-2':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୨-୩)',
+    'HINDI_BYAKARANA-3':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୪-୫)',
     
     'BIJAGANITA-1':          'ଅଧ୍ୟାୟ-1:<br>ସେଟ୍ ପ୍ରକ୍ରିୟା<br>(ବହି ପୃଷ୍ଠା 1-3)',
     'BIJAGANITA-2':          'ଅଧ୍ୟାୟ-1:<br>ସେଟ୍ ପ୍ରକ୍ରିୟା<br>(ବହି ପୃଷ୍ଠା 3-8)',
