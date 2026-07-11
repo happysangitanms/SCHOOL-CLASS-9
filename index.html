@@ -534,6 +534,95 @@
     to   { transform: scale(1);    opacity: 1; }
 }
 
+        .video-thumb-wrap {
+    position: relative;
+    width: 260px;
+    max-width: 85%;
+    margin: 16px auto 0;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+.video-thumb-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.video-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.video-play-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.video-play-icon::after {
+    content: '';
+    border-style: solid;
+    border-width: 8px 0 8px 14px;
+    border-color: transparent transparent transparent #667eea;
+    margin-left: 3px;
+}
+
+.video-thumb-text {
+    color: white;
+    font-size: 0.78em;
+    font-weight: 800;
+    line-height: 1.4;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
+.video-embed-wrap {
+    position: relative;
+    width: 260px;
+    max-width: 85%;
+    margin: 16px auto 0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.video-embed-wrap iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.proceed-button {
+    display: block;
+    margin: 18px auto 0;
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
 .splash-loader {
     width: 36px;
     height: 36px;
@@ -564,7 +653,17 @@
         <p style="margin-top: 14px; font-size: 15px; color: white; font-weight: 800;">
             🌹 ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ ।🌹
         </p>
-  
+
+        <div class="video-thumb-wrap" id="videoThumbWrap" onclick="playWelcomeVideo()">
+            <img src="https://img.youtube.com/vi/5yQq6zYc5ok/hqdefault.jpg" alt="Tutorial video">
+            <div class="video-thumb-overlay">
+                <div class="video-play-icon"></div>
+                <div class="video-thumb-text">ଏହା କିପରି ବ୍ୟବହାର କରିବେ ଜାଣିବାକୁ<br>ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ</div>
+            </div>
+        </div>
+        <div class="video-embed-wrap" id="videoEmbedWrap" style="display:none;"></div>
+
+        <button class="proceed-button" onclick="closeSplash()">ଆଗକୁ ଯାଅନ୍ତୁ</button>
     </div>
 </div>
 <!-- ── PWA Install Modal (Android/Chrome) ── -->
@@ -1129,15 +1228,20 @@ function createMaintenanceCard() {
     ════════════════════════════════════════════ */
     showSubjects();
 
-    window.addEventListener('load', () => {
-    setTimeout(() => {
-        const splash = document.getElementById('splashScreen');
-        if (splash) {
-            splash.classList.add('hide');
-            setTimeout(() => splash.remove(), 600);
-        }
-    }, 5000);
-});
+  function playWelcomeVideo() {
+    document.getElementById('videoThumbWrap').style.display = 'none';
+    const embedWrap = document.getElementById('videoEmbedWrap');
+    embedWrap.style.display = 'block';
+    embedWrap.innerHTML = '<iframe src="https://www.youtube.com/embed/5yQq6zYc5ok?autoplay=1" title="Tutorial" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+}
+
+function closeSplash() {
+    const splash = document.getElementById('splashScreen');
+    if (splash) {
+        splash.classList.add('hide');
+        setTimeout(() => splash.remove(), 600);
+    }
+}
 </script>
 
 </body>
