@@ -534,35 +534,13 @@
     to   { transform: scale(1);    opacity: 1; }
 }
 
-.splash-image {
-    width: 180px;
-    max-width: 70vw;
-    height: auto;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.3));
-}
-
-.splash-title {
-    color: white;
-    font-size: 1.6em;
-    font-weight: 900;
-    margin-bottom: 8px;
-}
-
-.splash-text {
-    color: rgba(255,255,255,0.9);
-    font-size: 1em;
-    font-weight: 600;
-    margin-bottom: 22px;
-}
-
 .splash-loader {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border: 4px solid rgba(255,255,255,0.3);
     border-top-color: white;
     border-radius: 50%;
-    margin: 0 auto;
+    margin: 16px auto 0;
     animation: spin 0.8s linear infinite;
 }
 
@@ -570,99 +548,25 @@
     to { transform: rotate(360deg); }
 }
         
-.splash-video-wrap {
-    position: relative;
-    width: 100%;
-    max-width: 280px;
-    aspect-ratio: 16 / 9;
-    margin: 18px auto 0;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-    background: #000;
-    cursor: pointer;
-}
-
-.yt-thumb {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.yt-player {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-}
-
-.yt-play-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    transition: opacity 0.3s ease;
-}
-
-.yt-play-overlay.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.yt-play-icon {
-    width: 46px;
-    height: 46px;
-    background: rgba(255,255,255,0.95);
-    color: #764ba2;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    margin-bottom: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.yt-play-text {
-    color: white;
-    font-size: 0.78em;
-    font-weight: 700;
-    line-height: 1.4;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-}
-        
     </style>
 </head>
 <body>
-
-
 <!-- ── Welcome Splash Screen ── -->
 <div class="splash-screen" id="splashScreen">
     <div class="splash-content">
-        <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/welcome%20image.gif"
-             alt="Welcome"
-             class="splash-image"
-             onerror="this.style.display='none'">
-        <div class="splash-title">🌹 ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ ।🌹</div>
-        
-
-        <div class="splash-video-wrap" id="videoWrap" onclick="playTutorial()">
-            <img id="ytThumb" class="yt-thumb" src="" alt="Tutorial">
-            <div class="yt-play-overlay">
-                <div class="yt-play-icon">▶</div>
-                <div class="yt-play-text">🎬 ଏହି ଆପ୍ କୁ କିପରି ବ୍ୟବହାର କରିବେ <br>ତାହା ଜାଣିବା ପାଇଁ ଏହି ଛୋଟ ଭିଡିଓଟି ଦେଖନ୍ତୁ । </div>
-            </div>
-            <div id="ytPlayer" class="yt-player"></div>
+        <div style="display: inline-block; padding: 4px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <img id="welcomeRoundImg"
+                 src="https://raw.githubusercontent.com/happysangitanms/assets/main/welcome%20image.gif"
+                 alt="Welcome"
+                 style="display: block; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; object-position: center top;"
+                 onerror="this.parentElement.style.display='none'">
         </div>
+        <p style="margin-top: 14px; font-size: 15px; color: white; font-weight: 800;">
+            🌹 ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ ।🌹
+        </p>
+  
     </div>
 </div>
-
-
 <!-- ── PWA Install Modal (Android/Chrome) ── -->
 <div class="pwa-overlay" id="pwaModal">
     <div class="pwa-box">
@@ -923,80 +827,6 @@ function createMaintenanceCard() {
     `;
     return div;
 }
-
-
-
-/* ════════════════════════════════════════════
-   TUTORIAL VIDEO ON SPLASH SCREEN
-════════════════════════════════════════════ */
-const YT_VIDEO_ID = '5yQq6zYc5ok'; // 👈 replace with your actual YouTube video ID
-
-let ytPlayer;
-let ytApiReady = false;
-let autoAdvanceTimer;
-let videoStarted = false;
-
-// Set thumbnail image immediately (no API needed for this part)
-document.getElementById('ytThumb').src = `https://img.youtube.com/vi/${YT_VIDEO_ID}/hqdefault.jpg`;
-
-// Load YouTube IFrame API
-const ytScript = document.createElement('script');
-ytScript.src = 'https://www.youtube.com/iframe_api';
-document.head.appendChild(ytScript);
-
-function onYouTubeIframeAPIReady() {
-    ytApiReady = true;
-    ytPlayer = new YT.Player('ytPlayer', {
-        videoId: YT_VIDEO_ID,
-        playerVars: { playsinline: 1, rel: 0, modestbranding: 1 },
-        events: {
-            onStateChange: (e) => {
-                if (e.data === YT.PlayerState.ENDED) {
-                    closeSplash(); // move forward right after video ends
-                }
-            }
-        }
-    });
-}
-
-function playTutorial() {
-    if (videoStarted) return;
-    videoStarted = true;
-
-    clearTimeout(autoAdvanceTimer); // cancel the 5-second auto-advance
-
-    document.querySelector('.yt-play-overlay').classList.add('hidden');
-    document.getElementById('ytThumb').style.display = 'none';
-
-    if (ytApiReady && ytPlayer && ytPlayer.playVideo) {
-        ytPlayer.playVideo();
-    } else {
-        // API not ready yet — try again shortly
-        const waitForApi = setInterval(() => {
-            if (ytApiReady && ytPlayer && ytPlayer.playVideo) {
-                ytPlayer.playVideo();
-                clearInterval(waitForApi);
-            }
-        }, 200);
-    }
-}
-
-function closeSplash() {
-    const splash = document.getElementById('splashScreen');
-    if (splash) {
-        splash.classList.add('hide');
-        setTimeout(() => splash.remove(), 600);
-    }
-}
-
-/* Start the 5-second auto-advance countdown on load.
-   If user clicks the video before it fires, playTutorial() cancels it. */
-window.addEventListener('load', () => {
-    autoAdvanceTimer = setTimeout(() => {
-        if (!videoStarted) closeSplash();
-    }, 5000);
-});
-
 
     
     /* ════════════════════════════════════════════
