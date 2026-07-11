@@ -498,6 +498,13 @@
 .maintenance-box .m-icon { font-size: 2.4em; margin-bottom: 10px; }
 .maintenance-box .m-title { font-size: 1.2em; font-weight: 800; margin-bottom: 8px; }
 .maintenance-box .m-text { font-size: 0.9em; font-weight: 500; line-height: 1.5; }
+
+        .maintenance-box .m-image {
+    width: 140px;
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 14px;
+}
         
     </style>
 </head>
@@ -757,7 +764,7 @@ function createMaintenanceCard() {
     const div = document.createElement('div');
     div.className = 'maintenance-box';
     div.innerHTML = `
-        <div class="m-icon">🛠️</div>
+        ${MAINTENANCE.image ? `<img src="${MAINTENANCE.image}" alt="Maintenance" class="m-image" onerror="this.style.display='none'">` : `<div class="m-icon">🛠️</div>`}
         <div class="m-title">${MAINTENANCE.message.title}</div>
         <div class="m-text">${MAINTENANCE.message.text}</div>
     `;
