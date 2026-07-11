@@ -485,6 +485,20 @@
             .class-card:hover   { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(102,126,234,0.4); }
         }
 
+
+.maintenance-box {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 16px;
+    border: 2px dashed #d97706;
+    color: #78350f;
+    grid-column: 1 / -1;
+}
+.maintenance-box .m-icon { font-size: 2.4em; margin-bottom: 10px; }
+.maintenance-box .m-title { font-size: 1.2em; font-weight: 800; margin-bottom: 8px; }
+.maintenance-box .m-text { font-size: 0.9em; font-weight: 500; line-height: 1.5; }
+        
     </style>
 </head>
 <body>
@@ -588,6 +602,21 @@ const subjects = {
     'ITIHASA':              { name: 'ଇତିହାସ',                     fullName: 'ନବମ ଶ୍ରେଣୀ' },
     'BHUGOLA':              { name: 'ଭୂଗୋଳ',                      fullName: 'ନବମ ଶ୍ରେଣୀ' }
 };
+
+
+
+const MAINTENANCE = {
+    global: false,
+    subjects: {
+        // 'BIJAGANITA': true,
+    },
+    image: 'https://raw.githubusercontent.com/eguruOdisha/ASSETS/main/bot%20image-2.gif', // 👈 your image
+    message: {
+        title: '🛠️ Under Maintenance (ମୁଁ ଅପ୍-ଡେଟ୍ ହେଉଛି ଆଜ୍ଞା) ',
+        text: 'କ୍ଲାସ୍ ଗୁଡିକର ଅପ୍-ଡେଟ୍ ପ୍ରକ୍ରିୟା ଜାରିରହିଛି । ଦୟାକରି କିଛି ସମୟ ପରେ ଆସନ୍ତୁ ।'
+    }
+};
+    
 
 const classNames = {
     'SAHITYA_DHARA-1':       'ଅଧ୍ୟାୟ-1:<br>କାହା ମୁଖ ଅନାଇ ବଞ୍ଚିବି<br>(ବହି ପୃଷ୍ଠା ୧-୩)',
@@ -723,6 +752,19 @@ const classSchedule = {
         return true;
     }
 
+
+function createMaintenanceCard() {
+    const div = document.createElement('div');
+    div.className = 'maintenance-box';
+    div.innerHTML = `
+        <div class="m-icon">🛠️</div>
+        <div class="m-title">${MAINTENANCE.message.title}</div>
+        <div class="m-text">${MAINTENANCE.message.text}</div>
+    `;
+    return div;
+}
+
+    
     /* ════════════════════════════════════════════
        CARD BUILDERS
     ════════════════════════════════════════════ */
@@ -801,51 +843,67 @@ const classSchedule = {
     /* ════════════════════════════════════════════
        VIEW: SUBJECTS
     ════════════════════════════════════════════ */
-    function showSubjects() {
-        viewMode = 'subjects';
-        selectedSubject = null;
-        selectedClass = null;
+ function showSubjects() {
+    viewMode = 'subjects';
+    selectedSubject = null;
+    selectedClass = null;
 
-        document.getElementById('subtitle').textContent = 'Select a subject to begin';
-        document.getElementById('backButton').style.display = 'none';
-        document.getElementById('cloneContainer').classList.remove('active');
-        document.getElementById('searchInput').value = '';
-        document.getElementById('noResults').style.display = 'none';
+    document.getElementById('backButton').style.display = 'none';
+    document.getElementById('cloneContainer').classList.remove('active');
+    document.getElementById('searchInput').value = '';
+    document.getElementById('noResults').style.display = 'none';
 
-        const grid = document.getElementById('mainGrid');
-        grid.innerHTML = '';
-        for (const key in subjects) grid.appendChild(createSubjectCard(key));
+    const grid = document.getElementById('mainGrid');
+    grid.innerHTML = '';
+
+    if (MAINTENANCE.global) {
+        document.getElementById('subtitle').textContent = 'Site under maintenance';
+        document.getElementById('searchInput').style.display = 'none';
+        grid.appendChild(createMaintenanceCard());
+        return;
     }
+    document.getElementById('searchInput').style.display = '';
 
+    document.getElementById('subtitle').textContent = 'Select a subject to begin';
+    for (const key in subjects) grid.appendChild(createSubjectCard(key));
+}
     /* ════════════════════════════════════════════
        VIEW: CLASSES
     ════════════════════════════════════════════ */
-    function showClasses(subjectKey) {
-        viewMode = 'classes';
-        selectedSubject = subjectKey;
+  function showClasses(subjectKey) {
+    viewMode = 'classes';
+    selectedSubject = subjectKey;
 
-        const sub = subjects[subjectKey];
-        document.getElementById('subtitle').textContent = sub.fullName;
-        document.getElementById('backButton').style.display = 'inline-flex';
-        document.getElementById('backButtonText').textContent = 'Back to Subjects';
-        document.getElementById('cloneContainer').classList.remove('active');
-        document.getElementById('searchInput').value = '';
-        document.getElementById('noResults').style.display = 'none';
+    const sub = subjects[subjectKey];
+    document.getElementById('backButton').style.display = 'inline-flex';
+    document.getElementById('backButtonText').textContent = 'Back to Subjects';
+    document.getElementById('cloneContainer').classList.remove('active');
+    document.getElementById('searchInput').value = '';
+    document.getElementById('noResults').style.display = 'none';
 
-        const grid = document.getElementById('mainGrid');
-        grid.innerHTML = '';
+    const grid = document.getElementById('mainGrid');
+    grid.innerHTML = '';
 
-        Object.keys(classNames)
-            .filter(k => k.startsWith(subjectKey + '-'))
-            .forEach(k => {
-                const num = k.split('-').pop();
-                grid.appendChild(createClassCard(subjectKey, num));
-            });
-
-        /* ── Code-2 feature: always append Coming Soon card at the end ── */
-        grid.appendChild(createComingSoonCard());
+    // ── Maintenance check ──
+    if (MAINTENANCE.global || MAINTENANCE.subjects[subjectKey]) {
+        document.getElementById('subtitle').textContent = sub.fullName + ' — under maintenance';
+        document.getElementById('searchInput').style.display = 'none';
+        grid.appendChild(createMaintenanceCard());
+        return;
     }
+    document.getElementById('searchInput').style.display = '';
 
+    document.getElementById('subtitle').textContent = sub.fullName;
+
+    Object.keys(classNames)
+        .filter(k => k.startsWith(subjectKey + '-'))
+        .forEach(k => {
+            const num = k.split('-').pop();
+            grid.appendChild(createClassCard(subjectKey, num));
+        });
+
+    grid.appendChild(createComingSoonCard());
+}
     /* ════════════════════════════════════════════
        SHOW CLONE / ENTRY CARD
     ════════════════════════════════════════════ */
