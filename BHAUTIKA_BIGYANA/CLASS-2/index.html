@@ -2173,7 +2173,7 @@ div:has(> #audioToggleBtn) {
         <div id="loginError" class="login-error"></div>
 
             <!-- Know Your Roll Number Button -->
-        <button onclick="window.open('https://evidya-admin.pages.dev/bnss/', '_blank')" class="roll-number-btn" style="background-color: #FF6B6B; margin-top: 10px; padding: 12px; font-size: 14px; border: none; border-radius: 8px; color: white; cursor: pointer; width: 100%; font-weight: bold;">
+        <button onclick="window.open('https://evidya-admin.pages.dev/school9/', '_blank')" class="roll-number-btn" style="background-color: #FF6B6B; margin-top: 10px; padding: 12px; font-size: 14px; border: none; border-radius: 8px; color: white; cursor: pointer; width: 100%; font-weight: bold;">
             📋 ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । 
         </button>  
 
@@ -2511,7 +2511,7 @@ div:has(> #audioToggleBtn) {
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ବହି ପାଠ ବୁଝୁଛନ୍ତି ...</p>
    <audio id="audioPlayer" controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; border-radius: 8px;">
-    <source src="https://audio.evidya.de/BNSS1.mp3" type="audio/mpeg">
+    <source src="https://audio.evidya.de/S9PS1P1-2.mp3" type="audio/mpeg">
     Your browser does not support audio.
 </audio>
 </div>
@@ -2521,7 +2521,7 @@ div:has(> #audioToggleBtn) {
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ପ୍ରଶ୍ନୋତ୍ତର ବୁଝୁଛନ୍ତି ...</p>
    <audio id="audioPlayer3" controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; border-radius: 8px;">
-    <source src="https://audio.evidya.de/BNSS1QA.mp3" type="audio/mpeg">
+    <source src="https://audio.evidya.de/S9PS1P1-2QA.mp3" type="audio/mpeg">
     Your browser does not support audio.
 </audio>
 </div>
@@ -2600,7 +2600,7 @@ div:has(> #audioToggleBtn) {
 
 <!-- IMAGE MODAL TOGGLE BUTTON -->
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; width: 320px; margin-left: auto; margin-right: auto;">
-   <button onclick="window.open('https://audio.evidya.de/BNSS1S.pdf', '_blank')" style="width:100%; padding:14px; background: linear-gradient(135deg, #0369a1 0%, #075985 100%); color:white; border:none; border-radius:8px; font-size:14px; font-weight:bold; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.2);">
+   <button onclick="window.open('https://audio.evidya.de/S9PS1P1-2S.pdf', '_blank')" style="width:100%; padding:14px; background: linear-gradient(135deg, #0369a1 0%, #075985 100%); color:white; border:none; border-radius:8px; font-size:14px; font-weight:bold; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.2);">
     🖼️ ସାର-ଚିତ୍ର ଦେଖିବା
 </button>
     <button onclick="openStudyBot()" style="width:100%; padding:14px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; border:none; border-radius:8px; font-size:14px; font-weight:bold; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.2);">
@@ -2866,9 +2866,9 @@ div:has(> #audioToggleBtn) {
 // FOR EACH SUBJECT/CLASS COPY OF THIS FILE
 // ============================================
 const APP_CONFIG = {
-    sreni: "BNSS Practical-1",
-    subject: "BNSS Practical-1",
-    classCode: "BNSS Practical: CLASS-1"
+    sreni: "ନବମ",
+    subject: "ଭୌତିକ ବିଜ୍ଞାନ",
+    classCode: "ଭୌତିକ ବିଜ୍ଞାନ: CLASS-1"
 };
 
     
@@ -2912,7 +2912,7 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 const FALLBACK_AUDIO_URL = "https://raw.githubusercontent.com/happysangitanms/assets/main/fallback%20audio.m4a";
-const CLASS_NAME = "bnss";
+const CLASS_NAME = "school9";
 
 function getDeviceId() {
     let deviceId = localStorage.getItem('deviceId_evidya');
@@ -3073,199 +3073,253 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "BNSS",
-            odia: "ଭାରତୀୟ ନାଗରିକ ସୁରକ୍ଷା ସଂହିତା",
-            emoji: "📘",
-            odiaUse: "BNSS ହେଉଛି ଭାରତର ନୂଆ ଅପରାଧ ପ୍ରକ୍ରିୟା ଆଇନ ।",
+            word: "MATTER",
+            odia: "ପଦାର୍ଥ",
+            emoji: "🧪",
+            odiaUse: "ପଦାର୍ଥ ଅର୍ଥ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ବସ୍ତୁ ତିଆରି ହୁଏ । ବାୟୁ, ଜଳ ଓ ପଥର ପଦାର୍ଥ ଅଟେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CRIMINAL",
-            odia: "ଅପରାଧ",
+            word: "MASS",
+            odia: "ବସ୍ତୁତ୍ୱ",
             emoji: "⚖️",
-            odiaUse: "ଅପରାଧ ଅର୍ଥ ଆଇନ ବିରୋଧୀ କାମ । BNSS ଅପରାଧ ମାମଲାର ନିୟମ କହେ ।",
+            odiaUse: "ବସ୍ତୁତ୍ୱ ଅର୍ଥ ପଦାର୍ଥର ପରିମାଣ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଥାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PROCEDURE",
-            odia: "ପ୍ରକ୍ରିୟା",
-            emoji: "📋",
-            odiaUse: "ପ୍ରକ୍ରିୟା ଅର୍ଥ କୌଣସି କାମ କରିବାର ନିୟମିତ ପଦ୍ଧତି ।",
+            word: "VOLUME",
+            odia: "ଆୟତନ",
+            emoji: "📦",
+            odiaUse: "ଆୟତନ ଅର୍ଥ ପଦାର୍ଥ ଯେତିକି ସ୍ଥାନ ଦଖଲ କରେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ଆୟତନ ଅଛି ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "INVESTIGATION",
-            odia: "ତଦନ୍ତ",
-            emoji: "🔍",
-            odiaUse: "ତଦନ୍ତ ଅର୍ଥ ସତ୍ୟ ଘଟଣା ଜାଣିବା ପାଇଁ ଖୋଜଖବର କରିବା ।",
+            word: "TEXTURE",
+            odia: "ରୂପ ବିନ୍ୟାସ",
+            emoji: "✋",
+            odiaUse: "ରୂପ ବିନ୍ୟାସ ଅର୍ଥ ପୃଷ୍ଠଭାଗର ଗଠନ । ନଡ଼ିଆର ଖୋଲର ରୂପ ବିନ୍ୟାସ ଖରାପିଆ ହୋଇଥାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "TRIAL",
-            odia: "ବିଚାର",
-            emoji: "🏛️",
-            odiaUse: "ବିଚାର ଅର୍ଥ କୋର୍ଟରେ ମାମଲାର ଶୁଣାଣି ଓ ନିଷ୍ପତ୍ତି କରିବା ।",
+            word: "PHILOSOPHER",
+            odia: "ଦାର୍ଶନିକ",
+            emoji: "🤔",
+            odiaUse: "ଦାର୍ଶନିକ ଅର୍ଥ ଚିନ୍ତାବିଦ୍ । ପ୍ରାଚୀନ ଦାର୍ଶନିକମାନେ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଦେଇଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "LAW",
-            odia: "ଆଇନ",
-            emoji: "📖",
-            odiaUse: "ଆଇନ ଅର୍ଥ ଦେଶର ନିୟମ । ସମସ୍ତେ ଆଇନକୁ ମାନିବା ଉଚିତ ।",
+            word: "PANCHATATTVA",
+            odia: "ପଞ୍ଚତତ୍ତ୍ୱ",
+            emoji: "🌍",
+            odiaUse: "ପଞ୍ଚତତ୍ତ୍ୱ ଅର୍ଥ ପାଞ୍ଚଟି ମୌଳିକ ଉପାଦାନ । ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "TECHNOLOGY",
-            odia: "ପ୍ରଯୁକ୍ତି",
-            emoji: "💻",
-            odiaUse: "ପ୍ରଯୁକ୍ତି ଅର୍ଥ ଆଧୁନିକ ଉପକରଣର ବ୍ୟବହାର । BNSS ପ୍ରଯୁକ୍ତିକୁ ପ୍ରୋତ୍ସାହନ ଦିଏ ।",
+            word: "PHYSICAL PROPERTY",
+            odia: "ଭୌତିକ ଧର୍ମ",
+            emoji: "👀",
+            odiaUse: "ଭୌତିକ ଧର୍ମ ଅର୍ଥ ଦେଖାଯାଉଥିବା ଗୁଣ । ପଦାର୍ଥର ଭୌତିକ ଧର୍ମ ଅଧ୍ୟୟନ କରାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "VICTIM",
-            odia: "ପୀଡ଼ିତ",
-            emoji: "🧑",
-            odiaUse: "ପୀଡ଼ିତ ଅର୍ଥ ଅପରାଧ ଦ୍ୱାରା କ୍ଷତିଗ୍ରସ୍ତ ବ୍ୟକ୍ତି ।",
+            word: "CHEMICAL NATURE",
+            odia: "ରାସାୟନିକ ପ୍ରକୃତି",
+            emoji: "⚗️",
+            odiaUse: "ରାସାୟନିକ ପ୍ରକୃତି ଅର୍ଥ ରାସାୟନିକ ଗୁଣ । ଏହା ପଦାର୍ଥର ଏକ ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ACCUSED",
-            odia: "ଅଭିଯୁକ୍ତ",
-            emoji: "👤",
-            odiaUse: "ଅଭିଯୁକ୍ତ ଅର୍ଥ ଯାହାଙ୍କ ବିରୋଧରେ ଅପରାଧର ଅଭିଯୋଗ ଅଛି ।",
+            word: "PARTICLE",
+            odia: "କଣିକା",
+            emoji: "🔹",
+            odiaUse: "କଣିକା ଅର୍ଥ ଅତି ଛୋଟ ଅଂଶ । ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "WITNESS",
-            odia: "ସାକ୍ଷୀ",
-            emoji: "🙋",
-            odiaUse: "ସାକ୍ଷୀ ଅର୍ଥ ଘଟଣା ଦେଖିଥିବା କିମ୍ବା ଜାଣିଥିବା ବ୍ୟକ୍ତି ।",
+            word: "CONTINUOUS",
+            odia: "ଅବିଚ୍ଛିନ୍ନ",
+            emoji: "➖",
+            odiaUse: "ଅବିଚ୍ଛିନ୍ନ ଅର୍ଥ ଭାଗ କରିହେବ ନାହିଁ ବୋଲି ଧାରଣା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "JUSTICE",
-            odia: "ନ୍ୟାୟ",
-            emoji: "⚖️",
-            odiaUse: "ନ୍ୟାୟ ଅର୍ଥ ସଠିକ୍ ଓ ନିରପେକ୍ଷ ନିଷ୍ପତ୍ତି । BNSS ଶୀଘ୍ର ନ୍ୟାୟକୁ ଗୁରୁତ୍ୱ ଦିଏ ।",
+            word: "BEAKER",
+            odia: "ବିକର",
+            emoji: "🥛",
+            odiaUse: "ବିକର ଅର୍ଥ ପରୀକ୍ଷାଗାରର ପାତ୍ର । ଲୁଣ ଓ ଚିନିର ପରୀକ୍ଷା ବିକରରେ କରାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DIGITAL",
-            odia: "ଡିଜିଟାଲ",
-            emoji: "📱",
-            odiaUse: "ଡିଜିଟାଲ ଅର୍ଥ କମ୍ପ୍ୟୁଟର କିମ୍ବା ଇଣ୍ଟରନେଟ୍ ଆଧାରିତ ପଦ୍ଧତି ।",
+            word: "MARK",
+            odia: "ଚିହ୍ନଟ",
+            emoji: "📍",
+            odiaUse: "ଚିହ୍ନଟ ଅର୍ଥ ଚିହ୍ନ ଦେଇ ରଖିବା । ଜଳର ଉପର ସ୍ତରକୁ ଚିହ୍ନଟ କରାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "TRANSPARENCY",
-            odia: "ସ୍ୱଚ୍ଛତା",
-            emoji: "🔎",
-            odiaUse: "ସ୍ୱଚ୍ଛତା ଅର୍ଥ ଲୁଚାଛପା ବିନା କାମ କରିବା ।",
+            word: "SPREAD",
+            odia: "ବ୍ୟାପିଯିବା",
+            emoji: "🌊",
+            odiaUse: "ବ୍ୟାପିଯିବା ଅର୍ଥ ଚାରିଆଡ଼େ ପ୍ରସାରିତ ହେବା । ଚିନି ଜଳରେ ବ୍ୟାପିଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "EFFICIENT",
-            odia: "କାର୍ଯ୍ୟକ୍ଷମ",
-            emoji: "🚀",
-            odiaUse: "କାର୍ଯ୍ୟକ୍ଷମ ଅର୍ଥ ଭଲ ଓ ଶୀଘ୍ର କାମ କରୁଥିବା ।",
+            word: "CRYSTAL",
+            odia: "ସ୍ଫଟିକ",
+            emoji: "💎",
+            odiaUse: "ସ୍ଫଟିକ ଅର୍ଥ କ୍ରିଷ୍ଟାଲ୍ । ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ବ୍ୟବହାର କରାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "OBJECTIVE",
-            odia: "ଉଦ୍ଦେଶ୍ୟ",
-            emoji: "🎯",
-            odiaUse: "ଉଦ୍ଦେଶ୍ୟ ଅର୍ଥ କୌଣସି କାମର ମୁଖ୍ୟ ଲକ୍ଷ୍ୟ । BNSS ର ଉଦ୍ଦେଶ୍ୟ ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରିବା ।",
+            word: "DISSOLVE",
+            odia: "ଦ୍ରବୀଭୂତ",
+            emoji: "💧",
+            odiaUse: "ଦ୍ରବୀଭୂତ ଅର୍ଥ ଜଳରେ ମିଶିଯିବା । ସ୍ଫଟିକ ଜଳରେ ଦ୍ରବୀଭୂତ ହୁଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DILUTION",
+            odia: "ଲଘୁକରଣ",
+            emoji: "🧴",
+            odiaUse: "ଲଘୁକରଣ ଅର୍ଥ ପତଳା କରିବା । ଦ୍ରବଣର ବାରମ୍ବାର ଲଘୁକରଣ କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PURE WATER",
+            odia: "ବିଶୁଦ୍ଧ ଜଳ",
+            emoji: "🚰",
+            odiaUse: "ବିଶୁଦ୍ଧ ଜଳ ଅର୍ଥ ସଫା ପାଣି । ଦ୍ରବଣକୁ ବିଶୁଦ୍ଧ ଜଳ ସହିତ ମିଶାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "COUNTLESS",
+            odia: "ଅସଂଖ୍ୟ",
+            emoji: "♾️",
+            odiaUse: "ଅସଂଖ୍ୟ ଅର୍ଥ ଗଣନା କରିହେବ ନାହିଁ ଏତେ ଅଧିକ । ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କଣିକା ରହିଥାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DIVIDED",
+            odia: "ବିଭାଜିତ",
+            emoji: "✂️",
+            odiaUse: "ବିଭାଜିତ ଅର୍ଥ ଭାଗ ହୋଇଯିବା । କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ ଆହୁରି କ୍ଷୁଦ୍ର ହୁଅନ୍ତି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PRESENCE",
+            odia: "ଉପସ୍ଥିତି",
+            emoji: "✅",
+            odiaUse: "ଉପସ୍ଥିତି ଅର୍ଥ ଥିବାର ପ୍ରମାଣ । ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "TINYNESS",
+            odia: "କ୍ଷୁଦ୍ରତା",
+            emoji: "🔬",
+            odiaUse: "କ୍ଷୁଦ୍ରତା ଅର୍ଥ ଛୋଟପଣ । ପଦାର୍ଥର କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
 };
-
+    
 const topicsData = [
-
 {
-heading: "CASE-1: New Criminal Law (ନୂଆ ଅପରାଧ ପ୍ରକ୍ରିୟା ଆଇନ) :-",
-
-audioPoints: [{
-text:"👉 Case: A law student says that the Code of Criminal Procedure (CrPC), 1973 is still the criminal procedure law in India. Another student says that BNSS, 2023 has replaced it and is now in force. The teacher asks who is correct. (ମାମଲା: ଜଣେ ଆଇନ ଛାତ୍ର କହୁଛନ୍ତି ଯେ ୧୯୭୩ ମସିହାର ଦଣ୍ଡ ପ୍ରକ୍ରିୟା ସଂହିତା (CrPC) ଏବେ ମଧ୍ୟ ଭାରତର ଅପରାଧ ପ୍ରକ୍ରିୟା ଆଇନ ଅଟେ । ଅନ୍ୟ ଜଣେ ଛାତ୍ର କହୁଛନ୍ତି ଯେ BNSS, ୨୦୨୩ ଏହାକୁ ବଦଳାଇଛି ଏବଂ ବର୍ତ୍ତମାନ କାର୍ଯ୍ୟକାରୀ ଅଛି । ଶିକ୍ଷକ ପଚାରୁଛନ୍ତି କିଏ ଠିକ୍ ।)<br><br>👉 Legal Solution: The second student is correct. BNSS, 2023 replaced CrPC, 1973 and came into force on 1 July 2024. (ଆଇନଗତ ସମାଧାନ: ଦ୍ୱିତୀୟ ଛାତ୍ର ଠିକ୍ । BNSS, ୨୦୨୩ CrPC, ୧୯୭୩ କୁ ବଦଳାଇଛି ଏବଂ ୧ ଜୁଲାଇ ୨୦୨୪ ଠାରୁ କାର୍ଯ୍ୟକାରୀ ହୋଇଛି ।)",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> Which student was correct? (କେଉଁ ଛାତ୍ର ଠିକ୍ ଥିଲେ ?)<br><br><span style='color:green;'>Answer:</span> The second student. (ଦ୍ୱିତୀୟ ଛାତ୍ର ।)",
-
-"<span style='color:red;'>Q-2:</span> Which law replaced CrPC, 1973? (CrPC, ୧୯୭୩ କୁ କେଉଁ ଆଇନ ବଦଳାଇଛି ?)<br><br><span style='color:green;'>Answer:</span> BNSS, 2023. (BNSS, ୨୦୨୩ ।)",
-
-"<span style='color:red;'>Q-3:</span> When did BNSS come into force? (BNSS କେବେ କାର୍ଯ୍ୟକାରୀ ହେଲା ?)<br><br><span style='color:green;'>Answer:</span> On 1 July 2024. (୧ ଜୁଲାଇ ୨୦୨୪ରେ ।)",
-
-"<span style='color:red;'>Q-4:</span> Is CrPC still the criminal procedure law? (CrPC ଏବେ ମଧ୍ୟ ଅପରାଧ ପ୍ରକ୍ରିୟା ଆଇନ କି ?)<br><br><span style='color:green;'>Answer:</span> No. (ନା ।)"
-
-]
+  heading: "NOTE-1: ପଦାର୍ଥ କ'ଣ ? :-",
+  audioPoints: [
+    {
+      text: "👉 ଏହି ନୋଟ୍‌ରେ ପଦାର୍ଥର ଅର୍ଥ ଓ ତାହାର ମୌଳିକ ଗୁଣ ବିଷୟରେ ବୁଝାଯାଇଛି ।<br><br>👉 ଆସନ୍ତୁ, କଳ୍ପନା କରିବା :<br>ଧରନ୍ତୁ ତୁମେ ଘର, ଗଛ, ପଥର, ପାଣି ଓ ବାୟୁକୁ ଦେଖୁଛ । ଏହି ସବୁ ଭିନ୍ନ ଭିନ୍ନ ଜିନିଷ ହେଲେ ମଧ୍ୟ ସବୁ ପଦାର୍ଥ ଅଟେ ।<br><br>👉 ମୁଖ୍ୟ ବିଷୟ:<br>• ଆମ ଚତୁଃପାର୍ଶ୍ବରେ ବିଭିନ୍ନ ପ୍ରକାର ବସ୍ତୁ ଅଛି ।<br>• ଏହି ବସ୍ତୁମାନଙ୍କର ଆକାର, ଆକୃତି ଓ ରୂପ ବିନ୍ୟାସ ଭିନ୍ନ ଭିନ୍ନ ହୋଇଥାଏ । (ଉଦାହରଣ: ନଡ଼ିଆର ଖୋଲ ଖରାପିଆ ହୋଇଥାଏ, କାଚ ମସୃଣ ହୋଇଥାଏ ।)<br>• ଏହି ବିଶ୍ଵର ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଗଢ଼ା, ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ ।<br>• ବୈଜ୍ଞାନିକମାନେ ଏହାର ନାମ 'ପଦାର୍ଥ' ରଖିଛନ୍ତି ।<br>• ଆମେ ପ୍ରଶ୍ବାସରେ ନେଉଥିବା ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ ।<br>• ଆମେ ଖାଉଥିବା ଖାଦ୍ୟ ଏକ ପଦାର୍ଥ ଅଟେ ।<br>• ପଥର, ମେଘ ଓ ତାରା ମଧ୍ୟ ପଦାର୍ଥ ଅଟନ୍ତି ।<br>• ଉଦ୍ଭିଦ ଓ ପଶୁପକ୍ଷୀ ମଧ୍ୟ ପଦାର୍ଥ ଅଟନ୍ତି ।<br>• ଗୋଟିଏ ଜଳବିନ୍ଦୁ ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ ।<br>• ବାଲିର ଏକ କ୍ଷୁଦ୍ର କଣିକା ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ ।<br>• ଆମ ଚାରିପାଖରେ ଥିବା ସମସ୍ତ ବସ୍ତୁ କିଛି ସ୍ଥାନ ଅଧିକାର କରିଥାଏ ।<br>• ପ୍ରତ୍ୟେକ ପଦାର୍ଥର କିଛି ବସ୍ତୁତ୍ୱ ରହିଥାଏ ।<br>• ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଅଛି ।<br><br>👉 କଠିନ ଶବ୍ଦର ଅର୍ଥ:<br>ପଦାର୍ଥ = ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ବସ୍ତୁ ତିଆରି ହୁଏ<br>ବସ୍ତୁତ୍ୱ = ପଦାର୍ଥର ପରିମାଣ<br>ଆୟତନ = ପଦାର୍ଥ ଯେତିକି ସ୍ଥାନ ଦଖଲ କରେ<br>ରୂପ ବିନ୍ୟାସ = ପୃଷ୍ଠଭାଗର ଗଠନ<br><br>👉 ସାରାଂଶ:<br>ଆମ ଚାରିପାଖରେ ଥିବା ସମସ୍ତ ବସ୍ତୁ ପଦାର୍ଥ ଅଟେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ରହିଥାଏ ।<br><br>👉 ଶିକ୍ଷା:<br>ଆମ ଚାରିପାଖରେ ଥିବା ସମସ୍ତ ଜିନିଷ ପଦାର୍ଥରେ ଗଠିତ ବୋଲି ଜାଣିବା ଉଚିତ ।",
+      audio: "audio-url-here"
+    }
+  ],
+  questions: [
+    "<span style='color: red;'>Q-1:</span> ପଦାର୍ଥ କ'ଣ ?<br><br><span style='color: green;'>Answer:</span> ଏହି ବିଶ୍ଵର ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଗଢ଼ା, ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ ।",
+    "<span style='color: red;'>Q-2:</span> ବାୟୁ କ'ଣ ?<br><br><span style='color: green;'>Answer:</span> ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ ।",
+    "<span style='color: red;'>Q-3:</span> ପ୍ରତ୍ୟେକ ପଦାର୍ଥର କେଉଁ ଦୁଇଟି ଗୁଣ ଥାଏ ?<br><br><span style='color: green;'>Answer:</span> ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ ।",
+    "<span style='color: red;'>Q-4:</span> ଜଳବିନ୍ଦୁ କ'ଣ ?<br><br><span style='color: green;'>Answer:</span> ଜଳବିନ୍ଦୁ ମଧ୍ୟ ଏକ ପଦାର୍ଥ ଅଟେ ।"
+  ]
 },
 
 {
-heading: "CASE-2: Delay in Criminal Cases (ଅପରାଧ ମାମଲାରେ ବିଳମ୍ବ) :-",
-
-audioPoints: [{
-text:"👉 Case: A victim complains that his criminal case is taking too much time. He asks whether the new criminal procedure law tries to reduce delay and provide faster justice. (ମାମଲା: ଜଣେ ପୀଡ଼ିତ କହୁଛନ୍ତି ଯେ ତାଙ୍କ ଅପରାଧ ମାମଲାରେ ବହୁତ ବିଳମ୍ବ ହେଉଛି । ସେ ପଚାରୁଛନ୍ତି ନୂଆ ଅପରାଧ ପ୍ରକ୍ରିୟା ଆଇନ ବିଳମ୍ବ କମାଇ ଶୀଘ୍ର ନ୍ୟାୟ ଦେବାକୁ ଚେଷ୍ଟା କରେ କି ।)<br><br>👉 Legal Solution: Yes. One main objective of BNSS is to provide fair and speedy justice by improving criminal procedures. (ଆଇନଗତ ସମାଧାନ: ହଁ । BNSS ର ଏକ ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ ହେଉଛି ଅପରାଧ ପ୍ରକ୍ରିୟାକୁ ଉନ୍ନତ କରି ନ୍ୟାୟସଙ୍ଗତ ଓ ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରିବା ।)",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> Does BNSS try to reduce delay? (BNSS କି ବିଳମ୍ବ କମାଇବାକୁ ଚେଷ୍ଟା କରେ ?)<br><br><span style='color:green;'>Answer:</span> Yes. (ହଁ ।)",
-
-"<span style='color:red;'>Q-2:</span> What is the main objective of BNSS? (BNSS ର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ କ'ଣ ?)<br><br><span style='color:green;'>Answer:</span> To provide fair and speedy justice. (ନ୍ୟାୟସଙ୍ଗତ ଓ ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରିବା ।)",
-
-"<span style='color:red;'>Q-3:</span> Does BNSS improve criminal procedures? (BNSS କି ଅପରାଧ ପ୍ରକ୍ରିୟାକୁ ଉନ୍ନତ କରେ ?)<br><br><span style='color:green;'>Answer:</span> Yes. (ହଁ ।)",
-
-"<span style='color:red;'>Q-4:</span> Will speedy justice benefit people? (ଶୀଘ୍ର ନ୍ୟାୟ ଲୋକଙ୍କୁ ଉପକାର କରିବ କି ?)<br><br><span style='color:green;'>Answer:</span> Yes. (ହଁ ।)"
-
-]
+  heading: "NOTE-2: ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା :-",
+  audioPoints: [
+    {
+      text: "👉 ଏହି ନୋଟ୍‌ରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନଙ୍କର ପଦାର୍ଥ ସମ୍ପର୍କିତ ଧାରଣା ବିଷୟରେ ବୁଝାଯାଇଛି ।<br><br>👉 ଆସନ୍ତୁ, କଳ୍ପନା କରିବା :<br>ଧରନ୍ତୁ ଜଣେ ଲୋକ ଜାଣିବାକୁ ଚାହୁଁଛନ୍ତି ଯେ ଏହି ବିଶ୍ଵର ସବୁ ଜିନିଷ କିପରି ତିଆରି ହୋଇଛି । ଏହି ପ୍ରଶ୍ନର ଉତ୍ତର ଖୋଜିବା ପାଇଁ ଲୋକମାନେ ପୁରାତନ କାଳରୁ ଚେଷ୍ଟା କରିଆସୁଛନ୍ତି ।<br><br>👉 ମୁଖ୍ୟ ବିଷୟ:<br>• ଆଦିମ କାଳରୁ ମନୁଷ୍ୟ ତାହାର ଚତୁଃପାର୍ଶ୍ଵକୁ ବୁଝିବା ପାଇଁ ଚେଷ୍ଟା କରିଆସୁଛି ।<br>• ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ପାଞ୍ଚଗୋଟି ମୌଳିକକୁ ନେଇ ଗଠିତ ।<br>• ଏହାକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।<br>• ପଞ୍ଚତତ୍ତ୍ୱ ହେଲା ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶ ।<br>• ସେମାନଙ୍କ ମତରେ ସଜୀବ ଓ ନିର୍ଜୀବ ସମସ୍ତ ବସ୍ତୁ ଏହି ପାଞ୍ଚଟି ମୌଳିକକୁ ନେଇ ଗଠିତ ।<br>• ପ୍ରାଚୀନ ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ମଧ୍ୟ ଏହିପରି ଶ୍ରେଣୀବିଭାଗ କରିଥିଲେ ।<br>• ଆଧୁନିକ ଯୁଗର ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରିଛନ୍ତି ।<br>• ଏହି ଅଧ୍ୟାୟରେ ଆମେ ପଦାର୍ଥର ଭୌତିକ ଗୁଣ ସମ୍ପର୍କରେ ଜାଣିବା ।<br>• ପଦାର୍ଥର ରାସାୟନିକ ଗୁଣ ବିଷୟରେ ପରବର୍ତ୍ତୀ ଅଧ୍ୟାୟରେ ଆଲୋଚନା କରାଯିବ ।<br><br>👉 କଠିନ ଶବ୍ଦର ଅର୍ଥ:<br>ଦାର୍ଶନିକ = ଚିନ୍ତାବିଦ୍<br>ପଞ୍ଚତତ୍ତ୍ୱ = ପାଞ୍ଚଟି ମୌଳିକ ଉପାଦାନ<br>ଭୌତିକ ଧର୍ମ = ଦେଖାଯାଉଥିବା ଗୁଣ<br>ରାସାୟନିକ ପ୍ରକୃତି = ରାସାୟନିକ ଗୁଣ<br><br>👉 ସାରାଂଶ:<br>ପ୍ରାଚୀନ ଲୋକମାନେ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଦେଇଥିଲେ । ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣ ଅନୁସାରେ ଅଧ୍ୟୟନ କରନ୍ତି ।<br><br>👉 ଶିକ୍ଷା:<br>ବିଜ୍ଞାନ ସମୟ ସହିତ ଅଧିକ ଉନ୍ନତ ହୋଇ ନୂଆ ଜ୍ଞାନ ଦେଇଥାଏ ।",
+      audio: "audio-url-here"
+    }
+  ],
+  questions: [
+    "<span style='color: red;'>Q-1:</span> ପଞ୍ଚତତ୍ତ୍ୱ କ'ଣ ?<br><br><span style='color: green;'>Answer:</span> ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।",
+    "<span style='color: red;'>Q-2:</span> ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତ କ'ଣ ଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ସମସ୍ତ ବସ୍ତୁ ପାଞ୍ଚଟି ମୌଳିକକୁ ନେଇ ଗଠିତ ।",
+    "<span style='color: red;'>Q-3:</span> ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ କିପରି ବିଭକ୍ତ କରିଛନ୍ତି ?<br><br><span style='color: green;'>Answer:</span> ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରିଛନ୍ତି ।",
+    "<span style='color: red;'>Q-4:</span> ଏହି ଅଧ୍ୟାୟରେ କେଉଁ ଗୁଣ ବିଷୟରେ ଜାଣିବା ?<br><br><span style='color: green;'>Answer:</span> ପଦାର୍ଥର ଭୌତିକ ଗୁଣ ବିଷୟରେ ଜାଣିବା ।"
+  ]
 },
 
 {
-heading: "CASE-3: Use of Technology (ପ୍ରଯୁକ୍ତିର ବ୍ୟବହାର) :-",
-
-audioPoints: [{
-text:"👉 Case: A police officer says that all criminal records should only be kept on paper. Another officer says that BNSS encourages the use of electronic records and digital technology. The Superintendent asks who is correct. (ମାମଲା: ଜଣେ ପୋଲିସ ଅଧିକାରୀ କହୁଛନ୍ତି ଯେ ସମସ୍ତ ଅପରାଧ ରେକର୍ଡ କେବଳ କାଗଜରେ ରଖାଯିବା ଉଚିତ । ଅନ୍ୟ ଜଣେ ଅଧିକାରୀ କହୁଛନ୍ତି ଯେ BNSS ଇଲେକ୍ଟ୍ରୋନିକ୍ ରେକର୍ଡ ଓ ଡିଜିଟାଲ ପ୍ରଯୁକ୍ତିର ବ୍ୟବହାରକୁ ପ୍ରୋତ୍ସାହନ ଦିଏ । ପୋଲିସ ସୁପରିଣ୍ଟେଣ୍ଡେଣ୍ଟ ପଚାରୁଛନ୍ତି କିଏ ଠିକ୍ ।)<br><br>👉 Legal Solution: The second officer is correct. BNSS encourages the use of electronic records and digital technology in criminal cases. (ଆଇନଗତ ସମାଧାନ: ଦ୍ୱିତୀୟ ଅଧିକାରୀ ଠିକ୍ । BNSS ଅପରାଧ ମାମଲାରେ ଇଲେକ୍ଟ୍ରୋନିକ୍ ରେକର୍ଡ ଓ ଡିଜିଟାଲ ପ୍ରଯୁକ୍ତିର ବ୍ୟବହାରକୁ ପ୍ରୋତ୍ସାହନ ଦିଏ ।)",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> Which officer was correct? (କେଉଁ ଅଧିକାରୀ ଠିକ୍ ଥିଲେ ?)<br><br><span style='color:green;'>Answer:</span> The second officer. (ଦ୍ୱିତୀୟ ଅଧିକାରୀ ।)",
-
-"<span style='color:red;'>Q-2:</span> Does BNSS encourage digital technology? (BNSS କି ଡିଜିଟାଲ ପ୍ରଯୁକ୍ତିକୁ ପ୍ରୋତ୍ସାହନ ଦିଏ ?)<br><br><span style='color:green;'>Answer:</span> Yes. (ହଁ ।)",
-
-"<span style='color:red;'>Q-3:</span> Can electronic records be used under BNSS? (BNSS ରେ ଇଲେକ୍ଟ୍ରୋନିକ୍ ରେକର୍ଡ ବ୍ୟବହାର କରାଯାଇପାରିବ କି ?)<br><br><span style='color:green;'>Answer:</span> Yes. (ହଁ ।)",
-
-"<span style='color:red;'>Q-4:</span> Does BNSS support modern methods? (BNSS କି ଆଧୁନିକ ପଦ୍ଧତିକୁ ସମର୍ଥନ କରେ ?)<br><br><span style='color:green;'>Answer:</span> Yes. (ହଁ ।)"
-
-]
+  heading: "NOTE-3: ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ :-",
+  audioPoints: [
+    {
+      text: "👉 ଏହି ନୋଟ୍‌ରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ବୁଝାଯାଇଛି ।<br><br>👉 ଆସନ୍ତୁ, କଳ୍ପନା କରିବା :<br>ଧରନ୍ତୁ ତୁମେ ଏକ ବାଲି ଗଦାକୁ ଦେଖୁଛ । ଏହା ଅନେକ ଛୋଟ ଛୋଟ କଣିକାକୁ ନେଇ ତିଆରି ହୋଇଛି ।<br><br>👉 ମୁଖ୍ୟ ବିଷୟ:<br>• ଦୀର୍ଘକାଳ ଧରି ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ବନ୍ଧରେ ଦୁଇ ପ୍ରକାର ଭିନ୍ନମତ ଥିଲା ।<br>• କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଅଟେ ।<br>• କାଠ, କାଚ ଓ କାଗଜ ଏହାର ଉଦାହରଣ ଭାବେ ଦିଆଯାଇଥିଲା ।<br>• ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।<br>• ବାଲି ଏହାର ଏକ ଉଦାହରଣ ଅଟେ ।<br>• ପଦାର୍ଥର ପ୍ରକୃତି ଜାଣିବା ପାଇଁ ପରୀକ୍ଷା କରିବା ଆବଶ୍ୟକ ।<br>• ଆମେ ଜାଣିବାକୁ ଚେଷ୍ଟା କରୁ ଯେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ନା କଣିକା ବିଶିଷ୍ଟ ।<br><br>👉 କଠିନ ଶବ୍ଦର ଅର୍ଥ:<br>ଅବିଚ୍ଛିନ୍ନ = ଭାଗ କରିହେବ ନାହିଁ ବୋଲି ଧାରଣା<br>କଣିକା = ଅତି ଛୋଟ ଅଂଶ<br>ଭିନ୍ନମତ = ଭିନ୍ନ ଧାରଣା<br>ପ୍ରକୃତି = ସ୍ୱଭାବ ବା ଗଠନ<br><br>👉 ସାରାଂଶ:<br>ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା । ପରେ ବୈଜ୍ଞାନିକମାନେ ପରୀକ୍ଷା ମାଧ୍ୟମରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ଜାଣିଲେ ।<br><br>👉 ଶିକ୍ଷା:<br>ବୈଜ୍ଞାନିକ ସତ୍ୟ ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ଜଣାଯାଏ ।",
+      audio: "audio-url-here"
+    }
+  ],
+  questions: [
+    "<span style='color: red;'>Q-1:</span> ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ କେତେ ପ୍ରକାର ମତ ଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ଦୁଇ ପ୍ରକାର ମତ ଥିଲା ।",
+    "<span style='color: red;'>Q-2:</span> କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
+    "<span style='color: red;'>Q-3:</span> ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?<br><br><span style='color: green;'>Answer:</span> ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା ।",
+    "<span style='color: red;'>Q-4:</span> ବାଲି କାହାର ଉଦାହରଣ ?<br><br><span style='color: green;'>Answer:</span> ବାଲି କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥର ଉଦାହରଣ ।"
+  ]
+},
+    
+{
+  heading: "NOTE-4: ଲୁଣ ଓ ଚିନି ଜଳରେ କେଉଁଠି ଯାଏ ? :-",
+  audioPoints: [
+    {
+      text: "👉 ଏହି ନୋଟ୍‌ରେ ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଗଲେ କ'ଣ ହୁଏ ତାହା ବୁଝାଯାଇଛି ।<br><br>👉 ଆସନ୍ତୁ, କଳ୍ପନା କରିବା :<br>ଧରନ୍ତୁ ତୁମେ ଗୋଟିଏ ଗ୍ଲାସ ପାଣିରେ ଚିନି ପକାଇ ଗୋଳାଉଛ । କିଛି ସମୟ ପରେ ଚିନି ଦେଖାଯାଉ ନାହିଁ, କିନ୍ତୁ ପାଣି ମିଠା ହୋଇଯାଏ ।<br><br>👉 ମୁଖ୍ୟ ବିଷୟ:<br>• ଏକ 100 ମିଲି ବିକର ନେବାକୁ ହେବ ।<br>• ବିକରରେ ଅଧା ଜଳ ଭରିବାକୁ ହେବ ।<br>• ଜଳର ଉପର ସ୍ତରକୁ ଚିହ୍ନଟ କରିବାକୁ ହେବ ।<br>• କିଛି ଲୁଣ କିମ୍ବା ଚିନି ଜଳରେ ପକାଇବାକୁ ହେବ ।<br>• ଏକ କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ ଜଳକୁ ଗୋଳାଇବାକୁ ହେବ ।<br>• ଲୁଣ କିମ୍ବା ଚିନି ମିଶିଲା ପରେ ଜଳସ୍ତରରେ ପରିବର୍ତ୍ତନ ହେଉଛି କି ନାହିଁ ଲକ୍ଷ୍ୟ କରିବାକୁ ହେବ ।<br>• ଲୁଣ ବା ଚିନି ଜଳ ମଧ୍ୟରେ କ'ଣ ହେଲା ତାହା ଭାବିବାକୁ ହେବ ।<br>• ଚିନି ବା ଲୁଣ କେଉଁଠି ଉଭେଇଗଲା ବୋଲି ପ୍ରଶ୍ନ ଉଠେ ।<br>• ଜଳସ୍ତରରେ କିଛି ପରିବର୍ତ୍ତନ ଦେଖାଯାଏ କି ନାହିଁ ଲକ୍ଷ୍ୟ କରିବାକୁ ହେବ ।<br>• ଏହି ପ୍ରଶ୍ନଗୁଡ଼ିକର ଉତ୍ତର ପାଇଁ ମନେ ରଖିବାକୁ ହେବ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।<br>• ଚାମଚରେ ଥିବା ଚିନି ବା ଲୁଣ ଜଳରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।<br>• ଏହା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।<br><br>👉 କଠିନ ଶବ୍ଦର ଅର୍ଥ:<br>ବିକର = ପରୀକ୍ଷାଗାରର ପାତ୍ର<br>ଚିହ୍ନଟ = ଚିହ୍ନ ଦେଇ ରଖିବା<br>ବ୍ୟାପିଯିବା = ଚାରିଆଡ଼େ ପ୍ରସାରିତ ହେବା<br>କଣିକା = ଅତି ଛୋଟ ଅଂଶ<br><br>👉 ସାରାଂଶ:<br>ଚିନି ବା ଲୁଣ ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ । ଏହାରୁ ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।<br><br>👉 ଶିକ୍ଷା:<br>ସରଳ ପରୀକ୍ଷା ଦ୍ୱାରା ମଧ୍ୟ ବୈଜ୍ଞାନିକ ସତ୍ୟ ଜାଣିହେବ ।",
+      audio: "audio-url-here"
+    }
+  ],
+  questions: [
+    "<span style='color: red;'>Q-1:</span> ବିକରରେ କ'ଣ ପକାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଲୁଣ କିମ୍ବା ଚିନି ପକାଯାଏ ।",
+    "<span style='color: red;'>Q-2:</span> ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?<br><br><span style='color: green;'>Answer:</span> ଜଳରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।",
+    "<span style='color: red;'>Q-3:</span> ଏହି ପରୀକ୍ଷା କ'ଣ ପ୍ରମାଣ କରେ ?<br><br><span style='color: green;'>Answer:</span> ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ପ୍ରମାଣ କରେ ।",
+    "<span style='color: red;'>Q-4:</span> ଜଳକୁ କେଉଁ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ।"
+  ]
 },
 
 {
-heading: "CASE-4: Rights of Victims (ପୀଡ଼ିତଙ୍କ ଅଧିକାର) :-",
+  heading: "NOTE-5: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ କେତେ ଛୋଟ ? :-",
+  audioPoints: [
+    {
+      text: "👉 ଏହି ନୋଟ୍‌ରେ ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ବୋଲି ବୁଝାଯାଇଛି ।<br><br>👉 ଆସନ୍ତୁ, କଳ୍ପନା କରିବା :<br>ଧରନ୍ତୁ ଏକ ଛୋଟ ରଙ୍ଗର ଦାଗକୁ ବାରମ୍ବାର ପାଣିରେ ମିଶାଯାଉଛି । ତଥାପି ପାଣିରେ ରଙ୍ଗ ଦେଖାଯାଉଛି ।<br><br>👉 ମୁଖ୍ୟ ବିଷୟ:<br>• 2-3ଟି ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନେବାକୁ ହେବ ।<br>• ଏହାକୁ 100 ମିଲି ଜଳରେ ଦ୍ରବୀଭୂତ କରିବାକୁ ହେବ ।<br>• ଏହି ଦ୍ରବଣରୁ 10 ମିଲି ନେଇ ୨୦ ମିଲି ବିଶୁଦ୍ଧ ଜଳ ସହିତ ମିଶାଇବାକୁ ହେବ ।<br>• ଏହାଦ୍ୱାରା ଦ୍ରବଣର ଲଘୁକରଣ ହେବ ।<br>• ପୁଣି ଏହି ଦ୍ରବଣରୁ 10 ମିଲି ନେଇ ୨୦ ମିଲି ବିଶୁଦ୍ଧ ଜଳ ସହିତ ମିଶାଇବାକୁ ହେବ ।<br>• ଏହାଦ୍ୱାରା ଦ୍ରବଣର ଅଧିକ ଲଘୁକରଣ ହେବ ।<br>• ପୁନର୍ବାର 10 ମିଲି ଦ୍ରବଣ ନେଇ ଅନ୍ୟ ୨୦ ମିଲି ବିଶୁଦ୍ଧ ଜଳରେ ମିଶାଇବାକୁ ହେବ ।<br>• ଏହି ପଦ୍ଧତିକୁ ପାଞ୍ଚରୁ ଆଠ ଥର କରିବାକୁ ହେବ ।<br>• ଏହାଦ୍ୱାରା ଦ୍ରବଣର ଅଧିକରୁ ଅଧିକ ଲଘୁକରଣ ହେବ ।<br>• ଏହାପରେ ମଧ୍ୟ ଜଳ ରଙ୍ଗୀନ ହୋଇ ରହିଥାଏ ।<br>• ଏହି ପରୀକ୍ଷା ସୂଚାଏ ଯେ ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।<br><br>👉 କଠିନ ଶବ୍ଦର ଅର୍ଥ:<br>ସ୍ଫଟିକ = କ୍ରିଷ୍ଟାଲ୍<br>ଦ୍ରବୀଭୂତ = ଜଳରେ ମିଶିଯିବା<br>ଲଘୁକରଣ = ପତଳା କରିବା<br>ବିଶୁଦ୍ଧ ଜଳ = ସଫା ପାଣି<br><br>👉 ସାରାଂଶ:<br>ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌କୁ ବାରମ୍ବାର ପତଳା କରିଲେ ମଧ୍ୟ ଜଳ ରଙ୍ଗୀନ ରହେ ।<br><br>👉 ଶିକ୍ଷା:<br>ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହେଲେ ମଧ୍ୟ ତାହାର ପ୍ରଭାବ ଦେଖାଯାଏ ।",
+      audio: "audio-url-here"
+    }
+  ],
+  questions: [
+    "<span style='color: red;'>Q-1:</span> କେଉଁ ପଦାର୍ଥର ସ୍ଫଟିକ ନିଆଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନିଆଯାଏ ।",
+    "<span style='color: red;'>Q-2:</span> ଦ୍ରବଣକୁ କାହିଁକି ଲଘୁକରଣ କରାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> କଣିକାର କ୍ଷୁଦ୍ରତା ଜାଣିବା ପାଇଁ ଲଘୁକରଣ କରାଯାଏ ।",
+    "<span style='color: red;'>Q-3:</span> ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ କିପରି ରହେ ?<br><br><span style='color: green;'>Answer:</span> ଜଳ ରଙ୍ଗୀନ ହୋଇ ରହେ ।",
+    "<span style='color: red;'>Q-4:</span> ଏହି ପରୀକ୍ଷା କ'ଣ ସୂଚାଏ ?<br><br><span style='color: green;'>Answer:</span> ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।"
+  ]
+},
 
-audioPoints: [{
-text:"👉 Case: A person says that only the accused has legal rights in a criminal case. Another person says that BNSS also protects the rights of victims and witnesses. The Judge asks who is correct. (ମାମଲା: ଜଣେ ବ୍ୟକ୍ତି କହୁଛନ୍ତି ଯେ ଅପରାଧ ମାମଲାରେ କେବଳ ଅଭିଯୁକ୍ତଙ୍କର ଆଇନଗତ ଅଧିକାର ଅଛି । ଅନ୍ୟ ଜଣେ ବ୍ୟକ୍ତି କହୁଛନ୍ତି ଯେ BNSS ପୀଡ଼ିତ ଓ ସାକ୍ଷୀଙ୍କ ଅଧିକାରକୁ ମଧ୍ୟ ସୁରକ୍ଷା ଦିଏ । ବିଚାରପତି ପଚାରୁଛନ୍ତି କିଏ ଠିକ୍ ।)<br><br>👉 Legal Solution: The second person is correct. BNSS protects the rights of victims, accused persons and witnesses and ensures fair justice. (ଆଇନଗତ ସମାଧାନ: ଦ୍ୱିତୀୟ ବ୍ୟକ୍ତି ଠିକ୍ । BNSS ପୀଡ଼ିତ, ଅଭିଯୁକ୍ତ ଓ ସାକ୍ଷୀଙ୍କ ଅଧିକାରକୁ ସୁରକ୍ଷା ଦିଏ ଏବଂ ନ୍ୟାୟସଙ୍ଗତ ନ୍ୟାୟକୁ ସୁନିଶ୍ଚିତ କରେ ।)",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> Which person was correct? (କେଉଁ ବ୍ୟକ୍ତି ଠିକ୍ ଥିଲେ ?)<br><br><span style='color:green;'>Answer:</span> The second person. (ଦ୍ୱିତୀୟ ବ୍ୟକ୍ତି ।)",
-
-"<span style='color:red;'>Q-2:</span> Does BNSS protect victims? (BNSS କି ପୀଡ଼ିତଙ୍କୁ ସୁରକ୍ଷା ଦିଏ ?)<br><br><span style='color:green;'>Answer:</span> Yes. (ହଁ ।)",
-
-"<span style='color:red;'>Q-3:</span> Does BNSS protect witnesses? (BNSS କି ସାକ୍ଷୀଙ୍କୁ ସୁରକ୍ଷା ଦିଏ ?)<br><br><span style='color:green;'>Answer:</span> Yes. (ହଁ ।)",
-
-"<span style='color:red;'>Q-4:</span> Does BNSS ensure fair justice? (BNSS କି ନ୍ୟାୟସଙ୍ଗତ ନ୍ୟାୟକୁ ସୁନିଶ୍ଚିତ କରେ ?)<br><br><span style='color:green;'>Answer:</span> Yes. (ହଁ ।)"
-
-]
+{
+  heading: "NOTE-6: ପଦାର୍ଥର କଣିକାର ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର :-",
+  audioPoints: [
+    {
+      text: "👉 ଏହି ନୋଟ୍‌ରେ ପଦାର୍ଥର କଣିକାର ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର ବିଷୟରେ ବୁଝାଯାଇଛି ।<br><br>👉 ଆସନ୍ତୁ, କଳ୍ପନା କରିବା :<br>ଧରନ୍ତୁ ଗୋଟିଏ ସୁଗନ୍ଧିର ଏକ ବୁନ୍ଦା ଘରର ଗୋଟିଏ କୋଣରେ ପକାଯାଇଛି । କିଛି ସମୟ ପରେ ସାରା ଘରରେ ଗନ୍ଧ ବ୍ୟାପିଯାଏ ।<br><br>👉 ମୁଖ୍ୟ ବିଷୟ:<br>• ଏହି ପରୀକ୍ଷାରୁ ଜଣାପଡ଼େ ଯେ ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।<br>• ଏଥିରୁ ସିଦ୍ଧାନ୍ତ ମିଳେ ଯେ ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।<br>• ଏହି କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ ଆହୁରି କ୍ଷୁଦ୍ର କଣିକାରେ ପରିଣତ ହୁଅନ୍ତି ।<br>• ଏହି ପରୀକ୍ଷା ଡେଟଲ୍‌କୁ ନେଇ ମଧ୍ୟ କରାଯାଇପାରେ ।<br>• 2 ମିଲି ଡେଟଲ୍ ନେଇ ବାରମ୍ବାର ଲଘୁକରଣ କରାଯାଇପାରେ ।<br>• ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଡେଟଲ୍‌ର ଗନ୍ଧ ରହିଥାଏ ।<br>• ଦ୍ରବଣର ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।<br>• ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟନ୍ତି ।<br>• ଆମେ ସେମାନଙ୍କର କ୍ଷୁଦ୍ରତାକୁ ସହଜରେ କଳ୍ପନା କରିପାରୁ ନାହିଁ ।<br>• ସେମାନଙ୍କର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।<br><br>👉 କଠିନ ଶବ୍ଦର ଅର୍ଥ:<br>ଅସଂଖ୍ୟ = ଗଣନା କରିହେବ ନାହିଁ ଏତେ ଅଧିକ<br>ବିଭାଜିତ = ଭାଗ ହୋଇଯିବା<br>ଉପସ୍ଥିତି = ଥିବାର ପ୍ରମାଣ<br>କ୍ଷୁଦ୍ରତା = ଛୋଟପଣ<br><br>👉 ସାରାଂଶ:<br>ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ । ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କଣିକା ରହିଥାଏ ଓ ସେଗୁଡ଼ିକ ଆହୁରି କ୍ଷୁଦ୍ର କଣିକାରେ ବିଭକ୍ତ ହୋଇପାରେ ।<br><br>👉 ଶିକ୍ଷା:<br>ପଦାର୍ଥର କଣିକା ଏତେ ଛୋଟ ଯେ ତାହାର ଆକାର କଳ୍ପନା କରିବା କଷ୍ଟକର ।",
+      audio: "audio-url-here"
+    }
+  ],
+  questions: [
+    "<span style='color: red;'>Q-1:</span> ଗୋଟିଏ ସ୍ଫଟିକରେ କ'ଣ ରହିଥାଏ ?<br><br><span style='color: green;'>Answer:</span> ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।",
+    "<span style='color: red;'>Q-2:</span> ଡେଟଲ୍‌ର ଉପସ୍ଥିତି କିପରି ଜଣାପଡ଼େ ?<br><br><span style='color: green;'>Answer:</span> ଦ୍ରବଣର ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
+    "<span style='color: red;'>Q-3:</span> ପଦାର୍ଥର କଣିକା କିପରି ହୋଇଥାଏ ?<br><br><span style='color: green;'>Answer:</span> ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ ।",
+    "<span style='color: red;'>Q-4:</span> କଣିକାର କ୍ଷୁଦ୍ରତା କିପରି ?<br><br><span style='color: green;'>Answer:</span> କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।"
+  ]
 }
-
-
 ];
-
- 
+    
     
 const courseData = {
             teacherImage: "https://via.placeholder.com/400x300/667eea/ffffff?text=Teacher",
@@ -3334,182 +3388,362 @@ const courseData = {
 </div>
   `, 
     audio: "",
-
 mermaid: [
 `%%{init: {
 'theme': 'base',
 'themeVariables': {
-'fontSize': '18px'
+  'fontSize': '18px'
 }
 }}%%
 flowchart TD
-TITLE["📖 SUMMARY:<br/>What is BNSS?<br/>(BNSS କ'ଣ ?)"]
-TITLE --> INTRO
-subgraph INTRO[ ]
-direction LR
-A["🟡 Introduction<br/>(ଭୂମିକା)"]
-A --> I1["BNSS is a new law in India.<br/>(BNSS ଭାରତର ଏକ ନୂଆ ଆଇନ।)"]
-A --> I2["It tells us about criminal cases.<br/>(ଏହା ଅପରାଧ ମାମଲା ବିଷୟରେ କହେ।)"]
-end
-INTRO --> MAIN
-subgraph MAIN[ ]
-direction LR
-M["🟢 Explanation<br/>(ବ୍ୟାଖ୍ୟା)"]
-M --> M1["BNSS means Bharatiya Nagarik<br/>Suraksha Sanhita, 2023.<br/>(BNSS ର ଅର୍ଥ ଭାରତୀୟ ନାଗରିକ<br/>ସୁରକ୍ଷା ସଂହିତା, ୨୦୨୩।)"]
-M --> M2["It is India's new criminal<br/>procedure law.<br/>(ଏହା ଭାରତର ନୂଆ ଅପରାଧ<br/>ପ୍ରକ୍ରିୟା ଆଇନ।)"]
-M --> M3["It explains how cases are<br/>investigated and tried.<br/>(ଏହା ମାମଲାର ତଦନ୍ତ ଓ<br/>ବିଚାର କିପରି ହେବ କହେ।)"]
-M --> M4["It replaced the old<br/>CrPC, 1973.<br/>(ଏହା ପୁରୁଣା CrPC,<br/>୧୯୭୩କୁ ବଦଳାଇଛି।)"]
-M --> M5["It started on 1 July 2024.<br/>Like school rules, it guides<br/>police and courts.<br/>(ଏହା ୧ ଜୁଲାଇ ୨୦୨୪ରୁ ଆରମ୍ଭ ହେଲା।<br/>ବିଦ୍ୟାଳୟ ନିୟମ ପରି ଏହା ପୋଲିସ<br/>ଓ କୋର୍ଟକୁ ମାର୍ଗଦର୍ଶନ କରେ।)"]
-end
-MAIN --> CONCLUSION
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 Conclusion<br/>(ନିଷ୍କର୍ଷ)"]
-C --> C1["BNSS gives rules for<br/>criminal cases.<br/>(BNSS ଅପରାଧ ମାମଲା ପାଇଁ<br/>ନିୟମ ଦିଏ।)"]
-C --> C2["It helps police and courts<br/>work properly.<br/>(ଏହା ପୋଲିସ ଓ କୋର୍ଟକୁ<br/>ଠିକ୍ କାମ କରିବାରେ ସାହାଯ୍ୟ କରେ।)"]
-end
-linkStyle 0 stroke-width:0px;
-linkStyle 3 stroke-width:0px;
-linkStyle 9 stroke-width:0px;
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-class TITLE title;
-class A,I1,I2 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2 conclusion;`,
-`%%{init: {
-'theme': 'base',
-'themeVariables': {
-'fontSize': '18px'
-}
-}}%%
-flowchart TD
-TITLE["📖 SUMMARY:<br/>Why was BNSS made?<br/>(BNSS କାହିଁକି ପ୍ରଣୟନ କରାଗଲା ?)"]
-TITLE --> INTRO
-subgraph INTRO[ ]
-direction LR
-A["🟡 Introduction<br/>(ଭୂମିକା)"]
-A --> I1["BNSS has many reasons<br/>behind it.<br/>(BNSS ପଛରେ ଅନେକ କାରଣ ଅଛି।)"]
-A --> I2["Let us learn why it<br/>was made.<br/>(ଆସନ୍ତୁ ଜାଣିବା ଏହା<br/>କାହିଁକି ପ୍ରଣୟନ ହେଲା।)"]
-end
-INTRO --> MAIN
-subgraph MAIN[ ]
-direction LR
-M["🟢 Explanation<br/>(ବ୍ୟାଖ୍ୟା)"]
-M --> M1["BNSS gives a modern<br/>criminal procedure.<br/>(BNSS ଆଧୁନିକ ଅପରାଧ<br/>ପ୍ରକ୍ରିୟା ଦିଏ।)"]
-M --> M2["It makes justice faster<br/>and better.<br/>(ଏହା ନ୍ୟାୟକୁ ଶୀଘ୍ର ଓ<br/>ଭଲ କରେ।)"]
-M --> M3["It promotes use of<br/>technology.<br/>(ଏହା ପ୍ରଯୁକ୍ତିର ବ୍ୟବହାରକୁ<br/>ପ୍ରୋତ୍ସାହନ ଦିଏ।)"]
-M --> M4["It protects victims,<br/>accused and witnesses.<br/>(ଏହା ପୀଡ଼ିତ, ଅଭିଯୁକ୍ତ ଓ<br/>ସାକ୍ଷୀଙ୍କୁ ସୁରକ୍ଷା ଦିଏ।)"]
-M --> M5["Earlier cases took long time.<br/>Now BNSS reduces delay.<br/>(ପୂର୍ବରୁ ମାମଲାରେ ସମୟ ଲାଗୁଥିଲା।<br/>ବର୍ତ୍ତମାନ BNSS ବିଳମ୍ବ କମାଏ।)"]
-end
-MAIN --> CONCLUSION
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 Conclusion<br/>(ନିଷ୍କର୍ଷ)"]
-C --> C1["BNSS helps in fair and<br/>speedy justice.<br/>(BNSS ନ୍ୟାୟସଙ୍ଗତ ଓ ଶୀଘ୍ର<br/>ନ୍ୟାୟରେ ସାହାଯ୍ୟ କରେ।)"]
-C --> C2["It protects everyone's<br/>rights.<br/>(ଏହା ସମସ୍ତଙ୍କ ଅଧିକାର<br/>ସୁରକ୍ଷା କରେ।)"]
-end
-linkStyle 0 stroke-width:0px;
-linkStyle 3 stroke-width:0px;
-linkStyle 9 stroke-width:0px;
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-class TITLE title;
-class A,I1,I2 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2 conclusion;`,
-`%%{init: {
-'theme': 'base',
-'themeVariables': {
-'fontSize': '18px'
-}
-}}%%
-flowchart TD
-TITLE["📖 SUMMARY:<br/>Main Features of BNSS<br/>(BNSS ର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ)"]
-TITLE --> INTRO
-subgraph INTRO[ ]
-direction LR
-A["🟡 Introduction<br/>(ଭୂମିକା)"]
-A --> I1["BNSS has many<br/>good features.<br/>(BNSS ର ଅନେକ ଭଲ<br/>ବୈଶିଷ୍ଟ୍ୟ ଅଛି।)"]
-A --> I2["Let us learn about them.<br/>(ଆସନ୍ତୁ ସେଗୁଡ଼ିକ ବିଷୟରେ<br/>ଜାଣିବା।)"]
-end
-INTRO --> MAIN
-subgraph MAIN[ ]
-direction LR
-M["🟢 Explanation<br/>(ବ୍ୟାଖ୍ୟା)"]
-M --> M1["BNSS uses electronic records<br/>and digital technology.<br/>(BNSS ଇଲେକ୍ଟ୍ରୋନିକ୍ ରେକର୍ଡ ଓ<br/>ଡିଜିଟାଲ ପ୍ରଯୁକ୍ତି ବ୍ୟବହାର କରେ।)"]
-M --> M2["It gives time limits<br/>for procedures.<br/>(ଏହା ପ୍ରକ୍ରିୟା ପାଇଁ<br/>ସମୟ ସୀମା ଦିଏ।)"]
-M --> M3["It strengthens victims'<br/>rights.<br/>(ଏହା ପୀଡ଼ିତଙ୍କ ଅଧିକାରକୁ<br/>ସୁଦୃଢ଼ କରେ।)"]
-M --> M4["It improves investigation<br/>and trial.<br/>(ଏହା ତଦନ୍ତ ଓ ବିଚାରକୁ<br/>ଉନ୍ନତ କରେ।)"]
-M --> M5["It makes the system<br/>transparent, like online<br/>services today.<br/>(ଏହା ବ୍ୟବସ୍ଥାକୁ ସ୍ୱଚ୍ଛ କରେ,<br/>ଆଜିର ଅନଲାଇନ ସେବା ପରି।)"]
-end
-MAIN --> CONCLUSION
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 Conclusion<br/>(ନିଷ୍କର୍ଷ)"]
-C --> C1["BNSS makes justice<br/>more efficient.<br/>(BNSS ନ୍ୟାୟକୁ ଅଧିକ<br/>କାର୍ଯ୍ୟକ୍ଷମ କରେ।)"]
-C --> C2["It brings modern methods<br/>to courts.<br/>(ଏହା କୋର୍ଟକୁ ଆଧୁନିକ<br/>ପଦ୍ଧତି ଆଣେ।)"]
-end
-linkStyle 0 stroke-width:0px;
-linkStyle 3 stroke-width:0px;
-linkStyle 9 stroke-width:0px;
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-class TITLE title;
-class A,I1,I2 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2 conclusion;`,
-`%%{init: {
-'theme': 'base',
-'themeVariables': {
-'fontSize': '18px'
-}
-}}%%
-flowchart TD
-TITLE["📖 SUMMARY:<br/>Objectives of BNSS<br/>(BNSS ର ଉଦ୍ଦେଶ୍ୟ)"]
-TITLE --> INTRO
-subgraph INTRO[ ]
-direction LR
-A["🟡 Introduction<br/>(ଭୂମିକା)"]
-A --> I1["BNSS has clear<br/>objectives.<br/>(BNSS ର ସ୍ପଷ୍ଟ<br/>ଉଦ୍ଦେଶ୍ୟ ଅଛି।)"]
-A --> I2["Let us learn its goals.<br/>(ଆସନ୍ତୁ ଏହାର ଲକ୍ଷ୍ୟ<br/>ଜାଣିବା।)"]
-end
-INTRO --> MAIN
-subgraph MAIN[ ]
-direction LR
-M["🟢 Explanation<br/>(ବ୍ୟାଖ୍ୟା)"]
-M --> M1["The main goal is<br/>quick justice.<br/>(ମୁଖ୍ୟ ଲକ୍ଷ୍ୟ ହେଉଛି<br/>ଶୀଘ୍ର ନ୍ୟାୟ।)"]
-M --> M2["It ensures fair investigation<br/>and trial.<br/>(ଏହା ନିରପେକ୍ଷ ତଦନ୍ତ ଓ<br/>ବିଚାର ସୁନିଶ୍ଚିତ କରେ।)"]
-M --> M3["It increases transparency<br/>in cases.<br/>(ଏହା ମାମଲାରେ ସ୍ୱଚ୍ଛତା<br/>ବଢ଼ାଏ।)"]
-M --> M4["It uses modern technology<br/>for justice.<br/>(ଏହା ନ୍ୟାୟ ପାଇଁ ଆଧୁନିକ<br/>ପ୍ରଯୁକ୍ତି ବ୍ୟବହାର କରେ।)"]
-M --> M5["It builds public trust,<br/>like fair teachers build<br/>trust in school.<br/>(ଏହା ଜନ ବିଶ୍ୱାସ ବଢ଼ାଏ,<br/>ନିରପେକ୍ଷ ଶିକ୍ଷକ ପରି।)"]
-end
-MAIN --> CONCLUSION
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 Conclusion<br/>(ନିଷ୍କର୍ଷ)"]
-C --> C1["BNSS aims for fair and<br/>honest justice.<br/>(BNSS ନିରପେକ୍ଷ ଓ ସାଚ୍ଚା<br/>ନ୍ୟାୟ ପାଇଁ ଲକ୍ଷ୍ୟ ରଖେ।)"]
-C --> C2["People trust the justice<br/>system more.<br/>(ଲୋକମାନେ ନ୍ୟାୟ ବ୍ୟବସ୍ଥାରେ<br/>ଅଧିକ ବିଶ୍ୱାସ କରନ୍ତି।)"]
-end
-linkStyle 0 stroke-width:0px;
-linkStyle 3 stroke-width:0px;
-linkStyle 9 stroke-width:0px;
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-class TITLE title;
-class A,I1,I2 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2 conclusion;`
-],
 
+TITLE["📖 NOTE-1:<br/>ପଦାର୍ଥ କ'ଣ ?"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ପଦାର୍ଥର ଅର୍ଥ ଏଠାରେ<br/>ବୁଝାଯାଇଛି।"]
+A --> I2["ଆମ ଚାରିପାଖରେ ଅନେକ<br/>ପ୍ରକାର ବସ୍ତୁ ଅଛି।"]
+A --> I3["ସବୁ ବସ୍ତୁ କୌଣସି ନା<br/>କୌଣସି ପଦାର୍ଥରେ ଗଠିତ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ଘର, ଗଛ, ପଥର, ପାଣି ଓ<br/>ବାୟୁ ସବୁ ପଦାର୍ଥ ଅଟେ।"]
+M --> M2["ବସ୍ତୁମାନଙ୍କର ଆକାର,<br/>ଆକୃତି ଓ ରୂପ ଭିନ୍ନ ଅଟେ।"]
+M --> M3["ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟରେ<br/>ତିଆରି ହୁଏ ତାହା ପଦାର୍ଥ।"]
+M --> M4["ବାୟୁ, ଖାଦ୍ୟ, ପଥର,<br/>ମେଘ ଓ ତାରା ପଦାର୍ଥ ଅଟେ।"]
+M --> M5["ଉଦ୍ଭିଦ, ପଶୁ, ଜଳବିନ୍ଦୁ ଓ<br/>ବାଲି କଣିକା ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପ୍ରତ୍ୟେକ ପଦାର୍ଥ କିଛି<br/>ସ୍ଥାନ ଅଧିକାର କରେ।"]
+C --> C2["ପ୍ରତ୍ୟେକ ପଦାର୍ଥର<br/>ବସ୍ତୁତ୍ୱ ରହିଥାଏ।"]
+C --> C3["ପ୍ରତ୍ୟେକ ପଦାର୍ଥର<br/>ଆୟତନ ମଧ୍ୟ ଥାଏ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+`%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-2:<br/>ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ<br/>ଆଧୁନିକ ଧାରଣା"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ମନୁଷ୍ୟ ପୁରାତନ କାଳରୁ<br/>ପଦାର୍ଥକୁ ବୁଝିବାକୁ ଚେଷ୍ଟା କରିଛି।"]
+A --> I2["ପଦାର୍ଥ କିପରି ଗଠିତ<br/>ତାହା ଜାଣିବାକୁ ଇଚ୍ଛା କରିଛି।"]
+A --> I3["ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଯୁଗରେ<br/>ଭିନ୍ନ ଭିନ୍ନ ଧାରଣା ଥିଲା।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନେ<br/>ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଦେଇଥିଲେ।"]
+M --> M2["ମାଟି, ଜଳ, ବାୟୁ,<br/>ଅଗ୍ନି ଓ ଆକାଶ ପଞ୍ଚତତ୍ତ୍ୱ ଅଟେ।"]
+M --> M3["ସଜୀବ ଓ ନିର୍ଜୀବ ସବୁ ବସ୍ତୁ<br/>ଏହି ପାଞ୍ଚଟି ଉପାଦାନରେ ଗଠିତ।"]
+M --> M4["ପ୍ରାଚୀନ ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ<br/>ମଧ୍ୟ ଏହିପରି ମତ ଦେଇଥିଲେ।"]
+M --> M5["ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ<br/>ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣରେ ବିଭକ୍ତ କରିଛନ୍ତି।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପ୍ରାଚୀନ କାଳରେ<br/>ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଥିଲା।"]
+C --> C2["ଆଧୁନିକ ବିଜ୍ଞାନ ପଦାର୍ଥକୁ<br/>ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣରେ ଅଧ୍ୟୟନ କରେ।"]
+C --> C3["ବିଜ୍ଞାନ ସମୟ ସହିତ<br/>ନୂଆ ଜ୍ଞାନ ଦେଇଥାଏ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-3:<br/>ପଦାର୍ଥ କଣିକାକୁ ନେଇ<br/>ଗଠିତ"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ପଦାର୍ଥର ଗଠନ ବିଷୟରେ<br/>ଭିନ୍ନ ମତ ଥିଲା।"]
+A --> I2["ବାଲି ଅନେକ ଛୋଟ<br/>କଣିକାରେ ତିଆରି।"]
+A --> I3["ପଦାର୍ଥର ପ୍ରକୃତି ଜାଣିବାକୁ<br/>ଚେଷ୍ଟା କରାଯାଇଥିଲା।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ଦୀର୍ଘ ସମୟ ଧରି<br/>ଦୁଇ ପ୍ରକାର ମତ ଥିଲା।"]
+M --> M2["କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ<br/>ଅବିଚ୍ଛିନ୍ନ ଅଟେ।"]
+M --> M3["କାଠ, କାଚ ଓ କାଗଜ<br/>ଏହାର ଉଦାହରଣ ଥିଲା।"]
+M --> M4["ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ<br/>କଣିକାକୁ ନେଇ ଗଠିତ।"]
+M --> M5["ବାଲି ଏହାର ଉଦାହରଣ।<br/>ସତ୍ୟ ଜାଣିବାକୁ ପରୀକ୍ଷା ଦରକାର।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପଦାର୍ଥର ପ୍ରକୃତି ବିଷୟରେ<br/>ଦୁଇଟି ଧାରଣା ଥିଲା।"]
+C --> C2["ପରୀକ୍ଷା ଦ୍ୱାରା ସତ୍ୟ<br/>ଜାଣିବା ସମ୍ଭବ ହେଲା।"]
+C --> C3["ପଦାର୍ଥ କଣିକାକୁ ନେଇ<br/>ଗଠିତ ବୋଲି ଜଣାପଡ଼ିଲା।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-4:<br/>ଲୁଣ ଓ ଚିନି ଜଳରେ<br/>କେଉଁଠି ଯାଏ ?"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ଲୁଣ ବା ଚିନି<br/>ଜଳରେ ମିଶିଯାଏ।"]
+A --> I2["ମିଶିଗଲେ ସେମାନେ<br/>ଦେଖାଯାଆନ୍ତି ନାହିଁ।"]
+A --> I3["ଏହାର କାରଣ<br/>ଜାଣିବା ଦରକାର।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["100 ମିଲି ବିକର ନେଇ<br/>ଅଧା ଜଳ ଭରାଯାଏ।"]
+M --> M2["ଜଳସ୍ତରକୁ ଚିହ୍ନଟ କରି<br/>ଲୁଣ ବା ଚିନି ପକାଯାଏ।"]
+M --> M3["କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ<br/>ଜଳକୁ ଗୋଳାଯାଏ।"]
+M --> M4["ଜଳସ୍ତରର ପରିବର୍ତ୍ତନ ଓ<br/>ଚିନି କେଉଁଠି ଗଲା ଦେଖାଯାଏ।"]
+M --> M5["ଲୁଣ ବା ଚିନି ଜଳରେ<br/>ବ୍ୟାପିଯାଏ। ଏହା ପଦାର୍ଥ କଣିକାରୁ ଗଠିତ ବୋଲି ପ୍ରମାଣ କରେ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ଚିନି ବା ଲୁଣ<br/>ଜଳରେ ବ୍ୟାପିଯାଏ।"]
+C --> C2["ପଦାର୍ଥ କଣିକାକୁ ନେଇ<br/>ଗଠିତ ହୋଇଥାଏ।"]
+C --> C3["ସରଳ ପରୀକ୍ଷାରୁ ମଧ୍ୟ<br/>ବୈଜ୍ଞାନିକ ସତ୍ୟ ଜଣାଯାଏ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+`%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-5:<br/>ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ<br/>କେତେ ଛୋଟ ?"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ପଦାର୍ଥର କଣିକା<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ।"]
+A --> I2["ରଙ୍ଗ ମିଶାଇଲେ ମଧ୍ୟ<br/>ପାଣି ରଙ୍ଗୀନ ଦେଖାଯାଏ।"]
+A --> I3["ଏକ ପରୀକ୍ଷା ଦ୍ୱାରା<br/>ଏହା ଜଣାଯାଏ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର<br/>ସ୍ଫଟିକ ଜଳରେ ମିଶାଯାଏ।"]
+M --> M2["ଦ୍ରବଣର କିଛି ଅଂଶ ନେଇ<br/>ବିଶୁଦ୍ଧ ଜଳରେ ମିଶାଯାଏ।"]
+M --> M3["ଏହି ପ୍ରକ୍ରିୟାରେ ଦ୍ରବଣର<br/>ବାରମ୍ବାର ଲଘୁକରଣ ହୁଏ।"]
+M --> M4["ପାଞ୍ଚରୁ ଆଠ ଥର ପରେ ମଧ୍ୟ<br/>ଜଳ ରଙ୍ଗୀନ ରହିଥାଏ।"]
+M --> M5["ଅଳ୍ପ ପଦାର୍ଥ ବହୁତ ଜଳକୁ<br/>ରଙ୍ଗୀନ କରିପାରେ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପଦାର୍ଥର କଣିକା<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ।"]
+C --> C2["ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ<br/>ତାହାର ପ୍ରଭାବ ରହେ।"]
+C --> C3["କ୍ଷୁଦ୍ର କଣିକାର ପ୍ରଭାବ<br/>ସହଜରେ ଦେଖାଯାଏ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+`%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-6:<br/>ପଦାର୍ଥର କଣିକାର<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ପଦାର୍ଥର କଣିକା<br/>ବହୁତ ଛୋଟ ହୋଇଥାଏ।"]
+A --> I2["ସୁଗନ୍ଧିର ଗନ୍ଧ<br/>ସାରା ଘରେ ବ୍ୟାପିଯାଏ।"]
+A --> I3["ଏହା କଣିକାର<br/>କ୍ଷୁଦ୍ରତାକୁ ଦେଖାଏ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍<br/>ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରେ।"]
+M --> M2["ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ<br/>କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ।"]
+M --> M3["କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ<br/>ଆହୁରି ଛୋଟ ହୋଇଯାନ୍ତି।"]
+M --> M4["ଡେଟଲ୍‌କୁ ବାରମ୍ବାର ଲଘୁକରଣ<br/>କଲେ ମଧ୍ୟ ଗନ୍ଧ ରହିଥାଏ।"]
+M --> M5["ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ।<br/>କଣିକାର କ୍ଷୁଦ୍ରତା କଳ୍ପନାର ବାହାରେ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପଦାର୍ଥର କଣିକା<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ।"]
+C --> C2["ଗୋଟିଏ ସ୍ଫଟିକରେ<br/>ଅସଂଖ୍ୟ କଣିକା ଥାଏ।"]
+C --> C3["କଣିକାର ଆକାର<br/>କଳ୍ପନା କରିବା କଷ୍ଟକର।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`    
+],
+    
 mcq: {
     questions: [
 
@@ -3517,96 +3751,204 @@ mcq: {
         // NOTE-1
         // =========================
         {
-            question: "What does BNSS stand for? (BNSS ର ପୂର୍ଣ୍ଣ ନାମ କ'ଣ ?)",
+            question: "ପଦାର୍ଥ କାହାକୁ କୁହାଯାଏ ?",
             options: [
-                "Bharatiya Nagarik Suraksha Sanhita, 2023 (ଭାରତୀୟ ନାଗରିକ ସୁରକ୍ଷା ସଂହିତା, ୨୦୨୩)",
-                "Bharatiya Nyaya Sanhita, 2023 (ଭାରତୀୟ ନ୍ୟାୟ ସଂହିତା, ୨୦୨୩)",
-                "Indian Penal Code, 1860 (ଭାରତୀୟ ଦଣ୍ଡ ସଂହିତା, ୧୮୬୦)",
-                "Code of Civil Procedure, 1908 (ଦେୱାନୀ ପ୍ରକ୍ରିୟା ସଂହିତା, ୧୯୦୮)"
+                "ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ବସ୍ତୁ ଗଢ଼ାଯାଏ",
+                "କେବଳ ତରଳ ପଦାର୍ଥକୁ",
+                "କେବଳ ଗ୍ୟାସକୁ",
+                "କେବଳ କଠିନ ବସ୍ତୁକୁ"
             ],
             correct: 0
         },
         {
-            question: "When did BNSS come into force? (BNSS କେବେ କାର୍ଯ୍ୟକାରୀ ହେଲା ?)",
+            question: "ନିମ୍ନଲିଖିତ ମଧ୍ୟରୁ କେଉଁଟି ଏକ ପଦାର୍ଥ ?",
             options: [
-                "1 January 2024 (୧ ଜାନୁଆରୀ ୨୦୨୪)",
-                "26 January 2024 (୨୬ ଜାନୁଆରୀ ୨୦୨୪)",
-                "1 July 2024 (୧ ଜୁଲାଇ ୨୦୨୪)",
-                "15 August 2024 (୧୫ ଅଗଷ୍ଟ ୨୦୨୪)"
+                "କେବଳ ପଥର",
+                "କେବଳ ବାୟୁ",
+                "କେବଳ ଜଳବିନ୍ଦୁ",
+                "ଉପରୋକ୍ତ ସମସ୍ତ"
             ],
-            correct: 2
+            correct: 3
+        },
+        {
+            question: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର କେଉଁ ଦୁଇଟି ଗୁଣ ଥାଏ ?",
+            options: [
+                "ରଙ୍ଗ ଓ ଗନ୍ଧ",
+                "ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ",
+                "ଆକାର ଓ ଓଜନ",
+                "ରୂପ ଓ ସ୍ୱାଦ"
+            ],
+            correct: 1
         },
 
         // =========================
         // NOTE-2
         // =========================
         {
-            question: "Why was BNSS made? (BNSS କାହିଁକି ପ୍ରଣୟନ କରାଗଲା ?)",
+            question: "ପଞ୍ଚତତ୍ତ୍ୱରେ କେତୋଟି ମୌଳିକ ଉପାଦାନ ରହିଛି ?",
             options: [
-                "To provide a modern criminal procedure (ଆଧୁନିକ ଅପରାଧ ପ୍ରକ୍ରିୟା ପ୍ରଦାନ କରିବା ପାଇଁ)",
-                "To increase taxes (ଟିକସ ବଢ଼ାଇବା ପାଇଁ)",
-                "To change the Constitution (ସମ୍ବିଧାନ ପରିବର୍ତ୍ତନ କରିବା ପାଇଁ)",
-                "To regulate schools (ବିଦ୍ୟାଳୟକୁ ନିୟନ୍ତ୍ରଣ କରିବା ପାଇଁ)"
-            ],
-            correct: 0
-        },
-        {
-            question: "Whose rights does BNSS protect? (BNSS କାହାର ଅଧିକାରକୁ ସୁରକ୍ଷା ଦିଏ ?)",
-            options: [
-                "Only judges (କେବଳ ବିଚାରପତିଙ୍କର)",
-                "Only police officers (କେବଳ ପୋଲିସ ଅଧିକାରୀଙ୍କର)",
-                "Victims, accused persons and witnesses (ପୀଡ଼ିତ, ଅଭିଯୁକ୍ତ ଓ ସାକ୍ଷୀଙ୍କର)",
-                "Only lawyers (କେବଳ ଓକିଲମାନଙ୍କର)"
+                "ତିନୋଟି",
+                "ଚାରୋଟି",
+                "ପାଞ୍ଚୋଟି",
+                "ଛଅଟି"
             ],
             correct: 2
+        },
+        {
+            question: "ନିମ୍ନଲିଖିତ ମଧ୍ୟରୁ କେଉଁଟି ପଞ୍ଚତତ୍ତ୍ୱର ଅଂଶ ?",
+            options: [
+                "ମାଟି",
+                "ଜଳ",
+                "ଆକାଶ",
+                "ଉପରୋକ୍ତ ସମସ୍ତ"
+            ],
+            correct: 3
+        },
+        {
+            question: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ କେଉଁ ଆଧାରରେ ବିଭକ୍ତ କରିଛନ୍ତି ?",
+            options: [
+                "ରଙ୍ଗ ଓ ଆକାର",
+                "ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି",
+                "ଓଜନ ଓ ଆକୃତି",
+                "ସ୍ୱାଦ ଓ ଗନ୍ଧ"
+            ],
+            correct: 1
         },
 
         // =========================
         // NOTE-3
         // =========================
         {
-            question: "What does BNSS encourage? (BNSS କ'ଣକୁ ପ୍ରୋତ୍ସାହନ ଦିଏ ?)",
+            question: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ କେତେ ପ୍ରକାର ମତ ଥିଲା ?",
             options: [
-                "Paper records only (କେବଳ କାଗଜ ରେକର୍ଡ)",
-                "Electronic records and digital technology (ଇଲେକ୍ଟ୍ରୋନିକ୍ ରେକର୍ଡ ଓ ଡିଜିଟାଲ ପ୍ରଯୁକ୍ତି)",
-                "Manual investigations only (କେବଳ ହାତରେ ତଦନ୍ତ)",
-                "Traditional methods only (କେବଳ ପାରମ୍ପରିକ ପଦ୍ଧତି)"
+                "ଗୋଟିଏ",
+                "ଦୁଇଟି",
+                "ତିନୋଟି",
+                "ଚାରୋଟି"
             ],
             correct: 1
         },
         {
-            question: "What does BNSS provide for many criminal procedures? (ଅନେକ ଅପରାଧ ପ୍ରକ୍ରିୟା ପାଇଁ BNSS କ'ଣ ନିର୍ଦ୍ଧାରଣ କରେ ?)",
+            question: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?",
             options: [
-                "New taxes (ନୂଆ ଟିକସ)",
-                "Long delays (ଦୀର୍ଘ ବିଳମ୍ବ)",
-                "Time limits (ସମୟ ସୀମା)",
-                "Extra punishments (ଅତିରିକ୍ତ ଦଣ୍ଡ)"
+                "କଣିକା ବିଶିଷ୍ଟ",
+                "ତରଳ",
+                "ଅବିଚ୍ଛିନ୍ନ",
+                "ଗ୍ୟାସୀୟ"
             ],
             correct: 2
+        },
+        {
+            question: "ବାଲି କାହାର ଉଦାହରଣ ଅଟେ ?",
+            options: [
+                "ଅବିଚ୍ଛିନ୍ନ ପଦାର୍ଥ",
+                "କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥ",
+                "ତରଳ ପଦାର୍ଥ",
+                "ଗ୍ୟାସୀୟ ପଦାର୍ଥ"
+            ],
+            correct: 1
         },
 
         // =========================
         // NOTE-4
         // =========================
         {
-            question: "What is the main objective of BNSS? (BNSS ର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ କ'ଣ ?)",
+            question: "ପରୀକ୍ଷାରେ କେଉଁ ପାତ୍ର ବ୍ୟବହାର କରାଯାଏ ?",
             options: [
-                "To provide speedy justice (ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରିବା)",
-                "To increase court fees (କୋର୍ଟ ଫି ବଢ଼ାଇବା)",
-                "To reduce the number of courts (କୋର୍ଟ ସଂଖ୍ୟା କମାଇବା)",
-                "To create new taxes (ନୂଆ ଟିକସ ସୃଷ୍ଟି କରିବା)"
+                "ଟେଷ୍ଟ ଟ୍ୟୁବ",
+                "ବିକର",
+                "ଫ୍ଲାସ୍କ",
+                "କପ୍"
             ],
-            correct: 0
+            correct: 1
         },
         {
-            question: "What does BNSS strengthen? (BNSS କ'ଣ ସୁଦୃଢ଼ କରେ ?)",
+            question: "ଜଳକୁ କେଉଁ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ?",
             options: [
-                "Public confidence in the criminal justice system (ଅପରାଧ ନ୍ୟାୟ ବ୍ୟବସ୍ଥା ପ୍ରତି ଜନସାଧାରଣଙ୍କ ବିଶ୍ୱାସ)",
-                "Private business profits (ବେସରକାରୀ ବ୍ୟବସାୟର ଲାଭ)",
-                "Political parties (ରାଜନୈତିକ ଦଳ)",
-                "School examinations (ବିଦ୍ୟାଳୟ ପରୀକ୍ଷା)"
+                "ଚାମଚ",
+                "କାଠି",
+                "କାଚଦଣ୍ଡ",
+                "ବ୍ରଶ୍"
             ],
-            correct: 0
+            correct: 2
+        },
+        {
+            question: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?",
+            options: [
+                "ତଳେ ରହିଯାଏ",
+                "ଉପରକୁ ଭାସେ",
+                "ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ",
+                "ଜଳରୁ ବାହାରିଯାଏ"
+            ],
+            correct: 2
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            question: "ଏହି ପରୀକ୍ଷାରେ କେଉଁ ପଦାର୍ଥର ସ୍ଫଟିକ ବ୍ୟବହାର କରାଯାଏ ?",
+            options: [
+                "ଲୁଣ",
+                "ଚିନି",
+                "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍",
+                "ଫିଟକିରି"
+            ],
+            correct: 2
+        },
+        {
+            question: "ଲଘୁକରଣର ଅର୍ଥ କ'ଣ ?",
+            options: [
+                "ଗରମ କରିବା",
+                "ପତଳା କରିବା",
+                "ଜମାଇବା",
+                "ଛାଣିବା"
+            ],
+            correct: 1
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ କିପରି ରହେ ?",
+            options: [
+                "ବର୍ଣ୍ଣହୀନ",
+                "କଳା",
+                "ରଙ୍ଗୀନ",
+                "ଘୋଳିଆ"
+            ],
+            correct: 2
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            question: "ଗୋଟିଏ ସ୍ଫଟିକରେ କ'ଣ ରହିଥାଏ ?",
+            options: [
+                "କେତେକ କଣିକା",
+                "ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା",
+                "କୌଣସି କଣିକା ନାହିଁ",
+                "କେବଳ ଗୋଟିଏ କଣିକା"
+            ],
+            correct: 1
+        },
+        {
+            question: "ଡେଟଲ୍‌ର ଉପସ୍ଥିତି କିପରି ଜଣାପଡ଼େ ?",
+            options: [
+                "ରଙ୍ଗରୁ",
+                "ସ୍ୱାଦରୁ",
+                "ଗନ୍ଧରୁ",
+                "ଆକାରରୁ"
+            ],
+            correct: 2
+        },
+        {
+            question: "ପଦାର୍ଥର କଣିକା କିପରି ହୋଇଥାଏ ?",
+            options: [
+                "ବଡ଼",
+                "ମଧ୍ୟମ ଆକାରର",
+                "ଦୃଶ୍ୟମାନ",
+                "ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର"
+            ],
+            correct: 3
         }
 
     ]
@@ -3615,189 +3957,542 @@ mcq: {
 trueFalse: {
     questions: [
 
+        // =========================
+        // NOTE-1
+        // =========================
         {
-            question: "BNSS replaced the Code of Criminal Procedure (CrPC), 1973.",
+            question: "ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ ।",
             correct: true
         },
-
         {
-            question: "BNSS promotes the use of technology in criminal cases.",
-            correct: true
-        },
-
-        {
-            question: "BNSS discourages the use of digital technology.",
+            question: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ନଥାଏ ।",
             correct: false
         },
-
         {
-            question: "One objective of BNSS is to deliver justice quickly.",
+            question: "ଜଳବିନ୍ଦୁ ମଧ୍ୟ ଏକ ପଦାର୍ଥ ଅଟେ ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-2
+        // =========================
+        {
+            question: "ପଞ୍ଚତତ୍ତ୍ୱ ମଧ୍ୟରେ ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶ ଅନ୍ତର୍ଭୁକ୍ତ ।",
+            correct: true
+        },
+        {
+            question: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ତିନୋଟି ମୌଳିକକୁ ନେଇ ଗଠିତ ।",
+            correct: false
+        },
+        {
+            question: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ବିଭକ୍ତ କରିଛନ୍ତି ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-3
+        // =========================
+        {
+            question: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା ।",
+            correct: true
+        },
+        {
+            question: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା ।",
+            correct: false
+        },
+        {
+            question: "ବାଲି କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥର ଉଦାହରଣ ଅଟେ ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-4
+        // =========================
+        {
+            question: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।",
+            correct: true
+        },
+        {
+            question: "ଜଳକୁ କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ନାହିଁ ।",
+            correct: false
+        },
+        {
+            question: "ଏହି ପରୀକ୍ଷା ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ପ୍ରମାଣ କରେ ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            question: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନେଇ ପରୀକ୍ଷା କରାଯାଏ ।",
+            correct: true
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ଜଳ ସମ୍ପୂର୍ଣ୍ଣ ରଙ୍ଗହୀନ ହୋଇଯାଏ ।",
+            correct: false
+        },
+        {
+            question: "ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            question: "ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।",
+            correct: true
+        },
+        {
+            question: "ଦ୍ରବଣର ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ନାହିଁ ।",
+            correct: false
+        },
+        {
+            question: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟନ୍ତି ।",
             correct: true
         }
     ]
 },
-
 fillBlanks: {
     questions: [
 
+        // =========================
+        // NOTE-1
+        // =========================
         {
-            question: "BNSS replaced the Code of Criminal Procedure (___). (CrPC / IPC)",
-            answer: "CrPC"
+            question: "ଆମେ ପ୍ରଶ୍ୱାସରେ ନେଉଥିବା ___ ଏକ ପଦାର୍ଥ ଅଟେ । (ବାୟୁ / ଆଲୋକ)",
+            answer: "ବାୟୁ"
+        },
+        {
+            question: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ___ ଅଛି । (ଆୟତନ / ରଙ୍ଗ)",
+            answer: "ଆୟତନ"
+        },
+        {
+            question: "ଗୋଟିଏ ଜଳବିନ୍ଦୁ ମଧ୍ୟ ଏକ ___ ଅଟେ । (ପଦାର୍ଥ / ଗ୍ରହ)",
+            answer: "ପଦାର୍ଥ"
         },
 
+        // =========================
+        // NOTE-2
+        // =========================
         {
-            question: "BNSS was made to provide a ___ criminal procedure. (modern / ancient)",
-            answer: "modern"
+            question: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ___ ଗୋଟି ମୌଳିକକୁ ନେଇ ଗଠିତ । (ପାଞ୍ଚ / ତିନି)",
+            answer: "ପାଞ୍ଚ"
+        },
+        {
+            question: "ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ___ କୁହାଯାଏ । (ପଞ୍ଚତତ୍ତ୍ୱ / ଧାତୁ)",
+            answer: "ପଞ୍ଚତତ୍ତ୍ୱ"
+        },
+        {
+            question: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଧର୍ମ ଓ ___ ପ୍ରକୃତି ଅନୁସାରେ ବିଭକ୍ତ କରିଛନ୍ତି । (ରାସାୟନିକ / ଜୈବିକ)",
+            answer: "ରାସାୟନିକ"
         },
 
+        // =========================
+        // NOTE-3
+        // =========================
         {
-            question: "BNSS encourages the use of ___ technology. (digital / manual)",
-            answer: "digital"
+            question: "ଦୀର୍ଘକାଳ ଧରି ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ବନ୍ଧରେ ___ ପ୍ରକାର ଭିନ୍ନମତ ଥିଲା । (ଦୁଇ / ଚାରି)",
+            answer: "ଦୁଇ"
+        },
+        {
+            question: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ___ ଅଟେ । (ଅବିଚ୍ଛିନ୍ନ / ତରଳ)",
+            answer: "ଅବିଚ୍ଛିନ୍ନ"
+        },
+        {
+            question: "ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ ___ କୁ ନେଇ ଗଠିତ । (କଣିକା / ତରଙ୍ଗ)",
+            answer: "କଣିକା"
         },
 
+        // =========================
+        // NOTE-4
+        // =========================
         {
-            question: "The main objective of BNSS is to deliver ___ quickly. (justice / punishment)",
-            answer: "justice"
+            question: "ଜଳକୁ ___ ସାହାଯ୍ୟରେ ଗୋଳାଇବାକୁ ହେବ । (କାଚଦଣ୍ଡ / ଚାମଚ)",
+            answer: "କାଚଦଣ୍ଡ"
+        },
+        {
+            question: "ଚିନି ବା ଲୁଣ ଜଳରେ ମିଶି ___ ରେ ବ୍ୟାପିଯାଏ । (ଚାରିଆଡ଼େ / ଉପରକୁ)",
+            answer: "ଚାରିଆଡ଼େ"
+        },
+        {
+            question: "ଏହି ପରୀକ୍ଷା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ ___ କୁ ନେଇ ଗଠିତ । (କଣିକା / ପର୍ବତ)",
+            answer: "କଣିକା"
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            question: "2-3ଟି ___ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନେବାକୁ ହେବ । (ପୋଟାସିୟମ / ସୋଡିୟମ)",
+            answer: "ପୋଟାସିୟମ"
+        },
+        {
+            question: "ଦ୍ରବଣକୁ ବାରମ୍ବାର ପତଳା କରିବା ପ୍ରକ୍ରିୟାକୁ ___ କୁହାଯାଏ । (ଲଘୁକରଣ / ବାଷ୍ପୀକରଣ)",
+            answer: "ଲଘୁକରଣ"
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ ___ ହୋଇ ରହିଥାଏ । (ରଙ୍ଗୀନ / ବର୍ଣ୍ଣହୀନ)",
+            answer: "ରଙ୍ଗୀନ"
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            question: "ଗୋଟିଏ ସ୍ଫଟିକରେ ___ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ । (ଅସଂଖ୍ୟ / ଅଳ୍ପ)",
+            answer: "ଅସଂଖ୍ୟ"
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଡେଟଲ୍‌ର ___ ରହିଥାଏ । (ଗନ୍ଧ / ରଙ୍ଗ)",
+            answer: "ଗନ୍ଧ"
+        },
+        {
+            question: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ___ କ୍ଷୁଦ୍ର ଅଟନ୍ତି । (ଅତ୍ୟନ୍ତ / ସାମାନ୍ୟ)",
+            answer: "ଅତ୍ୟନ୍ତ"
         }
     ]
 },
-
+    
 matching: {
     pairs: [
-        { left: "BNSS", right: "📘 New criminal procedure law." },
-        { left: "CrPC, 1973", right: "📖 Replaced by BNSS." },
-        { left: "Technology", right: "💻 Used in criminal cases." },
-        { left: "Victims", right: "🛡️ Rights are protected." },
-        { left: "Time limits", right: "⏳ Given for many procedures." },
-        { left: "Speedy Justice", right: "⚖️ Main objective of BNSS." }
+        { left: "ପଦାର୍ଥ", right: "🧪 ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ସମସ୍ତ ବସ୍ତୁ ଗଢ଼ାଯାଇଛି ।" },
+        { left: "ବାୟୁ", right: "💨 ଏକ ପଦାର୍ଥ ଅଟେ ।" },
+        { left: "ବସ୍ତୁତ୍ୱ", right: "⚖️ ପଦାର୍ଥର ପରିମାଣ ।" },
+        { left: "ଆୟତନ", right: "📦 ପଦାର୍ଥ ଯେତିକି ସ୍ଥାନ ଦଖଲ କରେ ।" },
+        { left: "ପଞ୍ଚତତ୍ତ୍ୱ", right: "🌍 ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶ ।" },
+        { left: "ଭୌତିକ ଧର୍ମ", right: "👀 ଦେଖାଯାଉଥିବା ଗୁଣ ।" },
+        { left: "କଣିକା", right: "🔬 ପଦାର୍ଥର ଅତି ଛୋଟ ଅଂଶ ।" },
+        { left: "ବାଲି", right: "🏖️ କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥର ଉଦାହରଣ ।" },
+        { left: "ଚିନି ବା ଲୁଣ", right: "💧 ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।" },
+        { left: "କାଚଦଣ୍ଡ", right: "🥄 ଜଳକୁ ଗୋଳାଇବା ପାଇଁ ବ୍ୟବହୃତ ହୁଏ ।" },
+        { left: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍", right: "🟣 ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।" },
+        { left: "ଲଘୁକରଣ", right: "🧴 ଦ୍ରବଣକୁ ପତଳା କରିବା ।" },
+        { left: "ସ୍ଫଟିକ", right: "💎 ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ଧାରଣ କରେ ।" },
+        { left: "ଡେଟଲ୍", right: "🌿 ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଗନ୍ଧ ରହିଥାଏ ।" },
+        { left: "ପଦାର୍ଥର କଣିକା", right: "🔭 ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଓ କଳ୍ପନାର ବାହାରେ ।" }
     ]
 },
-
+    
 arrange: {
     questions: [
 
+        // =========================
+        // NOTE-1
+        // =========================
         {
-            words: ["BNSS", "replaced", "the", "CrPC", "1973"],
-            correct: "BNSS replaced the CrPC, 1973."
+            words: ["ବାୟୁ", "ଏକ", "ପଦାର୍ଥ", "ଅଟେ"],
+            correct: "ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ ।"
+        },
+        {
+            words: ["ଖାଦ୍ୟ", "ଏକ", "ପଦାର୍ଥ", "ଅଟେ"],
+            correct: "ଖାଦ୍ୟ ଏକ ପଦାର୍ଥ ଅଟେ ।"
+        },
+        {
+            words: ["ପ୍ରତ୍ୟେକ", "ପଦାର୍ଥର", "ବସ୍ତୁତ୍ୱ", "ଓ", "ଆୟତନ", "ଅଛି"],
+            correct: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଅଛି ।"
         },
 
+        // =========================
+        // NOTE-2
+        // =========================
         {
-            words: ["BNSS", "promotes", "the", "use", "of", "technology"],
-            correct: "BNSS promotes the use of technology."
+            words: ["ଏହାକୁ", "ପଞ୍ଚତତ୍ତ୍ୱ", "କୁହାଯାଏ"],
+            correct: "ଏହାକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।"
+        },
+        {
+            words: ["ପଞ୍ଚତତ୍ତ୍ୱ", "ହେଲା", "ମାଟି", "ଜଳ", "ବାୟୁ", "ଅଗ୍ନି", "ଓ", "ଆକାଶ"],
+            correct: "ପଞ୍ଚତତ୍ତ୍ୱ ହେଲା ମାଟି ଜଳ ବାୟୁ ଅଗ୍ନି ଓ ଆକାଶ ।"
+        },
+        {
+            words: ["ଆମେ", "ପଦାର୍ଥର", "ଭୌତିକ", "ଗୁଣ", "ସମ୍ପର୍କରେ", "ଜାଣିବା"],
+            correct: "ଆମେ ପଦାର୍ଥର ଭୌତିକ ଗୁଣ ସମ୍ପର୍କରେ ଜାଣିବା ।"
+        },
+
+        // =========================
+        // NOTE-3
+        // =========================
+        {
+            words: ["ପଦାର୍ଥ", "ଅବିଚ୍ଛିନ୍ନ", "ଅଟେ"],
+            correct: "ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଅଟେ ।"
+        },
+        {
+            words: ["ପଦାର୍ଥ", "କଣିକାକୁ", "ନେଇ", "ଗଠିତ"],
+            correct: "ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।"
+        },
+        {
+            words: ["ବାଲି", "ଏହାର", "ଏକ", "ଉଦାହରଣ", "ଅଟେ"],
+            correct: "ବାଲି ଏହାର ଏକ ଉଦାହରଣ ଅଟେ ।"
+        },
+
+        // =========================
+        // NOTE-4
+        // =========================
+        {
+            words: ["ବିକରରେ", "ଅଧା", "ଜଳ", "ଭରିବାକୁ", "ହେବ"],
+            correct: "ବିକରରେ ଅଧା ଜଳ ଭରିବାକୁ ହେବ ।"
+        },
+        {
+            words: ["ଚିନି", "ବା", "ଲୁଣ", "ଜଳରେ", "ଚାରିଆଡ଼େ", "ବ୍ୟାପିଯାଏ"],
+            correct: "ଚିନି ବା ଲୁଣ ଜଳରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।"
+        },
+        {
+            words: ["ପଦାର୍ଥ", "କଣିକାକୁ", "ନେଇ", "ଗଠିତ"],
+            correct: "ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।"
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            words: ["ପୋଟାସିୟମ", "ପରମାଙ୍ଗାନେଟ୍‌ର", "ସ୍ଫଟିକ", "ନେବାକୁ", "ହେବ"],
+            correct: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନେବାକୁ ହେବ ।"
+        },
+        {
+            words: ["ଦ୍ରବଣର", "ଲଘୁକରଣ", "ହେବ"],
+            correct: "ଦ୍ରବଣର ଲଘୁକରଣ ହେବ ।"
+        },
+        {
+            words: ["ଜଳ", "ରଙ୍ଗୀନ", "ହୋଇ", "ରହିଥାଏ"],
+            correct: "ଜଳ ରଙ୍ଗୀନ ହୋଇ ରହିଥାଏ ।"
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            words: ["ଗୋଟିଏ", "ସ୍ଫଟିକରେ", "ଅସଂଖ୍ୟ", "କ୍ଷୁଦ୍ର", "କଣିକା", "ରହିଥାଏ"],
+            correct: "ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।"
+        },
+        {
+            words: ["ଡେଟଲ୍‌ର", "ଉପସ୍ଥିତି", "ଜଣାପଡ଼େ"],
+            correct: "ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।"
+        },
+        {
+            words: ["ପଦାର୍ଥର", "କଣିକାଗୁଡ଼ିକ", "ଅତ୍ୟନ୍ତ", "କ୍ଷୁଦ୍ର", "ଅଟନ୍ତି"],
+            correct: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟନ୍ତି ।"
         }
     ]
 },
-
+    
 stq: {
     questions: [
 
+        // =========================
+        // NOTE-1
+        // =========================
         {
-            question: "What is BNSS? (BNSS କ'ଣ ?)",
-            answer: "BNSS is India's new criminal procedure law.\n\n(BNSS ହେଉଛି ଭାରତର ନୂଆ ଅପରାଧ ପ୍ରକ୍ରିୟା ଆଇନ ।)"
+            question: "ପଦାର୍ଥ କ'ଣ ?",
+            answer: "ଏହି ବିଶ୍ଵର ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଗଢ଼ା, ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ । ସମସ୍ତ ବସ୍ତୁ ପଦାର୍ଥରେ ଗଠିତ । ବୈଜ୍ଞାନିକମାନେ ଏହାକୁ ପଦାର୍ଥ ବୋଲି କହିଛନ୍ତି ।"
+        },
+        {
+            question: "ବାୟୁ କାହିଁକି ପଦାର୍ଥ ବୋଲି କୁହାଯାଏ ?",
+            answer: "ଆମେ ପ୍ରଶ୍ୱାସରେ ନେଉଥିବା ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ । ଏହାର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଅଛି । ତେଣୁ ବାୟୁକୁ ପଦାର୍ଥ ବୋଲି କୁହାଯାଏ ।"
+        },
+        {
+            question: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର କେଉଁ ଦୁଇଟି ଗୁଣ ଥାଏ ?",
+            answer: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ । ବସ୍ତୁତ୍ୱ ହେଉଛି ପଦାର୍ଥର ପରିମାଣ । ଆୟତନ ହେଉଛି ପଦାର୍ଥ ଦଖଲ କରୁଥିବା ସ୍ଥାନ ।"
         },
 
+        // =========================
+        // NOTE-2
+        // =========================
         {
-            question: "Why was BNSS made? (BNSS କାହିଁକି ପ୍ରଣୟନ କରାଗଲା ?)",
-            answer: "BNSS was made to provide a modern criminal procedure.\n\n(BNSS ଆଧୁନିକ ଅପରାଧ ପ୍ରକ୍ରିୟା ପ୍ରଦାନ କରିବା ପାଇଁ ପ୍ରଣୟନ କରାଗଲା ।)"
+            question: "ପଞ୍ଚତତ୍ତ୍ୱ କ'ଣ ?",
+            answer: "ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ । ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନେ ଏହି ଧାରଣା ଦେଇଥିଲେ । ସେମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ଏହାକୁ ନେଇ ଗଠିତ ।"
+        },
+        {
+            question: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କର ମତ କ'ଣ ଥିଲା ?",
+            answer: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ପାଞ୍ଚଟି ମୌଳିକକୁ ନେଇ ଗଠିତ । ସଜୀବ ଓ ନିର୍ଜୀବ ବସ୍ତୁ ମଧ୍ୟ ଏହି ପାଞ୍ଚଟି ଉପାଦାନରେ ତିଆରି । ଏହାକୁ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା କୁହାଯାଏ ।"
+        },
+        {
+            question: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ କିପରି ବିଭକ୍ତ କରିଛନ୍ତି ?",
+            answer: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରିଛନ୍ତି । ସେମାନେ ପଦାର୍ଥର ଗୁଣ ଆଧାରରେ ଏହାର ଅଧ୍ୟୟନ କରନ୍ତି । ଏହା ବିଜ୍ଞାନର ଆଧୁନିକ ଧାରଣା ଅଟେ ।"
         },
 
+        // =========================
+        // NOTE-3
+        // =========================
         {
-            question: "What does BNSS encourage? (BNSS କ'ଣକୁ ପ୍ରୋତ୍ସାହନ ଦିଏ ?)",
-            answer: "BNSS encourages digital technology.\n\n(BNSS ଡିଜିଟାଲ ପ୍ରଯୁକ୍ତିକୁ ପ୍ରୋତ୍ସାହନ ଦିଏ ।)"
+            question: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ କେତେ ପ୍ରକାର ମତ ଥିଲା ?",
+            answer: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା । କେତେକ ଲୋକ ପଦାର୍ଥକୁ ଅବିଚ୍ଛିନ୍ନ ବୋଲି ମନେ କରୁଥିଲେ । ଅନ୍ୟମାନେ ଏହାକୁ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି କହୁଥିଲେ ।"
+        },
+        {
+            question: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?",
+            answer: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା । କାଠ, କାଚ ଓ କାଗଜ ଏହାର ଉଦାହରଣ ଭାବେ ଦିଆଯାଇଥିଲା । ସେମାନେ ଭାବୁଥିଲେ ପଦାର୍ଥ ଛୋଟ ଅଂଶରେ ଗଠିତ ନୁହେଁ ।"
+        },
+        {
+            question: "ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?",
+            answer: "ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା । ବାଲି ଏହାର ଏକ ଉଦାହରଣ ଅଟେ । ପରୀକ୍ଷା ମାଧ୍ୟମରେ ଏହି ମତ ସଠିକ୍ ବୋଲି ପ୍ରମାଣିତ ହୋଇଥିଲା ।"
         },
 
+        // =========================
+        // NOTE-4
+        // =========================
         {
-            question: "What is the main objective of BNSS? (BNSS ର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ କ'ଣ ?)",
-            answer: "The main objective of BNSS is to deliver speedy justice.\n\n(BNSS ର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ ହେଉଛି ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରିବା ।)"
+            question: "ବିକରରେ କ'ଣ ପକାଯାଏ ?",
+            answer: "ବିକରରେ ଲୁଣ କିମ୍ବା ଚିନି ପକାଯାଏ । ଏହାକୁ ଜଳରେ ମିଶାଇ ପରୀକ୍ଷା କରାଯାଏ । ଏହାଦ୍ୱାରା ପଦାର୍ଥର କଣିକା ବିଷୟରେ ଜାଣିହୁଏ ।"
+        },
+        {
+            question: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?",
+            answer: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ । କିଛି ସମୟ ପରେ ସେଗୁଡ଼ିକ ଦେଖାଯାଏ ନାହିଁ । କିନ୍ତୁ ସେମାନେ ଜଳ ମଧ୍ୟରେ ରହିଥାନ୍ତି ।"
+        },
+        {
+            question: "ଏହି ପରୀକ୍ଷା କ'ଣ ପ୍ରମାଣ କରେ ?",
+            answer: "ଏହି ପରୀକ୍ଷା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ । ଲୁଣ ବା ଚିନିର କଣିକା ଜଳ ମଧ୍ୟରେ ବ୍ୟାପିଯାଏ । ଏହା ପଦାର୍ଥର କଣିକା ଥିବାର ପ୍ରମାଣ ଅଟେ ।"
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            question: "କେଉଁ ପଦାର୍ଥର ସ୍ଫଟିକ ନିଆଯାଏ ?",
+            answer: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନିଆଯାଏ । ଏହାକୁ ଜଳରେ ଦ୍ରବୀଭୂତ କରାଯାଏ । ପରେ ଏହା ଉପରେ ପରୀକ୍ଷା କରାଯାଏ ।"
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ କିପରି ରହେ ?",
+            answer: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ ରଙ୍ଗୀନ ହୋଇ ରହେ । ଏହା ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ପ୍ରଭାବ ଦର୍ଶାଏ । ଏଥିରୁ କଣିକାର କ୍ଷୁଦ୍ରତା ଜଣାପଡ଼େ ।"
+        },
+        {
+            question: "ଏହି ପରୀକ୍ଷା କ'ଣ ସୂଚାଏ ?",
+            answer: "ଏହି ପରୀକ୍ଷା ସୂଚାଏ ଯେ ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ । ଏହା ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ବୋଲି ଦର୍ଶାଏ । କଣିକାର ପ୍ରଭାବ ସହଜରେ ଦେଖାଯାଏ ।"
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            question: "ଗୋଟିଏ ସ୍ଫଟିକରେ କ'ଣ ରହିଥାଏ ?",
+            answer: "ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ । ଏହି କଣିକାଗୁଡ଼ିକ ଆହୁରି ବିଭାଜିତ ହୋଇପାରନ୍ତି । ସେମାନଙ୍କ ସଂଖ୍ୟା ବହୁତ ଅଧିକ ଥାଏ ।"
+        },
+        {
+            question: "ଡେଟଲ୍‌ର ଉପସ୍ଥିତି କିପରି ଜଣାପଡ଼େ ?",
+            answer: "ଦ୍ରବଣର ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ । ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଏହାର ଗନ୍ଧ ରହିଥାଏ । ଏହା ଡେଟଲ୍‌ର କଣିକା ଥିବାର ସୂଚନା ଦିଏ ।"
+        },
+        {
+            question: "ପଦାର୍ଥର କଣିକା କିପରି ହୋଇଥାଏ ?",
+            answer: "ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ । ସେମାନଙ୍କର କ୍ଷୁଦ୍ରତାକୁ ସହଜରେ କଳ୍ପନା କରିହୁଏ ନାହିଁ । ସେମାନଙ୍କ ଆକାର ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।"
         }
+
     ]
 }
 },
 ],
 
 summary: {
-    audio: "",
+    audio: "ପଦାର୍ଥ କ'ଣ, ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା, ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି କିପରି ଜଣାପଡ଼େ, ଲୁଣ ଓ ଚିନି ଜଳରେ କେଉଁଠି ଯାଏ ଏବଂ ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକର ଆକାର କିପରି ଅଟେ ?",
 
     content: {
-        introduction: "This answer explains the main objectives of BNSS. It tells us how BNSS improves the criminal justice system. It also explains why BNSS uses modern technology and ensures fair justice. (ଏହି ଉତ୍ତରରେ BNSS ର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ ବିଷୟରେ କୁହାଯାଇଛି । ଏହା BNSS କିପରି ଅପରାଧ ନ୍ୟାୟ ବ୍ୟବସ୍ଥାକୁ ଉନ୍ନତ କରେ ତାହା ବୁଝାଏ । ଏହା ଆହୁରି କହେ ଯେ BNSS କାହିଁକି ଆଧୁନିକ ପ୍ରଯୁକ୍ତି ବ୍ୟବହାର କରେ ଏବଂ ନ୍ୟାୟସଙ୍ଗତ ନ୍ୟାୟକୁ ସୁନିଶ୍ଚିତ କରେ ।)",
+        introduction: "ଏହି ପାଠରେ ପଦାର୍ଥର ଅର୍ଥ, ତାହାର ଗୁଣ, ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା, ପଦାର୍ଥର କଣିକା ଗଠନ ଏବଂ କଣିକାର କ୍ଷୁଦ୍ର ଆକାର ବିଷୟରେ ସୁନ୍ଦର ଭାବରେ ବର୍ଣ୍ଣନା କରାଯାଇଛି । ଆସନ୍ତୁ ଏ ବିଷୟରେ ଜାଣିବା ।",
 
         sentences: [
             {
-                heading: "Speedy Justice (ଶୀଘ୍ର ନ୍ୟାୟ)",
-                text: "• The main objective of BNSS is to provide speedy justice.\n\n(• BNSS ର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ ହେଉଛି ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରିବା ।)\n\n• It reduces unnecessary delay in criminal cases.\n\n(• ଏହା ଅପରାଧ ମାମଲାର ଅନାବଶ୍ୟକ ବିଳମ୍ବକୁ କମାଏ ।)"
+                heading: "ପଦାର୍ଥର ଅର୍ଥ",
+                text: "ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଗଢ଼ା ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ । ବାୟୁ, ଖାଦ୍ୟ, ପଥର, ମେଘ, ତାରା, ଉଦ୍ଭିଦ, ପଶୁପକ୍ଷୀ, ଜଳବିନ୍ଦୁ ଓ ବାଲିକଣି ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ ।"
             },
             {
-                heading: "Fair Investigation and Trial (ନିରପେକ୍ଷ ତଦନ୍ତ ଓ ବିଚାର)",
-                text: "• BNSS ensures a fair investigation.\n\n(• BNSS ନିରପେକ୍ଷ ତଦନ୍ତକୁ ସୁନିଶ୍ଚିତ କରେ ।)\n\n• It also ensures a fair trial.\n\n(• ଏହା ନିରପେକ୍ଷ ବିଚାରକୁ ମଧ୍ୟ ସୁନିଶ୍ଚିତ କରେ ।)"
+                heading: "ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା",
+                text: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ପଞ୍ଚତତ୍ତ୍ୱ ଅର୍ଥାତ୍ ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ନେଇ ଗଠିତ । ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ତାହାର ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଅଧ୍ୟୟନ କରନ୍ତି ।"
             },
             {
-                heading: "Transparency and Technology (ସ୍ୱଚ୍ଛତା ଓ ପ୍ରଯୁକ୍ତି)",
-                text: "• BNSS increases transparency in criminal proceedings.\n\n(• BNSS ଅପରାଧ ପ୍ରକ୍ରିୟାରେ ସ୍ୱଚ୍ଛତା ବଢ଼ାଏ ।)\n\n• It uses modern technology for better administration of justice.\n\n(• ଏହା ଉତ୍ତମ ନ୍ୟାୟ ପ୍ରଶାସନ ପାଇଁ ଆଧୁନିକ ପ୍ରଯୁକ୍ତିର ବ୍ୟବହାର କରେ ।)"
+                heading: "ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ",
+                text: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ପୂର୍ବରୁ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ଓ ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା । ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ଜଣାପଡ଼ିଲା ।"
             },
             {
-                heading: "Public Confidence (ଜନସାଧାରଣଙ୍କ ବିଶ୍ୱାସ)",
-                text: "• BNSS strengthens public confidence in the criminal justice system.\n\n(• BNSS ଅପରାଧ ନ୍ୟାୟ ବ୍ୟବସ୍ଥା ପ୍ରତି ଜନସାଧାରଣଙ୍କ ବିଶ୍ୱାସକୁ ସୁଦୃଢ଼ କରେ ।)\n\n• It makes the justice system more trustworthy.\n\n(• ଏହା ନ୍ୟାୟ ବ୍ୟବସ୍ଥାକୁ ଅଧିକ ବିଶ୍ୱସନୀୟ କରେ ।)"
+                heading: "ଲୁଣ ଓ ଚିନିର ପରୀକ୍ଷା",
+                text: "ଜଳରେ ଲୁଣ ବା ଚିନି ମିଶାଇ ଗୋଳାଇଲେ ସେଗୁଡ଼ିକ ଦେଖାଯାଏ ନାହିଁ, କିନ୍ତୁ ଜଳ ମଧ୍ୟରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ । ଏହି ପରୀକ୍ଷାରୁ ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ଏବଂ ସେହି କଣିକାଗୁଡ଼ିକ ଜଳ ମଧ୍ୟରେ ପ୍ରସାରିତ ହୋଇପାରନ୍ତି ।"
+            },
+            {
+                heading: "କଣିକାର ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର",
+                text: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ଓ ଡେଟଲ୍‌ର ପରୀକ୍ଷାରୁ ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ । ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ରଙ୍ଗ ଓ ଗନ୍ଧ ରହିଥାଏ । ଏହା ପ୍ରମାଣ କରେ ଯେ ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।"
             }
         ],
 
-        conclusion: "The objectives of BNSS are to provide speedy justice, ensure a fair investigation and trial, increase transparency, use modern technology and strengthen public confidence in the criminal justice system. These objectives help in delivering better justice. (BNSS ର ଉଦ୍ଦେଶ୍ୟ ହେଉଛି ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରିବା, ନିରପେକ୍ଷ ତଦନ୍ତ ଓ ବିଚାରକୁ ସୁନିଶ୍ଚିତ କରିବା, ସ୍ୱଚ୍ଛତା ବଢ଼ାଇବା, ଆଧୁନିକ ପ୍ରଯୁକ୍ତି ବ୍ୟବହାର କରିବା ଏବଂ ଅପରାଧ ନ୍ୟାୟ ବ୍ୟବସ୍ଥା ପ୍ରତି ଜନସାଧାରଣଙ୍କ ବିଶ୍ୱାସକୁ ସୁଦୃଢ଼ କରିବା । ଏହି ଉଦ୍ଦେଶ୍ୟଗୁଡ଼ିକ ଉତ୍ତମ ନ୍ୟାୟ ପ୍ରଦାନରେ ସାହାଯ୍ୟ କରେ ।)"
+        conclusion: "ପଦାର୍ଥ ହେଉଛି ସମସ୍ତ ବସ୍ତୁର ମୌଳିକ ଗଠନକାରୀ ଦ୍ରବ୍ୟ । ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ । ପଦାର୍ଥର ଗଠନ ଓ ଗୁଣ ବିଷୟରେ ଜ୍ଞାନ ଆମକୁ ବୈଜ୍ଞାନିକ ଚିନ୍ତାଧାରା ବିକାଶ କରିବାରେ ସାହାଯ୍ୟ କରେ ।"
     },
 
+
 questions: [
-{
-audio: "",
-question: "What is BNSS? (BNSS କ'ଣ ?)",
-introduction: "BNSS is India's new criminal procedure law. (BNSS ହେଉଛି ଭାରତର ନୂଆ ଅପରାଧ ପ୍ରକ୍ରିୟା ଆଇନ ।) The following points explain BNSS. (ନିମ୍ନଲିଖିତ ବିନ୍ଦୁଗୁଡ଼ିକ BNSS ବିଷୟରେ ବୁଝାଏ ।)",
-points: [
-"BNSS means Bharatiya Nagarik Suraksha Sanhita, 2023. (BNSS ର ଅର୍ଥ ହେଉଛି ଭାରତୀୟ ନାଗରିକ ସୁରକ୍ଷା ସଂହିତା, ୨୦୨୩ ।)",
-"It is India's new criminal procedure law. (ଏହା ଭାରତର ନୂଆ ଅପରାଧ ପ୍ରକ୍ରିୟା ଆଇନ ।)",
-"It explains criminal procedure. (ଏହା ଅପରାଧ ପ୍ରକ୍ରିୟା ବିଷୟରେ କହେ ।)",
-"It replaced the CrPC, 1973. (ଏହା ୧୯୭୩ ମସିହାର CrPC କୁ ବଦଳାଇଛି ।)",
-"It came into force on 1 July 2024. (ଏହା ୧ ଜୁଲାଇ ୨୦୨୪ ଠାରୁ କାର୍ଯ୍ୟକାରୀ ହୋଇଛି ।)"
-],
-conclusion: "BNSS is India's new criminal procedure law. (BNSS ହେଉଛି ଭାରତର ନୂଆ ଅପରାଧ ପ୍ରକ୍ରିୟା ଆଇନ ।) It guides criminal procedures in India. (ଏହା ଭାରତରେ ଅପରାଧ ପ୍ରକ୍ରିୟାକୁ ମାର୍ଗଦର୍ଶନ କରେ ।)"
-},
-{
-audio: "",
-question: "Why was BNSS made? (BNSS କାହିଁକି ପ୍ରଣୟନ କରାଗଲା ?)",
-introduction: "BNSS was made to improve the criminal justice system. (ଅପରାଧ ନ୍ୟାୟ ବ୍ୟବସ୍ଥାକୁ ଉନ୍ନତ କରିବା ପାଇଁ BNSS ପ୍ରଣୟନ କରାଗଲା ।) The following points explain its purpose. (ନିମ୍ନଲିଖିତ ବିନ୍ଦୁଗୁଡ଼ିକ ଏହାର ଉଦ୍ଦେଶ୍ୟ ବୁଝାଏ ।)",
-points: [
-"It provides a modern criminal procedure. (ଏହା ଏକ ଆଧୁନିକ ଅପରାଧ ପ୍ରକ୍ରିୟା ପ୍ରଦାନ କରେ ।)",
-"It makes justice faster. (ଏହା ନ୍ୟାୟକୁ ଶୀଘ୍ର କରେ ।)",
-"It promotes technology. (ଏହା ପ୍ରଯୁକ୍ତିର ବ୍ୟବହାରକୁ ପ୍ରୋତ୍ସାହନ ଦିଏ ।)",
-"It protects the rights of victims, accused persons and witnesses. (ଏହା ପୀଡ଼ିତ, ଅଭିଯୁକ୍ତ ଓ ସାକ୍ଷୀଙ୍କ ଅଧିକାରକୁ ସୁରକ୍ଷା ଦିଏ ।)",
-"It helps in fair and speedy justice. (ଏହା ନ୍ୟାୟସଙ୍ଗତ ଓ ଶୀଘ୍ର ନ୍ୟାୟରେ ସାହାଯ୍ୟ କରେ ।)"
-],
-conclusion: "BNSS was made for a better justice system. (ଉନ୍ନତ ନ୍ୟାୟ ବ୍ୟବସ୍ଥା ପାଇଁ BNSS ପ୍ରଣୟନ କରାଗଲା ।) It provides fair and speedy justice. (ଏହା ନ୍ୟାୟସଙ୍ଗତ ଓ ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରେ ।)"
-},
-{
-audio: "",
-question: "What are the main features of BNSS? (BNSS ର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ କ'ଣ ?)",
-introduction: "BNSS has many important features. (BNSS ର ଅନେକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ବୈଶିଷ୍ଟ୍ୟ ଅଛି ।) The following points explain these features. (ନିମ୍ନଲିଖିତ ବିନ୍ଦୁଗୁଡ଼ିକ ଏହି ବୈଶିଷ୍ଟ୍ୟଗୁଡ଼ିକୁ ବୁଝାଏ ।)",
-points: [
-"It encourages digital technology. (ଏହା ଡିଜିଟାଲ ପ୍ରଯୁକ୍ତିକୁ ପ୍ରୋତ୍ସାହନ ଦିଏ ।)",
-"It provides time limits. (ଏହା ସମୟ ସୀମା ନିର୍ଦ୍ଧାରଣ କରେ ।)",
-"It strengthens the rights of victims. (ଏହା ପୀଡ଼ିତଙ୍କ ଅଧିକାରକୁ ସୁଦୃଢ଼ କରେ ।)",
-"It improves investigation and trial. (ଏହା ତଦନ୍ତ ଓ ବିଚାରକୁ ଉନ୍ନତ କରେ ।)",
-"It makes the justice system transparent and efficient. (ଏହା ନ୍ୟାୟ ବ୍ୟବସ୍ଥାକୁ ସ୍ୱଚ୍ଛ ଓ କାର୍ଯ୍ୟକ୍ଷମ କରେ ।)"
-],
-conclusion: "BNSS has many useful features. (BNSS ର ଅନେକ ଉପଯୋଗୀ ବୈଶିଷ୍ଟ୍ୟ ଅଛି ।) These features improve the justice system. (ଏହି ବୈଶିଷ୍ଟ୍ୟଗୁଡ଼ିକ ନ୍ୟାୟ ବ୍ୟବସ୍ଥାକୁ ଉନ୍ନତ କରେ ।)"
-},
-{
-audio: "",
-question: "What is the main objective of BNSS? (BNSS ର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ କ'ଣ ?)",
-introduction: "BNSS has important objectives. (BNSS ର ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଉଦ୍ଦେଶ୍ୟ ଅଛି ।) The following points explain its main objective. (ନିମ୍ନଲିଖିତ ବିନ୍ଦୁଗୁଡ଼ିକ ଏହାର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ ବୁଝାଏ ।)",
-points: [
-"It delivers speedy justice. (ଏହା ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରେ ।)",
-"It ensures a fair investigation. (ଏହା ନିରପେକ୍ଷ ତଦନ୍ତକୁ ସୁନିଶ୍ଚିତ କରେ ।)",
-"It ensures a fair trial. (ଏହା ନିରପେକ୍ଷ ବିଚାରକୁ ସୁନିଶ୍ଚିତ କରେ ।)",
-"It increases transparency. (ଏହା ସ୍ୱଚ୍ଛତା ବଢ଼ାଏ ।)",
-"It strengthens public confidence. (ଏହା ଜନସାଧାରଣଙ୍କ ବିଶ୍ୱାସକୁ ସୁଦୃଢ଼ କରେ ।)"
-],
-conclusion: "The main objective of BNSS is speedy justice. (BNSS ର ମୁଖ୍ୟ ଉଦ୍ଦେଶ୍ୟ ହେଉଛି ଶୀଘ୍ର ନ୍ୟାୟ ପ୍ରଦାନ କରିବା ।) It makes the justice system fair and trustworthy. (ଏହା ନ୍ୟାୟ ବ୍ୟବସ୍ଥାକୁ ନିରପେକ୍ଷ ଓ ବିଶ୍ୱସନୀୟ କରେ ।)"
-}
-]
-                
+    {
+        audio: "",
+        question: "ପଦାର୍ଥର ଅର୍ଥ ଓ ଏହାର ମୌଳିକ ଗୁଣଗୁଡ଼ିକ ବିଷୟରେ ଲେଖ ।",
+        introduction: "ଆମ ଚାରିପାଖରେ ଥିବା ବସ୍ତୁଗୁଡ଼ିକର ଗଠନ ଓ ଗୁଣ ବୁଝିବା ପାଇଁ ପଦାର୍ଥ ସମ୍ପର୍କରେ ଜାଣିବା ଆବଶ୍ୟକ ।",
+        points: [
+            "ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଗଢ଼ା ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ ।",
+            "ବାୟୁ, ଖାଦ୍ୟ, ପଥର, ମେଘ ଓ ତାରା ସବୁ ପଦାର୍ଥ ଅଟନ୍ତି ।",
+            "ଉଦ୍ଭିଦ, ପଶୁପକ୍ଷୀ ଓ ଜଳବିନ୍ଦୁ ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ ।",
+            "ପ୍ରତ୍ୟେକ ପଦାର୍ଥ କିଛି ସ୍ଥାନ ଅଧିକାର କରିଥାଏ ।",
+            "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ରହିଥାଏ ।"
+        ],
+        conclusion: "ଆମ ଚାରିପାଖରେ ଥିବା ସମସ୍ତ ବସ୍ତୁ ପଦାର୍ଥରେ ଗଠିତ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ, ଯାହା ତାହାର ମୌଳିକ ଗୁଣ ଅଟେ ।"
+    },
+    {
+        audio: "",
+        question: "ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା ବିଷୟରେ ଲେଖ ।",
+        introduction: "ପଦାର୍ଥର ଗଠନ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ସମୟରେ ଭିନ୍ନ ଭିନ୍ନ ଧାରଣା ପ୍ରଚଳିତ ଥିଲା ।",
+        points: [
+            "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନେ ସମସ୍ତ ବସ୍ତୁକୁ ପଞ୍ଚତତ୍ତ୍ୱରେ ଗଠିତ ବୋଲି ମନେ କରୁଥିଲେ ।",
+            "ପଞ୍ଚତତ୍ତ୍ୱ ହେଲା ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶ ।",
+            "ସଜୀବ ଓ ନିର୍ଜୀବ ସମସ୍ତ ବସ୍ତୁ ଏହି ପାଞ୍ଚଟି ଉପାଦାନରେ ଗଠିତ ବୋଲି ସେମାନେ କହୁଥିଲେ ।",
+            "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣ ଅନୁସାରେ ଅଧ୍ୟୟନ କରନ୍ତି ।",
+            "ବିଜ୍ଞାନର ଉନ୍ନତି ସହିତ ପଦାର୍ଥ ସମ୍ପର୍କରେ ନୂତନ ଜ୍ଞାନ ମିଳିଛି ।"
+        ],
+        conclusion: "ପ୍ରାଚୀନ କାଳରେ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ପ୍ରଚଳିତ ଥିଲା, କିନ୍ତୁ ଆଧୁନିକ ବିଜ୍ଞାନ ପଦାର୍ଥର ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣ ଆଧାରରେ ଅଧିକ ସଠିକ୍ ଜ୍ଞାନ ପ୍ରଦାନ କରିଛି ।"
+    },
+    {
+        audio: "",
+        question: "ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି କିପରି ଜଣାପଡ଼େ ?",
+        introduction: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ବିଭିନ୍ନ ମତ ଥିଲେ ମଧ୍ୟ ପରୀକ୍ଷା ମାଧ୍ୟମରେ ସଠିକ୍ ତଥ୍ୟ ଜଣାପଡ଼ିଛି ।",
+        points: [
+            "ଦୀର୍ଘ ସମୟ ଧରି ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା ।",
+            "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
+            "ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା ।",
+            "ବାଲି କଣିକାଯୁକ୍ତ ପଦାର୍ଥର ଏକ ଉଦାହରଣ ଅଟେ ।",
+            "ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ଜଣାପଡ଼ିଲା ।"
+        ],
+        conclusion: "ବୈଜ୍ଞାନିକ ପରୀକ୍ଷାରୁ ଜଣାପଡ଼ିଛି ଯେ ପଦାର୍ଥ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ଏବଂ ଏହା ବୈଜ୍ଞାନିକ ସତ୍ୟ ଅଟେ ।"
+    },
+    {
+        audio: "",
+        question: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?",
+        introduction: "ଲୁଣ କିମ୍ବା ଚିନିକୁ ଜଳରେ ମିଶାଇ କରାଯାଇଥିବା ପରୀକ୍ଷାରୁ ପଦାର୍ଥର ଗଠନ ସମ୍ପର୍କରେ ଜଣାପଡ଼େ ।",
+        points: [
+            "ବିକରରେ ଅଧା ଜଳ ନେଇ ସେଥିରେ ଲୁଣ କିମ୍ବା ଚିନି ପକାଯାଏ ।",
+            "କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ ଜଳକୁ ଭଲଭାବେ ଗୋଳାଯାଏ ।",
+            "କିଛି ସମୟ ପରେ ଲୁଣ ବା ଚିନି ଦେଖାଯାଏ ନାହିଁ ।",
+            "ଲୁଣ ବା ଚିନି ଜଳ ମଧ୍ୟରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।",
+            "ଏହା ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ପ୍ରମାଣ କରେ ।"
+        ],
+        conclusion: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶି ସମଗ୍ର ଜଳରେ ବ୍ୟାପିଯାଏ । ଏହି ସରଳ ପରୀକ୍ଷାରୁ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ଜଣାପଡ଼େ ।"
+    },
+    {
+        audio: "",
+        question: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ବୋଲି କିପରି ପ୍ରମାଣିତ ହୁଏ ?",
+        introduction: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ପରୀକ୍ଷା ଦ୍ୱାରା ପଦାର୍ଥର କଣିକାର କ୍ଷୁଦ୍ରତା ବିଷୟରେ ଜଣାପଡ଼େ ।",
+        points: [
+            "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର କିଛି ସ୍ଫଟିକ ଜଳରେ ଦ୍ରବୀଭୂତ କରାଯାଏ ।",
+            "ଦ୍ରବଣକୁ ବାରମ୍ବାର ବିଶୁଦ୍ଧ ଜଳ ସହିତ ଲଘୁକରଣ କରାଯାଏ ।",
+            "ଅନେକ ଥର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ ରଙ୍ଗୀନ ରହିଥାଏ ।",
+            "ଅଳ୍ପ ପରିମାଣର ପଦାର୍ଥ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।",
+            "ଏଥିରୁ ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ବୋଲି ଜଣାପଡ଼େ ।"
+        ],
+        conclusion: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ପରୀକ୍ଷା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହେଲେ ମଧ୍ୟ ସେମାନଙ୍କର ପ୍ରଭାବ ସ୍ପଷ୍ଟ ଭାବରେ ଦେଖାଯାଏ ।"
+    },
+    {
+        audio: "",
+        question: "ପଦାର୍ଥର କଣିକାର ଆକାର ବିଷୟରେ ଲେଖ ।",
+        introduction: "ବିଭିନ୍ନ ପରୀକ୍ଷା ମାଧ୍ୟମରେ ପଦାର୍ଥର କଣିକାର ଆକାର ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ବୋଲି ଜଣାପଡ଼େ ।",
+        points: [
+            "ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।",
+            "ଏହି କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ ଆହୁରି କ୍ଷୁଦ୍ର କଣିକାରେ ପରିଣତ ହୁଅନ୍ତି ।",
+            "ଡେଟଲ୍‌କୁ ବାରମ୍ବାର ଲଘୁକରଣ କରିଲେ ମଧ୍ୟ ତାହାର ଗନ୍ଧ ରହିଥାଏ ।",
+            "ଗନ୍ଧରୁ ପଦାର୍ଥର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
+            "ପଦାର୍ଥର କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।"
+        ],
+        conclusion: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଓ ଅସଂଖ୍ୟ ସଂଖ୍ୟାରେ ରହିଥାଏ । ସେମାନଙ୍କର ପ୍ରକୃତ ଆକାର କଳ୍ପନା କରିବା ମଧ୍ୟ କଷ୍ଟକର ଅଟେ ।"
+    }
+]        
 }  
 
 };  
@@ -5326,7 +6021,7 @@ function createSummaryTest() {
     
     let html = `<div class="summary-content active">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - What are the objectives of BNSS? (BNSS ର ଉଦ୍ଦେଶ୍ୟ କ'ଣ ?)</h2>
+            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - ଏହି କ୍ଲାସ୍ ର ସାରାଂଶ ବର୍ଣ୍ଣନା କର ।</h2>
             ${summaryAudioButton}
         </div>
         
@@ -7137,7 +7832,7 @@ function closeMermaidModal() {
 // Just change PDF_FILE_ID for each lesson!
 // ============================================
 
-const PDF_URL = 'https://audio.evidya.de/BNSS1.pdf';
+const PDF_URL = 'https://audio.evidya.de/S9PS1P1-2.pdf';
 
 let bookCur = 0;
 let bookPdfDoc = null;
