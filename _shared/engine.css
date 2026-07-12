@@ -2258,3 +2258,13 @@ body.practice-mode #questionBtn,
 body.practice-mode #practiceBtn {
     display: block !important;
 }
+
+/* Rename the blackboard CTA button — practice mode only */
+body.practice-mode #blackboardCTABtn {
+    font-size: 0 !important;
+}
+body.practice-mode #blackboardCTABtn::after {
+    content: "ଆସନ୍ତୁ, ଏହି ଜ୍ଞାନ କୁ ବ୍ୟବହାର କରିବା";
+    font-size: 14px;
+    font-weight: bold;
+}
