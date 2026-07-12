@@ -7,20 +7,1462 @@ const APP_CONFIG = {
 const CLASS_NAME = "bnss";
 
 const MEDIA_CONFIG = {
-    audio1: "https://audio.evidya.de/BNSS1.mp3",
-    audio3: "https://audio.evidya.de/BNSS1QA.mp3",
+    audio1: "https://audio.evidya.de/S9SCP1P1-2.mp3",
+    audio3: "https://audio.evidya.de/S9SCP1P1-2QA.mp3",
     video:  "https://www.youtube.com/embed/EvDpcm14j0E?playsinline=1&rel=0&modestbranding=1&autoplay=1",
-    pdf:    "https://audio.evidya.de/BNSS1.pdf"
+    pdf:    "https://audio.evidya.de/S9SCP1P1-2.pdf"
 };
 
 const wordData = {
-    // paste your wordData content here exactly as before
+    currentWord: 0,
+    words: [
+        {
+            word: "MATTER",
+            odia: "ପଦାର୍ଥ",
+            emoji: "🧪",
+            odiaUse: "ପଦାର୍ଥ ଅର୍ଥ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ବସ୍ତୁ ତିଆରି ହୁଏ । ବାୟୁ, ଜଳ ଓ ପଥର ପଦାର୍ଥ ଅଟେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "MASS",
+            odia: "ବସ୍ତୁତ୍ୱ",
+            emoji: "⚖️",
+            odiaUse: "ବସ୍ତୁତ୍ୱ ଅର୍ଥ ପଦାର୍ଥର ପରିମାଣ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଥାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "VOLUME",
+            odia: "ଆୟତନ",
+            emoji: "📦",
+            odiaUse: "ଆୟତନ ଅର୍ଥ ପଦାର୍ଥ ଯେତିକି ସ୍ଥାନ ଦଖଲ କରେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ଆୟତନ ଅଛି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "TEXTURE",
+            odia: "ରୂପ ବିନ୍ୟାସ",
+            emoji: "✋",
+            odiaUse: "ରୂପ ବିନ୍ୟାସ ଅର୍ଥ ପୃଷ୍ଠଭାଗର ଗଠନ । ନଡ଼ିଆର ଖୋଲର ରୂପ ବିନ୍ୟାସ ଖରାପିଆ ହୋଇଥାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PHILOSOPHER",
+            odia: "ଦାର୍ଶନିକ",
+            emoji: "🤔",
+            odiaUse: "ଦାର୍ଶନିକ ଅର୍ଥ ଚିନ୍ତାବିଦ୍ । ପ୍ରାଚୀନ ଦାର୍ଶନିକମାନେ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଦେଇଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PANCHATATTVA",
+            odia: "ପଞ୍ଚତତ୍ତ୍ୱ",
+            emoji: "🌍",
+            odiaUse: "ପଞ୍ଚତତ୍ତ୍ୱ ଅର୍ଥ ପାଞ୍ଚଟି ମୌଳିକ ଉପାଦାନ । ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PHYSICAL PROPERTY",
+            odia: "ଭୌତିକ ଧର୍ମ",
+            emoji: "👀",
+            odiaUse: "ଭୌତିକ ଧର୍ମ ଅର୍ଥ ଦେଖାଯାଉଥିବା ଗୁଣ । ପଦାର୍ଥର ଭୌତିକ ଧର୍ମ ଅଧ୍ୟୟନ କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "CHEMICAL NATURE",
+            odia: "ରାସାୟନିକ ପ୍ରକୃତି",
+            emoji: "⚗️",
+            odiaUse: "ରାସାୟନିକ ପ୍ରକୃତି ଅର୍ଥ ରାସାୟନିକ ଗୁଣ । ଏହା ପଦାର୍ଥର ଏକ ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PARTICLE",
+            odia: "କଣିକା",
+            emoji: "🔹",
+            odiaUse: "କଣିକା ଅର୍ଥ ଅତି ଛୋଟ ଅଂଶ । ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "CONTINUOUS",
+            odia: "ଅବିଚ୍ଛିନ୍ନ",
+            emoji: "➖",
+            odiaUse: "ଅବିଚ୍ଛିନ୍ନ ଅର୍ଥ ଭାଗ କରିହେବ ନାହିଁ ବୋଲି ଧାରଣା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "BEAKER",
+            odia: "ବିକର",
+            emoji: "🥛",
+            odiaUse: "ବିକର ଅର୍ଥ ପରୀକ୍ଷାଗାରର ପାତ୍ର । ଲୁଣ ଓ ଚିନିର ପରୀକ୍ଷା ବିକରରେ କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "MARK",
+            odia: "ଚିହ୍ନଟ",
+            emoji: "📍",
+            odiaUse: "ଚିହ୍ନଟ ଅର୍ଥ ଚିହ୍ନ ଦେଇ ରଖିବା । ଜଳର ଉପର ସ୍ତରକୁ ଚିହ୍ନଟ କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "SPREAD",
+            odia: "ବ୍ୟାପିଯିବା",
+            emoji: "🌊",
+            odiaUse: "ବ୍ୟାପିଯିବା ଅର୍ଥ ଚାରିଆଡ଼େ ପ୍ରସାରିତ ହେବା । ଚିନି ଜଳରେ ବ୍ୟାପିଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "CRYSTAL",
+            odia: "ସ୍ଫଟିକ",
+            emoji: "💎",
+            odiaUse: "ସ୍ଫଟିକ ଅର୍ଥ କ୍ରିଷ୍ଟାଲ୍ । ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ବ୍ୟବହାର କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DISSOLVE",
+            odia: "ଦ୍ରବୀଭୂତ",
+            emoji: "💧",
+            odiaUse: "ଦ୍ରବୀଭୂତ ଅର୍ଥ ଜଳରେ ମିଶିଯିବା । ସ୍ଫଟିକ ଜଳରେ ଦ୍ରବୀଭୂତ ହୁଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DILUTION",
+            odia: "ଲଘୁକରଣ",
+            emoji: "🧴",
+            odiaUse: "ଲଘୁକରଣ ଅର୍ଥ ପତଳା କରିବା । ଦ୍ରବଣର ବାରମ୍ବାର ଲଘୁକରଣ କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PURE WATER",
+            odia: "ବିଶୁଦ୍ଧ ଜଳ",
+            emoji: "🚰",
+            odiaUse: "ବିଶୁଦ୍ଧ ଜଳ ଅର୍ଥ ସଫା ପାଣି । ଦ୍ରବଣକୁ ବିଶୁଦ୍ଧ ଜଳ ସହିତ ମିଶାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "COUNTLESS",
+            odia: "ଅସଂଖ୍ୟ",
+            emoji: "♾️",
+            odiaUse: "ଅସଂଖ୍ୟ ଅର୍ଥ ଗଣନା କରିହେବ ନାହିଁ ଏତେ ଅଧିକ । ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କଣିକା ରହିଥାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DIVIDED",
+            odia: "ବିଭାଜିତ",
+            emoji: "✂️",
+            odiaUse: "ବିଭାଜିତ ଅର୍ଥ ଭାଗ ହୋଇଯିବା । କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ ଆହୁରି କ୍ଷୁଦ୍ର ହୁଅନ୍ତି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PRESENCE",
+            odia: "ଉପସ୍ଥିତି",
+            emoji: "✅",
+            odiaUse: "ଉପସ୍ଥିତି ଅର୍ଥ ଥିବାର ପ୍ରମାଣ । ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "TINYNESS",
+            odia: "କ୍ଷୁଦ୍ରତା",
+            emoji: "🔬",
+            odiaUse: "କ୍ଷୁଦ୍ରତା ଅର୍ଥ ଛୋଟପଣ । ପଦାର୍ଥର କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        }
+    ]
 };
-
+    
 const topicsData = [
-    // paste your topicsData content here exactly as before
-];
 
+{
+heading: "NOTE-1: ପଦାର୍ଥ କ'ଣ ? :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ପଦାର୍ଥ ହେଉଛି ସେହି ଦ୍ରବ୍ୟ ଯାହାକୁ ନେଇ ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଗଠିତ ହୋଇଛି । ବାୟୁ, ପାଣି, ପଥର, ଗଛ, ପଶୁ, ଖାଦ୍ୟ ଓ ଆମ ଶରୀର ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଏବଂ ଆୟତନ ଥାଏ ।<br><br>👉 ଉଦାହରଣ: ତୁମ ଟେବୁଲ ଉପରେ ଥିବା ବହି, ପେନ୍‌, ପାଣି ବୋତଲ ଏବଂ ତୁମେ ଶ୍ୱାସରେ ନେଉଥିବା ବାୟୁ ସବୁ ପଦାର୍ଥ ଅଟେ । କାରଣ ସେମାନଙ୍କର ବସ୍ତୁତ୍ୱ ଅଛି ଓ ସେମାନେ କିଛି ସ୍ଥାନ ଦଖଲ କରନ୍ତି ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ପଦାର୍ଥ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଗଠିତ ହୋଇଛି, ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> ବାୟୁ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ ।",
+
+"<span style='color:red;'>Q-3:</span> ପ୍ରତ୍ୟେକ ପଦାର୍ଥର କେଉଁ ଦୁଇଟି ଗୁଣ ଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ ।",
+
+"<span style='color:red;'>Q-4:</span> ଜଳବିନ୍ଦୁ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଜଳବିନ୍ଦୁ ମଧ୍ୟ ଏକ ପଦାର୍ଥ ଅଟେ ।"
+
+]
+},
+
+{
+heading: "NOTE-2: ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ପଞ୍ଚତତ୍ତ୍ୱ, ଅର୍ଥାତ୍ ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ନେଇ ଗଠିତ । ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ତାହାର ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଅଧ୍ୟୟନ କରନ୍ତି ।<br><br>👉 ଉଦାହରଣ: ପୂର୍ବରୁ ଲୋକମାନେ ପ୍ରକୃତିକୁ ଦେଖି ପଦାର୍ଥ ବିଷୟରେ ଧାରଣା କରୁଥିଲେ । କିନ୍ତୁ ବର୍ତ୍ତମାନ ବୈଜ୍ଞାନିକମାନେ ପରୀକ୍ଷା ଓ ଗବେଷଣା ମାଧ୍ୟମରେ ପଦାର୍ଥର ଗୁଣ ଓ ପ୍ରକୃତିକୁ ବୁଝନ୍ତି ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ପଞ୍ଚତତ୍ତ୍ୱ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସମସ୍ତ ବସ୍ତୁ ପାଞ୍ଚଟି ମୌଳିକ ଉପାଦାନକୁ ନେଇ ଗଠିତ ବୋଲି ସେମାନଙ୍କର ମତ ଥିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ କିପରି ବିଭକ୍ତ କରିଛନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରିଛନ୍ତି ।",
+
+"<span style='color:red;'>Q-4:</span> ଏହି ଅଧ୍ୟାୟରେ କେଉଁ ଗୁଣ ବିଷୟରେ ଜାଣିବା ?<br><br><span style='color:green;'>Answer:</span> ପଦାର୍ଥର ଭୌତିକ ଗୁଣ ବିଷୟରେ ଜାଣିବା ।"
+
+]
+},
+
+    {
+heading: "NOTE-3: ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଦୀର୍ଘ ସମୟ ଧରି ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା, ଆଉ ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ । ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ବୈଜ୍ଞାନିକମାନେ ଜାଣିଲେ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।<br><br>👉 ଉଦାହରଣ: ଗୋଟିଏ ବାଲି ଗଦାକୁ ଦେଖିଲେ ଏହା ଅନେକ ଛୋଟ ଛୋଟ ବାଲି କଣିକାରେ ତିଆରି ବୋଲି ଜଣାପଡ଼େ । ସେହିପରି ପ୍ରତ୍ୟେକ ପଦାର୍ଥ ମଧ୍ୟ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ କେତେ ପ୍ରକାର ମତ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଦୁଇ ପ୍ରକାର ମତ ଥିଲା ।",
+
+"<span style='color:red;'>Q-2:</span> କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା ।",
+
+"<span style='color:red;'>Q-4:</span> ବାଲି କାହାର ଉଦାହରଣ ?<br><br><span style='color:green;'>Answer:</span> ବାଲି କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥର ଉଦାହରଣ ଅଟେ ।"
+
+]
+},
+
+{
+heading: "NOTE-4: ଲୁଣ ଓ ଚିନି ଜଳରେ କେଉଁଠି ଯାଏ ? :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଲୁଣ କିମ୍ବା ଚିନିକୁ ଜଳରେ ପକାଇ ଗୋଳାଇଲେ ସେଗୁଡ଼ିକ ଆଖିକୁ ଦେଖାଯାଏ ନାହିଁ, କିନ୍ତୁ ଜଳରେ ସମାନ ଭାବରେ ବ୍ୟାପିଯାଆନ୍ତି । ଏହା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ଏବଂ ସେହି କଣିକାଗୁଡ଼ିକ ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ପ୍ରସାରିତ ହୋଇଯାଆନ୍ତି ।<br><br>👉 ଉଦାହରଣ: ତୁମେ ଗୋଟିଏ ଗ୍ଲାସ ପାଣିରେ ଏକ ଚାମଚ ଚିନି ପକାଇ ଗୋଳାଇଲେ କିଛି ସମୟ ପରେ ଚିନି ଦେଖାଯାଏ ନାହିଁ, କିନ୍ତୁ ପାଣିର ସବୁ ଅଂଶ ମିଠା ହୋଇଯାଏ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ବିକରରେ କ'ଣ ପକାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବିକରରେ ଲୁଣ କିମ୍ବା ଚିନି ପକାଯାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଲୁଣ ବା ଚିନି ଜଳରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।",
+
+"<span style='color:red;'>Q-3:</span> ଏହି ପରୀକ୍ଷା କ'ଣ ପ୍ରମାଣ କରେ ?<br><br><span style='color:green;'>Answer:</span> ଏହି ପରୀକ୍ଷା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।",
+
+"<span style='color:red;'>Q-4:</span> ଜଳକୁ କେଉଁ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଜଳକୁ କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ।"
+
+]
+},
+
+    {
+heading: "NOTE-5: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ କେତେ ଛୋଟ ? :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ । ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ଅଳ୍ପ କିଛି ସ୍ଫଟିକକୁ ବାରମ୍ବାର ଜଳରେ ମିଶାଇ ପତଳା କରିଲେ ମଧ୍ୟ ଜଳର ରଙ୍ଗ ଦେଖାଯାଏ । ଏହାରୁ ଜଣାପଡ଼େ ଯେ ଅତି କ୍ଷୁଦ୍ର କଣିକା ମଧ୍ୟ ନିଜର ପ୍ରଭାବ ଦେଖାଇପାରେ ।<br><br>👉 ଉଦାହରଣ: ଏକ ଛୋଟ ଚିମୁଟି ରଙ୍ଗକୁ ବହୁତ ପାଣିରେ ମିଶାଇଲେ ମଧ୍ୟ ପାଣିରେ ରଙ୍ଗ ଦେଖାଯାଏ । ସେହିପରି ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥିଲେ ମଧ୍ୟ ସେମାନଙ୍କର ପ୍ରଭାବ ସ୍ପଷ୍ଟ ଭାବରେ ଦେଖାଯାଏ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> କେଉଁ ପଦାର୍ଥର ସ୍ଫଟିକ ନିଆଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନିଆଯାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> ଦ୍ରବଣକୁ କାହିଁକି ଲଘୁକରଣ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାର କ୍ଷୁଦ୍ରତା ଜାଣିବା ପାଇଁ ଦ୍ରବଣକୁ ଲଘୁକରଣ କରାଯାଏ ।",
+
+"<span style='color:red;'>Q-3:</span> ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ କିପରି ରହେ ?<br><br><span style='color:green;'>Answer:</span> ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ ରଙ୍ଗୀନ ହୋଇ ରହେ ।",
+
+"<span style='color:red;'>Q-4:</span> ଏହି ପରୀକ୍ଷା କ'ଣ ସୂଚାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏହି ପରୀକ୍ଷା ସୂଚାଏ ଯେ ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।"
+
+]
+},
+
+{
+heading: "NOTE-6: ପଦାର୍ଥର କଣିକାର ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଏତେ କ୍ଷୁଦ୍ର ଯେ ସେମାନଙ୍କର ଆକାରକୁ ସହଜରେ କଳ୍ପନା କରିହେବ ନାହିଁ । ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ । ବାରମ୍ବାର ଲଘୁକରଣ କରିଲେ ମଧ୍ୟ ସେହି କଣିକାଗୁଡ଼ିକର ପ୍ରଭାବ ରହିଥାଏ ।<br><br>👉 ଉଦାହରଣ: ଗୋଟିଏ କୋଠରୀର ଗୋଟିଏ କୋଣରେ ସୁଗନ୍ଧି କିମ୍ବା ଡେଟଲ୍‌ର କିଛି ବୁନ୍ଦା ପକାଇଲେ କିଛି ସମୟ ପରେ ସାରା କୋଠରୀରେ ତାହାର ଗନ୍ଧ ବ୍ୟାପିଯାଏ । ଏହାରୁ ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥିଲେ ମଧ୍ୟ ସେମାନେ ଚାରିଆଡ଼େ ବ୍ୟାପିପାରନ୍ତି ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଗୋଟିଏ ସ୍ଫଟିକରେ କ'ଣ ରହିଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> ଡେଟଲ୍‌ର ଉପସ୍ଥିତି କିପରି ଜଣାପଡ଼େ ?<br><br><span style='color:green;'>Answer:</span> ଦ୍ରବଣର ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
+
+"<span style='color:red;'>Q-3:</span> ପଦାର୍ଥର କଣିକା କିପରି ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ ।",
+
+"<span style='color:red;'>Q-4:</span> କଣିକାର କ୍ଷୁଦ୍ରତା କିପରି ?<br><br><span style='color:green;'>Answer:</span> କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।"
+
+]
+}
+
+];
+    
+    
 const courseData = {
-    // paste your courseData content here exactly as before
-};
+            teacherImage: "https://via.placeholder.com/400x300/667eea/ffffff?text=Teacher",
+            sentences: [
+{
+    text: `
+<div class="game-container">
+<!-- Progressive Learning Cards -->
+    <div class="learning-cards-container">
+
+<!-- Main Navigation Card - Always Visible -->
+<div class="learning-card reveal-card card-blue" id="mainNavCard" style="display: block;">
+    <div class="learning-card-content">    
+    
+<!-- Topic Counter with Navigation Buttons on sides -->
+<div class="topic-counter-wrapper" id="topicCounterWrapper" style="display: none; justify-content: space-between; align-items: center; gap: 8px;">
+    <button class="question-btn" id="prevBtn" onclick="navigateTopic(-1)" style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); flex-shrink: 0; padding: 10px 12px; font-size: 13px;">
+        ⬅️ ପଛକୁ ଫେରିବା
+    </button>
+    
+    <span id="topicCounter" style="font-weight: bold; font-size: 16px; text-align: center; flex: 1;">Topic 1 of 3</span>
+    
+    <button class="question-btn" id="nextBtn" onclick="navigateTopic(1)" style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); flex-shrink: 0; padding: 10px 12px; font-size: 13px;">
+        ଆଗକୁ ଯିବା ➡️ </button>
+</div>
+        
+<!-- Welcome Blackboard -->
+<div id="welcomeBlackboard" class="word-display">
+    <span class="word-display-text">
+        <span class="answer-section" id="welcomeExplanation">
+            🌹ଇ-ବିଦ୍ୟା ଏକାଡେମି ଦ୍ଵାରା ପ୍ରସ୍ତୁତ🌹<br>ଏହି ସ୍ଵତନ୍ତ୍ର କ୍ଲାସ୍ ରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ ।
+        </span>
+    </span>
+</div>
+
+<!-- Topic Content (Hidden Initially) -->
+<div id="topicContent" style="display: none;">
+    <div class="word-display">
+        <span class="word-display-text">
+            <span class="question-heading" id="topicHeading"></span><br>
+            <span class="answer-section" id="topicExplanation"></span>
+        </span>
+    </div>
+    
+    <!-- Question Buttons Grid -->
+    <div class="questions-grid" id="questionButtons">
+        <button class="question-btn" onclick="showTopicAnswer('q1')">ପ୍ରଶ୍ନ-1</button>
+        <button class="question-btn" onclick="showTopicAnswer('q2')">ପ୍ରଶ୍ନ-2</button>
+        <button class="question-btn" onclick="showTopicAnswer('q3')">ପ୍ରଶ୍ନ-3</button>
+        <button class="question-btn" onclick="showTopicAnswer('q4')">ପ୍ରଶ୍ନ-4</button>
+    </div>
+    
+    <!-- Answer Box -->
+    <div id="mainAnswerBox" class="answer-box">
+        👆 Click any question above to see the answer
+    </div>
+</div>
+        
+<!-- Start Button (Visible Initially) -->
+<div id="startButtonContainer" style="display: grid; margin-top: 20px;">
+    <button class="question-btn" id="startBtn" onclick="startLearning()" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); font-size: 18px; padding: 15px;">
+        🚀 ପଢା ଆରମ୍ଭ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । 
+    </button>
+</div>
+    </div>
+</div>
+  `, 
+    audio: "",
+mermaid: [
+`%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-1:<br/>ପଦାର୍ଥ କ'ଣ ?"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ପଦାର୍ଥର ଅର୍ଥ ଏଠାରେ<br/>ବୁଝାଯାଇଛି।"]
+A --> I2["ଆମ ଚାରିପାଖରେ ଅନେକ<br/>ପ୍ରକାର ବସ୍ତୁ ଅଛି।"]
+A --> I3["ସବୁ ବସ୍ତୁ କୌଣସି ନା<br/>କୌଣସି ପଦାର୍ଥରେ ଗଠିତ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ଘର, ଗଛ, ପଥର, ପାଣି ଓ<br/>ବାୟୁ ସବୁ ପଦାର୍ଥ ଅଟେ।"]
+M --> M2["ବସ୍ତୁମାନଙ୍କର ଆକାର,<br/>ଆକୃତି ଓ ରୂପ ଭିନ୍ନ ଅଟେ।"]
+M --> M3["ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟରେ<br/>ତିଆରି ହୁଏ ତାହା ପଦାର୍ଥ।"]
+M --> M4["ବାୟୁ, ଖାଦ୍ୟ, ପଥର,<br/>ମେଘ ଓ ତାରା ପଦାର୍ଥ ଅଟେ।"]
+M --> M5["ଉଦ୍ଭିଦ, ପଶୁ, ଜଳବିନ୍ଦୁ ଓ<br/>ବାଲି କଣିକା ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପ୍ରତ୍ୟେକ ପଦାର୍ଥ କିଛି<br/>ସ୍ଥାନ ଅଧିକାର କରେ।"]
+C --> C2["ପ୍ରତ୍ୟେକ ପଦାର୍ଥର<br/>ବସ୍ତୁତ୍ୱ ରହିଥାଏ।"]
+C --> C3["ପ୍ରତ୍ୟେକ ପଦାର୍ଥର<br/>ଆୟତନ ମଧ୍ୟ ଥାଏ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+`%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-2:<br/>ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ<br/>ଆଧୁନିକ ଧାରଣା"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ମନୁଷ୍ୟ ପୁରାତନ କାଳରୁ<br/>ପଦାର୍ଥକୁ ବୁଝିବାକୁ ଚେଷ୍ଟା କରିଛି।"]
+A --> I2["ପଦାର୍ଥ କିପରି ଗଠିତ<br/>ତାହା ଜାଣିବାକୁ ଇଚ୍ଛା କରିଛି।"]
+A --> I3["ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଯୁଗରେ<br/>ଭିନ୍ନ ଭିନ୍ନ ଧାରଣା ଥିଲା।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନେ<br/>ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଦେଇଥିଲେ।"]
+M --> M2["ମାଟି, ଜଳ, ବାୟୁ,<br/>ଅଗ୍ନି ଓ ଆକାଶ ପଞ୍ଚତତ୍ତ୍ୱ ଅଟେ।"]
+M --> M3["ସଜୀବ ଓ ନିର୍ଜୀବ ସବୁ ବସ୍ତୁ<br/>ଏହି ପାଞ୍ଚଟି ଉପାଦାନରେ ଗଠିତ।"]
+M --> M4["ପ୍ରାଚୀନ ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ<br/>ମଧ୍ୟ ଏହିପରି ମତ ଦେଇଥିଲେ।"]
+M --> M5["ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ<br/>ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣରେ ବିଭକ୍ତ କରିଛନ୍ତି।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପ୍ରାଚୀନ କାଳରେ<br/>ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଥିଲା।"]
+C --> C2["ଆଧୁନିକ ବିଜ୍ଞାନ ପଦାର୍ଥକୁ<br/>ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣରେ ଅଧ୍ୟୟନ କରେ।"]
+C --> C3["ବିଜ୍ଞାନ ସମୟ ସହିତ<br/>ନୂଆ ଜ୍ଞାନ ଦେଇଥାଏ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-3:<br/>ପଦାର୍ଥ କଣିକାକୁ ନେଇ<br/>ଗଠିତ"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ପଦାର୍ଥର ଗଠନ ବିଷୟରେ<br/>ଭିନ୍ନ ମତ ଥିଲା।"]
+A --> I2["ବାଲି ଅନେକ ଛୋଟ<br/>କଣିକାରେ ତିଆରି।"]
+A --> I3["ପଦାର୍ଥର ପ୍ରକୃତି ଜାଣିବାକୁ<br/>ଚେଷ୍ଟା କରାଯାଇଥିଲା।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ଦୀର୍ଘ ସମୟ ଧରି<br/>ଦୁଇ ପ୍ରକାର ମତ ଥିଲା।"]
+M --> M2["କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ<br/>ଅବିଚ୍ଛିନ୍ନ ଅଟେ।"]
+M --> M3["କାଠ, କାଚ ଓ କାଗଜ<br/>ଏହାର ଉଦାହରଣ ଥିଲା।"]
+M --> M4["ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ<br/>କଣିକାକୁ ନେଇ ଗଠିତ।"]
+M --> M5["ବାଲି ଏହାର ଉଦାହରଣ।<br/>ସତ୍ୟ ଜାଣିବାକୁ ପରୀକ୍ଷା ଦରକାର।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପଦାର୍ଥର ପ୍ରକୃତି ବିଷୟରେ<br/>ଦୁଇଟି ଧାରଣା ଥିଲା।"]
+C --> C2["ପରୀକ୍ଷା ଦ୍ୱାରା ସତ୍ୟ<br/>ଜାଣିବା ସମ୍ଭବ ହେଲା।"]
+C --> C3["ପଦାର୍ଥ କଣିକାକୁ ନେଇ<br/>ଗଠିତ ବୋଲି ଜଣାପଡ଼ିଲା।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-4:<br/>ଲୁଣ ଓ ଚିନି ଜଳରେ<br/>କେଉଁଠି ଯାଏ ?"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ଲୁଣ ବା ଚିନି<br/>ଜଳରେ ମିଶିଯାଏ।"]
+A --> I2["ମିଶିଗଲେ ସେମାନେ<br/>ଦେଖାଯାଆନ୍ତି ନାହିଁ।"]
+A --> I3["ଏହାର କାରଣ<br/>ଜାଣିବା ଦରକାର।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["100 ମିଲି ବିକର ନେଇ<br/>ଅଧା ଜଳ ଭରାଯାଏ।"]
+M --> M2["ଜଳସ୍ତରକୁ ଚିହ୍ନଟ କରି<br/>ଲୁଣ ବା ଚିନି ପକାଯାଏ।"]
+M --> M3["କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ<br/>ଜଳକୁ ଗୋଳାଯାଏ।"]
+M --> M4["ଜଳସ୍ତରର ପରିବର୍ତ୍ତନ ଓ<br/>ଚିନି କେଉଁଠି ଗଲା ଦେଖାଯାଏ।"]
+M --> M5["ଲୁଣ ବା ଚିନି ଜଳରେ<br/>ବ୍ୟାପିଯାଏ। ଏହା ପଦାର୍ଥ କଣିକାରୁ ଗଠିତ ବୋଲି ପ୍ରମାଣ କରେ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ଚିନି ବା ଲୁଣ<br/>ଜଳରେ ବ୍ୟାପିଯାଏ।"]
+C --> C2["ପଦାର୍ଥ କଣିକାକୁ ନେଇ<br/>ଗଠିତ ହୋଇଥାଏ।"]
+C --> C3["ସରଳ ପରୀକ୍ଷାରୁ ମଧ୍ୟ<br/>ବୈଜ୍ଞାନିକ ସତ୍ୟ ଜଣାଯାଏ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+`%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-5:<br/>ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ<br/>କେତେ ଛୋଟ ?"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ପଦାର୍ଥର କଣିକା<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ।"]
+A --> I2["ରଙ୍ଗ ମିଶାଇଲେ ମଧ୍ୟ<br/>ପାଣି ରଙ୍ଗୀନ ଦେଖାଯାଏ।"]
+A --> I3["ଏକ ପରୀକ୍ଷା ଦ୍ୱାରା<br/>ଏହା ଜଣାଯାଏ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର<br/>ସ୍ଫଟିକ ଜଳରେ ମିଶାଯାଏ।"]
+M --> M2["ଦ୍ରବଣର କିଛି ଅଂଶ ନେଇ<br/>ବିଶୁଦ୍ଧ ଜଳରେ ମିଶାଯାଏ।"]
+M --> M3["ଏହି ପ୍ରକ୍ରିୟାରେ ଦ୍ରବଣର<br/>ବାରମ୍ବାର ଲଘୁକରଣ ହୁଏ।"]
+M --> M4["ପାଞ୍ଚରୁ ଆଠ ଥର ପରେ ମଧ୍ୟ<br/>ଜଳ ରଙ୍ଗୀନ ରହିଥାଏ।"]
+M --> M5["ଅଳ୍ପ ପଦାର୍ଥ ବହୁତ ଜଳକୁ<br/>ରଙ୍ଗୀନ କରିପାରେ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପଦାର୍ଥର କଣିକା<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ।"]
+C --> C2["ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ<br/>ତାହାର ପ୍ରଭାବ ରହେ।"]
+C --> C3["କ୍ଷୁଦ୍ର କଣିକାର ପ୍ରଭାବ<br/>ସହଜରେ ଦେଖାଯାଏ।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+`%%{init: {
+'theme': 'base',
+'themeVariables': {
+  'fontSize': '18px'
+}
+}}%%
+flowchart TD
+
+TITLE["📖 NOTE-6:<br/>ପଦାର୍ଥର କଣିକାର<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 ଭୂମିକା"]
+
+A --> I1["ପଦାର୍ଥର କଣିକା<br/>ବହୁତ ଛୋଟ ହୋଇଥାଏ।"]
+A --> I2["ସୁଗନ୍ଧିର ଗନ୍ଧ<br/>ସାରା ଘରେ ବ୍ୟାପିଯାଏ।"]
+A --> I3["ଏହା କଣିକାର<br/>କ୍ଷୁଦ୍ରତାକୁ ଦେଖାଏ।"]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 ବ୍ୟାଖ୍ୟା"]
+
+M --> M1["ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍<br/>ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରେ।"]
+M --> M2["ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ<br/>କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ।"]
+M --> M3["କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ<br/>ଆହୁରି ଛୋଟ ହୋଇଯାନ୍ତି।"]
+M --> M4["ଡେଟଲ୍‌କୁ ବାରମ୍ବାର ଲଘୁକରଣ<br/>କଲେ ମଧ୍ୟ ଗନ୍ଧ ରହିଥାଏ।"]
+M --> M5["ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ।<br/>କଣିକାର କ୍ଷୁଦ୍ରତା କଳ୍ପନାର ବାହାରେ।"]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 ନିଷ୍କର୍ଷ"]
+
+C --> C1["ପଦାର୍ଥର କଣିକା<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ।"]
+C --> C2["ଗୋଟିଏ ସ୍ଫଟିକରେ<br/>ଅସଂଖ୍ୟ କଣିକା ଥାଏ।"]
+C --> C3["କଣିକାର ଆକାର<br/>କଳ୍ପନା କରିବା କଷ୍ଟକର।"]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`    
+],
+    
+mcq: {
+    questions: [
+
+        // =========================
+        // NOTE-1
+        // =========================
+        {
+            question: "ପଦାର୍ଥ କାହାକୁ କୁହାଯାଏ ?",
+            options: [
+                "ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ବସ୍ତୁ ଗଢ଼ାଯାଏ",
+                "କେବଳ ତରଳ ପଦାର୍ଥକୁ",
+                "କେବଳ ଗ୍ୟାସକୁ",
+                "କେବଳ କଠିନ ବସ୍ତୁକୁ"
+            ],
+            correct: 0
+        },
+        {
+            question: "ନିମ୍ନଲିଖିତ ମଧ୍ୟରୁ କେଉଁଟି ଏକ ପଦାର୍ଥ ?",
+            options: [
+                "କେବଳ ପଥର",
+                "କେବଳ ବାୟୁ",
+                "କେବଳ ଜଳବିନ୍ଦୁ",
+                "ଉପରୋକ୍ତ ସମସ୍ତ"
+            ],
+            correct: 3
+        },
+        {
+            question: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର କେଉଁ ଦୁଇଟି ଗୁଣ ଥାଏ ?",
+            options: [
+                "ରଙ୍ଗ ଓ ଗନ୍ଧ",
+                "ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ",
+                "ଆକାର ଓ ଓଜନ",
+                "ରୂପ ଓ ସ୍ୱାଦ"
+            ],
+            correct: 1
+        },
+
+        // =========================
+        // NOTE-2
+        // =========================
+        {
+            question: "ପଞ୍ଚତତ୍ତ୍ୱରେ କେତୋଟି ମୌଳିକ ଉପାଦାନ ରହିଛି ?",
+            options: [
+                "ତିନୋଟି",
+                "ଚାରୋଟି",
+                "ପାଞ୍ଚୋଟି",
+                "ଛଅଟି"
+            ],
+            correct: 2
+        },
+        {
+            question: "ନିମ୍ନଲିଖିତ ମଧ୍ୟରୁ କେଉଁଟି ପଞ୍ଚତତ୍ତ୍ୱର ଅଂଶ ?",
+            options: [
+                "ମାଟି",
+                "ଜଳ",
+                "ଆକାଶ",
+                "ଉପରୋକ୍ତ ସମସ୍ତ"
+            ],
+            correct: 3
+        },
+        {
+            question: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ କେଉଁ ଆଧାରରେ ବିଭକ୍ତ କରିଛନ୍ତି ?",
+            options: [
+                "ରଙ୍ଗ ଓ ଆକାର",
+                "ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି",
+                "ଓଜନ ଓ ଆକୃତି",
+                "ସ୍ୱାଦ ଓ ଗନ୍ଧ"
+            ],
+            correct: 1
+        },
+
+        // =========================
+        // NOTE-3
+        // =========================
+        {
+            question: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ କେତେ ପ୍ରକାର ମତ ଥିଲା ?",
+            options: [
+                "ଗୋଟିଏ",
+                "ଦୁଇଟି",
+                "ତିନୋଟି",
+                "ଚାରୋଟି"
+            ],
+            correct: 1
+        },
+        {
+            question: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?",
+            options: [
+                "କଣିକା ବିଶିଷ୍ଟ",
+                "ତରଳ",
+                "ଅବିଚ୍ଛିନ୍ନ",
+                "ଗ୍ୟାସୀୟ"
+            ],
+            correct: 2
+        },
+        {
+            question: "ବାଲି କାହାର ଉଦାହରଣ ଅଟେ ?",
+            options: [
+                "ଅବିଚ୍ଛିନ୍ନ ପଦାର୍ଥ",
+                "କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥ",
+                "ତରଳ ପଦାର୍ଥ",
+                "ଗ୍ୟାସୀୟ ପଦାର୍ଥ"
+            ],
+            correct: 1
+        },
+
+        // =========================
+        // NOTE-4
+        // =========================
+        {
+            question: "ପରୀକ୍ଷାରେ କେଉଁ ପାତ୍ର ବ୍ୟବହାର କରାଯାଏ ?",
+            options: [
+                "ଟେଷ୍ଟ ଟ୍ୟୁବ",
+                "ବିକର",
+                "ଫ୍ଲାସ୍କ",
+                "କପ୍"
+            ],
+            correct: 1
+        },
+        {
+            question: "ଜଳକୁ କେଉଁ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ?",
+            options: [
+                "ଚାମଚ",
+                "କାଠି",
+                "କାଚଦଣ୍ଡ",
+                "ବ୍ରଶ୍"
+            ],
+            correct: 2
+        },
+        {
+            question: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?",
+            options: [
+                "ତଳେ ରହିଯାଏ",
+                "ଉପରକୁ ଭାସେ",
+                "ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ",
+                "ଜଳରୁ ବାହାରିଯାଏ"
+            ],
+            correct: 2
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            question: "ଏହି ପରୀକ୍ଷାରେ କେଉଁ ପଦାର୍ଥର ସ୍ଫଟିକ ବ୍ୟବହାର କରାଯାଏ ?",
+            options: [
+                "ଲୁଣ",
+                "ଚିନି",
+                "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍",
+                "ଫିଟକିରି"
+            ],
+            correct: 2
+        },
+        {
+            question: "ଲଘୁକରଣର ଅର୍ଥ କ'ଣ ?",
+            options: [
+                "ଗରମ କରିବା",
+                "ପତଳା କରିବା",
+                "ଜମାଇବା",
+                "ଛାଣିବା"
+            ],
+            correct: 1
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ କିପରି ରହେ ?",
+            options: [
+                "ବର୍ଣ୍ଣହୀନ",
+                "କଳା",
+                "ରଙ୍ଗୀନ",
+                "ଘୋଳିଆ"
+            ],
+            correct: 2
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            question: "ଗୋଟିଏ ସ୍ଫଟିକରେ କ'ଣ ରହିଥାଏ ?",
+            options: [
+                "କେତେକ କଣିକା",
+                "ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା",
+                "କୌଣସି କଣିକା ନାହିଁ",
+                "କେବଳ ଗୋଟିଏ କଣିକା"
+            ],
+            correct: 1
+        },
+        {
+            question: "ଡେଟଲ୍‌ର ଉପସ୍ଥିତି କିପରି ଜଣାପଡ଼େ ?",
+            options: [
+                "ରଙ୍ଗରୁ",
+                "ସ୍ୱାଦରୁ",
+                "ଗନ୍ଧରୁ",
+                "ଆକାରରୁ"
+            ],
+            correct: 2
+        },
+        {
+            question: "ପଦାର୍ଥର କଣିକା କିପରି ହୋଇଥାଏ ?",
+            options: [
+                "ବଡ଼",
+                "ମଧ୍ୟମ ଆକାରର",
+                "ଦୃଶ୍ୟମାନ",
+                "ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର"
+            ],
+            correct: 3
+        }
+
+    ]
+},
+    
+trueFalse: {
+    questions: [
+
+        // =========================
+        // NOTE-1
+        // =========================
+        {
+            question: "ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ ।",
+            correct: true
+        },
+        {
+            question: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ନଥାଏ ।",
+            correct: false
+        },
+        {
+            question: "ଜଳବିନ୍ଦୁ ମଧ୍ୟ ଏକ ପଦାର୍ଥ ଅଟେ ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-2
+        // =========================
+        {
+            question: "ପଞ୍ଚତତ୍ତ୍ୱ ମଧ୍ୟରେ ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶ ଅନ୍ତର୍ଭୁକ୍ତ ।",
+            correct: true
+        },
+        {
+            question: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ତିନୋଟି ମୌଳିକକୁ ନେଇ ଗଠିତ ।",
+            correct: false
+        },
+        {
+            question: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ବିଭକ୍ତ କରିଛନ୍ତି ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-3
+        // =========================
+        {
+            question: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା ।",
+            correct: true
+        },
+        {
+            question: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା ।",
+            correct: false
+        },
+        {
+            question: "ବାଲି କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥର ଉଦାହରଣ ଅଟେ ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-4
+        // =========================
+        {
+            question: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।",
+            correct: true
+        },
+        {
+            question: "ଜଳକୁ କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ନାହିଁ ।",
+            correct: false
+        },
+        {
+            question: "ଏହି ପରୀକ୍ଷା ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ପ୍ରମାଣ କରେ ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            question: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନେଇ ପରୀକ୍ଷା କରାଯାଏ ।",
+            correct: true
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ଜଳ ସମ୍ପୂର୍ଣ୍ଣ ରଙ୍ଗହୀନ ହୋଇଯାଏ ।",
+            correct: false
+        },
+        {
+            question: "ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।",
+            correct: true
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            question: "ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।",
+            correct: true
+        },
+        {
+            question: "ଦ୍ରବଣର ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ନାହିଁ ।",
+            correct: false
+        },
+        {
+            question: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟନ୍ତି ।",
+            correct: true
+        }
+    ]
+},
+fillBlanks: {
+    questions: [
+
+        // =========================
+        // NOTE-1
+        // =========================
+        {
+            question: "ଆମେ ପ୍ରଶ୍ୱାସରେ ନେଉଥିବା ___ ଏକ ପଦାର୍ଥ ଅଟେ । (ବାୟୁ / ଆଲୋକ)",
+            answer: "ବାୟୁ"
+        },
+        {
+            question: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ___ ଅଛି । (ଆୟତନ / ରଙ୍ଗ)",
+            answer: "ଆୟତନ"
+        },
+        {
+            question: "ଗୋଟିଏ ଜଳବିନ୍ଦୁ ମଧ୍ୟ ଏକ ___ ଅଟେ । (ପଦାର୍ଥ / ଗ୍ରହ)",
+            answer: "ପଦାର୍ଥ"
+        },
+
+        // =========================
+        // NOTE-2
+        // =========================
+        {
+            question: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ___ ଗୋଟି ମୌଳିକକୁ ନେଇ ଗଠିତ । (ପାଞ୍ଚ / ତିନି)",
+            answer: "ପାଞ୍ଚ"
+        },
+        {
+            question: "ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ___ କୁହାଯାଏ । (ପଞ୍ଚତତ୍ତ୍ୱ / ଧାତୁ)",
+            answer: "ପଞ୍ଚତତ୍ତ୍ୱ"
+        },
+        {
+            question: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଧର୍ମ ଓ ___ ପ୍ରକୃତି ଅନୁସାରେ ବିଭକ୍ତ କରିଛନ୍ତି । (ରାସାୟନିକ / ଜୈବିକ)",
+            answer: "ରାସାୟନିକ"
+        },
+
+        // =========================
+        // NOTE-3
+        // =========================
+        {
+            question: "ଦୀର୍ଘକାଳ ଧରି ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ବନ୍ଧରେ ___ ପ୍ରକାର ଭିନ୍ନମତ ଥିଲା । (ଦୁଇ / ଚାରି)",
+            answer: "ଦୁଇ"
+        },
+        {
+            question: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ___ ଅଟେ । (ଅବିଚ୍ଛିନ୍ନ / ତରଳ)",
+            answer: "ଅବିଚ୍ଛିନ୍ନ"
+        },
+        {
+            question: "ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ ___ କୁ ନେଇ ଗଠିତ । (କଣିକା / ତରଙ୍ଗ)",
+            answer: "କଣିକା"
+        },
+
+        // =========================
+        // NOTE-4
+        // =========================
+        {
+            question: "ଜଳକୁ ___ ସାହାଯ୍ୟରେ ଗୋଳାଇବାକୁ ହେବ । (କାଚଦଣ୍ଡ / ଚାମଚ)",
+            answer: "କାଚଦଣ୍ଡ"
+        },
+        {
+            question: "ଚିନି ବା ଲୁଣ ଜଳରେ ମିଶି ___ ରେ ବ୍ୟାପିଯାଏ । (ଚାରିଆଡ଼େ / ଉପରକୁ)",
+            answer: "ଚାରିଆଡ଼େ"
+        },
+        {
+            question: "ଏହି ପରୀକ୍ଷା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ ___ କୁ ନେଇ ଗଠିତ । (କଣିକା / ପର୍ବତ)",
+            answer: "କଣିକା"
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            question: "2-3ଟି ___ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନେବାକୁ ହେବ । (ପୋଟାସିୟମ / ସୋଡିୟମ)",
+            answer: "ପୋଟାସିୟମ"
+        },
+        {
+            question: "ଦ୍ରବଣକୁ ବାରମ୍ବାର ପତଳା କରିବା ପ୍ରକ୍ରିୟାକୁ ___ କୁହାଯାଏ । (ଲଘୁକରଣ / ବାଷ୍ପୀକରଣ)",
+            answer: "ଲଘୁକରଣ"
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ ___ ହୋଇ ରହିଥାଏ । (ରଙ୍ଗୀନ / ବର୍ଣ୍ଣହୀନ)",
+            answer: "ରଙ୍ଗୀନ"
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            question: "ଗୋଟିଏ ସ୍ଫଟିକରେ ___ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ । (ଅସଂଖ୍ୟ / ଅଳ୍ପ)",
+            answer: "ଅସଂଖ୍ୟ"
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଡେଟଲ୍‌ର ___ ରହିଥାଏ । (ଗନ୍ଧ / ରଙ୍ଗ)",
+            answer: "ଗନ୍ଧ"
+        },
+        {
+            question: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ___ କ୍ଷୁଦ୍ର ଅଟନ୍ତି । (ଅତ୍ୟନ୍ତ / ସାମାନ୍ୟ)",
+            answer: "ଅତ୍ୟନ୍ତ"
+        }
+    ]
+},
+    
+matching: {
+    pairs: [
+        { left: "ପଦାର୍ଥ", right: "🧪 ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ସମସ୍ତ ବସ୍ତୁ ଗଢ଼ାଯାଇଛି ।" },
+        { left: "ବାୟୁ", right: "💨 ଏକ ପଦାର୍ଥ ଅଟେ ।" },
+        { left: "ବସ୍ତୁତ୍ୱ", right: "⚖️ ପଦାର୍ଥର ପରିମାଣ ।" },
+        { left: "ଆୟତନ", right: "📦 ପଦାର୍ଥ ଯେତିକି ସ୍ଥାନ ଦଖଲ କରେ ।" },
+        { left: "ପଞ୍ଚତତ୍ତ୍ୱ", right: "🌍 ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶ ।" },
+        { left: "ଭୌତିକ ଧର୍ମ", right: "👀 ଦେଖାଯାଉଥିବା ଗୁଣ ।" },
+        { left: "କଣିକା", right: "🔬 ପଦାର୍ଥର ଅତି ଛୋଟ ଅଂଶ ।" },
+        { left: "ବାଲି", right: "🏖️ କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥର ଉଦାହରଣ ।" },
+        { left: "ଚିନି ବା ଲୁଣ", right: "💧 ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।" },
+        { left: "କାଚଦଣ୍ଡ", right: "🥄 ଜଳକୁ ଗୋଳାଇବା ପାଇଁ ବ୍ୟବହୃତ ହୁଏ ।" },
+        { left: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍", right: "🟣 ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।" },
+        { left: "ଲଘୁକରଣ", right: "🧴 ଦ୍ରବଣକୁ ପତଳା କରିବା ।" },
+        { left: "ସ୍ଫଟିକ", right: "💎 ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ଧାରଣ କରେ ।" },
+        { left: "ଡେଟଲ୍", right: "🌿 ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଗନ୍ଧ ରହିଥାଏ ।" },
+        { left: "ପଦାର୍ଥର କଣିକା", right: "🔭 ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଓ କଳ୍ପନାର ବାହାରେ ।" }
+    ]
+},
+    
+arrange: {
+    questions: [
+
+        // =========================
+        // NOTE-1
+        // =========================
+        {
+            words: ["ବାୟୁ", "ଏକ", "ପଦାର୍ଥ", "ଅଟେ"],
+            correct: "ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ ।"
+        },
+        {
+            words: ["ଖାଦ୍ୟ", "ଏକ", "ପଦାର୍ଥ", "ଅଟେ"],
+            correct: "ଖାଦ୍ୟ ଏକ ପଦାର୍ଥ ଅଟେ ।"
+        },
+        {
+            words: ["ପ୍ରତ୍ୟେକ", "ପଦାର୍ଥର", "ବସ୍ତୁତ୍ୱ", "ଓ", "ଆୟତନ", "ଅଛି"],
+            correct: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଅଛି ।"
+        },
+
+        // =========================
+        // NOTE-2
+        // =========================
+        {
+            words: ["ଏହାକୁ", "ପଞ୍ଚତତ୍ତ୍ୱ", "କୁହାଯାଏ"],
+            correct: "ଏହାକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।"
+        },
+        {
+            words: ["ପଞ୍ଚତତ୍ତ୍ୱ", "ହେଲା", "ମାଟି", "ଜଳ", "ବାୟୁ", "ଅଗ୍ନି", "ଓ", "ଆକାଶ"],
+            correct: "ପଞ୍ଚତତ୍ତ୍ୱ ହେଲା ମାଟି ଜଳ ବାୟୁ ଅଗ୍ନି ଓ ଆକାଶ ।"
+        },
+        {
+            words: ["ଆମେ", "ପଦାର୍ଥର", "ଭୌତିକ", "ଗୁଣ", "ସମ୍ପର୍କରେ", "ଜାଣିବା"],
+            correct: "ଆମେ ପଦାର୍ଥର ଭୌତିକ ଗୁଣ ସମ୍ପର୍କରେ ଜାଣିବା ।"
+        },
+
+        // =========================
+        // NOTE-3
+        // =========================
+        {
+            words: ["ପଦାର୍ଥ", "ଅବିଚ୍ଛିନ୍ନ", "ଅଟେ"],
+            correct: "ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଅଟେ ।"
+        },
+        {
+            words: ["ପଦାର୍ଥ", "କଣିକାକୁ", "ନେଇ", "ଗଠିତ"],
+            correct: "ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।"
+        },
+        {
+            words: ["ବାଲି", "ଏହାର", "ଏକ", "ଉଦାହରଣ", "ଅଟେ"],
+            correct: "ବାଲି ଏହାର ଏକ ଉଦାହରଣ ଅଟେ ।"
+        },
+
+        // =========================
+        // NOTE-4
+        // =========================
+        {
+            words: ["ବିକରରେ", "ଅଧା", "ଜଳ", "ଭରିବାକୁ", "ହେବ"],
+            correct: "ବିକରରେ ଅଧା ଜଳ ଭରିବାକୁ ହେବ ।"
+        },
+        {
+            words: ["ଚିନି", "ବା", "ଲୁଣ", "ଜଳରେ", "ଚାରିଆଡ଼େ", "ବ୍ୟାପିଯାଏ"],
+            correct: "ଚିନି ବା ଲୁଣ ଜଳରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।"
+        },
+        {
+            words: ["ପଦାର୍ଥ", "କଣିକାକୁ", "ନେଇ", "ଗଠିତ"],
+            correct: "ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।"
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            words: ["ପୋଟାସିୟମ", "ପରମାଙ୍ଗାନେଟ୍‌ର", "ସ୍ଫଟିକ", "ନେବାକୁ", "ହେବ"],
+            correct: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନେବାକୁ ହେବ ।"
+        },
+        {
+            words: ["ଦ୍ରବଣର", "ଲଘୁକରଣ", "ହେବ"],
+            correct: "ଦ୍ରବଣର ଲଘୁକରଣ ହେବ ।"
+        },
+        {
+            words: ["ଜଳ", "ରଙ୍ଗୀନ", "ହୋଇ", "ରହିଥାଏ"],
+            correct: "ଜଳ ରଙ୍ଗୀନ ହୋଇ ରହିଥାଏ ।"
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            words: ["ଗୋଟିଏ", "ସ୍ଫଟିକରେ", "ଅସଂଖ୍ୟ", "କ୍ଷୁଦ୍ର", "କଣିକା", "ରହିଥାଏ"],
+            correct: "ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।"
+        },
+        {
+            words: ["ଡେଟଲ୍‌ର", "ଉପସ୍ଥିତି", "ଜଣାପଡ଼େ"],
+            correct: "ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।"
+        },
+        {
+            words: ["ପଦାର୍ଥର", "କଣିକାଗୁଡ଼ିକ", "ଅତ୍ୟନ୍ତ", "କ୍ଷୁଦ୍ର", "ଅଟନ୍ତି"],
+            correct: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟନ୍ତି ।"
+        }
+    ]
+},
+    
+stq: {
+    questions: [
+
+        // =========================
+        // NOTE-1
+        // =========================
+        {
+            question: "ପଦାର୍ଥ କ'ଣ ?",
+            answer: "ଏହି ବିଶ୍ଵର ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଗଢ଼ା, ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ । ସମସ୍ତ ବସ୍ତୁ ପଦାର୍ଥରେ ଗଠିତ । ବୈଜ୍ଞାନିକମାନେ ଏହାକୁ ପଦାର୍ଥ ବୋଲି କହିଛନ୍ତି ।"
+        },
+        {
+            question: "ବାୟୁ କାହିଁକି ପଦାର୍ଥ ବୋଲି କୁହାଯାଏ ?",
+            answer: "ଆମେ ପ୍ରଶ୍ୱାସରେ ନେଉଥିବା ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ । ଏହାର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଅଛି । ତେଣୁ ବାୟୁକୁ ପଦାର୍ଥ ବୋଲି କୁହାଯାଏ ।"
+        },
+        {
+            question: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର କେଉଁ ଦୁଇଟି ଗୁଣ ଥାଏ ?",
+            answer: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ । ବସ୍ତୁତ୍ୱ ହେଉଛି ପଦାର୍ଥର ପରିମାଣ । ଆୟତନ ହେଉଛି ପଦାର୍ଥ ଦଖଲ କରୁଥିବା ସ୍ଥାନ ।"
+        },
+
+        // =========================
+        // NOTE-2
+        // =========================
+        {
+            question: "ପଞ୍ଚତତ୍ତ୍ୱ କ'ଣ ?",
+            answer: "ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ । ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନେ ଏହି ଧାରଣା ଦେଇଥିଲେ । ସେମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ଏହାକୁ ନେଇ ଗଠିତ ।"
+        },
+        {
+            question: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କର ମତ କ'ଣ ଥିଲା ?",
+            answer: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ପାଞ୍ଚଟି ମୌଳିକକୁ ନେଇ ଗଠିତ । ସଜୀବ ଓ ନିର୍ଜୀବ ବସ୍ତୁ ମଧ୍ୟ ଏହି ପାଞ୍ଚଟି ଉପାଦାନରେ ତିଆରି । ଏହାକୁ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା କୁହାଯାଏ ।"
+        },
+        {
+            question: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ କିପରି ବିଭକ୍ତ କରିଛନ୍ତି ?",
+            answer: "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରିଛନ୍ତି । ସେମାନେ ପଦାର୍ଥର ଗୁଣ ଆଧାରରେ ଏହାର ଅଧ୍ୟୟନ କରନ୍ତି । ଏହା ବିଜ୍ଞାନର ଆଧୁନିକ ଧାରଣା ଅଟେ ।"
+        },
+
+        // =========================
+        // NOTE-3
+        // =========================
+        {
+            question: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ କେତେ ପ୍ରକାର ମତ ଥିଲା ?",
+            answer: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା । କେତେକ ଲୋକ ପଦାର୍ଥକୁ ଅବିଚ୍ଛିନ୍ନ ବୋଲି ମନେ କରୁଥିଲେ । ଅନ୍ୟମାନେ ଏହାକୁ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି କହୁଥିଲେ ।"
+        },
+        {
+            question: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?",
+            answer: "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା । କାଠ, କାଚ ଓ କାଗଜ ଏହାର ଉଦାହରଣ ଭାବେ ଦିଆଯାଇଥିଲା । ସେମାନେ ଭାବୁଥିଲେ ପଦାର୍ଥ ଛୋଟ ଅଂଶରେ ଗଠିତ ନୁହେଁ ।"
+        },
+        {
+            question: "ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?",
+            answer: "ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା । ବାଲି ଏହାର ଏକ ଉଦାହରଣ ଅଟେ । ପରୀକ୍ଷା ମାଧ୍ୟମରେ ଏହି ମତ ସଠିକ୍ ବୋଲି ପ୍ରମାଣିତ ହୋଇଥିଲା ।"
+        },
+
+        // =========================
+        // NOTE-4
+        // =========================
+        {
+            question: "ବିକରରେ କ'ଣ ପକାଯାଏ ?",
+            answer: "ବିକରରେ ଲୁଣ କିମ୍ବା ଚିନି ପକାଯାଏ । ଏହାକୁ ଜଳରେ ମିଶାଇ ପରୀକ୍ଷା କରାଯାଏ । ଏହାଦ୍ୱାରା ପଦାର୍ଥର କଣିକା ବିଷୟରେ ଜାଣିହୁଏ ।"
+        },
+        {
+            question: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?",
+            answer: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ । କିଛି ସମୟ ପରେ ସେଗୁଡ଼ିକ ଦେଖାଯାଏ ନାହିଁ । କିନ୍ତୁ ସେମାନେ ଜଳ ମଧ୍ୟରେ ରହିଥାନ୍ତି ।"
+        },
+        {
+            question: "ଏହି ପରୀକ୍ଷା କ'ଣ ପ୍ରମାଣ କରେ ?",
+            answer: "ଏହି ପରୀକ୍ଷା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ । ଲୁଣ ବା ଚିନିର କଣିକା ଜଳ ମଧ୍ୟରେ ବ୍ୟାପିଯାଏ । ଏହା ପଦାର୍ଥର କଣିକା ଥିବାର ପ୍ରମାଣ ଅଟେ ।"
+        },
+
+        // =========================
+        // NOTE-5
+        // =========================
+        {
+            question: "କେଉଁ ପଦାର୍ଥର ସ୍ଫଟିକ ନିଆଯାଏ ?",
+            answer: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନିଆଯାଏ । ଏହାକୁ ଜଳରେ ଦ୍ରବୀଭୂତ କରାଯାଏ । ପରେ ଏହା ଉପରେ ପରୀକ୍ଷା କରାଯାଏ ।"
+        },
+        {
+            question: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ କିପରି ରହେ ?",
+            answer: "ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ ରଙ୍ଗୀନ ହୋଇ ରହେ । ଏହା ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ପ୍ରଭାବ ଦର୍ଶାଏ । ଏଥିରୁ କଣିକାର କ୍ଷୁଦ୍ରତା ଜଣାପଡ଼େ ।"
+        },
+        {
+            question: "ଏହି ପରୀକ୍ଷା କ'ଣ ସୂଚାଏ ?",
+            answer: "ଏହି ପରୀକ୍ଷା ସୂଚାଏ ଯେ ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ । ଏହା ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ବୋଲି ଦର୍ଶାଏ । କଣିକାର ପ୍ରଭାବ ସହଜରେ ଦେଖାଯାଏ ।"
+        },
+
+        // =========================
+        // NOTE-6
+        // =========================
+        {
+            question: "ଗୋଟିଏ ସ୍ଫଟିକରେ କ'ଣ ରହିଥାଏ ?",
+            answer: "ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ । ଏହି କଣିକାଗୁଡ଼ିକ ଆହୁରି ବିଭାଜିତ ହୋଇପାରନ୍ତି । ସେମାନଙ୍କ ସଂଖ୍ୟା ବହୁତ ଅଧିକ ଥାଏ ।"
+        },
+        {
+            question: "ଡେଟଲ୍‌ର ଉପସ୍ଥିତି କିପରି ଜଣାପଡ଼େ ?",
+            answer: "ଦ୍ରବଣର ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ । ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଏହାର ଗନ୍ଧ ରହିଥାଏ । ଏହା ଡେଟଲ୍‌ର କଣିକା ଥିବାର ସୂଚନା ଦିଏ ।"
+        },
+        {
+            question: "ପଦାର୍ଥର କଣିକା କିପରି ହୋଇଥାଏ ?",
+            answer: "ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ । ସେମାନଙ୍କର କ୍ଷୁଦ୍ରତାକୁ ସହଜରେ କଳ୍ପନା କରିହୁଏ ନାହିଁ । ସେମାନଙ୍କ ଆକାର ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।"
+        }
+
+    ]
+}
+},
+],
+
+summary: {
+    audio: "ପଦାର୍ଥ କ'ଣ, ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା, ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି କିପରି ଜଣାପଡ଼େ, ଲୁଣ ଓ ଚିନି ଜଳରେ କେଉଁଠି ଯାଏ ଏବଂ ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକର ଆକାର କିପରି ଅଟେ ?",
+
+    content: {
+        introduction: "ଏହି ପାଠରେ ପଦାର୍ଥର ଅର୍ଥ, ତାହାର ଗୁଣ, ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା, ପଦାର୍ଥର କଣିକା ଗଠନ ଏବଂ କଣିକାର କ୍ଷୁଦ୍ର ଆକାର ବିଷୟରେ ସୁନ୍ଦର ଭାବରେ ବର୍ଣ୍ଣନା କରାଯାଇଛି । ଆସନ୍ତୁ ଏ ବିଷୟରେ ଜାଣିବା ।",
+
+        sentences: [
+            {
+                heading: "ପଦାର୍ଥର ଅର୍ଥ",
+                text: "ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଗଢ଼ା ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ । ବାୟୁ, ଖାଦ୍ୟ, ପଥର, ମେଘ, ତାରା, ଉଦ୍ଭିଦ, ପଶୁପକ୍ଷୀ, ଜଳବିନ୍ଦୁ ଓ ବାଲିକଣି ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ ।"
+            },
+            {
+                heading: "ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା",
+                text: "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ପଞ୍ଚତତ୍ତ୍ୱ ଅର୍ଥାତ୍ ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ନେଇ ଗଠିତ । ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ତାହାର ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଅଧ୍ୟୟନ କରନ୍ତି ।"
+            },
+            {
+                heading: "ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ",
+                text: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ପୂର୍ବରୁ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ଓ ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା । ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ଜଣାପଡ଼ିଲା ।"
+            },
+            {
+                heading: "ଲୁଣ ଓ ଚିନିର ପରୀକ୍ଷା",
+                text: "ଜଳରେ ଲୁଣ ବା ଚିନି ମିଶାଇ ଗୋଳାଇଲେ ସେଗୁଡ଼ିକ ଦେଖାଯାଏ ନାହିଁ, କିନ୍ତୁ ଜଳ ମଧ୍ୟରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ । ଏହି ପରୀକ୍ଷାରୁ ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ଏବଂ ସେହି କଣିକାଗୁଡ଼ିକ ଜଳ ମଧ୍ୟରେ ପ୍ରସାରିତ ହୋଇପାରନ୍ତି ।"
+            },
+            {
+                heading: "କଣିକାର ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର",
+                text: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ଓ ଡେଟଲ୍‌ର ପରୀକ୍ଷାରୁ ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ । ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ରଙ୍ଗ ଓ ଗନ୍ଧ ରହିଥାଏ । ଏହା ପ୍ରମାଣ କରେ ଯେ ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।"
+            }
+        ],
+
+        conclusion: "ପଦାର୍ଥ ହେଉଛି ସମସ୍ତ ବସ୍ତୁର ମୌଳିକ ଗଠନକାରୀ ଦ୍ରବ୍ୟ । ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ । ପଦାର୍ଥର ଗଠନ ଓ ଗୁଣ ବିଷୟରେ ଜ୍ଞାନ ଆମକୁ ବୈଜ୍ଞାନିକ ଚିନ୍ତାଧାରା ବିକାଶ କରିବାରେ ସାହାଯ୍ୟ କରେ ।"
+    },
+
+
+questions: [
+    {
+        audio: "",
+        question: "ପଦାର୍ଥର ଅର୍ଥ ଓ ଏହାର ମୌଳିକ ଗୁଣଗୁଡ଼ିକ ବିଷୟରେ ଲେଖ ।",
+        introduction: "ଆମ ଚାରିପାଖରେ ଥିବା ବସ୍ତୁଗୁଡ଼ିକର ଗଠନ ଓ ଗୁଣ ବୁଝିବା ପାଇଁ ପଦାର୍ଥ ସମ୍ପର୍କରେ ଜାଣିବା ଆବଶ୍ୟକ ।",
+        points: [
+            "ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଗଢ଼ା ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ ।",
+            "ବାୟୁ, ଖାଦ୍ୟ, ପଥର, ମେଘ ଓ ତାରା ସବୁ ପଦାର୍ଥ ଅଟନ୍ତି ।",
+            "ଉଦ୍ଭିଦ, ପଶୁପକ୍ଷୀ ଓ ଜଳବିନ୍ଦୁ ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ ।",
+            "ପ୍ରତ୍ୟେକ ପଦାର୍ଥ କିଛି ସ୍ଥାନ ଅଧିକାର କରିଥାଏ ।",
+            "ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ରହିଥାଏ ।"
+        ],
+        conclusion: "ଆମ ଚାରିପାଖରେ ଥିବା ସମସ୍ତ ବସ୍ତୁ ପଦାର୍ଥରେ ଗଠିତ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ, ଯାହା ତାହାର ମୌଳିକ ଗୁଣ ଅଟେ ।"
+    },
+    {
+        audio: "",
+        question: "ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା ବିଷୟରେ ଲେଖ ।",
+        introduction: "ପଦାର୍ଥର ଗଠନ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ସମୟରେ ଭିନ୍ନ ଭିନ୍ନ ଧାରଣା ପ୍ରଚଳିତ ଥିଲା ।",
+        points: [
+            "ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନେ ସମସ୍ତ ବସ୍ତୁକୁ ପଞ୍ଚତତ୍ତ୍ୱରେ ଗଠିତ ବୋଲି ମନେ କରୁଥିଲେ ।",
+            "ପଞ୍ଚତତ୍ତ୍ୱ ହେଲା ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶ ।",
+            "ସଜୀବ ଓ ନିର୍ଜୀବ ସମସ୍ତ ବସ୍ତୁ ଏହି ପାଞ୍ଚଟି ଉପାଦାନରେ ଗଠିତ ବୋଲି ସେମାନେ କହୁଥିଲେ ।",
+            "ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣ ଅନୁସାରେ ଅଧ୍ୟୟନ କରନ୍ତି ।",
+            "ବିଜ୍ଞାନର ଉନ୍ନତି ସହିତ ପଦାର୍ଥ ସମ୍ପର୍କରେ ନୂତନ ଜ୍ଞାନ ମିଳିଛି ।"
+        ],
+        conclusion: "ପ୍ରାଚୀନ କାଳରେ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ପ୍ରଚଳିତ ଥିଲା, କିନ୍ତୁ ଆଧୁନିକ ବିଜ୍ଞାନ ପଦାର୍ଥର ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣ ଆଧାରରେ ଅଧିକ ସଠିକ୍ ଜ୍ଞାନ ପ୍ରଦାନ କରିଛି ।"
+    },
+    {
+        audio: "",
+        question: "ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି କିପରି ଜଣାପଡ଼େ ?",
+        introduction: "ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ବିଭିନ୍ନ ମତ ଥିଲେ ମଧ୍ୟ ପରୀକ୍ଷା ମାଧ୍ୟମରେ ସଠିକ୍ ତଥ୍ୟ ଜଣାପଡ଼ିଛି ।",
+        points: [
+            "ଦୀର୍ଘ ସମୟ ଧରି ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା ।",
+            "କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
+            "ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା ।",
+            "ବାଲି କଣିକାଯୁକ୍ତ ପଦାର୍ଥର ଏକ ଉଦାହରଣ ଅଟେ ।",
+            "ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ଜଣାପଡ଼ିଲା ।"
+        ],
+        conclusion: "ବୈଜ୍ଞାନିକ ପରୀକ୍ଷାରୁ ଜଣାପଡ଼ିଛି ଯେ ପଦାର୍ଥ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ଏବଂ ଏହା ବୈଜ୍ଞାନିକ ସତ୍ୟ ଅଟେ ।"
+    },
+    {
+        audio: "",
+        question: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?",
+        introduction: "ଲୁଣ କିମ୍ବା ଚିନିକୁ ଜଳରେ ମିଶାଇ କରାଯାଇଥିବା ପରୀକ୍ଷାରୁ ପଦାର୍ଥର ଗଠନ ସମ୍ପର୍କରେ ଜଣାପଡ଼େ ।",
+        points: [
+            "ବିକରରେ ଅଧା ଜଳ ନେଇ ସେଥିରେ ଲୁଣ କିମ୍ବା ଚିନି ପକାଯାଏ ।",
+            "କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ ଜଳକୁ ଭଲଭାବେ ଗୋଳାଯାଏ ।",
+            "କିଛି ସମୟ ପରେ ଲୁଣ ବା ଚିନି ଦେଖାଯାଏ ନାହିଁ ।",
+            "ଲୁଣ ବା ଚିନି ଜଳ ମଧ୍ୟରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।",
+            "ଏହା ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ପ୍ରମାଣ କରେ ।"
+        ],
+        conclusion: "ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶି ସମଗ୍ର ଜଳରେ ବ୍ୟାପିଯାଏ । ଏହି ସରଳ ପରୀକ୍ଷାରୁ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ବୋଲି ଜଣାପଡ଼େ ।"
+    },
+    {
+        audio: "",
+        question: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ବୋଲି କିପରି ପ୍ରମାଣିତ ହୁଏ ?",
+        introduction: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ପରୀକ୍ଷା ଦ୍ୱାରା ପଦାର୍ଥର କଣିକାର କ୍ଷୁଦ୍ରତା ବିଷୟରେ ଜଣାପଡ଼େ ।",
+        points: [
+            "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର କିଛି ସ୍ଫଟିକ ଜଳରେ ଦ୍ରବୀଭୂତ କରାଯାଏ ।",
+            "ଦ୍ରବଣକୁ ବାରମ୍ବାର ବିଶୁଦ୍ଧ ଜଳ ସହିତ ଲଘୁକରଣ କରାଯାଏ ।",
+            "ଅନେକ ଥର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ ରଙ୍ଗୀନ ରହିଥାଏ ।",
+            "ଅଳ୍ପ ପରିମାଣର ପଦାର୍ଥ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।",
+            "ଏଥିରୁ ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ବୋଲି ଜଣାପଡ଼େ ।"
+        ],
+        conclusion: "ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ପରୀକ୍ଷା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହେଲେ ମଧ୍ୟ ସେମାନଙ୍କର ପ୍ରଭାବ ସ୍ପଷ୍ଟ ଭାବରେ ଦେଖାଯାଏ ।"
+    },
+    {
+        audio: "",
+        question: "ପଦାର୍ଥର କଣିକାର ଆକାର ବିଷୟରେ ଲେଖ ।",
+        introduction: "ବିଭିନ୍ନ ପରୀକ୍ଷା ମାଧ୍ୟମରେ ପଦାର୍ଥର କଣିକାର ଆକାର ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ବୋଲି ଜଣାପଡ଼େ ।",
+        points: [
+            "ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।",
+            "ଏହି କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ ଆହୁରି କ୍ଷୁଦ୍ର କଣିକାରେ ପରିଣତ ହୁଅନ୍ତି ।",
+            "ଡେଟଲ୍‌କୁ ବାରମ୍ବାର ଲଘୁକରଣ କରିଲେ ମଧ୍ୟ ତାହାର ଗନ୍ଧ ରହିଥାଏ ।",
+            "ଗନ୍ଧରୁ ପଦାର୍ଥର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
+            "ପଦାର୍ଥର କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।"
+        ],
+        conclusion: "ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଓ ଅସଂଖ୍ୟ ସଂଖ୍ୟାରେ ରହିଥାଏ । ସେମାନଙ୍କର ପ୍ରକୃତ ଆକାର କଳ୍ପନା କରିବା ମଧ୍ୟ କଷ୍ଟକର ଅଟେ ।"
+    }
+]        
+}  
+
+};  
