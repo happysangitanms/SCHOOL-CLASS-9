@@ -2234,10 +2234,27 @@ body.practice-mode .test-btn {
     min-height: 58px !important;
     line-height: 1.3 !important;
 }
+
+
+
+
 @media (max-width: 480px) {
     body.practice-mode .test-btn {
         padding: 10px 6px !important;
         font-size: 12px !important;
         min-height: 54px !important;
     }
+}
+
+/* Show the 9 exam buttons specifically in practice-mode */
+body.practice-mode #mcqBtn,
+body.practice-mode #tfBtn,
+body.practice-mode #fibBtn,
+body.practice-mode #matchBtn,
+body.practice-mode #arrangeBtn,
+body.practice-mode #stqBtn,
+body.practice-mode #summaryBtn,
+body.practice-mode #questionBtn,
+body.practice-mode #practiceBtn {
+    display: block !important;
 }
