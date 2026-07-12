@@ -3,7 +3,7 @@ const CLASS_MODE = "practice";
 const APP_CONFIG = {
     sreni: "ନବମ",
     subject: "ଭୌତିକ ବିଜ୍ଞାନ",
-    classCode: "ଭୌତିକ ବିଜ୍ଞାନ: ପୃଷ୍ଠା ୧-୨"
+    classCode: "ଭୌତିକ ବିଜ୍ଞାନ: ପ୍ରଥମ ଅଧ୍ୟାୟ (ପୃଷ୍ଠା ୧-୨)"
 };
 
 
