@@ -3,7 +3,7 @@ const CLASS_MODE = "practice";
 const APP_CONFIG = {
     sreni: "ନବମ",
     subject: "ଭୌତିକ ବିଜ୍ଞାନ",
-    classCode: "ଭୌତିକ ବିଜ୍ଞାନ: CLASS-1"
+    classCode: "ଭୌତିକ ବିଜ୍ଞାନ: CLASS-2"
 };
 
 
