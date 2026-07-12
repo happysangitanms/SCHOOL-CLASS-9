@@ -1767,7 +1767,9 @@ function createQuestionTest() {
 
 function updateProgress() {
     const progress = ((currentSentence + 1) / courseData.sentences.length) * 100;
-    progressFill.style.width = progress + '%';
+    if (progressFill) {
+        progressFill.style.width = progress + '%';
+    }
 }
        function updateScoreDisplay() {
     const sentence = courseData.sentences[currentSentence];
