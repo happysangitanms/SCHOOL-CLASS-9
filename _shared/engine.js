@@ -3348,8 +3348,8 @@ document.getElementById('loginBtn').addEventListener('click', function() {
     const rollNumber = document.getElementById('rollNumberInput').value;
     if (rollNumber) {
         localStorage.setItem('userRollNumber', rollNumber);
-    }
-})();
+}
+});
 
 setTimeout(() => {
     const img = document.getElementById('welcomeRoundImg');
@@ -3364,8 +3364,8 @@ setTimeout(() => {
         if (welcomeDiv) {
             triggerHandwritingForWelcome(welcomeText);
         }
-    }, 1000);
-});
+   }, 1000);
+})();
 
 // Cleanup audio when leaving page
 window.addEventListener('beforeunload', () => {
