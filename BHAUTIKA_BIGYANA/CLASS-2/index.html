@@ -2175,7 +2175,7 @@ div:has(> #audioToggleBtn) {
         <div id="loginError" class="login-error"></div>
 
             <!-- Know Your Roll Number Button -->
-        <button onclick="window.open('https://evidya-admin.pages.dev/bnss/', '_blank')" class="roll-number-btn" style="background-color: #FF6B6B; margin-top: 10px; padding: 12px; font-size: 14px; border: none; border-radius: 8px; color: white; cursor: pointer; width: 100%; font-weight: bold;">
+        <button onclick="window.open('https://evidya-admin.pages.dev/school9/', '_blank')" class="roll-number-btn" style="background-color: #FF6B6B; margin-top: 10px; padding: 12px; font-size: 14px; border: none; border-radius: 8px; color: white; cursor: pointer; width: 100%; font-weight: bold;">
             📋 ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । 
         </button>  
 
@@ -2513,7 +2513,7 @@ div:has(> #audioToggleBtn) {
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ବହି ପାଠ ବୁଝୁଛନ୍ତି ...</p>
    <audio id="audioPlayer" controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; border-radius: 8px;">
-    <source src="https://audio.evidya.de/BNSS1.mp3" type="audio/mpeg">
+    <source src="https://audio.evidya.de/S9SCP1P1-2.mp3" type="audio/mpeg">
     Your browser does not support audio.
 </audio>
 </div>
@@ -2523,7 +2523,7 @@ div:has(> #audioToggleBtn) {
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ପ୍ରଶ୍ନୋତ୍ତର ବୁଝୁଛନ୍ତି ...</p>
    <audio id="audioPlayer3" controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; border-radius: 8px;">
-    <source src="https://audio.evidya.de/BNSS1QA.mp3" type="audio/mpeg">
+    <source src="https://audio.evidya.de/S9SCP1P1-2QA.mp3" type="audio/mpeg">
     Your browser does not support audio.
 </audio>
 </div>
@@ -2868,9 +2868,9 @@ div:has(> #audioToggleBtn) {
 // FOR EACH SUBJECT/CLASS COPY OF THIS FILE
 // ============================================
 const APP_CONFIG = {
-    sreni: "BNSS Practical-1",
-    subject: "BNSS Practical-1",
-    classCode: "BNSS Practical: CLASS-1"
+    sreni: "ନବମ ଶ୍ରେଣୀ",
+    subject: "ଭୌତିକ ବିଜ୍ଞାନ",
+    classCode: "ଭୌତିକ ବିଜ୍ଞାନ: CLASS-1"
 };
 
     
@@ -2914,7 +2914,7 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 const FALLBACK_AUDIO_URL = "https://raw.githubusercontent.com/happysangitanms/assets/main/fallback%20audio.m4a";
-const CLASS_NAME = "bnss";
+const CLASS_NAME = "school9";
 
 function getDeviceId() {
     let deviceId = localStorage.getItem('deviceId_evidya');
@@ -6048,7 +6048,7 @@ function createSummaryTest() {
     
     let html = `<div class="summary-content active">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - What are the objectives of BNSS? (BNSS ର ଉଦ୍ଦେଶ୍ୟ କ'ଣ ?)</h2>
+            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - ଏହି କ୍ଲାସ୍ ର ସାରାଂଶ ଲେଖ ।</h2>
             ${summaryAudioButton}
         </div>
         
@@ -7859,7 +7859,7 @@ function closeMermaidModal() {
 // Just change PDF_FILE_ID for each lesson!
 // ============================================
 
-const PDF_URL = 'https://audio.evidya.de/BNSS1.pdf';
+const PDF_URL = 'https://audio.evidya.de/S9SCP1P1-2.pdf';
 
 let bookCur = 0;
 let bookPdfDoc = null;
