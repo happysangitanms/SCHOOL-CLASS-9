@@ -2212,4 +2212,26 @@ div:has(> #examSectionBtn) { display: none !important; }
         /* Hides: 🎧 ଆସନ୍ତୁ, ପ୍ରଶ୍ନୋତ୍ତର ଶୁଣି ମନେରଖିବା (Audio 3) button */
 #audioToggleBtn3 { display: none !important; }
              
-        
+
+
+
+/* ===== PRACTICE-MODE (Q&A-only classroom) — only active when body has .practice-mode ===== */
+body.practice-mode #audioToggleBtn3 { display: none !important; }
+body.practice-mode div:has(> #showLessonBtn) { display: none !important; }
+body.practice-mode div:has(> #wordBtn) { display: none !important; }
+body.practice-mode .assistant-dropdown-wrapper { display: none !important; }
+body.practice-mode #examButtonsContainer { display: block !important; }
+body.practice-mode #examSectionBtn { display: none !important; }
+body.practice-mode .test-btn {
+    padding: 12px 8px !important;
+    font-size: 12px !important;
+    min-height: 58px !important;
+    line-height: 1.3 !important;
+}
+@media (max-width: 480px) {
+    body.practice-mode .test-btn {
+        padding: 10px 6px !important;
+        font-size: 12px !important;
+        min-height: 54px !important;
+    }
+}
