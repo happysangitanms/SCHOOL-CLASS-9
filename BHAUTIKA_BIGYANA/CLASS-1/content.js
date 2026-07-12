@@ -10,7 +10,7 @@ const CLASS_NAME = "school9";
 const MEDIA_CONFIG = {
     audio1: "https://audio.evidya.de/S9SCP1P1-2.mp3",
     audio3: "https://audio.evidya.de/S9SCP1P1-2QA.mp3",
-    video:  "https://www.youtube.com/embed/EvDpcm14j0E?playsinline=1&rel=0&modestbranding=1&autoplay=1",
+    video:  "https://www.youtube.com/embed/jyNYTTROtU4?playsinline=1&rel=0&modestbranding=1&autoplay=1",
     pdf:    "https://audio.evidya.de/S9SCP1P1-2.pdf"
 };
 
