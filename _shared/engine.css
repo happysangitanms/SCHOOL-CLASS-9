@@ -2214,14 +2214,20 @@ div:has(> #examSectionBtn) { display: none !important; }
              
 
 
-
 /* ===== PRACTICE-MODE (Q&A-only classroom) — only active when body has .practice-mode ===== */
 body.practice-mode #audioToggleBtn3 { display: none !important; }
 body.practice-mode div:has(> #showLessonBtn) { display: none !important; }
 body.practice-mode div:has(> #wordBtn) { display: none !important; }
 body.practice-mode .assistant-dropdown-wrapper { display: none !important; }
+body.practice-mode #noteButtonsRow { display: none !important; }
+body.practice-mode #standaloneChatBtnRow { display: none !important; }
+
+/* Force exam section fully visible and expanded */
 body.practice-mode #examButtonsContainer { display: block !important; }
+body.practice-mode .test-buttons { display: grid !important; }
 body.practice-mode #examSectionBtn { display: none !important; }
+body.practice-mode .exam-assistant-container { display: none !important; }
+
 body.practice-mode .test-btn {
     padding: 12px 8px !important;
     font-size: 12px !important;
