@@ -3327,15 +3327,13 @@ function initCustomAudioPlayer(idSuffix) {
 }
 
 // Initialize both players once, on page load
-window.addEventListener('DOMContentLoaded', () => {
-    initCustomAudioPlayer('');   // audioPlayer
-    initCustomAudioPlayer('3');  // audioPlayer3
-});
+initCustomAudioPlayer('');
+initCustomAudioPlayer('3');
 
 
     
 // Initialize on page load
-window.addEventListener('DOMContentLoaded', function() {
+(function() {
     document.getElementById('audioPlayerSrc').src = MEDIA_CONFIG.audio1;
       document.getElementById('audioPlayer').load();
       document.getElementById('audioPlayer3Src').src = MEDIA_CONFIG.audio3;
@@ -3351,7 +3349,7 @@ document.getElementById('loginBtn').addEventListener('click', function() {
     if (rollNumber) {
         localStorage.setItem('userRollNumber', rollNumber);
     }
-}); 
+})();
 
 setTimeout(() => {
     const img = document.getElementById('welcomeRoundImg');
