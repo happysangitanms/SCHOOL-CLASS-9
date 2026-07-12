@@ -3339,6 +3339,23 @@ initCustomAudioPlayer('3');
       document.getElementById('audioPlayer3Src').src = MEDIA_CONFIG.audio3;
       document.getElementById('audioPlayer3').load();
       document.getElementById('videoIframe').dataset.src = MEDIA_CONFIG.video;
+
+// Practice-mode: swap in summary-image + chat buttons, activate Q&A-only CSS
+    if (typeof CLASS_MODE !== 'undefined' && CLASS_MODE === 'practice') {
+        document.body.classList.add('practice-mode');
+        const mediaRow = document.getElementById('mediaTogglesRow');
+        if (mediaRow) {
+            mediaRow.innerHTML = `
+                <button onclick="window.open(MEDIA_CONFIG.summaryPdf, '_blank')" style="width:100%; padding:14px; background: linear-gradient(135deg, #0369a1 0%, #075985 100%); color:white; border:none; border-radius:8px; font-size:14px; font-weight:bold; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.2);">
+                    🖼️ ସାର-ଚିତ୍ର ଦେଖିବା
+                </button>
+                <button onclick="openStudyBot()" style="width:100%; padding:14px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; border:none; border-radius:8px; font-size:14px; font-weight:bold; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.2);">
+                    🎓 ଚାଟିଙ୍ଗ୍ କରି ପଢିବା..
+                </button>
+            `;
+        }
+    }
+    
     const savedRoll = localStorage.getItem('userRollNumber');
     if (savedRoll) {
         document.getElementById('rollNumberInput').value = savedRoll;
