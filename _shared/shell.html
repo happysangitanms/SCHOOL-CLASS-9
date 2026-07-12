@@ -1,1 +1,718 @@
+<div style="background: #ff9800; padding: 8px; color: white; font-weight: bold; position: fixed; top: 0; left: 0; right: 0; z-index: 99999; overflow: hidden; margin: 0;">
+    <marquee behavior="scroll" direction="left" style="margin: 0;">
+        © 2026 • This is the property of E-Vidya Academy, Bhadrak, Odisha • For Educational Use Only • Copying & Distribution Prohibited • All Rights Reserved
+    </marquee>
+</div>
+ 
+<div id="loginScreen" class="login-screen">
+    <div class="login-container">
+      <h1 class="welcome-title" style="text-align: center; font-size: clamp(1.2rem, 4vw, 1.6rem);">
+    ଇ-ବିଦ୍ୟା ଏକାଡେମି ଦ୍ଵାରା ପ୍ରସ୍ତୁତ
+</h1>
+       <p class="welcome-subtitle" style="text-align: center;"><b>🌹ଏହି ସ୍ଵତନ୍ତ୍ର ମଞ୍ଚରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ🌹</b></p>  
+        
+     <input type="tel" id="rollNumberInput" placeholder="ଦୟାକରି ଏଠାରେ ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ..." class="login-input" inputmode="numeric" pattern="[0-9]*">
+        
+        <div class="consent-box">
+            <input type="checkbox" id="consentCheck">
+            <label for="consentCheck">I agree to device tracking, usage monitoring, audio playback, internet access, data storage, and all <a href="https://e-vidya-legal-policies.pages.dev/" target="_blank">terms & conditions</a> of E-Vidya Academy.</label>
+        </div>
+       <button id="loginBtn" class="login-btn">ଉପରୋକ୍ତ ଛୋଟ ବାକ୍ସରେ କ୍ଲିକ୍ କରିସାରିବା ପରେ ଏଠାରେ କ୍ଲିକ୍ କରି କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରନ୍ତୁ ।</button>
+        <div id="loginError" class="login-error"></div>
 
+            <!-- Know Your Roll Number Button -->
+        <button onclick="window.open('https://evidya-admin.pages.dev/school9/', '_blank')" class="roll-number-btn" style="background-color: #FF6B6B; margin-top: 10px; padding: 12px; font-size: 14px; border: none; border-radius: 8px; color: white; cursor: pointer; width: 100%; font-weight: bold;">
+            📋 ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । 
+        </button>  
+
+        <div style="text-align: center; margin-top: 12px;">
+    <a href="https://evidya-admin.pages.dev/payment/" target="_blank" rel="noopener noreferrer"
+       style="
+           display: inline-block;
+           padding: 12px 28px;
+           background: linear-gradient(135deg, #c8962a, #e4b84a);
+           color: #0a1628;
+           font-family: 'Noto Sans Oriya', sans-serif;
+           font-size: clamp(0.8rem, 3.5vw, 1rem);
+           font-weight: 700;
+           text-decoration: none;
+           border-radius: 50px;
+           box-shadow: 0 6px 20px rgba(200,150,42,0.35);
+           transition: transform 0.2s, box-shadow 0.2s;
+       "
+       onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 26px rgba(200,150,42,0.45)'"
+       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(200,150,42,0.35)'"
+    >
+        🌹 ପେମେଣ୍ଟ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । →
+    </a>
+</div>
+        
+        <!-- Small Round Image Container -->
+        <div class="image-container" style="
+            margin-top: 20px;
+            text-align: center;
+        ">
+            <div style="
+                display: inline-block;
+                padding: 10px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-radius: 50%;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            ">
+                <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/bot%20image-2.gif" 
+                     alt="AI Assistant" 
+                     class="assistant-image"
+                     style="
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        object-fit: contain;
+                        background: white;
+                     ">
+            </div>
+            <p class="info-text" style="
+                margin-top: 15px;
+                font-size: 14px;
+                color: #000000;
+                font-weight: bold;
+            ">
+                📚 ଶିକ୍ଷାରେ ଡିଜିଟାଲ ଯୁଗର ଆରମ୍ଭ – ଆପଣଙ୍କ ସହିତ ।
+            </p>
+        </div>
+
+       <div style="text-align: center; margin-top: 12px;">
+    <a href="https://evidya-admin.pages.dev/contact/" target="_blank" rel="noopener noreferrer"
+       style="
+           display: inline-block;
+           padding: 12px 28px;
+           background: linear-gradient(135deg, #1e3a8a, #2563eb);
+           color: #ffffff;
+           font-family: 'Noto Sans Oriya', sans-serif;
+           font-size: clamp(0.8rem, 3.5vw, 1rem);
+           font-weight: 700;
+           text-decoration: none;
+           border-radius: 50px;
+           box-shadow: 0 6px 20px rgba(37,99,235,0.35);
+           transition: transform 0.2s, box-shadow 0.2s;
+       "
+       onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 26px rgba(37,99,235,0.55)'"
+       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(37,99,235,0.35)'"
+    >
+        🌹 ଆମ୍ଭ ସହିତ ଯୋଗାଯୋଗ ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । →
+    </a>
+</div>
+        
+    </div>
+</div>
+
+
+   <div class="container">
+
+       <div class="content-section">
+           
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px;">
+    <button onclick="openBookSlideshow()" style="width:100%; padding:18px; background: linear-gradient(135deg, #b45309 0%, #92400e 100%); color:white; border:none; border-radius:8px; font-size:14px; font-weight:bold; cursor:pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.2); margin-bottom:0;">
+        📖 ଚିତ୍ର-ନୋଟ୍ ଦେଖିବା..
+    </button>
+    <button onclick="openSlides()" style="width:100%; padding:18px; background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%); color:white; border:none; border-radius:8px; font-size:14px; font-weight:bold; cursor:pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.2); margin-bottom:0;">
+        📖 ପାଠ୍ୟ-ନୋଟ୍ ପଢିବା..
+    </button>
+</div>
+
+<div id="sentenceText" class="sentence-text"></div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px;">
+    <button id="showLessonBtn" class="show-lesson-btn" style="margin-bottom: 0;">କଳାପଟାରେ ପଢିବା..</button>
+    <button id="examSectionBtn" class="web-link-btn" style="margin-bottom: 0;">ପରୀକ୍ଷା ଦେବା...</button>
+</div>
+
+
+    <div id="bookModal" style="display:none;position:fixed;top:40px;left:0;width:100vw;height:calc(100vh - 40px);background:#111;z-index:99995;flex-direction:column;">
+<div style="background:linear-gradient(135deg,#b45309,#92400e);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;min-height:48px;position:sticky;top:40px;z-index:100001;">
+    <div style="min-width:0;overflow:hidden;flex:1;">
+  <div id="bookTitle" style="color:white;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">📖 ପୁସ୍ତକ</div>
+  <div id="bookPageLabel" style="color:rgba(255,255,255,.8);font-size:11px;">ପୃଷ୍ଠା ୧</div>
+</div>
+  <button onclick="closeBookSlideshow()" style="background:rgba(255,255,255,.2);border:2px solid white;color:white;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:100000;position:relative;">✕</button>
+  </div>
+  <div style="height:4px;background:rgba(255,255,255,.1);flex-shrink:0;">
+    <div id="bookProgress" style="height:100%;background:linear-gradient(90deg,#f59e0b,#b45309);transition:width .3s;width:0%;"></div>
+  </div>
+<div id="bookCanvasWrapper" style="flex:1;overflow:auto;background:#111;-webkit-overflow-scrolling:touch;padding:8px 4px;position:relative;">
+    <canvas id="bookCanvas" style="display:none;max-width:100%;max-height:100%;object-fit:contain;"></canvas>
+    <div id="bookLoading" style="color:white;text-align:center;">
+      <div style="width:40px;height:40px;border:4px solid rgba(255,255,255,.2);border-top:4px solid #f59e0b;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 10px;"></div>
+      <div id="bookLoadingMsg" style="font-size:13px;">PDF ଲୋଡ ହେଉଛି...</div>
+    </div>
+  </div>
+  <div style="background:#1a1a1a;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-shrink:0;border-top:2px solid #b45309;min-height:64px;">
+    <button id="bookPrev" onclick="bookGoTo(bookCur-1)" disabled style="background:linear-gradient(135deg,#b45309,#92400e);color:white;border:none;border-radius:12px;padding:14px 20px;font-size:16px;font-weight:700;cursor:pointer;flex:1;max-width:120px;">⬅ ପଛ</button>
+    <div style="text-align:center;flex:1;">
+      <div id="bookPageNum" style="color:white;font-size:15px;font-weight:700;margin-bottom:4px;"></div>
+      <div id="bookDots" style="display:flex;gap:4px;justify-content:center;overflow-x:auto;padding:2px;scrollbar-width:none;-ms-overflow-style:none;max-width:200px;margin:0 auto;"></div>
+    </div>
+    <button id="bookNext" onclick="bookGoTo(bookCur+1)" style="background:linear-gradient(135deg,#b45309,#92400e);color:white;border:none;border-radius:12px;padding:14px 20px;font-size:16px;font-weight:700;cursor:pointer;flex:1;max-width:120px;">ଆଗ ➡</button>
+  </div>
+</div>
+
+           <div id="slideModal" style="display:none; position:fixed; inset:0; background:#1a1a2e; z-index:99990; flex-direction:column; padding-top:40px;">
+  <div style="background:linear-gradient(135deg,#667eea,#764ba2); padding:12px 16px; display:flex; align-items:center; justify-content:space-between;">
+    <h3 id="slideHeading" style="color:white; font-size:15px; margin:0;"></h3>
+    <button onclick="closeSlides()" style="background:rgba(255,255,255,.2); border:2px solid white; color:white; width:36px; height:36px; border-radius:50%; font-size:18px; cursor:pointer;">✕</button>
+  </div>
+  <div style="height:3px; background:rgba(255,255,255,.15);">
+    <div id="slideProg" style="height:100%; background:linear-gradient(90deg,#667eea,#764ba2); transition:width .35s; width:10%;"></div>
+  </div>
+  <div id="slidesWrapper" style="flex:1; overflow:hidden; position:relative;">
+    <div id="slidesTrack" style="display:flex; height:100%; transition:transform .35s cubic-bezier(.4,0,.2,1);"></div>
+  </div>
+  <div style="background:rgba(26,26,46,.95); padding:12px 16px; display:flex; align-items:center; gap:10px; border-top:1px solid rgba(255,255,255,.1);">
+    <button id="sPrev" onclick="goSlide(-1)" style="background:linear-gradient(135deg,#667eea,#764ba2); color:white; border:none; border-radius:10px; padding:10px 20px; font-size:14px; font-weight:700; cursor:pointer; flex:1; max-width:120px;">⬅ ପଛ</button>
+
+<div id="sDots" style="display:flex; gap:5px; align-items:center; flex:1; overflow-x:auto; overflow-y:hidden; padding:4px 2px; scrollbar-width:none; -ms-overflow-style:none; scroll-behavior:smooth;"></div>
+      
+    <button id="sNext" onclick="goSlide(1)" style="background:linear-gradient(135deg,#667eea,#764ba2); color:white; border:none; border-radius:10px; padding:10px 20px; font-size:14px; font-weight:700; cursor:pointer; flex:1; max-width:120px;">ଆଗ ➡</button>
+  </div>
+</div>
+
+           
+<div id="mermaidContainer" class="mermaid-container"></div>
+
+<!-- Mermaid Modal -->
+<div id="mermaidModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); z-index: 9999; overflow-y: auto; padding-top: 60px;">
+    <div style="padding: 20px; max-width: 600px; margin: 0 auto;">
+        
+        <!-- Close Button -->
+        <button onclick="closeMermaidModal()" style="position: fixed; top: 65px; right: 20px; background: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 24px; cursor: pointer; z-index: 10001; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">✕</button>
+        
+        <!-- Title -->
+        <div style="background: white; border-radius: 20px; padding: 15px; margin-bottom: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.5);">
+            <h3 style="text-align: center; color: #667eea; margin: 0 0 15px 0; font-size: 16px;">📊 ଏହି ଚିତ୍ର ମାଧ୍ୟମରେ ମନେରଖିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ</h3>
+            <div id="mermaidModalContent" style="overflow-x: auto;"></div>
+        </div>
+        
+    </div>
+</div>
+
+<div id="examButtonsContainer" style="display: none;">
+    <!-- Assistant Image - Shows when exam section opens -->
+    <div id="examAssistantContainer" class="exam-assistant-container">
+        <div class="exam-assistant-wrapper">
+            <img src="https://raw.githubusercontent.com/eguruOdisha/ASSETS/main/bot%20image-2.gif" 
+                 alt="AI Assistant" 
+                 class="exam-assistant-img">
+        </div>
+        <p class="exam-assistant-text">
+            📚 ପରୀକ୍ଷା ଦେବା ପାଇଁ ତଳେ ଥିବା ବଟନ୍ ଗୁଡିକରେ କ୍ଲିକ୍ କରନ୍ତୁ:
+        </p>
+    </div>
+    
+    <div class="test-buttons">
+        <button id="mcqBtn" class="test-btn mcq">ବିକଳ୍ପ ଉତ୍ତରଯୁକ୍ତ ପ୍ରଶ୍ନ</button>
+        <button id="tfBtn" class="test-btn tf">ସତ୍ୟ/ମିଥ୍ୟା ଦର୍ଶାଇବା ପ୍ରଶ୍ନ</button>
+        <button id="fibBtn" class="test-btn fib">ଶୂନ୍ୟାସ୍ଥାନ ପୂରଣ କରିବା</button>
+        <button id="matchBtn" class="test-btn matching">ଶବ୍ଦ ମେଳ କରାଇବା</button>
+        <button id="arrangeBtn" class="test-btn arrange">ଶବ୍ଦକୁ ସଜାଇବା</button>
+        <button id="stqBtn" class="test-btn summary">ଅତି ସଂକ୍ଷିପ୍ତ ପ୍ରଶ୍ନୋତ୍ତର</button>
+        <button id="summaryBtn" class="test-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ</button>
+        <button id="questionBtn" class="test-btn" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">ସଂକ୍ଷିପ୍ତ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ</button>
+      <button id="practiceBtn" class="test-btn" onclick="openCertificateFromExam()" style="background: linear-gradient(135deg, #0d5e3a 0%, #064d2f 100%);">🏆 ସାର୍ଟିଫିକେଟ୍</button>
+        
+    </div>
+                             <div id="scoreDisplay" class="score-display" style="display: none;">
+              ଆପଣଙ୍କ ସମୁଦାୟ ମାର୍କ୍: <span id="totalScore">0</span> / <span id="maxScore">0</span>
+            </div>  
+</div>
+
+
+<!-- Word Learning Container -->
+<div id="wordContainer" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); z-index: 9999; overflow-y: auto; padding-top: 60px;">
+    <div style="padding: 20px; max-width: 600px; margin: 0 auto;">
+        
+        <!-- Close Button -->
+        <button onclick="closeWordLearning()" style="position: fixed; top: 65px; right: 20px; background: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 24px; cursor: pointer; z-index: 10001; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">✕</button>
+        
+      <!-- ===== WORD INFORMATION CARD ===== -->
+<div id="wordInfoCard" style="background: white; border-radius: 20px; padding: 15px; margin-bottom: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); position: relative; z-index: 100;">
+    
+    <!-- EMOJI (20%) + WORD (80%) - SIDE BY SIDE -->
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+        <!-- Emoji Container - 20% width, smaller size -->
+        <div style="flex: 0 0 20%; display: flex; justify-content: center;">
+            <div style="font-size: 40px; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 12px rgba(0,0,0,0.25); border: 2px solid #667eea;" id="wordEmojiContainer">
+                🐱
+            </div>
+        </div>
+        
+<!-- Word Display - 80% width -->
+<div style="flex: 1; min-width: 0;">
+    <h2 style="text-align: left; color: #e53935; font-size: clamp(16px, 4vw, 28px); margin: 0; font-weight: 1200; font-family: Arial Black, sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2;" id="wordDisplay">CAT</h2>
+</div>
+        </div>
+            
+            <!-- Odia Meaning - Full Width -->
+            <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 10px; border-radius: 10px; border-left: 4px solid #2196F3; margin-bottom: 10px;">
+                <strong style="color: #1565c0; font-size: 13px;">ଓଡିଆରେ:</strong>
+                <p id="wordOdia" style="margin: 5px 0 0 0; font-size: 18px; color: #000; font-weight: 600;">ବିଲେଇ</p>
+            </div>
+            
+            <!-- Odia Usage - Full Width -->
+            <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 10px; border-radius: 10px; border-left: 4px solid #9c27b0; margin-bottom: 10px;">
+                <strong style="color: #6a1b9a; font-size: 13px;">ବ୍ୟବହାର:</strong>
+               <p id="wordUse" 
+   style="margin: 5px 0 0 0; font-size: 13px; color: #000; 
+          line-height: 1.5; text-align: justify; font-weight: bold;">
+    ବିଲେଇ ଘରେ ରହେ ଏବଂ ମୂଷା ଧରେ ।
+</p>
+
+            </div>
+            
+            <!-- Instruction -->
+            <h3 id="wordTitle" style="text-align: center; color: #667eea; margin-top: 10px; font-size: 16px; font-weight: bold;">ନିମ୍ନ ବାକ୍ସରେ CAT ଲେଖନ୍ତୁ:</h3>
+        </div>
+        
+        <!-- ===== NAVIGATION BUTTONS ===== -->
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 20px; position: relative; z-index: 99;">
+            
+            <button id="wordBackBtn" onclick="navigateWord(-1)" style="background: white; color: #667eea; border: 2px solid white; padding: 12px 20px; border-radius: 10px; font-size: 14px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); font-weight: bold; flex: 1; max-width: 120px;">
+                ⬅️ ପଛକୁ
+            </button>
+            
+            <span style="color: white; font-size: 16px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); flex: 1; text-align: center;" id="wordCounter">Word 1 of 8</span>
+            
+            <button id="wordForwardBtn" onclick="navigateWord(1)" style="background: white; color: #667eea; border: 2px solid white; padding: 12px 20px; border-radius: 10px; font-size: 14px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); font-weight: bold; flex: 1; max-width: 120px;">
+                ଆଗକୁ ➡️
+            </button>
+        </div>
+        
+        <!-- ===== WRITING CANVAS ===== -->
+        <div style="position: relative; margin-bottom: 20px;">
+           
+            <!-- Drawing Canvas -->
+            <canvas id="wordCanvas" width="1200" height="500" style="border: 5px solid #8b4513; background: #1a2332; display: block; margin: 0 auto; width: 100%; max-height: 400px; touch-action: none; border-radius: 15px; position: relative; z-index: 10; box-shadow: 0 5px 20px rgba(0,0,0,0.4);"></canvas>
+        </div>
+        
+<!-- ===== ACTION BUTTONS ===== -->
+<div style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 80px;">
+    
+    <!-- Clear Button -->
+    <button onclick="clearCanvas()" style="background: linear-gradient(135deg, #d946ef 0%, #dc2626 100%); color: white; padding: 15px 10px; border: none; border-radius: 12px; font-size: 14px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        ଉପରୋକ୍ତ କଳା ବାକ୍ସରେ ଲେଖିବା ଅଭ୍ଯାସ କରନ୍ତୁ । ଲିଭେଇବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ ।  
+    </button>
+</div>
+        
+        <!-- ===== FEEDBACK (BOTTOM CENTER) ===== -->
+        <div id="wordFeedback" style="position: fixed; bottom: 120px; left: 50%; transform: translateX(-50%); color: white; font-size: 18px; background: rgba(0,0,0,0.9); padding: 15px 30px; border-radius: 15px; display: none; z-index: 10002; max-width: 90%; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5);">
+            ବହୁତ ଭଲ! 🌟🌟🌟
+        </div>
+    </div>
+</div>
+
+
+ <div id="testContainer"></div>
+
+<div style="width: 320px; margin: 0 auto 12px auto;">
+    <button onclick="document.getElementById('showLessonBtn').click()" style="width:100%; padding:18px; background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%); color:white; border:none; border-radius:8px; font-size:14px; font-weight:bold; cursor:pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+        ✍️ ଆସନ୍ତୁ, ବ୍ଳାକ୍-ବୋର୍ଡ ରେ ଧୀରେ ଧୀରେ ପଢିବା
+    </button>
+</div>
+
+<div style="margin-top: 0px; padding: 0 12px; text-align: center;">
+
+    <!-- Media Placeholder - same size as logo -->
+    <div id="mediaPlaceholder" style="
+        display: inline-block;
+        padding: 10px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        width: 320px;
+        position: relative;
+        overflow: hidden;
+    ">
+        <!-- DEFAULT: Logo Image -->
+        <div id="logoDisplay">
+            <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/LOGO-1.jpeg" 
+                 alt="Logo" 
+                 style="
+                    display: block;
+                    width: 100%;
+                    height: 180px;
+                    border-radius: 15px;
+                    object-fit: contain;
+                    background: white;
+                    border: 3px solid white;
+                    padding: 5px;
+                 ">
+        </div>
+
+  <div id="audioDisplay" style="display: none; width: 100%; min-height: 180px; border-radius: 15px; border: 3px solid white; background: #1a1a2e; align-items: center; justify-content: center; flex-direction: column; padding: 15px; box-sizing: border-box;">
+    <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
+    <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ପାଠ ବୁଝୁଛନ୍ତି ...</p>
+
+    <audio id="audioPlayer" oncontextmenu="return false;" style="display:none;">
+        <source src="https://audio.evidya.de/S9SCP1P1-2.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <div class="custom-audio-controls">
+        <div class="custom-audio-time-row">
+            <span id="audioPlayerCur">0:00</span>
+            <span id="audioPlayerDur">0:00</span>
+        </div>
+        <input type="range" id="audioPlayerSeek" class="custom-audio-seek" min="0" max="100" value="0" step="0.1">
+        <div class="custom-audio-btn-row">
+            <button type="button" class="custom-audio-btn" id="audioPlayerBack10">⏪ 10s</button>
+            <button type="button" class="custom-audio-btn custom-audio-playpause" id="audioPlayerPlayPause">▶️</button>
+            <button type="button" class="custom-audio-btn" id="audioPlayerFwd10">10s ⏩</button>
+        </div>
+    </div>
+</div>
+
+<div id="audioDisplay3" style="display: none; width: 100%; min-height: 180px; border-radius: 15px; border: 3px solid white; background: #1a1a2e; align-items: center; justify-content: center; flex-direction: column; padding: 15px; box-sizing: border-box;">
+    <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
+    <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ପ୍ରଶ୍ନୋତ୍ତର ବୁଝୁଛନ୍ତି ...</p>
+
+    <audio id="audioPlayer3" oncontextmenu="return false;" style="display:none;">
+        <source src="https://audio.evidya.de/S9SCP1P1-2QA.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <div class="custom-audio-controls">
+        <div class="custom-audio-time-row">
+            <span id="audioPlayer3Cur">0:00</span>
+            <span id="audioPlayer3Dur">0:00</span>
+        </div>
+        <input type="range" id="audioPlayer3Seek" class="custom-audio-seek" min="0" max="100" value="0" step="0.1">
+        <div class="custom-audio-btn-row">
+            <button type="button" class="custom-audio-btn" id="audioPlayer3Back10">⏪ 10s</button>
+            <button type="button" class="custom-audio-btn custom-audio-playpause" id="audioPlayer3PlayPause">▶️</button>
+            <button type="button" class="custom-audio-btn" id="audioPlayer3Fwd10">10s ⏩</button>
+        </div>
+    </div>
+</div>
+        
+        <!-- VIDEO PLAYER - Hidden by default -->
+        <div id="videoDisplay" style="display: none;">
+            <iframe
+                id="videoIframe"
+                src=""
+                data-src="https://www.youtube.com/embed/EvDpcm14j0E?playsinline=1&rel=0&modestbranding=1&autoplay=1"
+                style="
+                    display: block;
+                    width: 100%;
+                    height: 180px;
+                    border-radius: 15px;
+                    border: 3px solid white;
+                "
+                allow="accelerometer; autoplay; clipboard-write; 
+                       encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+
+</div>
+
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; margin-bottom: 16px; width: 320px; margin-left: auto; margin-right: auto;">
+
+    <button id="audioToggleBtn" 
+        onclick="toggleMedia('audio')"
+        style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+               color: white; border: none; border-radius: 8px;
+               padding: 18px 0; font-size: 14px; font-weight: bold;
+               cursor: pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+               width: 100%; height: auto;">
+          ଆସନ୍ତୁ, ପାଠ ବୁଝିବା..
+    </button>
+
+    <button id="videoToggleBtn" 
+        onclick="toggleMedia('video')"
+        style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+               color: white; border: none; border-radius: 8px;
+               padding: 18px 0; font-size: 14px; font-weight: bold;
+               cursor: pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+               width: 100%; height: auto;">
+      ଭିଡିଓ ଦେଖିବା..
+    </button>
+</div>
+
+
+<div style="width: 320px; margin-left: auto; margin-right: auto; margin-bottom: 16px;">
+    <button id="audioToggleBtn3" 
+        onclick="toggleMedia('audio3')"
+        style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+               color: white; border: none; border-radius: 8px;
+               padding: 18px 0; font-size: 14px; font-weight: bold;
+               cursor: pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+               width: 100%;">
+        🎧 ଆସନ୍ତୁ, ପ୍ରଶ୍ନୋତ୍ତର ଶୁଣି ମନେରଖିବା....
+    </button>
+</div>
+    
+</div>
+
+<!-- ADD THIS NEW GRID RIGHT AFTER -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; width: 320px; margin-left: auto; margin-right: auto;">
+    <button id="wordBtn" onclick="startWordLearning()" style="background: linear-gradient(135deg, #d946ef 0%, #dc2626 100%); color:white; border:none; border-radius:8px; padding:18px 0; font-size:14px; font-weight:bold; cursor:pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.2); width:100%;">
+        ନୂତନ-ଶବ୍ଦ ଜାଣିବା..
+    </button>
+    <button id="mermaidBtn" onclick="openMermaidModal()" style="background: linear-gradient(135deg, #4A148C 0%, #311B92 100%); color:white; border:none; border-radius:8px; padding:18px 0; font-size:14px; font-weight:bold; cursor:pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.2); width:100%;">
+        ମନରେ ଚିତ୍ର ଆଙ୍କିବା..
+    </button>
+</div>
+
+<div style="width: 320px; margin-left: auto; margin-right: auto; margin-bottom: 16px;">
+    <button onclick="openStudyBot()" style="width:100%; padding:18px; background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%); color:white; border:none; border-radius:8px; font-size:14px; font-weight:bold; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.2);">
+        🎓 ଚାଟିଙ୍ଗ୍ କରି ପଢିବା..
+    </button>
+</div>
+
+
+           <!-- IMAGE MODAL -->
+<div id="imageModal" style="
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 99996;
+    overflow-y: auto;
+    padding-top: 40px;">
+    
+    <div style="
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px;">
+        
+        <!-- Header -->
+        <div style="
+            background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+            padding: 12px 16px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;">
+            <h3 style="color: white; margin: 0; font-size: 15px;">
+                🖼️ ଚିତ୍ର
+            </h3>
+            <button onclick="closeImageModal()" style="
+                background: rgba(255,255,255,0.2);
+                border: 2px solid white;
+                color: white;
+                width: 36px; height: 36px;
+                border-radius: 50%;
+                font-size: 18px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;">✕</button>
+        </div>
+        
+        <!-- Image Container -->
+        <div style="
+            background: white;
+            padding: 10px;
+            border-radius: 0 0 12px 12px;">
+            <img 
+                src="https://www.indiacode.nic.in/handle/123456789/20099"
+                alt="BARE ACT"
+                style="
+                    width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                    display: block;">
+        </div>
+        
+    </div>
+</div>
+
+
+<!-- STUDY BOT MODAL - PURE CHAT, NO FIXED BOTTOM -->
+<div id="studyBotModal" style="display:none;position:fixed;top:40px;left:0;right:0;bottom:0;z-index:99997;flex-direction:column;background:#f0f2f5;">
+
+  <!-- Header only - nothing else is fixed -->
+  <div style="background:#667eea;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-shrink:0;">
+    <div style="width:36px;height:36px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/bot%20image-2.gif" style="width:32px;height:32px;border-radius:50%;object-fit:contain;">
+    </div>
+    <div style="flex:1;">
+      <p style="color:#fff;font-size:14px;font-weight:bold;margin:0;">ଅଧ୍ୟୟନ ସହାୟକ</p>
+      <span id="sbStatus" style="color:rgba(255,255,255,.8);font-size:11px;">ଅନଲାଇନ</span>
+    </div>
+    <div style="display:flex;gap:6px;margin-left:auto;">
+      <button onclick="sbReset()" title="Restart" style="background:rgba(255,255,255,.2);border:none;color:#fff;width:30px;height:30px;border-radius:50%;font-size:15px;cursor:pointer;">↺</button>
+      <button onclick="closeSB()" style="background:rgba(255,255,255,.2);border:2px solid #fff;color:#fff;width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer;">✕</button>
+    </div>
+  </div>
+
+<!-- Progress strip -->
+  <div style="height:3px;background:rgba(255,255,255,.15);flex-shrink:0;">
+    <div id="sbProg" style="height:100%;background:#fff;transition:width .4s;width:0%;"></div>
+  </div>
+
+  <!-- THE ENTIRE CHAT — scrolls freely, buttons live here too -->
+<div id="sbChat" style="flex:1;overflow-y:auto;padding:12px 10px 24px;display:flex;flex-direction:column;gap:10px;-webkit-overflow-scrolling:touch;font-weight:700;text-align:justify;"></div>
+
+  <!-- WHATSAPP HELP BAR — always visible at bottom of chat -->
+  <div id="sbWhatsappBar" onclick="openWhatsAppHelp()" style="
+      flex-shrink:0;
+      background:#1e88e5;
+      padding:10px 14px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      cursor:pointer;
+      box-shadow:0 -2px 8px rgba(0,0,0,0.15);
+  ">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="white" style="flex-shrink:0;">
+        <path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.005a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.4-5.63zM12.05 18.4h-.003a6.5 6.5 0 01-3.32-.91l-.24-.14-2.47.65.66-2.4-.16-.25a6.55 6.55 0 01-1-3.49 6.6 6.6 0 016.6-6.6 6.5 6.5 0 014.66 1.93 6.55 6.55 0 011.94 4.67 6.6 6.6 0 01-6.6 6.55zm3.6-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.32-.1-.45.1-.13.2-.5.64-.62.77-.11.13-.23.15-.43.05-.2-.1-.83-.31-1.58-.98-.58-.52-.98-1.16-1.1-1.36-.11-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.11.13-.2.2-.32.06-.13.03-.24-.02-.34-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6s.7 1.86.8 1.99c.1.13 1.37 2.1 3.33 2.94.47.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.16-.46.16-.86.11-.94-.05-.08-.18-.13-.38-.23z"/>
+      </svg>
+      <div style="flex:1; color:white;">
+          <div style="font-size:15px; font-weight:800;">ଏଠାରେ ଆମ୍ଭ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ । </div>
+          <div style="font-size:15px; opacity:0.9; font-weight:500;">Tap to chat with us directly.</div>
+      </div>
+      <div style="color:white; font-size:20px;">›</div>
+  </div>
+</div>
+
+<style>
+@keyframes sbPop{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes sbBlink{0%,100%{opacity:1}50%{opacity:0}}
+.sb-pop{animation:sbPop .22s ease forwards}
+.sb-bot-row{display:flex;gap:8px;align-items:flex-end}
+.sb-av{width:28px;height:28px;border-radius:50%;background:#667eea;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sb-av img{width:100%;height:100%;object-fit:contain;}
+.sb-bub{background:#fff;border-radius:14px 14px 14px 3px;padding:10px 13px;max-width:calc(100% - 48px);font-size:13px;color:#222;line-height:1.75;border:.5px solid #e8e8e8;white-space:pre-wrap;word-break:break-word;font-weight:700;}
+.sb-bub.sb-cur::after{content:'';display:inline-block;width:2px;height:1em;background:#667eea;margin-left:2px;vertical-align:text-bottom;animation:sbBlink .7s steps(1) infinite}
+.sb-user-row{display:flex;justify-content:flex-end}
+.sb-user-bub{background:#667eea;color:#fff;border-radius:14px 14px 3px 14px;padding:9px 13px;max-width:82%;font-size:13px;line-height:1.55;white-space:pre-wrap;font-weight:700;}
+.sb-ts{font-size:10px;color:#bbb;text-align:center;}
+.sb-btn-group{display:flex;flex-direction:column;gap:7px;margin-left:36px;}
+.sb-btn{border:.5px solid #d0d4f0;border-radius:12px;padding:11px 14px;font-size:12.5px;color:#444;cursor:pointer;text-align:justify;line-height:1.4;background:#f4f5ff;min-height:44px;display:flex;align-items:center;width:100%;transition:all .15s;font-weight:700;}
+.sb-btn:active{background:#e0e4ff;transform:scale(.98)}
+.sb-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;}
+.sb-btn.sb-opt{background:#f0fff4;border-color:#a0d8b0;color:#1a5e35;}
+.sb-btn.sb-opt:active:not(:disabled){background:#d0f0dc;}
+.sb-btn.sb-go{background:#667eea;color:#fff;border-color:#667eea;justify-content:center;font-weight:bold;}
+.sb-btn.sb-go:active:not(:disabled){background:#5568d0;}
+.sb-btn.sb-back{background:#fff5f0;border-color:#f0a080;color:#a04020;}
+.sb-hint-label{background:#f0f4ff;border-radius:10px;padding:8px 12px;font-size:12px;color:#555;margin-left:36px;}
+</style>
+
+           
+            <!-- Image above assistant bar -->
+<div style="text-align: center; margin-bottom: 10px;">
+    <div style="display: inline-block; padding: 4px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+       <img id="welcomeRoundImg" src="https://raw.githubusercontent.com/happysangitanms/assets/main/welcome%20image.gif" 
+     alt="AI Assistant" 
+     style="display: block; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; object-position: center top;">
+    </div>
+    <p style="margin-top: 10px; font-size: 14px; color: #000; font-weight: bold;">
+        🌹ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ ।🌹 
+    </p>
+</div>
+
+<!-- Dropdown Menu -->
+<div class="assistant-dropdown-wrapper">
+    <button id="assistantDropdownBtn" class="assistant-dropdown-btn">
+        <span class="dropdown-icon">🤖</span>
+        <span class="dropdown-text">ପଢିବା ସମୟରେ କୌଣସି ସାହାଯ୍ୟ ଦରକାର ହେଲେ ଏଠାରେ ସହାୟକ ବାଛନ୍ତୁ...</span>
+        <span class="dropdown-arrow">▼</span>
+    </button>
+    
+    <div id="assistantDropdownMenu" class="assistant-dropdown-menu">
+       
+        
+    
+        
+        <div class="dropdown-item" data-assistant="translator">
+            <span class="item-icon">🌐</span>
+            <div class="item-content">
+                <div class="item-title">ଅନୁବାଦ ସହାୟକ</div>
+                <div class="item-desc">ଇଂରାଜୀ ↔ ଓଡିଆ ଅନୁବାଦ</div>
+            </div>
+        </div>
+
+        <div class="dropdown-item" data-assistant="eGuruAssistant">
+            <span class="item-icon">👨‍🏫</span>
+            <div class="item-content">
+                <div class="item-title">ଇ-ବିଦ୍ୟା ସହାୟକ</div>
+                <div class="item-desc">କୌଣସି ପାଠ ବୁଝିପାରୁନଥିଲେ ଏଠାରେ ଶିକ୍ଷକଙ୍କ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+           
+
+
+<!-- Translation Container -->
+<div id="translatorContainer" class="assistant-container">
+    <div class="assistant-header">
+        <h3>🌐 ଅନୁବାଦକ - ଇଂରାଜୀ ରୁ ଓଡିଆ କିମ୍ବା ଓଡିଆ ରୁ ଇଂରାଜୀ</h3>
+        <button class="assistant-close-btn" onclick="closeAssistant('translatorContainer')">✕</button>
+    </div>
+    <div class="assistant-iframe-wrapper">
+        <div class="assistant-loading" id="translatorLoading">
+            <div class="assistant-loading-spinner"></div>
+            <p>ଦୟାକରି ଅପେକ୍ଷା କରନ୍ତୁ... ଅନୁବାଦକ ଲୋଡ୍ ହେଉଛି...</p>
+        </div>
+        <iframe id="translatorIframe" allow="clipboard-write"></iframe>
+    </div>
+    <div class="assistant-info">
+        💡 ଏହି ଅନୁବାଦକ ସାହାଯ୍ୟରେ ଆପଣ ଇଂରାଜୀ ରୁ ଓଡିଆ କିମ୍ବା ଓଡିଆ ରୁ ଇଂରାଜୀ ଅନୁବାଦ କରିପାରିବେ | ଟାଇପ୍ କରି ଅନୁବାଦ କରନ୍ତୁ !
+    </div>
+</div>
+ 
+<div id="eGuruContainer" class="assistant-container">
+    <div class="assistant-header">
+        <h3>👨‍🏫 ଇ-ବିଦ୍ୟା ସହାୟକ - Teacher Connect</h3>
+        <button class="assistant-close-btn" onclick="closeAssistant('eGuruContainer')">✕</button>
+    </div>
+    <div class="assistant-iframe-wrapper">
+        <div class="assistant-loading" id="eGuruLoading">
+            <div class="assistant-loading-spinner"></div>
+            <p>ଦୟାକରି ଅପେକ୍ଷା କରନ୍ତୁ... ଇ-ବିଦ୍ୟା ସହାୟକ ଲୋଡ୍ ହେଉଛି...</p>
+        </div>
+        <iframe id="eGuruIframe" allow="microphone; camera; clipboard-write"></iframe>
+    </div>
+    <div class="assistant-info">
+        💡 କୌଣସି ପାଠ ବୁଝିବାରେ ଅସୁବିଧା ହେଉଛି କି? ଏଠାରେ ଆପଣଙ୍କ ଶିକ୍ଷକଙ୍କ ସହିତ ସିଧାସଳଖ ଯୋଗାଯୋଗ କରନ୍ତୁ ଏବଂ ସାହାଯ୍ୟ ପାଆନ୍ତୁ !
+    </div>
+</div>
+
+           
+<!-- Certificate Modal -->
+<div id="certificateModal" class="certificate-modal">
+    <div class="certificate-container">
+        <div class="certificate-header">
+            <button class="certificate-close" onclick="closeCertificateModal()">✕</button>
+            <h2>🏆 ସାର୍ଟିଫିକେଟ୍ ଏବଂ ମାର୍କଶୀଟ୍</h2>
+            <p>Certificate & Marksheet Generator</p>
+        </div>
+        
+        <div class="certificate-body">
+            
+            
+       <!-- Student Details Form (hidden - only name kept internally) -->
+            <div class="certificate-form" style="display:none;">
+                <input type="hidden" id="studentName">
+                <button class="generate-btn" onclick="generateCertificate()">
+                    ସାର୍ଟିଫିକେଟ୍ ତିଆରି କରନ୍ତୁ (Generate Certificate)
+                </button>
+            </div>
+            
+            <!-- Certificate Preview -->
+            <div id="certificatePreview" class="certificate-preview">
+                <!-- Certificate content will be generated here -->
+            </div>
+        </div>
+    </div>
+</div>
+           
+    </div>
+    </div>  
