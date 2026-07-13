@@ -1,6 +1,7 @@
 const APP_CONFIG = {
     sreni: "ନବମ",
-    subject: "ଭୌତିକ ବିଜ୍ଞାନ"
+    subject: "ଭୌତିକ ବିଜ୍ଞାନ",
+    classCode: "ଭୌତିକ ବିଜ୍ଞାନ: ପ୍ରଥମ ଅଧ୍ୟାୟ (ପୃଷ୍ଠା 1-2)"
 };
 
 
@@ -712,7 +713,7 @@ class A,I1,I2,I3 intro;
 class M,M1,M2,M3,M4,M5 body;
 class C,C1,C2,C3 conclusion;`    
 ]
- ]  
+  
       
 }  
 
