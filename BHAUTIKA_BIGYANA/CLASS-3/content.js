@@ -16,273 +16,219 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "MATTER",
-            odia: "ପଦାର୍ଥ",
-            emoji: "🧪",
-            odiaUse: "ପଦାର୍ଥ ଅର୍ଥ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ବସ୍ତୁ ତିଆରି ହୁଏ । ବାୟୁ, ଜଳ ଓ ପଥର ପଦାର୍ଥ ଅଟେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "MASS",
-            odia: "ବସ୍ତୁତ୍ୱ",
-            emoji: "⚖️",
-            odiaUse: "ବସ୍ତୁତ୍ୱ ଅର୍ଥ ପଦାର୍ଥର ପରିମାଣ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "VOLUME",
-            odia: "ଆୟତନ",
-            emoji: "📦",
-            odiaUse: "ଆୟତନ ଅର୍ଥ ପଦାର୍ଥ ଯେତିକି ସ୍ଥାନ ଦଖଲ କରେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ଆୟତନ ଅଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TEXTURE",
-            odia: "ରୂପ ବିନ୍ୟାସ",
-            emoji: "✋",
-            odiaUse: "ରୂପ ବିନ୍ୟାସ ଅର୍ଥ ପୃଷ୍ଠଭାଗର ଗଠନ । ନଡ଼ିଆର ଖୋଲର ରୂପ ବିନ୍ୟାସ ଖରାପିଆ ହୋଇଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PHILOSOPHER",
-            odia: "ଦାର୍ଶନିକ",
-            emoji: "🤔",
-            odiaUse: "ଦାର୍ଶନିକ ଅର୍ଥ ଚିନ୍ତାବିଦ୍ । ପ୍ରାଚୀନ ଦାର୍ଶନିକମାନେ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଦେଇଥିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PANCHATATTVA",
-            odia: "ପଞ୍ଚତତ୍ତ୍ୱ",
-            emoji: "🌍",
-            odiaUse: "ପଞ୍ଚତତ୍ତ୍ୱ ଅର୍ଥ ପାଞ୍ଚଟି ମୌଳିକ ଉପାଦାନ । ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PHYSICAL PROPERTY",
-            odia: "ଭୌତିକ ଧର୍ମ",
-            emoji: "👀",
-            odiaUse: "ଭୌତିକ ଧର୍ମ ଅର୍ଥ ଦେଖାଯାଉଥିବା ଗୁଣ । ପଦାର୍ଥର ଭୌତିକ ଧର୍ମ ଅଧ୍ୟୟନ କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CHEMICAL NATURE",
-            odia: "ରାସାୟନିକ ପ୍ରକୃତି",
-            emoji: "⚗️",
-            odiaUse: "ରାସାୟନିକ ପ୍ରକୃତି ଅର୍ଥ ରାସାୟନିକ ଗୁଣ । ଏହା ପଦାର୍ଥର ଏକ ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PARTICLE",
-            odia: "କଣିକା",
-            emoji: "🔹",
-            odiaUse: "କଣିକା ଅର୍ଥ ଅତି ଛୋଟ ଅଂଶ । ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CONTINUOUS",
-            odia: "ଅବିଚ୍ଛିନ୍ନ",
-            emoji: "➖",
-            odiaUse: "ଅବିଚ୍ଛିନ୍ନ ଅର୍ଥ ଭାଗ କରିହେବ ନାହିଁ ବୋଲି ଧାରଣା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
             word: "BEAKER",
             odia: "ବିକର",
-            emoji: "🥛",
-            odiaUse: "ବିକର ଅର୍ଥ ପରୀକ୍ଷାଗାରର ପାତ୍ର । ଲୁଣ ଓ ଚିନିର ପରୀକ୍ଷା ବିକରରେ କରାଯାଏ ।",
+            emoji: "🧪",
+            odiaUse: "ବିକର ହେଉଛି ବୈଜ୍ଞାନିକ ପରୀକ୍ଷାରେ ବ୍ୟବହୃତ ଏକ ପାତ୍ର । ଏଥିରେ ଜଳ ଓ ଅନ୍ୟ ପଦାର୍ଥ ରଖାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "MARK",
-            odia: "ଚିହ୍ନଟ",
-            emoji: "📍",
-            odiaUse: "ଚିହ୍ନଟ ଅର୍ଥ ଚିହ୍ନ ଦେଇ ରଖିବା । ଜଳର ଉପର ସ୍ତରକୁ ଚିହ୍ନଟ କରାଯାଏ ।",
+            word: "INK",
+            odia: "କାଳି",
+            emoji: "🖋️",
+            odiaUse: "କାଳି ଜଳରେ ପକାଇଲେ ଧୀରେ ଧୀରେ ଚାରିଆଡ଼େ ମିଶିଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SPREAD",
-            odia: "ବ୍ୟାପିଯିବା",
-            emoji: "🌊",
-            odiaUse: "ବ୍ୟାପିଯିବା ଅର୍ଥ ଚାରିଆଡ଼େ ପ୍ରସାରିତ ହେବା । ଚିନି ଜଳରେ ବ୍ୟାପିଯାଏ ।",
+            word: "HONEY",
+            odia: "ମହୁ",
+            emoji: "🍯",
+            odiaUse: "ମହୁ ଜଳରେ ପକାଇଲେ କିଛି ସମୟ ପରେ ଧୀରେ ଧୀରେ ମିଶିଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "OBSERVATION",
+            odia: "ନିରୀକ୍ଷଣ",
+            emoji: "👀",
+            odiaUse: "ପରୀକ୍ଷା ସମୟରେ ଯାହା ଦେଖାଯାଏ, ତାହାକୁ ନିରୀକ୍ଷଣ କୁହାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
             word: "CRYSTAL",
             odia: "ସ୍ଫଟିକ",
             emoji: "💎",
-            odiaUse: "ସ୍ଫଟିକ ଅର୍ଥ କ୍ରିଷ୍ଟାଲ୍ । ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ବ୍ୟବହାର କରାଯାଏ ।",
+            odiaUse: "କପର ସଲ୍‌ଫେଟ୍ କିମ୍ବା ପୋଟାସିୟମ୍ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ଜଳରେ ଧୀରେ ଧୀରେ ମିଶିଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DISSOLVE",
-            odia: "ଦ୍ରବୀଭୂତ",
-            emoji: "💧",
-            odiaUse: "ଦ୍ରବୀଭୂତ ଅର୍ଥ ଜଳରେ ମିଶିଯିବା । ସ୍ଫଟିକ ଜଳରେ ଦ୍ରବୀଭୂତ ହୁଏ ।",
+            word: "TEMPERATURE",
+            odia: "ତାପମାତ୍ରା",
+            emoji: "🌡️",
+            odiaUse: "ଜଳର ତାପମାତ୍ରା ବଢ଼ିଲେ ସ୍ଫଟିକ ଶୀଘ୍ର ମିଶିଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DILUTION",
-            odia: "ଲଘୁକରଣ",
-            emoji: "🧴",
-            odiaUse: "ଲଘୁକରଣ ଅର୍ଥ ପତଳା କରିବା । ଦ୍ରବଣର ବାରମ୍ବାର ଲଘୁକରଣ କରାଯାଏ ।",
+            word: "KINETIC ENERGY",
+            odia: "ଗତିଜ ଶକ୍ତି",
+            emoji: "⚡",
+            odiaUse: "କଣିକା ଗତି କରୁଥିବାରୁ ସେମାନଙ୍କର ଗତିଜ ଶକ୍ତି ଥାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PURE WATER",
-            odia: "ବିଶୁଦ୍ଧ ଜଳ",
+            word: "PARTICLE",
+            odia: "କଣିକା",
+            emoji: "🔹",
+            odiaUse: "ପ୍ରତ୍ୟେକ ପଦାର୍ଥ ଅତି ଛୋଟ ଛୋଟ କଣିକାରେ ଗଠିତ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DIFFUSION",
+            odia: "ବିସରଣ",
+            emoji: "🌊",
+            odiaUse: "ଦୁଇଟି ଭିନ୍ନ ପଦାର୍ଥର କଣିକା ପରସ୍ପର ମିଶିଯିବାକୁ ବିସରଣ କୁହାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ATTRACTION",
+            odia: "ଆକର୍ଷଣ",
+            emoji: "🧲",
+            odiaUse: "ପଦାର୍ଥର କଣିକାମାନେ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରିଥାନ୍ତି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "FORCE",
+            odia: "ବଳ",
+            emoji: "💪",
+            odiaUse: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଥିବା ବଳ ସେମାନଙ୍କୁ ଏକାଠି ଧରି ରଖେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "STRENGTH",
+            odia: "ସାମର୍ଥ୍ୟ",
+            emoji: "🏋️",
+            odiaUse: "ଭିନ୍ନ ଭିନ୍ନ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳର ସାମର୍ଥ୍ୟ ଭିନ୍ନ ହୋଇଥାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "RUBBER BAND",
+            odia: "ରବର ବ୍ୟାଣ୍ଡ",
+            emoji: "🟠",
+            odiaUse: "ରବର ବ୍ୟାଣ୍ଡକୁ ଟାଣିଲେ ଏହା ଲମ୍ବା ହୋଇଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "IRON NAIL",
+            odia: "ଲୁହା କଣ୍ଟା",
+            emoji: "📌",
+            odiaUse: "ଲୁହା କଣ୍ଟାକୁ ଭାଙ୍ଗିବା କଷ୍ଟକର, କାରଣ ଏହାର କଣିକାମାନେ ଦୃଢ଼ ଭାବେ ବନ୍ଧା ଥାଆନ୍ତି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "WATER TAP",
+            odia: "ପାଣି ଟ୍ୟାପ୍",
             emoji: "🚰",
-            odiaUse: "ବିଶୁଦ୍ଧ ଜଳ ଅର୍ଥ ସଫା ପାଣି । ଦ୍ରବଣକୁ ବିଶୁଦ୍ଧ ଜଳ ସହିତ ମିଶାଯାଏ ।",
+            odiaUse: "ପାଣି ଟ୍ୟାପ୍‌ରୁ ବାହାରୁଥିବା ଜଳଧାର ଏକାଠି ରହେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "COUNTLESS",
-            odia: "ଅସଂଖ୍ୟ",
-            emoji: "♾️",
-            odiaUse: "ଅସଂଖ୍ୟ ଅର୍ଥ ଗଣନା କରିହେବ ନାହିଁ ଏତେ ଅଧିକ । ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କଣିକା ରହିଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DIVIDED",
-            odia: "ବିଭାଜିତ",
-            emoji: "✂️",
-            odiaUse: "ବିଭାଜିତ ଅର୍ଥ ଭାଗ ହୋଇଯିବା । କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ ଆହୁରି କ୍ଷୁଦ୍ର ହୁଅନ୍ତି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PRESENCE",
-            odia: "ଉପସ୍ଥିତି",
-            emoji: "✅",
-            odiaUse: "ଉପସ୍ଥିତି ଅର୍ଥ ଥିବାର ପ୍ରମାଣ । ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TINYNESS",
-            odia: "କ୍ଷୁଦ୍ରତା",
-            emoji: "🔬",
-            odiaUse: "କ୍ଷୁଦ୍ରତା ଅର୍ଥ ଛୋଟପଣ । ପଦାର୍ଥର କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।",
+            word: "MATTER",
+            odia: "ପଦାର୍ଥ",
+            emoji: "🧱",
+            odiaUse: "ଯେଉଁ ବସ୍ତୁର ଭର ଅଛି ଓ ସ୍ଥାନ ଦଖଲ କରେ, ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
 };
     
+
 const topicsData = [
 
 {
-heading: "NOTE-1: ପଦାର୍ଥ କ'ଣ ? :-",
+heading: "NOTE-1: କାଳି ଓ ମହୁ ଜଳରେ କିପରି ମିଶେ ? :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପଦାର୍ଥ ହେଉଛି ସେହି ଦ୍ରବ୍ୟ ଯାହାକୁ ନେଇ ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଗଠିତ ହୋଇଛି । ବାୟୁ, ପାଣି, ପଥର, ଗଛ, ପଶୁ, ଖାଦ୍ୟ ଓ ଆମ ଶରୀର ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଏବଂ ଆୟତନ ଥାଏ ।<br><br>👉 ଉଦାହରଣ: ତୁମ ଟେବୁଲ ଉପରେ ଥିବା ବହି, ପେନ୍‌, ପାଣି ବୋତଲ ଏବଂ ତୁମେ ଶ୍ୱାସରେ ନେଉଥିବା ବାୟୁ ସବୁ ପଦାର୍ଥ ଅଟେ । କାରଣ ସେମାନଙ୍କର ବସ୍ତୁତ୍ୱ ଅଛି ଓ ସେମାନେ କିଛି ସ୍ଥାନ ଦଖଲ କରନ୍ତି ।",
+text:"👉 ଧାରଣା: ଜଳରେ କାଳିର ଟୋପା ପକାଇଲେ ତାହା ଧୀରେ ଧୀରେ ସମଗ୍ର ଜଳରେ ମିଶିଯାଏ । ମହୁ ମଧ୍ୟ ଧୀରେ ଧୀରେ ଜଳରେ ମିଶିଯାଏ । ଏହା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥର କଣିକା ସବୁବେଳେ ଗତି କରିଥାଏ ଏବଂ ପରସ୍ପର ସହ ମିଶିଯାଏ ।<br><br>👉 ଉଦାହରଣ: ଗୋଟିଏ ଗ୍ଲାସ ପାଣିରେ ଗୋଟିଏ ଟୋପା କାଳି ପକାଇଲେ କିଛି ସମୟ ପରେ ସମଗ୍ର ପାଣି ରଙ୍ଗୀନ ହୋଇଯାଏ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ପଦାର୍ଥ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଗଠିତ ହୋଇଛି, ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଜଳରେ କାଳି ପକାଇଲେ କ'ଣ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> କାଳି ଧୀରେ ଧୀରେ ସମଗ୍ର ଜଳରେ ମିଶିଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ବାୟୁ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ ।",
+"<span style='color:red;'>Q-2:</span> ମହୁ ଜଳରେ ପକାଇଲେ କ'ଣ ଘଟେ ?<br><br><span style='color:green;'>Answer:</span> ମହୁ ଧୀରେ ଧୀରେ ଜଳରେ ମିଶିଯାଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ପ୍ରତ୍ୟେକ ପଦାର୍ଥର କେଉଁ ଦୁଇଟି ଗୁଣ ଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ ।",
+"<span style='color:red;'>Q-3:</span> ଏହି ପରୀକ୍ଷା କେଉଁ କଥା ପ୍ରମାଣ କରେ ?<br><br><span style='color:green;'>Answer:</span> ପଦାର୍ଥର କଣିକା ସବୁବେଳେ ଗତି କରିଥାଏ ଓ ପରସ୍ପର ସହ ମିଶିଯାଏ ।",
 
-"<span style='color:red;'>Q-4:</span> ଜଳବିନ୍ଦୁ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଜଳବିନ୍ଦୁ ମଧ୍ୟ ଏକ ପଦାର୍ଥ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> କାଳି ସମଗ୍ର ଜଳରେ କିପରି ବ୍ୟାପିଯାଏ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାର ଗତି ଯୋଗୁଁ କାଳି ସମଗ୍ର ଜଳରେ ବ୍ୟାପିଯାଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-2: ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା :-",
+heading: "NOTE-2: ତାପମାତ୍ରା ବଢ଼ିଲେ ବିସରଣ କିପରି ବଦଳେ ? :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ପଞ୍ଚତତ୍ତ୍ୱ, ଅର୍ଥାତ୍ ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ନେଇ ଗଠିତ । ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ତାହାର ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଅଧ୍ୟୟନ କରନ୍ତି ।<br><br>👉 ଉଦାହରଣ: ପୂର୍ବରୁ ଲୋକମାନେ ପ୍ରକୃତିକୁ ଦେଖି ପଦାର୍ଥ ବିଷୟରେ ଧାରଣା କରୁଥିଲେ । କିନ୍ତୁ ବର୍ତ୍ତମାନ ବୈଜ୍ଞାନିକମାନେ ପରୀକ୍ଷା ଓ ଗବେଷଣା ମାଧ୍ୟମରେ ପଦାର୍ଥର ଗୁଣ ଓ ପ୍ରକୃତିକୁ ବୁଝନ୍ତି ।",
+text:"👉 ଧାରଣା: ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ କପର ସଲ୍‌ଫେଟ୍ କିମ୍ବା ପୋଟାସିୟମ୍ ପରମାଙ୍ଗାନେଟ୍ ସ୍ଫଟିକ ପକାଇଲେ ଗରମ ଜଳରେ ସେଗୁଡ଼ିକ ଶୀଘ୍ର ମିଶିଯାଏ । ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତି ଓ ଗତିଜ ଶକ୍ତି ବଢ଼ିଯାଏ । ଏହି କାରଣରୁ ବିସରଣ ଦ୍ରୁତ ହୁଏ ।<br><br>👉 ଉଦାହରଣ: ଗରମ ପାଣିରେ ରଙ୍ଗ ଶୀଘ୍ର ବ୍ୟାପିଯାଏ, କିନ୍ତୁ ଥଣ୍ଡା ପାଣିରେ ଧୀରେ ବ୍ୟାପେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ପଞ୍ଚତତ୍ତ୍ୱ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> କେଉଁ ଜଳରେ ସ୍ଫଟିକ ଶୀଘ୍ର ମିଶିଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଗରମ ଜଳରେ ସ୍ଫଟିକ ଶୀଘ୍ର ମିଶିଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସମସ୍ତ ବସ୍ତୁ ପାଞ୍ଚଟି ମୌଳିକ ଉପାଦାନକୁ ନେଇ ଗଠିତ ବୋଲି ସେମାନଙ୍କର ମତ ଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର କେଉଁ ଶକ୍ତି ବଢ଼େ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାର ଗତିଜ ଶକ୍ତି ବଢ଼େ ।",
 
-"<span style='color:red;'>Q-3:</span> ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ କିପରି ବିଭକ୍ତ କରିଛନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରିଛନ୍ତି ।",
+"<span style='color:red;'>Q-3:</span> ବିସରଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଦୁଇଟି ଭିନ୍ନ ପଦାର୍ଥର କଣିକା ପରସ୍ପର ସହ ମିଶିବାକୁ ବିସରଣ କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-4:</span> ଏହି ଅଧ୍ୟାୟରେ କେଉଁ ଗୁଣ ବିଷୟରେ ଜାଣିବା ?<br><br><span style='color:green;'>Answer:</span> ପଦାର୍ଥର ଭୌତିକ ଗୁଣ ବିଷୟରେ ଜାଣିବା ।"
-
-]
-},
-
-    {
-heading: "NOTE-3: ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ :-",
-
-audioPoints: [{
-text:"👉 ଧାରଣା: ଦୀର୍ଘ ସମୟ ଧରି ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା, ଆଉ ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ । ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ବୈଜ୍ଞାନିକମାନେ ଜାଣିଲେ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।<br><br>👉 ଉଦାହରଣ: ଗୋଟିଏ ବାଲି ଗଦାକୁ ଦେଖିଲେ ଏହା ଅନେକ ଛୋଟ ଛୋଟ ବାଲି କଣିକାରେ ତିଆରି ବୋଲି ଜଣାପଡ଼େ । ସେହିପରି ପ୍ରତ୍ୟେକ ପଦାର୍ଥ ମଧ୍ୟ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ।",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ କେତେ ପ୍ରକାର ମତ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଦୁଇ ପ୍ରକାର ମତ ଥିଲା ।",
-
-"<span style='color:red;'>Q-2:</span> କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
-
-"<span style='color:red;'>Q-3:</span> ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା ।",
-
-"<span style='color:red;'>Q-4:</span> ବାଲି କାହାର ଉଦାହରଣ ?<br><br><span style='color:green;'>Answer:</span> ବାଲି କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥର ଉଦାହରଣ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> ତାପ ପ୍ରୟୋଗରେ ବିସରଣ କିପରି ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ତାପ ପ୍ରୟୋଗରେ ବିସରଣ ଦ୍ରୁତତର ହୁଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-4: ଲୁଣ ଓ ଚିନି ଜଳରେ କେଉଁଠି ଯାଏ ? :-",
+heading: "NOTE-3: ପଦାର୍ଥର କଣିକା ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଲୁଣ କିମ୍ବା ଚିନିକୁ ଜଳରେ ପକାଇ ଗୋଳାଇଲେ ସେଗୁଡ଼ିକ ଆଖିକୁ ଦେଖାଯାଏ ନାହିଁ, କିନ୍ତୁ ଜଳରେ ସମାନ ଭାବରେ ବ୍ୟାପିଯାଆନ୍ତି । ଏହା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ଏବଂ ସେହି କଣିକାଗୁଡ଼ିକ ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ପ୍ରସାରିତ ହୋଇଯାଆନ୍ତି ।<br><br>👉 ଉଦାହରଣ: ତୁମେ ଗୋଟିଏ ଗ୍ଲାସ ପାଣିରେ ଏକ ଚାମଚ ଚିନି ପକାଇ ଗୋଳାଇଲେ କିଛି ସମୟ ପରେ ଚିନି ଦେଖାଯାଏ ନାହିଁ, କିନ୍ତୁ ପାଣିର ସବୁ ଅଂଶ ମିଠା ହୋଇଯାଏ ।",
+text:"👉 ଧାରଣା: ପଦାର୍ଥର କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥାଏ । ଏହି ବଳ କଣିକାମାନଙ୍କୁ ଏକାଠି ଧରି ରଖେ । ସମସ୍ତ ପଦାର୍ଥରେ ଏହି ଆକର୍ଷଣ ବଳ ସମାନ ନୁହେଁ । କେତେକ ପଦାର୍ଥରେ ଏହା ଅଧିକ ଏବଂ କେତେକରେ କମ୍ ଥାଏ ।<br><br>👉 ଉଦାହରଣ: ପିଲାମାନେ ଦୃଢ଼ ଭାବରେ ହାତ ଧରି ଠିଆ ହେଲେ ସେମାନଙ୍କୁ ଅଲଗା କରିବା କଷ୍ଟ ହୁଏ । ସେହିପରି କଣିକାମାନେ ମଧ୍ୟ ଆକର୍ଷଣ ବଳରେ ଏକାଠି ରହନ୍ତି ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ବିକରରେ କ'ଣ ପକାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବିକରରେ ଲୁଣ କିମ୍ବା ଚିନି ପକାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> କଣିକାମାନଙ୍କ ମଧ୍ୟରେ କେଉଁ ବଳ କାର୍ଯ୍ୟ କରେ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ କାର୍ଯ୍ୟ କରେ ।",
 
-"<span style='color:red;'>Q-2:</span> ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଲୁଣ ବା ଚିନି ଜଳରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।",
+"<span style='color:red;'>Q-2:</span> ଆକର୍ଷଣ ବଳ କଣିକାମାନଙ୍କୁ କିପରି ସାହାଯ୍ୟ କରେ ?<br><br><span style='color:green;'>Answer:</span> ଆକର୍ଷଣ ବଳ କଣିକାମାନଙ୍କୁ ଏକାଠି ଧରି ରଖେ ।",
 
-"<span style='color:red;'>Q-3:</span> ଏହି ପରୀକ୍ଷା କ'ଣ ପ୍ରମାଣ କରେ ?<br><br><span style='color:green;'>Answer:</span> ଏହି ପରୀକ୍ଷା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।",
+"<span style='color:red;'>Q-3:</span> ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ କିପରି ଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ ଭିନ୍ନ ଭିନ୍ନ ଥାଏ ।",
 
-"<span style='color:red;'>Q-4:</span> ଜଳକୁ କେଉଁ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଜଳକୁ କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ।"
-
-]
-},
-
-    {
-heading: "NOTE-5: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ କେତେ ଛୋଟ ? :-",
-
-audioPoints: [{
-text:"👉 ଧାରଣା: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ । ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ଅଳ୍ପ କିଛି ସ୍ଫଟିକକୁ ବାରମ୍ବାର ଜଳରେ ମିଶାଇ ପତଳା କରିଲେ ମଧ୍ୟ ଜଳର ରଙ୍ଗ ଦେଖାଯାଏ । ଏହାରୁ ଜଣାପଡ଼େ ଯେ ଅତି କ୍ଷୁଦ୍ର କଣିକା ମଧ୍ୟ ନିଜର ପ୍ରଭାବ ଦେଖାଇପାରେ ।<br><br>👉 ଉଦାହରଣ: ଏକ ଛୋଟ ଚିମୁଟି ରଙ୍ଗକୁ ବହୁତ ପାଣିରେ ମିଶାଇଲେ ମଧ୍ୟ ପାଣିରେ ରଙ୍ଗ ଦେଖାଯାଏ । ସେହିପରି ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥିଲେ ମଧ୍ୟ ସେମାନଙ୍କର ପ୍ରଭାବ ସ୍ପଷ୍ଟ ଭାବରେ ଦେଖାଯାଏ ।",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> କେଉଁ ପଦାର୍ଥର ସ୍ଫଟିକ ନିଆଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନିଆଯାଏ ।",
-
-"<span style='color:red;'>Q-2:</span> ଦ୍ରବଣକୁ କାହିଁକି ଲଘୁକରଣ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାର କ୍ଷୁଦ୍ରତା ଜାଣିବା ପାଇଁ ଦ୍ରବଣକୁ ଲଘୁକରଣ କରାଯାଏ ।",
-
-"<span style='color:red;'>Q-3:</span> ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ କିପରି ରହେ ?<br><br><span style='color:green;'>Answer:</span> ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ ରଙ୍ଗୀନ ହୋଇ ରହେ ।",
-
-"<span style='color:red;'>Q-4:</span> ଏହି ପରୀକ୍ଷା କ'ଣ ସୂଚାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏହି ପରୀକ୍ଷା ସୂଚାଏ ଯେ ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।"
+"<span style='color:red;'>Q-4:</span> ଖେଳ ପରୀକ୍ଷା କେଉଁ ଗୁଣକୁ ବୁଝାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏହା କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥିବାକୁ ବୁଝାଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-6: ପଦାର୍ଥର କଣିକାର ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର :-",
+heading: "NOTE-4: ଲୁହା, ଚକ୍ ଓ ଜଳରୁ କ'ଣ ଜଣାପଡ଼େ ? :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଏତେ କ୍ଷୁଦ୍ର ଯେ ସେମାନଙ୍କର ଆକାରକୁ ସହଜରେ କଳ୍ପନା କରିହେବ ନାହିଁ । ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ । ବାରମ୍ବାର ଲଘୁକରଣ କରିଲେ ମଧ୍ୟ ସେହି କଣିକାଗୁଡ଼ିକର ପ୍ରଭାବ ରହିଥାଏ ।<br><br>👉 ଉଦାହରଣ: ଗୋଟିଏ କୋଠରୀର ଗୋଟିଏ କୋଣରେ ସୁଗନ୍ଧି କିମ୍ବା ଡେଟଲ୍‌ର କିଛି ବୁନ୍ଦା ପକାଇଲେ କିଛି ସମୟ ପରେ ସାରା କୋଠରୀରେ ତାହାର ଗନ୍ଧ ବ୍ୟାପିଯାଏ । ଏହାରୁ ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥିଲେ ମଧ୍ୟ ସେମାନେ ଚାରିଆଡ଼େ ବ୍ୟାପିପାରନ୍ତି ।",
+text:"👉 ଧାରଣା: ଲୁହା କଣ୍ଟା, ଚକ୍ ଏବଂ ରବର ବ୍ୟାଣ୍ଡ ଉପରେ ପରୀକ୍ଷା କଲେ କଣିକାମାନଙ୍କ ଆକର୍ଷଣ ବଳ ସମାନ ନୁହେଁ ବୋଲି ଜଣାପଡ଼େ । ଜଳଧାର ମଧ୍ୟ ସହଜରେ ଅଲଗା ହୁଏ ନାହିଁ, କାରଣ ଜଳର କଣିକାମାନେ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି ।<br><br>👉 ଉଦାହରଣ: ଚାଲୁଥିବା ପାଣିକୁ ଆଙ୍ଗୁଳିରେ କାଟିବାକୁ ଚେଷ୍ଟା କଲେ ମଧ୍ୟ ଜଳଧାର ପୁଣି ଏକାଠି ରହିଯାଏ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଗୋଟିଏ ସ୍ଫଟିକରେ କ'ଣ ରହିଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଲୁହା, ଚକ୍ ଓ ରବର ବ୍ୟାଣ୍ଡ ଉପରେ କାହିଁକି ପରୀକ୍ଷା କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାମାନଙ୍କ ଆକର୍ଷଣ ବଳ ଜାଣିବା ପାଇଁ ପରୀକ୍ଷା କରାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ଡେଟଲ୍‌ର ଉପସ୍ଥିତି କିପରି ଜଣାପଡ଼େ ?<br><br><span style='color:green;'>Answer:</span> ଦ୍ରବଣର ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
+"<span style='color:red;'>Q-2:</span> ଜଳଧାର ଏକାଠି ରହିବାର କାରଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଜଳର କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥାଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ପଦାର୍ଥର କଣିକା କିପରି ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ ।",
+"<span style='color:red;'>Q-3:</span> ଭିନ୍ନ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ କିପରି ଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଭିନ୍ନ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ ଭିନ୍ନ ଭିନ୍ନ ଥାଏ ।",
 
-"<span style='color:red;'>Q-4:</span> କଣିକାର କ୍ଷୁଦ୍ରତା କିପରି ?<br><br><span style='color:green;'>Answer:</span> କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> ଜଳଧାରକୁ କାଟିବା ପରୀକ୍ଷା କେଉଁ କଥା ବୁଝାଏ ?<br><br><span style='color:green;'>Answer:</span> ଜଳର କଣିକାମାନେ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି ବୋଲି ବୁଝାଏ ।"
+
+]
+},
+
+{
+heading: "NOTE-5: ପଦାର୍ଥର କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ପଦାର୍ଥର କଣିକା ସବୁବେଳେ ଗତି କରିଥାଏ । ସେମାନଙ୍କର ଗତିଜ ଶକ୍ତି ଥାଏ । ସେମାନେ ପରସ୍ପର ସହ ମିଶିଯାଆନ୍ତି ଏବଂ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି । ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତି ଓ ବିସରଣ ବଢ଼ିଯାଏ ।<br><br>👉 ଉଦାହରଣ: ଗରମ ଖାଦ୍ୟର ବାସ୍ନା ଦୂର ପର୍ଯ୍ୟନ୍ତ ଶୀଘ୍ର ବ୍ୟାପିଯାଏ, କାରଣ ଗରମରେ କଣିକା ଅଧିକ ଦ୍ରୁତ ଗତି କରେ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ପଦାର୍ଥର କଣିକା ସବୁବେଳେ କ'ଣ କରିଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ପଦାର୍ଥର କଣିକା ସବୁବେଳେ ଗତି କରିଥାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> କଣିକାମାନଙ୍କର କେଉଁ ଶକ୍ତି ଥାଏ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାମାନଙ୍କର ଗତିଜ ଶକ୍ତି ଥାଏ ।",
+
+"<span style='color:red;'>Q-3:</span> ଗରମ ଖାଦ୍ୟର ବାସ୍ନା ଦୂରକୁ କାହିଁକି ବ୍ୟାପିଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଗରମରେ କଣିକା ଦ୍ରୁତ ଗତି କରିବାରୁ ବାସ୍ନା ଶୀଘ୍ର ବ୍ୟାପିଯାଏ ।",
+
+"<span style='color:red;'>Q-4:</span> ପଦାର୍ଥର କଣିକାର ଚାରିଟି ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> କଣିକା ସବୁବେଳେ ଗତି କରେ, ଗତିଜ ଶକ୍ତି ଥାଏ, ପରସ୍ପର ସହ ମିଶେ ଏବଂ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରେ ।"
 
 ]
 }
