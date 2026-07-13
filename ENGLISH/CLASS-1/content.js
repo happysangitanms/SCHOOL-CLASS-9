@@ -2,7 +2,7 @@ const APP_CONFIG = {
     sreni: "ନବମ",
     subject: "ଇଂରାଜୀ"
 };
-
+ 
 
 const CLASS_NAME = "school9";
 
