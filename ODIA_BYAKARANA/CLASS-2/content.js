@@ -2,8 +2,8 @@ const CLASS_MODE = "practice";
 
 const APP_CONFIG = {
     sreni: "ନବମ",
-    subject: "",
-    classCode: "ଭୌତିକ ବିଜ୍ଞାନ: ପ୍ରଥମ ଅଧ୍ୟାୟ (ପୃଷ୍ଠା 1-2)"
+    subject: "ଓଡ଼ିଆ ବ୍ୟାକରଣ",
+    classCode: "ଓଡ଼ିଆ ବ୍ୟାକରଣ: ପ୍ରଥମ ଅଧ୍ୟାୟ (ପୃଷ୍ଠା 1-2)"
 };
 
 
