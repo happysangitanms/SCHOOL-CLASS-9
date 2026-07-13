@@ -7,9 +7,9 @@ const APP_CONFIG = {
 const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
-    audio1: "https://audio.evidya.de/S9SCP1P1-2.mp3",
-    video:  "https://www.youtube.com/embed/jyNYTTROtU4?playsinline=1&rel=0&modestbranding=1&autoplay=1",
-    pdf:    "https://audio.evidya.de/S9SCP1P1-2.pdf"
+    audio1: "https://audio.evidya.de/S9FLOG1P1.mp3",
+    video:  "https://www.youtube.com/embed/2VF_yeUM7qs?playsinline=1&rel=0&modestbranding=1&autoplay=1",
+    pdf:    "https://audio.evidya.de/S9FLOG1P1.pdf"
 };
 
 const wordData = {
