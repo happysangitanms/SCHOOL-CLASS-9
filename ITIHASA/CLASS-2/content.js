@@ -10,7 +10,7 @@ const APP_CONFIG = {
 const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
-    summaryPdf: "https://audio.evidya.de/S9SCP1P1-2S.pdf"
+    summaryPdf: "https://audio.evidya.de/S9SSH1P1-2S.pdf"
 };
 
 
@@ -29,9 +29,7 @@ audio:"audio-url-here"
 questions:[
 "<span style='color:red;'>Q-1:</span> ଉପନିବେଶବାଦ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> କୌଣସି ଅଞ୍ଚଳରେ ପ୍ରବାସୀମାନଙ୍କ ବସତି ସ୍ଥାପନକୁ ଏକ ସ୍ଵତ୍ବାଧିକାରୀ ରାଜ୍ୟ ମନେ କରି ମାତୃ ଦେଶର ଲାଭ ପାଇଁ କାର୍ଯ୍ୟରେ ଲଗାଇବାକୁ ଉପନିବେଶବାଦ କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ଉପନିବେଶବାଦର ମୁଖ୍ୟ ଲକ୍ଷ୍ୟଗୁଡ଼ିକ କ'ଣ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ବାଣିଜ୍ୟ ବ୍ୟବସାୟର ଉନ୍ନତି, ଆର୍ଥିକ ସମୃଦ୍ଧି, ସାମ୍ରାଜ୍ୟ ବିସ୍ତାର ଓ ଧର୍ମ ପ୍ରୟାର ଏହାର ମୁଖ୍ୟ ଲକ୍ଷ୍ୟ ଥିଲା ।
-
-",
+"<span style='color:red;'>Q-2:</span> ଉପନିବେଶବାଦର ମୁଖ୍ୟ ଲକ୍ଷ୍ୟଗୁଡ଼ିକ କ'ଣ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ବାଣିଜ୍ୟ ବ୍ୟବସାୟର ଉନ୍ନତି, ଆର୍ଥିକ ସମୃଦ୍ଧି, ସାମ୍ରାଜ୍ୟ ବିସ୍ତାର ଓ ଧର୍ମ ପ୍ରୟାର ଏହାର ମୁଖ୍ୟ ଲକ୍ଷ୍ୟ ଥିଲା ।",
 
 "<span style='color:red;'>Q-3:</span> ଉପନିବେଶବାଦର ନୂତନ ପର୍ଯ୍ୟାୟକୁ କ'ଣ କୁହାଯାଏ ଏବଂ ଏହା କେଉଁ ଯୁଦ୍ଧର କାରଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହାକୁ ଔପନିବେଶିକ ସାମ୍ରାଜ୍ୟବାଦ କୁହାଯାଏ, ଯାହା ୧୯୧୪ ମସିହାରେ ଆରମ୍ଭ ହୋଇଥିବା ପ୍ରଥମ ବିଶ୍ବଯୁଦ୍ଧର ଏକ ପ୍ରମୁଖ କାରଣ ହେଲା ।",
 
@@ -824,7 +822,11 @@ points: [
 ],
 conclusion: "ଉପନିବେଶବାଦର ଉଦ୍ଦେଶ୍ୟ କେବଳ ଭୂମି ଦଖଲ କରିବା ନୁହେଁ । ବରଂ ଆର୍ଥିକ ଲାଭ, ସାମ୍ରାଜ୍ୟ ବିସ୍ତାର ଓ ଧର୍ମ ପ୍ରଚାରକୁ ମଧ୍ୟ ଗୁରୁତ୍ୱ ଦିଆଯାଉଥିଲା ।"
 }
-]   
+]
+
+
+
+    
 }  
 
-};  
+}; 
