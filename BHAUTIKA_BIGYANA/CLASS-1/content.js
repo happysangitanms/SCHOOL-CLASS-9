@@ -712,7 +712,7 @@ class A,I1,I2,I3 intro;
 class M,M1,M2,M3,M4,M5 body;
 class C,C1,C2,C3 conclusion;`    
 ]
-    
+ ]  
       
 }  
 
