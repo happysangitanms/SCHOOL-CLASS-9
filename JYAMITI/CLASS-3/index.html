@@ -2092,67 +2092,6 @@ body > div:first-child {
     touch-action: pan-y;
     will-change: transform;
 }
-
-   /* Hides: ଚିତ୍ର-ନୋଟ୍ ଦେଖିବା (Picture Notes) button */
-div:has(> button[onclick="openBookSlideshow()"]) { display: none !important; }
-
-/* Hides: ପାଠ୍ୟ-ନୋଟ୍ ପଢିବା (Text Notes) button */
-div:has(> button[onclick="openSlides()"]) { display: none !important; }
-
-/* Hides: କଳାପଟାରେ ପଢିବା (Blackboard Lesson) button */
-div:has(> #showLessonBtn) { display: none !important; }
-
-/* Hides: ପରୀକ୍ଷା ଦେବା (Exam) button */
-div:has(> #examSectionBtn) { display: none !important; }
-
-
-    /* Hides: ବିକଳ୍ପ ଉତ୍ତରଯୁକ୍ତ ପ୍ରଶ୍ନ (MCQ) button */
-#mcqBtn { display: none !important; }
-
-        /* Hides: ସତ୍ୟ/ମିଥ୍ୟା (True/False) button */
-#tfBtn { display: none !important; }
-
-        /* Hides: ଶୂନ୍ୟାସ୍ଥାନ ପୂରଣ (Fill in Blanks) button */
-#fibBtn { display: none !important; }
-
-        /* Hides: ଶବ୍ଦ ମେଳ କରାଇବା (Matching) button */
-#matchBtn { display: none !important; }
-
-        /* Hides: ଶବ୍ଦକୁ ସଜାଇବା (Arrange Words) button */
-#arrangeBtn { display: none !important; }
-
-        /* Hides: ଅତି ସଂକ୍ଷିପ୍ତ ପ୍ରଶ୍ନୋତ୍ତର (STQ) button */
-#stqBtn { display: none !important; }
-
-        /* Hides: ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ (Long Answer/Summary) button */
-#summaryBtn { display: none !important; }
-
-        /* Hides: ସଂକ୍ଷିପ୍ତ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ (Short Answer) button */
-#questionBtn { display: none !important; }
-
-        /* Hides: 🏆 ସାର୍ଟିଫିକେଟ୍ (Certificate) button */
-#practiceBtn { display: none !important; }
-
-
-        /* Hides: 🎧 ଆସନ୍ତୁ, ପ୍ରଶ୍ନୋତ୍ତର ଶୁଣି ମନେରଖିବା (Audio 3) button */
-#audioToggleBtn3 { display: none !important; }
-
-        /* Hides: ନୂତନ-ଶବ୍ଦ ଜାଣିବା (New Word) button */
-#wordBtn { display: none !important; }
-
-        /* Hides: ମନରେ ଚିତ୍ର ଆଙ୍କିବା (Mind Diagram) button */
-#mermaidBtn { display: none !important; }
-
-        /* Hides: 🖼️ ସାରଚିତ୍ର ଦେଖିବା (Image) button */
-button[onclick="openImageModal()"] { display: none !important; }
-
-        /* Hides: 🎓 ଚାଟିଙ୍ଗ୍ କରି ପଢିବା (Study Bot Chat) button */
-button[onclick="openStudyBot()"] { display: none !important; }
-
-        /* Hides: the entire ପଢିବା ସମୟରେ... (Translator/e-Vidya) dropdown */
-.assistant-dropdown-wrapper { display: none !important; }
-        
-        
     </style>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
@@ -2510,7 +2449,7 @@ button[onclick="openStudyBot()"] { display: none !important; }
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ବହି ପାଠ ବୁଝୁଛନ୍ତି ...</p>
     <audio id="audioPlayer" controls controlsList="nodownload" style="width: 100%; border-radius: 8px;">
-        <source src="https://audio.evidya.de/S9MTG3P4-6.mp3" type="audio/mpeg">
+        <source src="https://audio.evidya.de/S9MTG1P1-2.mp3" type="audio/mpeg">
         Your browser does not support audio.
     </audio>
 </div>
@@ -2520,7 +2459,7 @@ button[onclick="openStudyBot()"] { display: none !important; }
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ପ୍ରଶ୍ନୋତ୍ତର ବୁଝୁଛନ୍ତି ...</p>
     <audio id="audioPlayer3" controls controlsList="nodownload" style="width: 100%; border-radius: 8px;">
-        <source src="https://audio.evidya.de/S9MTG3P4-6QA.mp3" type="audio/mpeg">
+        <source src="https://audio.evidya.de/S9MTG1P1-2QA.mp3" type="audio/mpeg">
         Your browser does not support audio.
     </audio>
 </div>
@@ -2530,7 +2469,7 @@ button[onclick="openStudyBot()"] { display: none !important; }
             <iframe
                 id="videoIframe"
                 src=""
-                data-src="https://www.youtube.com/embed/C8wliYPdx-Y?playsinline=1&rel=0&modestbranding=1&autoplay=1"  
+                data-src="https://www.youtube.com/embed/bJFHdrKDmpM?playsinline=1&rel=0&modestbranding=1&autoplay=1" 
                 style="
                     display: block;
                     width: 100%;
@@ -2654,7 +2593,7 @@ button[onclick="openStudyBot()"] { display: none !important; }
             padding: 10px;
             border-radius: 0 0 12px 12px;">
             <img 
-                src="https://audio.evidya.de/S9MTG3P4-6.png"
+                src="https://audio.evidya.de/S9MTG1P1-2.png"
                 alt="ଚିତ୍ର"
                 style="
                     width: 100%;
@@ -3046,335 +2985,173 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "INK",
-            odia: "କାଳି",
-            emoji: "🖋️",
-            odiaUse: "କାଳିକୁ ଜଳରେ ପକାଇଲେ ଏହା ଧୀରେ ଧୀରେ ସମଗ୍ର ଜଳରେ ମିଶିଯାଏ ।",
+            word: "UNIVERSAL SET",
+            odia: "ବ୍ୟାପକ ସେଟ୍",
+            emoji: "🌐",
+            odiaUse: "ବ୍ୟାପକ ସେଟ୍ ଅର୍ଥ ଆଲୋଚନାର ପରିସର ମଧ୍ୟରେ ପ୍ରତ୍ୟେକ ସେଟ୍ ଯାହାର ଉପସେଟ୍ ହୋଇଥାଏ । E ସେଟ୍‌କୁ ବ୍ୟାପକ ସେଟ୍ କୁହାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "HONEY",
-            odia: "ମହୁ",
-            emoji: "🍯",
-            odiaUse: "ମହୁକୁ ଜଳରେ ପକାଇଲେ ଏହା ଧୀରେ ଧୀରେ ମିଶିଥାଏ ।",
+            word: "UNION",
+            odia: "ସଂଯୋଗ",
+            emoji: "🔗",
+            odiaUse: "ସଂଯୋଗ ଅର୍ଥ A ଓ B ସେଟ୍‌ର ସମସ୍ତ ଉପାଦାନକୁ ନେଇ ଗଠିତ ସେଟ୍ । ଏହାକୁ A ∪ B ଦ୍ୱାରା ସୂଚାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "BEAKER",
-            odia: "ବିକର",
-            emoji: "🥛",
-            odiaUse: "ପରୀକ୍ଷା କରିବା ପାଇଁ ବିକରରେ ଜଳ ଭରାଯାଏ ।",
+            word: "INTERSECTION",
+            odia: "ଛେଦ",
+            emoji: "✂️",
+            odiaUse: "ଛେଦ ଅର୍ଥ A ଓ B ର ସାଧାରଣ ଉପାଦାନଗୁଡ଼ିକୁ ନେଇ ଗଠିତ ସେଟ୍ । ଏହାକୁ A ∩ B ଦ୍ୱାରା ସୂଚାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CRYSTAL",
-            odia: "ସ୍ଫଟିକ",
-            emoji: "💎",
-            odiaUse: "ସ୍ଫଟିକକୁ ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ ପକାଇ ତାହାର ମିଶିବା ହାର ଦେଖାଯାଏ ।",
+            word: "DIFFERENCE",
+            odia: "ଅନ୍ତର",
+            emoji: "➖",
+            odiaUse: "ଅନ୍ତର ଅର୍ଥ A ସେଟ୍‌ର ଯେଉଁ ଉପାଦାନ B ରେ ନାହିଁ, ସେଗୁଡ଼ିକୁ ନେଇ ଗଠିତ ସେଟ୍ । ଏହାକୁ A − B ଦ୍ୱାରା ସୂଚାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "HOT WATER",
-            odia: "ଗରମ ଜଳ",
-            emoji: "♨️",
-            odiaUse: "ଗରମ ଜଳରେ ସ୍ଫଟିକ ଅଧିକ ଶୀଘ୍ର ମିଶିଯାଏ ।",
+            word: "DISJOINT SET",
+            odia: "ଅଣଛେଦୀ ସେଟ୍",
+            emoji: "🚫",
+            odiaUse: "ଅଣଛେଦୀ ସେଟ୍ ଅର୍ଥ ଯେଉଁ ଦୁଇଟି ସେଟ୍ ମଧ୍ୟରେ କୌଣସି ସାଧାରଣ ଉପାଦାନ ନ ଥାଏ । ଯଥା A ∩ B = φ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "COLD WATER",
-            odia: "ଥଣ୍ଡା ଜଳ",
-            emoji: "🧊",
-            odiaUse: "ଥଣ୍ଡା ଜଳରେ ସ୍ଫଟିକ ଧୀରେ ଧୀରେ ମିଶିଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PARTICLE",
-            odia: "କଣିକା",
-            emoji: "⚛️",
-            odiaUse: "ପଦାର୍ଥ ଅତି ଛୋଟ ଛୋଟ କଣିକାରେ ଗଠିତ ହୋଇଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "KINETIC ENERGY",
-            odia: "ଗତିଜ ଶକ୍ତି",
-            emoji: "🏃",
-            odiaUse: "କଣିକାମାନେ ଗତି କରୁଥିବାରୁ ସେମାନଙ୍କର ଗତିଜ ଶକ୍ତି ଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TEMPERATURE",
-            odia: "ତାପମାତ୍ରା",
-            emoji: "🌡️",
-            odiaUse: "ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାମାନଙ୍କର ଗତି ବଢ଼ିଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DIFFUSION",
-            odia: "ବିସରଣ",
+            word: "DISTRIBUTIVE LAW",
+            odia: "ବଣ୍ଟନ ନିୟମ",
             emoji: "🔄",
-            odiaUse: "ଦୁଇଟି ପଦାର୍ଥର କଣିକାର ଅନ୍ତଃମିଶ୍ରଣକୁ ବିସରଣ କୁହାଯାଏ ।",
+            odiaUse: "ବଣ୍ଟନ ନିୟମ ଅନୁସାରେ ସଂଯୋଗ ଛେଦକୁ ଓ ଛେଦ ସଂଯୋଗକୁ ବଣ୍ଟନ କରେ । ଯଥା A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SPACE",
-            odia: "ଫାଙ୍କା ସ୍ଥାନ",
-            emoji: "↔️",
-            odiaUse: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଫାଙ୍କା ସ୍ଥାନ ଥାଏ ।",
+            word: "BOOLEAN ALGEBRA",
+            odia: "ବୁଲିଆନ୍ ବୀଜଗଣିତ",
+            emoji: "🧮",
+            odiaUse: "ବୁଲିଆନ୍ ବୀଜଗଣିତ ଅର୍ଥ ସେଟ୍‌ମାନଙ୍କ ମଧ୍ୟରେ ଏମାନଙ୍କୁ ନେଇ ଯେଉଁ ବୀଜଗଣିତର ସୃଷ୍ଟି ହୁଏ । ଏହା George Boole ନାମରେ ନାମିତ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ATTRACTION",
-            odia: "ଆକର୍ଷଣ",
-            emoji: "🧲",
-            odiaUse: "କଣିକାମାନେ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "FORCE",
-            odia: "ବଳ",
-            emoji: "💪",
-            odiaUse: "ଆକର୍ଷଣ ବଳ କଣିକାମାନଙ୍କୁ ଏକାଠି ରଖିଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "GROUP",
-            odia: "ଦଳ",
-            emoji: "👫",
-            odiaUse: "କାମ 1.6 ରେ ପିଲାମାନଙ୍କୁ ଚାରୋଟି ଦଳରେ ବିଭକ୍ତ କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CHAIN",
-            odia: "ଶୃଙ୍ଖଳ",
-            emoji: "⛓️",
-            odiaUse: "ଦ୍ୱିତୀୟ ଦଳର ପିଲାମାନେ ହାତ ଧରି ଏକ ଶୃଙ୍ଖଳ ତିଆରି କରନ୍ତି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "IRON NAIL",
-            odia: "ଲୁହା କଣ୍ଟା",
-            emoji: "🔩",
-            odiaUse: "ଲୁହା କଣ୍ଟାକୁ ଭାଙ୍ଗିବା କଷ୍ଟକର ହୋଇଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CHALK",
-            odia: "ଚକ୍",
-            emoji: "🧱",
-            odiaUse: "ଚକ୍ ସହଜରେ ଭାଙ୍ଗିଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "RUBBER BAND",
-            odia: "ରବର ବ୍ୟାଣ୍ଡ",
-            emoji: "⭕",
-            odiaUse: "ରବର ବ୍ୟାଣ୍ଡକୁ ଟାଣିଲେ ଏହା ପ୍ରସାରିତ ହୋଇଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "WATER TAP",
-            odia: "ପାଣି ଟ୍ୟାପ୍",
-            emoji: "🚰",
-            odiaUse: "ପାଣି ଟ୍ୟାପରୁ ବାହାରୁଥିବା ଜଳଧାର ଉପରେ ପରୀକ୍ଷା କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "MATTER",
-            odia: "ପଦାର୍ଥ",
-            emoji: "🧪",
-            odiaUse: "ଯାହାର ଭର ଥାଏ ଏବଂ ସ୍ଥାନ ଦଖଲ କରେ ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ ।",
+            word: "BINARY OPERATION",
+            odia: "ଦ୍ୱୈତ ପ୍ରକ୍ରିୟା",
+            emoji: "👯",
+            odiaUse: "ଦ୍ୱୈତ ପ୍ରକ୍ରିୟା ଅର୍ଥ ଗୋଟିଏ ଗୋଟିଏ ସେଟ୍‌କୁ ନେଇ କରାଯାଉଥିବା ପ୍ରକ୍ରିୟା । ସଂଯୋଗ, ଛେଦ ଓ ଅନ୍ତର ତିନୋଟି ଦ୍ୱୈତ ପ୍ରକ୍ରିୟା ଅଟନ୍ତି ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
 };
-    
+  
 const topicsData = [
 
 {
-heading: "NOTE-1: କାଳି ଓ ମହୁ ପରୀକ୍ଷା (କାମ 1.4) :-",
+heading: "NOTE-1: ବ୍ୟାପକ ସେଟ୍‌ (Universal Set) :-",
 audioPoints: [
 {
-text: "👉 ଦୁଇଟି ଗ୍ଲାସ କିମ୍ବା ବିକରରେ ଜଳ ଭରାଯାଏ ।<br>👉 ଗୋଟିଏରେ କାଳି ଓ ଅନ୍ୟଟିରେ ମହୁ ପକାଯାଏ ।<br>👉 ଗ୍ଲାସଗୁଡ଼ିକୁ ନ ହଲାଇ ଗୋଟିଏ ସ୍ଥାନରେ ରଖାଯାଏ ।<br>👉 କାଳି ଓ ମହୁ ଜଳରେ କିପରି ମିଶୁଛି ତାହା ଲକ୍ଷ୍ୟ କରାଯାଏ ।",
+text: "👉 ଆଲୋଚନା କଲାବେଳେ ବିଭିନ୍ନ ସେଟ୍ ଓ ଉପାଦାନ ସହ ସଂସ୍ପର୍ଶରେ ଆସିଥାଉ ।<br>👉 ଆମର ଆଲୋଚନାର ପରିସର ମଧ୍ୟରେ ପ୍ରତ୍ୟେକ ସେଟ୍ ଯଦି ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ସେଟ୍ 'E' ର ଉପସେଟ୍ ହୁଏ, ତାହାକୁ ବ୍ୟାପକ ସେଟ୍ କୁହାଯାଏ ।<br>👉 ସାଧାରଣତଃ ବ୍ୟାପକ ସେଟ୍ E କୁ ଭେନ୍ ଚିତ୍ରରେ ଆୟତ ଚିତ୍ର ଦ୍ୱାରା ଓ ଏହାର ଉପସେଟ୍‌ମାନଙ୍କୁ ଆବଦ୍ଧ ଚିତ୍ର ଦ୍ୱାରା ଦର୍ଶାଯାଏ ।<br>👉 ପରିମେୟ ସଂଖ୍ୟା ସେଟ୍ (Q) କୁ ବ୍ୟାପକ ସେଟ୍ E ଭାବରେ ନେଇହେବ, କାରଣ Q ର ଉପସେଟ୍‌ଗୁଡ଼ିକ ଗୋଟିଏ ଗୋଟିଏ ଉପସେଟ୍ ଅଟନ୍ତି ।",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> କାମ 1.4 ରେ କେଉଁ ଦୁଇଟି ପଦାର୍ଥ ଜଳରେ ପକାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> କାଳି ଓ ମହୁ ଜଳରେ ପକାଯାଏ ।",
-"<span style='color: red;'>Q-2:</span> ଗ୍ଲାସଗୁଡ଼ିକୁ କିପରି ରଖାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଗ୍ଲାସଗୁଡ଼ିକୁ ନ ହଲାଇ ଗୋଟିଏ ସ୍ଥାନରେ ରଖାଯାଏ ।",
-"<span style='color: red;'>Q-3:</span> କାଳି ପକାଇବା ପରେ କ'ଣ ଲକ୍ଷ୍ୟ କରାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> କାଳି ଜଳରେ କିପରି ମିଶୁଛି ତାହା ଲକ୍ଷ୍ୟ କରାଯାଏ ।",
-"<span style='color: red;'>Q-4:</span> ମହୁ ପକାଇବା ପରେ କ'ଣ ଦେଖାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ମହୁ ଜଳରେ କିପରି ମିଶୁଛି ତାହା ଦେଖାଯାଏ ।"
+"<span style='color: red;'>Q-1:</span> ବ୍ୟାପକ ସେଟ୍‌କୁ କିପରି ସଂଜ୍ଞା ଦିଆଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଆଲୋଚନାର ପରିସର ମଧ୍ୟରେ ପ୍ରତ୍ୟେକ ସେଟ୍ ଯଦି ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ସେଟ୍ 'E' ର ଉପସେଟ୍ ହୁଏ, ତାହାକୁ ବ୍ୟାପକ ସେଟ୍ କୁହାଯାଏ ।",
+"<span style='color: red;'>Q-2:</span> ବ୍ୟାପକ ସେଟ୍‌କୁ ଭେନ୍ ଚିତ୍ରରେ କିପରି ଦର୍ଶାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ବ୍ୟାପକ ସେଟ୍ E କୁ ଆୟତ ଚିତ୍ର ଦ୍ୱାରା ଓ ଏହାର ଉପସେଟ୍‌ମାନଙ୍କୁ ଆବଦ୍ଧ ଚିତ୍ର ଦ୍ୱାରା ଦର୍ଶାଯାଏ ।",
+"<span style='color: red;'>Q-3:</span> କେଉଁ ସେଟ୍‌କୁ ବ୍ୟାପକ ସେଟ୍ E ଭାବରେ ନେଇହେବ ?<br><br><span style='color: green;'>Answer:</span> ପରିମେୟ ସଂଖ୍ୟା ସେଟ୍ (Q) କୁ ବ୍ୟାପକ ସେଟ୍ E ଭାବରେ ନେଇହେବ ।",
+"<span style='color: red;'>Q-4:</span> ସେଟ୍ ପ୍ରକ୍ରିୟାରେ କେତେ ପ୍ରକାର ଦ୍ୱୈତ ପ୍ରକ୍ରିୟା ଅଛି ?<br><br><span style='color: green;'>Answer:</span> ସେଟ୍ ପ୍ରକ୍ରିୟାରେ ତିନିଗୋଟି ଦ୍ୱୈତ ପ୍ରକ୍ରିୟା ଅଛି— ସଂଯୋଗ, ଛେଦ ଓ ଅନ୍ତର ।"
 ]
 },
 {
-heading: "NOTE-2: ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ ସ୍ଫଟିକ (କାମ 1.5) :-",
+heading: "NOTE-2: ସଂଯୋଗ (Union) ର ସଂଜ୍ଞା ଓ ଉଦାହରଣ :-",
 audioPoints: [
 {
-text: "👉 ଗୋଟିଏ ଗ୍ଲାସରେ ଗରମ ଜଳ ଓ ଅନ୍ୟଟିରେ ଥଣ୍ଡା ଜଳ ନିଆଯାଏ ।<br>👉 ଉଭୟ ଗ୍ଲାସରେ ସ୍ଫଟିକ ପକାଯାଏ ।<br>👉 ଗ୍ଲାସଗୁଡ଼ିକୁ ଗୋଳାଯାଏ ନାହିଁ ।<br>👉 ସ୍ଫଟିକ ଧୀରେ ଧୀରେ ମିଶିବା ଦେଖାଯାଏ ।",
+text: "👉 A ଓ B ସେଟ୍ ଦ୍ୱୟରେ ଥିବା ସମସ୍ତ ଉପାଦାନ ଗୁଡ଼ିକୁ ନେଇ ଗଠିତ ସେଟ୍‌କୁ A ଓ B ର ସଂଯୋଗ କୁହାଯାଏ ଏବଂ A ∪ B ଦ୍ୱାରା ସୂଚିତ ହୁଏ ।<br>👉 A ∪ B = {x | x ∈ A ବା x ∈ B}<br>👉 A = {a,b,c}, B = {d,e,f,g} ହେଲେ A ∪ B = {a,b,c,d,e,f,g}<br>👉 A = {1,2,3,4}, B = {2,4,6,8} ହେଲେ A ∪ B = {1,2,3,4,6,8}<br>👉 A ⊂ B ହେଲେ A ∪ B = B ହେବ; B ⊂ A ହେଲେ A ∪ B = A ହେବ ।<br>👉 A ∪ A = A ଏବଂ A ∪ φ = A",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ଗୋଟିଏ ଗ୍ଲାସରେ କେଉଁ ଜଳ ନିଆଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଗୋଟିଏ ଗ୍ଲାସରେ ଗରମ ଜଳ ନିଆଯାଏ ।",
-"<span style='color: red;'>Q-2:</span> ଅନ୍ୟ ଗ୍ଲାସରେ କେଉଁ ଜଳ ନିଆଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଅନ୍ୟ ଗ୍ଲାସରେ ଥଣ୍ଡା ଜଳ ନିଆଯାଏ ।",
-"<span style='color: red;'>Q-3:</span> ଉଭୟ ଗ୍ଲାସରେ କ'ଣ ପକାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଉଭୟ ଗ୍ଲାସରେ ସ୍ଫଟିକ ପକାଯାଏ ।",
-"<span style='color: red;'>Q-4:</span> ସ୍ଫଟିକ ସହ କ'ଣ ଘଟେ ?<br><br><span style='color: green;'>Answer:</span> ସ୍ଫଟିକ ଧୀରେ ଧୀରେ ମିଶିଯାଏ ।"
+"<span style='color: red;'>Q-1:</span> A ଓ B ର ସଂଯୋଗ ସେଟ୍‌କୁ କିପରି ସୂଚାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> A ଓ B ର ସଂଯୋଗ ସେଟ୍‌କୁ A ∪ B ଦ୍ୱାରା ସୂଚାଯାଏ ।",
+"<span style='color: red;'>Q-2:</span> A = {1,2,3,4} ଓ B = {2,4,6,8} ହେଲେ A ∪ B କେତେ ?<br><br><span style='color: green;'>Answer:</span> A ∪ B = {1,2,3,4,6,8}",
+"<span style='color: red;'>Q-3:</span> B ⊂ A ହେଲେ A ∪ B କେତେ ହେବ ?<br><br><span style='color: green;'>Answer:</span> B ⊂ A ହେଲେ A ∪ B = A ହେବ ।",
+"<span style='color: red;'>Q-4:</span> ଶୂନ୍ୟ ସେଟ୍ φ ସହିତ A ର ସଂଯୋଗ କେତେ ?<br><br><span style='color: green;'>Answer:</span> A ∪ φ = A ଅଟେ, କାରଣ φ ରେ କୌଣସି ଉପାଦାନ ନ ଥାଏ ।"
 ]
 },
 {
-heading: "NOTE-3: କଣିକାର ଗତି ଓ ଗତିଜ ଶକ୍ତି :-",
+heading: "NOTE-3: ସଂଯୋଗର ନିୟମ ଓ ପ୍ରମାଣ (ଉଦାହରଣ-5) :-",
 audioPoints: [
 {
-text: "👉 ପଦାର୍ଥର କଣିକା ସବୁବେଳେ ଗତି କରିଥାଏ ।<br>👉 ସେମାନଙ୍କର ଗତିଜ ଶକ୍ତି ଥାଏ ।<br>👉 ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତି ବଢ଼େ ।<br>👉 ତେଣୁ ଗତିଜ ଶକ୍ତିର ପରିମାଣ ମଧ୍ୟ ବଢ଼ିଯାଏ ।",
+text: "👉 ସଂଯୋଗ କ୍ରମବିନିମୟ ଅଟେ, ଅର୍ଥାତ୍ A ∪ B = B ∪ A<br>👉 ସଂଯୋଗ ସହଯୋଗୀ ଅଟେ, ଅର୍ଥାତ୍ (A ∪ B) ∪ C = A ∪ (B ∪ C)<br>👉 A ⊂ A ∪ B ଏବଂ B ⊂ A ∪ B<br>👉 A={1,2,3}, B={3,4,5,6}, C={6,7,8} ହେଲେ S=(A∪B)∪C = {1,2,3,4,5,6,7,8}<br>👉 T = A∪(B∪C) = {1,2,3,4,5,6,7,8}, ତେଣୁ S = T ପ୍ରମାଣିତ ।",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ପଦାର୍ଥର କଣିକା କ'ଣ କରିଥାଏ ?<br><br><span style='color: green;'>Answer:</span> ପଦାର୍ଥର କଣିକା ସବୁବେଳେ ଗତି କରିଥାଏ ।",
-"<span style='color: red;'>Q-2:</span> କଣିକାର କେଉଁ ଶକ୍ତି ଥାଏ ?<br><br><span style='color: green;'>Answer:</span> କଣିକାର ଗତିଜ ଶକ୍ତି ଥାଏ ।",
-"<span style='color: red;'>Q-3:</span> ତାପମାତ୍ରା ବଢ଼ିଲେ କ'ଣ ହୁଏ ?<br><br><span style='color: green;'>Answer:</span> କଣିକାର ଗତି ବଢ଼ିଯାଏ ।",
-"<span style='color: red;'>Q-4:</span> ଗତି ବଢ଼ିଲେ କେଉଁ ଶକ୍ତି ବଢ଼େ ?<br><br><span style='color: green;'>Answer:</span> ଗତିଜ ଶକ୍ତି ବଢ଼େ ।"
+"<span style='color: red;'>Q-1:</span> ସଂଯୋଗ ପ୍ରକ୍ରିୟା କେଉଁ ନିୟମ ପାଳନ କରେ ?<br><br><span style='color: green;'>Answer:</span> ସଂଯୋଗ ପ୍ରକ୍ରିୟା କ୍ରମବିନିମୟ ଓ ସହଯୋଗୀ ନିୟମ ପାଳନ କରେ ।",
+"<span style='color: red;'>Q-2:</span> A ∪ B = B ∪ A ଏହାକୁ କଣ କୁହାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଏହାକୁ ସଂଯୋଗର କ୍ରମବିନିମୟ ନିୟମ କୁହାଯାଏ ।",
+"<span style='color: red;'>Q-3:</span> (A ∪ B) ∪ C = A ∪ (B ∪ C) ଏହାକୁ କଣ କୁହାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଏହାକୁ ସଂଯୋଗର ସହଯୋଗୀ ନିୟମ କୁହାଯାଏ ।",
+"<span style='color: red;'>Q-4:</span> ଉଦାହରଣ-5 ରେ S ଓ T ର ମାନ କେତେ ?<br><br><span style='color: green;'>Answer:</span> S = T = {1,2,3,4,5,6,7,8}"
 ]
 },
 {
-heading: "NOTE-4: ବିସରଣ (Diffusion) :-",
+heading: "NOTE-4: ଛେଦ (Intersection) ର ସଂଜ୍ଞା ଓ ଉଦାହରଣ :-",
 audioPoints: [
 {
-text: "👉 ପଦାର୍ଥର କଣିକା ଆପେ ଆପେ ପରସ୍ପର ସହ ମିଶିଯାଆନ୍ତି ।<br>👉 କଣିକା ମଧ୍ୟରେ ଫାଙ୍କା ସ୍ଥାନ ଥାଏ ।<br>👉 ସେହି ଫାଙ୍କା ସ୍ଥାନରେ ଅନ୍ୟ କଣିକା ପ୍ରବେଶ କରେ ।<br>👉 ଦୁଇ ପଦାର୍ଥର କଣିକାର ଅନ୍ତଃମିଶ୍ରଣକୁ ବିସରଣ କୁହାଯାଏ ।",
+text: "👉 A ଓ B ସେଟ୍ ଦ୍ୱୟରେ ଥିବା ଉପାଦାନମାନଙ୍କ ମଧ୍ୟରୁ ଯେଉଁ ଉପାଦାନଗୁଡ଼ିକ ଉଭୟ A ଓ B ର ଉପାଦାନ ହୋଇଥିବେ ସେମାନଙ୍କୁ ନେଇ ଗଠିତ ସେଟ୍‌କୁ A ଓ B ର ଛେଦ କୁହାଯାଏ ।<br>👉 A ∩ B = {x | x ∈ A ଓ x ∈ B}<br>👉 A={1,2,3}, B={1,3,5} ହେଲେ A ∩ B = {1,3}<br>👉 ଯଦି A ଓ B ମଧ୍ୟରେ କୌଣସି ସାଧାରଣ ଉପାଦାନ ନ ଥାଏ, ତେବେ ସେମାନଙ୍କୁ ଅଣଛେଦୀ ସେଟ୍ (Disjoint set) କୁହାଯାଏ, ଅର୍ଥାତ୍ A ∩ B = φ<br>👉 A ∩ A = A ଏବଂ A ∩ φ = φ",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> କଣିକାମାନେ କିପରି ମିଶନ୍ତି ?<br><br><span style='color: green;'>Answer:</span> କଣିକାମାନେ ଆପେ ଆପେ ପରସ୍ପର ସହ ମିଶନ୍ତି ।",
-"<span style='color: red;'>Q-2:</span> କଣିକା ମଧ୍ୟରେ କ'ଣ ଥାଏ ?<br><br><span style='color: green;'>Answer:</span> କଣିକା ମଧ୍ୟରେ ଫାଙ୍କା ସ୍ଥାନ ଥାଏ ।",
-"<span style='color: red;'>Q-3:</span> ଫାଙ୍କା ସ୍ଥାନରେ କ'ଣ ପ୍ରବେଶ କରେ ?<br><br><span style='color: green;'>Answer:</span> ଅନ୍ୟ କଣିକା ପ୍ରବେଶ କରେ ।",
-"<span style='color: red;'>Q-4:</span> ବିସରଣ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଦୁଇ ପଦାର୍ଥର କଣିକାର ଅନ୍ତଃମିଶ୍ରଣକୁ ବିସରଣ କୁହାଯାଏ ।"
-]
-},
-    {
-heading: "NOTE-5: ତାପ ଓ ବିସରଣ :-",
-audioPoints: [
-{
-text: "👉 ତାପ ପ୍ରୟୋଗ କଲେ ବିସରଣ ପ୍ରକ୍ରିୟା ଦ୍ରୁତତର ହୁଏ ।<br>👉 ଗରମ ଜଳରେ ସ୍ଫଟିକ ଶୀଘ୍ର ମିଶିଯାଏ ।<br>👉 ତାପ ବଢ଼ିଲେ କଣିକାର ଗତି ବଢ଼ିଯାଏ ।<br>👉 ସେଥିପାଇଁ ବିସରଣ ଶୀଘ୍ର ହୋଇଥାଏ ।",
-audio: "audio-url-here"
-}
-],
-questions: [
-"<span style='color: red;'>Q-1:</span> ତାପ ପ୍ରୟୋଗ କଲେ କେଉଁ ପ୍ରକ୍ରିୟା ଦ୍ରୁତ ହୁଏ ?<br><br><span style='color: green;'>Answer:</span> ତାପ ପ୍ରୟୋଗ କଲେ ବିସରଣ ପ୍ରକ୍ରିୟା ଦ୍ରୁତ ହୁଏ ।",
-"<span style='color: red;'>Q-2:</span> ଗରମ ଜଳରେ ସ୍ଫଟିକ କିପରି ମିଶେ ?<br><br><span style='color: green;'>Answer:</span> ଗରମ ଜଳରେ ସ୍ଫଟିକ ଶୀଘ୍ର ମିଶେ ।",
-"<span style='color: red;'>Q-3:</span> ତାପ ବଢ଼ିଲେ କଣିକାର କ'ଣ ବଢ଼େ ?<br><br><span style='color: green;'>Answer:</span> କଣିକାର ଗତି ବଢ଼େ ।",
-"<span style='color: red;'>Q-4:</span> ବିସରଣ କାହିଁକି ଶୀଘ୍ର ହୁଏ ?<br><br><span style='color: green;'>Answer:</span> କଣିକାର ଗତି ବଢ଼ିଯାଉଥିବାରୁ ବିସରଣ ଶୀଘ୍ର ହୁଏ ।"
+"<span style='color: red;'>Q-1:</span> A ଓ B ର ଛେଦକୁ କିପରି ସୂଚାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> A ଓ B ର ଛେଦକୁ A ∩ B ସଂକେତ ଦ୍ୱାରା ସୂଚାଯାଏ ।",
+"<span style='color: red;'>Q-2:</span> A={p,q}, B={r,s,t} ହେଲେ A ∩ B କେତେ ?<br><br><span style='color: green;'>Answer:</span> A ∩ B = φ, ଅର୍ଥାତ୍ A ଓ B ସେଟ୍‌ଦ୍ୱୟ ଅଣଛେଦୀ ।",
+"<span style='color: red;'>Q-3:</span> ଅଣଛେଦୀ ସେଟ୍ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଯଦି A ଓ B ମଧ୍ୟରେ କୌଣସି ସାଧାରଣ ଉପାଦାନ ନ ଥାଏ, ତେବେ ସେମାନଙ୍କୁ ଅଣଛେଦୀ ସେଟ୍ କୁହାଯାଏ ।",
+"<span style='color: red;'>Q-4:</span> A ∩ φ ର ମାନ କେତେ ?<br><br><span style='color: green;'>Answer:</span> A ∩ φ = φ"
 ]
 },
 {
-heading: "NOTE-6: କଣିକା ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି :-",
+heading: "NOTE-5: ଛେଦର ନିୟମ ଓ ବଣ୍ଟନ ନିୟମ (Distributive Law) :-",
 audioPoints: [
 {
-text: "👉 ପଦାର୍ଥର କଣିକାମାନେ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି ।<br>👉 ଏହାକୁ ବୁଝିବା ପାଇଁ କାମ 1.6 କରାଯାଏ ।<br>👉 ଚାରୋଟି ଦଳ ଗଠନ କରାଯାଏ ।<br>👉 ପ୍ରତ୍ୟେକ ଦଳରେ ସମାନ ସଂଖ୍ୟକ ପିଲା ରହନ୍ତି ।",
+text: "👉 ଛେଦ ପ୍ରକ୍ରିୟା କ୍ରମବିନିମୟ, ଅର୍ଥାତ୍ A ∩ B = B ∩ A<br>👉 ଛେଦ ପ୍ରକ୍ରିୟା ସହଯୋଗୀ, ଅର୍ଥାତ୍ (A ∩ B) ∩ C = A ∩ (B ∩ C)<br>👉 A ∩ B ⊂ A ଏବଂ A ∩ B ⊂ B<br>👉 ବଣ୍ଟନ ନିୟମ: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)<br>👉 ବଣ୍ଟନ ନିୟମ: A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)<br>👉 ସେଟ୍ ତତ୍ତ୍ୱରେ ସଂଯୋଗ ଓ ଛେଦ ପ୍ରକ୍ରିୟାଦ୍ୱୟ ପରସ୍ପରକୁ ବଣ୍ଟନ କରନ୍ତି ।",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> କଣିକାମାନେ ପରସ୍ପର ସହ କ'ଣ କରନ୍ତି ?<br><br><span style='color: green;'>Answer:</span> କଣିକାମାନେ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି ।",
-"<span style='color: red;'>Q-2:</span> ଏହି ଗୁଣକୁ ବୁଝିବା ପାଇଁ କେଉଁ କାମ କରାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> କାମ 1.6 କରାଯାଏ ।",
-"<span style='color: red;'>Q-3:</span> କେତୋଟି ଦଳ ଗଠନ କରାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଚାରୋଟି ଦଳ ଗଠନ କରାଯାଏ ।",
-"<span style='color: red;'>Q-4:</span> ପ୍ରତ୍ୟେକ ଦଳରେ କେମିତି ପିଲା ରହନ୍ତି ?<br><br><span style='color: green;'>Answer:</span> ପ୍ରତ୍ୟେକ ଦଳରେ ସମାନ ସଂଖ୍ୟକ ପିଲା ରହନ୍ତି ।"
+"<span style='color: red;'>Q-1:</span> ଛେଦ ପ୍ରକ୍ରିୟା କେଉଁ ଗୁଣ ଧାରଣ କରେ ?<br><br><span style='color: green;'>Answer:</span> ଛେଦ ପ୍ରକ୍ରିୟା କ୍ରମବିନିମୟ ଓ ସହଯୋଗୀ ଗୁଣ ଧାରଣ କରେ ।",
+"<span style='color: red;'>Q-2:</span> ବଣ୍ଟନ ନିୟମ (a) କଣ ଅଟେ ?<br><br><span style='color: green;'>Answer:</span> A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) — ସଂଯୋଗ ଛେଦ ପ୍ରକ୍ରିୟାକୁ ବଣ୍ଟନ କରେ ।",
+"<span style='color: red;'>Q-3:</span> ବଣ୍ଟନ ନିୟମ (b) କଣ ଅଟେ ?<br><br><span style='color: green;'>Answer:</span> A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) — ଛେଦ ସଂଯୋଗ ପ୍ରକ୍ରିୟାକୁ ବଣ୍ଟନ କରେ ।",
+"<span style='color: red;'>Q-4:</span> ସଂଖ୍ୟାମାନଙ୍କ ଗୁଣନ ଓ ଯୋଗ କ୍ଷେତ୍ରରେ ବଣ୍ଟନ ନିୟମ କିପରି ପ୍ରଯୁଜ୍ୟ ?<br><br><span style='color: green;'>Answer:</span> ଗୁଣନ (x) ଯୋଗ (+) କୁ ବଣ୍ଟନ କରେ, ଅର୍ଥାତ୍ x(y+z) = xy + xz; ମାତ୍ର ଯୋଗ ଗୁଣନକୁ ବଣ୍ଟନ କରେ ନାହିଁ ।"
 ]
 },
 {
-heading: "NOTE-7: ଚାରୋଟି ଦଳର କାର୍ଯ୍ୟକଳାପ :-",
+heading: "NOTE-6: ଅନ୍ତର (Difference) ର ସଂଜ୍ଞା ଓ ଭେନ୍ ଚିତ୍ର :-",
 audioPoints: [
 {
-text: "👉 ପ୍ରଥମ ଦଳର ପିଲାମାନେ ଛନ୍ଦାଛନ୍ଦି ହୋଇ ରହନ୍ତି ।<br>👉 ଦ୍ୱିତୀୟ ଦଳର ପିଲାମାନେ ହାତ ଧରି ମାନବ ଶୃଙ୍ଖଳ ଗଠନ କରନ୍ତି ।<br>👉 ତୃତୀୟ ଦଳର ପିଲାମାନେ ଆଙ୍ଗୁଳିର ଟିପ ସାହାଯ୍ୟରେ ସ୍ପର୍ଶ କରନ୍ତି ।<br>👉 ଚତୁର୍ଥ ଦଳ ଅନ୍ୟ ଦଳଗୁଡ଼ିକୁ ଭାଙ୍ଗିବାକୁ ଚେଷ୍ଟା କରେ ।",
+text: "👉 A ସେଟ୍‌ର ଯେଉଁ ଉପାଦାନଗୁଡ଼ିକ B ରେ ନାହାନ୍ତି, ସେମାନଙ୍କୁ ନେଇ ଗଠିତ ସେଟ୍‌କୁ A ଅନ୍ତର B (A − B) କୁହାଯାଏ ।<br>👉 A − B = {x | x ∈ A ଓ x ∉ B}<br>👉 B − A = {x | x ∈ B ଓ x ∉ A}<br>👉 A={1,2,3,4}, B={3,4,5,6} ହେଲେ A−B={1,2} ଏବଂ B−A={5,6}<br>👉 କୌଣସି ସେଟ୍ A ପାଇଁ A − A = φ<br>👉 A − B ⊂ A ଏବଂ B − A ⊂ B",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ପ୍ରଥମ ଦଳର ପିଲାମାନେ କିପରି ରହନ୍ତି ?<br><br><span style='color: green;'>Answer:</span> ସେମାନେ ଛନ୍ଦାଛନ୍ଦି ହୋଇ ରହନ୍ତି ।",
-"<span style='color: red;'>Q-2:</span> ଦ୍ୱିତୀୟ ଦଳ କ'ଣ ଗଠନ କରେ ?<br><br><span style='color: green;'>Answer:</span> ଦ୍ୱିତୀୟ ଦଳ ମାନବ ଶୃଙ୍ଖଳ ଗଠନ କରେ ।",
-"<span style='color: red;'>Q-3:</span> ତୃତୀୟ ଦଳ କିପରି ସ୍ପର୍ଶ କରେ ?<br><br><span style='color: green;'>Answer:</span> ତୃତୀୟ ଦଳ ଆଙ୍ଗୁଳିର ଟିପ ସାହାଯ୍ୟରେ ସ୍ପର୍ଶ କରେ ।",
-"<span style='color: red;'>Q-4:</span> ଚତୁର୍ଥ ଦଳ କ'ଣ କରେ ?<br><br><span style='color: green;'>Answer:</span> ଚତୁର୍ଥ ଦଳ ଅନ୍ୟ ଦଳଗୁଡ଼ିକୁ ଭାଙ୍ଗିବାକୁ ଚେଷ୍ଟା କରେ ।"
+"<span style='color: red;'>Q-1:</span> A ଅନ୍ତର B ର ସଂଜ୍ଞା ଦେଅ ?<br><br><span style='color: green;'>Answer:</span> A ସେଟ୍‌ର ଯେଉଁ ଉପାଦାନଗୁଡ଼ିକ B ରେ ନାହାନ୍ତି, ସେମାନଙ୍କୁ ନେଇ ଗଠିତ ସେଟ୍‌କୁ A − B କୁହାଯାଏ ।",
+"<span style='color: red;'>Q-2:</span> A={1,2,3,4}, B={3,4,5,6} ହେଲେ A−B କେତେ ?<br><br><span style='color: green;'>Answer:</span> A−B = {1,2}",
+"<span style='color: red;'>Q-3:</span> B−A କେତେ ହେବ ସେହି ସମାନ ସେଟ୍ ପାଇଁ ?<br><br><span style='color: green;'>Answer:</span> B−A = {5,6}",
+"<span style='color: red;'>Q-4:</span> A−A ର ମାନ କେତେ ?<br><br><span style='color: green;'>Answer:</span> କୌଣସି ସେଟ୍ A ପାଇଁ A − A = φ"
 ]
 },
 {
-heading: "NOTE-8: ଦଳ ଓ କଣିକାର ତୁଳନା :-",
+heading: "NOTE-7: ଅନ୍ତର ସମ୍ବନ୍ଧୀୟ ବିଶେଷ ଗୁଣ :-",
 audioPoints: [
 {
-text: "👉 ପ୍ରତ୍ୟେକ ପିଲାକୁ ଗୋଟିଏ କଣିକା ବୋଲି ଧରାଯାଏ ।<br>👉 ଯେଉଁ ଦଳକୁ ଭାଙ୍ଗିବା କଷ୍ଟକର, ସେଠାରେ ଆକର୍ଷଣ ବଳ ଅଧିକ ଥାଏ ।<br>👉 ପ୍ରଥମ ଦଳର ପିଲାମାନେ ସବୁଠାରୁ ଦୃଢ଼ ଭାବରେ ବାନ୍ଧା ଥାନ୍ତି ।<br>👉 ଏହା ଶକ୍ତ ଆକର୍ଷଣ ବଳକୁ ସୂଚାଏ ।",
+text: "👉 (A − B) ∩ (B − A) = φ<br>👉 (A − B) ∩ (A ∩ B) = φ<br>👉 (B − A) ∩ (A ∩ B) = φ<br>👉 A − B, B − A ଓ A ∩ B ସେଟ୍‌ତ୍ରୟ ପରସ୍ପର ଅଣଛେଦୀ ।<br>👉 A − B = A − (A ∩ B), B − A = B − (A ∩ B)<br>👉 ଅନ୍ତର ପ୍ରକ୍ରିୟା କ୍ରମବିନିମୟ ନୁହେଁ, ଅର୍ଥାତ୍ A − B ≠ B − A<br>👉 ଅନ୍ତର ପ୍ରକ୍ରିୟା ସହଯୋଗୀ ନୁହେଁ, A − (B − C) ≠ (A − B) − C",
 audio: "audio-url-here"
 }
 ],
 questions: [
-"<span style='color: red;'>Q-1:</span> ପ୍ରତ୍ୟେକ ପିଲାକୁ କ'ଣ ବୋଲି ଧରାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ପ୍ରତ୍ୟେକ ପିଲାକୁ ଗୋଟିଏ କଣିକା ବୋଲି ଧରାଯାଏ ।",
-"<span style='color: red;'>Q-2:</span> କେଉଁ ଦଳରେ ଆକର୍ଷଣ ବଳ ଅଧିକ ଥାଏ ?<br><br><span style='color: green;'>Answer:</span> ଯେଉଁ ଦଳକୁ ଭାଙ୍ଗିବା କଷ୍ଟକର, ସେଠାରେ ଆକର୍ଷଣ ବଳ ଅଧିକ ଥାଏ ।",
-"<span style='color: red;'>Q-3:</span> କେଉଁ ଦଳ ସବୁଠାରୁ ଦୃଢ଼ ଥାଏ ?<br><br><span style='color: green;'>Answer:</span> ପ୍ରଥମ ଦଳ ସବୁଠାରୁ ଦୃଢ଼ ଥାଏ ।",
-"<span style='color: red;'>Q-4:</span> ପ୍ରଥମ ଦଳ କ'ଣ ସୂଚାଏ ?<br><br><span style='color: green;'>Answer:</span> ପ୍ରଥମ ଦଳ ଶକ୍ତ ଆକର୍ଷଣ ବଳକୁ ସୂଚାଏ ।"
-]
-},
-{
-heading: "NOTE-9: ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ ରବର ବ୍ୟାଣ୍ଡ (କାମ 1.7) :-",
-audioPoints: [
-{
-text: "👉 ଗୋଟିଏ ଲୁହା କଣ୍ଟା, ଖଣ୍ଡିଏ ଚକ୍ ଏବଂ ଗୋଟିଏ ରବର ବ୍ୟାଣ୍ଡ ନିଆଯାଏ ।<br>👉 ସେଗୁଡ଼ିକୁ ଭାଙ୍ଗିବା, କାଟିବା କିମ୍ବା ଟାଣିବାକୁ ଚେଷ୍ଟା କରାଯାଏ ।<br>👉 ସବୁ ବସ୍ତୁ ସମାନ ଭାବରେ ଭାଙ୍ଗେ ନାହିଁ ।<br>👉 କେତେକ ବସ୍ତୁର କଣିକା ଅଧିକ ଦୃଢ଼ ଭାବରେ ବାନ୍ଧା ଥାଏ ।",
-audio: "audio-url-here"
-}
-],
-questions: [
-"<span style='color: red;'>Q-1:</span> କାମ 1.7 ରେ କେଉଁ ତିନୋଟି ବସ୍ତୁ ନିଆଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ ରବର ବ୍ୟାଣ୍ଡ ନିଆଯାଏ ।",
-"<span style='color: red;'>Q-2:</span> ବସ୍ତୁଗୁଡ଼ିକ ସହ କ'ଣ କରାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ସେଗୁଡ଼ିକୁ ଭାଙ୍ଗିବା, କାଟିବା କିମ୍ବା ଟାଣିବାକୁ ଚେଷ୍ଟା କରାଯାଏ ।",
-"<span style='color: red;'>Q-3:</span> ସବୁ ବସ୍ତୁ କି ସମାନ ଭାବରେ ଭାଙ୍ଗେ ?<br><br><span style='color: green;'>Answer:</span> ନା, ସବୁ ବସ୍ତୁ ସମାନ ଭାବରେ ଭାଙ୍ଗେ ନାହିଁ ।",
-"<span style='color: red;'>Q-4:</span> କେଉଁ ବସ୍ତୁର କଣିକା ଅଧିକ ଦୃଢ଼ ଥାଏ ?<br><br><span style='color: green;'>Answer:</span> ଯେଉଁ ବସ୍ତୁକୁ ଭାଙ୍ଗିବା କଷ୍ଟକର, ତାହାର କଣିକା ଅଧିକ ଦୃଢ଼ ଥାଏ ।"
-]
-},
-{
-heading: "NOTE-10: ଜଳଧାର ପରୀକ୍ଷା (କାମ 1.8) :-",
-audioPoints: [
-{
-text: "👉 ଟ୍ୟାପରୁ ବାହାରୁଥିବା ଜଳଧାରକୁ ଆଙ୍ଗୁଳିରେ କାଟିବାକୁ ଚେଷ୍ଟା କରାଯାଏ ।<br>👉 ଜଳଧାରକୁ ଛୋଟ ଛୋଟ ଭାଗରେ ବିଭକ୍ତ କରିବା କଷ୍ଟକର ହୁଏ ।<br>👉 ଜଳର ସ୍ରୋତ ଏକାଠି ରହିଥାଏ ।<br>👉 ଏହା କଣିକାମାନଙ୍କ ଆକର୍ଷଣ ବଳକୁ ଦର୍ଶାଏ ।",
-audio: "audio-url-here"
-}
-],
-questions: [
-"<span style='color: red;'>Q-1:</span> କାମ 1.8 ରେ କ'ଣ ଖୋଲାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ପାଣି ଟ୍ୟାପ୍ ଖୋଲାଯାଏ ।",
-"<span style='color: red;'>Q-2:</span> ଜଳଧାରକୁ କିପରି କାଟିବାକୁ ଚେଷ୍ଟା କରାଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଆଙ୍ଗୁଳି ସାହାଯ୍ୟରେ କାଟିବାକୁ ଚେଷ୍ଟା କରାଯାଏ ।",
-"<span style='color: red;'>Q-3:</span> ଜଳର ସ୍ରୋତ କିପରି ରହିଥାଏ ?<br><br><span style='color: green;'>Answer:</span> ଜଳର ସ୍ରୋତ ଏକାଠି ରହିଥାଏ ।",
-"<span style='color: red;'>Q-4:</span> ଏହା କେଉଁ ଗୁଣକୁ ଦର୍ଶାଏ ?<br><br><span style='color: green;'>Answer:</span> ଏହା କଣିକାମାନଙ୍କ ଆକର୍ଷଣ ବଳକୁ ଦର୍ଶାଏ ।"
-]
-},
-{
-heading: "NOTE-11: ଆକର୍ଷଣ ବଳର ସାମର୍ଥ୍ୟ :-",
-audioPoints: [
-{
-text: "👉 କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ କାର୍ଯ୍ୟ କରେ ।<br>👉 ଏହି ବଳ କଣିକାଗୁଡ଼ିକୁ ଏକାଠି ରଖିଥାଏ ।<br>👉 ସମସ୍ତ ପଦାର୍ଥରେ ଏହି ବଳ ସମାନ ନୁହେଁ ।<br>👉 ଭିନ୍ନ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳର ସାମର୍ଥ୍ୟ ଭିନ୍ନ ହୁଏ ।",
-audio: "audio-url-here"
-}
-],
-questions: [
-"<span style='color: red;'>Q-1:</span> କଣିକାମାନଙ୍କ ମଧ୍ୟରେ କେଉଁ ବଳ କାର୍ଯ୍ୟ କରେ ?<br><br><span style='color: green;'>Answer:</span> ଆକର୍ଷଣ ବଳ କାର୍ଯ୍ୟ କରେ ।",
-"<span style='color: red;'>Q-2:</span> ଆକର୍ଷଣ ବଳ କ'ଣ କାମ କରେ ?<br><br><span style='color: green;'>Answer:</span> ଏହା କଣିକାଗୁଡ଼ିକୁ ଏକାଠି ରଖେ ।",
-"<span style='color: red;'>Q-3:</span> ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ କି ସମାନ ?<br><br><span style='color: green;'>Answer:</span> ନା, ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ ସମାନ ନୁହେଁ ।",
-"<span style='color: red;'>Q-4:</span> ଭିନ୍ନ ପଦାର୍ଥରେ କ'ଣ ଭିନ୍ନ ହୁଏ ?<br><br><span style='color: green;'>Answer:</span> ଆକର୍ଷଣ ବଳର ସାମର୍ଥ୍ୟ ଭିନ୍ନ ହୁଏ ।"
-]
-},
-{
-heading: "NOTE-12: ଅଭ୍ୟାସ ପ୍ରଶ୍ନର ମୂଳ ଧାରଣା :-",
-audioPoints: [
-{
-text: "👉 କାଠ, ବାୟୁ, ବାଦାମ, ଥଣ୍ଡା ପାନୀୟ, ସଲ୍‌ଫର ଓ ଅଣ୍ଡା ପଦାର୍ଥ ଅଟେ ।<br>👉 ଗରମ ଖାଦ୍ୟର ବାସ୍ନା ଶୀଘ୍ର ବିସରଣ ହୋଇ ଦୂରକୁ ଯାଏ ।<br>👉 ସନ୍ତରଣକାରୀ ଜଳକୁ କାଟି ପହଁରିବା କଣିକା ମଧ୍ୟରେ ଫାଙ୍କା ସ୍ଥାନ ଥିବାକୁ ସୂଚାଏ ।<br>👉 କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ହେଲା ଗତି, ଫାଙ୍କା ସ୍ଥାନ, ଆକର୍ଷଣ ଓ ବିସରଣ ।",
-audio: "audio-url-here"
-}
-],
-questions: [
-"<span style='color: red;'>Q-1:</span> କେଉଁଗୁଡ଼ିକ ପଦାର୍ଥ ଅଟନ୍ତି ?<br><br><span style='color: green;'>Answer:</span> କାଠ, ବାୟୁ, ବାଦାମ, ଥଣ୍ଡା ପାନୀୟ, ସଲ୍‌ଫର ଓ ଅଣ୍ଡା ପଦାର୍ଥ ଅଟନ୍ତି ।",
-"<span style='color: red;'>Q-2:</span> ଗରମ ଖାଦ୍ୟର ବାସ୍ନା ଦୂରକୁ କାହିଁକି ଯାଏ ?<br><br><span style='color: green;'>Answer:</span> ଗରମ ଖାଦ୍ୟର ବାସ୍ନା ଶୀଘ୍ର ବିସରଣ ହୋଇ ଦୂରକୁ ଯାଏ ।",
-"<span style='color: red;'>Q-3:</span> ସନ୍ତରଣକାରୀ ଜଳକୁ କାଟି ପହଁରିବା କ'ଣ ସୂଚାଏ ?<br><br><span style='color: green;'>Answer:</span> ଏହା କଣିକା ମଧ୍ୟରେ ଫାଙ୍କା ସ୍ଥାନ ଥିବାକୁ ସୂଚାଏ ।",
-"<span style='color: red;'>Q-4:</span> କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ କ'ଣ ?<br><br><span style='color: green;'>Answer:</span> କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ହେଲା ଗତି, ଫାଙ୍କା ସ୍ଥାନ, ଆକର୍ଷଣ ଓ ବିସରଣ ।"
+"<span style='color: red;'>Q-1:</span> A − B, B − A ଓ A ∩ B ସେଟ୍‌ତ୍ରୟ ପରସ୍ପର ସହ କିପରି ସମ୍ବନ୍ଧିତ ?<br><br><span style='color: green;'>Answer:</span> ଏହି ସେଟ୍‌ତ୍ରୟ ପରସ୍ପର ଅଣଛେଦୀ ଅଟନ୍ତି ।",
+"<span style='color: red;'>Q-2:</span> ଅନ୍ତର ପ୍ରକ୍ରିୟା କ୍ରମବିନିମୟ କି ?<br><br><span style='color: green;'>Answer:</span> ନାହିଁ, ଅନ୍ତର ପ୍ରକ୍ରିୟା କ୍ରମବିନିମୟ ନୁହେଁ, ଅର୍ଥାତ୍ A − B ≠ B − A ।",
+"<span style='color: red;'>Q-3:</span> A={1,2}, B={2,3} ହେଲେ A−B ଓ B−A କେତେ ?<br><br><span style='color: green;'>Answer:</span> A−B = {1} ଏବଂ B−A = {3}",
+"<span style='color: red;'>Q-4:</span> ଅନ୍ତର ପ୍ରକ୍ରିୟା ସହଯୋଗୀ କି ?<br><br><span style='color: green;'>Answer:</span> ନାହିଁ, A − (B − C) ≠ (A − B) − C, ତେଣୁ ଏହା ସହଯୋଗୀ ନୁହେଁ ।"
 ]
 }
 
-
-    
 ];
-    
     
 const courseData = {
             teacherImage: "https://via.placeholder.com/400x300/667eea/ffffff?text=Teacher",
@@ -3444,724 +3221,693 @@ const courseData = {
   `, 
     audio: "",
 
+mermaid: [
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ<br/>ଓ ଉତ୍ପତ୍ତି\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଶବ୍ଦ ବିଶ୍ଳେଷଣ\"]\nA --> I1[\"'ଜ୍ୟା' ଶବ୍ଦର<br/>ଅର୍ଥ ପୃଥ୍ବୀ।\"]\nA --> I2[\"'ମିତି' ଶବ୍ଦର<br/>ଅର୍ଥ ମାପ।\"]\nA --> I3[\"ଜ୍ୟାମିତି ଅର୍ଥ<br/>ପୃଥ୍ବୀ ମାପ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 Geometry ଶବ୍ଦ\"]\nM --> M1[\"Geometry ଗ୍ରୀକ୍<br/>ଭାଷାରୁ ଆସିଛି।\"]\nM --> M2[\"Geo ଅର୍ଥ<br/>ପୃଥ୍ବୀ।\"]\nM --> M3[\"Metron ଅର୍ଥ<br/>ମାପ।\"]\nM --> M4[\"Geo ଓ Metron ରୁ<br/>Geometry ସୃଷ୍ଟି।\"]\nM --> M5[\"ଜ୍ୟାମିତି ଓ Geometry<br/>ଏକ ଅର୍ଥ ବହନ କରନ୍ତି।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଜ୍ୟାମିତି ଶବ୍ଦ ସଂସ୍କୃତ<br/>ଭାଷାରୁ ଆସିଛି।\"]\nC --> C2[\"Geometry ଶବ୍ଦ<br/>ଗ୍ରୀକ୍ ଭାଷାରୁ ଆସିଛି।\"]\nC --> C3[\"ଉଭୟ ଶବ୍ଦ ଭୂ-ମାପ<br/>ଅର୍ଥ ପ୍ରକାଶ କରେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-  mermaid: [
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>କଣିକାର ଗତି, ବିସରଣ<br/>ଓ ତାପର ପ୍ରଭାବ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପରୀକ୍ଷା\"]\nA --> I1[\"କାଳି ଓ ମହୁକୁ<br/>ଜଳରେ ପକାଯାଏ।\"]\nA --> I2[\"ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ<br/>ସ୍ଫଟିକ ପକାଯାଏ।\"]\nA --> I3[\"ମିଶ୍ରଣର ପରିବର୍ତ୍ତନକୁ<br/>ନିରୀକ୍ଷଣ କରାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 କଣିକାର ବ୍ୟବହାର\"]\nM --> M1[\"ପଦାର୍ଥର କଣିକା<br/>ନିରନ୍ତର ଗତି କରେ।\"]\nM --> M2[\"କଣିକାର ଗତିଜ<br/>ଶକ୍ତି ଥାଏ।\"]\nM --> M3[\"କଣିକାମାନେ ଆପେ ଆପେ<br/>ପରସ୍ପର ସହ ମିଶନ୍ତି।\"]\nM --> M4[\"କଣିକା ମଧ୍ୟରେ<br/>ଫାଙ୍କା ସ୍ଥାନ ଥାଏ।\"]\nM --> M5[\"ଅନ୍ୟ କଣିକା ସେହି<br/>ସ୍ଥାନରେ ପ୍ରବେଶ କରେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ବିସରଣ\"]\nC --> C1[\"ଦୁଇ ପଦାର୍ଥର କଣିକାର<br/>ଅନ୍ତଃମିଶ୍ରଣକୁ ବିସରଣ କୁହାଯାଏ।\"]\nC --> C2[\"କାଳି, ମହୁ ଓ ସ୍ଫଟିକର<br/>ମିଶ୍ରଣ ବିସରଣର ଉଦାହରଣ।\"]\nC --> C3[\"କଣିକାର ଗତି ଯୋଗୁଁ<br/>ବିସରଣ ସମ୍ଭବ ହୁଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ଜ୍ୟାମିତି ସୃଷ୍ଟିର କାରଣ<br/>ଓ ବିକାଶ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଆବଶ୍ୟକତା\"]\nA --> I1[\"ଜମି ମାପ କରିବାର<br/>ଆବଶ୍ୟକତା ଥିଲା।\"]\nA --> I2[\"ବାସଗୃହ ଓ ରାସ୍ତା<br/>ନିର୍ମାଣ ଦରକାର ହେଲା।\"]\nA --> I3[\"ଚାଷ ପାଇଁ ଆକୃତି<br/>ଜ୍ଞାନ ଲୋଡ଼ା ହେଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଜ୍ୟାମିତି ବିକାଶ\"]\nM --> M1[\"ଆକୃତିଗତ ଜ୍ଞାନ ପରିମାର୍ଜନ<br/>ଫଳରେ ଶାସ୍ତ୍ର ଉଭବ ହେଲା।\"]\nM --> M2[\"ମାନବ ସଭ୍ୟତା ସହ<br/>ଜ୍ୟାମିତି ବୃଦ୍ଧି ପାଇଲା।\"]\nM --> M3[\"ମିଶରୀୟ ସଭ୍ୟତା ସବୁଠାରୁ<br/>ପ୍ରାଚୀନ ଉଦାହରଣ।\"]\nM --> M4[\"ପିରାମିଡ୍ ଜ୍ୟାମିତି<br/>ଜ୍ଞାନର ନିଦର୍ଶନ।\"]\nM --> M5[\"ଭାରତୀୟ ବୈଦିକ ଯୁଗରେ<br/>ଜ୍ୟାମିତି ବ୍ୟବହୃତ ହୋଇଥିଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଫଳାଫଳ\"]\nC --> C1[\"ଜ୍ୟାମିତି ଜୀବନ<br/>ଆବଶ୍ୟକତାରୁ ଜନ୍ମ ନେଇଛି।\"]\nC --> C2[\"ବ୍ୟବହାରିକ ଅଭିଜ୍ଞତା<br/>ଶାସ୍ତ୍ରକୁ ଗଢ଼ିଛି।\"]\nC --> C3[\"ସଭ୍ୟତା ସହ ଜ୍ୟାମିତି<br/>ଅଧିକ ବ୍ୟାପକ ହୋଇଛି।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ତାପମାତ୍ରା, ଗତିଜ ଶକ୍ତି<br/>ଓ ବିସରଣର ହାର\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପର୍ଯ୍ୟବେକ୍ଷଣ\"]\nA --> I1[\"ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ<br/>ସ୍ଫଟିକ ପକାଯାଏ।\"]\nA --> I2[\"ଗରମ ଜଳରେ ସ୍ଫଟିକ<br/>ଶୀଘ୍ର ମିଶିଯାଏ।\"]\nA --> I3[\"ଥଣ୍ଡା ଜଳରେ ମିଶ୍ରଣ<br/>ଧୀରେ ଧୀରେ ହୁଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ତାପର ପ୍ରଭାବ\"]\nM --> M1[\"ତାପମାତ୍ରା ବଢ଼ିଲେ<br/>କଣିକାର ଗତି ବଢ଼େ।\"]\nM --> M2[\"ଗତିଜ ଶକ୍ତିର<br/>ପରିମାଣ ବୃଦ୍ଧି ପାଏ।\"]\nM --> M3[\"କଣିକା ଅଧିକ ଦ୍ରୁତତାରେ<br/>ଚଳନ କରନ୍ତି।\"]\nM --> M4[\"ପରସ୍ପର ମିଶ୍ରଣ<br/>ଶୀଘ୍ର ହୋଇଥାଏ।\"]\nM --> M5[\"ବିସରଣର ହାର<br/>ବୃଦ୍ଧି ପାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ତାପ ବୃଦ୍ଧି ସହିତ<br/>କଣିକାର ଗତି ବଢ଼େ।\"]\nC --> C2[\"ଗତିଜ ଶକ୍ତି ବଢ଼ିଲେ<br/>ବିସରଣ ଦ୍ରୁତ ହୁଏ।\"]\nC --> C3[\"ଗରମ ଖାଦ୍ୟର ବାସ୍ନା<br/>ଶୀଘ୍ର ଦୂରକୁ ପହଞ୍ଚେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ଶୁଲ୍ବ ସୂତ୍ର ଓ<br/>ଭାରତୀୟ ଜ୍ୟାମିତି\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଶୁଲ୍ବ ସୂତ୍ର\"]\nA --> I1[\"ଶୁଲ୍ବ ଅର୍ଥ<br/>ରଜ୍ଜୁ ବା ଦଉଡ଼ି।\"]\nA --> I2[\"ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିକ<br/>ମାପ ହୋଇଥିଲା।\"]\nA --> I3[\"ଖ୍ରୀ.ପୂ. 800-500<br/>ମଧ୍ୟରେ ରଚିତ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଭାରତୀୟ ଉପଯୋଗ\"]\nM --> M1[\"ଯଜ୍ଞକୁଣ୍ଡ ନିର୍ମାଣରେ<br/>ଜ୍ୟାମିତି ପ୍ରୟୋଗ।\"]\nM --> M2[\"ପୂଜାବେଦୀ ନିର୍ମାଣରେ<br/>ଜ୍ୟାମିତି ପ୍ରୟୋଗ।\"]\nM --> M3[\"ମନ୍ଦିର ଓ ବାସଗୃହ<br/>ନିର୍ମାଣରେ ଉପଯୋଗ।\"]\nM --> M4[\"ଭାରତୀୟ ଋଷିଗଣ ଜ୍ୟାମିତିକ<br/>ସୂତ୍ର ଲିଖିଥିଲେ।\"]\nM --> M5[\"ମହେନ୍ଜୋଦାରୋ ଓ ହରପ୍ପା<br/>ଜ୍ୟାମିତି ଉଦାହରଣ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଭାରତ ଜ୍ୟାମିତିର<br/>ଅଗ୍ରଦୂତ ଥିଲା।\"]\nC --> C2[\"ଶୁଲ୍ବ ସୂତ୍ର ଭାରତୀୟ<br/>ଗଣିତର ଗୌରବ।\"]\nC --> C3[\"ଧାର୍ମିକ ଆବଶ୍ୟକତା ଜ୍ୟାମିତି<br/>ବିକାଶରେ ସହାୟ ହୋଇଥିଲା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>କଣିକାମାନଙ୍କ ମଧ୍ୟରେ<br/>ଆକର୍ଷଣ ବଳ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପ୍ରମାଣ\"]\nA --> I1[\"ପିଲାମାନଙ୍କ ଚାରି ଦଳର<br/>କାର୍ଯ୍ୟକଳାପ କରାଯାଏ।\"]\nA --> I2[\"ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ<br/>ରବର ବ୍ୟାଣ୍ଡ ପରୀକ୍ଷା କରାଯାଏ।\"]\nA --> I3[\"ଜଳଧାରକୁ ବିଭକ୍ତ କରିବାକୁ<br/>ଚେଷ୍ଟା କରାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଆକର୍ଷଣ ବଳ\"]\nM --> M1[\"କଣିକାମାନେ ପରସ୍ପରକୁ<br/>ଆକର୍ଷଣ କରନ୍ତି।\"]\nM --> M2[\"ଏହି ବଳ କଣିକାକୁ<br/>ଏକାଠି ରଖେ।\"]\nM --> M3[\"ଯାହାକୁ ଭାଙ୍ଗିବା କଷ୍ଟକର<br/>ସେଠାରେ ବଳ ଅଧିକ।\"]\nM --> M4[\"ଜଳଧାର ଏକାଠି ରହିବାର<br/>କାରଣ ମଧ୍ୟ ଆକର୍ଷଣ ବଳ।\"]\nM --> M5[\"ଭିନ୍ନ ପଦାର୍ଥରେ ବଳର<br/>ସାମର୍ଥ୍ୟ ଭିନ୍ନ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଫଳାଫଳ\"]\nC --> C1[\"ପଦାର୍ଥର କଣିକାମାନେ<br/>ଅଲଗା ନୁହେଁ।\"]\nC --> C2[\"ସେମାନଙ୍କ ମଧ୍ୟରେ<br/>ଆକର୍ଷଣ ବଳ ରହିଛି।\"]\nC --> C3[\"ଆକର୍ଷଣ ବଳର ଶକ୍ତି<br/>ପଦାର୍ଥ ଭେଦରେ ଭିନ୍ନ ହୁଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଇଉକ୍ଲିଡ୍ ଓ<br/>Euclidean Geometry\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଗ୍ରୀକ୍ ବିଦ୍ୱାନ\"]\nA --> I1[\"Thales ଜ୍ୟାମିତିକ ତଥ୍ୟ<br/>ଉଦ୍ଘୋଟନ ଆରମ୍ଭ କଲେ।\"]\nA --> I2[\"ପିଥାଗୋରାସ ଓ ସକ୍ରେଟିସ<br/>ଜ୍ୟାମିତି ବିକଶିତ କଲେ।\"]\nA --> I3[\"ଗ୍ରୀକ୍ ବିଦ୍ୱାନ ଜ୍ୟାମିତିକୁ<br/>ଶାସ୍ତ୍ର ରୂପ ଦେଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଇଉକ୍ଲିଡ୍ ଙ୍କ ଅବଦାନ\"]\nM --> M1[\"ଇଉକ୍ଲିଡ୍ 'Elements'<br/>ଗ୍ରନ୍ଥ ରଚନା କଲେ।\"]\nM --> M2[\"ଗ୍ରନ୍ଥରେ ତେରଶଟି<br/>ଭାଗ ଅଛି।\"]\nM --> M3[\"ପଞ୍ଚଶଟି ଉପପାଦ୍ୟ<br/>ସ୍ଥାନ ପାଇଲା।\"]\nM --> M4[\"ଜ୍ୟାମିତିକୁ ସୁଶୃଙ୍ଖଳ<br/>ରୂପ ଦେଲେ।\"]\nM --> M5[\"ଇଉକ୍ଲିଡ୍ 'ଜ୍ୟାମିତିର ଜନକ'<br/>ଆଖ୍ୟା ପାଇଲେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଫଳାଫଳ\"]\nC --> C1[\"ଇଉକ୍ଲିଡ୍ ନାମରେ<br/>Euclidean Geometry ପ୍ରଚଳିତ।\"]\nC --> C2[\"ଏ ଜ୍ୟାମିତି ବିଦ୍ୟାଳୟ<br/>ସ୍ତରରେ ପଢ଼ାଯାଏ।\"]\nC --> C3[\"ସମତଳ ଜ୍ୟାମିତି<br/>ନାମରେ ମଧ୍ୟ ଜଣାଶୁଣା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ପଦାର୍ଥର କଣିକାର<br/>ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପଦାର୍ଥ\"]\nA --> I1[\"ପଦାର୍ଥ ଭର ଧାରଣ କରେ।\"]\nA --> I2[\"ପଦାର୍ଥ ସ୍ଥାନ ଦଖଲ କରେ।\"]\nA --> I3[\"ସମସ୍ତ ପଦାର୍ଥ କଣିକାରେ\nଗଠିତ ହୋଇଥାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 କଣିକାର ବୈଶିଷ୍ଟ୍ୟ\"]\nM --> M1[\"କଣିକା ସବୁବେଳେ<br/>ଗତିଶୀଳ ରହେ।\"]\nM --> M2[\"କଣିକାର ମଧ୍ୟରେ<br/>ଫାଙ୍କା ସ୍ଥାନ ଥାଏ।\"]\nM --> M3[\"କଣିକାମାନେ ପରସ୍ପରକୁ<br/>ଆକର୍ଷଣ କରନ୍ତି।\"]\nM --> M4[\"କଣିକାମାନେ ପରସ୍ପର ସହ<br/>ମିଶିଯାଇ ପାରନ୍ତି।\"]\nM --> M5[\"ତାପ ବୃଦ୍ଧିରେ କଣିକାର<br/>ଗତି ଅଧିକ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ସାରାଂଶ\"]\nC --> C1[\"ଗତି, ଫାଙ୍କା ସ୍ଥାନ ଓ<br/>ଆକର୍ଷଣ କଣିକାର ଗୁଣ।\"]\nC --> C2[\"ବିସରଣ କଣିକାର<br/>ଗତିର ପରିଣାମ ଅଟେ।\"]\nC --> C3[\"ଏହି ଗୁଣଗୁଡ଼ିକ ପଦାର୍ଥର<br/>ଆଚରଣକୁ ବ୍ୟାଖ୍ୟା କରେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
-  ],
-
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-5:<br/>Birkhoff, Hilbert ଓ<br/>ଆଧୁନିକ ଜ୍ୟାମିତି\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଆଧୁନିକ ବିଦ୍ୱାନ\"]\nA --> I1[\"George David Birkhoff<br/>ଆମେରିକୀୟ ଗଣିତଜ୍ଞ।\"]\nA --> I2[\"David Hilbert<br/>ଜର୍ମାନୀର ଗଣିତଜ୍ଞ।\"]\nA --> I3[\"ଉଭୟ ଜ୍ୟାମିତି<br/>ପରିମାର୍ଜନ କଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଅବଦାନ\"]\nM --> M1[\"Birkhoff 1932 ମସିହାରେ<br/>ନିବନ୍ଧ ପ୍ରକାଶ କଲେ।\"]\nM --> M2[\"Scale ଓ Protractor ଆଧାରରେ<br/>ଜ୍ୟାମିତି ପ୍ରସ୍ତୁତ ହେଲା।\"]\nM --> M3[\"Hilbert ଜ୍ୟାମିତିକୁ<br/>ତାର୍କିକ ଢ଼ାଞ୍ଚା ଦେଲେ।\"]\nM --> M4[\"ଆଧୁନିକ ଜ୍ୟାମିତି Set<br/>ମାଧ୍ୟମରେ ପ୍ରକାଶ ପାଏ।\"]\nM --> M5[\"ଉଚ୍ଚ ଗଣିତ ଅଧ୍ୟୟନ<br/>ପାଇଁ ଅଧିକ ଉପଯୁକ୍ତ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ସାରାଂଶ\"]\nC --> C1[\"ଜ୍ୟାମିତି ବିଦ୍ୟାଳୟ ସ୍ତରରେ<br/>ସମତଳ ଜ୍ୟାମିତି ନାମରେ ଜଣାଯାଏ।\"]\nC --> C2[\"ଆଧୁନিक ଜ୍ୟାମିତି Set<br/>ଭିତ୍ତିକ ପ୍ରକ୍ରିୟାରେ ପ୍ରକାଶ ପାଏ।\"]\nC --> C3[\"ଉଭୟ ଧାରା ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର<br/>ଭିନ୍ନ ବିକାଶ ସ୍ତର ଦର୍ଶାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
+],
 
 mcq: {
     questions: [
-
         // =========================
-        // NOTE-1
-        // =========================
-        {
-            question: "କେଉଁ ପରୀକ୍ଷାରେ ଗୋଟିଏ ଗ୍ଲାସରେ କାଳି ଓ ଅନ୍ୟଟିରେ ମହୁ ପକାଯାଏ?",
-            options: [
-                "କାମ 1.4",
-                "କାମ 1.5",
-                "କାମ 1.6",
-                "କାମ 1.8"
-            ],
-            correct: 0
-        },
-
-        // =========================
-        // NOTE-2
+        // PAGE-1 - CONCEPT NO.- 1
+        // (ଜ୍ୟାମିତି ପରିଚୟ)
         // =========================
         {
-            question: "ସ୍ଫଟିକକୁ କେଉଁ ଦୁଇ ପ୍ରକାର ଜଳରେ ପକାଯାଏ?",
+            question: "'Geometry' ଶବ୍ଦଟି କେଉଁ ଭାଷାରୁ ଆସିଛି?",
             options: [
-                "ଲୁଣିଆ ଓ ମିଠା ଜଳ",
-                "ଗରମ ଓ ଥଣ୍ଡା ଜଳ",
-                "ନଦୀ ଓ ପୋଖରୀ ଜଳ",
-                "ସଫା ଓ ଅସଫା ଜଳ"
+                "ଲାଟିନ୍",
+                "ଗ୍ରୀକ",
+                "ସଂସ୍କୃତ",
+                "ଆରବୀ"
             ],
             correct: 1
         },
-
-        // =========================
-        // NOTE-3
-        // =========================
         {
-            question: "ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର କ'ଣ ବଢ଼େ?",
+            question: "'Geometry' ଶବ୍ଦରେ 'Geo' ର ଅର୍ଥ କ'ଣ?",
             options: [
-                "ରଙ୍ଗ",
-                "ଆକାର",
-                "ଗତି",
-                "ଓଜନ"
+                "ମାପ",
+                "ଆକୃତି",
+                "ପୃଥ୍ବୀ",
+                "ରେଖା"
             ],
             correct: 2
         },
-
-        // =========================
-        // NOTE-4
-        // =========================
         {
-            question: "କଣିକାମାନଙ୍କର ଅନ୍ତଃମିଶ୍ରଣକୁ କ'ଣ କୁହାଯାଏ?",
+            question: "ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ସୃଷ୍ଟି କେଉଁ ଆବଶ୍ୟକତାରୁ ହୋଇଛି?",
             options: [
-                "ବାଷ୍ପୀଭବନ",
-                "ଘନୀଭବନ",
-                "ଗଳନ",
-                "ବିସରଣ"
-            ],
-            correct: 3
-        },
-
-        // =========================
-        // NOTE-5
-        // =========================
-        {
-            question: "ତାପ ଦେଲେ ବିସରଣ କିପରି ହୁଏ?",
-            options: [
-                "ଶୀଘ୍ର ହୁଏ",
-                "ବନ୍ଦ ହୋଇଯାଏ",
-                "କମିଯାଏ",
-                "ଅପରିବର୍ତ୍ତିତ ରହେ"
-            ],
-            correct: 0
-        },
-
-        // =========================
-        // NOTE-6
-        // =========================
-        {
-            question: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ କେଉଁ ବଳ ଥାଏ?",
-            options: [
-                "ଚୁମ୍ବକୀୟ ବଳ",
-                "ଆକର୍ଷଣ ବଳ",
-                "ଘର୍ଷଣ ବଳ",
-                "ମାଧ୍ୟାକର୍ଷଣ ବଳ"
+                "ଘର ସଜାଇବା ଆବଶ୍ୟକତାରୁ",
+                "ଜମି ମାପ କରିବା ଆବଶ୍ୟକତାରୁ",
+                "ଚିତ୍ର ଆଙ୍କିବା ଆବଶ୍ୟକତାରୁ",
+                "ହିସାବ ରଖିବା ଆବଶ୍ୟକତାରୁ"
             ],
             correct: 1
         },
-
         // =========================
-        // NOTE-7
-        // =========================
-        {
-            question: "କେଉଁ ଦଳ ଅନ୍ୟ ଦଳକୁ ଭାଙ୍ଗିବାକୁ ଚେଷ୍ଟା କରେ?",
-            options: [
-                "ପ୍ରଥମ ଦଳ",
-                "ଦ୍ୱିତୀୟ ଦଳ",
-                "ତୃତୀୟ ଦଳ",
-                "ଚତୁର୍ଥ ଦଳ"
-            ],
-            correct: 3
-        },
-
-        // =========================
-        // NOTE-8
+        // PAGE-1 - CONCEPT NO.- 2
+        // (ଶୁଲ୍ବ ସୂତ୍ର ଓ ଭାରତୀୟ ଜ୍ୟାମିତି)
         // =========================
         {
-            question: "ପ୍ରତ୍ୟେକ ପିଲାକୁ କାହା ସହିତ ତୁଳନା କରାଯାଏ?",
+            question: "ଭାରତରେ ରଚିତ ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ନାମ କ'ଣ?",
             options: [
-                "ପରମାଣୁ",
-                "ଅଣୁ",
-                "କଣିକା",
-                "ପଦାର୍ଥ"
-            ],
-            correct: 2
-        },
-
-        // =========================
-        // NOTE-9
-        // =========================
-        {
-            question: "କାମ 1.7 ରେ କେଉଁ ବସ୍ତୁଗୁଡ଼ିକ ବ୍ୟବହାର କରାଯାଏ?",
-            options: [
-                "କାଗଜ, କପଡ଼ା, ଦଉଡ଼ି",
-                "ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ ରବର ବ୍ୟାଣ୍ଡ",
-                "ପଥର, କାଠ ଓ ମାଟି",
-                "କାଚ, ପ୍ଲାଷ୍ଟିକ ଓ ଲୁହା"
+                "ବୀଜଗଣିତ ସୂତ୍ର",
+                "ଶୁଲ୍ବ ସୂତ୍ର",
+                "ଅଙ୍କ ସୂତ୍ର",
+                "ତ୍ରିକୋଣ ସୂତ୍ର"
             ],
             correct: 1
         },
-
+        {
+            question: "'ଶୁଲ୍ବ' ଶବ୍ଦର ଅର୍ଥ କ'ଣ?",
+            options: [
+                "ଦଉଡ଼ି (ରଜ୍ଜୁ)",
+                "ମାଟି",
+                "ପାଣି",
+                "ପଥର"
+            ],
+            correct: 0
+        },
+        {
+            question: "ଭାରତୀୟ ଗଣିତଜ୍ଞ ଓ ଋଷିଗଣ ଜ୍ୟାମିତିର ସୂତ୍ର ପ୍ରୟୋଗ କରି କ'ଣ ନିର୍ମାଣ କଲେ?",
+            options: [
+                "ବନ୍ଧ ଓ ପୋଖରୀ",
+                "ଯଜ୍ଞବେଦୀ, ପୂଜାବେଦୀ ଓ ଆଦି ନିର୍ମାଣ",
+                "ରାସ୍ତା ଓ ପୋଲ",
+                "ଦୁର୍ଗ ଓ ପ୍ରାଚୀର"
+            ],
+            correct: 1
+        },
         // =========================
-        // NOTE-10
+        // PAGE-2 - CONCEPT NO.- 1
+        // (ଇଉକ୍ଲିଡ଼ ଓ Elements ଗ୍ରନ୍ଥ)
         // =========================
         {
-            question: "ଜଳଧାର ପରୀକ୍ଷା କେଉଁ କଥାକୁ ଦର୍ଶାଏ?",
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କୁ କ'ଣ କୁହାଯାଏ?",
             options: [
-                "ବିସରଣ",
-                "ଗତିଜ ଶକ୍ତି",
-                "ଆକର୍ଷଣ ବଳ",
-                "ଭର"
+                "ଗଣିତର ଜନକ",
+                "ଜ୍ୟାମିତିର ଜନକ",
+                "ବୀଜଗଣିତର ଜନକ",
+                "ପଦାର୍ଥ ବିଜ୍ଞାନର ଜନକ"
+            ],
+            correct: 1
+        },
+        {
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କ 'Elements' ଗ୍ରନ୍ଥରେ ମୋଟ କେତୋଟି ଉପପାଦ୍ୟ ଅଛି?",
+            options: [
+                "୩୬୫ ଟି",
+                "୫୬୫ ଟି",
+                "୪୬୫ ଟି",
+                "୨୬୫ ଟି"
             ],
             correct: 2
         },
-
-        // =========================
-        // NOTE-11
-        // =========================
         {
-            question: "ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ କିପରି ଥାଏ?",
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କ 'Elements' ଗ୍ରନ୍ଥରେ କେତୋଟି ଖଣ୍ଡ ଅଛି?",
             options: [
-                "ସମାନ ଥାଏ",
-                "କିଛି ଥାଏ ନାହିଁ",
-                "ସବୁଠାରୁ ଅଧିକ ଥାଏ",
-                "ସମାନ ନୁହେଁ"
+                "୧୦ ଟି",
+                "୧୩ ଟି",
+                "୧୫ ଟି",
+                "୧୨ ଟି"
             ],
-            correct: 3
+            correct: 1
         },
-
         // =========================
-        // NOTE-12
+        // PAGE-2 - CONCEPT NO.- 2
+        // (ଆଧୁନିକ ଜ୍ୟାମିତି ଓ ବିର୍କଫ / ହିଲ୍ବର୍ଟ)
         // =========================
         {
-            question: "କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ମଧ୍ୟରୁ କେଉଁଟି ସଠିକ୍?",
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କ ଜ୍ୟାମିତିର ତ୍ରୁଟି କିଏ ଦର୍ଶାଇଲେ?",
             options: [
-                "ଗତି, ଫାଙ୍କା ସ୍ଥାନ, ଆକର୍ଷଣ ଓ ବିସରଣ",
-                "ରଙ୍ଗ, ଆକାର ଓ ଗନ୍ଧ",
-                "ଓଜନ, ଉଚ୍ଚତା ଓ ଲମ୍ବ",
-                "ତାପ, ଆଲୋକ ଓ ଶବ୍ଦ"
+                "ଡ଼େଭିଡ ହିଲ୍ବର୍ଟ",
+                "ବର୍ତ୍ତାନ ରସେଲ",
+                "ଜର୍ଜ ବିର୍କଫ",
+                "ପିଥାଗୋରାସ୍"
             ],
-            correct: 0
+            correct: 1
+        },
+        {
+            question: "ବିର୍କଫ ଙ୍କ ୧୯୩୨ ମସିହାର ନିବନ୍ଧ କେଉଁ ଯନ୍ତ୍ର ଉପରେ ଆଧାରିତ ଥିଲା?",
+            options: [
+                "କମ୍ପାସ ଓ ପେନ୍ସିଲ",
+                "Scale ଓ Protractor",
+                "ରୁଲର ଓ ଟ୍ରାଏସ୍କ୍ୱାୟର",
+                "କ୍ୟାଲକ୍ୟୁଲେଟର ଓ ସ୍କ୍ୱାୟର"
+            ],
+            correct: 1
+        },
+        {
+            question: "ବିଦ୍ୟାଳୟ ସ୍ତରରେ ପଢ଼ୁଥିବା ଜ୍ୟାମିତିକୁ କ'ଣ କୁହାଯାଏ?",
+            options: [
+                "ଆଧୁନିକ ଜ୍ୟାମିତି",
+                "ତ୍ରିମାତ୍ରିକ ଜ୍ୟାମିତି",
+                "ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି ବା ସମତଳ ଜ୍ୟାମିତି",
+                "ଗୋଲୀୟ ଜ୍ୟାମିତି"
+            ],
+            correct: 2
+        },
+        {
+            question: "ଆଧୁନିକ ଜ୍ୟାମିତିରେ ଧାରଣା ପ୍ରକାଶ ପାଇଁ କେଉଁ ଭାଷା ବ୍ୟବହୃତ ହୁଏ?",
+            options: [
+                "ସଂସ୍କୃତ ଭାଷା",
+                "ଗ୍ରୀକ ଭାଷା",
+                "ସେଟ୍ (Set) ଭାଷା",
+                "ଅଙ୍କ ଭାଷା"
+            ],
+            correct: 2
         }
-
     ]
 },
     
 trueFalse: {
     questions: [
-
         // =========================
-        // NOTE-1
+        // PAGE-1 - CONCEPT NO.- 1
+        // (ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ ଓ ଉତ୍ପତ୍ତି)
         // =========================
         {
-            question: "କାଳି ଓ ମହୁକୁ ଦୁଇଟି ଭିନ୍ନ ଗ୍ଲାସର ଜଳରେ ପକାଯାଏ ।",
+            question: "'Geometry' ଶବ୍ଦଟି ଗ୍ରୀକ ଭାଷାରୁ ଆସିଛି ।",
             correct: true
         },
-
-        // =========================
-        // NOTE-2
-        // =========================
         {
-            question: "ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ ସ୍ଫଟିକ ପକାଇ ପରିବର୍ତ୍ତନ ତୁଳନା କରାଯାଏ ।",
-            correct: true
-        },
-
-        // =========================
-        // NOTE-3
-        // =========================
-        {
-            question: "ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତି ଓ ଗତିଜ ଶକ୍ତି ବଢ଼ିଯାଏ ।",
-            correct: true
-        },
-
-        // =========================
-        // NOTE-4
-        // =========================
-        {
-            question: "କଣିକାମାନଙ୍କର ଅନ୍ତଃମିଶ୍ରଣକୁ ବିସରଣ କୁହାଯାଏ ।",
-            correct: true
-        },
-
-        // =========================
-        // NOTE-5
-        // =========================
-        {
-            question: "ତାପ ଦେଲେ ବିସରଣ ଶୀଘ୍ର ହୁଏ ।",
-            correct: true
-        },
-
-        // =========================
-        // NOTE-6
-        // =========================
-        {
-            question: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥାଏ ।",
-            correct: true
-        },
-
-        // =========================
-        // NOTE-7
-        // =========================
-        {
-            question: "ଚତୁର୍ଥ ଦଳ ଅନ୍ୟ ଦଳକୁ ଭାଙ୍ଗିବାକୁ ଚେଷ୍ଟା କରେ ।",
-            correct: true
-        },
-
-        // =========================
-        // NOTE-8
-        // =========================
-        {
-            question: "ପ୍ରଥମ ଦଳ ସବୁଠାରୁ ଦୃଢ଼ ଥାଏ ଏବଂ ଶକ୍ତ ଆକର୍ଷଣ ବଳକୁ ସୂଚାଏ ।",
-            correct: true
-        },
-
-        // =========================
-        // NOTE-9
-        // =========================
-        {
-            question: "ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ ରବର ବ୍ୟାଣ୍ଡ ସବୁ ସମାନ ଭାବେ ଭାଙ୍ଗେ ।",
+            question: "'Geo' ଶବ୍ଦର ଅର୍ଥ ମାପ ।",
             correct: false
         },
-
         // =========================
-        // NOTE-10
-        // =========================
-        {
-            question: "ଜଳଧାର ସହଜରେ ଅଲଗା ହୋଇଯାଏ ।",
-            correct: false
-        },
-
-        // =========================
-        // NOTE-11
+        // PAGE-1 - CONCEPT NO.- 2
+        // (ଜ୍ୟାମିତିର ଉପଯୋଗ ଓ ଆବଶ୍ୟକତା)
         // =========================
         {
-            question: "ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳର ସାମର୍ଥ୍ୟ ସମାନ ଥାଏ ।",
-            correct: false
-        },
-
-        // =========================
-        // NOTE-12
-        // =========================
-        {
-            question: "କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ହେଲା ଗତି, ଫାଙ୍କା ସ୍ଥାନ, ଆକର୍ଷଣ ଓ ବିସରଣ ।",
+            question: "ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ସୃଷ୍ଟି ଜମି ମାପ କରିବା ଆବଶ୍ୟକତାରୁ ହୋଇଛି ।",
             correct: true
+        },
+        {
+            question: "ଆକୃତି-ସଂଚେତନତା ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ମୂଳ ଆଧାର ।",
+            correct: true
+        },
+        // =========================
+        // PAGE-1 - CONCEPT NO.- 3
+        // (ଭାରତୀୟ ଜ୍ୟାମିତି - ଶୁଲ୍ବ ସୂତ୍ର)
+        // =========================
+        {
+            question: "ଭାରତରେ ରଚିତ ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ନାମ 'ଶୁଲ୍ବ ସୂତ୍ର' ।",
+            correct: true
+        },
+        {
+            question: "'ଶୁଲ୍ବ ସୂତ୍ର' ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିକ ମାପ ସଂକ୍ରାନ୍ତ ଶାସ୍ତ୍ର ।",
+            correct: true
+        },
+        // =========================
+        // PAGE-2 - CONCEPT NO.- 1
+        // (ଗ୍ରୀକ ଗଣିତଜ୍ଞ ଓ ଇଉକ୍ଲିଡ଼)
+        // =========================
+        {
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ' କୁହାଯାଏ ।",
+            correct: true
+        },
+        {
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କ 'Elements' ଗ୍ରନ୍ଥରେ ୧୦ ଟି ଖଣ୍ଡ ଅଛି ।",
+            correct: false
+        },
+        // =========================
+        // PAGE-2 - CONCEPT NO.- 2
+        // (Elements ଗ୍ରନ୍ଥ ଓ ଉପପାଦ୍ୟ)
+        // =========================
+        {
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କ 'Elements' ଗ୍ରନ୍ଥରେ ସମୁଦାୟ ୪୬୫ ଟି ଉପପାଦ୍ୟ ସଂଗୃହୀତ ।",
+            correct: true
+        },
+        {
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କ ଜ୍ୟାମିତିକୁ 'ଆଧୁନିକ ଜ୍ୟାମିତି' କୁହାଯାଏ ।",
+            correct: false
+        },
+        // =========================
+        // PAGE-2 - CONCEPT NO.- 3
+        // (ଆଧୁନିକ ଜ୍ୟାମିତି - ବିର୍କଫ ଓ ହିଲ୍ବର୍ଟ)
+        // =========================
+        {
+            question: "ଜର୍ଜ ଡ଼େଭିଡ ବିର୍କଫ ଓ ଡ଼େଭିଡ ହିଲ୍ବର୍ଟ ଆଧୁନିକ ଜ୍ୟାମିତି ବିକାଶ କଲେ ।",
+            correct: true
+        },
+        {
+            question: "ଆଧୁନିକ ଜ୍ୟାମିତିରେ 'ସେଟ୍' (Set) ଭାଷାର ଉପଯୋଗ କରି ଧାରଣା ପ୍ରକାଶ କରାଯାଏ ।",
+            correct: true
+        },
+        // =========================
+        // PAGE-2 - CONCEPT NO.- 4
+        // (ବିଦ୍ୟାଳୟ ଜ୍ୟାମିତି)
+        // =========================
+        {
+            question: "ବିଦ୍ୟାଳୟ ସ୍ତରରେ ପଢ଼ୁଥିବା ଜ୍ୟାମିତିକୁ 'ସମତଳ ଜ୍ୟାମିତି' କୁହାଯାଏ ।",
+            correct: true
+        },
+        {
+            question: "ବର୍ତ୍ତାନ ରସେଲ ଇଉକ୍ଲିଡ଼ ଙ୍କ ଜ୍ୟାମିତିର ପ୍ରଶଂସା କଲେ ।",
+            correct: false
         }
     ]
 },
     
 fillBlanks: {
     questions: [
-
         // =========================
-        //  NOTE-1
+        // PAGE-1 - CONCEPT NO.- 1
+        // (ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ ଓ ଉତ୍ପତ୍ତି)
         // =========================
         {
-            question: "ଗୋଟିଏ ଗ୍ଲାସରେ କାଳି ଓ ଅନ୍ୟଟିରେ ___ ପକାଇବା । (ମହୁ / ଲୁଣ)",
-            answer: "ମହୁ"
+            question: "'Geometry' ଶବ୍ଦଟି ___ ଭାଷାର ଦୁଇଟି ଶବ୍ଦରୁ ସୃଷ୍ଟି ହୋଇଛି । (ଗ୍ରୀକ / ଲାଟିନ୍)",
+            answer: "ଗ୍ରୀକ"
         },
-
-        // =========================
-        //  NOTE-2
-        // =========================
         {
-            question: "ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ ___ ପକାଇବା । (ସ୍ଫଟିକ / ବାଲି)",
-            answer: "ସ୍ଫଟିକ"
+            question: "'Geo' ର ଅର୍ଥ ___ ଓ 'Metron' ର ଅର୍ଥ ମାପ । (ପୃଥ୍ବୀ / ଆକାଶ)",
+            answer: "ପୃଥ୍ବୀ"
         },
-
         // =========================
-        //  NOTE-3
+        // PAGE-1 - CONCEPT NO.- 2
+        // (ଜ୍ୟାମିତିର ଉତ୍ପତ୍ତି ଓ ଆବଶ୍ୟକତା)
         // =========================
         {
-            question: "ପଦାର୍ଥର କଣିକା ସବୁବେଳେ ___ କରେ । (ଗତି / ବିଶ୍ରାମ)",
-            answer: "ଗତି"
+            question: "___ ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହୋଇଛି । (ଜମି / ଜଳ)",
+            answer: "ଜମି"
         },
-
-        // =========================
-        //  NOTE-4
-        // =========================
         {
-            question: "ଏହି ଅନ୍ତଃମିଶ୍ରଣକୁ ___ କୁହାଯାଏ । (ବିସରଣ / ବାଷ୍ପୀଭବନ)",
-            answer: "ବିସରଣ"
+            question: "ଜ୍ୟାମିତି ହେଉଛି ___ ସଂଚେତନତା ଉପରେ ଆଧାରିତ ଏକ ଶାସ୍ତ୍ର । (ଆକୃତି / ରଙ୍ଗ)",
+            answer: "ଆକୃତି"
         },
-
         // =========================
-        //  NOTE-5
+        // PAGE-1 - CONCEPT NO.- 3
+        // (ଭାରତୀୟ ଜ୍ୟାମିତି - ଶୁଲ୍ବ ସୂତ୍ର)
         // =========================
         {
-            question: "ତାପ ଦେଲେ ବିସରଣ ___ ହୁଏ । (ଶୀଘ୍ର / ଧୀର)",
-            answer: "ଶୀଘ୍ର"
+            question: "ଭାରତରେ ରଚିତ ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ନାମ '___ ସୂତ୍ର' । (ଶୁଲ୍ବ / ବ୍ରହ୍ମ)",
+            answer: "ଶୁଲ୍ବ"
         },
-
-        // =========================
-        //  NOTE-6
-        // =========================
         {
-            question: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ___ ବଳ ଥାଏ । (ଆକର୍ଷଣ / ବିକର୍ଷଣ)",
-            answer: "ଆକର୍ଷଣ"
+            question: "'ଶୁଲ୍ବ ସୂତ୍ର' ___ (ଦଉଡ଼ି) ଦ୍ୱାରା ଜ୍ୟାମିତିକ ମାପ ସଂକ୍ରାନ୍ତ ଶାସ୍ତ୍ର । (ରଜ୍ଜୁ / ଲଉଠି)",
+            answer: "ରଜ୍ଜୁ"
         },
-
         // =========================
-        //  NOTE-7
+        // PAGE-2 - CONCEPT NO.- 1
+        // (ଗ୍ରୀକ ଗଣିତଜ୍ଞ ଓ ଇଉକ୍ଲିଡ଼)
         // =========================
         {
-            question: "ଦ୍ୱିତୀୟ ଦଳ ହାତ ଧରି ___ କରେ । (ଶୃଙ୍ଖଳ / ବୃତ୍ତ)",
-            answer: "ଶୃଙ୍ଖଳ"
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କୁ '___ ର ଜନକ' କୁହାଯାଏ । (ଜ୍ୟାମିତି / ବୀଜଗଣିତ)",
+            answer: "ଜ୍ୟାମିତି"
         },
-
-        // =========================
-        //  NOTE-8
-        // =========================
         {
-            question: "ପ୍ରତ୍ୟେକ ପିଲାକୁ ଗୋଟିଏ ___ ଧରାଯାଏ । (କଣିକା / ପଦାର୍ଥ)",
-            answer: "କଣିକା"
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କ ଜ୍ୟାମିତିକୁ '___ ଜ୍ୟାମିତି' କୁହାଯାଏ । (ଇଉକ୍ଲିଡ଼ୀୟ / ଆଧୁନିକ)",
+            answer: "ଇଉକ୍ଲିଡ଼ୀୟ"
         },
-
         // =========================
-        //  NOTE-9
+        // PAGE-2 - CONCEPT NO.- 2
+        // (Elements ଗ୍ରନ୍ଥ ଓ ଉପପାଦ୍ୟ)
         // =========================
         {
-            question: "ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ ___ ବ୍ୟାଣ୍ଡ ଉପରେ କାମ ୧.୭ କରାଯାଏ । (ରବର / ପ୍ଲାଷ୍ଟିକ)",
-            answer: "ରବର"
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କ 'Elements' ଗ୍ରନ୍ଥରେ ___ ଟି ଖଣ୍ଡ ଅଛି । (୧୩ / ୧୦)",
+            answer: "୧୩"
         },
-
-        // =========================
-        //  NOTE-10
-        // =========================
         {
-            question: "ଟ୍ୟାପରୁ ବାହାରୁଥିବା ___ କୁ କାଟିବାକୁ ଚେଷ୍ଟା କରାଯାଏ । (ଜଳଧାର / ବାୟୁଧାର)",
-            answer: "ଜଳଧାର"
+            question: "'Elements' ଗ୍ରନ୍ଥରେ ସମୁଦାୟ ___ ଟି ଉପପାଦ୍ୟ ସଂଗୃହୀତ ହୋଇଛି । (୪୬୫ / ୩୬୫)",
+            answer: "୪୬୫"
         },
-
         // =========================
-        //  NOTE-11
+        // PAGE-2 - CONCEPT NO.- 3
+        // (ଆଧୁନିକ ଜ୍ୟାମିତି - ବିର୍କଫ ଓ ହିଲ୍ବର୍ଟ)
         // =========================
         {
-            question: "ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ ___ ନୁହେଁ । (ସମାନ / ଅଧିକ)",
-            answer: "ସମାନ"
+            question: "ଇଉକ୍ଲିଡ଼ ଙ୍କ ଜ୍ୟାମିତିର ତ୍ରୁଟି ___ ଦର୍ଶାଇଲେ । (ବର୍ତ୍ତାନ ରସେଲ / ଡ଼େଭିଡ ହିଲ୍ବର୍ଟ)",
+            answer: "ବର୍ତ୍ତାନ ରସେଲ"
         },
-
+        {
+            question: "ବିର୍କଫ ଙ୍କ ୧୯୩୨ ମସିହାର ନିବନ୍ଧ Scale ଓ ___ ଉପରେ ଆଧାରିତ । (Protractor / Compass)",
+            answer: "Protractor"
+        },
         // =========================
-        //  NOTE-12
+        // PAGE-2 - CONCEPT NO.- 4
+        // (ବିଦ୍ୟାଳୟ ଜ୍ୟାମିତି ଓ ସେଟ୍ ଭାଷା)
         // =========================
         {
-            question: "ପଦାର୍ଥର ଭର ଥାଏ ଏବଂ ___ ଦଖଲ କରେ । (ସ୍ଥାନ / ଜଳ)",
-            answer: "ସ୍ଥାନ"
+            question: "ଆଧୁନିକ ଜ୍ୟାମିତିରେ '___ ' ଭାଷାର ଉପଯୋଗ କରି ଧାରଣା ପ୍ରକାଶ କରାଯାଏ । (ସେଟ୍ / ଗ୍ରୀକ)",
+            answer: "ସେଟ୍"
+        },
+        {
+            question: "ବିଦ୍ୟାଳୟ ସ୍ତରରେ ପଢ଼ୁଥିବା ଜ୍ୟାମିତିକୁ ___ ଜ୍ୟାମିତି କୁହାଯାଏ । (ସମତଳ / ଗୋଲୀୟ)",
+            answer: "ସମତଳ"
         }
-
     ]
 },
     
 matching: {
     pairs: [
-        { left: "କାଳି ଓ ମହୁ ପରୀକ୍ଷା", right: "🧪 ଜଳରେ କିପରି ମିଶୁଛି ଲକ୍ଷ୍ୟ କରାଯାଏ ।" },
-        { left: "ସ୍ଫଟିକ", right: "💎 ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ ମିଶିବା ତୁଳନା କରାଯାଏ ।" },
-        { left: "କଣିକା", right: "⚡ ସବୁବେଳେ ଗତି କରେ ।" },
-        { left: "ବିସରଣ", right: "🔄 କଣିକାମାନଙ୍କର ଅନ୍ତଃମିଶ୍ରଣ ।" },
-        { left: "ତାପ", right: "🔥 ବିସରଣକୁ ଶୀଘ୍ର କରେ ।" },
-        { left: "ଆକର୍ଷଣ ବଳ", right: "🧲 କଣିକାମାନଙ୍କୁ ଏକାଠି ରଖେ ।" },
-        { left: "ଚତୁର୍ଥ ଦଳ", right: "👦 ଅନ୍ୟ ଦଳକୁ ଭାଙ୍ଗିବାକୁ ଚେଷ୍ଟା କରେ ।" },
-        { left: "ପ୍ରଥମ ଦଳ", right: "💪 ସବୁଠାରୁ ଦୃଢ଼ ଆକର୍ଷଣ ବଳକୁ ସୂଚାଏ ।" },
-        { left: "ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ ରବର ବ୍ୟାଣ୍ଡ", right: "🔧 ସମାନ ଭାବେ ଭାଙ୍ଗେ ନାହିଁ ।" },
-        { left: "ଜଳଧାର", right: "💧 ସହଜରେ ଅଲଗା ହୁଏ ନାହିଁ ।" },
-        { left: "ଭିନ୍ନ ପଦାର୍ଥ", right: "📦 ଭିନ୍ନ ଭିନ୍ନ ଆକର୍ଷଣ ବଳ ଥାଏ ।" },
-        { left: "ଗରମ ଖାଦ୍ୟର ବାସ୍ନା", right: "🌬️ ଶୀଘ୍ର ବିସରଣ ହୁଏ ।" }
+        // PAGE-1 - CONCEPT NO.- 1 (ଜ୍ୟାମିତି ଶବ୍ଦର ଉତ୍ପତ୍ତି)
+        { left: "Geometry", right: "📐 ଗ୍ରୀକ ଭାଷାରୁ ଆସିଥିବା ଶବ୍ଦ ।" },
+        { left: "Geo", right: "🌍 ପୃଥ୍ବୀ ଅର୍ଥ ବହନ କରୁଥିବା ଗ୍ରୀକ ଶବ୍ଦ ।" },
+        { left: "Metron", right: "📏 ମାପ ଅର୍ଥ ବହନ କରୁଥିବା ଗ୍ରୀକ ଶବ୍ଦ ।" },
+
+        // PAGE-1 - CONCEPT NO.- 2 (ଜ୍ୟାମିତିର ଆବଶ୍ୟକତା ଓ ଉପଯୋଗ)
+        { left: "ଜ୍ୟାମିତି", right: "🏡 ଆକୃତି-ସଂଚେତନତା ଉପରେ ଆଧାରିତ ଶାସ୍ତ୍ର ।" },
+        { left: "ଜମି ମାପ", right: "🌾 ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ସୃଷ୍ଟିର ମୂଳ କାରଣ ।" },
+
+        // PAGE-1 - CONCEPT NO.- 3 (ଶୁଲ୍ବ ସୂତ୍ର)
+        { left: "ଶୁଲ୍ବ ସୂତ୍ର", right: "🇮🇳 ଭାରତରେ ରଚିତ ପ୍ରାଚୀନ ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ।" },
+        { left: "ରଜ୍ଜୁ", right: "🪢 ଶୁଲ୍ବ ସୂତ୍ରରେ ଜ୍ୟାମିତିକ ମାପ ପାଇଁ ବ୍ୟବହୃତ ସାଧନ ।" },
+
+        // PAGE-2 - CONCEPT NO.- 1 (ଇଉକ୍ଲିଡ଼ ଓ Elements)
+        { left: "ଇଉକ୍ଲିଡ଼", right: "📖 ଜ୍ୟାମିତିର ଜନକ ।" },
+        { left: "Elements", right: "📚 ୧୩ ଖଣ୍ଡ ଓ ୪୬୫ ଉପପାଦ୍ୟ ବିଶିଷ୍ଟ ଗ୍ରନ୍ଥ ।" },
+        { left: "ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି", right: "🏫 ଇଉକ୍ଲିଡ଼ ଙ୍କ ନାମ ଅନୁସାରେ ନାମିତ ଜ୍ୟାମିତି ।" },
+
+        // PAGE-2 - CONCEPT NO.- 2 (ଆଧୁନିକ ଜ୍ୟାମିତି)
+        { left: "ବର୍ତ୍ତାନ ରସେଲ", right: "🧠 ଇଉକ୍ଲିଡ଼ ଙ୍କ ଜ୍ୟାମିତିର ତ୍ରୁଟି ଦର୍ଶାଇଲେ ।" },
+        { left: "ଜର୍ଜ ଡ଼େଭିଡ ବିର୍କଫ", right: "✏️ ୧୯୩୨ ରେ Scale ଓ Protractor ଆଧାରରେ ନିବନ୍ଧ ଲେଖିଲେ ।" },
+        { left: "ଡ଼େଭିଡ ହିଲ୍ବର୍ଟ", right: "🔬 ଜ୍ୟାମିତିକୁ ଆଧୁନିକ ରୂପ ଦେଲେ ।" },
+
+        // PAGE-2 - CONCEPT NO.- 3 (ସେଟ୍ ଭାଷା ଓ ସମତଳ ଜ୍ୟାମିତି)
+        { left: "ସେଟ୍ (Set)", right: "🔣 ଆଧୁନିକ ଜ୍ୟାମିତିରେ ଧାରଣା ପ୍ରକାଶ ପାଇଁ ବ୍ୟବହୃତ ଭାଷା ।" },
+        { left: "ସମତଳ ଜ୍ୟାମିତି", right: "🏫 ବିଦ୍ୟାଳୟ ସ୍ତରରେ ପଢ଼ୁଥିବା ଜ୍ୟାମିତି ।" }
     ]
 },
     
 arrange: {
     questions: [
-
         // =========================
-        //   NOTE-1
+        //  PAGE-1 - CONCEPT NO.- 1
+        //  (ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ)
         // =========================
         {
-            words: ["କାଳି", "ଜଳରେ", "ମିଶୁଛି"],
-            correct: "କାଳି ଜଳରେ ମିଶୁଛି ।"
+            words: ["'ଜ୍ୟା'ର", "ଅର୍ଥ", "ପୃଥ୍ବୀ", "ଓ", "'ମିତି'ର", "ଅର୍ଥ", "ମାପ"],
+            correct: "'ଜ୍ୟା'ର ଅର୍ଥ ପୃଥ୍ବୀ ଓ 'ମିତି'ର ଅର୍ଥ ମାପ ।"
         },
-
-        // =========================
-        //   NOTE-2
-        // =========================
         {
-            words: ["ସ୍ଫଟିକ", "ଧୀରେ", "ଧୀରେ", "ମିଶିବା"],
-            correct: "ସ୍ଫଟିକ ଧୀରେ ଧୀରେ ମିଶିବା ।"
+            words: ["Geometry", "ଶବ୍ଦ", "Geo", "ଓ", "Metron", "ରୁ", "ସୃଷ୍ଟି", "ହୋଇଛି"],
+            correct: "Geometry ଶବ୍ଦ Geo ଓ Metron ରୁ ସୃଷ୍ଟି ହୋଇଛି ।"
         },
-
         // =========================
-        //   NOTE-3
+        //  PAGE-1 - CONCEPT NO.- 2
+        //  (ଜ୍ୟାମିତି ସୃଷ୍ଟିର କାରଣ)
         // =========================
         {
-            words: ["କଣିକା", "ସବୁବେଳେ", "ଗତି", "କରେ"],
-            correct: "କଣିକା ସବୁବେଳେ ଗତି କରେ ।"
+            words: ["ଜମି", "ମାପ", "କରିବାର", "ଆବଶ୍ୟକତାରୁ", "ଜ୍ୟାମିତିର", "ସୃଷ୍ଟି"],
+            correct: "ଜମି ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ।"
         },
-
-        // =========================
-        //   NOTE-4
-        // =========================
         {
-            words: ["କଣିକାମାନେ", "ଆପେ", "ଆପେ", "ମିଶିଯାଆନ୍ତି"],
-            correct: "କଣିକାମାନେ ଆପେ ଆପେ ମିଶିଯାଆନ୍ତି ।"
+            words: ["ଆକୃତିଗତ", "ଜ୍ଞାନର", "ପରିମାର୍ଜନା", "ଫଳରେ", "ଜ୍ୟାମିତି", "ଶାସ୍ତ୍ର", "ଉଭବ", "ହୋଇଛି"],
+            correct: "ଆକୃତିଗତ ଜ୍ଞାନର ପରିମାର୍ଜନା ଫଳରେ ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ଉଭବ ହୋଇଛି ।"
         },
-
         // =========================
-        //   NOTE-5
+        //  PAGE-1 - CONCEPT NO.- 3
+        //  (ଶୁଲ୍ବ ସୂତ୍ର)
         // =========================
         {
-            words: ["ତାପ", "ଦେଲେ", "ବିସରଣ", "ଶୀଘ୍ର", "ହୁଏ"],
-            correct: "ତାପ ଦେଲେ ବିସରଣ ଶୀଘ୍ର ହୁଏ ।"
+            words: ["'ଶୁଲ୍ବ", "ସୂତ୍ର'", "ଏକ", "ଜ୍ୟାମିତି", "ଶାସ୍ତ୍ର"],
+            correct: "'ଶୁଲ୍ବ ସୂତ୍ର' ଏକ ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ।"
         },
-
-        // =========================
-        //   NOTE-6
-        // =========================
         {
-            words: ["କଣିକାମାନଙ୍କ", "ମଧ୍ୟରେ", "ଆକର୍ଷଣ", "ବଳ", "ଥାଏ"],
-            correct: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥାଏ ।"
+            words: ["ଶୁଲ୍ବ", "ଅର୍ଥାତ୍", "ରଜ୍ଜୁ", "ଦ୍ୱାରା", "ଜ୍ୟାମିତିକ", "ମାପ", "ସମ୍ଭବ"],
+            correct: "ଶୁଲ୍ବ ଅର୍ଥାତ୍ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିକ ମାପ ସମ୍ଭବ ।"
         },
-
         // =========================
-        //   NOTE-7
+        //  PAGE-1 - CONCEPT NO.- 4
+        //  (ମାନବ ସଭ୍ୟତା ଓ ଜ୍ୟାମିତି)
         // =========================
         {
-            words: ["ପ୍ରଥମ", "ଦଳ", "ଛନ୍ଦାଛନ୍ଦି", "ହୋଇ", "ରହେ"],
-            correct: "ପ୍ରଥମ ଦଳ ଛନ୍ଦାଛନ୍ଦି ହୋଇ ରହେ ।"
+            words: ["ମାନବ", "ସଭ୍ୟତାର", "ଅଗ୍ରଗତି", "ସହିତ", "ଜ୍ୟାମିତି", "ଅଭିବୃଦ୍ଧି", "ଘଟିଛି"],
+            correct: "ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହିତ ଜ୍ୟାମିତି ଅଭିବୃଦ୍ଧି ଘଟିଛି ।"
         },
-
-        // =========================
-        //   NOTE-8
-        // =========================
         {
-            words: ["ପ୍ରତ୍ୟେକ", "ପିଲାକୁ", "ଗୋଟିଏ", "କଣିକା", "ଧରାଯାଏ"],
-            correct: "ପ୍ରତ୍ୟେକ ପିଲାକୁ ଗୋଟିଏ କଣିକା ଧରାଯାଏ ।"
+            words: ["ଜ୍ୟାମିତି", "ବିକାଶର", "ପ୍ରାଚୀନତମ", "ସଭ୍ୟତା", "ହେଉଛି", "ମିଶରୀୟ", "ସଭ୍ୟତା"],
+            correct: "ଜ୍ୟାମିତି ବିକାଶର ପ୍ରାଚୀନତମ ସଭ୍ୟତା ହେଉଛି ମିଶରୀୟ ସଭ୍ୟତା ।"
         },
-
         // =========================
-        //   NOTE-9
+        //  PAGE-2 - CONCEPT NO.- 1
+        //  (ଗ୍ରୀକ୍ ବିଦ୍ୱାନ - Thales)
         // =========================
         {
-            words: ["ସବୁ", "ବସ୍ତୁ", "ସମାନ", "ଭାବେ", "ଭାଙ୍ଗେ", "ନାହିଁ"],
-            correct: "ସବୁ ବସ୍ତୁ ସମାନ ଭାବେ ଭାଙ୍ଗେ ନାହିଁ ।"
+            words: ["Thales", "ଜ୍ୟାମିତିକ", "ତଥ୍ୟ", "ଉଦ୍ଘୋଟନ", "କରିବାର", "ଧାରା", "ଆରମ୍ଭ", "କଲେ"],
+            correct: "Thales ଜ୍ୟାମିତିକ ତଥ୍ୟ ଉଦ୍ଘୋଟନ କରିବାର ଧାରା ଆରମ୍ଭ କଲେ ।"
         },
-
         // =========================
-        //   NOTE-10
+        //  PAGE-2 - CONCEPT NO.- 2
+        //  (ଇଉକ୍ଲିଡ୍ ଓ Elements)
         // =========================
         {
-            words: ["ଜଳଧାର", "ପୁଣି", "ଏକାଠି", "ରହେ"],
-            correct: "ଜଳଧାର ପୁଣି ଏକାଠି ରହେ ।"
+            words: ["ଇଉକ୍ଲିଡ୍", "ଜ୍ୟାମିତିର", "ଜନକ", "ଆଖ୍ୟା", "ପାଇଛନ୍ତି"],
+            correct: "ଇଉକ୍ଲିଡ୍ ଜ୍ୟାମିତିର ଜନକ ଆଖ୍ୟା ପାଇଛନ୍ତି ।"
         },
-
-        // =========================
-        //   NOTE-11
-        // =========================
         {
-            words: ["ଏହି", "ବଳ", "କଣିକାକୁ", "ଏକାଠି", "ରଖେ"],
-            correct: "ଏହି ବଳ କଣିକାକୁ ଏକାଠି ରଖେ ।"
+            words: ["ଇଉକ୍ଲିଡ୍", "ରଚିତ", "ଗ୍ରନ୍ଥର", "ନାମ", "Elements"],
+            correct: "ଇଉକ୍ଲିଡ୍ ରଚିତ ଗ୍ରନ୍ଥର ନାମ Elements ।"
         },
-
         // =========================
-        //   NOTE-12
+        //  PAGE-2 - CONCEPT NO.- 3
+        //  (ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି)
         // =========================
         {
-            words: ["ପଦାର୍ଥର", "ଭର", "ଥାଏ"],
-            correct: "ପଦାର୍ଥର ଭର ଥାଏ ।"
+            words: ["ଇଉକ୍ଲିଡ୍", "ନାମାନୁସାରେ", "ଜ୍ୟାମିତି", "Euclidean", "Geometry", "ନାମ", "ପ୍ରଚଳିତ"],
+            correct: "ଇଉକ୍ଲିଡ୍ ନାମାନୁସାରେ ଜ୍ୟାମିତି Euclidean Geometry ନାମ ପ୍ରଚଳିତ ।"
+        },
+        // =========================
+        //  PAGE-2 - CONCEPT NO.- 4
+        //  (Birkhoff ଓ Hilbert)
+        // =========================
+        {
+            words: ["George", "David", "Birkhoff", "ଓ", "David", "Hilbert", "ଜ୍ୟାମିତି", "ପରିମାର୍ଜନ", "କଲେ"],
+            correct: "George David Birkhoff ଓ David Hilbert ଜ୍ୟାମିତି ପରିମାର୍ଜନ କଲେ ।"
+        },
+        {
+            words: ["Birkhoff", "ର", "ନିବନ୍ଧ", "1932", "ମସିହାରେ", "ପ୍ରକାଶିତ", "ହେଲା"],
+            correct: "Birkhoff ର ନିବନ୍ଧ 1932 ମସିହାରେ ପ୍ରକାଶିତ ହେଲା ।"
+        },
+        // =========================
+        //  PAGE-2 - CONCEPT NO.- 5
+        //  (ସମତଳ ଜ୍ୟାମିତି)
+        // =========================
+        {
+            words: ["ବିଦ୍ୟାଳୟ", "ସ୍ତରରେ", "ଜ୍ୟାମିତି", "ସମତଳ", "ଜ୍ୟାମିତି", "ନାମରେ", "ପରିଚିତ"],
+            correct: "ବିଦ୍ୟାଳୟ ସ୍ତରରେ ଜ୍ୟାମିତି ସମତଳ ଜ୍ୟାମିତି ନାମରେ ପରିଚିତ ।"
+        },
+        {
+            words: ["ଆଧୁନିକ", "ଜ୍ୟାମିତି", "Set", "ମାଧ୍ୟମରେ", "ପ୍ରକାଶିତ", "କରାଯାଏ"],
+            correct: "ଆଧୁନିକ ଜ୍ୟାମିତି Set ମାଧ୍ୟମରେ ପ୍ରକାଶିତ କରାଯାଏ ।"
         }
-
     ]
 },
     
 stq: {
     questions: [
-
         // =========================
-        // NOTE-1
+        //  PAGE-1 - CONCEPT NO.- 1
+        //  (ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ)
         // =========================
         {
-            question: "କାଳି ଓ ମହୁ ପରୀକ୍ଷାରେ କ’ଣ ଲକ୍ଷ୍ୟ କରାଯାଏ ?",
-            answer: "କାଳି ଓ ମହୁକୁ ଜଳରେ ପକାଇ ଗ୍ଲାସକୁ ନ ହଲାଇ ସେଗୁଡ଼ିକ କିପରି ଜଳରେ ମିଶୁଛି ତାହା ଲକ୍ଷ୍ୟ କରାଯାଏ । ଏହା ଦ୍ୱାରା କଣିକାମାନଙ୍କର ଅନ୍ତଃମିଶ୍ରଣ ବୁଝାଯାଏ ।"
+            question: "'ଜ୍ୟାମିତି' ଶବ୍ଦର ଅର୍ଥ କ'ଣ ?",
+            answer: "'ଜ୍ୟାମିତି' ଶବ୍ଦ ଦୁଇଟି ଶବ୍ଦରୁ ଆସିଛି । 'ଜ୍ୟା'ର ଅର୍ଥ ପୃଥ୍ବୀ ଓ 'ମିତି'ର ଅର୍ଥ ମାପ । ତେଣୁ ଜ୍ୟାମିତିର ଅର୍ଥ ହେଉଛି ପୃଥ୍ବୀ ମାପ ।"
         },
-
-        // =========================
-        // NOTE-2
-        // =========================
         {
-            question: "ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ ସ୍ଫଟିକ ପକାଇଲେ କ’ଣ କରାଯାଏ ?",
-            answer: "ଗରମ ଓ ଥଣ୍ଡା ଜଳରେ ସ୍ଫଟିକ ପକାଇ ଗ୍ଲାସକୁ ନ ଗୋଳାଇ ସ୍ଫଟିକ କିପରି ମିଶୁଛି ଦେଖାଯାଏ । ପରେ ଦୁଇ ଗ୍ଲାସର ପରିବର୍ତ୍ତନ ତୁଳନା କରାଯାଏ ।"
+            question: "'Geometry' ଶବ୍ଦ କେଉଁ ଦୁଇଟି ଶବ୍ଦରୁ ସୃଷ୍ଟି ହୋଇଛି ?",
+            answer: "'Geometry' ଶବ୍ଦ ଗ୍ରୀକ୍ ଶବ୍ଦ Geo (ପୃଥ୍ବୀ) ଓ Metron (ମାପ) ରୁ ସୃଷ୍ଟି ହୋଇଛି । Geo ଅର୍ଥ ପୃଥ୍ବୀ ଓ Metron ଅର୍ଥ ମାପ ।"
         },
-
         // =========================
-        // NOTE-3
+        //  PAGE-1 - CONCEPT NO.- 2
+        //  (ଜ୍ୟାମିତି ସୃଷ୍ଟିର କାରଣ)
         // =========================
         {
-            question: "ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତିଜ ଶକ୍ତି କାହିଁକି ବଢ଼େ ?",
-            answer: "ପଦାର୍ଥର କଣିକା ସବୁବେଳେ ଗତି କରେ । ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତି ବଢ଼ିଯାଏ । ତେଣୁ ସେମାନଙ୍କର ଗତିଜ ଶକ୍ତି ମଧ୍ୟ ବଢ଼ିଯାଏ ।"
+            question: "ଜ୍ୟାମିତିର ସୃଷ୍ଟି କିପରି ହୋଇଛି ?",
+            answer: "ଆକୃତିଗତ ଜ୍ଞାନର ପରିମାର୍ଜନା ଫଳରେ ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ଉଭବ ହୋଇଛି । ଚାଷକର୍ମୀର ଆକାର ନିର୍ଧାରଣ, ରାସ୍ତା ଓ ବାସଗୃହ ନିର୍ମାଣ ଆଦି ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ।"
         },
-
-        // =========================
-        // NOTE-4
-        // =========================
         {
-            question: "ବିସରଣ କାହାକୁ କୁହାଯାଏ ?",
-            answer: "କଣିକାମାନେ ଆପେ ଆପେ ପରସ୍ପର ମିଶିଯାଆନ୍ତି । କଣିକା ମଧ୍ୟରେ ଥିବା ଫାଙ୍କା ସ୍ଥାନରେ ଅନ୍ୟ କଣିକା ପ୍ରବେଶ କରେ । ଏହି ଅନ୍ତଃମିଶ୍ରଣକୁ ବିସରଣ କୁହାଯାଏ ।"
+            question: "ଜ୍ୟାମିତି ସୃଷ୍ଟିର ପ୍ରଧାନ ଆବଶ୍ୟକତା କ'ଣ ଥିଲା ?",
+            answer: "ଜମି ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହୋଇଛି । ରାସ୍ତା ଓ ବାସଗୃହ ନିର୍ମାଣ ପାଇଁ ଆକୃତିଗତ ଜ୍ଞାନ ଦରକାର ହେଲା ।"
         },
-
         // =========================
-        // NOTE-5
+        //  PAGE-1 - CONCEPT NO.- 3
+        //  (ଶୁଲ୍ବ ସୂତ୍ର)
         // =========================
         {
-            question: "ତାପ ଦେଲେ ବିସରଣ କାହିଁକି ଶୀଘ୍ର ହୁଏ ?",
-            answer: "ତାପ ଦେଲେ କଣିକାମାନଙ୍କର ଗତି ବଢ଼ିଯାଏ । ଗରମ ଜଳରେ ସ୍ଫଟିକ ଶୀଘ୍ର ମିଶିଯାଏ । ସେଥିପାଇଁ ବିସରଣ ମଧ୍ୟ ଦ୍ରୁତ ହୁଏ ।"
+            question: "'ଶୁଲ୍ବ ସୂତ୍ର' କ'ଣ ?",
+            answer: "'ଶୁଲ୍ବ ସୂତ୍ର' ଭାରତରେ ରଚିତ ଏକ ଜ୍ୟାମିତି ଶାସ୍ତ୍ର । ଶୁଲ୍ବ ଅର୍ଥାତ୍ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିକ ମାପ ସମ୍ଭବ ।"
         },
-
-        // =========================
-        // NOTE-6
-        // =========================
         {
-            question: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଥିବା ଆକର୍ଷଣ ବଳର କାମ କ’ଣ ?",
-            answer: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥାଏ । ଏହି ବଳ କଣିକାମାନଙ୍କୁ ଏକାଠି ରଖିଥାଏ । ଏହାକୁ ବୁଝିବା ପାଇଁ କାମ 1.6 କରାଯାଏ ।"
+            question: "ଭାରତରେ ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ଉପଯୋଗ କେଉଁ କ୍ଷେତ୍ରରେ ହୋଇଥିଲା ?",
+            answer: "ଭାରତରେ ଯଜ୍ଞକୁଣ୍ଡ, ପୂଜାବେଦୀ ଆଦି ନିର୍ମାଣ କାର୍ଯ୍ୟରେ ଜ୍ୟାମିତିକ ସୂତ୍ର ପ୍ରୟୋଗ ହୋଇଥିଲା । ଶୁଲ୍ବ ଅର୍ଥାତ୍ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିକ ମାପ ସମ୍ଭବ ।"
         },
-
         // =========================
-        // NOTE-7
+        //  PAGE-1 - CONCEPT NO.- 4
+        //  (ମାନବ ସଭ୍ୟତା ଓ ଜ୍ୟାମିତି)
         // =========================
         {
-            question: "ଚତୁର୍ଥ ଦଳର କାର୍ଯ୍ୟ କ’ଣ ଥିଲା ?",
-            answer: "ଚତୁର୍ଥ ଦଳର ପିଲାମାନେ ଅନ୍ୟ ଦଳଗୁଡ଼ିକୁ ଭାଙ୍ଗିବାକୁ ଚେଷ୍ଟା କରୁଥିଲେ । ଏହି କାର୍ଯ୍ୟକଳାପ ଦ୍ୱାରା ଆକର୍ଷଣ ବଳର ଶକ୍ତି ବୁଝାଯାଏ ।"
+            question: "ଜ୍ୟାମିତି ବିକାଶର ପ୍ରାଚୀନତମ ସଭ୍ୟତା କ'ଣ ?",
+            answer: "ଜ୍ୟାମିତି ବିକାଶର ପ୍ରାଚୀନତମ ସଭ୍ୟତା ହେଉଛି ମିଶରୀୟ ସଭ୍ୟତା । ସେଠିକାର ବୃହଦାକାର ପିରାମିଡ୍ ଗୁଡ଼ିକ ଜ୍ୟାମିତି ଜ୍ଞାନର ନିଦର୍ଶନ ।"
         },
-
-        // =========================
-        // NOTE-8
-        // =========================
         {
-            question: "ପ୍ରଥମ ଦଳ କ’ଣ ସୂଚାଏ ?",
-            answer: "ପ୍ରତ୍ୟେକ ପିଲାକୁ ଗୋଟିଏ କଣିକା ଧରାଯାଏ । ପ୍ରଥମ ଦଳ ସବୁଠାରୁ ଦୃଢ଼ ଥାଏ । ଏହା ଶକ୍ତ ଆକର୍ଷଣ ବଳକୁ ସୂଚାଏ ।"
+            question: "ମାନବ ସଭ୍ୟତା ସହିତ ଜ୍ୟାମିତିର ସମ୍ପର୍କ କ'ଣ ?",
+            answer: "ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହିତ ଜ୍ୟାମିତି ଅଭିବୃଦ୍ଧି ଘଟିଛି । ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତିରେ ଜ୍ୟାମିତି ଏକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଭୂମିକା ନିଭାଇଛି ।"
         },
-
         // =========================
-        // NOTE-9
+        //  PAGE-2 - CONCEPT NO.- 1
+        //  (ଗ୍ରୀକ୍ ବିଦ୍ୱାନ - Thales)
         // =========================
         {
-            question: "ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ ରବର ବ୍ୟାଣ୍ଡକୁ ଭାଙ୍ଗିବା କଷ୍ଟକର କାହିଁକି ହୁଏ ?",
-            answer: "ସମସ୍ତ ବସ୍ତୁ ସମାନ ଭାବେ ଭାଙ୍ଗେ ନାହିଁ । କେତେକ ବସ୍ତୁରେ କଣିକାମାନେ ଅଧିକ ଦୃଢ଼ ଭାବେ ବାନ୍ଧା ଥାଆନ୍ତି । ସେଥିପାଇଁ ସେଗୁଡ଼ିକୁ ଭାଙ୍ଗିବା କଷ୍ଟକର ହୁଏ ।"
+            question: "Thales ଜ୍ୟାମିତି ଶାସ୍ତ୍ରରେ କ'ଣ ଅବଦାନ ଦେଇଛନ୍ତି ?",
+            answer: "Thales ଜ୍ୟାମିତିକ ତଥ୍ୟ ଉଦ୍ଘୋଟନ କରିବାର ଧାରା ଆରମ୍ଭ କଲେ । ଗ୍ରୀକ୍ ଗଣିତଜ୍ଞ Thales ଓ ତାଙ୍କ ଅନୁଗାମୀ ଜ୍ୟାମିତିକୁ ଏକ ସ୍ୱତନ୍ତ୍ର ଶାସ୍ତ୍ରରୂପେ ଗଢ଼ିଥିଲେ ।"
         },
-
         // =========================
-        // NOTE-10
+        //  PAGE-2 - CONCEPT NO.- 2
+        //  (ଇଉକ୍ଲିଡ୍ ଓ Elements)
         // =========================
         {
-            question: "ଜଳଧାର ପରୀକ୍ଷା ଆକର୍ଷଣ ବଳକୁ କିପରି ଦର୍ଶାଏ ?",
-            answer: "ଟ୍ୟାପରୁ ବାହାରୁଥିବା ଜଳଧାରକୁ କାଟିବାକୁ ଚେଷ୍ଟା କଲେ ମଧ୍ୟ ଜଳ ସହଜରେ ଅଲଗା ହୁଏ ନାହିଁ । ଜଳଧାର ପୁଣି ଏକାଠି ରହେ । ଏହା କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଥିବା ଆକର୍ଷଣ ବଳକୁ ଦର୍ଶାଏ ।"
+            question: "ଇଉକ୍ଲିଡ୍ ଙ୍କୁ କାହିଁକି 'ଜ୍ୟାମିତିର ଜନକ' କୁହାଯାଏ ?",
+            answer: "ଇଉକ୍ଲିଡ୍ Elements ଗ୍ରନ୍ଥରେ ସମୁଦାୟ ତାରିଣ ପଞ୍ଚଶଟି ଉପପାଦ୍ୟ ସନ୍ନିବେଶ କରି ଜ୍ୟାମିତି ଶାସ୍ତ୍ରକୁ ସୁଶୃଙ୍ଖଳ ରୂପ ଦେଲେ । ତେଣୁ ତାଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ' ଆଖ୍ୟା ଦିଆଯାଏ ।"
         },
-
-        // =========================
-        // NOTE-11
-        // =========================
         {
-            question: "ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ ସମାନ କି ?",
-            answer: "ନା, ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ ସମାନ ନୁହେଁ । ଭିନ୍ନ ଭିନ୍ନ ପଦାର୍ଥରେ ଏହାର ସାମର୍ଥ୍ୟ ଭିନ୍ନ ଭିନ୍ନ ହୋଇଥାଏ ।"
+            question: "ଇଉକ୍ଲିଡ୍ ଙ୍କ ବିଖ୍ୟାତ ଗ୍ରନ୍ଥ 'Elements' ରେ କ'ଣ ଅଛି ?",
+            answer: "Elements ଗ୍ରନ୍ଥରେ ସମୁଦାୟ ତେରଶଟି ଭାଗ ଅଛି । ଏଥିରେ ଅନ୍ୟ ଅନ୍ୟ ବ୍ୟକ୍ତିଙ୍କ ଦ୍ୱାରା ପ୍ରମାଣିତ ପଞ୍ଚଶଟି ଉପପାଦ୍ୟ ସ୍ଥାନ ପାଇଛି ।"
         },
-
         // =========================
-        // NOTE-12
+        //  PAGE-2 - CONCEPT NO.- 3
+        //  (ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି)
         // =========================
         {
-            question: "କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟଗୁଡ଼ିକ କ’ଣ ?",
-            answer: "କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ହେଲା ଗତି, ଫାଙ୍କା ସ୍ଥାନ, ଆକର୍ଷଣ ଓ ବିସରଣ । ଏହି ବୈଶିଷ୍ଟ୍ୟଗୁଡ଼ିକ ପଦାର୍ଥର ଗଠନ ଓ ବ୍ୟବହାରକୁ ବୁଝାଇଥାଏ ।"
+            question: "'Euclidean Geometry' ନାମ କିପରି ପଡ଼ିଲା ?",
+            answer: "ଇଉକ୍ଲିଡ୍ ଙ୍କ ନାମାନୁସାରେ ଏ ଜ୍ୟାମିତି 'ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି' (Euclidean Geometry) ନାମ ପ୍ରଚଳିତ ହେଲା ।"
+        },
+        // =========================
+        //  PAGE-2 - CONCEPT NO.- 4
+        //  (Birkhoff ଓ Hilbert ଙ୍କ ଅବଦାନ)
+        // =========================
+        {
+            question: "Birkhoff ଙ୍କ ଦ୍ୱାରା ଜ୍ୟାମିତି ଶାସ୍ତ୍ରରେ କ'ଣ ଅବଦାନ ହୋଇଛି ?",
+            answer: "Birkhoff ଜ୍ୟାମିତି ବିଦ୍ୟାଳୟ ସ୍ତର ପାଇଁ ଅଧିକ ଉପଯୁକ୍ତ କଲେ । 1932 ମସିହାରେ ତାଙ୍କ ନିବନ୍ଧ 'A set of postulates for plane geometry based on scale and protractor' ଉପରେ ଆଧାରିତ ।"
+        },
+        {
+            question: "David Hilbert ଜ୍ୟାମିତି ଶାସ୍ତ୍ରରେ କ'ଣ ଭୂମିକା ଗ୍ରହଣ କଲେ ?",
+            answer: "David Hilbert ଜ୍ୟାମିତିକୁ ଦୃଢ଼ିଭୂତ କରି ଏକ ସଂଗଠିତ ଢ଼ାଞ୍ଚାରେ ପ୍ରତିଷ୍ଠିତ କରିବାର ପ୍ରୟତ୍ନ କଲେ । ଯୁକ୍ତ ଢ଼ାଞ୍ଚାରେ ଜ୍ୟାମିତି ବ୍ୟାଖ୍ୟା ଦେବା ତାଙ୍କ ମୁଖ୍ୟ ଅବଦାନ ।"
+        },
+        // =========================
+        //  PAGE-2 - CONCEPT NO.- 5
+        //  (ଆଧୁନିକ ଜ୍ୟାମିତି ଓ Set)
+        // =========================
+        {
+            question: "ଆଧୁନିକ ଜ୍ୟାମିତି କିପରି ପ୍ରକାଶ ପାଉଛି ?",
+            answer: "ଆଧୁନିକ ଜ୍ୟାମିତି Set (ସେଟ୍) ମାଧ୍ୟମରେ ପ୍ରକାଶିତ କରାଯାଏ । ଏହି ଭାଷା ଦ୍ୱାରା ଉଚ୍ଚତର ଗଣିତ ଅଧ୍ୟୟନ ନିମନ୍ତେ ଏକ ସ୍ପଷ୍ଟ ଢ଼ାଞ୍ଚା ଉପସ୍ଥିତ ହୋଇଛି ।"
+        },
+        {
+            question: "ବିଦ୍ୟାଳୟ ସ୍ତରରେ ଜ୍ୟାମିତି କ'ଣ ନାମରେ ପରିଚିତ ?",
+            answer: "ବିଦ୍ୟାଳୟ ସ୍ତରରେ ପଢ଼ୁଥିବା ଜ୍ୟାମିତି ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି ବା ସମତଳ ଜ୍ୟାମିତି ନାମରେ ପରିଚିତ ।"
         }
-
     ]
 }
 },
 ],
-
+  
 summary: {
-    audio: "",
+    audio: "ରେଖା ଓ କୋଣ ଅଧ୍ୟାୟରେ ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ଉତ୍ପତ୍ତି, ବିକାଶ ଓ ମହାନ ଗଣିତଜ୍ଞମାନଙ୍କ ଅବଦାନ ବିଷୟରେ କ'ଣ ଆଲୋଚନା କରାଯାଇଛି ?",
 
     content: {
-        introduction: "ଏହି ପାଠରେ ପଦାର୍ଥର କଣିକାମାନଙ୍କର ଗତି, ବିସରଣ, ଫାଙ୍କା ସ୍ଥାନ ଓ ଆକର୍ଷଣ ବଳ ବିଷୟରେ ବିଭିନ୍ନ ପରୀକ୍ଷା ମାଧ୍ୟମରେ ବୁଝାଯାଇଛି । ଏହି ପରୀକ୍ଷାଗୁଡ଼ିକ କଣିକାମାନଙ୍କର ପ୍ରକୃତି ଓ ବ୍ୟବହାର ସମ୍ପର୍କରେ ସ୍ପଷ୍ଟ ଧାରଣା ଦେଇଥାଏ । ଆସନ୍ତୁ ଏ ବିଷୟରେ ଜାଣିବା ।",
+        introduction: "ଏହି ଅଧ୍ୟାୟରେ ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ଉତ୍ପତ୍ତି, ଅର୍ଥ ଓ ବିକାଶ ବିଷୟରେ ବିସ୍ତୃତ ଆଲୋଚନା କରାଯାଇଛି । ବିଭିନ୍ନ ଦେଶ ଓ ସଭ୍ୟତାରେ ଜ୍ୟାମିତିର ଅଗ୍ରଗତି ଏବଂ ବିଦ୍ୱାନମାନଙ୍କ ଅବଦାନ ଉପରେ ଆଲୋକପାତ କରାଯାଇଛି । ଆସନ୍ତୁ ଏ ବିଷୟରେ ବିଶଦ ଭାବରେ ଜାଣିବା ।",
 
         sentences: [
-            { heading: "କାଳି ଓ ମହୁ ପରୀକ୍ଷା", text: "ଜଳଭରା ଦୁଇଟି ଗ୍ଲାସରେ କାଳି ଓ ମହୁ ପକାଯାଇଥାଏ । ଗ୍ଲାସକୁ ନ ହଲାଇଲେ ମଧ୍ୟ ସେମାନେ ଧୀରେ ଧୀରେ ଜଳରେ ମିଶିଯାଆନ୍ତି । ଏଥିରୁ କଣିକାମାନେ ନିଜେ ନିଜେ ଗତି କରୁଥିବା ଜଣାପଡ଼େ ।" },
-
-            { heading: "ବିସରଣ ଓ ତାପର ପ୍ରଭାବ", text: "କଣିକାମାନେ ପରସ୍ପର ମଧ୍ୟରେ ମିଶିଯିବାକୁ ବିସରଣ କୁହାଯାଏ । ଗରମ ଜଳରେ ସ୍ଫଟିକ ଥଣ୍ଡା ଜଳ ଅପେକ୍ଷା ଶୀଘ୍ର ମିଶିଯାଏ । ତାପ ବଢ଼ିଲେ କଣିକାର ଗତି ବଢ଼ିଥାଏ ଓ ବିସରଣ ଦ୍ରୁତ ହୁଏ ।" },
-
-            { heading: "କଣିକାର ଗତି ଓ ଫାଙ୍କା ସ୍ଥାନ", text: "ପଦାର୍ଥର କଣିକାମାନେ ସବୁବେଳେ ଗତିଶୀଳ ରହନ୍ତି । ସେମାନଙ୍କର ଗତିଜ ଶକ୍ତି ଥାଏ ଏବଂ ତାପମାତ୍ରା ବଢ଼ିଲେ ଏହା ବଢ଼ିଯାଏ । କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଫାଙ୍କା ସ୍ଥାନ ଥିବାରୁ ଅନ୍ୟ କଣିକା ସେଥିରେ ପ୍ରବେଶ କରିପାରେ ।" },
-
-            { heading: "ଆକର୍ଷଣ ବଳର ଧାରଣା", text: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ରହିଥାଏ । ଏହି ବଳ କଣିକାମାନଙ୍କୁ ଏକାଠି ଧରି ରଖେ । ପିଲାମାନଙ୍କ ଦଳ ଦ୍ୱାରା କରାଯାଇଥିବା କାର୍ଯ୍ୟକଳାପରୁ ଏହି ବଳର ଶକ୍ତି ବୁଝାଯାଏ ।" },
-
-            { heading: "ବିଭିନ୍ନ ବସ୍ତୁରେ ଆକର୍ଷଣ ବଳ", text: "ଲୁହା କଣ୍ଟା, ଚକ୍ ଓ ରବର ବ୍ୟାଣ୍ଡକୁ ଭାଙ୍ଗିବା ବା ଟାଣିବାରେ ସମାନ କଷ୍ଟ ହୁଏ ନାହିଁ । କେତେକ ବସ୍ତୁରେ କଣିକାମାନେ ଅଧିକ ଦୃଢ଼ ଭାବରେ ବାନ୍ଧା ରହିଥାନ୍ତି । ତେଣୁ ସେଗୁଡ଼ିକୁ ଭାଙ୍ଗିବା କିମ୍ବା ଅଲଗା କରିବା କଷ୍ଟକର ହୁଏ ।" },
-
-            { heading: "କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ", text: "ଜଳଧାର ପରୀକ୍ଷାରୁ ମଧ୍ୟ କଣିକାମାନଙ୍କର ଆକର୍ଷଣ ବଳ ଜଣାପଡ଼େ । ସମସ୍ତ ପଦାର୍ଥରେ ଆକର୍ଷଣ ବଳ ସମାନ ନୁହେଁ । କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ହେଲା ଗତି, ଫାଙ୍କା ସ୍ଥାନ, ଆକର୍ଷଣ ଓ ବିସରଣ ।" }
+            {
+                heading: "ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ",
+                text: "'ଜ୍ୟା'ର ଅର୍ଥ ପୃଥ୍ବୀ ଓ 'ମିତି'ର ଅର୍ଥ ମାପ, ତେଣୁ ଜ୍ୟାମିତିର ଅର୍ଥ ହେଉଛି ପୃଥ୍ବୀ ମାପ । ଇଂରାଜୀ ଶବ୍ଦ 'Geometry' ଗ୍ରୀକ୍ ଶବ୍ଦ Geo (ପୃଥ୍ବୀ) ଓ Metron (ମାପ) ରୁ ସୃଷ୍ଟି ହୋଇଛି । ଏ ଦୁଇଟି ଶବ୍ଦ ଏକ ଅର୍ଥ ବହନ କରୁଥିଲେ ମଧ୍ୟ ଭିନ୍ନ ଭାଷାରୁ ଆସିଛି ।"
+            },
+            {
+                heading: "ଜ୍ୟାମିତି ସୃଷ୍ଟିର କାରଣ",
+                text: "ଜମି ମାପ, ଚାଷ, ବାସଗୃହ ଓ ରାସ୍ତା ନିର୍ମାଣ ଆଦି ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ଉଦ୍ଭବ ହୋଇଛି । ଆକୃତିଗତ ଜ୍ଞାନର ପରିମାର୍ଜନା ଓ ବ୍ୟବହାରିକ ଅଭିଜ୍ଞତାରୁ ଏ ଶାସ୍ତ୍ର ବିକଶିତ ହୋଇଛି । ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହିତ ଜ୍ୟାମିତି ଅଭିବୃଦ୍ଧି ଘଟିଛି ।"
+            },
+            {
+                heading: "ଭାରତୀୟ ଜ୍ୟାମିତି ଓ ଶୁଲ୍ବ ସୂତ୍ର",
+                text: "ଭାରତରେ ବୈଦିକ ଯୁଗରେ ରଚିତ 'ଶୁଲ୍ବ ସୂତ୍ର' ଏକ ଜ୍ୟାମିତି ଶାସ୍ତ୍ର । ଶୁଲ୍ବ ଅର୍ଥାତ୍ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିକ ମାପ ସମ୍ଭବ ହୋଇଥିଲା । ଯଜ୍ଞକୁଣ୍ଡ ଓ ପୂଜାବେଦୀ ନିର୍ମାଣ କାର୍ଯ୍ୟରେ ଜ୍ୟାମିତିକ ସୂତ୍ର ପ୍ରୟୋଗ ହୋଇଥିଲା ।"
+            },
+            {
+                heading: "ଗ୍ରୀକ୍ ବିଦ୍ୱାନ ଓ ଇଉକ୍ଲିଡ୍ ଙ୍କ ଅବଦାନ",
+                text: "Thales, ପିଥାଗୋରାସ, ସକ୍ରେଟିସ ଆଦି ଗ୍ରୀକ୍ ବିଦ୍ୱାନ ଜ୍ୟାମିତିକ ତଥ୍ୟ ଉଦ୍ଘୋଟନ କରିବାର ଧାରା ଆରମ୍ଭ କଲେ । ଇଉକ୍ଲିଡ୍ ତାଙ୍କ 'Elements' ଗ୍ରନ୍ଥରେ ପଞ୍ଚଶଟି ଉପପାଦ୍ୟ ସ୍ଥାନ ଦେଇ ଜ୍ୟାମିତିକୁ ସୁଶୃଙ୍ଖଳ ରୂପ ଦେଲେ । ଇଉକ୍ଲିଡ୍ ଙ୍କ ନାମାନୁସାରେ ଏ ଜ୍ୟାମିତି 'Euclidean Geometry' ନାମ ପ୍ରଚଳିତ ହେଲା ।"
+            },
+            {
+                heading: "Birkhoff ଓ Hilbert ଙ୍କ ଅବଦାନ",
+                text: "ଆମେରିକୀୟ ଗଣିତଜ୍ଞ George David Birkhoff ଓ ଜର୍ମାନୀର David Hilbert ଜ୍ୟାମିତିକୁ ଆଧୁନିକ ରୂପ ଦେଲେ । Birkhoff ଙ୍କ 1932 ମସିହାର ନିବନ୍ଧ 'A set of postulates for plane geometry based on scale and protractor' ଉପରେ ଆଧାରିତ ଜ୍ୟାମିତି ଶ୍ରେଣୀ ଉପଯୁକ୍ତ ହେଲା । Hilbert ଜ୍ୟାମିତିକୁ ଦୃଢ଼ ତାର୍କିକ ଢ଼ାଞ୍ଚାରେ ପ୍ରତିଷ୍ଠିତ କରିବାର ପ୍ରୟତ୍ନ କଲେ ।"
+            },
+            {
+                heading: "ଆଧୁନିକ ଓ ସମତଳ ଜ୍ୟାମିତି",
+                text: "ଆଧୁନିକ ଜ୍ୟାମିତି Set (ସେଟ୍) ମାଧ୍ୟମରେ ପ୍ରକାଶିତ କରାଯାଏ, ଯାହା ଉଚ୍ଚତର ଗଣିତ ଅଧ୍ୟୟନ ପାଇଁ ଉପଯୁକ୍ତ । ବିଦ୍ୟାଳୟ ସ୍ତରରେ ପଢ଼ୁଥିବା ଜ୍ୟାମିତି 'ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି' ବା 'ସମତଳ ଜ୍ୟାମିତି' ନାମରେ ପରିଚିତ । ଏ ଦୁଇ ତାର୍କିକ ଓ ପ୍ରୟୋଗାତ୍ମକ ଦୃଷ୍ଟିରୁ ଜ୍ୟାମିତି ଅଧ୍ୟୟନ ଅଧିକ ସ୍ପଷ୍ଟ ଓ ଫଳପ୍ରଦ ହୋଇଛି ।"
+            }
         ],
 
-        conclusion: "ଏହି ପାଠରୁ ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥର କଣିକାମାନେ ସବୁବେଳେ ଗତିଶୀଳ ରହନ୍ତି ଓ ପରସ୍ପର ମଧ୍ୟରେ ବିସରଣ କରନ୍ତି । କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଫାଙ୍କା ସ୍ଥାନ ଏବଂ ଆକର୍ଷଣ ବଳ ରହିଥାଏ । ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତି ଓ ବିସରଣ ବଢ଼ିଯାଏ, ଯାହା ପଦାର୍ଥର ମୌଳିକ ବୈଶିଷ୍ଟ୍ୟକୁ ପ୍ରକାଶ କରେ ।"
+        conclusion: "ଏହି ଅଧ୍ୟାୟରୁ ଜଣାପଡ଼େ ଯେ ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ମାନବ ଜୀବନର ବ୍ୟବହାରିକ ଆବଶ୍ୟକତାରୁ ଉଦ୍ଭୂତ ହୋଇ ଧୀରେ ଧୀରେ ଏକ ସ୍ୱତନ୍ତ୍ର ଶାସ୍ତ୍ରରୂପେ ବିକଶିତ ହୋଇଛି । ଭାରତ, ଗ୍ରୀସ, ଆମେରିକା ଓ ଜର୍ମାନୀ ଆଦି ଦେଶର ବିଦ୍ୱାନମାନେ ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ଅଗ୍ରଗତିରେ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଅବଦାନ ଦେଇଛନ୍ତି । ଇଉକ୍ଲିଡ୍ ଙ୍କ Elements ଠାରୁ ଆଧୁନିକ Set ଭିତ୍ତିକ ଜ୍ୟାମିତି ପର୍ଯ୍ୟନ୍ତ ଏ ଶାସ୍ତ୍ରର ଯାତ୍ରା ଅତ୍ୟନ୍ତ ଗୌରବଜନକ ।"
     },
 
-
 questions: [
-{
-audio: "",
-question: "ବିସରଣ କାହାକୁ କୁହାଯାଏ ?",
-introduction: "କଣିକାମାନଙ୍କର ସ୍ୱତଃ ଅନ୍ତଃମିଶ୍ରଣକୁ ବିସରଣ କୁହାଯାଏ । ଏହାର ବ୍ୟାଖ୍ୟା ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
-points: [
-"କଣିକାମାନେ ଆପେ ଆପେ ମିଶିଯାଆନ୍ତି ।",
-"କଣିକା ମଧ୍ୟରେ ଫାଙ୍କା ସ୍ଥାନ ଥାଏ ।",
-"ଅନ୍ୟ କଣିକା ସେହି ଫାଙ୍କା ସ୍ଥାନରେ ପ୍ରବେଶ କରେ ।",
-"କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଅନ୍ତଃମିଶ୍ରଣ ହୁଏ ।",
-"ଏହି ଅନ୍ତଃମିଶ୍ରଣ ପ୍ରକ୍ରିୟାକୁ ବିସରଣ କୁହାଯାଏ ।"
-],
-conclusion: "କଣିକାମାନଙ୍କର ସ୍ୱତଃ ମିଶ୍ରଣକୁ ବିସରଣ କୁହାଯାଏ । କଣିକା ମଧ୍ୟରେ ଥିବା ଫାଙ୍କା ସ୍ଥାନ ଯୋଗୁଁ ଏହି ପ୍ରକ୍ରିୟା ସମ୍ଭବ ହୁଏ ।"
-},
-{
-audio: "",
-question: "ତାପ ଦେଲେ ବିସରଣ ଶୀଘ୍ର କାହିଁକି ହୁଏ ?",
-introduction: "ତାପ ଦେଲେ କଣିକାର ଗତି ବଢ଼ିଯାଏ ଓ ବିସରଣ ଦ୍ରୁତ ହୁଏ । ଏହାର କାରଣଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
-points: [
-"ତାପ ଦେଲେ ବିସରଣ ଶୀଘ୍ର ହୁଏ ।",
-"ଗରମ ଜଳରେ ସ୍ଫଟିକ ଶୀଘ୍ର ମିଶେ ।",
-"କଣିକାର ଗତି ବଢ଼ିଯାଏ ।",
-"କଣିକାମାନେ ଅଧିକ ଦ୍ରୁତ ଗତିରେ ଚଳନ କରନ୍ତି ।",
-"ସେଥିପାଇଁ ବିସରଣ ଦ୍ରୁତ ହୁଏ ।"
-],
-conclusion: "ତାପମାତ୍ରା ବୃଦ୍ଧି ହେଲେ କଣିକାର ଗତି ବଢ଼ିଯାଏ । ଏହି କାରଣରୁ ବିସରଣ ପ୍ରକ୍ରିୟା ମଧ୍ୟ ଅଧିକ ଶୀଘ୍ର ହୁଏ ।"
-},
-{
-audio: "",
-question: "ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତିଜ ଶକ୍ତି କାହିଁକି ବଢ଼େ ?",
-introduction: "ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତି ବଢ଼ିଥାଏ ଓ ଗତିଜ ଶକ୍ତି ମଧ୍ୟ ବୃଦ୍ଧି ପାଏ । ଏହାର କାରଣଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
-points: [
-"ପଦାର୍ଥର କଣିକା ସବୁବେଳେ ଗତି କରେ ।",
-"ସେମାନଙ୍କର ଗତିଜ ଶକ୍ତି ଥାଏ ।",
-"ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତି ବଢ଼େ ।",
-"ଗତି ବଢ଼ିବା ସହିତ ଗତିଜ ଶକ୍ତି ମଧ୍ୟ ବଢ଼େ ।",
-"ଫଳରେ କଣିକା ଅଧିକ ଶକ୍ତିଶାଳୀ ହୋଇଯାଏ ।"
-],
-conclusion: "ଗତିଜ ଶକ୍ତି କଣିକାର ଗତି ଉପରେ ନିର୍ଭର କରେ । ତେଣୁ ତାପମାତ୍ରା ବଢ଼ିଲେ କଣିକାର ଗତିଜ ଶକ୍ତି ମଧ୍ୟ ବୃଦ୍ଧି ପାଏ ।"
-},
-{
-audio: "",
-question: "କଣିକାମାନେ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି ବୋଲି କିପରି ଜଣାଯାଏ ?",
-introduction: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥାଏ ଯାହା ସେମାନଙ୍କୁ ଏକାଠି ରଖେ । ଏହାକୁ ସ୍ପଷ୍ଟ କରୁଥିବା ବିଷୟଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
-points: [
-"କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥାଏ ।",
-"ଏହି ବଳ ସେମାନଙ୍କୁ ଏକାଠି ରଖେ ।",
-"ଏହାକୁ ବୁଝିବା ପାଇଁ କାମ 1.6 କରାଯାଏ ।",
-"ପିଲାମାନଙ୍କ ଦଳ ଦ୍ୱାରା ଏହି ଧାରଣା ଦେଖାଯାଏ ।",
-"ଦଳର ଦୃଢ଼ତା ଆକର୍ଷଣ ବଳର ସାମର୍ଥ୍ୟକୁ ସୂଚାଏ ।"
-],
-conclusion: "କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥିବାରୁ ସେମାନେ ଏକାଠି ରହନ୍ତି । ଏହି ଆକର୍ଷଣ ବଳ ପଦାର୍ଥର ଗଠନକୁ ଦୃଢ଼ କରିଥାଏ ।"
-},
-{
-audio: "",
-question: "ଜଳଧାର ପରୀକ୍ଷାରୁ କ'ଣ ଜଣାପଡ଼େ ?",
-introduction: "ଜଳଧାରକୁ କାଟିବାକୁ ଚେଷ୍ଟା କଲେ ମଧ୍ୟ ଏହା ପୁଣି ଏକାଠି ରହେ । ଏହାକୁ ସ୍ପଷ୍ଟ କରୁଥିବା ବିଷୟଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
-points: [
-"ଟ୍ୟାପରୁ ବାହାରୁଥିବା ଜଳଧାରକୁ କାଟିବାକୁ ଚେଷ୍ଟା କରାଯାଏ ।",
-"ଜଳ ସହଜରେ ଅଲଗା ହୁଏ ନାହିଁ ।",
-"ଜଳଧାର ପୁଣି ଏକାଠି ରହେ ।",
-"ଜଳର କଣିକାମାନେ ପରସ୍ପରକୁ ଆକର୍ଷଣ କରନ୍ତି ।",
-"ଏହା ଆକର୍ଷଣ ବଳର ପ୍ରମାଣ ଦିଏ ।"
-],
-conclusion: "ଜଳଧାର ପରୀକ୍ଷାରୁ ଜଳର କଣିକାମାନଙ୍କ ମଧ୍ୟରେ ଆକର୍ଷଣ ବଳ ଥିବା ଜଣାପଡ଼େ । ଏହି ବଳ ଯୋଗୁଁ ଜଳ ସହଜରେ ସମ୍ପୂର୍ଣ୍ଣ ଅଲଗା ହୋଇନଥାଏ ।"
-},
-{
-audio: "",
-question: "କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟଗୁଡ଼ିକ କ'ଣ ?",
-introduction: "କଣିକାର ଗତି, ଫାଙ୍କା ସ୍ଥାନ, ଆକର୍ଷଣ ଓ ବିସରଣ ପରି କେତେକ ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ରହିଛି । ଏହାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
-points: [
-"ପଦାର୍ଥର ଭର ଥାଏ ।",
-"ପଦାର୍ଥ ସ୍ଥାନ ଦଖଲ କରେ ।",
-"କଣିକାମାନେ ସବୁବେଳେ ଗତିଶୀଳ ଥାନ୍ତି ।",
-"କଣିକା ମଧ୍ୟରେ ଫାଙ୍କା ସ୍ଥାନ ଥାଏ ।",
-"କଣିକାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ହେଲା ଗତି, ଫାଙ୍କା ସ୍ଥାନ, ଆକର୍ଷଣ ଓ ବିସରଣ ।"
-],
-conclusion: "କଣିକାର କେତେକ ମୌଳିକ ବୈଶିଷ୍ଟ୍ୟ ରହିଛି ଯାହା ପଦାର୍ଥର ସ୍ୱଭାବକୁ ନିର୍ଣ୍ଣୟ କରେ । ଗତି, ଫାଙ୍କା ସ୍ଥାନ, ଆକର୍ଷଣ ଓ ବିସରଣ ହେଉଛି କଣିକାର ପ୍ରମୁଖ ବୈଶିଷ୍ଟ୍ୟ ।"
-}
+    {
+        audio: "",
+        question: "ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ କ'ଣ ?",
+        introduction: "ଜ୍ୟାମିତି ଶବ୍ଦ ଦୁଇଟି ଭିନ୍ନ ଶବ୍ଦରୁ ଆସିଛି ଏବଂ ଏହାର ଅର୍ଥ ଭୂମି ମାପ ସହ ସଂଯୁକ୍ତ । ଶବ୍ଦର ଅର୍ଥ ଓ ଉତ୍ପତ୍ତି ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+        points: [
+            "'ଜ୍ୟା'ର ଅର୍ଥ ପୃଥ୍ବୀ ।",
+            "'ମିତି'ର ଅର୍ଥ ମାପ ।",
+            "ଜ୍ୟାମିତିର ଅର୍ଥ ହେଉଛି ପୃଥ୍ବୀ ମାପ ।",
+            "Geometry ଶବ୍ଦ ଗ୍ରୀକ୍ Geo (ପୃଥ୍ବୀ) ଓ Metron (ମାପ) ରୁ ସୃଷ୍ଟି ।",
+            "ଏ ଦୁଇ ଶବ୍ଦ ଭିନ୍ନ ଭାଷାରୁ ଆସିଥିଲେ ମଧ୍ୟ ଏକ ଅର୍ଥ ବହନ କରନ୍ତି ।"
+        ],
+        conclusion: "ଜ୍ୟାମିତି ଶବ୍ଦ 'ଜ୍ୟା' ଓ 'ମିତି' ଏ ଦୁଇ ଶବ୍ଦ ମିଶ୍ରଣରୁ ସୃଷ୍ଟ ହୋଇଛି ।  ଏହାର ଅର୍ଥ ପୃଥ୍ବୀ ମାପ ଏବଂ ଏହା Geometry ଶବ୍ଦ ସହ ସମାନ ଅର୍ଥ ରଖେ ।"
+    },
+    {
+        audio: "",
+        question: "ଜ୍ୟାମିତି ଶାସ୍ତ୍ର କିପରି ଉଦ୍ଭବ ହୋଇଛି ?",
+        introduction: "ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ମାନବ ଜୀବନର ବ୍ୟବହାରିକ ଆବଶ୍ୟକତାରୁ ଉଦ୍ଭୂତ ହୋଇ ବିକଶିତ ହୋଇଛି । ଏହାର ଉଦ୍ଭବ ଓ ବିକାଶ ସଂକ୍ରାନ୍ତ ବିଷୟଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+        points: [
+            "ଆକୃତିଗତ ଜ୍ଞାନର ପରିମାର୍ଜନା ଫଳରେ ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ଉଭବ ହୋଇଛି ।",
+            "ଜମି ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ।",
+            "ଚାଷକର୍ମ, ରାସ୍ତା ଓ ବାସଗୃହ ନିର୍ମାଣ ପାଇଁ ଆକୃତି ଜ୍ଞାନ ଦରକାର ହେଲା ।",
+            "ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହ ଜ୍ୟାମିତି ଅଭିବୃଦ୍ଧି ଘଟିଛି ।",
+            "ଜ୍ୟାମିତି ବିକାଶର ପ୍ରାଚୀନତମ ସଭ୍ୟତା ହେଉଛି ମିଶରୀୟ ସଭ୍ୟତା ।"
+        ],
+        conclusion: "ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ମଣିଷର ବ୍ୟବହାରିକ ଜୀବନ ଆବଶ୍ୟକତାରୁ ଜନ୍ମ ନେଇ ଏକ ବିଶାଳ ଶାସ୍ତ୍ରରୂପେ ପରିଗଣିତ ହୋଇଛି । ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହ ଏ ଶାସ୍ତ୍ର ଅଧିକ ବ୍ୟାପକ ଓ ଦୃଢ଼ ହୋଇଛି ।"
+    },
+    {
+        audio: "",
+        question: "'ଶୁଲ୍ବ ସୂତ୍ର' କ'ଣ ଏବଂ ଭାରତୀୟ ଜ୍ୟାମିତିରେ ଇହାର ଭୂମିକା କ'ଣ ?",
+        introduction: "'ଶୁଲ୍ବ ସୂତ୍ର' ଭାରତରେ ଜ୍ୟାମିତି ବ୍ୟବହାରର ଏକ ପ୍ରାଚୀନ ନିଦର୍ଶନ ।  ଏ ଶାସ୍ତ୍ର ଓ ଏହାର ଉପଯୋଗ ସଂକ୍ରାନ୍ତ ବିଷୟଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+        points: [
+            "'ଶୁଲ୍ବ ସୂତ୍ର' ଭାରତରେ ରଚିତ ଏକ ଜ୍ୟାମିତି ଶାସ୍ତ୍ର ।",
+            "ଶୁଲ୍ବ ଅର୍ଥ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିକ ମାପ ସମ୍ଭବ ।",
+            "ବୈଦିକ ଯୁଗରେ ଯଜ୍ଞକୁଣ୍ଡ ଓ ପୂଜାବେଦୀ ନିର୍ମାଣରେ ଜ୍ୟାମିତି ପ୍ରୟୋଗ ହେଉଥିଲା ।",
+            "ଆନୁମାନିକ ଖ୍ରୀ.ପୂ. 800 ରୁ ଖ୍ରୀ.ପୂ. 500 ମଧ୍ୟରେ ଭାରତରେ ଶୁଲ୍ବ ସୂତ୍ର ରଚିତ ।",
+            "ଶୁଲ୍ବ ଅର୍ଥାତ୍ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିକ ମାପ ସୂତ୍ର ନିର୍ଦ୍ଧାରଣ ସମ୍ଭବ ।"
+        ],
+        conclusion: "'ଶୁଲ୍ବ ସୂତ୍ର' ଭାରତୀୟ ଜ୍ୟାମିତି ଜ୍ଞାନର ଏକ ଗୌରବଜନକ ନିଦର୍ଶନ । ଏ ଶାସ୍ତ୍ର ଦ୍ୱାରା ଧାର୍ମିକ ଓ ସ୍ଥାପତ୍ୟ ଉଭୟ ଆବଶ୍ୟକତା ପୂରଣ ହୋଇ ଆସିଥିଲା ।"
+    },
+    {
+        audio: "",
+        question: "ଇଉକ୍ଲିଡ୍ ଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ' କାହିଁକି କୁହାଯାଏ ?",
+        introduction: "ଇଉକ୍ଲିଡ୍ ଜ୍ୟାମିତି ଶାସ୍ତ୍ରକୁ ସୁଶୃଙ୍ଖଳ ଓ ଯୁକ୍ତିସଙ୍ଗତ ରୂପ ଦେଇ ଏହାକୁ ଏକ ସ୍ୱତନ୍ତ୍ର ଶାସ୍ତ୍ର ଭାବେ ପ୍ରତିଷ୍ଠିତ କଲେ । ଏ ସଂକ୍ରାନ୍ତ ବିଷୟଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+        points: [
+            "ଇଉକ୍ଲିଡ୍ 'Elements' ଗ୍ରନ୍ଥ ରଚନା କଲେ ।",
+            "ଏ ଗ୍ରନ୍ଥରେ ତେରଶଟି ଭାଗ ଓ ପଞ୍ଚଶଟି ଉପପାଦ୍ୟ ସ୍ଥାନ ପାଇଲା ।",
+            "ଅନ୍ୟ ଗଣିତଜ୍ଞଙ୍କ ଦ୍ୱାରା ପ୍ରମାଣିତ ତଥ୍ୟ ତାଙ୍କ ଗ୍ରନ୍ଥରେ ଅନ୍ତର୍ଭୁକ୍ତ ହେଲା ।",
+            "ସମସ୍ତ ଜ୍ୟାମିତିକ ଜ୍ଞାନ ସଂଗ୍ରହ ଓ ପ୍ରମାଣ ଦ୍ୱାରା ଶାସ୍ତ୍ର ଗଠନ ହେଲା ।",
+            "ତାଙ୍କ ନାମାନୁସାରେ ଏ ଜ୍ୟାମିତି 'Euclidean Geometry' ନାମ ପ୍ରଚଳିତ ହେଲା ।"
+        ],
+        conclusion: "ଇଉକ୍ଲିଡ୍ ଜ୍ୟାମିତିର ସମସ୍ତ ଜ୍ଞାନକୁ ଏକ ଶୃଙ୍ଖଳିତ ଢ଼ାଞ୍ଚାରେ ପ୍ରସ୍ତୁତ କଲେ ।  ତେଣୁ ତାଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ' ଆଖ୍ୟା ଦିଆଯାଏ ।"
+    },
+    {
+        audio: "",
+        question: "ଆଧୁନିକ ଜ୍ୟାମିତି ଓ ସମତଳ ଜ୍ୟାମିତି ମଧ୍ୟରେ ପ୍ରଭେଦ କ'ଣ ?",
+        introduction: "ଆଧୁନିକ ଜ୍ୟାମିତି ଓ ବିଦ୍ୟାଳୟ ସ୍ତରୀୟ ସମତଳ ଜ୍ୟାମିତି ଦୁଇଟି ଭିନ୍ନ ପ୍ରକ୍ରିୟାରେ ଶ୍ରେଣୀ ଭୁକ୍ତ । ଏ ଦୁଇ ମଧ୍ୟରେ ଥିବା ପ୍ରଭେଦ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+        points: [
+            "ଆଧୁନିକ ଜ୍ୟାମିତି Set (ସେଟ୍) ମାଧ୍ୟମରେ ପ୍ରକାଶ ପାଏ ।",
+            "ସମତଳ ଜ୍ୟାମିତି ଇଉକ୍ଲିଡ଼ୀୟ ଧାରାରେ ପ୍ରତିଷ୍ଠିତ ।",
+            "ବିଦ୍ୟାଳୟ ସ୍ତରରେ ପଢ଼ୁଥିବା ଜ୍ୟାମିତି 'ସମତଳ ଜ୍ୟାମିତି' ନାମରେ ପରିଚିତ ।",
+            "ଆଧୁନିକ ଜ୍ୟାମିତି ଉଚ୍ଚ ଗଣିତ ଅଧ୍ୟୟନ ନିମନ୍ତେ ଉପଯୁକ୍ତ ।",
+            "Birkhoff ଓ Hilbert ଙ୍କ ଅବଦାନ ଦ୍ୱାରା ଉଭୟ ଧାରା ଅଧିକ ବ୍ୟବଧ ହୋଇଛି ।"
+        ],
+        conclusion: "ସମତଳ ଜ୍ୟାମିତି ଇଉକ୍ଲିଡ଼ ଭିତ୍ତିକ ହୋଇଥିବା ବେଳେ ଆଧୁନିକ ଜ୍ୟାମିତି Set ମାଧ୍ୟମରେ ଉଚ୍ଚ ସ୍ତରୀୟ ଗଣିତ ଅଧ୍ୟୟନ ନିମନ୍ତେ ଉଦ୍ଦିଷ୍ଟ । ଉଭୟ ଧାରା ଜ୍ୟାମିତି ଶାସ୍ତ୍ରର ଭିନ୍ନ ଭିନ୍ନ ବିକାଶ ସ୍ତରକୁ ପ୍ରତିଫଳିତ କରେ ।"
+    }
 ]
-
-
                 
 }  
 
@@ -5691,7 +5437,7 @@ function createSummaryTest() {
     
     let html = `<div class="summary-content active">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - ପଦାର୍ଥର କଣିକାମାନଙ୍କର ବୈଶିଷ୍ଟ୍ୟ, ବିସରଣ ଏବଂ ଆକର୍ଷଣ ବଳ ବିଷୟରେ ବିଭିନ୍ନ ପରୀକ୍ଷା ଦ୍ୱାରା କ'ଣ ଜଣାପଡ଼େ ?</h2>
+            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - ଏସିଆ ଓ ଆଫ୍ରିକାରେ ଉପନିବେଶବାଦ ବିସ୍ତାର ପାଇଁ ପରିବହନ ଓ ଯୋଗାଯୋଗର ଉନ୍ନତି, ଦୁର୍ବଳ ଶାସନ, ଧର୍ମ ଓ ସଂସ୍କୃତିର ପ୍ରଚାର ଏବଂ ଅନ୍ୟାନ୍ୟ ଅନୁକୂଳ ପରିସ୍ଥିତି କିପରି ଦାୟୀ ଥିଲା?</h2>
             ${summaryAudioButton}
         </div>
         
@@ -6666,7 +6412,7 @@ let certificateData = {
     examDate: '',
     examDay: '',
     examTime: '',
-    className: 'MTG: CLASS-3',
+    className: 'MTG-IX: CLASS-1',
     scores: {
         mcq: { scored: 0, total: 0, percentage: 0 },
         tf: { scored: 0, total: 0, percentage: 0 },
@@ -7572,7 +7318,7 @@ function closeMermaidModal() {
 // Just change PDF_FILE_ID for each lesson!
 // ============================================
 
-const PDF_URL = 'https://audio.evidya.de/S9MTG3P4-6.pdf';
+const PDF_URL = 'https://audio.evidya.de/S9MTG1P1-2.pdf';
 
 let bookCur = 0;
 let bookPdfDoc = null;
