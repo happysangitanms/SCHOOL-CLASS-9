@@ -16,150 +16,87 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "MATTER",
-            odia: "ପଦାର୍ଥ",
-            emoji: "🧪",
-            odiaUse: "ପଦାର୍ଥ ଅର୍ଥ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ବସ୍ତୁ ତିଆରି ହୁଏ । ବାୟୁ, ଜଳ ଓ ପଥର ପଦାର୍ଥ ଅଟେ ।",
+            word: "COLONISATION",
+            odia: "ଉପନିବେଶବାଦ",
+            emoji: "🏴",
+            odiaUse: "ଉପନିବେଶବାଦ ଅର୍ଥ ଅନ୍ୟ ଦେଶକୁ ନିଜ ଅଧୀନରେ ରଖି ଶାସନ କରିବା । ଇଉରୋପୀୟ ଦେଶମାନେ ଏସିଆ ଓ ଆଫ୍ରିକାରେ ଉପନିବେଶବାଦ କରିଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "MASS",
-            odia: "ବସ୍ତୁତ୍ୱ",
-            emoji: "⚖️",
-            odiaUse: "ବସ୍ତୁତ୍ୱ ଅର୍ଥ ପଦାର୍ଥର ପରିମାଣ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଥାଏ ।",
+            word: "COLONY",
+            odia: "ଉପନିବେଶ",
+            emoji: "🏘️",
+            odiaUse: "ଉପନିବେଶ ଅର୍ଥ ବିଦେଶସ୍ଥ ଆବାସ ବା ଅନ୍ୟ ଦେଶର ଅଧୀନ ଅଞ୍ଚଳ । ଇଉରୋପୀୟମାନେ ଅନେକ ଉପନିବେଶ ସ୍ଥାପନ କରିଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "VOLUME",
-            odia: "ଆୟତନ",
-            emoji: "📦",
-            odiaUse: "ଆୟତନ ଅର୍ଥ ପଦାର୍ଥ ଯେତିକି ସ୍ଥାନ ଦଖଲ କରେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ଆୟତନ ଅଛି ।",
+            word: "TRADE",
+            odia: "ବାଣିଜ୍ୟ",
+            emoji: "🚢",
+            odiaUse: "ବାଣିଜ୍ୟ ଅର୍ଥ କିଣାବିକା ଓ ବ୍ୟବସାୟ । ବାଣିଜ୍ୟ ପାଇଁ ଇଉରୋପୀୟମାନେ ଏସିଆକୁ ଆସିଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "TEXTURE",
-            odia: "ରୂପ ବିନ୍ୟାସ",
-            emoji: "✋",
-            odiaUse: "ରୂପ ବିନ୍ୟାସ ଅର୍ଥ ପୃଷ୍ଠଭାଗର ଗଠନ । ନଡ଼ିଆର ଖୋଲର ରୂପ ବିନ୍ୟାସ ଖରାପିଆ ହୋଇଥାଏ ।",
+            word: "EMPIRE",
+            odia: "ସାମ୍ରାଜ୍ୟ",
+            emoji: "👑",
+            odiaUse: "ସାମ୍ରାଜ୍ୟ ଅର୍ଥ ବହୁ ଅଞ୍ଚଳକୁ ନେଇ ଗଠିତ ବଡ଼ ରାଜ୍ୟ । ସାମ୍ରାଜ୍ୟ ବିସ୍ତାର ଉପନିବେଶବାଦର ଲକ୍ଷ୍ୟ ଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PHILOSOPHER",
-            odia: "ଦାର୍ଶନିକ",
-            emoji: "🤔",
-            odiaUse: "ଦାର୍ଶନିକ ଅର୍ଥ ଚିନ୍ତାବିଦ୍ । ପ୍ରାଚୀନ ଦାର୍ଶନିକମାନେ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଦେଇଥିଲେ ।",
+            word: "DISCOVERY",
+            odia: "ଆବିଷ୍କାର",
+            emoji: "🧭",
+            odiaUse: "ଆବିଷ୍କାର ଅର୍ଥ ନୂଆ ସ୍ଥାନ ବା ବସ୍ତୁର ସନ୍ଧାନ । ଭୌଗୋଳିକ ଆବିଷ୍କାର ଉପନିବେଶ ସ୍ଥାପନରେ ସାହାଯ୍ୟ କଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PANCHATATTVA",
-            odia: "ପଞ୍ଚତତ୍ତ୍ୱ",
-            emoji: "🌍",
-            odiaUse: "ପଞ୍ଚତତ୍ତ୍ୱ ଅର୍ଥ ପାଞ୍ଚଟି ମୌଳିକ ଉପାଦାନ । ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।",
+            word: "GEOGRAPHY",
+            odia: "ଭୌଗୋଳିକ",
+            emoji: "🗺️",
+            odiaUse: "ଭୌଗୋଳିକ ଅର୍ଥ ପୃଥିବୀର ସ୍ଥାନ ଓ ପରିବେଶ ସମ୍ବନ୍ଧୀୟ । ଭୌଗୋଳିକ ଆବିଷ୍କାର ଯାତାୟାତକୁ ସହଜ କରିଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PHYSICAL PROPERTY",
-            odia: "ଭୌତିକ ଧର୍ମ",
-            emoji: "👀",
-            odiaUse: "ଭୌତିକ ଧର୍ମ ଅର୍ଥ ଦେଖାଯାଉଥିବା ଗୁଣ । ପଦାର୍ଥର ଭୌତିକ ଧର୍ମ ଅଧ୍ୟୟନ କରାଯାଏ ।",
+            word: "SLAVE",
+            odia: "କ୍ରୀତଦାସ",
+            emoji: "⛓️",
+            odiaUse: "କ୍ରୀତଦାସ ଅର୍ଥ ଅର୍ଥର ବିନିମୟରେ ଗୋଲାମ ଭାବେ ବିକ୍ରି ହୋଇଥିବା ବ୍ୟକ୍ତି । ଆଫ୍ରିକାରେ ଦାସ ବ୍ୟବସାୟ ଲାଭଦାୟକ ଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CHEMICAL NATURE",
-            odia: "ରାସାୟନିକ ପ୍ରକୃତି",
-            emoji: "⚗️",
-            odiaUse: "ରାସାୟନିକ ପ୍ରକୃତି ଅର୍ଥ ରାସାୟନିକ ଗୁଣ । ଏହା ପଦାର୍ଥର ଏକ ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ।",
+            word: "INDUSTRIAL REVOLUTION",
+            odia: "ଶିଳ୍ପ ବିପ୍ଳବ",
+            emoji: "🏭",
+            odiaUse: "ଶିଳ୍ପ ବିପ୍ଳବ ଅର୍ଥ ନୂତନ ଯନ୍ତ୍ର ସାହାଯ୍ୟରେ ବହୁ ପରିମାଣରେ ଉତ୍ପାଦନ ହେବା । ଏହା ଇଂଲାଣ୍ଡରେ ଆରମ୍ଭ ହୋଇଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PARTICLE",
-            odia: "କଣିକା",
-            emoji: "🔹",
-            odiaUse: "କଣିକା ଅର୍ଥ ଅତି ଛୋଟ ଅଂଶ । ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।",
+            word: "FACTORY",
+            odia: "କଳ କାରଖାନା",
+            emoji: "🏭",
+            odiaUse: "କଳ କାରଖାନା ଅର୍ଥ ଯନ୍ତ୍ର ସାହାଯ୍ୟରେ ଦ୍ରବ୍ୟ ତିଆରି କରାଯାଉଥିବା ସ୍ଥାନ । ଶିଳ୍ପ ବିପ୍ଳବ ପରେ କଳ କାରଖାନା ବଢ଼ିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CONTINUOUS",
-            odia: "ଅବିଚ୍ଛିନ୍ନ",
-            emoji: "➖",
-            odiaUse: "ଅବିଚ୍ଛିନ୍ନ ଅର୍ଥ ଭାଗ କରିହେବ ନାହିଁ ବୋଲି ଧାରଣା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
+            word: "MARKET",
+            odia: "ବଜାର",
+            emoji: "🛒",
+            odiaUse: "ବଜାର ଅର୍ଥ କିଣାବିକାର ସ୍ଥାନ । ଇଉରୋପୀୟ ଦେଶମାନେ ଏସିଆ ଓ ଆଫ୍ରିକାରେ ନୂଆ ବଜାର ସୃଷ୍ଟି କରିଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "BEAKER",
-            odia: "ବିକର",
-            emoji: "🥛",
-            odiaUse: "ବିକର ଅର୍ଥ ପରୀକ୍ଷାଗାରର ପାତ୍ର । ଲୁଣ ଓ ଚିନିର ପରୀକ୍ଷା ବିକରରେ କରାଯାଏ ।",
+            word: "RAW MATERIAL",
+            odia: "କଞ୍ଚାମାଲ",
+            emoji: "⛏️",
+            odiaUse: "କଞ୍ଚାମାଲ ଅର୍ଥ ଜିନିଷ ତିଆରି ପାଇଁ ଦରକାର ହେଉଥିବା ମୂଳ ସାମଗ୍ରୀ । ଏସିଆ ଓ ଆଫ୍ରିକାରେ ପ୍ରଚୁର କଞ୍ଚାମାଲ ମିଳୁଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "MARK",
-            odia: "ଚିହ୍ନଟ",
-            emoji: "📍",
-            odiaUse: "ଚିହ୍ନଟ ଅର୍ଥ ଚିହ୍ନ ଦେଇ ରଖିବା । ଜଳର ଉପର ସ୍ତରକୁ ଚିହ୍ନଟ କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SPREAD",
-            odia: "ବ୍ୟାପିଯିବା",
-            emoji: "🌊",
-            odiaUse: "ବ୍ୟାପିଯିବା ଅର୍ଥ ଚାରିଆଡ଼େ ପ୍ରସାରିତ ହେବା । ଚିନି ଜଳରେ ବ୍ୟାପିଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CRYSTAL",
-            odia: "ସ୍ଫଟିକ",
-            emoji: "💎",
-            odiaUse: "ସ୍ଫଟିକ ଅର୍ଥ କ୍ରିଷ୍ଟାଲ୍ । ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ବ୍ୟବହାର କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DISSOLVE",
-            odia: "ଦ୍ରବୀଭୂତ",
-            emoji: "💧",
-            odiaUse: "ଦ୍ରବୀଭୂତ ଅର୍ଥ ଜଳରେ ମିଶିଯିବା । ସ୍ଫଟିକ ଜଳରେ ଦ୍ରବୀଭୂତ ହୁଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DILUTION",
-            odia: "ଲଘୁକରଣ",
-            emoji: "🧴",
-            odiaUse: "ଲଘୁକରଣ ଅର୍ଥ ପତଳା କରିବା । ଦ୍ରବଣର ବାରମ୍ବାର ଲଘୁକରଣ କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PURE WATER",
-            odia: "ବିଶୁଦ୍ଧ ଜଳ",
-            emoji: "🚰",
-            odiaUse: "ବିଶୁଦ୍ଧ ଜଳ ଅର୍ଥ ସଫା ପାଣି । ଦ୍ରବଣକୁ ବିଶୁଦ୍ଧ ଜଳ ସହିତ ମିଶାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "COUNTLESS",
-            odia: "ଅସଂଖ୍ୟ",
-            emoji: "♾️",
-            odiaUse: "ଅସଂଖ୍ୟ ଅର୍ଥ ଗଣନା କରିହେବ ନାହିଁ ଏତେ ଅଧିକ । ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କଣିକା ରହିଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DIVIDED",
-            odia: "ବିଭାଜିତ",
-            emoji: "✂️",
-            odiaUse: "ବିଭାଜିତ ଅର୍ଥ ଭାଗ ହୋଇଯିବା । କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ ଆହୁରି କ୍ଷୁଦ୍ର ହୁଅନ୍ତି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PRESENCE",
-            odia: "ଉପସ୍ଥିତି",
-            emoji: "✅",
-            odiaUse: "ଉପସ୍ଥିତି ଅର୍ଥ ଥିବାର ପ୍ରମାଣ । ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TINYNESS",
-            odia: "କ୍ଷୁଦ୍ରତା",
-            emoji: "🔬",
-            odiaUse: "କ୍ଷୁଦ୍ରତା ଅର୍ଥ ଛୋଟପଣ । ପଦାର୍ଥର କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।",
+            word: "COMPETITION",
+            odia: "ପ୍ରତିଦ୍ୱନ୍ଦିତା",
+            emoji: "⚔️",
+            odiaUse: "ପ୍ରତିଦ୍ୱନ୍ଦିତା ଅର୍ଥ ପରସ୍ପର ଆଗକୁ ବଢ଼ିବା ପାଇଁ ହେଉଥିବା ଲଢ଼େଇ । ଉପନିବେଶ ସ୍ଥାପନ ପାଇଁ ଇଉରୋପୀୟ ଦେଶମାନଙ୍କ ମଧ୍ୟରେ ପ୍ରତିଦ୍ୱନ୍ଦିତା ଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
