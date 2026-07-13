@@ -7,152 +7,236 @@ const APP_CONFIG = {
 const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
-    audio1: "https://audio.evidya.de/S9SSG1P1-2.mp3",
-    video:  "https://www.youtube.com/embed/qU8IfegijAo?playsinline=1&rel=0&modestbranding=1&autoplay=1",
-    pdf:    "https://audio.evidya.de/S9SSG1P1-2.pdf"
+    audio1: "https://audio.evidya.de/S9SLE1P1-2.mp3",
+    video:  "https://www.youtube.com/embed/YNbTNwdW8vs?playsinline=1&rel=0&modestbranding=1&autoplay=1",
+    pdf:    "https://audio.evidya.de/S9SLE1P1-2.pdf"
 };
 
 const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "CIVILIZATION",
-            odia: "ସଭ୍ୟତା",
-            emoji: "🏛️",
-            odiaUse: "ସଭ୍ୟତା ଅର୍ଥ ଏକ ଦେଶର ପ୍ରାଚୀନ ସଂସ୍କୃତି ଓ ଜୀବନଶୈଳୀ । ଭାରତୀୟ ସଭ୍ୟତା ବହୁତ ପ୍ରାଚୀନ ।",
+            word: "VEGETARIAN",
+            odia: "ନିରାମିଷାହାରୀ",
+            emoji: "🥗",
+            odiaUse: "ନିରାମିଷାହାରୀ ଅର୍ଥ ମାଛ ମାଂସ ନ ଖାଉଥିବା ଲୋକ । ସେ ଏକ ନିରାମିଷାହାରୀ ଭୋଜନାଳୟକୁ ଗଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DEMOCRATIC",
-            odia: "ଗଣତାନ୍ତ୍ରିକ",
-            emoji: "🗳️",
-            odiaUse: "ଗଣତାନ୍ତ୍ରିକ ଅର୍ଥ ଜନତାଙ୍କ ଦ୍ୱାରା ଚାଲିଥିବା ଶାସନ । ଭାରତ ବିଶ୍ୱର ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ଦେଶ ।",
+            word: "RESTAURANT",
+            odia: "ଭୋଜନାଳୟ",
+            emoji: "🍽️",
+            odiaUse: "ଭୋଜନାଳୟ ଅର୍ଥ ଖାଇବା ପାଇଁ ଥିବା ଦୋକାନ । ଭୋଜନାଳୟଟି ବହୁତ ଭିଡ଼ିଆ ଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DEVELOPING",
-            odia: "ବିକାଶଶୀଳ",
-            emoji: "📈",
-            odiaUse: "ବିକାଶଶୀଳ ଅର୍ଥ ଯେଉଁ ଦେଶ ଦ୍ରୁତ ଉନ୍ନତି କରୁଛି । ଭାରତ ଏକ ବିକାଶଶୀଳ ଦେଶ ।",
+            word: "CROWDED",
+            odia: "ଭିଡ଼ିଆ",
+            emoji: "👥",
+            odiaUse: "ଭିଡ଼ିଆ ଅର୍ଥ ଲୋକରେ ପୂର୍ଣ୍ଣ । ପର୍ବ ସମୟରେ ବଜାର ବହୁତ ଭିଡ଼ିଆ ହୋଇଥାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "INDEPENDENCE",
-            odia: "ସ୍ୱାଧୀନତା",
-            emoji: "🇮🇳",
-            odiaUse: "ସ୍ୱାଧୀନତା ଅର୍ଥ ପରାଧୀନତାରୁ ମୁକ୍ତି । ସ୍ୱାଧୀନତା ପରେ ଭାରତ ବହୁତ ଉନ୍ନତି କରିଛି ।",
+            word: "PUSHED",
+            odia: "ଠେଲାହୋଇଥିଲା",
+            emoji: "➡️",
+            odiaUse: "ଠେଲାହୋଇଥିଲା ଅର୍ଥ ଏକ ପାର୍ଶ୍ୱକୁ ଚଲାଇ ଦିଆଯାଇଥିଲା । ଚୌକି ଓ ମେଜଗୁଡ଼ିକ କୋଣକୁ ଠେଲାହୋଇଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "POPULATION",
-            odia: "ଜନସଂଖ୍ୟା",
-            emoji: "👨‍👩‍👧‍👦",
-            odiaUse: "ଜନସଂଖ୍ୟା ଅର୍ଥ ଏକ ସ୍ଥାନରେ ବସବାସ କରୁଥିବା ଲୋକଙ୍କ ସଂଖ୍ୟା । ଭାରତର ଜନସଂଖ୍ୟା ବହୁତ ଅଧିକ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DIVERSITY",
-            odia: "ବୈଚିତ୍ର୍ୟ",
-            emoji: "🌈",
-            odiaUse: "ବୈଚିତ୍ର୍ୟ ଅର୍ଥ ବିଭିନ୍ନ ପ୍ରକାରର ଭିନ୍ନତା । ଭାରତ ପ୍ରାକୃତିକ ବୈଚିତ୍ର୍ୟରେ ପରିପୂର୍ଣ୍ଣ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PLATEAU",
-            odia: "ମାଳଭୂମି",
-            emoji: "⛰️",
-            odiaUse: "ମାଳଭୂମି ଅର୍ଥ ଉଚ୍ଚ ଓ ସମତଳ ଭୂମି । ଭାରତରେ ଅନେକ ମାଳଭୂମି ଅଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DESERT",
-            odia: "ମରୁଭୂମି",
-            emoji: "🏜️",
-            odiaUse: "ମରୁଭୂମି ଅର୍ଥ ବାଲୁକାମୟ ଶୁଷ୍କ ଅଞ୍ଚଳ । ଭାରତରେ ଥାର ମରୁଭୂମି ଅଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SUBCONTINENT",
-            odia: "ଉପମହାଦେଶ",
-            emoji: "🌏",
-            odiaUse: "ଉପମହାଦେଶ ଅର୍ଥ ବଡ଼ ଓ ସ୍ୱତନ୍ତ୍ର ଭୂଖଣ୍ଡ । ଭାରତକୁ ଏକ ଉପମହାଦେଶ କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "UNITY",
-            odia: "ଏକତା",
-            emoji: "🤝",
-            odiaUse: "ଏକତା ଅର୍ଥ ସମସ୍ତେ ମିଳିମିଶି ରହିବା । ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା ଭାରତର ବୈଶିଷ୍ଟ୍ୟ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "ISLAND",
-            odia: "ଦ୍ୱୀପ",
-            emoji: "🏝️",
-            odiaUse: "ଦ୍ୱୀପ ଅର୍ଥ ଚାରିପଟେ ପାଣି ଘେରିଥିବା ଭୂମି । ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଏକ ଦ୍ୱୀପପୁଞ୍ଜ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "HEMISPHERE",
-            odia: "ଗୋଲାର୍ଦ୍ଧ",
-            emoji: "🌐",
-            odiaUse: "ଗୋଲାର୍ଦ୍ଧ ଅର୍ଥ ପୃଥିବୀର ଅଧା ଭାଗ । ଭାରତ ଉତ୍ତର ଗୋଲାର୍ଦ୍ଧରେ ଅବସ୍ଥିତ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "LATITUDE",
-            odia: "ଅକ୍ଷାଂଶ",
-            emoji: "📍",
-            odiaUse: "ଅକ୍ଷାଂଶ ଅର୍ଥ ପୂର୍ବ-ପଶ୍ଚିମ ଦିଗରେ ଟଣାଯାଇଥିବା କଳ୍ପନା ରେଖା । ଭାରତର ଅବସ୍ଥିତି ଅକ୍ଷାଂଶରେ ଦର୍ଶାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "LONGITUDE",
-            odia: "ଦ୍ରାଘିମା",
-            emoji: "🧭",
-            odiaUse: "ଦ୍ରାଘିମା ଅର୍ଥ ଉତ୍ତର-ଦକ୍ଷିଣ ଦିଗରେ ଟଣାଯାଇଥିବା କଳ୍ପନା ରେଖା । ଭାରତର ଦ୍ରାଘିମା ନିର୍ଦ୍ଦିଷ୍ଟ ଅଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TROPIC",
-            odia: "କ୍ରାନ୍ତି",
-            emoji: "☀️",
-            odiaUse: "କ୍ରାନ୍ତି ଅର୍ଥ ପୃଥିବୀର ବିଶେଷ କଳ୍ପନା ରେଖା । କର୍କଟକ୍ରାନ୍ତି ଭାରତର ମଧ୍ୟଭାଗ ଦେଇ ଯାଇଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CANAL",
-            odia: "କେନାଲ",
-            emoji: "🚢",
-            odiaUse: "କେନାଲ ଅର୍ଥ ଜଳପଥ ପାଇଁ ତିଆରି ହୋଇଥିବା କୃତ୍ରିମ ନାଳ । ସୁଏଜ କେନାଲ ଭାରତ ଓ ଇଉରୋପର ଦୂରତା କମାଇଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "AREA",
-            odia: "କ୍ଷେତ୍ରଫଳ",
+            word: "CORNER",
+            odia: "କୋଣ",
             emoji: "📐",
-            odiaUse: "କ୍ଷେତ୍ରଫଳ ଅର୍ଥ କୌଣସି ସ୍ଥାନର ମୋଟ ଆୟତନ । ଭାରତର କ୍ଷେତ୍ରଫଳ ୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି. ।",
+            odiaUse: "କୋଣ ଅର୍ଥ ଏକ ସ୍ଥାନର ଧାର ବା ଅନ୍ତ । ସେ କୋଣର ମେଜଟି ବାଛିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "COASTLINE",
-            odia: "ଉପକୂଳରେଖା",
-            emoji: "🌊",
-            odiaUse: "ଉପକୂଳରେଖା ଅର୍ଥ ସମୁଦ୍ର କୂଳର ସୀମାରେଖା । ଭାରତର ଉପକୂଳରେଖା ୭,୫୦୦ କି.ମି.ରୁ ଅଧିକ ।",
+            word: "SEATED",
+            odia: "ବସିଲେ",
+            emoji: "🪑",
+            odiaUse: "ବସିଲେ ଅର୍ଥ ଚୌକିରେ ବସିଗଲେ । ସେ ନିଜକୁ ମେଜ ପାଖରେ ବସାଇଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "TSUNAMI",
-            odia: "ସୁନାମି",
-            emoji: "🌊",
-            odiaUse: "ସୁନାମି ଅର୍ଥ ସମୁଦ୍ରର ବିଶାଳ ତରଙ୍ଗ । ୨୦୦୪ ମସିହାରେ ସୁନାମି ଇନ୍ଦିରା ପଏଣ୍ଟକୁ କ୍ଷତି କରିଥିଲା ।",
+            word: "SKIMMING",
+            odia: "ଚଟାଣ ଦେଖିବା",
+            emoji: "📰",
+            odiaUse: "ଚଟାଣ ଦେଖିବା ଅର୍ଥ ଶୀଘ୍ର ଶୀଘ୍ର ଦେଖିଯିବା । ସେ ଖବରକାଗଜଟି ଶୀଘ୍ର ଦେଖୁଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "MOUNTAIN RANGE",
-            odia: "ପର୍ବତଶ୍ରେଣୀ",
-            emoji: "🏔️",
-            odiaUse: "ପର୍ବତଶ୍ରେଣୀ ଅର୍ଥ ଅନେକ ପର୍ବତର ଧାଡ଼ି । କାରାକୋରମ ଏକ ପ୍ରସିଦ୍ଧ ପର୍ବତଶ୍ରେଣୀ ।",
+            word: "NEWSPAPER",
+            odia: "ଖବରକାଗଜ",
+            emoji: "📰",
+            odiaUse: "ଖବରକାଗଜ ଅର୍ଥ ଖବର ଛପା ହେଉଥିବା କାଗଜ । ସେ ଖବରକାଗଜ ପଢ଼ୁଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "NOTICED",
+            odia: "ଲକ୍ଷ୍ୟ କଲେ",
+            emoji: "👀",
+            odiaUse: "ଲକ୍ଷ୍ୟ କଲେ ଅର୍ଥ ଦେଖିପାରିଲେ । ସେ ଏକ ଝିଅକୁ ତାଙ୍କ ଆଡ଼କୁ ଚାହିଁଥିବାର ଲକ୍ଷ୍ୟ କଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "EXPRESSION",
+            odia: "ମୁହଁର ଭାବ",
+            emoji: "😔",
+            odiaUse: "ମୁହଁର ଭାବ ଅର୍ଥ ମୁହଁରେ ଦେଖାଯାଉଥିବା ଅନୁଭୂତି । ଝିଅଟିର ମୁହଁରେ ଦୁଃଖର ଭାବ ଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "CASHIER",
+            odia: "ଟଙ୍କା ଆଦାୟକାରୀ",
+            emoji: "💰",
+            odiaUse: "ଟଙ୍କା ଆଦାୟକାରୀ ଅର୍ଥ ଦୋକାନରେ ଟଙ୍କା ନେଉଥିବା ଲୋକ । ଝିଅଟି ଟଙ୍କା ଆଦାୟକାରୀଙ୍କୁ ପ୍ରଶ୍ନ କଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "AROUSED",
+            odia: "ଜାଗ୍ରତ ହେଲା",
+            emoji: "😮",
+            odiaUse: "ଜାଗ୍ରତ ହେଲା ଅର୍ଥ ଉତ୍ପନ୍ନ ହେଲା । ଝିଅଟିର ଆଚରଣ ତାଙ୍କ ମନରେ କୌତୂହଳ ଜାଗ୍ରତ କଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "CURIOSITY",
+            odia: "କୌତୂହଳ",
+            emoji: "🤔",
+            odiaUse: "କୌତୂହଳ ଅର୍ଥ ଜାଣିବାର ଇଚ୍ଛା । ଝିଅଟି ପ୍ରତି ତାଙ୍କ ମନରେ କୌତୂହଳ ଜାଗିଉଠିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "SURPRISED",
+            odia: "ଆଶ୍ଚର୍ଯ୍ୟାନ୍ୱିତ",
+            emoji: "😲",
+            odiaUse: "ଆଶ୍ଚର୍ଯ୍ୟାନ୍ୱିତ ଅର୍ଥ ଆଶ୍ଚର୍ଯ୍ୟ ଲାଗିବା । ଝିଅଟିର ପ୍ରଶ୍ନ ତାଙ୍କୁ ଆଶ୍ଚର୍ଯ୍ୟାନ୍ୱିତ କଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "WAITER",
+            odia: "ପରିଚାରକ",
+            emoji: "🧑‍🍳",
+            odiaUse: "ପରିଚାରକ ଅର୍ଥ ଭୋଜନାଳୟରେ ସେବା କରୁଥିବା ଲୋକ । ସେ ପରିଚାରକଙ୍କୁ ଝିଅ ବିଷୟରେ ପଚାରିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "MOVED",
+            odia: "ଆନ୍ଦୋଳିତ ହେଲେ",
+            emoji: "😢",
+            odiaUse: "ଆନ୍ଦୋଳିତ ହେଲେ ଅର୍ଥ ମନ ଛୁଇଁଲା । ପରିଚାରକଙ୍କ କଥାରେ ସେ ଆନ୍ଦୋଳିତ ହେଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PERSISTED",
+            odia: "ଲାଗି ରହିଲା",
+            emoji: "🔁",
+            odiaUse: "ଲାଗି ରହିଲା ଅର୍ଥ ଚାଲୁରହିଲା । ଝିଅଟି ବିଷୟରେ ତାଙ୍କ କୌତୂହଳ ଲାଗି ରହିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "MYSTERIOUS",
+            odia: "ରହସ୍ୟମୟ",
+            emoji: "🕵️",
+            odiaUse: "ରହସ୍ୟମୟ ଅର୍ଥ ବୁଝିହେଉ ନ ଥିବା । ସେ ଭାବିଲେ ଏହି ରହସ୍ୟମୟ ଝିଅ କିଏ ?",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "POVERTY-STRICKEN",
+            odia: "ଦରିଦ୍ର",
+            emoji: "😔",
+            odiaUse: "ଦରିଦ୍ର ଅର୍ଥ ଗରିବ ଅବସ୍ଥାରେ ଥିବା । ସେ ଝିଅଟିର ଦରିଦ୍ର ମୁହଁକୁ ଭାବୁଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ANXIOUS",
+            odia: "ଚିନ୍ତିତ",
+            emoji: "😟",
+            odiaUse: "ଚିନ୍ତିତ ଅର୍ଥ ଭୟଭୀତ ମନ । ଝିଅଟିର ମୁହଁ ଚିନ୍ତିତ ଦେଖାଯାଉଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "GUARDIAN",
+            odia: "ଅଭିଭାବକ",
+            emoji: "🛡️",
+            odiaUse: "ଅଭିଭାବକ ଅର୍ଥ ଯତ୍ନ ନେଉଥିବା ବ୍ୟକ୍ତି । ମାଗିର ଏକମାତ୍ର ଅଭିଭାବକ ତାହାର ଭାଇ ଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "WIDOWED",
+            odia: "ବିଧବା",
+            emoji: "👵",
+            odiaUse: "ବିଧବା ଅର୍ଥ ସ୍ୱାମୀ ମରିଯାଇଥିବା ସ୍ତ୍ରୀ । ମାଗି ତାଙ୍କ ବିଧବା ମାଆଙ୍କ ସହ ରହୁଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "SOLDIER",
+            odia: "ସୈନିକ",
+            emoji: "💂",
+            odiaUse: "ସୈନିକ ଅର୍ଥ ସେନାରେ କାମ କରୁଥିବା ଲୋକ । ମାଗିର ଭାଇ ଭାରତରେ ଏକ ସୈନିକ ଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "WORRIED",
+            odia: "ଚିନ୍ତାଗ୍ରସ୍ତ",
+            emoji: "😰",
+            odiaUse: "ଚିନ୍ତାଗ୍ରସ୍ତ ଅର୍ଥ ମନରେ ଭୟ ଓ ଚିନ୍ତା ଥିବା । ମାଗିର ମାଆ ତାହାର ଭାଇ ପାଇଁ ବହୁତ ଚିନ୍ତାଗ୍ରସ୍ତ ଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "COURAGE",
+            odia: "ସାହସ",
+            emoji: "💪",
+            odiaUse: "ସାହସ ଅର୍ଥ ଡରକୁ ଛାଡ଼ି କାମ କରିବାର ଶକ୍ତି । ମାଗିର ତାଙ୍କୁ ଘରକୁ ଡାକିବାର ସାହସ ନ ଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ACCOMPANY",
+            odia: "ସାଙ୍ଗରେ ଯିବା",
+            emoji: "🚶‍♂️",
+            odiaUse: "ସାଙ୍ଗରେ ଯିବା ଅର୍ଥ ଜଣକ ସହ ଚାଲିଯିବା । ମାଗି ଚାହୁଁଥିଲା ସେ ତାହା ସାଙ୍ଗରେ ଘରକୁ ଯାଆନ୍ତୁ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "OPPOSITE",
+            odia: "ସାମ୍ନା",
+            emoji: "↔️",
+            odiaUse: "ସାମ୍ନା ଅର୍ଥ ଠିକ୍ ଆଗରେ । ସେ ମାଗିର ସାମ୍ନା ଚୌକିରେ ବସିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "CONVERSATION",
+            odia: "କଥୋପକଥନ",
+            emoji: "💬",
+            odiaUse: "କଥୋପକଥନ ଅର୍ଥ ଦୁଇ ଜଣଙ୍କ ମଧ୍ୟରେ କଥାବାର୍ତ୍ତା । ସେ ମାଗି ସହ ଏକ କଥୋପକଥନ ଆରମ୍ଭ କଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "OPPORTUNITY",
+            odia: "ସୁଯୋଗ",
+            emoji: "🎯",
+            odiaUse: "ସୁଯୋଗ ଅର୍ଥ ଏକ ଭଲ ମୁହୂର୍ତ୍ତ । ଏହା ତାଙ୍କୁ ପଚାରିବାର ସୁଯୋଗ ଦେଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "NEIGHBOURHOOD",
+            odia: "ପଡ଼ୋଶୀ ଅଞ୍ଚଳ",
+            emoji: "🏘️",
+            odiaUse: "ପଡ଼ୋଶୀ ଅଞ୍ଚଳ ଅର୍ଥ ଆଖପାଖ ବସତି ଅଞ୍ଚଳ । ସେମାନେ ଶୀଘ୍ର ସେମାନଙ୍କ ପଡ଼ୋଶୀ ଅଞ୍ଚଳ ପାଖରେ ପହଞ୍ଚିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DOORWAY",
+            odia: "ଦ୍ୱାର ପଥ",
+            emoji: "🚪",
+            odiaUse: "ଦ୍ୱାର ପଥ ଅର୍ଥ ଘର ଭିତରକୁ ଯିବାର ପଥ । ସେମାନେ ଏକ ସଂକୀର୍ଣ୍ଣ ଦ୍ୱାର ପଥରେ ପହଞ୍ଚିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "LATCH KEY",
+            odia: "କୁଞ୍ଚିକା",
+            emoji: "🔑",
+            odiaUse: "କୁଞ୍ଚିକା ଅର୍ଥ ଦ୍ୱାର ଖୋଲିବା ଚାବି । ମାଗି ପକେଟରୁ ଏକ ପତଳା କୁଞ୍ଚିକା ବାହାର କରି ଦ୍ୱାର ଖୋଲିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
@@ -390,13 +474,9 @@ const courseData = {
   `, 
     audio: "",
 mermaid: [
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE["📖 GRAPH-1:<br/>ଭାରତର ପରିଚୟ<br/>ଓ ପ୍ରାକୃତିକ ବିବିଧତା"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA["🟡 ପରିଚୟ"]\nA --> I1["ଭାରତ ଏକ ପ୍ରାଚୀନ<br/>ସଭ୍ୟତା ଅଟେ।"]\nA --> I2["ଏହା ବିଶ୍ୱର<br/>ସର୍ବବୃହତ୍ ଗଣତନ୍ତ୍ର।"]\nA --> I3["ଜନସଂଖ୍ୟାରେ ବିଶ୍ୱରେ<br/>ଦ୍ୱିତୀୟ ସ୍ଥାନ।"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM["🟢 ପ୍ରାକୃତିକ ବିବିଧତା"]\nM --> M1["ପର୍ବତ, ମାଳଭୂମି<br/>ଓ ଘନଅରଣ୍ୟ ଥାଏ।"]\nM --> M2["ଅସଂଖ୍ୟ ନଦନଦୀ ଓ<br/>ଉର୍ବର ସମତଳ ଭୂମି।"]\nM --> M3["ମରୁଭୂମି ଓ ବିବିଧ<br/>ପ୍ରକାର ଜୀବଜନ୍ତୁ।"]\nM --> M4["ଭିନ୍ନ ଭାଷାଭାଷୀ ଓ<br/>ଧର୍ମାବଲମ୍ବୀ ଲୋକ।"]\nM --> M5["ଖାଦ୍ୟପେୟ, ବେଶପୋଷାକରେ<br/>ବିଭିନ୍ନତା ଥାଏ।"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC["🔵 ମନେରଖ"]\nC --> C1["ଭାରତ ଏକ ସୁସଂଗଠିତ<br/>ଭୂଖଣ୍ଡ ଅଟେ।"]\nC --> C2["ଏହାକୁ ଏକ ଉପମହାଦେଶ<br/>ଆଖ୍ୟା ଦିଆଯାଏ।"]\nC --> C3["ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା<br/>ଭାରତର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ।"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ଅମୂଲ୍ୟ ଉପହାର –<br/>ଏକ ଅଜଣା ବାଳିକା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଆରମ୍ଭ\"]\nA --> I1[\"ଉପହାର ବିଷୟରେ<br/>ଆଲୋଚନା କରାଯାଏ।\"]\nA --> I2[\"ଛୋଟ ଉପହାର କାହିଁକି<br/>ମୂଲ୍ୟବାନ ହୁଏ ବିଚାର।\"]\nA --> I3[\"'ଅମୂଲ୍ୟ ଉପହାର' କାହାଣୀ<br/>ପଢ଼ାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ରେଷ୍ଟୁରାଣ୍ଟରେ ଘଟଣା\"]\nM --> M1[\"ଲେଖକ ଏକ ନିରାମିଷ<br/>ରେଷ୍ଟୁରାଣ୍ଟକୁ ଯାଆନ୍ତି।\"]\nM --> M2[\"ଏକ କୋଣ ଟେବୁଲରେ<br/>ବସି ଖବରକାଗଜ ପଢ଼ନ୍ତି।\"]\nM --> M3[\"ଏକ ଛୋଟ ବାଳିକା<br/>ତାଙ୍କୁ ଚାହିଁ ରହିଥାଏ।\"]\nM --> M4[\"ବାଳିକା କ୍ୟାଶିଆରକୁ ପଚାରେ<br/>'ସେ ଭାରତୀୟ କି?'\"]\nM --> M5[\"ଉତ୍ତର ଶୁଣି ବାଳିକା<br/>ଥରେ ଅଣନଜରେ ଚାହିଁ ଚାଲିଯାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 କୌତୁହଳ\"]\nC --> C1[\"ଲେଖକ ବାଳିକାର<br/>ଆଚରଣରେ ଆଶ୍ଚର୍ଯ୍ୟ ହୁଅନ୍ତି।\"]\nC --> C2[\"ସେ ୱେଟରଙ୍କୁ ବାଳିକା<br/>ବିଷୟରେ ପଚାରନ୍ତି।\"]\nC --> C3[\"ବାଳିକାର ଦୁଃଖୀ ଚେହେରା<br/>ତାଙ୍କ ମନରେ ରହିଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE["📖 GRAPH-2:<br/>ଭାରତର ଗଠନ<br/>ଓ ଅବସ୍ଥିତି"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA["🟡 ଗଠନ"]\nA --> I1["ମୂଳଭୂଖଣ୍ଡ ଓ ଦୁଇଟି<br/>ଦ୍ୱୀପପୁଞ୍ଜକୁ ନେଇ ଗଠିତ।"]\nA --> I2["ଆଣ୍ଡାମାନ ନିକୋବର<br/>ବଙ୍ଗୋପସାଗରରେ।"]\nA --> I3["ଲାକ୍ଷାଦ୍ୱୀପ ଆରବ<br/>ସାଗରରେ ଅବସ୍ଥିତ।"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM["🟢 ଅବସ୍ଥିତି"]\nM --> M1["ଏସିଆ ମହାଦେଶର<br/>ଦକ୍ଷିଣାଂଶରେ ଅବସ୍ଥିତ।"]\nM --> M2["ଭାରତ ସମ୍ପୂର୍ଣ୍ଣ<br/>ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ ରହିଛି।"]\nM --> M3["୮°୪′ ରୁ ୩୭°୬′ ଉ.<br/>ସମାକ୍ଷରେଖା ମଧ୍ୟରେ।"]\nM --> M4["କର୍କଟକ୍ରାନ୍ତି ଏହାର<br/>ମଧ୍ୟଭାଗ ଦେଇ ଯାଏ।"]\nM --> M5["ଉପକ୍ରାନ୍ତୀୟ ଓ କ୍ରାନ୍ତୀୟ<br/>ମଣ୍ଡଳରେ ରହିଛି।"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC["🔵 ତୁମେ ଜାଣିଛ କି?"]\nC --> C1["୧୮୬୯ରେ ସୁଏଜ କେନାଲ<br/>ଖୋଲିଥିଲା।"]\nC --> C2["ଏହା ଭାରତ-ଇଉରୋପ<br/>ଦୂରତା 7000 km କମାଇଲା।"]\nC --> C3["ପ୍ରାଚୀନ ରେଶମ ମାର୍ଗ<br/>ସହ ସ୍ଥଳପଥ ସଂଯୋଗ।"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
-
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE["📖 GRAPH-3:<br/>ଭାରତର ଆକାର<br/>ଓ ତୁଳନାତ୍ମକ ସ୍ଥାନ"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA["🟡 କ୍ଷେତ୍ରଫଳ"]\nA --> I1["ଭାରତର କ୍ଷେତ୍ରଫଳ<br/>୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି.।"]\nA --> I2["ପୃଥିବୀର ମୋଟ କ୍ଷେତ୍ରର<br/>୨.୪ ପ୍ରତିଶତ ଅଟେ।"]\nA --> I3["ସ୍ଥଳ ସୀମାରେଖା ପ୍ରାୟ<br/>୧୫,୨୦୦ କି.ମି.।"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM["🟢 ତୁଳନାତ୍ମକ ଆକାର"]\nM --> M1["ଉପକୂଳରେଖା ୭,୫୦୦<br/>କି.ମି.ରୁ ଅଧିକ।"]\nM --> M2["ରୁଷିଆ ପୃଥିବୀର<br/>ସର୍ବବୃହତ୍ ଦେଶ।"]\nM --> M3["କାନାଡ଼ା ଓ ଆମେରିକା<br/>ପରବର୍ତ୍ତୀ ସ୍ଥାନରେ।"]\nM --> M4["ଚୀନ୍ ଓ ବ୍ରାଜିଲ<br/>ମଧ୍ୟ ବଡ଼ ଦେଶ।"]\nM --> M5["ଅଷ୍ଟ୍ରେଲିଆ ପରେ<br/>ଭାରତର ସ୍ଥାନ।"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC["🔵 ମନେରଖ"]\nC --> C1["ଭାରତ ପୃଥିବୀର<br/>ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ।"]\nC --> C2["କ୍ଷେତ୍ରଫଳ ୩.୨୮<br/>ନିୟୁତ ବର୍ଗ କି.ମି.।"]\nC --> C3["ବିଶ୍ୱର ସାତ ବୃହତ୍<br/>ଦେଶ ମଧ୍ୟରେ ସ୍ଥାନ।"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
-
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE["📖 GRAPH-4:<br/>ଭାରତର ଚାରି<br/>ଅନ୍ତିମ ସୀମା ବିନ୍ଦୁ"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA["🟡 ଦକ୍ଷିଣତମ ସ୍ଥାନ"]\nA --> I1["ଇନ୍ଦିରା ପଏଣ୍ଟ ନାମରେ<br/>ପରିଚିତ ଅଟେ।"]\nA --> I2["ଆଣ୍ଡାମାନ ନିକୋବର<br/>ଦ୍ୱୀପପୁଞ୍ଜରେ ଅବସ୍ଥିତ।"]\nA --> I3["୨୦୦୪ ସୁନାମିରେ<br/>ସମୁଦ୍ର ଗର୍ଭରେ ଲୀନ ହେଲା।"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM["🟢 ଚାରି ସୀମା ବିନ୍ଦୁ"]\nM --> M1["କନ୍ୟାକୁମାରୀ ମୂଳଭୂଖଣ୍ଡର<br/>ଦକ୍ଷିଣତମ ସ୍ଥାନ।"]\nM --> M2["ଏହା ତାମିଲନାଡୁ<br/>ରାଜ୍ୟରେ ଅବସ୍ଥିତ।"]\nM --> M3["କାରାକୋରମ ପର୍ବତଶ୍ରେଣୀ<br/>ଉତ୍ତରତମ ସ୍ଥାନ।"]\nM --> M4["ଅରୁଣାଚଳ ପ୍ରଦେଶ<br/>ପୂର୍ବତମ ସ୍ଥାନ।"]\nM --> M5["କଚ୍ଛ ସବୁଠାରୁ<br/>ପଶ୍ଚିମରେ ଅବସ୍ଥିତ।"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC["🔵 ମନେରଖ"]\nC --> C1["ଚାରି ଦିଗର ସୀମା<br/>ଭିନ୍ନ ରାଜ୍ୟରେ ଅଛି।"]\nC --> C2["ଏହି ବିନ୍ଦୁଗୁଡ଼ିକ ଭାରତର<br/>ବିସ୍ତାର ଦର୍ଶାଏ।"]\nC --> C3["ଏହା ଭାରତର ଭୌଗୋଳିକ<br/>ବିବିଧତା ପ୍ରକାଶ କରେ।"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ମାଗି ସହିତ<br/>ପରିଚୟ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ୱେଟରଙ୍କ କଥା\"]\nA --> I1[\"ବାଳିକା ପ୍ରତି ଶନିବାର<br/>ଏଠାରେ ଖାଏ।\"]\nA --> I2[\"ସେ କେବଳ 'ପେ ଡେ'<br/>ଦିନ ଆସେ।\"]\nA --> I3[\"ସେ ବେଶୀ ରୋଜଗାର<br/>କରନ୍ତି ନାହିଁ ବୋଲି ଅନୁମାନ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପରବର୍ତ୍ତୀ ଶନିବାର\"]\nM --> M1[\"ଲେଖକ ପୁଣି ସେହି<br/>ରେଷ୍ଟୁରାଣ୍ଟକୁ ଯାଆନ୍ତି।\"]\nM --> M2[\"ବାଳିକା ସାମ୍ନା<br/>ଚଉକିରେ ବସନ୍ତି।\"]\nM --> M3[\"ବାତାଳାପରେ ବାଳିକା<br/>ପଚାରେ 'ଆପଣ ଭାରତୀୟ କି?'\"]\nM --> M4[\"ତାଙ୍କ ଭାଇ ଭାରତରେ<br/>ସୈନିକ ଭାବେ କାର୍ଯ୍ୟରତ।\"]\nM --> M5[\"ବହୁ ଦିନ ହେଲା ଚିଠି<br/>ନ ଆସିବାରୁ ମା ଚିନ୍ତିତ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମାଗି ଓ ତାଙ୍କ ଘର\"]\nC --> C1[\"ବାଳିକାର ନାମ<br/>ମାଗି ବୋଲି ଜଣାପଡ଼େ।\"]\nC --> C2[\"ସେ ବିଧବା ମା<br/>ମିସେସ ବେଥି ସହ ରୁହନ୍ତି।\"]\nC --> C3[\"ଲେଖକ ତାଙ୍କ ସହିତ<br/>ଘର ପର୍ଯ୍ୟନ୍ତ ଯାଆନ୍ତି।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
   ]
   
       
