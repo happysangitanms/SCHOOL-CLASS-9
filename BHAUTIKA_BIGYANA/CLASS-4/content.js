@@ -51,9 +51,7 @@ audio:"audio-url-here"
 questions:[
 "<span style='color:red;'>Q-1:</span> ଗରମ ଓ ଥଣ୍ଡା ପାଣି ମଧ୍ୟରୁ କେଉଁଥିରେ ଚିନି ଶୀଘ୍ର ମିଶିଲା ?<br><br><span style='color:green;'>Answer:</span> ଗରମ ପାଣିରେ ଚିନି ଶୀଘ୍ର ମିଶିଲା ।",
 
-"<span style='color:red;'>Q-2:</span> ତାପମାତ୍ରା ବୃଦ୍ଧି ହେଲେ କଣିକାଗୁଡ଼ିକର ଗତିରେ କ'ଣ ପରିବର୍ତ୍ତନ ଆସେ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାଗୁଡ଼ିକ ଅଧ‌ିକ ଦ୍ରୁତ ଗତିରେ ଚଳନ କରନ୍ତି ।
-
-",
+"<span style='color:red;'>Q-2:</span> ତାପମାତ୍ରା ବୃଦ୍ଧି ହେଲେ କଣିକାଗୁଡ଼ିକର ଗତିରେ କ'ଣ ପରିବର୍ତ୍ତନ ଆସେ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାଗୁଡ଼ିକ ଅଧ‌ିକ ଦ୍ରୁତ ଗତିରେ ଚଳନ କରନ୍ତି ।",
 
 "<span style='color:red;'>Q-3:</span> ଗରମ ପାଣିରେ ବିସରଣ ଶୀଘ୍ର ହେବାର ମୁଖ୍ୟ କାରଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଅଧ‌ିକ ତାପମାତ୍ରା ଯୋଗୁଁ କଣିକାର ଗତିଜ ଶକ୍ତି ବଢ଼ିଥାଏ ।",
 
