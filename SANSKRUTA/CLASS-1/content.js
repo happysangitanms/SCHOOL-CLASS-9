@@ -16,108 +16,143 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "ANYEDYUḤ",
-            odia: "ଅନ୍ୟ ଏକଦିନେ",
-            emoji: "📅",
-            odiaUse: "ଅନ୍ୟ ଏକଦିନେ ଅର୍ଥ ପରଦିନ କିମ୍ବା ଆଉ ଗୋଟିଏ ଦିନ। ଅନ୍ୟ ଏକଦିନେ ସମସ୍ତ ପଶୁ ସିଂହ ପାଖକୁ ଗଲେ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SARVOCCHEDANAM",
-            odia: "ସମସ୍ତଙ୍କ ବିନାଶ",
-            emoji: "💥",
-            odiaUse: "ସମସ୍ତଙ୍କ ବିନାଶ ଅର୍ଥ ସମସ୍ତଙ୍କର ନଷ୍ଟ ହୋଇଯିବା। ପଶୁମାନେ ସମସ୍ତଙ୍କ ବିନାଶ ଚାହୁଁନଥିଲେ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "ĀKARṆYA",
-            odia: "ଶୁଣି",
-            emoji: "👂",
-            odiaUse: "ଶୁଣି ଅର୍ଥ କଥା ଶ୍ରବଣ କରି। ସିଂହ ପଶୁମାନଙ୍କ କଥା ଶୁଣି ରାଜି ହେଲା।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "ŚVĀPADAḤ",
-            odia: "ହିଂସ୍ର ଜନ୍ତୁ",
+            word: "LION",
+            odia: "ସିଂହ",
             emoji: "🦁",
-            odiaUse: "ହିଂସ୍ର ଜନ୍ତୁ ଅର୍ଥ ଅନ୍ୟ ପଶୁଙ୍କୁ ମାରି ଖାଉଥିବା ପ୍ରାଣୀ। ସିଂହ ଏକ ହିଂସ୍ର ଜନ୍ତୁ।",
+            odiaUse: "ସିଂହ ଜଙ୍ଗଲର ଶକ୍ତିଶାଳୀ ପଶୁ । ଏହି କଥାରେ ଭାସୁରକ ନାମକ ସିଂହ ବହୁତ ଅତ୍ୟାଚାର କରୁଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PARYAṬANTI",
-            odia: "ପର୍ଯ୍ୟଟନ କରନ୍ତି",
+            word: "RABBIT",
+            odia: "ଶଶକ",
+            emoji: "🐇",
+            odiaUse: "ଶଶକ ଏକ ଛୋଟ ପଶୁ । ଏହି କଥାରେ ଶଶକ ନିଜ ବୁଦ୍ଧି ଦ୍ୱାରା ସିଂହକୁ ପରାସ୍ତ କରିଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "FOREST",
+            odia: "ବନ",
+            emoji: "🌳",
+            odiaUse: "ବନ ଅର୍ଥ ଜଙ୍ଗଲ । ସିଂହ ଓ ଅନ୍ୟ ସମସ୍ତ ପଶୁ ସେହି ବନରେ ବାସ କରୁଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DESTRUCTION",
+            odia: "ସର୍ବୋଚ୍ଛେଦନ",
+            emoji: "💥",
+            odiaUse: "ସର୍ବୋଚ୍ଛେଦନ ଅର୍ଥ ସମସ୍ତଙ୍କ ବିନାଶ । ପଶୁମାନେ ଚାହୁଁଥିଲେ ଯେ ସେମାନଙ୍କର ସର୍ବୋଚ୍ଛେଦନ ନ ହେଉ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "HEARD",
+            odia: "ଆକର୍ଣ୍ୟ",
+            emoji: "👂",
+            odiaUse: "ଆକର୍ଣ୍ୟ ଅର୍ଥ ଶୁଣି । ସିଂହ ପଶୁମାନଙ୍କ କଥା ଶୁଣି ସେମାନଙ୍କ ପ୍ରସ୍ତାବ ମାନିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "WILD BEAST",
+            odia: "ଶ୍ୱାପଦ",
+            emoji: "🐺",
+            odiaUse: "ଶ୍ୱାପଦ ଅର୍ଥ ହିଂସ୍ରଜନ୍ତୁ । ସିଂହ ଏକ ହିଂସ୍ର ଶ୍ୱାପଦ ଅଟେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "WANDER",
+            odia: "ପର୍ଯ୍ୟଟନ କରିବା",
             emoji: "🚶",
-            odiaUse: "ପର୍ଯ୍ୟଟନ କରନ୍ତି ଅର୍ଥ ଏଣେତେଣେ ବୁଲନ୍ତି। ପଶୁମାନେ ନିର୍ଭୟରେ ବନରେ ପର୍ଯ୍ୟଟନ କରୁଥିଲେ।",
+            odiaUse: "ପର୍ଯ୍ୟଟନ କରିବା ଅର୍ଥ ବୁଲିବା । ସିଂହ ସହ ଚୁକ୍ତି ପରେ ପଶୁମାନେ ନିର୍ଭୟରେ ବନରେ ବୁଲୁଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "KṢUTKṢĀMAKAṆṬHAḤ",
-            odia: "କ୍ଷୁଧାତୁର କଣ୍ଠ",
-            emoji: "😫",
-            odiaUse: "କ୍ଷୁଧାତୁର କଣ୍ଠ ଅର୍ଥ ଭୋକରେ ଦୁର୍ବଳ ହୋଇଯିବା। ସିଂହ ଭୋକରେ କ୍ଷୁଧାତୁର କଣ୍ଠ ହୋଇଥିଲା।",
+            word: "WELL",
+            odia: "କୂପ",
+            emoji: "🕳️",
+            odiaUse: "କୂପ ଅର୍ଥ କୂଅ । ଶଶକ ସିଂହକୁ କୂଅ ପାଖକୁ ନେଇ ତାହାର ପ୍ରତିବିମ୍ବ ଦେଖାଇଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PRAJVALITĀTMĀ",
-            odia: "ଅତି କ୍ରୋଧିତ",
+            word: "REFLECTION",
+            odia: "ପ୍ରତିବିମ୍ବ",
+            emoji: "🪞",
+            odiaUse: "ପ୍ରତିବିମ୍ବ ଅର୍ଥ ଛାୟାରୂପ । ସିଂହ କୂଅରେ ନିଜ ପ୍ରତିବିମ୍ବକୁ ଅନ୍ୟ ସିଂହ ବୋଲି ଭାବିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "HUNGRY",
+            odia: "କ୍ଷୁତ୍କ୍ଷାମକଣ୍ଠ",
+            emoji: "🍽️",
+            odiaUse: "କ୍ଷୁତ୍କ୍ଷାମକଣ୍ଠ ଅର୍ଥ କ୍ଷୁଧାରେ କଣ୍ଠ ଶୁଖିଯାଇଥିବା । ବିଳମ୍ବ ହେବାରୁ ସିଂହ ବହୁତ ଭୋକିଲା ଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ANGRY",
+            odia: "ପ୍ରଜ୍ୱଲିତାତ୍ମା",
             emoji: "😡",
-            odiaUse: "ଅତି କ୍ରୋଧିତ ଅର୍ଥ ବହୁତ ରାଗିଯିବା। ବିଳମ୍ବ ଦେଖି ସିଂହ ଅତି କ୍ରୋଧିତ ହେଲା।",
+            odiaUse: "ପ୍ରଜ୍ୱଲିତାତ୍ମା ଅର୍ଥ ଅତ୍ୟଧିକ କ୍ରୋଧିତ । ଶଶକ ବିଳମ୍ବରେ ଆସିବାରୁ ସିଂହ ବହୁତ କ୍ରୋଧିତ ହୋଇଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "NIPĀTYA",
-            odia: "ହତ୍ୟା କରି",
+            word: "KILL",
+            odia: "ନିପାତ୍ୟ",
             emoji: "⚔️",
-            odiaUse: "ହତ୍ୟା କରି ଅର୍ଥ ମାରିଦେଇ। ସିଂହ ପଶୁମାନଙ୍କୁ ହତ୍ୟା କରି ଖାଉଥିଲା।",
+            odiaUse: "ନିପାତ୍ୟ ଅର୍ଥ ହତ୍ୟା କରି । ସିଂହ ଶଶକକୁ ମାରିଦେବାକୁ ଧମକ ଦେଇଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SATTVĀNĀM",
-            odia: "ପ୍ରାଣୀମାନଙ୍କର",
+            word: "CREATURES",
+            odia: "ସତ୍ତ୍ୱାନାମ୍",
             emoji: "🐾",
-            odiaUse: "ପ୍ରାଣୀମାନଙ୍କର ଅର୍ଥ ସମସ୍ତ ଜୀବଜନ୍ତୁଙ୍କର। ଶଶକ କହିଲା ଏଥିରେ ପ୍ରାଣୀମାନଙ୍କର ଦୋଷ ନାହିଁ।",
+            odiaUse: "ସତ୍ତ୍ୱାନାମ୍ ଅର୍ଥ ପ୍ରାଣୀମାନଙ୍କର । ଶଶକ କହିଲା ଯେ ଅନ୍ୟ ପ୍ରାଣୀମାନଙ୍କର କୌଣସି ଦୋଷ ନାହିଁ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SAṂSTHĀPYA",
-            odia: "ରଖି",
+            word: "KEEP",
+            odia: "ସଂସ୍ଥାପ୍ୟ",
             emoji: "📍",
-            odiaUse: "ରଖି ଅର୍ଥ ଗୋଟିଏ ସ୍ଥାନରେ ଛାଡ଼ି ଦେଇ। ଚାରିଟି ଶଶକଙ୍କୁ ସେଠାରେ ରଖି ଦିଆଗଲା।",
+            odiaUse: "ସଂସ୍ଥାପ୍ୟ ଅର୍ଥ ରଖି । ଅନ୍ୟ ସିଂହ ଚାରିଟି ଶଶକକୁ ସେଠାରେ ରଖିବାକୁ କହିଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "EVAMUKTVĀ",
-            odia: "ଏହିପରି କହି",
+            word: "SAID THUS",
+            odia: "ଏବମୁକ୍ତ୍ୱା",
             emoji: "🗣️",
-            odiaUse: "ଏହିପରି କହି ଅର୍ଥ ଏଭଳି କଥା କହି। ଶଶକ ଏହିପରି କହି ଆଗକୁ ଚାଲିଲା।",
+            odiaUse: "ଏବମୁକ୍ତ୍ୱା ଅର୍ଥ ଏହିପରି କହି । ଏହା କହି ଶଶକ ସିଂହକୁ କୂଅ ପାଖକୁ ନେଇଗଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "BHARTSAYAMĀNAḤ",
-            odia: "ଗାଳି ଦେଇ",
-            emoji: "😠",
-            odiaUse: "ଗାଳି ଦେଇ ଅର୍ଥ ରାଗରେ କଠୋର କଥା କହି। ସିଂହ ଶଶକକୁ ଗାଳି ଦେଇ କଥା କହିଲା।",
+            word: "SCOLDING",
+            odia: "ଭର୍ତ୍ସୟମାନ",
+            emoji: "☝️",
+            odiaUse: "ଭର୍ତ୍ସୟମାନ ଅର୍ଥ ଗାଳି ଦେଉଥିବା । ସିଂହ ଶଶକକୁ ରାଗରେ ଗାଳି ଦେଇଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DURGĀŚRAYAḤ",
-            odia: "ଦୁର୍ଗରେ ରହିଥିବା",
+            word: "FORTRESS",
+            odia: "ଦୁର୍ଗାଶ୍ରୟ",
             emoji: "🏰",
-            odiaUse: "ଦୁର୍ଗରେ ରହିଥିବା ଅର୍ଥ ସୁରକ୍ଷିତ ସ୍ଥାନରେ ଥିବା। ଶଶକ କହିଲା ଶତ୍ରୁ ଦୁର୍ଗରେ ରହିଥିବା।",
+            odiaUse: "ଦୁର୍ଗାଶ୍ରୟ ଅର୍ଥ ଦୁର୍ଗରେ ରହୁଥିବା । ଶଶକ କହିଲା ଯେ ଅନ୍ୟ ସିଂହ ଦୁର୍ଗାଶ୍ରୟ ଅଟେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PRATIŚABDENA",
-            odia: "ପ୍ରତିଧ୍ୱନି ଦ୍ୱାରା",
+            word: "ECHO",
+            odia: "ପ୍ରତିଶବ୍ଦ",
             emoji: "🔊",
-            odiaUse: "ପ୍ରତିଧ୍ୱନି ଦ୍ୱାରା ଅର୍ଥ ଶବ୍ଦର ପୁଣିଥରେ ଫେରି ଆସିବା। କୂଅରୁ ପ୍ରତିଧ୍ୱନି ଦ୍ୱାରା ସିଂହ ଭ୍ରମିତ ହେଲା।",
+            odiaUse: "ପ୍ରତିଶବ୍ଦ ଅର୍ଥ ପ୍ରତିଧ୍ୱନି । ସିଂହର ଗର୍ଜନର ପ୍ରତିଶବ୍ଦ କୂଅରୁ ଫେରି ଆସିଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PRĀṆAYĀTRĀ",
-            odia: "ଜୀବନଯାତ୍ରା",
-            emoji: "🌿",
-            odiaUse: "ଜୀବନଯାତ୍ରା ଅର୍ଥ ଜୀବନ ଚଳାଇବା। ଏହି ବ୍ୟବସ୍ଥାରେ ସିଂହର ଜୀବନଯାତ୍ରା ସହଜ ହେଲା।",
+            word: "LIVELIHOOD",
+            odia: "ପ୍ରାଣଯାତ୍ରା",
+            emoji: "🌾",
+            odiaUse: "ପ୍ରାଣଯାତ୍ରା ଅର୍ଥ ଜୀବନ ନିର୍ବାହ । ପଶୁମାନେ ସିଂହର ପ୍ରାଣଯାତ୍ରା ପାଇଁ ପ୍ରତିଦିନ ଗୋଟିଏ ପଶୁ ପଠାଇବାକୁ ଠିକ୍ କରିଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "INTELLIGENCE",
+            odia: "ବୁଦ୍ଧିବଳ",
+            emoji: "🧠",
+            odiaUse: "ବୁଦ୍ଧିବଳ ଅର୍ଥ ବୁଦ୍ଧିର ଶକ୍ତି । ଶଶକ ନିଜ ବୁଦ୍ଧିବଳରେ ଶକ୍ତିଶାଳୀ ସିଂହକୁ ବିନାଶ କରିଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
