@@ -161,126 +161,208 @@ const wordData = {
 const topicsData = [
 
 {
-heading: "NOTE-1: ପଦାର୍ଥ କ'ଣ ? :-",
+heading: "NOTE-1: ପଞ୍ଚତନ୍ତ୍ର ଓ ଏହି କାହାଣୀ କ'ଣ ? :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପଦାର୍ଥ ହେଉଛି ସେହି ଦ୍ରବ୍ୟ ଯାହାକୁ ନେଇ ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଗଠିତ ହୋଇଛି । ବାୟୁ, ପାଣି, ପଥର, ଗଛ, ପଶୁ, ଖାଦ୍ୟ ଓ ଆମ ଶରୀର ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଏବଂ ଆୟତନ ଥାଏ ।<br><br>👉 ଉଦାହରଣ: ତୁମ ଟେବୁଲ ଉପରେ ଥିବା ବହି, ପେନ୍‌, ପାଣି ବୋତଲ ଏବଂ ତୁମେ ଶ୍ୱାସରେ ନେଉଥିବା ବାୟୁ ସବୁ ପଦାର୍ଥ ଅଟେ । କାରଣ ସେମାନଙ୍କର ବସ୍ତୁତ୍ୱ ଅଛି ଓ ସେମାନେ କିଛି ସ୍ଥାନ ଦଖଲ କରନ୍ତି ।",
+text:"👉 ଧାରଣା: ପଞ୍ଚତନ୍ତ୍ର ଏକ ପ୍ରସିଦ୍ଧ କାହାଣୀ ପୁସ୍ତକ ଅଟେ । ଏହାକୁ ପଣ୍ଡିତ ବିଷ୍ଣୁ ଶର୍ମା ପିଲାମାନଙ୍କୁ ନୀତି ଶିକ୍ଷା ଦେବା ପାଇଁ ସହଜ ଭାଷାରେ ଲେଖିଥିଲେ । ଏହି ପୁସ୍ତକରେ ପଶୁ ଓ ପକ୍ଷୀମାନଙ୍କ କାହାଣୀ ମାଧ୍ୟମରେ ନୀତି ଶିକ୍ଷା ଦିଆଯାଇଛି । ସିଂହ ଓ ଶଶକ କାହାଣୀ ଏହି ପୁସ୍ତକରୁ ନିଆଯାଇଛି ।<br><br>👉 ଉଦାହରଣ: ଏହି କାହାଣୀରେ ଏକ ଛୋଟ ଶଶକ, ବୁଦ୍ଧି ବଳରେ ଏକ ଅତ୍ୟାଚାରୀ ସିଂହକୁ କିପରି ବିନାଶ କରିଥିଲା, ତାହା ଦେଖାଯାଇଛି ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ପଦାର୍ଥ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ଏହି ବିଶ୍ୱର ସମସ୍ତ ବସ୍ତୁ ଗଠିତ ହୋଇଛି, ତାହାକୁ ପଦାର୍ଥ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ପଞ୍ଚତନ୍ତ୍ର କିଏ ଲେଖିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପଣ୍ଡିତ ବିଷ୍ଣୁ ଶର୍ମା ପଞ୍ଚତନ୍ତ୍ର ଲେଖିଥିଲେ ।",
 
-"<span style='color:red;'>Q-2:</span> ବାୟୁ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ବାୟୁ ଏକ ପଦାର୍ଥ ଅଟେ ।",
+"<span style='color:red;'>Q-2:</span> ପଞ୍ଚତନ୍ତ୍ର କେଉଁ ଉଦ୍ଦେଶ୍ୟରେ ଲେଖାଯାଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ପିଲାମାନଙ୍କୁ ସହଜରେ ନୀତି ଶିକ୍ଷା ଦେବା ଉଦ୍ଦେଶ୍ୟରେ ଏହା ଲେଖାଯାଇଥିଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ପ୍ରତ୍ୟେକ ପଦାର୍ଥର କେଉଁ ଦୁଇଟି ଗୁଣ ଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଓ ଆୟତନ ଥାଏ ।",
+"<span style='color:red;'>Q-3:</span> ପଞ୍ଚତନ୍ତ୍ରର କାହାଣୀମାନଙ୍କରେ କେଉଁମାନଙ୍କ ଚରିତ୍ର ବ୍ୟବହାର ହୋଇଛି ?<br><br><span style='color:green;'>Answer:</span> ପଶୁ ଓ ପକ୍ଷୀମାନଙ୍କ ଚରିତ୍ର ବ୍ୟବହାର ହୋଇଛି ।",
 
-"<span style='color:red;'>Q-4:</span> ଜଳବିନ୍ଦୁ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଜଳବିନ୍ଦୁ ମଧ୍ୟ ଏକ ପଦାର୍ଥ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> ସିଂହ ଶଶକ କାହାଣୀରେ କ'ଣ ଦେଖାଯାଇଛି ?<br><br><span style='color:green;'>Answer:</span> ବୁଦ୍ଧି ବଳରେ ଏକ ଅତ୍ୟାଚାରୀର ବିନାଶ କିପରି ହୋଇପାରେ, ତାହା ଦେଖାଯାଇଛି ।"
 
 ]
 },
 
 {
-heading: "NOTE-2: ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଧାରଣା :-",
+heading: "NOTE-2: ସିଂହ ଭାସୁରକ ଓ ତାହାର ପଶୁ ହତ୍ୟା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତରେ ସମସ୍ତ ବସ୍ତୁ ପଞ୍ଚତତ୍ତ୍ୱ, ଅର୍ଥାତ୍ ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ନେଇ ଗଠିତ । ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ ତାହାର ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଅଧ୍ୟୟନ କରନ୍ତି ।<br><br>👉 ଉଦାହରଣ: ପୂର୍ବରୁ ଲୋକମାନେ ପ୍ରକୃତିକୁ ଦେଖି ପଦାର୍ଥ ବିଷୟରେ ଧାରଣା କରୁଥିଲେ । କିନ୍ତୁ ବର୍ତ୍ତମାନ ବୈଜ୍ଞାନିକମାନେ ପରୀକ୍ଷା ଓ ଗବେଷଣା ମାଧ୍ୟମରେ ପଦାର୍ଥର ଗୁଣ ଓ ପ୍ରକୃତିକୁ ବୁଝନ୍ତି ।",
+text:"👉 ଧାରଣା: ଏକ ଜଙ୍ଗଲରେ ଭାସୁରକ ନାମକ ଏକ ସିଂହ ରହୁଥିଲା । ସେ ପ୍ରତିଦିନ ଅନେକ ମୃଗ ଓ ଶଶକମାନଙ୍କୁ ମାରି ଖାଉଥିଲା । ଏହା ଦେଖି ଜଙ୍ଗଲର ପଶୁମାନେ ଡରି ଯାଇଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ପ୍ରତିଦିନ ଅନେକ ପଶୁ ମରୁଥିବାରୁ ଜଙ୍ଗଲର ଶୁଅର ଆଦି ଜୀବମାନେ ଚିନ୍ତିତ ହୋଇ ଏକାଠି ହେଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ପଞ୍ଚତତ୍ତ୍ୱ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ସିଂହର ନାମ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସିଂହର ନାମ ଭାସୁରକ ଥିଲା ।",
 
-"<span style='color:red;'>Q-2:</span> ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନଙ୍କ ମତ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସମସ୍ତ ବସ୍ତୁ ପାଞ୍ଚଟି ମୌଳିକ ଉପାଦାନକୁ ନେଇ ଗଠିତ ବୋଲି ସେମାନଙ୍କର ମତ ଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> ଭାସୁରକ ପ୍ରତିଦିନ କ'ଣ କରୁଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ପ୍ରତିଦିନ ଅନେକ ମୃଗ ଓ ଶଶକମାନଙ୍କୁ ମାରି ଖାଉଥିଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ କିପରି ବିଭକ୍ତ କରିଛନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ଭୌତିକ ଧର୍ମ ଓ ରାସାୟନିକ ପ୍ରକୃତି ଅନୁସାରେ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରିଛନ୍ତି ।",
+"<span style='color:red;'>Q-3:</span> ଜଙ୍ଗଲର ପଶୁମାନେ କାହିଁକି ଚିନ୍ତିତ ହେଲେ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରତିଦିନ ଅନେକ ପଶୁ ମରୁଥିବାରୁ ସେମାନେ ଚିନ୍ତିତ ହେଲେ ।",
 
-"<span style='color:red;'>Q-4:</span> ଏହି ଅଧ୍ୟାୟରେ କେଉଁ ଗୁଣ ବିଷୟରେ ଜାଣିବା ?<br><br><span style='color:green;'>Answer:</span> ପଦାର୍ଥର ଭୌତିକ ଗୁଣ ବିଷୟରେ ଜାଣିବା ।"
-
-]
-},
-
-    {
-heading: "NOTE-3: ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ :-",
-
-audioPoints: [{
-text:"👉 ଧାରଣା: ଦୀର୍ଘ ସମୟ ଧରି ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ ଦୁଇ ପ୍ରକାର ମତ ଥିଲା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା, ଆଉ ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ । ପରୀକ୍ଷା ଓ ପ୍ରମାଣ ଦ୍ୱାରା ବୈଜ୍ଞାନିକମାନେ ଜାଣିଲେ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।<br><br>👉 ଉଦାହରଣ: ଗୋଟିଏ ବାଲି ଗଦାକୁ ଦେଖିଲେ ଏହା ଅନେକ ଛୋଟ ଛୋଟ ବାଲି କଣିକାରେ ତିଆରି ବୋଲି ଜଣାପଡ଼େ । ସେହିପରି ପ୍ରତ୍ୟେକ ପଦାର୍ଥ ମଧ୍ୟ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ।",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> ପଦାର୍ଥର ପ୍ରକୃତି ସମ୍ପର୍କରେ କେତେ ପ୍ରକାର ମତ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଦୁଇ ପ୍ରକାର ମତ ଥିଲା ।",
-
-"<span style='color:red;'>Q-2:</span> କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
-
-"<span style='color:red;'>Q-3:</span> ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କିପରି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ଥିଲା ।",
-
-"<span style='color:red;'>Q-4:</span> ବାଲି କାହାର ଉଦାହରଣ ?<br><br><span style='color:green;'>Answer:</span> ବାଲି କଣିକାକୁ ନେଇ ଗଠିତ ପଦାର୍ଥର ଉଦାହରଣ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> କେଉଁ ପଶୁମାନେ ଏକାଠି ହୋଇ ସିଂହ ପାଖକୁ ଗଲେ ?<br><br><span style='color:green;'>Answer:</span> ଶୁଅର ଆଦି ସମସ୍ତ ପଶୁମାନେ ଏକାଠି ହୋଇ ଗଲେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-4: ଲୁଣ ଓ ଚିନି ଜଳରେ କେଉଁଠି ଯାଏ ? :-",
+heading: "NOTE-3: ପଶୁମାନଙ୍କ ପ୍ରସ୍ତାବ ଓ ସିଂହର ପ୍ରତିଜ୍ଞା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଲୁଣ କିମ୍ବା ଚିନିକୁ ଜଳରେ ପକାଇ ଗୋଳାଇଲେ ସେଗୁଡ଼ିକ ଆଖିକୁ ଦେଖାଯାଏ ନାହିଁ, କିନ୍ତୁ ଜଳରେ ସମାନ ଭାବରେ ବ୍ୟାପିଯାଆନ୍ତି । ଏହା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ ଅତି କ୍ଷୁଦ୍ର କଣିକାକୁ ନେଇ ଗଠିତ ଏବଂ ସେହି କଣିକାଗୁଡ଼ିକ ଜଳରେ ମିଶି ଚାରିଆଡ଼େ ପ୍ରସାରିତ ହୋଇଯାଆନ୍ତି ।<br><br>👉 ଉଦାହରଣ: ତୁମେ ଗୋଟିଏ ଗ୍ଲାସ ପାଣିରେ ଏକ ଚାମଚ ଚିନି ପକାଇ ଗୋଳାଇଲେ କିଛି ସମୟ ପରେ ଚିନି ଦେଖାଯାଏ ନାହିଁ, କିନ୍ତୁ ପାଣିର ସବୁ ଅଂଶ ମିଠା ହୋଇଯାଏ ।",
+text:"👉 ଧାରଣା: ପଶୁମାନେ ସିଂହକୁ ଏକ ପ୍ରସ୍ତାବ ଦେଲେ । ପ୍ରତିଦିନ ଏକ ଏକ ପଶୁ ପାଳି କ୍ରମେ ସିଂହ ପାଖକୁ ଖାଦ୍ୟ ଭାବରେ ଯିବ, ଯାହା ଫଳରେ ସିଂହକୁ ପ୍ରତିଦିନ ଅଧିକ ପଶୁ ମାରିବାକୁ ପଡ଼ିବ ନାହିଁ । ସିଂହ ଏହି ପ୍ରସ୍ତାବ ମାନି ନେଲା, କିନ୍ତୁ ଚେତାବନୀ ଦେଲା ଯେ ଯଦି କୌଣସିଦିନ ପଶୁ ନ ଆସିବ, ତେବେ ସେ ସମସ୍ତଙ୍କୁ ମାରି ଦେବ ।<br><br>👉 ଉଦାହରଣ: ଏହି ପ୍ରସ୍ତାବ ଫଳରେ ପଶୁମାନେ ନିର୍ଭୟରେ ଜଙ୍ଗଲରେ ବୁଲୁଥିଲେ, କାରଣ ଜଣେ ଜଣେ ପାଳି କ୍ରମେ ସିଂହ ପାଖକୁ ଯାଉଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ବିକରରେ କ'ଣ ପକାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବିକରରେ ଲୁଣ କିମ୍ବା ଚିନି ପକାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ପଶୁମାନେ ସିଂହକୁ କ'ଣ ପ୍ରସ୍ତାବ ଦେଲେ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରତିଦିନ ପାଳି କ୍ରମେ ଏକ ପଶୁ ଖାଦ୍ୟ ଭାବରେ ଯିବାର ପ୍ରସ୍ତାବ ଦେଲେ ।",
 
-"<span style='color:red;'>Q-2:</span> ଲୁଣ ବା ଚିନି ଜଳରେ ମିଶିଲେ କ'ଣ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଲୁଣ ବା ଚିନି ଜଳରେ ଚାରିଆଡ଼େ ବ୍ୟାପିଯାଏ ।",
+"<span style='color:red;'>Q-2:</span> ସିଂହ କେଉଁ ସର୍ତ୍ତରେ ପ୍ରସ୍ତାବ ମାନିଲା ?<br><br><span style='color:green;'>Answer:</span> ଯଦି କୌଣସିଦିନ ପଶୁ ନ ଆସିବ ତେବେ ସେ ସମସ୍ତଙ୍କୁ ମାରିଦେବ ବୋଲି ସର୍ତ୍ତ ଦେଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ଏହି ପରୀକ୍ଷା କ'ଣ ପ୍ରମାଣ କରେ ?<br><br><span style='color:green;'>Answer:</span> ଏହି ପରୀକ୍ଷା ପ୍ରମାଣ କରେ ଯେ ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।",
+"<span style='color:red;'>Q-3:</span> ଏହି ପ୍ରସ୍ତାବ ପରେ ପଶୁମାନେ କିପରି ରହିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପଶୁମାନେ ନିର୍ଭୟରେ ଜଙ୍ଗଲରେ ବୁଲିବାକୁ ଲାଗିଲେ ।",
 
-"<span style='color:red;'>Q-4:</span> ଜଳକୁ କେଉଁ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଜଳକୁ କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ ଗୋଳାଯାଏ ।"
-
-]
-},
-
-    {
-heading: "NOTE-5: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ କେତେ ଛୋଟ ? :-",
-
-audioPoints: [{
-text:"👉 ଧାରଣା: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ । ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ଅଳ୍ପ କିଛି ସ୍ଫଟିକକୁ ବାରମ୍ବାର ଜଳରେ ମିଶାଇ ପତଳା କରିଲେ ମଧ୍ୟ ଜଳର ରଙ୍ଗ ଦେଖାଯାଏ । ଏହାରୁ ଜଣାପଡ଼େ ଯେ ଅତି କ୍ଷୁଦ୍ର କଣିକା ମଧ୍ୟ ନିଜର ପ୍ରଭାବ ଦେଖାଇପାରେ ।<br><br>👉 ଉଦାହରଣ: ଏକ ଛୋଟ ଚିମୁଟି ରଙ୍ଗକୁ ବହୁତ ପାଣିରେ ମିଶାଇଲେ ମଧ୍ୟ ପାଣିରେ ରଙ୍ଗ ଦେଖାଯାଏ । ସେହିପରି ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥିଲେ ମଧ୍ୟ ସେମାନଙ୍କର ପ୍ରଭାବ ସ୍ପଷ୍ଟ ଭାବରେ ଦେଖାଯାଏ ।",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> କେଉଁ ପଦାର୍ଥର ସ୍ଫଟିକ ନିଆଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ନିଆଯାଏ ।",
-
-"<span style='color:red;'>Q-2:</span> ଦ୍ରବଣକୁ କାହିଁକି ଲଘୁକରଣ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> କଣିକାର କ୍ଷୁଦ୍ରତା ଜାଣିବା ପାଇଁ ଦ୍ରବଣକୁ ଲଘୁକରଣ କରାଯାଏ ।",
-
-"<span style='color:red;'>Q-3:</span> ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ କିପରି ରହେ ?<br><br><span style='color:green;'>Answer:</span> ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ ଜଳ ରଙ୍ଗୀନ ହୋଇ ରହେ ।",
-
-"<span style='color:red;'>Q-4:</span> ଏହି ପରୀକ୍ଷା କ'ଣ ସୂଚାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏହି ପରୀକ୍ଷା ସୂଚାଏ ଯେ ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍ ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରିପାରେ ।"
+"<span style='color:red;'>Q-4:</span> ପାଳି କ୍ରମେ ପଶୁ ପଠାଇବାର ଲାଭ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଫଳରେ ସିଂହକୁ ଅଧିକ ପଶୁ ମାରିବାକୁ ପଡ଼ୁ ନ ଥିଲା ।"
 
 ]
 },
 
 {
-heading: "NOTE-6: ପଦାର୍ଥର କଣିକାର ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର :-",
+heading: "NOTE-4: ଶଶକର ପାଳି ଓ ତାହାର ଚିନ୍ତା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ ଏତେ କ୍ଷୁଦ୍ର ଯେ ସେମାନଙ୍କର ଆକାରକୁ ସହଜରେ କଳ୍ପନା କରିହେବ ନାହିଁ । ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ । ବାରମ୍ବାର ଲଘୁକରଣ କରିଲେ ମଧ୍ୟ ସେହି କଣିକାଗୁଡ଼ିକର ପ୍ରଭାବ ରହିଥାଏ ।<br><br>👉 ଉଦାହରଣ: ଗୋଟିଏ କୋଠରୀର ଗୋଟିଏ କୋଣରେ ସୁଗନ୍ଧି କିମ୍ବା ଡେଟଲ୍‌ର କିଛି ବୁନ୍ଦା ପକାଇଲେ କିଛି ସମୟ ପରେ ସାରା କୋଠରୀରେ ତାହାର ଗନ୍ଧ ବ୍ୟାପିଯାଏ । ଏହାରୁ ଜଣାପଡ଼େ ଯେ ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥିଲେ ମଧ୍ୟ ସେମାନେ ଚାରିଆଡ଼େ ବ୍ୟାପିପାରନ୍ତି ।",
+text:"👉 ଧାରଣା: ଏକଦିନ ପାଳି କ୍ରମେ ଏକ ଛୋଟ ଶଶକର ପାଳି ଆସିଲା । ସେ ଇଚ୍ଛା ନ ଥାଇ ମନ୍ଥର ଗତିରେ ସିଂହ ପାଖକୁ ଯାଉ ଯାଉ ସିଂହକୁ ମାରିବାର ଉପାୟ ଚିନ୍ତା କରୁଥିଲା । ଏହି ଚିନ୍ତାରେ ତାହାର ବିଳମ୍ବ ହୋଇଗଲା ।<br><br>👉 ଉଦାହରଣ: ଶଶକ ଚତୁର ଥିଲା, ତେଣୁ ସେ ବଳ ପରିବର୍ତ୍ତେ ବୁଦ୍ଧି ବ୍ୟବହାର କରି ସିଂହକୁ ପରାସ୍ତ କରିବାର ଉପାୟ ଚିନ୍ତା କରୁଥିଲା ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଗୋଟିଏ ସ୍ଫଟିକରେ କ'ଣ ରହିଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ ।",
+"<span style='color:red;'>Q-1:</span> କାହାର ପାଳି ଆସିଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏକ ଛୋଟ ଶଶକର ପାଳି ଆସିଥିଲା ।",
 
-"<span style='color:red;'>Q-2:</span> ଡେଟଲ୍‌ର ଉପସ୍ଥିତି କିପରି ଜଣାପଡ଼େ ?<br><br><span style='color:green;'>Answer:</span> ଦ୍ରବଣର ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
+"<span style='color:red;'>Q-2:</span> ଶଶକ କାହିଁକି ମନ୍ଥର ଗତିରେ ଯାଉଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ସିଂହକୁ ମାରିବାର ଉପାୟ ଚିନ୍ତା କରୁ କରୁ ମନ୍ଥର ଗତିରେ ଯାଉଥିଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ପଦାର୍ଥର କଣିକା କିପରି ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ପଦାର୍ଥର କଣିକା ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ହୋଇଥାଏ ।",
+"<span style='color:red;'>Q-3:</span> ଶଶକର ଚିନ୍ତା ଫଳରେ କ'ଣ ହୋଇଗଲା ?<br><br><span style='color:green;'>Answer:</span> ତାହାର ଯିବାରେ ବିଳମ୍ବ ହୋଇଗଲା ।",
 
-"<span style='color:red;'>Q-4:</span> କଣିକାର କ୍ଷୁଦ୍ରତା କିପରି ?<br><br><span style='color:green;'>Answer:</span> କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> ଶଶକ ସିଂହକୁ ପରାସ୍ତ କରିବାକୁ କେଉଁ ଜିନିଷ ବ୍ୟବହାର କରିବାକୁ ଚାହୁଁଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ବଳ ପରିବର୍ତ୍ତେ ନିଜର ବୁଦ୍ଧି ବ୍ୟବହାର କରିବାକୁ ଚାହୁଁଥିଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-5: କୂଅରେ ପ୍ରତିବିମ୍ବ ଦେଖି ଶଶକର ଯୋଜନା :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ରାସ୍ତାରେ ଯାଉ ଯାଉ ଶଶକ ଏକ କୂଅ ଦେଖିଲା । କୂଅ ଉପରକୁ ଯାଇ ସେ ଜଳରେ ନିଜର ପ୍ରତିବିମ୍ବ ଦେଖିଲା । ଏହା ଦେଖି ତାହାର ମନରେ ଏକ ଚତୁର ଯୋଜନା ଆସିଲା, ସିଂହକୁ ରାଗାଇ ତାହାକୁ ନିଜ ବୁଦ୍ଧିରେ କୂଅରେ ପକାଇଦେବ ।<br><br>👉 ଉଦାହରଣ: ପାଣିରେ ଥିବା ପ୍ରତିବିମ୍ବ ଦେଖି ମଣିଷ କିମ୍ବା ପଶୁ ବୁଝିପାରନ୍ତି ନାହିଁ ଯେ ତାହା ପ୍ରକୃତରେ ପ୍ରତିଫଳନ ମାତ୍ର । ଶଶକ ଏହି ଜିନିଷକୁ ନିଜ ଉପାୟ ପାଇଁ ବ୍ୟବହାର କରିବାକୁ ସ୍ଥିର କଲା ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ରାସ୍ତାରେ ଶଶକ କ'ଣ ଦେଖିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ରାସ୍ତାରେ ଏକ କୂଅ ଦେଖିଲା ।",
+
+"<span style='color:red;'>Q-2:</span> କୂଅ ଭିତରେ ଶଶକ କ'ଣ ଦେଖିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ କୂଅ ଭିତରେ ଜଳରେ ନିଜର ପ୍ରତିବିମ୍ବ ଦେଖିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ପ୍ରତିବିମ୍ବ ଦେଖି ଶଶକ କେଉଁ ଯୋଜନା କଲା ?<br><br><span style='color:green;'>Answer:</span> ସିଂହକୁ ରାଗାଇ କୂଅରେ ପକାଇଦେବାର ଯୋଜନା କଲା ।",
+
+"<span style='color:red;'>Q-4:</span> ଶଶକ କେଉଁ ଜିନିଷ ବ୍ୟବହାର କରି ଏହି ଯୋଜନା କଲା ?<br><br><span style='color:green;'>Answer:</span> କୂଅ ଭିତରେ ଥିବା ପ୍ରତିବିମ୍ବକୁ ବ୍ୟବହାର କରି ସେ ଯୋଜନା କଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-6: ଶଶକର ବିଳମ୍ବ ଓ ସିଂହର କ୍ରୋଧ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଶଶକ ବିଳମ୍ବରେ ସିଂହ ପାଖରେ ପହଞ୍ଚିଲା । ଏହି ସମୟ ମଧ୍ୟରେ ଭୋକରେ ସିଂହ ଅତ୍ୟନ୍ତ ରାଗିଯାଇଥିଲା । ବିଳମ୍ବ ପାଇଁ ସିଂହ ଶଶକକୁ ବହୁତ ଗାଳି ଦେଲା ଏବଂ ତାହାକୁ ମାରି ପରଦିନ ସମସ୍ତ ମୃଗକୁ ମାରିଦେବାର ଧମକ ଦେଲା ।<br><br>👉 ଉଦାହରଣ: ଭୋକରେ ରାଗିଥିବା ସିଂହ, ବିଳମ୍ବର କାରଣ ନ ଜାଣି ପ୍ରଥମେ ଶଶକକୁ ଗାଳି ଦେଲା । ମାତ୍ର ଶଶକ ବିନମ୍ର ଭାବରେ କାରଣ କହିବାକୁ ଅନୁମତି ମାଗିଲା ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଶଶକ କାହିଁକି ବିଳମ୍ବରେ ପହଞ୍ଚିଲା ?<br><br><span style='color:green;'>Answer:</span> ରାସ୍ତାରେ ଯୋଜନା ଚିନ୍ତା କରୁ କରୁ ସେ ବିଳମ୍ବରେ ପହଞ୍ଚିଲା ।",
+
+"<span style='color:red;'>Q-2:</span> ସିଂହ କାହିଁକି ରାଗିଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଭୋକରେ ଏବଂ ଶଶକର ବିଳମ୍ବ ପାଇଁ ସିଂହ ରାଗିଥିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ସିଂହ ଶଶକକୁ କେଉଁ ଧମକ ଦେଲା ?<br><br><span style='color:green;'>Answer:</span> ତାହାକୁ ମାରି ପରଦିନ ସମସ୍ତ ମୃଗକୁ ମାରିଦେବାର ଧମକ ଦେଲା ।",
+
+"<span style='color:red;'>Q-4:</span> ଶଶକ ସିଂହ ପାଖରେ କ'ଣ ମାଗିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ବିଳମ୍ବର କାରଣ କହିବାକୁ ଅନୁମତି ମାଗିଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-7: ଶଶକର କାହାଣୀ - ଅନ୍ୟ ଏକ ସିଂହ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଶଶକ ସିଂହକୁ ମିଛ କାହାଣୀ କହିଲା । ସେ କହିଲା ଯେ ଆସିବା ବାଟରେ ଆଉ ଏକ ବଡ଼ ସିଂହ ତାହାକୁ ରୋକିଥିଲା ଓ ସେ ଏହି ଜଙ୍ଗଲର ମାଲିକ ବୋଲି କହିଥିଲା । ଏହି ଅନ୍ୟ ସିଂହ ପାଇଁ ହିଁ ଶଶକ ବିଳମ୍ବରେ ପହଞ୍ଚିଲା ବୋଲି ସେ କହିଲା ।<br><br>👉 ଉଦାହରଣ: ଶଶକ ଏହି ମିଛ କାହାଣୀ ମାଧ୍ୟମରେ ସିଂହକୁ ବିଶ୍ୱାସ କରାଇଲା ଯେ ଜଙ୍ଗଲରେ ଆଉ ଏକ ଶକ୍ତିଶାଳୀ ସିଂହ ଅଛି ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଶଶକ ସିଂହକୁ କେଉଁ କାହାଣୀ କହିଲା ?<br><br><span style='color:green;'>Answer:</span> ବାଟରେ ଆଉ ଏକ ବଡ଼ ସିଂହ ତାହାକୁ ରୋକିଥିବାର କାହାଣୀ କହିଲା ।",
+
+"<span style='color:red;'>Q-2:</span> ସେହି ଅନ୍ୟ ସିଂହ ନିଜକୁ କ'ଣ ବୋଲି କହିଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ନିଜକୁ ଜଙ୍ଗଲର ମାଲିକ ବୋଲି କହିଥିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ଏହି କାହାଣୀ ପାଇଁ ଶଶକ କ'ଣ କାରଣ ଦେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହି ଅନ୍ୟ ସିଂହ ପାଇଁ ହିଁ ସେ ବିଳମ୍ବରେ ପହଞ୍ଚିଲା ବୋଲି କାରଣ ଦେଲା ।",
+
+"<span style='color:red;'>Q-4:</span> ଶଶକ ଏହି କାହାଣୀ କାହିଁକି କହିଲା ?<br><br><span style='color:green;'>Answer:</span> ସିଂହକୁ ରାଗାଇ କୂଅ ପାଖକୁ ଆଣିବା ପାଇଁ ସେ ଏହି କାହାଣୀ କହିଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-8: ଚୋର ସିଂହର ପ୍ରସ୍ତାବ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଶଶକ ଆହୁରି କହିଲା ଯେ ସେହି ଅନ୍ୟ ସିଂହ ଏକ ପ୍ରସ୍ତାବ ଦେଇଥିଲା, ଦୁହେଁ ମଧ୍ୟରୁ ଯିଏ ପରାକ୍ରମରେ ଜିତିବ ସେ ଜଙ୍ଗଲର ରାଜା ହେବ । ଏହା ଶୁଣି ଭାସୁରକ ସିଂହ ରାଗରେ ସେହି ଅନ୍ୟ ସିଂହକୁ ଦେଖିବାକୁ ଓ ମାରିଦେବାକୁ ଚାହିଁଲା ।<br><br>👉 ଉଦାହରଣ: ଶଶକ ଚତୁରତାର ସହିତ ଭାସୁରକଙ୍କୁ ଏଭଳି କହିଲା ଯେ ସେ ନିଜେ ସେହି ଚୋର ସିଂହକୁ ଦେଖିବାକୁ ଆଗ୍ରହୀ ହୋଇଗଲା ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ସେହି ଅନ୍ୟ ସିଂହ କେଉଁ ପ୍ରସ୍ତାବ ଦେଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଯିଏ ପରାକ୍ରମରେ ଜିତିବ ସେ ରାଜା ହେବ ବୋଲି ପ୍ରସ୍ତାବ ଦେଇଥିଲା ।",
+
+"<span style='color:red;'>Q-2:</span> ଏହା ଶୁଣି ଭାସୁରକ କ'ଣ ଚାହିଁଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ସେହି ଅନ୍ୟ ସିଂହକୁ ଦେଖିବାକୁ ଓ ମାରିଦେବାକୁ ଚାହିଁଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ଶଶକ ଭାସୁରକଙ୍କୁ କ'ଣ କହିଲା ଯେ ଅନ୍ୟ ସିଂହ ଦୁର୍ଗରେ ରହେ ?<br><br><span style='color:green;'>Answer:</span> ଶଶକ କହିଲା ଯେ ଅନ୍ୟ ସିଂହ ଏକ ଦୁର୍ଗରେ ରହେ, ତେଣୁ ତାହାକୁ ଜିତିବା କଠିନ ।",
+
+"<span style='color:red;'>Q-4:</span> ଭାସୁରକ ଶେଷରେ କ'ଣ ନିଷ୍ପତ୍ତି ନେଲା ?<br><br><span style='color:green;'>Answer:</span> ଦୁର୍ଗରେ ଥିଲେ ମଧ୍ୟ ସେ ଅନ୍ୟ ସିଂହକୁ ଦେଖିବାକୁ ଓ ମାରିଦେବାକୁ ନିଷ୍ପତ୍ତି ନେଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-9: ସିଂହକୁ କୂଅ ପାଖକୁ ନେବା :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଶଶକ ଭାସୁରକଙ୍କୁ ଆଗେ ଆଗେ ଚାଲି ପୂର୍ବରୁ ଦେଖିଥିବା କୂଅ ପାଖକୁ ନେଇଗଲା । ସେ କହିଲା ଯେ ତାହାର ପ୍ରତାପ ଦେଖି ଅନ୍ୟ ସିଂହ ନିଜ ଦୁର୍ଗ ଭିତରକୁ ଲୁଚିଯାଇଛି, ଏବଂ ସେହି କୂଅକୁ ଦୁର୍ଗ ବୋଲି ଦେଖାଇଲା ।<br><br>👉 ଉଦାହରଣ: ଶଶକ ଚତୁରତାର ସହିତ ମିଥ୍ୟା କାହାଣୀ ଚାଲୁ ରଖି ସିଂହକୁ କୂଅ ଆଡ଼କୁ ନେଇଗଲା, ଯାହା ଫଳରେ ସିଂହ କିଛି ସନ୍ଦେହ କରିପାରିଲା ନାହିଁ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଶଶକ ସିଂହକୁ କେଉଁଠିକୁ ନେଇଗଲା ?<br><br><span style='color:green;'>Answer:</span> ପୂର୍ବରୁ ଦେଖିଥିବା କୂଅ ପାଖକୁ ନେଇଗଲା ।",
+
+"<span style='color:red;'>Q-2:</span> ଶଶକ ସିଂହକୁ କ'ଣ କହିଲା ଯେ ଅନ୍ୟ ସିଂହ କାହିଁକି ଲୁଚିଗଲା ?<br><br><span style='color:green;'>Answer:</span> ସିଂହର ପ୍ରତାପ ଦେଖି ଅନ୍ୟ ସିଂହ ଦୁର୍ଗ ଭିତରକୁ ଲୁଚିଗଲା ବୋଲି କହିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ଶଶକ କୂଅକୁ କ'ଣ ବୋଲି ଦେଖାଇଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ କୂଅକୁ ଅନ୍ୟ ସିଂହର ଦୁର୍ଗ ବୋଲି ଦେଖାଇଲା ।",
+
+"<span style='color:red;'>Q-4:</span> ସିଂହ କୂଅ ପାଖରେ କ'ଣ କରିବାକୁ ଚାହିଁଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ଦୁର୍ଗ ଭିତରେ ଥିବା ଶତ୍ରୁକୁ ଦେଖିବାକୁ ଚାହିଁଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-10: ସିଂହର ମୃତ୍ୟୁ ଓ କାହାଣୀର ଶିକ୍ଷା :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଭାସୁରକ କୂଅ ଭିତରକୁ ଉକି ମାରି ପାଣିରେ ନିଜର ପ୍ରତିବିମ୍ବ ଦେଖିଲା ଓ ତାହାକୁ ଶତ୍ରୁ ମନେକରି ଗର୍ଜନ କଲା । କୂଅ ଭିତରୁ ପ୍ରତିଧ୍ୱନି ଆହୁରି ଜୋର୍ରେ ଆସିଲା, ଯାହା ଫଳରେ ଭାସୁରକ ଆହୁରି ରାଗି କୂଅରେ ଡେଇଁ ପଡ଼ିଲା ଏବଂ ମରିଗଲା । ଶଶକ ସୁରକ୍ଷିତ ଫେରିଆସି ସମସ୍ତ ପଶୁମାନଙ୍କୁ ଖୁସି ଖବର ଦେଲା ।<br><br>👉 ଉଦାହରଣ: ଏହି କାହାଣୀ ଆମକୁ ଶିଖାଏ ଯେ ବଳ ଅପେକ୍ଷା ବୁଦ୍ଧି ଅଧିକ ଶକ୍ତିଶାଳୀ ଅଟେ । ଛୋଟ ଶଶକ ମଧ୍ୟ ନିଜ ବୁଦ୍ଧି ବଳରେ ବଡ଼ ସିଂହକୁ ପରାସ୍ତ କରିପାରିଲା ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଭାସୁରକ କୂଅ ଭିତରେ କ'ଣ ଦେଖିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ କୂଅ ଭିତରେ ପାଣିରେ ନିଜର ପ୍ରତିବିମ୍ବ ଦେଖିଲା ।",
+
+"<span style='color:red;'>Q-2:</span> ଭାସୁରକ ଗର୍ଜନ କରିବା ପରେ କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> କୂଅ ଭିତରୁ ଆହୁରି ଜୋର୍ରେ ପ୍ରତିଧ୍ୱନି ଉଠିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ଭାସୁରକର ମୃତ୍ୟୁ କିପରି ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଶତ୍ରୁ ମନେକରି ସେ କୂଅରେ ଡେଇଁ ପଡ଼ି ମରିଗଲା ।",
+
+"<span style='color:red;'>Q-4:</span> ଏହି କାହାଣୀ ଆମକୁ କ'ଣ ଶିକ୍ଷା ଦିଏ ?<br><br><span style='color:green;'>Answer:</span> ବଳ ଅପେକ୍ଷା ବୁଦ୍ଧି ଅଧିକ ଶକ୍ତିଶାଳୀ ବୋଲି ଶିକ୍ଷା ଦିଏ ।"
 
 ]
 }
 
 ];
+
+
     
     
 const courseData = {
@@ -351,360 +433,12 @@ const courseData = {
   `, 
     audio: "",
 mermaid: [
-`%%{init: {
-'theme': 'base',
-'themeVariables': {
-  'fontSize': '18px'
-}
-}}%%
-flowchart TD
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ସିଂହ ଓ ଶଶକ<br/>କାହାଣୀର ଆରମ୍ଭ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପରିଚୟ\"]\nA --> I1[\"ଭାସୁରକ ନାମକ ଏକ ସିଂହ<br/>ବଣରେ ରହୁଥିଲା।\"]\nA --> I2[\"ସେ ପ୍ରତିଦିନ ଅନେକ<br/>ପଶୁ ମାରୁଥିଲା।\"]\nA --> I3[\"ପଶୁମାନେ ଏଥିରେ<br/>ବ୍ୟଥିତ ହେଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପଶୁମାନଙ୍କର ପ୍ରସ୍ତାବ\"]\nM --> M1[\"ପଶୁମାନେ ମିଶି<br/>ସିଂହ ପାଖକୁ ଗଲେ।\"]\nM --> M2[\"ପ୍ରତିଦିନ ଏକ ପଶୁ<br/>ପଠାଇବାକୁ କହିଲେ।\"]\nM --> M3[\"ସିଂହ ଏହି<br/>ପ୍ରସ୍ତାବ ମାନିଲା।\"]\nM --> M4[\"ସିଂହ ଏକ<br/>ଚେତାବନୀ ଦେଲା।\"]\nM --> M5[\"ପଶୁ ନ ଆସିଲେ ସେ<br/>ସମସ୍ତଙ୍କୁ ମାରିବ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ପାଳି ବ୍ୟବସ୍ଥା\"]\nC --> C1[\"ପ୍ରତିଦିନ ଏକ ପଶୁ<br/>ପାଳି କ୍ରମେ ଯାଉଥିଲା।\"]\nC --> C2[\"ଏକଦିନ ଶଶକର<br/>ପାଳି ଆସିଲା।\"]\nC --> C3[\"ଶଶକ ବିଳମ୍ବରେ ଗଲା,<br/>ଉପାୟ ଚିନ୍ତା କଲା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-TITLE["📖 NOTE-1:<br/>ପଦାର୍ଥ କ'ଣ ?"]
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ଶଶକର ବୁଦ୍ଧି<br/>ଓ କୂଅର ଯୋଜନା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 କୂଅ ଦର୍ଶନ\"]\nA --> I1[\"ଶଶକ ବାଟରେ<br/>ଏକ କୂଅ ଦେଖିଲା।\"]\nA --> I2[\"କୂଅରେ ନିଜର<br/>ପ୍ରତିବିମ୍ବ ଦେଖିଲା।\"]\nA --> I3[\"ଏଥିରୁ ଏକ<br/>ଉପାୟ ଭାବିଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ସିଂହ ପାଖକୁ ଯାତ୍ରା\"]\nM --> M1[\"ଶଶକ ବିଳମ୍ବରେ<br/>ସିଂହ ପାଖରେ ପହଞ୍ଚିଲା।\"]\nM --> M2[\"ସିଂହ କ୍ରୋଧିତ ହୋଇ<br/>ଧମକ ଦେଲା।\"]\nM --> M3[\"ଶଶକ କ୍ଷମା ମାଗି<br/>କାରଣ କହିଲା।\"]\nM --> M4[\"ଏକ ଅନ୍ୟ ସିଂହ ବାଟରେ<br/>ରୋକିଥିଲା ବୋଲି କହିଲା।\"]\nM --> M5[\"ସେ ସିଂହ ନିଜକୁ<br/>ରାଜା କହୁଥିଲା ବୋଲି କହିଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ସିଂହର କ୍ରୋଧ\"]\nC --> C1[\"ଭାସୁରକ ଶତ୍ରୁ ସିଂହକୁ<br/>ଦେଖିବାକୁ ଚାହିଁଲା।\"]\nC --> C2[\"ଶଶକ ତାକୁ କୂଅ<br/>ପାଖକୁ ନେଇଗଲା।\"]\nC --> C3[\"ଏହା ଥିଲା ଶଶକର<br/>ଚତୁର ଯୋଜନା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-TITLE --> INTRO
-
-subgraph INTRO[ ]
-direction LR
-A["🟡 ଭୂମିକା"]
-
-A --> I1["ପଦାର୍ଥର ଅର୍ଥ ଏଠାରେ<br/>ବୁଝାଯାଇଛି।"]
-A --> I2["ଆମ ଚାରିପାଖରେ ଅନେକ<br/>ପ୍ରକାର ବସ୍ତୁ ଅଛି।"]
-A --> I3["ସବୁ ବସ୍ତୁ କୌଣସି ନା<br/>କୌଣସି ପଦାର୍ଥରେ ଗଠିତ।"]
-end
-
-INTRO --> MAIN
-
-subgraph MAIN[ ]
-direction LR
-M["🟢 ବ୍ୟାଖ୍ୟା"]
-
-M --> M1["ଘର, ଗଛ, ପଥର, ପାଣି ଓ<br/>ବାୟୁ ସବୁ ପଦାର୍ଥ ଅଟେ।"]
-M --> M2["ବସ୍ତୁମାନଙ୍କର ଆକାର,<br/>ଆକୃତି ଓ ରୂପ ଭିନ୍ନ ଅଟେ।"]
-M --> M3["ସମସ୍ତ ବସ୍ତୁ ଯେଉଁ ଦ୍ରବ୍ୟରେ<br/>ତିଆରି ହୁଏ ତାହା ପଦାର୍ଥ।"]
-M --> M4["ବାୟୁ, ଖାଦ୍ୟ, ପଥର,<br/>ମେଘ ଓ ତାରା ପଦାର୍ଥ ଅଟେ।"]
-M --> M5["ଉଦ୍ଭିଦ, ପଶୁ, ଜଳବିନ୍ଦୁ ଓ<br/>ବାଲି କଣିକା ମଧ୍ୟ ପଦାର୍ଥ ଅଟେ।"]
-end
-
-MAIN --> CONCLUSION
-
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 ନିଷ୍କର୍ଷ"]
-
-C --> C1["ପ୍ରତ୍ୟେକ ପଦାର୍ଥ କିଛି<br/>ସ୍ଥାନ ଅଧିକାର କରେ।"]
-C --> C2["ପ୍ରତ୍ୟେକ ପଦାର୍ଥର<br/>ବସ୍ତୁତ୍ୱ ରହିଥାଏ।"]
-C --> C3["ପ୍ରତ୍ୟେକ ପଦାର୍ଥର<br/>ଆୟତନ ମଧ୍ୟ ଥାଏ।"]
-end
-
-linkStyle 0 stroke-width:0px;
-linkStyle 4 stroke-width:0px;
-linkStyle 10 stroke-width:0px;
-
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-
-class TITLE title;
-class A,I1,I2,I3 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2,C3 conclusion;`,
-
-`%%{init: {
-'theme': 'base',
-'themeVariables': {
-  'fontSize': '18px'
-}
-}}%%
-flowchart TD
-
-TITLE["📖 NOTE-2:<br/>ପଦାର୍ଥ ସମ୍ପର୍କରେ ପ୍ରାଚୀନ ଓ<br/>ଆଧୁନିକ ଧାରଣା"]
-
-TITLE --> INTRO
-
-subgraph INTRO[ ]
-direction LR
-A["🟡 ଭୂମିକା"]
-
-A --> I1["ମନୁଷ୍ୟ ପୁରାତନ କାଳରୁ<br/>ପଦାର୍ଥକୁ ବୁଝିବାକୁ ଚେଷ୍ଟା କରିଛି।"]
-A --> I2["ପଦାର୍ଥ କିପରି ଗଠିତ<br/>ତାହା ଜାଣିବାକୁ ଇଚ୍ଛା କରିଛି।"]
-A --> I3["ପ୍ରାଚୀନ ଓ ଆଧୁନିକ ଯୁଗରେ<br/>ଭିନ୍ନ ଭିନ୍ନ ଧାରଣା ଥିଲା।"]
-end
-
-INTRO --> MAIN
-
-subgraph MAIN[ ]
-direction LR
-M["🟢 ବ୍ୟାଖ୍ୟା"]
-
-M --> M1["ପ୍ରାଚୀନ ଭାରତୀୟ ଦାର୍ଶନିକମାନେ<br/>ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଦେଇଥିଲେ।"]
-M --> M2["ମାଟି, ଜଳ, ବାୟୁ,<br/>ଅଗ୍ନି ଓ ଆକାଶ ପଞ୍ଚତତ୍ତ୍ୱ ଅଟେ।"]
-M --> M3["ସଜୀବ ଓ ନିର୍ଜୀବ ସବୁ ବସ୍ତୁ<br/>ଏହି ପାଞ୍ଚଟି ଉପାଦାନରେ ଗଠିତ।"]
-M --> M4["ପ୍ରାଚୀନ ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ<br/>ମଧ୍ୟ ଏହିପରି ମତ ଦେଇଥିଲେ।"]
-M --> M5["ଆଧୁନିକ ବୈଜ୍ଞାନିକମାନେ ପଦାର୍ଥକୁ<br/>ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣରେ ବିଭକ୍ତ କରିଛନ୍ତି।"]
-end
-
-MAIN --> CONCLUSION
-
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 ନିଷ୍କର୍ଷ"]
-
-C --> C1["ପ୍ରାଚୀନ କାଳରେ<br/>ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଥିଲା।"]
-C --> C2["ଆଧୁନିକ ବିଜ୍ଞାନ ପଦାର୍ଥକୁ<br/>ଭୌତିକ ଓ ରାସାୟନିକ ଗୁଣରେ ଅଧ୍ୟୟନ କରେ।"]
-C --> C3["ବିଜ୍ଞାନ ସମୟ ସହିତ<br/>ନୂଆ ଜ୍ଞାନ ଦେଇଥାଏ।"]
-end
-
-linkStyle 0 stroke-width:0px;
-linkStyle 4 stroke-width:0px;
-linkStyle 10 stroke-width:0px;
-
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-
-class TITLE title;
-class A,I1,I2,I3 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2,C3 conclusion;`,
-
-    `%%{init: {
-'theme': 'base',
-'themeVariables': {
-  'fontSize': '18px'
-}
-}}%%
-flowchart TD
-
-TITLE["📖 NOTE-3:<br/>ପଦାର୍ଥ କଣିକାକୁ ନେଇ<br/>ଗଠିତ"]
-
-TITLE --> INTRO
-
-subgraph INTRO[ ]
-direction LR
-A["🟡 ଭୂମିକା"]
-
-A --> I1["ପଦାର୍ଥର ଗଠନ ବିଷୟରେ<br/>ଭିନ୍ନ ମତ ଥିଲା।"]
-A --> I2["ବାଲି ଅନେକ ଛୋଟ<br/>କଣିକାରେ ତିଆରି।"]
-A --> I3["ପଦାର୍ଥର ପ୍ରକୃତି ଜାଣିବାକୁ<br/>ଚେଷ୍ଟା କରାଯାଇଥିଲା।"]
-end
-
-INTRO --> MAIN
-
-subgraph MAIN[ ]
-direction LR
-M["🟢 ବ୍ୟାଖ୍ୟା"]
-
-M --> M1["ଦୀର୍ଘ ସମୟ ଧରି<br/>ଦୁଇ ପ୍ରକାର ମତ ଥିଲା।"]
-M --> M2["କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ<br/>ଅବିଚ୍ଛିନ୍ନ ଅଟେ।"]
-M --> M3["କାଠ, କାଚ ଓ କାଗଜ<br/>ଏହାର ଉଦାହରଣ ଥିଲା।"]
-M --> M4["ଅନ୍ୟମାନଙ୍କ ମତରେ ପଦାର୍ଥ<br/>କଣିକାକୁ ନେଇ ଗଠିତ।"]
-M --> M5["ବାଲି ଏହାର ଉଦାହରଣ।<br/>ସତ୍ୟ ଜାଣିବାକୁ ପରୀକ୍ଷା ଦରକାର।"]
-end
-
-MAIN --> CONCLUSION
-
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 ନିଷ୍କର୍ଷ"]
-
-C --> C1["ପଦାର୍ଥର ପ୍ରକୃତି ବିଷୟରେ<br/>ଦୁଇଟି ଧାରଣା ଥିଲା।"]
-C --> C2["ପରୀକ୍ଷା ଦ୍ୱାରା ସତ୍ୟ<br/>ଜାଣିବା ସମ୍ଭବ ହେଲା।"]
-C --> C3["ପଦାର୍ଥ କଣିକାକୁ ନେଇ<br/>ଗଠିତ ବୋଲି ଜଣାପଡ଼ିଲା।"]
-end
-
-linkStyle 0 stroke-width:0px;
-linkStyle 4 stroke-width:0px;
-linkStyle 10 stroke-width:0px;
-
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-
-class TITLE title;
-class A,I1,I2,I3 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2,C3 conclusion;`,
-
-    `%%{init: {
-'theme': 'base',
-'themeVariables': {
-  'fontSize': '18px'
-}
-}}%%
-flowchart TD
-
-TITLE["📖 NOTE-4:<br/>ଲୁଣ ଓ ଚିନି ଜଳରେ<br/>କେଉଁଠି ଯାଏ ?"]
-
-TITLE --> INTRO
-
-subgraph INTRO[ ]
-direction LR
-A["🟡 ଭୂମିକା"]
-
-A --> I1["ଲୁଣ ବା ଚିନି<br/>ଜଳରେ ମିଶିଯାଏ।"]
-A --> I2["ମିଶିଗଲେ ସେମାନେ<br/>ଦେଖାଯାଆନ୍ତି ନାହିଁ।"]
-A --> I3["ଏହାର କାରଣ<br/>ଜାଣିବା ଦରକାର।"]
-end
-
-INTRO --> MAIN
-
-subgraph MAIN[ ]
-direction LR
-M["🟢 ବ୍ୟାଖ୍ୟା"]
-
-M --> M1["100 ମିଲି ବିକର ନେଇ<br/>ଅଧା ଜଳ ଭରାଯାଏ।"]
-M --> M2["ଜଳସ୍ତରକୁ ଚିହ୍ନଟ କରି<br/>ଲୁଣ ବା ଚିନି ପକାଯାଏ।"]
-M --> M3["କାଚଦଣ୍ଡ ସାହାଯ୍ୟରେ<br/>ଜଳକୁ ଗୋଳାଯାଏ।"]
-M --> M4["ଜଳସ୍ତରର ପରିବର୍ତ୍ତନ ଓ<br/>ଚିନି କେଉଁଠି ଗଲା ଦେଖାଯାଏ।"]
-M --> M5["ଲୁଣ ବା ଚିନି ଜଳରେ<br/>ବ୍ୟାପିଯାଏ। ଏହା ପଦାର୍ଥ କଣିକାରୁ ଗଠିତ ବୋଲି ପ୍ରମାଣ କରେ।"]
-end
-
-MAIN --> CONCLUSION
-
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 ନିଷ୍କର୍ଷ"]
-
-C --> C1["ଚିନି ବା ଲୁଣ<br/>ଜଳରେ ବ୍ୟାପିଯାଏ।"]
-C --> C2["ପଦାର୍ଥ କଣିକାକୁ ନେଇ<br/>ଗଠିତ ହୋଇଥାଏ।"]
-C --> C3["ସରଳ ପରୀକ୍ଷାରୁ ମଧ୍ୟ<br/>ବୈଜ୍ଞାନିକ ସତ୍ୟ ଜଣାଯାଏ।"]
-end
-
-linkStyle 0 stroke-width:0px;
-linkStyle 4 stroke-width:0px;
-linkStyle 10 stroke-width:0px;
-
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-
-class TITLE title;
-class A,I1,I2,I3 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2,C3 conclusion;`,
-
-`%%{init: {
-'theme': 'base',
-'themeVariables': {
-  'fontSize': '18px'
-}
-}}%%
-flowchart TD
-
-TITLE["📖 NOTE-5:<br/>ପଦାର୍ଥର କଣିକାଗୁଡ଼ିକ<br/>କେତେ ଛୋଟ ?"]
-
-TITLE --> INTRO
-
-subgraph INTRO[ ]
-direction LR
-A["🟡 ଭୂମିକା"]
-
-A --> I1["ପଦାର୍ଥର କଣିକା<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ।"]
-A --> I2["ରଙ୍ଗ ମିଶାଇଲେ ମଧ୍ୟ<br/>ପାଣି ରଙ୍ଗୀନ ଦେଖାଯାଏ।"]
-A --> I3["ଏକ ପରୀକ୍ଷା ଦ୍ୱାରା<br/>ଏହା ଜଣାଯାଏ।"]
-end
-
-INTRO --> MAIN
-
-subgraph MAIN[ ]
-direction LR
-M["🟢 ବ୍ୟାଖ୍ୟା"]
-
-M --> M1["ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର<br/>ସ୍ଫଟିକ ଜଳରେ ମିଶାଯାଏ।"]
-M --> M2["ଦ୍ରବଣର କିଛି ଅଂଶ ନେଇ<br/>ବିଶୁଦ୍ଧ ଜଳରେ ମିଶାଯାଏ।"]
-M --> M3["ଏହି ପ୍ରକ୍ରିୟାରେ ଦ୍ରବଣର<br/>ବାରମ୍ବାର ଲଘୁକରଣ ହୁଏ।"]
-M --> M4["ପାଞ୍ଚରୁ ଆଠ ଥର ପରେ ମଧ୍ୟ<br/>ଜଳ ରଙ୍ଗୀନ ରହିଥାଏ।"]
-M --> M5["ଅଳ୍ପ ପଦାର୍ଥ ବହୁତ ଜଳକୁ<br/>ରଙ୍ଗୀନ କରିପାରେ।"]
-end
-
-MAIN --> CONCLUSION
-
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 ନିଷ୍କର୍ଷ"]
-
-C --> C1["ପଦାର୍ଥର କଣିକା<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ।"]
-C --> C2["ବାରମ୍ବାର ଲଘୁକରଣ ପରେ ମଧ୍ୟ<br/>ତାହାର ପ୍ରଭାବ ରହେ।"]
-C --> C3["କ୍ଷୁଦ୍ର କଣିକାର ପ୍ରଭାବ<br/>ସହଜରେ ଦେଖାଯାଏ।"]
-end
-
-linkStyle 0 stroke-width:0px;
-linkStyle 4 stroke-width:0px;
-linkStyle 10 stroke-width:0px;
-
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-
-class TITLE title;
-class A,I1,I2,I3 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2,C3 conclusion;`,
-
-`%%{init: {
-'theme': 'base',
-'themeVariables': {
-  'fontSize': '18px'
-}
-}}%%
-flowchart TD
-
-TITLE["📖 NOTE-6:<br/>ପଦାର୍ଥର କଣିକାର<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଆକାର"]
-
-TITLE --> INTRO
-
-subgraph INTRO[ ]
-direction LR
-A["🟡 ଭୂମିକା"]
-
-A --> I1["ପଦାର୍ଥର କଣିକା<br/>ବହୁତ ଛୋଟ ହୋଇଥାଏ।"]
-A --> I2["ସୁଗନ୍ଧିର ଗନ୍ଧ<br/>ସାରା ଘରେ ବ୍ୟାପିଯାଏ।"]
-A --> I3["ଏହା କଣିକାର<br/>କ୍ଷୁଦ୍ରତାକୁ ଦେଖାଏ।"]
-end
-
-INTRO --> MAIN
-
-subgraph MAIN[ ]
-direction LR
-M["🟢 ବ୍ୟାଖ୍ୟା"]
-
-M --> M1["ଅଳ୍ପ ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍<br/>ବହୁତ ଜଳକୁ ରଙ୍ଗୀନ କରେ।"]
-M --> M2["ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ<br/>କ୍ଷୁଦ୍ର କଣିକା ରହିଥାଏ।"]
-M --> M3["କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ<br/>ଆହୁରି ଛୋଟ ହୋଇଯାନ୍ତି।"]
-M --> M4["ଡେଟଲ୍‌କୁ ବାରମ୍ବାର ଲଘୁକରଣ<br/>କଲେ ମଧ୍ୟ ଗନ୍ଧ ରହିଥାଏ।"]
-M --> M5["ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ।<br/>କଣିକାର କ୍ଷୁଦ୍ରତା କଳ୍ପନାର ବାହାରେ।"]
-end
-
-MAIN --> CONCLUSION
-
-subgraph CONCLUSION[ ]
-direction LR
-C["🔵 ନିଷ୍କର୍ଷ"]
-
-C --> C1["ପଦାର୍ଥର କଣିକା<br/>ଅତ୍ୟନ୍ତ କ୍ଷୁଦ୍ର ଅଟେ।"]
-C --> C2["ଗୋଟିଏ ସ୍ଫଟିକରେ<br/>ଅସଂଖ୍ୟ କଣିକା ଥାଏ।"]
-C --> C3["କଣିକାର ଆକାର<br/>କଳ୍ପନା କରିବା କଷ୍ଟକର।"]
-end
-
-linkStyle 0 stroke-width:0px;
-linkStyle 4 stroke-width:0px;
-linkStyle 10 stroke-width:0px;
-
-classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
-classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
-classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
-classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
-
-class TITLE title;
-class A,I1,I2,I3 intro;
-class M,M1,M2,M3,M4,M5 body;
-class C,C1,C2,C3 conclusion;`    
-]
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ସିଂହର ବିନାଶ<br/>ଓ କାହାଣୀର ଶିକ୍ଷା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 କୂଅ ପାଖରେ\"]\nA --> I1[\"ସିଂହ କୂଅ ମଧ୍ୟରେ<br/>ନିଜ ପ୍ରତିବିମ୍ବ ଦେଖିଲା।\"]\nA --> I2[\"ସେ ଏହାକୁ ଶତ୍ରୁ<br/>ବୋଲି ଭାବିଲା।\"]\nA --> I3[\"ସେ ଜୋର୍ରେ<br/>ଗର୍ଜନ କଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପ୍ରତିଧ୍ୱନି ଓ ମୃତ୍ୟୁ\"]\nM --> M1[\"କୂଅରୁ ଏକ<br/>ପ୍ରତିଧ୍ୱନି ଆସିଲା।\"]\nM --> M2[\"ସିଂହ ଏହାକୁ ଶତ୍ରୁର<br/>ଗର୍ଜନ ମନେକଲା।\"]\nM --> M3[\"ଅତି କ୍ରୋଧରେ ସେ<br/>କୂଅରେ ଡେଇଁ ପଡ଼ିଲା।\"]\nM --> M4[\"ସିଂହ କୂଅରେ ପଡ଼ି<br/>ମୃତ୍ୟୁବରଣ କଲା।\"]\nM --> M5[\"ବୁଦ୍ଧିବଳ ଶକ୍ତିଠାରୁ<br/>ବଡ଼ ବୋଲି ପ୍ରମାଣିତ ହେଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଶିକ୍ଷା\"]\nC --> C1[\"ଶଶକ ଓ ସବୁ ପଶୁ<br/>ଆନନ୍ଦିତ ହେଲେ।\"]\nC --> C2[\"ସେମାନେ ବଣରେ<br/>ସୁଖରେ ରହିଲେ।\"]\nC --> C3[\"ବୁଦ୍ଧି ବଳରେ ଅତ୍ୟାଚାରୀର<br/>ବିନାଶ ସମ୍ଭବ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
+  ]
   
       
 }  
