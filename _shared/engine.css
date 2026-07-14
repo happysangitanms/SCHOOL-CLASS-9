@@ -2269,3 +2269,8 @@ body.practice-mode #blackboardCTABtn::after {
     font-size: 14px;
     font-weight: bold;
 }
+
+/* Hide the long blackboard CTA button — only in practice mode, only for these subjects */
+body.practice-mode.hide-blackboard-cta div:has(> #blackboardCTABtn) {
+    display: none !important;
+}
