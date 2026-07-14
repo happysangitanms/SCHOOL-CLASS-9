@@ -1,165 +1,123 @@
 const APP_CONFIG = {
     sreni: "ନବମ",
-    subject: "ଭୌତିକ ବିଜ୍ଞାନ"
+    subject: "ସଂସ୍କୃତ"
 };
 
 
 const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
-    audio1: "https://audio.evidya.de/S9SCP1P1-2.mp3",
+    audio1: "https://audio.evidya.de/S9TLS1P2-3.mp3",
     video:  "https://www.youtube.com/embed/jyNYTTROtU4?playsinline=1&rel=0&modestbranding=1&autoplay=1",
-    pdf:    "https://audio.evidya.de/S9SCP1P1-2.pdf"
+    pdf:    "https://audio.evidya.de/S9TLS1P2-3.pdf"
 };
 
 const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "MATTER",
-            odia: "ପଦାର୍ଥ",
-            emoji: "🧪",
-            odiaUse: "ପଦାର୍ଥ ଅର୍ଥ ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ବସ୍ତୁ ତିଆରି ହୁଏ । ବାୟୁ, ଜଳ ଓ ପଥର ପଦାର୍ଥ ଅଟେ ।",
+            word: "ANYEDYUḤ",
+            odia: "ଅନ୍ୟ ଏକଦିନେ",
+            emoji: "📅",
+            odiaUse: "ଅନ୍ୟ ଏକଦିନେ ଅର୍ଥ ପରଦିନ କିମ୍ବା ଆଉ ଗୋଟିଏ ଦିନ। ଅନ୍ୟ ଏକଦିନେ ସମସ୍ତ ପଶୁ ସିଂହ ପାଖକୁ ଗଲେ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "MASS",
-            odia: "ବସ୍ତୁତ୍ୱ",
-            emoji: "⚖️",
-            odiaUse: "ବସ୍ତୁତ୍ୱ ଅର୍ଥ ପଦାର୍ଥର ପରିମାଣ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ବସ୍ତୁତ୍ୱ ଥାଏ ।",
+            word: "SARVOCCHEDANAM",
+            odia: "ସମସ୍ତଙ୍କ ବିନାଶ",
+            emoji: "💥",
+            odiaUse: "ସମସ୍ତଙ୍କ ବିନାଶ ଅର୍ଥ ସମସ୍ତଙ୍କର ନଷ୍ଟ ହୋଇଯିବା। ପଶୁମାନେ ସମସ୍ତଙ୍କ ବିନାଶ ଚାହୁଁନଥିଲେ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "VOLUME",
-            odia: "ଆୟତନ",
-            emoji: "📦",
-            odiaUse: "ଆୟତନ ଅର୍ଥ ପଦାର୍ଥ ଯେତିକି ସ୍ଥାନ ଦଖଲ କରେ । ପ୍ରତ୍ୟେକ ପଦାର୍ଥର ଆୟତନ ଅଛି ।",
+            word: "ĀKARṆYA",
+            odia: "ଶୁଣି",
+            emoji: "👂",
+            odiaUse: "ଶୁଣି ଅର୍ଥ କଥା ଶ୍ରବଣ କରି। ସିଂହ ପଶୁମାନଙ୍କ କଥା ଶୁଣି ରାଜି ହେଲା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "TEXTURE",
-            odia: "ରୂପ ବିନ୍ୟାସ",
-            emoji: "✋",
-            odiaUse: "ରୂପ ବିନ୍ୟାସ ଅର୍ଥ ପୃଷ୍ଠଭାଗର ଗଠନ । ନଡ଼ିଆର ଖୋଲର ରୂପ ବିନ୍ୟାସ ଖରାପିଆ ହୋଇଥାଏ ।",
+            word: "ŚVĀPADAḤ",
+            odia: "ହିଂସ୍ର ଜନ୍ତୁ",
+            emoji: "🦁",
+            odiaUse: "ହିଂସ୍ର ଜନ୍ତୁ ଅର୍ଥ ଅନ୍ୟ ପଶୁଙ୍କୁ ମାରି ଖାଉଥିବା ପ୍ରାଣୀ। ସିଂହ ଏକ ହିଂସ୍ର ଜନ୍ତୁ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PHILOSOPHER",
-            odia: "ଦାର୍ଶନିକ",
-            emoji: "🤔",
-            odiaUse: "ଦାର୍ଶନିକ ଅର୍ଥ ଚିନ୍ତାବିଦ୍ । ପ୍ରାଚୀନ ଦାର୍ଶନିକମାନେ ପଞ୍ଚତତ୍ତ୍ୱ ଧାରଣା ଦେଇଥିଲେ ।",
+            word: "PARYAṬANTI",
+            odia: "ପର୍ଯ୍ୟଟନ କରନ୍ତି",
+            emoji: "🚶",
+            odiaUse: "ପର୍ଯ୍ୟଟନ କରନ୍ତି ଅର୍ଥ ଏଣେତେଣେ ବୁଲନ୍ତି। ପଶୁମାନେ ନିର୍ଭୟରେ ବନରେ ପର୍ଯ୍ୟଟନ କରୁଥିଲେ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PANCHATATTVA",
-            odia: "ପଞ୍ଚତତ୍ତ୍ୱ",
-            emoji: "🌍",
-            odiaUse: "ପଞ୍ଚତତ୍ତ୍ୱ ଅର୍ଥ ପାଞ୍ଚଟି ମୌଳିକ ଉପାଦାନ । ମାଟି, ଜଳ, ବାୟୁ, ଅଗ୍ନି ଓ ଆକାଶକୁ ପଞ୍ଚତତ୍ତ୍ୱ କୁହାଯାଏ ।",
+            word: "KṢUTKṢĀMAKAṆṬHAḤ",
+            odia: "କ୍ଷୁଧାତୁର କଣ୍ଠ",
+            emoji: "😫",
+            odiaUse: "କ୍ଷୁଧାତୁର କଣ୍ଠ ଅର୍ଥ ଭୋକରେ ଦୁର୍ବଳ ହୋଇଯିବା। ସିଂହ ଭୋକରେ କ୍ଷୁଧାତୁର କଣ୍ଠ ହୋଇଥିଲା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PHYSICAL PROPERTY",
-            odia: "ଭୌତିକ ଧର୍ମ",
-            emoji: "👀",
-            odiaUse: "ଭୌତିକ ଧର୍ମ ଅର୍ଥ ଦେଖାଯାଉଥିବା ଗୁଣ । ପଦାର୍ଥର ଭୌତିକ ଧର୍ମ ଅଧ୍ୟୟନ କରାଯାଏ ।",
+            word: "PRAJVALITĀTMĀ",
+            odia: "ଅତି କ୍ରୋଧିତ",
+            emoji: "😡",
+            odiaUse: "ଅତି କ୍ରୋଧିତ ଅର୍ଥ ବହୁତ ରାଗିଯିବା। ବିଳମ୍ବ ଦେଖି ସିଂହ ଅତି କ୍ରୋଧିତ ହେଲା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CHEMICAL NATURE",
-            odia: "ରାସାୟନିକ ପ୍ରକୃତି",
-            emoji: "⚗️",
-            odiaUse: "ରାସାୟନିକ ପ୍ରକୃତି ଅର୍ଥ ରାସାୟନିକ ଗୁଣ । ଏହା ପଦାର୍ଥର ଏକ ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ।",
+            word: "NIPĀTYA",
+            odia: "ହତ୍ୟା କରି",
+            emoji: "⚔️",
+            odiaUse: "ହତ୍ୟା କରି ଅର୍ଥ ମାରିଦେଇ। ସିଂହ ପଶୁମାନଙ୍କୁ ହତ୍ୟା କରି ଖାଉଥିଲା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PARTICLE",
-            odia: "କଣିକା",
-            emoji: "🔹",
-            odiaUse: "କଣିକା ଅର୍ଥ ଅତି ଛୋଟ ଅଂଶ । ପଦାର୍ଥ କଣିକାକୁ ନେଇ ଗଠିତ ।",
+            word: "SATTVĀNĀM",
+            odia: "ପ୍ରାଣୀମାନଙ୍କର",
+            emoji: "🐾",
+            odiaUse: "ପ୍ରାଣୀମାନଙ୍କର ଅର୍ଥ ସମସ୍ତ ଜୀବଜନ୍ତୁଙ୍କର। ଶଶକ କହିଲା ଏଥିରେ ପ୍ରାଣୀମାନଙ୍କର ଦୋଷ ନାହିଁ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CONTINUOUS",
-            odia: "ଅବିଚ୍ଛିନ୍ନ",
-            emoji: "➖",
-            odiaUse: "ଅବିଚ୍ଛିନ୍ନ ଅର୍ଥ ଭାଗ କରିହେବ ନାହିଁ ବୋଲି ଧାରଣା । କେତେକଙ୍କ ମତରେ ପଦାର୍ଥ ଅବିଚ୍ଛିନ୍ନ ଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "BEAKER",
-            odia: "ବିକର",
-            emoji: "🥛",
-            odiaUse: "ବିକର ଅର୍ଥ ପରୀକ୍ଷାଗାରର ପାତ୍ର । ଲୁଣ ଓ ଚିନିର ପରୀକ୍ଷା ବିକରରେ କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "MARK",
-            odia: "ଚିହ୍ନଟ",
+            word: "SAṂSTHĀPYA",
+            odia: "ରଖି",
             emoji: "📍",
-            odiaUse: "ଚିହ୍ନଟ ଅର୍ଥ ଚିହ୍ନ ଦେଇ ରଖିବା । ଜଳର ଉପର ସ୍ତରକୁ ଚିହ୍ନଟ କରାଯାଏ ।",
+            odiaUse: "ରଖି ଅର୍ଥ ଗୋଟିଏ ସ୍ଥାନରେ ଛାଡ଼ି ଦେଇ। ଚାରିଟି ଶଶକଙ୍କୁ ସେଠାରେ ରଖି ଦିଆଗଲା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SPREAD",
-            odia: "ବ୍ୟାପିଯିବା",
-            emoji: "🌊",
-            odiaUse: "ବ୍ୟାପିଯିବା ଅର୍ଥ ଚାରିଆଡ଼େ ପ୍ରସାରିତ ହେବା । ଚିନି ଜଳରେ ବ୍ୟାପିଯାଏ ।",
+            word: "EVAMUKTVĀ",
+            odia: "ଏହିପରି କହି",
+            emoji: "🗣️",
+            odiaUse: "ଏହିପରି କହି ଅର୍ଥ ଏଭଳି କଥା କହି। ଶଶକ ଏହିପରି କହି ଆଗକୁ ଚାଲିଲା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CRYSTAL",
-            odia: "ସ୍ଫଟିକ",
-            emoji: "💎",
-            odiaUse: "ସ୍ଫଟିକ ଅର୍ଥ କ୍ରିଷ୍ଟାଲ୍ । ପୋଟାସିୟମ ପରମାଙ୍ଗାନେଟ୍‌ର ସ୍ଫଟିକ ବ୍ୟବହାର କରାଯାଏ ।",
+            word: "BHARTSAYAMĀNAḤ",
+            odia: "ଗାଳି ଦେଇ",
+            emoji: "😠",
+            odiaUse: "ଗାଳି ଦେଇ ଅର୍ଥ ରାଗରେ କଠୋର କଥା କହି। ସିଂହ ଶଶକକୁ ଗାଳି ଦେଇ କଥା କହିଲା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DISSOLVE",
-            odia: "ଦ୍ରବୀଭୂତ",
-            emoji: "💧",
-            odiaUse: "ଦ୍ରବୀଭୂତ ଅର୍ଥ ଜଳରେ ମିଶିଯିବା । ସ୍ଫଟିକ ଜଳରେ ଦ୍ରବୀଭୂତ ହୁଏ ।",
+            word: "DURGĀŚRAYAḤ",
+            odia: "ଦୁର୍ଗରେ ରହିଥିବା",
+            emoji: "🏰",
+            odiaUse: "ଦୁର୍ଗରେ ରହିଥିବା ଅର୍ଥ ସୁରକ୍ଷିତ ସ୍ଥାନରେ ଥିବା। ଶଶକ କହିଲା ଶତ୍ରୁ ଦୁର୍ଗରେ ରହିଥିବା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DILUTION",
-            odia: "ଲଘୁକରଣ",
-            emoji: "🧴",
-            odiaUse: "ଲଘୁକରଣ ଅର୍ଥ ପତଳା କରିବା । ଦ୍ରବଣର ବାରମ୍ବାର ଲଘୁକରଣ କରାଯାଏ ।",
+            word: "PRATIŚABDENA",
+            odia: "ପ୍ରତିଧ୍ୱନି ଦ୍ୱାରା",
+            emoji: "🔊",
+            odiaUse: "ପ୍ରତିଧ୍ୱନି ଦ୍ୱାରା ଅର୍ଥ ଶବ୍ଦର ପୁଣିଥରେ ଫେରି ଆସିବା। କୂଅରୁ ପ୍ରତିଧ୍ୱନି ଦ୍ୱାରା ସିଂହ ଭ୍ରମିତ ହେଲା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PURE WATER",
-            odia: "ବିଶୁଦ୍ଧ ଜଳ",
-            emoji: "🚰",
-            odiaUse: "ବିଶୁଦ୍ଧ ଜଳ ଅର୍ଥ ସଫା ପାଣି । ଦ୍ରବଣକୁ ବିଶୁଦ୍ଧ ଜଳ ସହିତ ମିଶାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "COUNTLESS",
-            odia: "ଅସଂଖ୍ୟ",
-            emoji: "♾️",
-            odiaUse: "ଅସଂଖ୍ୟ ଅର୍ଥ ଗଣନା କରିହେବ ନାହିଁ ଏତେ ଅଧିକ । ଗୋଟିଏ ସ୍ଫଟିକରେ ଅସଂଖ୍ୟ କଣିକା ରହିଥାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DIVIDED",
-            odia: "ବିଭାଜିତ",
-            emoji: "✂️",
-            odiaUse: "ବିଭାଜିତ ଅର୍ଥ ଭାଗ ହୋଇଯିବା । କଣିକାଗୁଡ଼ିକ ବିଭାଜିତ ହୋଇ ଆହୁରି କ୍ଷୁଦ୍ର ହୁଅନ୍ତି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PRESENCE",
-            odia: "ଉପସ୍ଥିତି",
-            emoji: "✅",
-            odiaUse: "ଉପସ୍ଥିତି ଅର୍ଥ ଥିବାର ପ୍ରମାଣ । ଗନ୍ଧରୁ ଡେଟଲ୍‌ର ଉପସ୍ଥିତି ଜଣାପଡ଼େ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TINYNESS",
-            odia: "କ୍ଷୁଦ୍ରତା",
-            emoji: "🔬",
-            odiaUse: "କ୍ଷୁଦ୍ରତା ଅର୍ଥ ଛୋଟପଣ । ପଦାର୍ଥର କଣିକାର କ୍ଷୁଦ୍ରତା ଆମ କଳ୍ପନାର ବାହାରେ ଅଟେ ।",
+            word: "PRĀṆAYĀTRĀ",
+            odia: "ଜୀବନଯାତ୍ରା",
+            emoji: "🌿",
+            odiaUse: "ଜୀବନଯାତ୍ରା ଅର୍ଥ ଜୀବନ ଚଳାଇବା। ଏହି ବ୍ୟବସ୍ଥାରେ ସିଂହର ଜୀବନଯାତ୍ରା ସହଜ ହେଲା।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
