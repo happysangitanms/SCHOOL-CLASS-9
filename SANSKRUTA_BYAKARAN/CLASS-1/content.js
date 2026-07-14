@@ -7,152 +7,89 @@ const APP_CONFIG = {
 const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
-    audio1: "https://audio.evidya.de/S9TLS1P2-3.mp3",
+    audio1: "https://audio.evidya.de/S9TLSG1P2-3.mp3",
     video:  "https://www.youtube.com/embed/QS0X7cpzo1g?playsinline=1&rel=0&modestbranding=1&autoplay=1",
-    pdf:    "https://audio.evidya.de/S9TLS1P2-3.pdf"
+    pdf:    "https://audio.evidya.de/S9TLSG1P2-3.pdf"
 };
 
 const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "LION",
-            odia: "ସିଂହ",
-            emoji: "🦁",
-            odiaUse: "ସିଂହ ଜଙ୍ଗଲର ଶକ୍ତିଶାଳୀ ପଶୁ । ଏହି କଥାରେ ଭାସୁରକ ନାମକ ସିଂହ ବହୁତ ଅତ୍ୟାଚାର କରୁଥିଲା ।",
+            word: "LETTER",
+            odia: "ବର୍ଣ୍ଣ",
+            emoji: "🔤",
+            odiaUse: "ଲିଖନ ପ୍ରକ୍ରିୟା ମାଧ୍ୟମରେ ଭାଷାକୁ ବ୍ୟକ୍ତ କରିବା ଲାଗି ଉପଯୋଗୀ ଧ୍ୱନିଗୁଡ଼ିକୁ ବର୍ଣ୍ଣ କୁହାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "RABBIT",
-            odia: "ଶଶକ",
-            emoji: "🐇",
-            odiaUse: "ଶଶକ ଏକ ଛୋଟ ପଶୁ । ଏହି କଥାରେ ଶଶକ ନିଜ ବୁଦ୍ଧି ଦ୍ୱାରା ସିଂହକୁ ପରାସ୍ତ କରିଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "FOREST",
-            odia: "ବନ",
-            emoji: "🌳",
-            odiaUse: "ବନ ଅର୍ଥ ଜଙ୍ଗଲ । ସିଂହ ଓ ଅନ୍ୟ ସମସ୍ତ ପଶୁ ସେହି ବନରେ ବାସ କରୁଥିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DESTRUCTION",
-            odia: "ସର୍ବୋଚ୍ଛେଦନ",
-            emoji: "💥",
-            odiaUse: "ସର୍ବୋଚ୍ଛେଦନ ଅର୍ଥ ସମସ୍ତଙ୍କ ବିନାଶ । ପଶୁମାନେ ଚାହୁଁଥିଲେ ଯେ ସେମାନଙ୍କର ସର୍ବୋଚ୍ଛେଦନ ନ ହେଉ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "HEARD",
-            odia: "ଆକର୍ଣ୍ୟ",
-            emoji: "👂",
-            odiaUse: "ଆକର୍ଣ୍ୟ ଅର୍ଥ ଶୁଣି । ସିଂହ ପଶୁମାନଙ୍କ କଥା ଶୁଣି ସେମାନଙ୍କ ପ୍ରସ୍ତାବ ମାନିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "WILD BEAST",
-            odia: "ଶ୍ୱାପଦ",
-            emoji: "🐺",
-            odiaUse: "ଶ୍ୱାପଦ ଅର୍ଥ ହିଂସ୍ରଜନ୍ତୁ । ସିଂହ ଏକ ହିଂସ୍ର ଶ୍ୱାପଦ ଅଟେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "WANDER",
-            odia: "ପର୍ଯ୍ୟଟନ କରିବା",
-            emoji: "🚶",
-            odiaUse: "ପର୍ଯ୍ୟଟନ କରିବା ଅର୍ଥ ବୁଲିବା । ସିଂହ ସହ ଚୁକ୍ତି ପରେ ପଶୁମାନେ ନିର୍ଭୟରେ ବନରେ ବୁଲୁଥିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "WELL",
-            odia: "କୂପ",
-            emoji: "🕳️",
-            odiaUse: "କୂପ ଅର୍ଥ କୂଅ । ଶଶକ ସିଂହକୁ କୂଅ ପାଖକୁ ନେଇ ତାହାର ପ୍ରତିବିମ୍ବ ଦେଖାଇଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "REFLECTION",
-            odia: "ପ୍ରତିବିମ୍ବ",
-            emoji: "🪞",
-            odiaUse: "ପ୍ରତିବିମ୍ବ ଅର୍ଥ ଛାୟାରୂପ । ସିଂହ କୂଅରେ ନିଜ ପ୍ରତିବିମ୍ବକୁ ଅନ୍ୟ ସିଂହ ବୋଲି ଭାବିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "HUNGRY",
-            odia: "କ୍ଷୁତ୍କ୍ଷାମକଣ୍ଠ",
-            emoji: "🍽️",
-            odiaUse: "କ୍ଷୁତ୍କ୍ଷାମକଣ୍ଠ ଅର୍ଥ କ୍ଷୁଧାରେ କଣ୍ଠ ଶୁଖିଯାଇଥିବା । ବିଳମ୍ବ ହେବାରୁ ସିଂହ ବହୁତ ଭୋକିଲା ଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "ANGRY",
-            odia: "ପ୍ରଜ୍ୱଲିତାତ୍ମା",
-            emoji: "😡",
-            odiaUse: "ପ୍ରଜ୍ୱଲିତାତ୍ମା ଅର୍ଥ ଅତ୍ୟଧିକ କ୍ରୋଧିତ । ଶଶକ ବିଳମ୍ବରେ ଆସିବାରୁ ସିଂହ ବହୁତ କ୍ରୋଧିତ ହୋଇଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "KILL",
-            odia: "ନିପାତ୍ୟ",
-            emoji: "⚔️",
-            odiaUse: "ନିପାତ୍ୟ ଅର୍ଥ ହତ୍ୟା କରି । ସିଂହ ଶଶକକୁ ମାରିଦେବାକୁ ଧମକ ଦେଇଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CREATURES",
-            odia: "ସତ୍ତ୍ୱାନାମ୍",
-            emoji: "🐾",
-            odiaUse: "ସତ୍ତ୍ୱାନାମ୍ ଅର୍ଥ ପ୍ରାଣୀମାନଙ୍କର । ଶଶକ କହିଲା ଯେ ଅନ୍ୟ ପ୍ରାଣୀମାନଙ୍କର କୌଣସି ଦୋଷ ନାହିଁ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "KEEP",
-            odia: "ସଂସ୍ଥାପ୍ୟ",
-            emoji: "📍",
-            odiaUse: "ସଂସ୍ଥାପ୍ୟ ଅର୍ଥ ରଖି । ଅନ୍ୟ ସିଂହ ଚାରିଟି ଶଶକକୁ ସେଠାରେ ରଖିବାକୁ କହିଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SAID THUS",
-            odia: "ଏବମୁକ୍ତ୍ୱା",
+            word: "VOWEL",
+            odia: "ସ୍ୱରବର୍ଣ୍ଣ",
             emoji: "🗣️",
-            odiaUse: "ଏବମୁକ୍ତ୍ୱା ଅର୍ଥ ଏହିପରି କହି । ଏହା କହି ଶଶକ ସିଂହକୁ କୂଅ ପାଖକୁ ନେଇଗଲା ।",
+            odiaUse: "ଯେଉଁ ବର୍ଣ୍ଣ ନିରପେକ୍ଷ ଭାବରେ ସ୍ୱତଃ ସ୍ପଷ୍ଟ ଉଚ୍ଚାରିତ ହୁଏ, ତାହା ସ୍ୱରବର୍ଣ୍ଣ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SCOLDING",
-            odia: "ଭର୍ତ୍ସୟମାନ",
-            emoji: "☝️",
-            odiaUse: "ଭର୍ତ୍ସୟମାନ ଅର୍ଥ ଗାଳି ଦେଉଥିବା । ସିଂହ ଶଶକକୁ ରାଗରେ ଗାଳି ଦେଇଥିଲା ।",
+            word: "CONSONANT",
+            odia: "ବ୍ୟଞ୍ଜନ",
+            emoji: "🔡",
+            odiaUse: "ଯାହା ସ୍ୱରର ଅନୁଗାମୀ ବା ସ୍ୱର ବିନା ଉଚ୍ଚାରଣ ହୋଇପାରେ ନାହିଁ, ସେ ‘ବ୍ୟଞ୍ଜନ’ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "FORTRESS",
-            odia: "ଦୁର୍ଗାଶ୍ରୟ",
-            emoji: "🏰",
-            odiaUse: "ଦୁର୍ଗାଶ୍ରୟ ଅର୍ଥ ଦୁର୍ଗରେ ରହୁଥିବା । ଶଶକ କହିଲା ଯେ ଅନ୍ୟ ସିଂହ ଦୁର୍ଗାଶ୍ରୟ ଅଟେ ।",
+            word: "SHORT VOWEL",
+            odia: "ହ୍ରସ୍ୱ ସ୍ୱର",
+            emoji: "⏱️",
+            odiaUse: "ଅ, ଇ, ଉ, ଋ, ଌ ଏହି ମୂଳସ୍ୱର ପାଞ୍ଚଗୋଟି, ଏମାନଙ୍କର ଉଚ୍ଚାରଣ କାଳ ଏକ ମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ECHO",
-            odia: "ପ୍ରତିଶବ୍ଦ",
-            emoji: "🔊",
-            odiaUse: "ପ୍ରତିଶବ୍ଦ ଅର୍ଥ ପ୍ରତିଧ୍ୱନି । ସିଂହର ଗର୍ଜନର ପ୍ରତିଶବ୍ଦ କୂଅରୁ ଫେରି ଆସିଥିଲା ।",
+            word: "LONG VOWEL",
+            odia: "ଦୀର୍ଘସ୍ୱର",
+            emoji: "⏳",
+            odiaUse: "ଆ, ଈ, ଊ, ଋ, ଏ, ଐ, ଓ, ଔ ଏହି ଦୀର୍ଘସ୍ୱର ଆଠଗୋଟି, ଏମାନଙ୍କର ଉଚ୍ଚାରଣ କାଳ ଦୁଇମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "LIVELIHOOD",
-            odia: "ପ୍ରାଣଯାତ୍ରା",
-            emoji: "🌾",
-            odiaUse: "ପ୍ରାଣଯାତ୍ରା ଅର୍ଥ ଜୀବନ ନିର୍ବାହ । ପଶୁମାନେ ସିଂହର ପ୍ରାଣଯାତ୍ରା ପାଇଁ ପ୍ରତିଦିନ ଗୋଟିଏ ପଶୁ ପଠାଇବାକୁ ଠିକ୍ କରିଥିଲେ ।",
+            word: "CLASSIFIED CONSONANT",
+            odia: "ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ",
+            emoji: "🗂️",
+            odiaUse: "ଏଗୁଡ଼ିକୁ ‘ସ୍ପର୍ଶବର୍ଣ୍ଣ’ ମଧ୍ୟ କୁହାଯାଏ । ଏମାନଙ୍କ ସଂଖ୍ୟା ସମୁଦାୟ ୨୫ ଓ ପାଞ୍ଚଗୋଟି ବର୍ଗରେ ବିଭକ୍ତ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "INTELLIGENCE",
-            odia: "ବୁଦ୍ଧିବଳ",
-            emoji: "🧠",
-            odiaUse: "ବୁଦ୍ଧିବଳ ଅର୍ଥ ବୁଦ୍ଧିର ଶକ୍ତି । ଶଶକ ନିଜ ବୁଦ୍ଧିବଳରେ ଶକ୍ତିଶାଳୀ ସିଂହକୁ ବିନାଶ କରିଥିଲା ।",
+            word: "UNCLASSIFIED CONSONANT",
+            odia: "ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ",
+            emoji: "🧩",
+            odiaUse: "ଏମାନଙ୍କ ସଂଖ୍ୟା ସମୁଦାୟ ୮ । ଏହା ଦୁଇଭାଗରେ ବିଭକ୍ତ - ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "SEMIVOWEL",
+            odia: "ଅନ୍ତଃସ୍ଥ",
+            emoji: "🔀",
+            odiaUse: "ଯ, ର, ଲ, ବ ଏହି ବର୍ଣ୍ଣମାନଙ୍କୁ ଅର୍ଦ୍ଧସ୍ୱର ମଧ୍ୟ କୁହାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "SIBILANT",
+            odia: "ଉଷ୍ମ",
+            emoji: "💨",
+            odiaUse: "ଶ, ଷ, ସ, ହ ଏହି ବର୍ଣ୍ଣମାନେ ଉଷ୍ମବର୍ଣ୍ଣ ଅଟନ୍ତି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "HALANT",
+            odia: "ହଳ",
+            emoji: "➖",
+            odiaUse: "ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣକୁ ହଳ୍ ମଧ୍ୟ କୁହାଯାଏ । କେବଳ ବ୍ୟଞ୍ଜନର ପ୍ରୟୋଗ ‘ହଳ୍’ ଚିହ୍ନ ଯୋଗରେ କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "AYOGAVAHA",
+            odia: "ଅଯୋଗବାହ",
+            emoji: "🔗",
+            odiaUse: "ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଏହା ସ୍ୱରବର୍ଣ୍ଣ ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣରେ ମିଶି ଉଚ୍ଚାରିତ ହୁଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
@@ -161,208 +98,207 @@ const wordData = {
 const topicsData = [
 
 {
-heading: "NOTE-1: ପଞ୍ଚତନ୍ତ୍ର ଓ ଏହି କାହାଣୀ କ'ଣ ? :-",
+heading: "NOTE-1: ବର୍ଣ୍ଣ କ'ଣ ? :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପଞ୍ଚତନ୍ତ୍ର ଏକ ପ୍ରସିଦ୍ଧ କାହାଣୀ ପୁସ୍ତକ ଅଟେ । ଏହାକୁ ପଣ୍ଡିତ ବିଷ୍ଣୁ ଶର୍ମା ପିଲାମାନଙ୍କୁ ନୀତି ଶିକ୍ଷା ଦେବା ପାଇଁ ସହଜ ଭାଷାରେ ଲେଖିଥିଲେ । ଏହି ପୁସ୍ତକରେ ପଶୁ ଓ ପକ୍ଷୀମାନଙ୍କ କାହାଣୀ ମାଧ୍ୟମରେ ନୀତି ଶିକ୍ଷା ଦିଆଯାଇଛି । ସିଂହ ଓ ଶଶକ କାହାଣୀ ଏହି ପୁସ୍ତକରୁ ନିଆଯାଇଛି ।<br><br>👉 ଉଦାହରଣ: ଏହି କାହାଣୀରେ ଏକ ଛୋଟ ଶଶକ, ବୁଦ୍ଧି ବଳରେ ଏକ ଅତ୍ୟାଚାରୀ ସିଂହକୁ କିପରି ବିନାଶ କରିଥିଲା, ତାହା ଦେଖାଯାଇଛି ।",
+text:"👉 ଧାରଣା: ଲିଖନ ପ୍ରକ୍ରିୟା ମାଧ୍ୟମରେ ଭାଷାକୁ ବ୍ୟକ୍ତ କରିବା ଲାଗି ଉପଯୋଗୀ ବିଶିଷ୍ଟ ଧ୍ୱନିଗୁଡ଼ିକୁ ବା ଧ୍ୱନ୍ୟାତ୍ମକ ସଙ୍କେତଗୁଡ଼ିକୁ ବର୍ଣ୍ଣ କୁହାଯାଏ । ଆମେ ଯାହା କହୁ, ତାହାକୁ ଲେଖିବା ପାଇଁ ବର୍ଣ୍ଣର ଆବଶ୍ୟକତା ପଡ଼େ ।<br><br>👉 ଉଦାହରଣ: ଆମେ ଯେତେବେଳେ 'କ' କହୁ, ସେହି ଧ୍ୱନିକୁ ଲେଖିବା ପାଇଁ ଆମେ 'କ' ବର୍ଣ୍ଣ ବ୍ୟବହାର କରୁ । ସେହିପରି 'ଅ', 'ଆ', 'ଖ' ଆଦି ମଧ୍ୟ ବର୍ଣ୍ଣ ଅଟନ୍ତି ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ପଞ୍ଚତନ୍ତ୍ର କିଏ ଲେଖିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପଣ୍ଡିତ ବିଷ୍ଣୁ ଶର୍ମା ପଞ୍ଚତନ୍ତ୍ର ଲେଖିଥିଲେ ।",
+"<span style='color:red;'>Q-1:</span> ବର୍ଣ୍ଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଲିଖନ ପ୍ରକ୍ରିୟା ମାଧ୍ୟମରେ ଭାଷାକୁ ବ୍ୟକ୍ତ କରିବା ଲାଗି ଉପଯୋଗୀ ଧ୍ୱନ୍ୟାତ୍ମକ ସଙ୍କେତଗୁଡ଼ିକୁ ବର୍ଣ୍ଣ କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ପଞ୍ଚତନ୍ତ୍ର କେଉଁ ଉଦ୍ଦେଶ୍ୟରେ ଲେଖାଯାଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ପିଲାମାନଙ୍କୁ ସହଜରେ ନୀତି ଶିକ୍ଷା ଦେବା ଉଦ୍ଦେଶ୍ୟରେ ଏହା ଲେଖାଯାଇଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> ବର୍ଣ୍ଣର ଆବଶ୍ୟକତା କାହିଁକି ପଡ଼େ ?<br><br><span style='color:green;'>Answer:</span> ଆମେ କହୁଥିବା କଥାକୁ ଲେଖିବା ପାଇଁ ବର୍ଣ୍ଣର ଆବଶ୍ୟକତା ପଡ଼େ ।",
 
-"<span style='color:red;'>Q-3:</span> ପଞ୍ଚତନ୍ତ୍ରର କାହାଣୀମାନଙ୍କରେ କେଉଁମାନଙ୍କ ଚରିତ୍ର ବ୍ୟବହାର ହୋଇଛି ?<br><br><span style='color:green;'>Answer:</span> ପଶୁ ଓ ପକ୍ଷୀମାନଙ୍କ ଚରିତ୍ର ବ୍ୟବହାର ହୋଇଛି ।",
+"<span style='color:red;'>Q-3:</span> ବର୍ଣ୍ଣ କେଉଁ ପ୍ରକାର ଜିନିଷକୁ ବୁଝାଏ ?<br><br><span style='color:green;'>Answer:</span> ବର୍ଣ୍ଣ ଧ୍ୱନିଗୁଡ଼ିକୁ ବା ଧ୍ୱନ୍ୟାତ୍ମକ ସଙ୍କେତଗୁଡ଼ିକୁ ବୁଝାଏ ।",
 
-"<span style='color:red;'>Q-4:</span> ସିଂହ ଶଶକ କାହାଣୀରେ କ'ଣ ଦେଖାଯାଇଛି ?<br><br><span style='color:green;'>Answer:</span> ବୁଦ୍ଧି ବଳରେ ଏକ ଅତ୍ୟାଚାରୀର ବିନାଶ କିପରି ହୋଇପାରେ, ତାହା ଦେଖାଯାଇଛି ।"
+"<span style='color:red;'>Q-4:</span> 'କ' ବର୍ଣ୍ଣର ଉଦାହରଣ କାହିଁକି ଅଟେ ?<br><br><span style='color:green;'>Answer:</span> ଆମେ 'କ' ଧ୍ୱନି କହିଲେ, ତାହାକୁ ଲେଖିବା ପାଇଁ 'କ' ବର୍ଣ୍ଣ ବ୍ୟବହାର ହୁଏ, ତେଣୁ ଏହା ବର୍ଣ୍ଣର ଉଦାହରଣ ।"
 
 ]
 },
 
 {
-heading: "NOTE-2: ସିଂହ ଭାସୁରକ ଓ ତାହାର ପଶୁ ହତ୍ୟା :-",
+heading: "NOTE-2: ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଏକ ଜଙ୍ଗଲରେ ଭାସୁରକ ନାମକ ଏକ ସିଂହ ରହୁଥିଲା । ସେ ପ୍ରତିଦିନ ଅନେକ ମୃଗ ଓ ଶଶକମାନଙ୍କୁ ମାରି ଖାଉଥିଲା । ଏହା ଦେଖି ଜଙ୍ଗଲର ପଶୁମାନେ ଡରି ଯାଇଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ପ୍ରତିଦିନ ଅନେକ ପଶୁ ମରୁଥିବାରୁ ଜଙ୍ଗଲର ଶୁଅର ଆଦି ଜୀବମାନେ ଚିନ୍ତିତ ହୋଇ ଏକାଠି ହେଲେ ।",
+text:"👉 ଧାରଣା: ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାକୁ ଦୁଇଟି ପ୍ରଧାନ ଶ୍ରେଣୀରେ ବିଭକ୍ତ କରାଯାଏ - ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ । ମହର୍ଷି ପାଣିନି ଅଷ୍ଟାଧ୍ୟାୟୀରେ ୧୪ଟି ମାହେଶ୍ୱର ସୂତ୍ର ଉଲ୍ଲେଖ କରି ୯ଟି ସ୍ୱରବର୍ଣ୍ଣ ଓ ୩୩ଟି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣର ବିନ୍ୟାସ କରିଛନ୍ତି ।<br><br>👉 ଉଦାହରଣ: ମାତ୍ର ଭାଷାରେ ପାଣିନୀୟ ବର୍ଣ୍ଣମାଳା ସହ ଅଯୋଗବାହ ମିଶି ମୋଟ ୪୯ଗୋଟି ବର୍ଣ୍ଣର ବ୍ୟବହାର ଦେଖାଯାଏ ।"
+,
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ସିଂହର ନାମ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସିଂହର ନାମ ଭାସୁରକ ଥିଲା ।",
+"<span style='color:red;'>Q-1:</span> ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାକୁ କେତେ ଶ୍ରେଣୀରେ ବିଭକ୍ତ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାକୁ ଦୁଇଟି ପ୍ରଧାନ ଶ୍ରେଣୀ, ଅର୍ଥାତ୍ ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନରେ ବିଭକ୍ତ କରାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ଭାସୁରକ ପ୍ରତିଦିନ କ'ଣ କରୁଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ପ୍ରତିଦିନ ଅନେକ ମୃଗ ଓ ଶଶକମାନଙ୍କୁ ମାରି ଖାଉଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> ପାଣିନି କେଉଁ ଗ୍ରନ୍ଥରେ ମାହେଶ୍ୱର ସୂତ୍ର ଉଲ୍ଲେଖ କରିଛନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ପାଣିନି ଅଷ୍ଟାଧ୍ୟାୟୀ ଗ୍ରନ୍ଥରେ ମାହେଶ୍ୱର ସୂତ୍ର ଉଲ୍ଲେଖ କରିଛନ୍ତି ।",
 
-"<span style='color:red;'>Q-3:</span> ଜଙ୍ଗଲର ପଶୁମାନେ କାହିଁକି ଚିନ୍ତିତ ହେଲେ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରତିଦିନ ଅନେକ ପଶୁ ମରୁଥିବାରୁ ସେମାନେ ଚିନ୍ତିତ ହେଲେ ।",
+"<span style='color:red;'>Q-3:</span> ପାଣିନିଙ୍କ ମତେ ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ସଂଖ୍ୟା କେତେ ?<br><br><span style='color:green;'>Answer:</span> ପାଣିନିଙ୍କ ମତେ ୯ଟି ସ୍ୱରବର୍ଣ୍ଣ ଓ ୩୩ଟି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଅଛନ୍ତି ।",
 
-"<span style='color:red;'>Q-4:</span> କେଉଁ ପଶୁମାନେ ଏକାଠି ହୋଇ ସିଂହ ପାଖକୁ ଗଲେ ?<br><br><span style='color:green;'>Answer:</span> ଶୁଅର ଆଦି ସମସ୍ତ ପଶୁମାନେ ଏକାଠି ହୋଇ ଗଲେ ।"
+"<span style='color:red;'>Q-4:</span> ମାତୃଭାଷାରେ ମୋଟ କେତେଗୋଟି ବର୍ଣ୍ଣ ବ୍ୟବହାର ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ମାତୃଭାଷାରେ ପାଣିନୀୟ ବର୍ଣ୍ଣମାଳା ସହ ଅଯୋଗବାହ ମିଶି ମୋଟ ୪୯ଗୋଟି ବର୍ଣ୍ଣ ବ୍ୟବହାର ହୁଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-3: ପଶୁମାନଙ୍କ ପ୍ରସ୍ତାବ ଓ ସିଂହର ପ୍ରତିଜ୍ଞା :-",
+heading: "NOTE-3: ସ୍ୱରବର୍ଣ୍ଣ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପଶୁମାନେ ସିଂହକୁ ଏକ ପ୍ରସ୍ତାବ ଦେଲେ । ପ୍ରତିଦିନ ଏକ ଏକ ପଶୁ ପାଳି କ୍ରମେ ସିଂହ ପାଖକୁ ଖାଦ୍ୟ ଭାବରେ ଯିବ, ଯାହା ଫଳରେ ସିଂହକୁ ପ୍ରତିଦିନ ଅଧିକ ପଶୁ ମାରିବାକୁ ପଡ଼ିବ ନାହିଁ । ସିଂହ ଏହି ପ୍ରସ୍ତାବ ମାନି ନେଲା, କିନ୍ତୁ ଚେତାବନୀ ଦେଲା ଯେ ଯଦି କୌଣସିଦିନ ପଶୁ ନ ଆସିବ, ତେବେ ସେ ସମସ୍ତଙ୍କୁ ମାରି ଦେବ ।<br><br>👉 ଉଦାହରଣ: ଏହି ପ୍ରସ୍ତାବ ଫଳରେ ପଶୁମାନେ ନିର୍ଭୟରେ ଜଙ୍ଗଲରେ ବୁଲୁଥିଲେ, କାରଣ ଜଣେ ଜଣେ ପାଳି କ୍ରମେ ସିଂହ ପାଖକୁ ଯାଉଥିଲେ ।",
+text:"👉 ଧାରଣା: ଯେଉଁ ବର୍ଣ୍ଣ ନିରପେକ୍ଷ ଭାବରେ ସ୍ୱତଃ ସ୍ପଷ୍ଟ ଉଚ୍ଚାରିତ ହୁଏ, ତାହାକୁ ସ୍ୱରବର୍ଣ୍ଣ କୁହାଯାଏ । ସ୍ୱରବର୍ଣ୍ଣ ସାହାଯ୍ୟରେ ବ୍ୟଞ୍ଜନର ସ୍ପଷ୍ଟ ଉଚ୍ଚାରଣ ସମ୍ଭବ ହୁଏ । ଉଚ୍ଚାରଣ କାଳର ମାତ୍ରା ଆଧାରରେ ସ୍ୱର ତିନି ପ୍ରକାର - ହ୍ରସ୍ୱ, ଦୀର୍ଘ ଓ ପ୍ଲୁତ ।<br><br>👉 ଉଦାହରଣ: ଆମେ ମୁଖ୍ୟତଃ ହ୍ରସ୍ୱ ଓ ଦୀର୍ଘ ସ୍ୱର ଅଧ୍ୟୟନ କରୁ, ଯାହାର ମୋଟ ସଂଖ୍ୟା ୧୩ ଅଟେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ପଶୁମାନେ ସିଂହକୁ କ'ଣ ପ୍ରସ୍ତାବ ଦେଲେ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରତିଦିନ ପାଳି କ୍ରମେ ଏକ ପଶୁ ଖାଦ୍ୟ ଭାବରେ ଯିବାର ପ୍ରସ୍ତାବ ଦେଲେ ।",
+"<span style='color:red;'>Q-1:</span> ସ୍ୱରବର୍ଣ୍ଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ବର୍ଣ୍ଣ ନିରପେକ୍ଷ ଭାବରେ ସ୍ୱତଃ ସ୍ପଷ୍ଟ ଉଚ୍ଚାରିତ ହୁଏ, ତାହାକୁ ସ୍ୱରବର୍ଣ୍ଣ କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ସିଂହ କେଉଁ ସର୍ତ୍ତରେ ପ୍ରସ୍ତାବ ମାନିଲା ?<br><br><span style='color:green;'>Answer:</span> ଯଦି କୌଣସିଦିନ ପଶୁ ନ ଆସିବ ତେବେ ସେ ସମସ୍ତଙ୍କୁ ମାରିଦେବ ବୋଲି ସର୍ତ୍ତ ଦେଲା ।",
+"<span style='color:red;'>Q-2:</span> ଉଚ୍ଚାରଣ କାଳର ମାତ୍ରା ଆଧାରରେ ସ୍ୱର କେତେ ପ୍ରକାର ?<br><br><span style='color:green;'>Answer:</span> ଉଚ୍ଚାରଣ କାଳର ମାତ୍ରା ଆଧାରରେ ସ୍ୱର ତିନି ପ୍ରକାର - ହ୍ରସ୍ୱ, ଦୀର୍ଘ ଓ ପ୍ଲୁତ ।",
 
-"<span style='color:red;'>Q-3:</span> ଏହି ପ୍ରସ୍ତାବ ପରେ ପଶୁମାନେ କିପରି ରହିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପଶୁମାନେ ନିର୍ଭୟରେ ଜଙ୍ଗଲରେ ବୁଲିବାକୁ ଲାଗିଲେ ।",
+"<span style='color:red;'>Q-3:</span> ସ୍ୱରବର୍ଣ୍ଣ ସାହାଯ୍ୟରେ କ'ଣ ସମ୍ଭବ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ସ୍ୱରବର୍ଣ୍ଣ ସାହାଯ୍ୟରେ ବ୍ୟଞ୍ଜନର ସ୍ପଷ୍ଟ ଉଚ୍ଚାରଣ ସମ୍ଭବ ହୁଏ ।",
 
-"<span style='color:red;'>Q-4:</span> ପାଳି କ୍ରମେ ପଶୁ ପଠାଇବାର ଲାଭ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଫଳରେ ସିଂହକୁ ଅଧିକ ପଶୁ ମାରିବାକୁ ପଡ଼ୁ ନ ଥିଲା ।"
+"<span style='color:red;'>Q-4:</span> ହ୍ରସ୍ୱ ଓ ଦୀର୍ଘ ସ୍ୱରର ମୋଟ ସଂଖ୍ୟା କେତେ ?<br><br><span style='color:green;'>Answer:</span> ହ୍ରସ୍ୱ ଓ ଦୀର୍ଘ ସ୍ୱରର ମୋଟ ସଂଖ୍ୟା ୧୩ ଅଟେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-4: ଶଶକର ପାଳି ଓ ତାହାର ଚିନ୍ତା :-",
+heading: "NOTE-4: ହ୍ରସ୍ୱ ସ୍ୱର :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଏକଦିନ ପାଳି କ୍ରମେ ଏକ ଛୋଟ ଶଶକର ପାଳି ଆସିଲା । ସେ ଇଚ୍ଛା ନ ଥାଇ ମନ୍ଥର ଗତିରେ ସିଂହ ପାଖକୁ ଯାଉ ଯାଉ ସିଂହକୁ ମାରିବାର ଉପାୟ ଚିନ୍ତା କରୁଥିଲା । ଏହି ଚିନ୍ତାରେ ତାହାର ବିଳମ୍ବ ହୋଇଗଲା ।<br><br>👉 ଉଦାହରଣ: ଶଶକ ଚତୁର ଥିଲା, ତେଣୁ ସେ ବଳ ପରିବର୍ତ୍ତେ ବୁଦ୍ଧି ବ୍ୟବହାର କରି ସିଂହକୁ ପରାସ୍ତ କରିବାର ଉପାୟ ଚିନ୍ତା କରୁଥିଲା ।",
+text:"👉 ଧାରଣା: ଅ, ଇ, ଉ, ର, ଳ ଏହି ମୂଳସ୍ୱର ସମୁଦାୟ ପାଞ୍ଚଗୋଟିକୁ ହ୍ରସ୍ୱ ସ୍ୱର କୁହାଯାଏ । ଏମାନଙ୍କର ଉଚ୍ଚାରଣ କାଳ ଏକ ମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ, ଅର୍ଥାତ୍ ଏମାନେ ଅଳ୍ପ ସମୟରେ ଉଚ୍ଚାରିତ ହୁଅନ୍ତି ।<br><br>👉 ଉଦାହରଣ: 'ଅ' ଓ 'ଇ' ପରି ବର୍ଣ୍ଣକୁ ଆମେ ବେଶୀ ଟାଣି ଉଚ୍ଚାରଣ କରୁନାହୁଁ, ଏହା ହ୍ରସ୍ୱ ସ୍ୱରର ଗୁଣ ଅଟେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> କାହାର ପାଳି ଆସିଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏକ ଛୋଟ ଶଶକର ପାଳି ଆସିଥିଲା ।",
+"<span style='color:red;'>Q-1:</span> ହ୍ରସ୍ୱ ସ୍ୱର କେଉଁ କେଉଁ ବର୍ଣ୍ଣ ଅଟନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ଅ, ଇ, ଉ, ର, ଳ ଏହି ପାଞ୍ଚଗୋଟି ବର୍ଣ୍ଣ ହ୍ରସ୍ୱ ସ୍ୱର ଅଟନ୍ତି ।",
 
-"<span style='color:red;'>Q-2:</span> ଶଶକ କାହିଁକି ମନ୍ଥର ଗତିରେ ଯାଉଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ସିଂହକୁ ମାରିବାର ଉପାୟ ଚିନ୍ତା କରୁ କରୁ ମନ୍ଥର ଗତିରେ ଯାଉଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> ହ୍ରସ୍ୱ ସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ କେତେ ?<br><br><span style='color:green;'>Answer:</span> ହ୍ରସ୍ୱ ସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ ଏକ ମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ ।",
 
-"<span style='color:red;'>Q-3:</span> ଶଶକର ଚିନ୍ତା ଫଳରେ କ'ଣ ହୋଇଗଲା ?<br><br><span style='color:green;'>Answer:</span> ତାହାର ଯିବାରେ ବିଳମ୍ବ ହୋଇଗଲା ।",
+"<span style='color:red;'>Q-3:</span> ହ୍ରସ୍ୱ ସ୍ୱର ମୋଟ କେତେଗୋଟି ଅଛନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ହ୍ରସ୍ୱ ସ୍ୱର ମୋଟ ପାଞ୍ଚଗୋଟି ଅଛନ୍ତି ।",
 
-"<span style='color:red;'>Q-4:</span> ଶଶକ ସିଂହକୁ ପରାସ୍ତ କରିବାକୁ କେଉଁ ଜିନିଷ ବ୍ୟବହାର କରିବାକୁ ଚାହୁଁଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ବଳ ପରିବର୍ତ୍ତେ ନିଜର ବୁଦ୍ଧି ବ୍ୟବହାର କରିବାକୁ ଚାହୁଁଥିଲା ।"
+"<span style='color:red;'>Q-4:</span> ହ୍ରସ୍ୱ ସ୍ୱରକୁ କାହିଁକି ଏହିପରି ନାମ ଦିଆଯାଇଛି ?<br><br><span style='color:green;'>Answer:</span> ଏମାନେ ଅଳ୍ପ ସମୟରେ ଉଚ୍ଚାରିତ ହୁଅନ୍ତି, ତେଣୁ ଏମାନଙ୍କୁ ହ୍ରସ୍ୱ ସ୍ୱର କୁହାଯାଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-5: କୂଅରେ ପ୍ରତିବିମ୍ବ ଦେଖି ଶଶକର ଯୋଜନା :-",
+heading: "NOTE-5: ଦୀର୍ଘସ୍ୱର :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ରାସ୍ତାରେ ଯାଉ ଯାଉ ଶଶକ ଏକ କୂଅ ଦେଖିଲା । କୂଅ ଉପରକୁ ଯାଇ ସେ ଜଳରେ ନିଜର ପ୍ରତିବିମ୍ବ ଦେଖିଲା । ଏହା ଦେଖି ତାହାର ମନରେ ଏକ ଚତୁର ଯୋଜନା ଆସିଲା, ସିଂହକୁ ରାଗାଇ ତାହାକୁ ନିଜ ବୁଦ୍ଧିରେ କୂଅରେ ପକାଇଦେବ ।<br><br>👉 ଉଦାହରଣ: ପାଣିରେ ଥିବା ପ୍ରତିବିମ୍ବ ଦେଖି ମଣିଷ କିମ୍ବା ପଶୁ ବୁଝିପାରନ୍ତି ନାହିଁ ଯେ ତାହା ପ୍ରକୃତରେ ପ୍ରତିଫଳନ ମାତ୍ର । ଶଶକ ଏହି ଜିନିଷକୁ ନିଜ ଉପାୟ ପାଇଁ ବ୍ୟବହାର କରିବାକୁ ସ୍ଥିର କଲା ।",
+text:"👉 ଧାରଣା: ଆ, ଈ, ଊ, ର, ଏ, ଐ, ଓ, ଔ ସମୁଦାୟ ଆଠଗୋଟି ବର୍ଣ୍ଣକୁ ଦୀର୍ଘସ୍ୱର କୁହାଯାଏ । ଏମାନଙ୍କର ଉଚ୍ଚାରଣ କାଳ ଦୁଇମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ । ପ୍ରଥମ ଚାରିଗୋଟି ଦୀର୍ଘସ୍ୱର ଆ, ଈ, ଊ, ର ର ହ୍ରସ୍ୱରୂପ କ୍ରମଶଃ ଅ, ଇ, ଉ, ଳ ଅଟେ ।<br><br>👉 ଉଦାହରଣ: ଏ, ଐ, ଓ, ଔ ର ହ୍ରସ୍ୱରୂପ ନାହିଁ । ଏମାନେ ଯଥାକ୍ରମେ ଅ ସହିତ ଇ, ଏ, ଉ ଏବଂ ଓ ମିଳନରୁ ଉଚ୍ଚାରିତ ହୋଇଥିବାରୁ ଏମାନଙ୍କୁ ସନ୍ଧ୍ୟକ୍ଷର କୁହାଯାଏ, ଯଥା ଅ+ଇ=ଏ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ରାସ୍ତାରେ ଶଶକ କ'ଣ ଦେଖିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ରାସ୍ତାରେ ଏକ କୂଅ ଦେଖିଲା ।",
+"<span style='color:red;'>Q-1:</span> ଦୀର୍ଘସ୍ୱର କେଉଁ କେଉଁ ବର୍ଣ୍ଣ ଅଟନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ଆ, ଈ, ଊ, ର, ଏ, ଐ, ଓ, ଔ ଏହି ଆଠଗୋଟି ବର୍ଣ୍ଣ ଦୀର୍ଘସ୍ୱର ଅଟନ୍ତି ।",
 
-"<span style='color:red;'>Q-2:</span> କୂଅ ଭିତରେ ଶଶକ କ'ଣ ଦେଖିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ କୂଅ ଭିତରେ ଜଳରେ ନିଜର ପ୍ରତିବିମ୍ବ ଦେଖିଲା ।",
+"<span style='color:red;'>Q-2:</span> ଦୀର୍ଘସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ କେତେ ?<br><br><span style='color:green;'>Answer:</span> ଦୀର୍ଘସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ ଦୁଇମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ ।",
 
-"<span style='color:red;'>Q-3:</span> ପ୍ରତିବିମ୍ବ ଦେଖି ଶଶକ କେଉଁ ଯୋଜନା କଲା ?<br><br><span style='color:green;'>Answer:</span> ସିଂହକୁ ରାଗାଇ କୂଅରେ ପକାଇଦେବାର ଯୋଜନା କଲା ।",
+"<span style='color:red;'>Q-3:</span> କେଉଁ ଦୀର୍ଘସ୍ୱରମାନଙ୍କର ହ୍ରସ୍ୱରୂପ ନାହିଁ ?<br><br><span style='color:green;'>Answer:</span> ଏ, ଐ, ଓ, ଔ ର ହ୍ରସ୍ୱରୂପ ନାହିଁ ।",
 
-"<span style='color:red;'>Q-4:</span> ଶଶକ କେଉଁ ଜିନିଷ ବ୍ୟବହାର କରି ଏହି ଯୋଜନା କଲା ?<br><br><span style='color:green;'>Answer:</span> କୂଅ ଭିତରେ ଥିବା ପ୍ରତିବିମ୍ବକୁ ବ୍ୟବହାର କରି ସେ ଯୋଜନା କଲା ।"
+"<span style='color:red;'>Q-4:</span> ସନ୍ଧ୍ୟକ୍ଷର କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅ ସହିତ ଇ, ଏ, ଉ ଓ ଓ ମିଳନରୁ ଉଚ୍ଚାରିତ ହେଉଥିବା ଏ, ଐ, ଓ, ଔ ବର୍ଣ୍ଣକୁ ସନ୍ଧ୍ୟକ୍ଷର କୁହାଯାଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-6: ଶଶକର ବିଳମ୍ବ ଓ ସିଂହର କ୍ରୋଧ :-",
+heading: "NOTE-6: ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଶଶକ ବିଳମ୍ବରେ ସିଂହ ପାଖରେ ପହଞ୍ଚିଲା । ଏହି ସମୟ ମଧ୍ୟରେ ଭୋକରେ ସିଂହ ଅତ୍ୟନ୍ତ ରାଗିଯାଇଥିଲା । ବିଳମ୍ବ ପାଇଁ ସିଂହ ଶଶକକୁ ବହୁତ ଗାଳି ଦେଲା ଏବଂ ତାହାକୁ ମାରି ପରଦିନ ସମସ୍ତ ମୃଗକୁ ମାରିଦେବାର ଧମକ ଦେଲା ।<br><br>👉 ଉଦାହରଣ: ଭୋକରେ ରାଗିଥିବା ସିଂହ, ବିଳମ୍ବର କାରଣ ନ ଜାଣି ପ୍ରଥମେ ଶଶକକୁ ଗାଳି ଦେଲା । ମାତ୍ର ଶଶକ ବିନମ୍ର ଭାବରେ କାରଣ କହିବାକୁ ଅନୁମତି ମାଗିଲା ।",
+text:"👉 ଧାରଣା: ଯାହା ସ୍ୱରର ଅନୁଗାମୀ ବା ସ୍ୱର ବିନା ଯାହାର ଉଚ୍ଚାରଣ ହୋଇପାରେ ନାହିଁ, ସେ ବ୍ୟଞ୍ଜନ । ବର୍ଣ୍ଣମାଳାର 'କ' ଆଦି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ସହିତ ଯେଉଁ 'ଅ' ମିଶାଇ ଲେଖାଯାଏ, ତାହା କେବଳ ବ୍ୟଞ୍ଜନର ଉଚ୍ଚାରଣ ଲାଗି ଉଦ୍ଦିଷ୍ଟ ।<br><br>👉 ଉଦାହରଣ: ସମୁଦାୟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା ୩୩ ଅଟେ । ଏହାର ଦୁଇଟି ଭାଗ ଅଛି - ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ଓ ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଶଶକ କାହିଁକି ବିଳମ୍ବରେ ପହଞ୍ଚିଲା ?<br><br><span style='color:green;'>Answer:</span> ରାସ୍ତାରେ ଯୋଜନା ଚିନ୍ତା କରୁ କରୁ ସେ ବିଳମ୍ବରେ ପହଞ୍ଚିଲା ।",
+"<span style='color:red;'>Q-1:</span> ବ୍ୟଞ୍ଜନ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଯାହା ସ୍ୱର ବିନା ଉଚ୍ଚାରଣ ହୋଇପାରେ ନାହିଁ, ତାହାକୁ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ସିଂହ କାହିଁକି ରାଗିଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଭୋକରେ ଏବଂ ଶଶକର ବିଳମ୍ବ ପାଇଁ ସିଂହ ରାଗିଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> ମୋଟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା କେତେ ?<br><br><span style='color:green;'>Answer:</span> ମୋଟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା ୩୩ ଅଟେ ।",
 
-"<span style='color:red;'>Q-3:</span> ସିଂହ ଶଶକକୁ କେଉଁ ଧମକ ଦେଲା ?<br><br><span style='color:green;'>Answer:</span> ତାହାକୁ ମାରି ପରଦିନ ସମସ୍ତ ମୃଗକୁ ମାରିଦେବାର ଧମକ ଦେଲା ।",
+"<span style='color:red;'>Q-3:</span> ବ୍ୟଞ୍ଜନକୁ କେତେ ଭାଗରେ ବିଭକ୍ତ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବ୍ୟଞ୍ଜନକୁ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରାଯାଏ - ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ଓ ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ।",
 
-"<span style='color:red;'>Q-4:</span> ଶଶକ ସିଂହ ପାଖରେ କ'ଣ ମାଗିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ବିଳମ୍ବର କାରଣ କହିବାକୁ ଅନୁମତି ମାଗିଲା ।"
+"<span style='color:red;'>Q-4:</span> ବର୍ଣ୍ଣମାଳାରେ ବ୍ୟଞ୍ଜନ ସହିତ କେଉଁ ସ୍ୱର ମିଶାଇ ଲେଖାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ସହିତ 'ଅ' ସ୍ୱର ମିଶାଇ ଲେଖାଯାଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-7: ଶଶକର କାହାଣୀ - ଅନ୍ୟ ଏକ ସିଂହ :-",
+heading: "NOTE-7: ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଶଶକ ସିଂହକୁ ମିଛ କାହାଣୀ କହିଲା । ସେ କହିଲା ଯେ ଆସିବା ବାଟରେ ଆଉ ଏକ ବଡ଼ ସିଂହ ତାହାକୁ ରୋକିଥିଲା ଓ ସେ ଏହି ଜଙ୍ଗଲର ମାଲିକ ବୋଲି କହିଥିଲା । ଏହି ଅନ୍ୟ ସିଂହ ପାଇଁ ହିଁ ଶଶକ ବିଳମ୍ବରେ ପହଞ୍ଚିଲା ବୋଲି ସେ କହିଲା ।<br><br>👉 ଉଦାହରଣ: ଶଶକ ଏହି ମିଛ କାହାଣୀ ମାଧ୍ୟମରେ ସିଂହକୁ ବିଶ୍ୱାସ କରାଇଲା ଯେ ଜଙ୍ଗଲରେ ଆଉ ଏକ ଶକ୍ତିଶାଳୀ ସିଂହ ଅଛି ।",
+text:"👉 ଧାରଣା: ଯେଉଁ ବ୍ୟଞ୍ଜନଗୁଡ଼ିକୁ ସ୍ୱର ବର୍ଣ୍ଣ ମଧ୍ୟ କୁହାଯାଏ ନାହିଁ ଓ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମରେ ପାଞ୍ଚ-ପାଞ୍ଚଟି ବର୍ଣ୍ଣକୁ ସ୍ଥାପିତ କରାଯାଇଛି, ସେମାନଙ୍କୁ ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ । ଏମାନଙ୍କ ସଂଖ୍ୟା ସମୁଦାୟ ୨୫ ।<br><br>👉 ଉଦାହରଣ: କ ବର୍ଗ - କ, ଖ, ଗ, ଘ, ଙ; ଚ ବର୍ଗ - ଚ, ଛ, ଜ, ଝ, ଞ; ଟ ବର୍ଗ - ଟ, ଠ, ଡ, ଢ, ଣ; ତ ବର୍ଗ - ତ, ଥ, ଦ, ଧ, ନ; ପ ବର୍ଗ - ପ, ଫ, ବ, ଭ, ମ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଶଶକ ସିଂହକୁ କେଉଁ କାହାଣୀ କହିଲା ?<br><br><span style='color:green;'>Answer:</span> ବାଟରେ ଆଉ ଏକ ବଡ଼ ସିଂହ ତାହାକୁ ରୋକିଥିବାର କାହାଣୀ କହିଲା ।",
+"<span style='color:red;'>Q-1:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ବ୍ୟଞ୍ଜନଗୁଡ଼ିକୁ ପାଞ୍ଚ-ପାଞ୍ଚଟି କରି ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମରେ ସ୍ଥାପିତ କରାଯାଇଛି, ସେମାନଙ୍କୁ ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ସେହି ଅନ୍ୟ ସିଂହ ନିଜକୁ କ'ଣ ବୋଲି କହିଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ନିଜକୁ ଜଙ୍ଗଲର ମାଲିକ ବୋଲି କହିଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା କେତେ ?<br><br><span style='color:green;'>Answer:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା ସମୁଦାୟ ୨୫ ।",
 
-"<span style='color:red;'>Q-3:</span> ଏହି କାହାଣୀ ପାଇଁ ଶଶକ କ'ଣ କାରଣ ଦେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହି ଅନ୍ୟ ସିଂହ ପାଇଁ ହିଁ ସେ ବିଳମ୍ବରେ ପହଞ୍ଚିଲା ବୋଲି କାରଣ ଦେଲା ।",
+"<span style='color:red;'>Q-3:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କେତେ ବର୍ଗରେ ବିଭକ୍ତ ?<br><br><span style='color:green;'>Answer:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ପାଞ୍ଚଗୋଟି ବର୍ଗରେ ବିଭକ୍ତ - କ ବର୍ଗ, ଚ ବର୍ଗ, ଟ ବର୍ଗ, ତ ବର୍ଗ ଓ ପ ବର୍ଗ ।",
 
-"<span style='color:red;'>Q-4:</span> ଶଶକ ଏହି କାହାଣୀ କାହିଁକି କହିଲା ?<br><br><span style='color:green;'>Answer:</span> ସିଂହକୁ ରାଗାଇ କୂଅ ପାଖକୁ ଆଣିବା ପାଇଁ ସେ ଏହି କାହାଣୀ କହିଲା ।"
+"<span style='color:red;'>Q-4:</span> କ ବର୍ଗର ବର୍ଣ୍ଣଗୁଡ଼ିକ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> କ ବର୍ଗର ବର୍ଣ୍ଣଗୁଡ଼ିକ ହେଲା କ, ଖ, ଗ, ଘ, ଙ ।"
 
 ]
 },
 
 {
-heading: "NOTE-8: ଚୋର ସିଂହର ପ୍ରସ୍ତାବ :-",
+heading: "NOTE-8: ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ - ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଶଶକ ଆହୁରି କହିଲା ଯେ ସେହି ଅନ୍ୟ ସିଂହ ଏକ ପ୍ରସ୍ତାବ ଦେଇଥିଲା, ଦୁହେଁ ମଧ୍ୟରୁ ଯିଏ ପରାକ୍ରମରେ ଜିତିବ ସେ ଜଙ୍ଗଲର ରାଜା ହେବ । ଏହା ଶୁଣି ଭାସୁରକ ସିଂହ ରାଗରେ ସେହି ଅନ୍ୟ ସିଂହକୁ ଦେଖିବାକୁ ଓ ମାରିଦେବାକୁ ଚାହିଁଲା ।<br><br>👉 ଉଦାହରଣ: ଶଶକ ଚତୁରତାର ସହିତ ଭାସୁରକଙ୍କୁ ଏଭଳି କହିଲା ଯେ ସେ ନିଜେ ସେହି ଚୋର ସିଂହକୁ ଦେଖିବାକୁ ଆଗ୍ରହୀ ହୋଇଗଲା ।",
+text:"👉 ଧାରଣା: ଯେଉଁ ବ୍ୟଞ୍ଜନଗୁଡ଼ିକ କୌଣସି ବର୍ଗରେ ପଡ଼ନ୍ତି ନାହିଁ, ସେମାନଙ୍କୁ ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ । ଏମାନଙ୍କ ସଂଖ୍ୟା ସମୁଦାୟ ୮ ଓ ଏହା ଦୁଇ ଭାଗରେ ବିଭକ୍ତ - ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ ।<br><br>👉 ଉଦାହରଣ: ଅନ୍ତଃସ୍ଥ ବ୍ୟଞ୍ଜନ - ଯ, ର, ଲ, ବ; ଉଷ୍ମ ବ୍ୟଞ୍ଜନ - ଶ, ଷ, ସ, ହ । ଅନ୍ତଃସ୍ଥକୁ ଅର୍ଦ୍ଧସ୍ୱର ମଧ୍ୟ କୁହାଯାଏ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ସେହି ଅନ୍ୟ ସିଂହ କେଉଁ ପ୍ରସ୍ତାବ ଦେଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଯିଏ ପରାକ୍ରମରେ ଜିତିବ ସେ ରାଜା ହେବ ବୋଲି ପ୍ରସ୍ତାବ ଦେଇଥିଲା ।",
+"<span style='color:red;'>Q-1:</span> ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ବ୍ୟଞ୍ଜନଗୁଡ଼ିକ କୌଣସି ବର୍ଗରେ ପଡ଼ନ୍ତି ନାହିଁ, ସେମାନଙ୍କୁ ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ଏହା ଶୁଣି ଭାସୁରକ କ'ଣ ଚାହିଁଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ସେହି ଅନ୍ୟ ସିଂହକୁ ଦେଖିବାକୁ ଓ ମାରିଦେବାକୁ ଚାହିଁଲା ।",
+"<span style='color:red;'>Q-2:</span> ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନକୁ କେତେ ଭାଗରେ ବିଭକ୍ତ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନକୁ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରାଯାଏ - ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ ।",
 
-"<span style='color:red;'>Q-3:</span> ଶଶକ ଭାସୁରକଙ୍କୁ କ'ଣ କହିଲା ଯେ ଅନ୍ୟ ସିଂହ ଦୁର୍ଗରେ ରହେ ?<br><br><span style='color:green;'>Answer:</span> ଶଶକ କହିଲା ଯେ ଅନ୍ୟ ସିଂହ ଏକ ଦୁର୍ଗରେ ରହେ, ତେଣୁ ତାହାକୁ ଜିତିବା କଠିନ ।",
+"<span style='color:red;'>Q-3:</span> ଅନ୍ତଃସ୍ଥ ବ୍ୟଞ୍ଜନ କେଉଁଗୁଡ଼ିକ ?<br><br><span style='color:green;'>Answer:</span> ଅନ୍ତଃସ୍ଥ ବ୍ୟଞ୍ଜନ ହେଲା ଯ, ର, ଲ, ବ ।",
 
-"<span style='color:red;'>Q-4:</span> ଭାସୁରକ ଶେଷରେ କ'ଣ ନିଷ୍ପତ୍ତି ନେଲା ?<br><br><span style='color:green;'>Answer:</span> ଦୁର୍ଗରେ ଥିଲେ ମଧ୍ୟ ସେ ଅନ୍ୟ ସିଂହକୁ ଦେଖିବାକୁ ଓ ମାରିଦେବାକୁ ନିଷ୍ପତ୍ତି ନେଲା ।"
+"<span style='color:red;'>Q-4:</span> ଉଷ୍ମ ବ୍ୟଞ୍ଜନ କେଉଁଗୁଡ଼ିକ ?<br><br><span style='color:green;'>Answer:</span> ଉଷ୍ମ ବ୍ୟଞ୍ଜନ ହେଲା ଶ, ଷ, ସ, ହ ।"
 
 ]
 },
 
 {
-heading: "NOTE-9: ସିଂହକୁ କୂଅ ପାଖକୁ ନେବା :-",
+heading: "NOTE-9: ହଳ ବ୍ୟଞ୍ଜନ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଶଶକ ଭାସୁରକଙ୍କୁ ଆଗେ ଆଗେ ଚାଲି ପୂର୍ବରୁ ଦେଖିଥିବା କୂଅ ପାଖକୁ ନେଇଗଲା । ସେ କହିଲା ଯେ ତାହାର ପ୍ରତାପ ଦେଖି ଅନ୍ୟ ସିଂହ ନିଜ ଦୁର୍ଗ ଭିତରକୁ ଲୁଚିଯାଇଛି, ଏବଂ ସେହି କୂଅକୁ ଦୁର୍ଗ ବୋଲି ଦେଖାଇଲା ।<br><br>👉 ଉଦାହରଣ: ଶଶକ ଚତୁରତାର ସହିତ ମିଥ୍ୟା କାହାଣୀ ଚାଲୁ ରଖି ସିଂହକୁ କୂଅ ଆଡ଼କୁ ନେଇଗଲା, ଯାହା ଫଳରେ ସିଂହ କିଛି ସନ୍ଦେହ କରିପାରିଲା ନାହିଁ ।",
+text:"👉 ଧାରଣା: ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣକୁ ହଳ୍ ମଧ୍ୟ କୁହାଯାଏ । ଏହା ଅର୍ଦ୍ଧମାତ୍ରା ବିଶିଷ୍ଟ ଓ ଏହାର ଉଚ୍ଚାରଣ କାଳ ଅର୍ଦ୍ଧନିମେଷ ମାତ୍ର । କେବଳ ବ୍ୟଞ୍ଜନର ପ୍ରୟୋଗ 'ହଳ୍' ଚିହ୍ନ ଯୋଗରେ କରାଯାଏ ଏବଂ ଏହି ସଙ୍କେତ ବର୍ଣ୍ଣର ଅଧୋଭାଗରେ ଅଙ୍କିତ ରହେ ।<br><br>👉 ଉଦାହରଣ: ଯେତେବେଳେ ଆମେ ଏକ ବ୍ୟଞ୍ଜନକୁ ସ୍ୱର ବିନା ଲେଖିବାକୁ ଚାହୁଁ, ସେତେବେଳେ ତାହା ତଳେ ହଳ୍ ଚିହ୍ନ ଲଗାଇ ଲେଖାଯାଏ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଶଶକ ସିଂହକୁ କେଉଁଠିକୁ ନେଇଗଲା ?<br><br><span style='color:green;'>Answer:</span> ପୂର୍ବରୁ ଦେଖିଥିବା କୂଅ ପାଖକୁ ନେଇଗଲା ।",
+"<span style='color:red;'>Q-1:</span> ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣକୁ ଆଉ କେଉଁ ନାମରେ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣକୁ ହଳ୍ ମଧ୍ୟ କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ଶଶକ ସିଂହକୁ କ'ଣ କହିଲା ଯେ ଅନ୍ୟ ସିଂହ କାହିଁକି ଲୁଚିଗଲା ?<br><br><span style='color:green;'>Answer:</span> ସିଂହର ପ୍ରତାପ ଦେଖି ଅନ୍ୟ ସିଂହ ଦୁର୍ଗ ଭିତରକୁ ଲୁଚିଗଲା ବୋଲି କହିଲା ।",
+"<span style='color:red;'>Q-2:</span> ହଳ୍ ର ଉଚ୍ଚାରଣ କାଳ କେତେ ?<br><br><span style='color:green;'>Answer:</span> ହଳ୍ ର ଉଚ୍ଚାରଣ କାଳ ଅର୍ଦ୍ଧନିମେଷ ମାତ୍ର ।",
 
-"<span style='color:red;'>Q-3:</span> ଶଶକ କୂଅକୁ କ'ଣ ବୋଲି ଦେଖାଇଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ କୂଅକୁ ଅନ୍ୟ ସିଂହର ଦୁର୍ଗ ବୋଲି ଦେଖାଇଲା ।",
+"<span style='color:red;'>Q-3:</span> କେବଳ ବ୍ୟଞ୍ଜନର ପ୍ରୟୋଗ କେଉଁ ଚିହ୍ନ ଯୋଗରେ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> କେବଳ ବ୍ୟଞ୍ଜନର ପ୍ରୟୋଗ 'ହଳ୍' ଚିହ୍ନ ଯୋଗରେ କରାଯାଏ ।",
 
-"<span style='color:red;'>Q-4:</span> ସିଂହ କୂଅ ପାଖରେ କ'ଣ କରିବାକୁ ଚାହିଁଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ ଦୁର୍ଗ ଭିତରେ ଥିବା ଶତ୍ରୁକୁ ଦେଖିବାକୁ ଚାହିଁଲା ।"
+"<span style='color:red;'>Q-4:</span> ହଳ୍ ଚିହ୍ନ ବର୍ଣ୍ଣର କେଉଁ ଭାଗରେ ଅଙ୍କିତ ରହେ ?<br><br><span style='color:green;'>Answer:</span> ହଳ୍ ଚିହ୍ନ ବର୍ଣ୍ଣର ଅଧୋଭାଗରେ ଅଙ୍କିତ ରହେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-10: ସିଂହର ମୃତ୍ୟୁ ଓ କାହାଣୀର ଶିକ୍ଷା :-",
+heading: "NOTE-10: ଅଯୋଗବାହ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଭାସୁରକ କୂଅ ଭିତରକୁ ଉକି ମାରି ପାଣିରେ ନିଜର ପ୍ରତିବିମ୍ବ ଦେଖିଲା ଓ ତାହାକୁ ଶତ୍ରୁ ମନେକରି ଗର୍ଜନ କଲା । କୂଅ ଭିତରୁ ପ୍ରତିଧ୍ୱନି ଆହୁରି ଜୋର୍ରେ ଆସିଲା, ଯାହା ଫଳରେ ଭାସୁରକ ଆହୁରି ରାଗି କୂଅରେ ଡେଇଁ ପଡ଼ିଲା ଏବଂ ମରିଗଲା । ଶଶକ ସୁରକ୍ଷିତ ଫେରିଆସି ସମସ୍ତ ପଶୁମାନଙ୍କୁ ଖୁସି ଖବର ଦେଲା ।<br><br>👉 ଉଦାହରଣ: ଏହି କାହାଣୀ ଆମକୁ ଶିଖାଏ ଯେ ବଳ ଅପେକ୍ଷା ବୁଦ୍ଧି ଅଧିକ ଶକ୍ତିଶାଳୀ ଅଟେ । ଛୋଟ ଶଶକ ମଧ୍ୟ ନିଜ ବୁଦ୍ଧି ବଳରେ ବଡ଼ ସିଂହକୁ ପରାସ୍ତ କରିପାରିଲା ।",
+text:"👉 ଧାରଣା: ଅନୁସ୍ୱାର (ଂ), ବିସର୍ଗ (ଃ) ଓ ଚନ୍ଦ୍ରବିନ୍ଦୁ (ଁ) ଏହି ତିନିଗୋଟିକୁ ଅଯୋଗବାହ କୁହାଯାଏ । ଏଗୁଡ଼ିକ ସ୍ୱରବର୍ଣ୍ଣ ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଦୁଇଟିରେ ମିଶି ଉଚ୍ଚାରିତ ହୁଅନ୍ତି, ତେଣୁ ଏମାନେ ନା ସମ୍ପୂର୍ଣ୍ଣ ସ୍ୱର, ନା ସମ୍ପୂର୍ଣ୍ଣ ବ୍ୟଞ୍ଜନ ।<br><br>👉 ଉଦାହରଣ: 'ପାଣି' ଶବ୍ଦରେ ଥିବା ଅନୁସ୍ୱାର ଓ 'ଦୁଃଖ' ଶବ୍ଦରେ ଥିବା ବିସର୍ଗ ଅଯୋଗବାହର ଉଦାହରଣ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଭାସୁରକ କୂଅ ଭିତରେ କ'ଣ ଦେଖିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେ କୂଅ ଭିତରେ ପାଣିରେ ନିଜର ପ୍ରତିବିମ୍ବ ଦେଖିଲା ।",
+"<span style='color:red;'>Q-1:</span> ଅଯୋଗବାହ କେଉଁଗୁଡ଼ିକ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର (ଂ), ବିସର୍ଗ (ଃ) ଓ ଚନ୍ଦ୍ରବିନ୍ଦୁ (ଁ) ଏହି ତିନିଗୋଟି ଅଯୋଗବାହ ଅଟନ୍ତି ।",
 
-"<span style='color:red;'>Q-2:</span> ଭାସୁରକ ଗର୍ଜନ କରିବା ପରେ କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> କୂଅ ଭିତରୁ ଆହୁରି ଜୋର୍ରେ ପ୍ରତିଧ୍ୱନି ଉଠିଲା ।",
+"<span style='color:red;'>Q-2:</span> ଅଯୋଗବାହ କେଉଁଠି ମିଶି ଉଚ୍ଚାରିତ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଅଯୋଗବାହ ସ୍ୱରବର୍ଣ୍ଣ ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଦୁଇଟିରେ ମିଶି ଉଚ୍ଚାରିତ ହୁଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ଭାସୁରକର ମୃତ୍ୟୁ କିପରି ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଶତ୍ରୁ ମନେକରି ସେ କୂଅରେ ଡେଇଁ ପଡ଼ି ମରିଗଲା ।",
+"<span style='color:red;'>Q-3:</span> ଅନୁସ୍ୱାର ସଙ୍କେତ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର ସଙ୍କେତ ହେଲା ଂ ।",
 
-"<span style='color:red;'>Q-4:</span> ଏହି କାହାଣୀ ଆମକୁ କ'ଣ ଶିକ୍ଷା ଦିଏ ?<br><br><span style='color:green;'>Answer:</span> ବଳ ଅପେକ୍ଷା ବୁଦ୍ଧି ଅଧିକ ଶକ୍ତିଶାଳୀ ବୋଲି ଶିକ୍ଷା ଦିଏ ।"
+"<span style='color:red;'>Q-4:</span> 'ଦୁଃଖ' ଶବ୍ଦରେ କେଉଁ ଅଯୋଗବାହ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> 'ଦୁଃଖ' ଶବ୍ଦରେ ବିସର୍ଗ ଅଯୋଗବାହ ଅଛି ।"
 
 ]
 }
 
 ];
-
-
     
     
 const courseData = {
@@ -433,11 +369,13 @@ const courseData = {
   `, 
     audio: "",
 mermaid: [
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ସିଂହ ଓ ଶଶକ<br/>କାହାଣୀର ଆରମ୍ଭ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପରିଚୟ\"]\nA --> I1[\"ଭାସୁରକ ନାମକ ଏକ ସିଂହ<br/>ବଣରେ ରହୁଥିଲା।\"]\nA --> I2[\"ସେ ପ୍ରତିଦିନ ଅନେକ<br/>ପଶୁ ମାରୁଥିଲା।\"]\nA --> I3[\"ପଶୁମାନେ ଏଥିରେ<br/>ବ୍ୟଥିତ ହେଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପଶୁମାନଙ୍କର ପ୍ରସ୍ତାବ\"]\nM --> M1[\"ପଶୁମାନେ ମିଶି<br/>ସିଂହ ପାଖକୁ ଗଲେ।\"]\nM --> M2[\"ପ୍ରତିଦିନ ଏକ ପଶୁ<br/>ପଠାଇବାକୁ କହିଲେ।\"]\nM --> M3[\"ସିଂହ ଏହି<br/>ପ୍ରସ୍ତାବ ମାନିଲା।\"]\nM --> M4[\"ସିଂହ ଏକ<br/>ଚେତାବନୀ ଦେଲା।\"]\nM --> M5[\"ପଶୁ ନ ଆସିଲେ ସେ<br/>ସମସ୍ତଙ୍କୁ ମାରିବ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ପାଳି ବ୍ୟବସ୍ଥା\"]\nC --> C1[\"ପ୍ରତିଦିନ ଏକ ପଶୁ<br/>ପାଳି କ୍ରମେ ଯାଉଥିଲା।\"]\nC --> C2[\"ଏକଦିନ ଶଶକର<br/>ପାଳି ଆସିଲା।\"]\nC --> C3[\"ଶଶକ ବିଳମ୍ବରେ ଗଲା,<br/>ଉପାୟ ଚିନ୍ତା କଲା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ବର୍ଣ୍ଣର ପରିଚୟ ଓ<br/>ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପରିଭାଷା\"]\nA --> I1[\"ଲିଖନ ପ୍ରକ୍ରିୟା ମାଧ୍ୟମରେ<br/>ଭାଷାକୁ ବ୍ୟକ୍ତ କରାଯାଏ।\"]\nA --> I2[\"ଏଥିପାଇଁ ଉପଯୋଗୀ<br/>ଧ୍ୱନିଗୁଡ଼ିକୁ ବର୍ଣ୍ଣ କୁହାଯାଏ।\"]\nA --> I3[\"ପାଣିନି ଅଷ୍ଟାଧ୍ୟାୟୀରେ<br/>ଏହାର ବର୍ଣ୍ଣନା ଅଛି।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାର ବିଭାଜନ\"]\nM --> M1[\"ବର୍ଣ୍ଣମାଳାକୁ ଦୁଇଟି<br/>ପ୍ରଧାନ ଶ୍ରେଣୀରେ ବିଭକ୍ତ କରାଯାଏ।\"]\nM --> M2[\"ପ୍ରଥମ ଶ୍ରେଣୀ ସ୍ୱର<br/>ବର୍ଣ୍ଣ, ସଂଖ୍ୟା ୯।\"]\nM --> M3[\"ଦ୍ୱିତୀୟ ଶ୍ରେଣୀ ବ୍ୟଞ୍ଜନ<br/>ବର୍ଣ୍ଣ, ସଂଖ୍ୟା ୩୩।\"]\nM --> M4[\"ଦୀର୍ଘସ୍ୱର ୪ ଓ<br/>ଅଯୋଗବାହ ୩ ମିଶେ।\"]\nM --> M5[\"ମାତୃଭାଷାରେ ମୋଟ<br/>୪୯ଗୋଟି ବର୍ଣ୍ଣ ବ୍ୟବହୃତ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"୯ ସ୍ୱର + ୩୩ ବ୍ୟଞ୍ଜନ<br/>+ ୪ ଦୀର୍ଘ + ୩ ଅଯୋଗବାହ = ୪୯।\"]\nC --> C2[\"ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ ମିଶି<br/>ବର୍ଣ୍ଣମାଳା ଗଠିତ ହୁଏ।\"]\nC --> C3[\"ପ୍ରତ୍ୟେକ ବର୍ଣ୍ଣର ନିଜସ୍ୱ<br/>ଉଚ୍ଚାରଣ ସ୍ଥାନ ଥାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ଶଶକର ବୁଦ୍ଧି<br/>ଓ କୂଅର ଯୋଜନା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 କୂଅ ଦର୍ଶନ\"]\nA --> I1[\"ଶଶକ ବାଟରେ<br/>ଏକ କୂଅ ଦେଖିଲା।\"]\nA --> I2[\"କୂଅରେ ନିଜର<br/>ପ୍ରତିବିମ୍ବ ଦେଖିଲା।\"]\nA --> I3[\"ଏଥିରୁ ଏକ<br/>ଉପାୟ ଭାବିଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ସିଂହ ପାଖକୁ ଯାତ୍ରା\"]\nM --> M1[\"ଶଶକ ବିଳମ୍ବରେ<br/>ସିଂହ ପାଖରେ ପହଞ୍ଚିଲା।\"]\nM --> M2[\"ସିଂହ କ୍ରୋଧିତ ହୋଇ<br/>ଧମକ ଦେଲା।\"]\nM --> M3[\"ଶଶକ କ୍ଷମା ମାଗି<br/>କାରଣ କହିଲା।\"]\nM --> M4[\"ଏକ ଅନ୍ୟ ସିଂହ ବାଟରେ<br/>ରୋକିଥିଲା ବୋଲି କହିଲା।\"]\nM --> M5[\"ସେ ସିଂହ ନିଜକୁ<br/>ରାଜା କହୁଥିଲା ବୋଲି କହିଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ସିଂହର କ୍ରୋଧ\"]\nC --> C1[\"ଭାସୁରକ ଶତ୍ରୁ ସିଂହକୁ<br/>ଦେଖିବାକୁ ଚାହିଁଲା।\"]\nC --> C2[\"ଶଶକ ତାକୁ କୂଅ<br/>ପାଖକୁ ନେଇଗଲା।\"]\nC --> C3[\"ଏହା ଥିଲା ଶଶକର<br/>ଚତୁର ଯୋଜନା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ସ୍ୱରବର୍ଣ୍ଣ:<br/>ହ୍ରସ୍ୱ ଓ ଦୀର୍ଘ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ସ୍ୱର କ'ଣ\"]\nA --> I1[\"ଯେଉଁ ବର୍ଣ୍ଣ ନିରପେକ୍ଷ<br/>ଭାବରେ ଉଚ୍ଚାରିତ ହୁଏ।\"]\nA --> I2[\"ସ୍ୱରର ସାହାଯ୍ୟରେ ବ୍ୟଞ୍ଜନର<br/>ସ୍ପଷ୍ଟ ଉଚ୍ଚାରଣ ସମ୍ଭବ ହୁଏ।\"]\nA --> I3[\"ଉଚ୍ଚାରଣ କାଳର ମାତ୍ରା<br/>ଅନୁସାରେ ତିନି ପ୍ରକାର।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଦୁଇ ପ୍ରକାର ସ୍ୱର\"]\nM --> M1[\"ହ୍ରସ୍ୱ ସ୍ୱର: ଅ, ଇ, ଉ,<br/>ଋ, ୠ - ପାଞ୍ଚଗୋଟି।\"]\nM --> M2[\"ହ୍ରସ୍ୱର ଉଚ୍ଚାରଣ କାଳ<br/>ଏକମାତ୍ରା ବିଶିଷ୍ଟ।\"]\nM --> M3[\"ଦୀର୍ଘସ୍ୱର: ଆ, ଈ, ଊ, ଏ,<br/>ଐ, ଓ, ଔ - ଆଠଗୋଟି।\"]\nM --> M4[\"ଦୀର୍ଘସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ<br/>ଦୁଇମାତ୍ରା ବିଶିଷ୍ଟ।\"]\nM --> M5[\"ପ୍ରଥମ ଚାରିଗୋଟି ଦୀର୍ଘସ୍ୱର<br/>ହ୍ରସ୍ୱର ମିଳନରୁ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଅ+ଅ=ଆ, ଇ+ଇ=ଈ,<br/>ଉ+ଉ=ଊ, ଋ+ଋ=ୠ।\"]\nC --> C2[\"ଏ, ଐ, ଓ, ଔର ହ୍ରସ୍ୱରୂପ<br/>ନାହିଁ, ସନ୍ଧିରୁ ଉତ୍ପନ୍ନ।\"]\nC --> C3[\"ମୋଟ ସ୍ୱର ସଂଖ୍ୟା<br/>୫+୮=୧୩।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ସିଂହର ବିନାଶ<br/>ଓ କାହାଣୀର ଶିକ୍ଷା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 କୂଅ ପାଖରେ\"]\nA --> I1[\"ସିଂହ କୂଅ ମଧ୍ୟରେ<br/>ନିଜ ପ୍ରତିବିମ୍ବ ଦେଖିଲା।\"]\nA --> I2[\"ସେ ଏହାକୁ ଶତ୍ରୁ<br/>ବୋଲି ଭାବିଲା।\"]\nA --> I3[\"ସେ ଜୋର୍ରେ<br/>ଗର୍ଜନ କଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପ୍ରତିଧ୍ୱନି ଓ ମୃତ୍ୟୁ\"]\nM --> M1[\"କୂଅରୁ ଏକ<br/>ପ୍ରତିଧ୍ୱନି ଆସିଲା।\"]\nM --> M2[\"ସିଂହ ଏହାକୁ ଶତ୍ରୁର<br/>ଗର୍ଜନ ମନେକଲା।\"]\nM --> M3[\"ଅତି କ୍ରୋଧରେ ସେ<br/>କୂଅରେ ଡେଇଁ ପଡ଼ିଲା।\"]\nM --> M4[\"ସିଂହ କୂଅରେ ପଡ଼ି<br/>ମୃତ୍ୟୁବରଣ କଲା।\"]\nM --> M5[\"ବୁଦ୍ଧିବଳ ଶକ୍ତିଠାରୁ<br/>ବଡ଼ ବୋଲି ପ୍ରମାଣିତ ହେଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଶିକ୍ଷା\"]\nC --> C1[\"ଶଶକ ଓ ସବୁ ପଶୁ<br/>ଆନନ୍ଦିତ ହେଲେ।\"]\nC --> C2[\"ସେମାନେ ବଣରେ<br/>ସୁଖରେ ରହିଲେ।\"]\nC --> C3[\"ବୁଦ୍ଧି ବଳରେ ଅତ୍ୟାଚାରୀର<br/>ବିନାଶ ସମ୍ଭବ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ:<br/>ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ବ୍ୟଞ୍ଜନ କ'ଣ\"]\nA --> I1[\"ଯାହା ସ୍ୱରର ଅନୁଗାମୀ<br/>ବିନା ଉଚ୍ଚାରିତ ହୋଇପାରେ ନାହିଁ।\"]\nA --> I2[\"ମୋଟ ବ୍ୟଞ୍ଜନ<br/>ସଂଖ୍ୟା ୩୩ଗୋଟି।\"]\nA --> I3[\"ଏହା ବର୍ଗୀୟ ଓ<br/>ଅବର୍ଗୀୟ ଭାବେ ଦୁଇଭାଗ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ (୨୫ଗୋଟି)\"]\nM --> M1[\"କ ବର୍ଗ: କ, ଖ, ଗ,<br/>ଘ, ଙ।\"]\nM --> M2[\"ଚ ବର୍ଗ: ଚ, ଛ, ଜ,<br/>ଝ, ଞ।\"]\nM --> M3[\"ଟ ବର୍ଗ: ଟ, ଠ, ଡ,<br/>ଢ, ଣ।\"]\nM --> M4[\"ତ ବର୍ଗ: ତ, ଥ, ଦ,<br/>ଧ, ନ।\"]\nM --> M5[\"ପ ବର୍ଗ: ପ, ଫ, ବ,<br/>ଭ, ମ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ପ୍ରତ୍ୟେକ ବର୍ଗରେ<br/>ପାଞ୍ଚଗୋଟି ବର୍ଣ୍ଣ ଥାଏ।\"]\nC --> C2[\"ମୋଟ ୫ଗୋଟି ବର୍ଗ<br/>= ୫x୫ = ୨୫ ବର୍ଣ୍ଣ।\"]\nC --> C3[\"ଏଗୁଡ଼ିକୁ ସ୍ପର୍ଶବର୍ଣ୍ଣ<br/>ମଧ୍ୟ କୁହାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ<br/>ଓ ଅଯୋଗବାହ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ\"]\nA --> I1[\"ଏମାନଙ୍କ ସଂଖ୍ୟା<br/>ମୋଟ ୮ଗୋଟି।\"]\nA --> I2[\"ଦୁଇଭାଗରେ ବିଭକ୍ତ:<br/>ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ।\"]\nA --> I3[\"ଅନ୍ତଃସ୍ଥ: ଯ, ର,<br/>ଲ, ବ - ଚାରିଗୋଟି।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଷ୍ମ ଓ ହଲ୍\"]\nM --> M1[\"ଉଷ୍ମ ବ୍ୟଞ୍ଜନ: ଶ, ଷ,<br/>ସ, ହ - ଚାରିଗୋଟି।\"]\nM --> M2[\"ଅନ୍ତଃସ୍ଥ+ଉଷ୍ମ<br/>= ୪+୪ = ୮ଗୋଟି।\"]\nM --> M3[\"ସ୍ୱର ବିନା ବ୍ୟଞ୍ଜନକୁ<br/>ହଲ୍ ମଧ୍ୟ କୁହାଯାଏ।\"]\nM --> M4[\"ହଲ୍ ଚିହ୍ନ (୍) ବର୍ଣ୍ଣର<br/>ତଳଭାଗରେ ଅଙ୍କିତ ହୁଏ।\"]\nM --> M5[\"ହଲ୍ ବ୍ୟଞ୍ଜନର ଉଚ୍ଚାରଣ<br/>ଅର୍ଦ୍ଧନିମେଷ ମାତ୍ର।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଅଯୋଗବାହ\"]\nC --> C1[\"ଅନୁସ୍ୱାର (ଂ), ବିସର୍ଗ (ଃ),<br/>ଚନ୍ଦ୍ରବିନ୍ଦୁ (ଁ) ତିନିଗୋଟି।\"]\nC --> C2[\"ଏମାନେ ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ<br/>ଦୁଇଟିରେ ମିଶି ଉଚ୍ଚାରିତ ହୁଅନ୍ତି।\"]\nC --> C3[\"ଏଥିପାଇଁ ଏମାନଙ୍କୁ<br/>ଅଯୋଗବାହ କୁହାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
   ]
   
       
