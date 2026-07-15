@@ -1,4 +1,4 @@
-matching: {
+const matchingData = {
     pairs: [
         { left: "ଭାରତ", right: "🌍 ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର ।" },
         { left: "ଭାରତର ଜନସଂଖ୍ୟା", right: "👥 ବିଶ୍ୱରେ ଦ୍ୱିତୀୟ ସ୍ଥାନ ।" },
