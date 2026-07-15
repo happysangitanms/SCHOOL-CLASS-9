@@ -16,87 +16,157 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "COLONISATION",
-            odia: "ଉପନିବେଶବାଦ",
-            emoji: "🏴",
-            odiaUse: "ଉପନିବେଶବାଦ ଅର୍ଥ ଅନ୍ୟ ଦେଶକୁ ନିଜ ଅଧୀନରେ ରଖି ଶାସନ କରିବା । ଇଉରୋପୀୟ ଦେଶମାନେ ଏସିଆ ଓ ଆଫ୍ରିକାରେ ଉପନିବେଶବାଦ କରିଥିଲେ ।",
+            word: "IMPERIALISM",
+            odia: "ସାମ୍ରାଜ୍ୟବାଦ",
+            emoji: "👑",
+            odiaUse: "ସାମ୍ରାଜ୍ୟବାଦ ଅର୍ଥ ଅନ୍ୟ ଦେଶ ଉପରେ ଶାସନ ବିସ୍ତାର କରିବାର ନୀତି । ପାଶ୍ଚାତ୍ୟ ଦେଶମାନେ ସାମ୍ରାଜ୍ୟବାଦ ନୀତି ଅନୁସରଣ କରି ଏସିଆ ଓ ଆଫ୍ରିକାରେ ଉପନିବେଶ ସ୍ଥାପନ କଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
             word: "COLONY",
             odia: "ଉପନିବେଶ",
-            emoji: "🏘️",
-            odiaUse: "ଉପନିବେଶ ଅର୍ଥ ବିଦେଶସ୍ଥ ଆବାସ ବା ଅନ୍ୟ ଦେଶର ଅଧୀନ ଅଞ୍ଚଳ । ଇଉରୋପୀୟମାନେ ଅନେକ ଉପନିବେଶ ସ୍ଥାପନ କରିଥିଲେ ।",
+            emoji: "🏴",
+            odiaUse: "ଉପନିବେଶ ଅର୍ଥ ପରାଧୀନ ଦେଶ, ଯାହା ଅନ୍ୟ ଏକ ଶକ୍ତିଶାଳୀ ଦେଶ ଦ୍ୱାରା ଶାସିତ ହୁଏ । ଏସିଆ ଓ ଆଫ୍ରିକାର ଅନେକ ଦେଶ ଉପନିବେଶରେ ପରିଣତ ହେଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "TRADE",
-            odia: "ବାଣିଜ୍ୟ",
+            word: "CONTINENT",
+            odia: "ମହାଦେଶ",
+            emoji: "🌍",
+            odiaUse: "ମହାଦେଶ ଅର୍ଥ ପୃଥିବୀର ବଡ଼ ଭୂଖଣ୍ଡ । ଏସିଆ ଓ ଆଫ୍ରିକା ମହାଦେଶର ଦେଶମାନେ ପାଶ୍ଚାତ୍ୟ ପ୍ରଭାବରେ ପଡ଼ିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "STEAMSHIP",
+            odia: "ବାଷ୍ପୀୟ ଜାହାଜ",
             emoji: "🚢",
-            odiaUse: "ବାଣିଜ୍ୟ ଅର୍ଥ କିଣାବିକା ଓ ବ୍ୟବସାୟ । ବାଣିଜ୍ୟ ପାଇଁ ଇଉରୋପୀୟମାନେ ଏସିଆକୁ ଆସିଥିଲେ ।",
+            odiaUse: "ବାଷ୍ପୀୟ ଜାହାଜ ଅର୍ଥ ବାଷ୍ପ ଶକ୍ତିରେ ଚାଲୁଥିବା ଜାହାଜ । ବାଷ୍ପୀୟ ଜାହାଜର ଉଭାବନ ଯୋଗେ ସମୁଦ୍ର ଯାତ୍ରା ସହଜ ହେଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "EMPIRE",
-            odia: "ସାମ୍ରାଜ୍ୟ",
-            emoji: "👑",
-            odiaUse: "ସାମ୍ରାଜ୍ୟ ଅର୍ଥ ବହୁ ଅଞ୍ଚଳକୁ ନେଇ ଗଠିତ ବଡ଼ ରାଜ୍ୟ । ସାମ୍ରାଜ୍ୟ ବିସ୍ତାର ଉପନିବେଶବାଦର ଲକ୍ଷ୍ୟ ଥିଲା ।",
+            word: "STEAM ENGINE",
+            odia: "ବାଷ୍ପୀୟ ଇଞ୍ଜିନ",
+            emoji: "🚂",
+            odiaUse: "ବାଷ୍ପୀୟ ଇଞ୍ଜିନ ଅର୍ଥ ବାଷ୍ପ ଶକ୍ତିରେ ଚାଲୁଥିବା ଯନ୍ତ୍ର । ଷ୍ଟିଫେନସନ ପ୍ରଥମ ବାଷ୍ପୀୟ ଇଞ୍ଜିନ ନିର୍ମାଣ କଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DISCOVERY",
-            odia: "ଆବିଷ୍କାର",
-            emoji: "🧭",
-            odiaUse: "ଆବିଷ୍କାର ଅର୍ଥ ନୂଆ ସ୍ଥାନ ବା ବସ୍ତୁର ସନ୍ଧାନ । ଭୌଗୋଳିକ ଆବିଷ୍କାର ଉପନିବେଶ ସ୍ଥାପନରେ ସାହାଯ୍ୟ କଲା ।",
+            word: "RAILWAY",
+            odia: "ରେଳପଥ",
+            emoji: "🛤️",
+            odiaUse: "ରେଳପଥ ଅର୍ଥ ରେଳ ଗାଡ଼ି ଚାଲିବା ପାଇଁ ତିଆରି ହୋଇଥିବା ପଥ । ରେଳପଥର ନିର୍ମାଣ ଯୋଗେ ଉପନିବେଶ ଅଞ୍ଚଳରେ ପରିବହନ ସହଜ ହେଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "GEOGRAPHY",
-            odia: "ଭୌଗୋଳିକ",
-            emoji: "🗺️",
-            odiaUse: "ଭୌଗୋଳିକ ଅର୍ଥ ପୃଥିବୀର ସ୍ଥାନ ଓ ପରିବେଶ ସମ୍ବନ୍ଧୀୟ । ଭୌଗୋଳିକ ଆବିଷ୍କାର ଯାତାୟାତକୁ ସହଜ କରିଥିଲା ।",
+            word: "TRANSPORT",
+            odia: "ପରିବହନ",
+            emoji: "🚗",
+            odiaUse: "ପରିବହନ ଅର୍ଥ ଏକ ସ୍ଥାନରୁ ଅନ୍ୟ ସ୍ଥାନକୁ ଲୋକ ବା ଦ୍ରବ୍ୟ ନେବା ବ୍ୟବସ୍ଥା । ପରିବହନ ଓ ଯୋଗାଯୋଗର ଉନ୍ନତି ଯୋଗେ ଦୂର ଦେଶ ପାଖକୁ ଆସିଗଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SLAVE",
-            odia: "କ୍ରୀତଦାସ",
-            emoji: "⛓️",
-            odiaUse: "କ୍ରୀତଦାସ ଅର୍ଥ ଅର୍ଥର ବିନିମୟରେ ଗୋଲାମ ଭାବେ ବିକ୍ରି ହୋଇଥିବା ବ୍ୟକ୍ତି । ଆଫ୍ରିକାରେ ଦାସ ବ୍ୟବସାୟ ଲାଭଦାୟକ ଥିଲା ।",
+            word: "COMMUNICATION",
+            odia: "ଯୋଗାଯୋଗ",
+            emoji: "📡",
+            odiaUse: "ଯୋଗାଯୋଗ ଅର୍ଥ ଖବର ବା ସୂଚନା ଆଦାନ-ପ୍ରଦାନ କରିବା ବ୍ୟବସ୍ଥା । ଯୋଗାଯୋଗର ଉନ୍ନତି ପାଶ୍ଚାତ୍ୟ ଓ ଉପନିବେଶ ମଧ୍ୟରେ ସମ୍ପର୍କ ବଢ଼ାଇଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "INDUSTRIAL REVOLUTION",
-            odia: "ଶିଳ୍ପ ବିପ୍ଳବ",
-            emoji: "🏭",
-            odiaUse: "ଶିଳ୍ପ ବିପ୍ଳବ ଅର୍ଥ ନୂତନ ଯନ୍ତ୍ର ସାହାଯ୍ୟରେ ବହୁ ପରିମାଣରେ ଉତ୍ପାଦନ ହେବା । ଏହା ଇଂଲାଣ୍ଡରେ ଆରମ୍ଭ ହୋଇଥିଲା ।",
+            word: "INVENTION",
+            odia: "ଉଭାବନ",
+            emoji: "💡",
+            odiaUse: "ଉଭାବନ ଅର୍ଥ ନୂଆ କିଛି ତିଆରି କରିବା । ବାଷ୍ପୀୟ ଜାହାଜ ଓ ଇଞ୍ଜିନର ଉଭାବନ ପାଶ୍ଚାତ୍ୟ ଦେଶକୁ ଶକ୍ତିଶାଳୀ କଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "FACTORY",
-            odia: "କଳ କାରଖାନା",
-            emoji: "🏭",
-            odiaUse: "କଳ କାରଖାନା ଅର୍ଥ ଯନ୍ତ୍ର ସାହାଯ୍ୟରେ ଦ୍ରବ୍ୟ ତିଆରି କରାଯାଉଥିବା ସ୍ଥାନ । ଶିଳ୍ପ ବିପ୍ଳବ ପରେ କଳ କାରଖାନା ବଢ଼ିଲା ।",
+            word: "PROPAGATION",
+            odia: "ପ୍ରଚାର",
+            emoji: "📢",
+            odiaUse: "ପ୍ରଚାର ଅର୍ଥ କୌଣସି ବିଷୟକୁ ବ୍ୟାପକ ଭାବେ ଫଇଲାଇବା । ଧର୍ମ ଓ ସଂସ୍କୃତିର ପ୍ରଚାର ଉପନିବେଶବାଦକୁ ବଢ଼ାଇବାରେ ସାହାଯ୍ୟ କଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "MARKET",
-            odia: "ବଜାର",
-            emoji: "🛒",
-            odiaUse: "ବଜାର ଅର୍ଥ କିଣାବିକାର ସ୍ଥାନ । ଇଉରୋପୀୟ ଦେଶମାନେ ଏସିଆ ଓ ଆଫ୍ରିକାରେ ନୂଆ ବଜାର ସୃଷ୍ଟି କରିଥିଲେ ।",
+            word: "CHRISTIANITY",
+            odia: "ଖ୍ରୀଷ୍ଟଧର୍ମ",
+            emoji: "✝️",
+            odiaUse: "ଖ୍ରୀଷ୍ଟଧର୍ମ ଅର୍ଥ ଯୀଶୁ ଖ୍ରୀଷ୍ଟଙ୍କ ଶିକ୍ଷାରେ ଆଧାରିତ ଧର୍ମ । ମିଶନାରୀମାନେ ଉପନିବେଶ ଅଞ୍ଚଳରେ ଖ୍ରୀଷ୍ଟଧର୍ମର ପ୍ରଚାର କଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "RAW MATERIAL",
-            odia: "କଞ୍ଚାମାଲ",
+            word: "MISSIONARY",
+            odia: "ମିଶନାରୀ",
+            emoji: "⛪",
+            odiaUse: "ମିଶନାରୀ ଅର୍ଥ ଧର୍ମ ପ୍ରଚାର କରିବା ପାଇଁ ପଠାଯାଇଥିବା ବ୍ୟକ୍ତି । ମିଶନାରୀମାନେ ଶିକ୍ଷା ଓ ସ୍ୱାସ୍ଥ୍ୟ ସେବା ମାଧ୍ୟମରେ ଧର୍ମ ପ୍ରଚାର କଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "CIVILIZATION",
+            odia: "ସଭ୍ୟତା",
+            emoji: "🏛️",
+            odiaUse: "ସଭ୍ୟତା ଅର୍ଥ ଏକ ଉନ୍ନତ ସାମାଜିକ ଓ ସାଂସ୍କୃତିକ ଜୀବନଶୈଳୀ । ପାଶ୍ଚାତ୍ୟ ଦେଶମାନେ ନିଜକୁ ଶ୍ରେଷ୍ଠ ସଭ୍ୟତାର ବାହକ ବୋଲି ଭାବୁଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ADMINISTRATION",
+            odia: "ଶାସନ",
+            emoji: "🏢",
+            odiaUse: "ଶାସନ ଅର୍ଥ ଦେଶ ବା ରାଜ୍ୟ ଚଳାଇବା ବ୍ୟବସ୍ଥା । ଅନେକ ଏସିଆ ଓ ଆଫ୍ରିକୀୟ ଦେଶରେ ଦୁର୍ବଳ ଶାସନ ଥିଲା, ଯାହା ଉପନିବେଶବାଦକୁ ସହଜ କଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "WEAK RULE",
+            odia: "ଦୁର୍ବଳ ଶାସନ",
+            emoji: "😔",
+            odiaUse: "ଦୁର୍ବଳ ଶାସନ ଅର୍ଥ ଅଦକ୍ଷ ଓ ଅସକ୍ଷମ ପ୍ରଶାସନ । ଉନବିଂଶ ଶତାବ୍ଦୀରେ ଏସିଆ ଓ ଆଫ୍ରିକାର ଅନେକ ଦେଶରେ ଶାସନ ଅତ୍ୟନ୍ତ ଦୁର୍ବଳ ଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "BACKWARD",
+            odia: "ଅନୁନ୍ନତ",
+            emoji: "📉",
+            odiaUse: "ଅନୁନ୍ନତ ଅର୍ଥ ବିକାଶ ନହୋଇଥିବା ବା ପଛରେ ପଡ଼ିଥିବା । ଆଫ୍ରିକାର ଦେଶମାନଙ୍କରେ ବିଜ୍ଞାନ ଓ କାରିଗରୀ ବିଦ୍ୟା ଅନୁନ୍ନତ ପର୍ଯ୍ୟାୟରେ ଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "TECHNOLOGY",
+            odia: "କାରିଗରୀ ବିଦ୍ୟା",
+            emoji: "⚙️",
+            odiaUse: "କାରିଗରୀ ବିଦ୍ୟା ଅର୍ଥ ଯନ୍ତ୍ର ଓ ଉପକରଣ ତିଆରି କରିବାର ଜ୍ଞାନ । ଆଫ୍ରିକୀୟ ଦେଶମାନଙ୍କରେ ବିଜ୍ଞାନ ଓ କାରିଗରୀ ବିଦ୍ୟା ଉନ୍ନତ ପର୍ଯ୍ୟାୟରେ ପହଞ୍ଚି ପାରି ନ ଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "SELF-DEFENSE",
+            odia: "ଆତ୍ମରକ୍ଷା",
+            emoji: "🛡️",
+            odiaUse: "ଆତ୍ମରକ୍ଷା ଅର୍ଥ ନିଜକୁ ବିପଦରୁ ରକ୍ଷା କରିବା । ଅନୁନ୍ନତ ପ୍ରଯୁକ୍ତି ଯୋଗୁଁ ସେହି ଲୋକମାନେ ଆକ୍ରମଣକାରୀଙ୍କ ବିରୁଦ୍ଧରେ ଆତ୍ମରକ୍ଷା କରିପାରିଲେ ନାହିଁ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "EXPLOITATION",
+            odia: "ଶୋଷଣ",
             emoji: "⛏️",
-            odiaUse: "କଞ୍ଚାମାଲ ଅର୍ଥ ଜିନିଷ ତିଆରି ପାଇଁ ଦରକାର ହେଉଥିବା ମୂଳ ସାମଗ୍ରୀ । ଏସିଆ ଓ ଆଫ୍ରିକାରେ ପ୍ରଚୁର କଞ୍ଚାମାଲ ମିଳୁଥିଲା ।",
+            odiaUse: "ଶୋଷଣ ଅର୍ଥ କାହାର ଅନ୍ୟାୟ ଲାଭ ଉଠାଇବା । ଉପନିବେଶବାଦୀମାନେ ଆକ୍ରାନ୍ତ ଦେଶର ଧନ-ସମ୍ପତ୍ତିର ଶୋଷଣ କରୁଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "COMPETITION",
-            odia: "ପ୍ରତିଦ୍ୱନ୍ଦିତା",
+            word: "MILITARY SUPERIORITY",
+            odia: "ସାମରିକ ଶ୍ରେଷ୍ଠତା",
             emoji: "⚔️",
-            odiaUse: "ପ୍ରତିଦ୍ୱନ୍ଦିତା ଅର୍ଥ ପରସ୍ପର ଆଗକୁ ବଢ଼ିବା ପାଇଁ ହେଉଥିବା ଲଢ଼େଇ । ଉପନିବେଶ ସ୍ଥାପନ ପାଇଁ ଇଉରୋପୀୟ ଦେଶମାନଙ୍କ ମଧ୍ୟରେ ପ୍ରତିଦ୍ୱନ୍ଦିତା ଥିଲା ।",
+            odiaUse: "ସାମରିକ ଶ୍ରେଷ୍ଠତା ଅର୍ଥ ଅସ୍ତ୍ରଶସ୍ତ୍ର ଓ ସେନାରେ ଅନ୍ୟଠାରୁ ଅଧିକ ଶକ୍ତିଶାଳୀ ହେବା । ପାଶ୍ଚାତ୍ୟ ଦେଶମାନେ ସାମରିକ ଶ୍ରେଷ୍ଠତା ଯୋଗୁଁ ଅନ୍ୟ ଦେଶକୁ ଜୟ କରିପାରିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "FAVOURABLE CIRCUMSTANCES",
+            odia: "ଅନୁକୂଳ ପରିସ୍ଥିତି",
+            emoji: "✅",
+            odiaUse: "ଅନୁକୂଳ ପରିସ୍ଥିତି ଅର୍ଥ କାର୍ଯ୍ୟ ସଫଳ ହେବା ପାଇଁ ସହାୟକ ଅବସ୍ଥା । ଅନେକ ଅନୁକୂଳ ପରିସ୍ଥିତି ଯୋଗେ ଉପନିବେଶବାଦୀମାନେ ସହଜରେ ଦେଶ ଅଧିକାର କରିପାରିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ESTABLISHED",
+            odia: "ପ୍ରତିଷ୍ଠିତ",
+            emoji: "🏗️",
+            odiaUse: "ପ୍ରତିଷ୍ଠିତ ଅର୍ଥ ସ୍ଥାପିତ ହୋଇ ମଜବୁତ ହୋଇଥିବା । ଏହି ପରିସ୍ଥିତିରେ ଉପନିବେଶବାଦୀମାନେ ପ୍ରତିଷ୍ଠିତ ଖଣି ଓ କାରଖାନାରୁ ଲାଭ ଉଠାଇଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
@@ -105,101 +175,101 @@ const wordData = {
 const topicsData = [
 
 {
-heading: "NOTE-1: ଉପନିବେଶ ଓ ଉପନିବେଶବାଦ କ'ଣ ? :-",
+heading: "NOTE-1: ଏସିଆ ଓ ଆଫ୍ରୀକାରେ ପ୍ରତିରୋଧର ଅଭାବ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଉପନିବେଶର ଆକ୍ଷରିକ ଅର୍ଥ ହେଉଛି ବିଦେଶସ୍ଥ ଆବାସ । କୌଣସି ଅଞ୍ଚଳରେ ପ୍ରବାସୀମାନଙ୍କ ବସତି ସ୍ଥାପନ କରି ତାହାକୁ ମାତୃଦେଶର ଲାଭ ପାଇଁ କାର୍ଯ୍ୟରେ ଲଗାଇବାକୁ ଉପନିବେଶବାଦ କୁହାଯାଏ । ବାଣିଜ୍ୟ ଉନ୍ନତି, ଆର୍ଥିକ ସମୃଦ୍ଧି, ସାମ୍ରାଜ୍ୟ ବିସ୍ତାର ଓ ଧର୍ମ ପ୍ରୟାର ଏହାର ମୁଖ୍ୟ ଲକ୍ଷ୍ୟ ଥିଲା । ଏହା ଷୋଡ଼ଶ ଶତାବ୍ଦୀରେ ଆରମ୍ଭ ହୋଇଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଇଉରୋପୀୟ ରାଷ୍ଟ୍ରମାନେ ଏସିଆ ଓ ଆଫ୍ରିକାକୁ ବାଣିଜ୍ୟ ଉଦ୍ଦେଶ୍ୟରେ ଆସି ସେଠାରେ ବାଣିଜ୍ୟ କେନ୍ଦ୍ର ଖୋଲି ନିଜର ଉପନିବେଶ ସ୍ଥାପନ କରିଥିଲେ ।",
+text:"👉 ଧାରଣା: ଏସିଆ ଓ ଆଫ୍ରୀକାରେ ପୂର୍ବରୁ ମଧ୍ୟସ୍ଥାୟୀ ଶାସନ ଚଳୁଥିଲା । ଲୋକମାନେ ଏକ ବଡ଼ ଶାସକ ପରିବର୍ତ୍ତେ ନିଜ ନିଜ ସ୍ଥାନୀୟ ମୁଖ୍ୟଙ୍କ ପ୍ରତି ଆନୁଗତ୍ୟ ପ୍ରଦର୍ଶନ କରୁଥିଲେ । ସେମାନଙ୍କ ପାଖରେ ଉନ୍ନତ ପ୍ରତିରକ୍ଷା ବ୍ୟବସ୍ଥା ନ ଥିଲା, ତେଣୁ ଉପନିବେଶିକ ଶକ୍ତିମାନେ ସହଜରେ ସେମାନଙ୍କୁ ପରାସ୍ତ କରିପାରୁଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ପାରିଶ୍ରମିକ ପାଇବା ଆଶାରେ ଅନେକ ଏସିଆ ଓ ଆଫ୍ରୀକୀ ଲୋକ ଉପନିବେଶିକ ସୈନ୍ୟବାହିନୀରେ ଯୋଗ ଦେଇ କାମ କରୁଥିଲେ । ଏହାଦ୍ୱାରା ନିଜ ଦେଶର ପ୍ରତିରୋଧ ଶକ୍ତି ଆହୁରି ଦୁର୍ବଳ ହୋଇଗଲା ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଉପନିବେଶର ଆକ୍ଷରିକ ଅର୍ଥ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଉପନିବେଶର ଆକ୍ଷରିକ ଅର୍ଥ ହେଉଛି ବିଦେଶସ୍ଥ ଆବାସ ।",
+"<span style='color:red;'>Q-1:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାର ଲୋକମାନେ କାହା ପ୍ରତି ଆନୁଗତ୍ୟ ପ୍ରଦର୍ଶନ କରୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ନିଜ ନିଜ ସ୍ଥାନୀୟ ମୁଖ୍ୟଙ୍କ ପ୍ରତି ଆନୁଗତ୍ୟ ପ୍ରଦର୍ଶନ କରୁଥିଲେ ।",
 
-"<span style='color:red;'>Q-2:</span> ଉପନିବେଶବାଦକୁ କିପରି ବ୍ୟାଖ୍ୟା କରାଯାଇପାରେ ?<br><br><span style='color:green;'>Answer:</span> କୌଣସି ଅଞ୍ଚଳରେ ପ୍ରବାସୀମାନଙ୍କ ବସତି ସ୍ଥାପନ କରି ମାତୃଦେଶର ଲାଭ ପାଇଁ କାର୍ଯ୍ୟରେ ଲଗାଇବାକୁ ଉପନିବେଶବାଦ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-2:</span> ଉପନିବେଶିକ ଶାସକମାନେ ଏସିଆ ଓ ଆଫ୍ରୀକାକୁ କାହିଁକି ସହଜରେ ଜୟ କରିପାରିଲେ ?<br><br><span style='color:green;'>Answer:</span> କାରଣ ସେଠାରେ ଉନ୍ନତ ପ୍ରତିରକ୍ଷା ବ୍ୟବସ୍ଥା ନ ଥିଲା ଓ ଶାସନ ମଧ୍ୟସ୍ଥାୟୀ ଥିଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ଉପନିବେଶବାଦର ମୁଖ୍ୟ ଲକ୍ଷ୍ୟଗୁଡ଼ିକ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ବାଣିଜ୍ୟ ବ୍ୟବସାୟର ଉନ୍ନତି, ଆର୍ଥିକ ସମୃଦ୍ଧି, ସାମ୍ରାଜ୍ୟ ବିସ୍ତାର ଓ ଧର୍ମ ପ୍ରୟାର ଉପନିବେଶବାଦର ମୁଖ୍ୟ ଲକ୍ଷ୍ୟ ଥିଲା ।",
+"<span style='color:red;'>Q-3:</span> କେଉଁ ଲୋକମାନେ ଉପନିବେଶିକ ସୈନ୍ୟବାହିନୀରେ ଯୋଗ ଦେଉଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପାରିଶ୍ରମିକ ପାଇବା ଆଶାରେ ଅନେକ ଏସିଆ ଓ ଆଫ୍ରୀକୀ ଲୋକ ଉପନିବେଶିକ ସୈନ୍ୟବାହିନୀରେ ଯୋଗ ଦେଉଥିଲେ ।",
 
-"<span style='color:red;'>Q-4:</span> ଉପନିବେଶବାଦ କେବେ ଆରମ୍ଭ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଉପନିବେଶବାଦ ପ୍ରଥମେ ଷୋଡ଼ଶ ଶତାବ୍ଦୀରେ ଆରମ୍ଭ ହୋଇଥିଲା ।"
+"<span style='color:red;'>Q-4:</span> ସ୍ଥାନୀୟ ଲୋକମାନେ ସୈନ୍ୟବାହିନୀରେ ଯୋଗ ଦେବାର ପରିଣାମ କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହାଦ୍ୱାରା ସେମାନଙ୍କ ନିଜ ଦେଶର ପ୍ରତିରୋଧ ଶକ୍ତି ଆହୁରି ଦୁର୍ବଳ ହୋଇଗଲା ।"
 
 ]
 },
 
 {
-heading: "NOTE-2: ଉପନିବେଶବାଦର ପର୍ଯ୍ୟାୟ ଓ ଔପନିବେଶିକ ସାମ୍ରାଜ୍ୟବାଦ :-",
+heading: "NOTE-2: ପରିବହନ ଓ ଯୋଗାଯୋଗର ଉନ୍ନତି :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଉପନିବେଶବାଦର ପ୍ରଥମ ପର୍ଯ୍ୟାୟ ଅଷ୍ଟାଦଶ ଶତାବ୍ଦୀର ଶେଷଭାଗ ପର୍ଯ୍ୟନ୍ତ ଚାଲିଥିଲା । ଊନବିଂଶ ଶତାବ୍ଦୀର ଶେଷବେଳକୁ ଉପନିବେଶ ସ୍ଥାପନ ପୁଣି ଆରମ୍ଭ ହେଲା, ଯାହାକୁ ଔପନିବେଶିକ ସାମ୍ରାଜ୍ୟବାଦ କୁହାଯାଏ । ସାମ୍ରାଜ୍ୟବାଦୀ ରାଷ୍ଟ୍ରମାନେ ନିଜ ସ୍ୱାର୍ଥ ପାଇଁ ଅଞ୍ଚଳ ଜୟ କରି ଉପନିବେଶ ସ୍ଥାପନ କଲେ ।<br><br>👉 ଉଦାହରଣ: ଏହି ଔପନିବେଶିକ ସାମ୍ରାଜ୍ୟବାଦ ୧୯୧୪ ମସିହାରେ ଆରମ୍ଭ ହୋଇଥିବା ପ୍ରଥମ ବିଶ୍ୱଯୁଦ୍ଧର ଏକ ପ୍ରମୁଖ କାରଣ ହୋଇଥିଲା ।",
+text:"👉 ଧାରଣା: ବାଷ୍ପୀୟ ଜାହାଜର ଉଭାବନ ଦ୍ୱାରା ଏସିଆ ଓ ଆଫ୍ରୀକାକୁ ଯାତାୟାତ ସହଜ ଓ ଶୀଘ୍ର ହୋଇଗଲା । ରେଳପଥ, ସ୍ଥଳପଥ ଓ ଜଳପଥ ନିର୍ମାଣ ହେବା ଫଳରେ ଦୂର ଅଞ୍ଚଳକୁ ସୈନ୍ୟ ଓ ସାମଗ୍ରୀ ପଠାଇବା ସହଜ ହେଲା ।<br><br>👉 ଉଦାହରଣ: ୧୮୨୯ ମସିହାରେ ଜେଓର୍ଜ ଷ୍ଟିଫେନ୍‌ସନ୍‌ 'ରକେଟ' ନାମକ ପ୍ରଥମ ବାଷ୍ପଚାଳିତ ରେଳଗାଡ଼ି ଲିଭରପୁଲରୁ ମାଞ୍ଚେଷ୍ଟର ପର୍ଯ୍ୟନ୍ତ ଚଳାଇଥିଲେ । ୧୮୪୧ ମସିହାରେ ଆଫ୍ରୀକାରେ ପ୍ରଥମ ରେଳବାଇ ଆରମ୍ଭ ହୋଇଥିଲା ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଉପନିବେଶବାଦର ପ୍ରଥମ ପର୍ଯ୍ୟାୟ କେତେ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଚାଲିଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରଥମ ପର୍ଯ୍ୟାୟ ଅଷ୍ଟାଦଶ ଶତାବ୍ଦୀର ଶେଷଭାଗ ପର୍ଯ୍ୟନ୍ତ ଚାଲିଥିଲା ।",
+"<span style='color:red;'>Q-1:</span> ବାଷ୍ପୀୟ ଜାହାଜର ଉଭାବନ ଉପନିବେଶ ସ୍ଥାପନରେ କିପରି ସାହାଯ୍ୟ କଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଦ୍ୱାରା ଏସିଆ ଓ ଆଫ୍ରୀକାକୁ ଯାତାୟାତ ସହଜ ଓ ଶୀଘ୍ର ହେଲା ।",
 
-"<span style='color:red;'>Q-2:</span> ଔପନିବେଶିକ ସାମ୍ରାଜ୍ୟବାଦ କେବେ ଆରମ୍ଭ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଊନବିଂଶ ଶତାବ୍ଦୀର ଶେଷବେଳକୁ ଔପନିବେଶିକ ସାମ୍ରାଜ୍ୟବାଦର ପୁନରୁତ୍ଥାନ ହେଲା ।",
+"<span style='color:red;'>Q-2:</span> ରେଳପଥ ନିର୍ମାଣ ଉପନିବେଶ ରାଷ୍ଟ୍ରମାନଙ୍କୁ କେଉଁ ସୁବିଧା ଦେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଦ୍ୱାରା ଦୂର ଅଞ୍ଚଳକୁ ସୈନ୍ୟ ଓ ସାମଗ୍ରୀ ପଠାଇବା ସହଜ ହେଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ସାମ୍ରାଜ୍ୟବାଦୀ ରାଷ୍ଟ୍ରମାନେ କ'ଣ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ନିଜ ସ୍ୱାର୍ଥକୁ ସୁହାଉଥିବା ଅଞ୍ଚଳ ଜୟ କରି ସେଠାରେ ଉପନିବେଶ ସ୍ଥାପନ କଲେ ।",
+"<span style='color:red;'>Q-3:</span> ପ୍ରଥମ ବାଷ୍ପଚାଳିତ ରେଳଗାଡ଼ି କେଉଁ ନାମରେ ପରିଚିତ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା 'ରକେଟ' ନାମରେ ପରିଚିତ ଥିଲା, ଯାହା ଜେଓର୍ଜ ଷ୍ଟିଫେନ୍‌ସନ୍‌ ନିର୍ମାଣ କରିଥିଲେ ।",
 
-"<span style='color:red;'>Q-4:</span> ଔପନିବେଶିକ ସାମ୍ରାଜ୍ୟବାଦ କେଉଁ ଘଟଣା ପାଇଁ କାରଣ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ୧୯୧୪ ମସିହାର ପ୍ରଥମ ବିଶ୍ୱଯୁଦ୍ଧ ପାଇଁ ଏକ ପ୍ରମୁଖ କାରଣ ହୋଇଥିଲା ।"
+"<span style='color:red;'>Q-4:</span> ଆଫ୍ରୀକାରେ ପ୍ରଥମ ରେଳବାଇ କେବେ ଆରମ୍ଭ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ୧୮୪୧ ମସିହାରେ ଆଫ୍ରୀକାରେ ପ୍ରଥମ ରେଳବାଇ ଆରମ୍ଭ ହୋଇଥିଲା ।"
 
 ]
 },
 
 {
-heading: "NOTE-3: ଉପନିବେଶବାଦର କାରଣ - ଭୌଗୋଳିକ ଆବିଷ୍କାର :-",
+heading: "NOTE-3: ଧର୍ମ ଓ ସଂସ୍କୃତିର ପ୍ରଚାର :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପଞ୍ଚଦଶ ଓ ଷୋଡ଼ଶ ଶତାବ୍ଦୀର ଭୌଗୋଳିକ ଆବିଷ୍କାର ଫଳରେ ଅନେକ ନୂତନ ଅଞ୍ଚଳର ସନ୍ଧାନ ମିଳିଲା । ଇଉରୋପରୁ ଏସିଆ ଓ ଆଫ୍ରିକାକୁ ଜଳପଥ ଓ ସ୍ଥଳପଥ ଆବିଷ୍କୃତ ହେବାରୁ ଦେଶମାନଙ୍କ ମଧ୍ୟରେ ଯାତାୟାତ ସହଜ ହେଲା ।<br><br>👉 ଉଦାହରଣ: ଅନୁସନ୍ଧାନକାରୀମାନେ ନୂତନ ଅଞ୍ଚଳରେ ବ୍ୟବସାୟିକ ଓ ରାଜନୈତିକ ଲାଭ ଥିବା କଥା ନିଜ ବିବରଣୀରେ ଲେଖିଲେ, ଯାହା ଉପନିବେଶ ସ୍ଥାପନ ପାଇଁ ପଥ ଦେଖାଇଲା ।",
+text:"👉 ଧାରଣା: ଉପନିବେଶିକ ଶକ୍ତିମାନେ ନିଜର ପାଶ୍ଚାତ୍ୟ ଧର୍ମ ଓ ସଂସ୍କୃତିକୁ ଅନ୍ୟ ଅଞ୍ଚଳରେ ବିସ୍ତାର କରିବାକୁ ଚାହୁଁଥିଲେ । ସେମାନେ ଏହାକୁ ନିଜର ନୈତିକ କର୍ତ୍ତବ୍ୟ ବୋଲି ମାନୁଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ଏସିଆ ଓ ଆଫ୍ରୀକାର ମୂଳ ଅଧିବାସୀମାନେ ଉପନିବେଶିକମାନଙ୍କୁ ସଭ୍ୟ ଓ ସମୃଦ୍ଧ ଭାବି ସେମାନଙ୍କ ଧର୍ମ ଓ ଆଚରଣକୁ ଅନୁସରଣ କରିବାକୁ ଲାଗିଲେ । ଏହା ଉପନିବେଶିକମାନଙ୍କୁ ଅଧିକ ଅଞ୍ଚଳରେ ଉପନିବେଶ ସ୍ଥାପନ କରିବାକୁ ଉତ୍ସାହିତ କଲା ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ପଞ୍ଚଦଶ ଓ ଷୋଡ଼ଶ ଶତାବ୍ଦୀର ଭୌଗୋଳିକ ଆବିଷ୍କାର ଫଳରେ କ'ଣ ମିଳିଲା ?<br><br><span style='color:green;'>Answer:</span> ଭିନ୍ନ ଭିନ୍ନ ସ୍ଥାନରେ ଅନେକ ନୂତନ ଅଞ୍ଚଳର ସନ୍ଧାନ ମିଳିଲା ।",
+"<span style='color:red;'>Q-1:</span> ଉପନିବେଶିକ ଶକ୍ତିମାନେ କେଉଁ ଉଦ୍ଦେଶ୍ୟରେ ପାଶ୍ଚାତ୍ୟ ସଂସ୍କୃତି ପ୍ରଚାର କରୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ନିଜ ଧର୍ମ ଓ ସଂସ୍କୃତିକୁ ଅନ୍ୟ ଅଞ୍ଚଳରେ ବିସ୍ତାର କରିବାକୁ ଚାହୁଁଥିଲେ ।",
 
-"<span style='color:red;'>Q-2:</span> ଜଳପଥ ଓ ସ୍ଥଳପଥ ଆବିଷ୍କାରର ପରିଣାମ କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଦେଶମାନଙ୍କ ମଧ୍ୟରେ ଯାତାୟାତ ଓ ଯୋଗାଯୋଗର ଅଧିକ ସୁବିଧା ହେଲା ।",
+"<span style='color:red;'>Q-2:</span> ଉପନିବେଶିକମାନେ ଉପନିବେଶ ସ୍ଥାପନକୁ କେଉଁ ଭାବରେ ଦେଖୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ଏହାକୁ ନିଜର ନୈତିକ କର୍ତ୍ତବ୍ୟ ବୋଲି ଭାବୁଥିଲେ ।",
 
-"<span style='color:red;'>Q-3:</span> ଭୌଗୋଳିକ ଅନୁସନ୍ଧାନକାରୀମାନେ ନିଜ ବିବରଣୀରେ କ'ଣ ଉଲ୍ଲେଖ କଲେ ?<br><br><span style='color:green;'>Answer:</span> ନୂତନ ଆବିଷ୍କୃତ ଅଞ୍ଚଳରେ ବ୍ୟବସାୟିକ ଓ ରାଜନୈତିକ ଲାଭ ପାଇଁ ଅନୁକୂଳ ପରିସ୍ଥିତି ଥିବା କଥା ଉଲ୍ଲେଖ କଲେ ।",
+"<span style='color:red;'>Q-3:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାର ମୂଳ ଅଧିବାସୀମାନେ କ'ଣ କଲେ ?<br><br><span style='color:green;'>Answer:</span> ଅନେକ ମୂଳ ଅଧିବାସୀ ଉପନିବେଶିକମାନଙ୍କ ଧର୍ମ ଓ ଆଚରଣକୁ ଅନୁସରଣ କରିବାକୁ ଲାଗିଲେ ।",
 
-"<span style='color:red;'>Q-4:</span> ଭୌଗୋଳିକ ଆବିଷ୍କାର ଉପନିବେଶବାଦ ପାଇଁ କିପରି ସହାୟକ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଉପନିବେଶ ସ୍ଥାପନ ପାଇଁ ପଥ ପ୍ରଦର୍ଶନ କଲା ।"
+"<span style='color:red;'>Q-4:</span> ଏହି ପ୍ରଚାର ଉପନିବେଶ ସ୍ଥାପନରେ କେଉଁ ଭୂମିକା ନେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଉପନିବେଶିକମାନଙ୍କୁ ଉତ୍ସାହିତ କରି ଅଧିକ ଅଞ୍ଚଳରେ ଉପନିବେଶ ସ୍ଥାପନ କରାଇଲା ।"
 
 ]
 },
 
 {
-heading: "NOTE-4: ଉପନିବେଶବାଦର କାରଣ - ଲାଭଜନକ ବ୍ୟବସାୟର ସୁବିଧା :-",
+heading: "NOTE-4: ଦୁର୍ବଳ ଶାସନ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଭାରତ ସମେତ ଏସିଆର ଅନେକ ଦେଶରେ ମସଲା, ରେଶମ, ସୁନା, ମୁକ୍ତା ଭଳି ଲାଭଦାୟକ ସାମଗ୍ରୀ ମିଳୁଥିଲା । ଆଫ୍ରିକାରେ ସୁନା, ହୀରା, ହାତୀଦାନ୍ତ ମିଳୁଥିଲା ଏବଂ ଦାସ ବ୍ୟବସାୟ ସବୁଠାରୁ ଲାଭଦାୟକ ଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଇଉରୋପୀୟ ବ୍ୟବସାୟୀମାନେ ଏସିଆରୁ ମସଲା ଓ ରେଶମ ସଂଗ୍ରହ କରି ନିଜ ଦେଶରେ ବିକ୍ରୟ କରି ଲାଭ ପାଉଥିଲେ, ଏଥିପାଇଁ ପର୍ତ୍ତୁଗାଲ, ସ୍ପେନ୍‌, ହଲାଣ୍ଡ, ଫ୍ରାନ୍ସ ଭଳି ରାଷ୍ଟ୍ର ଉପନିବେଶ ପାଇଁ ପ୍ରତିଦ୍ୱନ୍ଦିତା କରୁଥିଲେ ।",
+text:"👉 ଧାରଣା: ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଏସିଆ ଓ ଆଫ୍ରୀକା ମହାଦେଶରେ ଶାସନ ଅତ୍ୟନ୍ତ ଦୁର୍ବଳ ଥିଲା । ଅନେକ ନୂଆ ଜାତୀୟ ରାଷ୍ଟ୍ର ସୃଷ୍ଟି ହୋଇଥିଲେ ମଧ୍ୟ ସେମାନଙ୍କ ଶାସନ ବ୍ୟବସ୍ଥା ମଜବୁତ ନ ଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଦୁର୍ବଳ ଶାସନ ଥିବା ଅଞ୍ଚଳକୁ ଉପନିବେଶିକ ଶକ୍ତିମାନେ ଅଧିକ ସହଜରେ ନିଜ ଅଧୀନକୁ ଆଣିପାରୁଥିଲେ, ଯେହେତୁ ସେଠାରେ ପ୍ରତିରୋଧ କରିବାକୁ ମଜବୁତ ଶାସକ ନ ଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଏସିଆରୁ ଇଉରୋପୀୟମାନେ କେଉଁ ସାମଗ୍ରୀ ସଂଗ୍ରହ କରୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ମସଲା, ରୁହା, କାର୍ପାସ ବସ୍ତ୍ର, ରେଶମ, ସୁନା, ମୁକ୍ତା ଓ ପ୍ରାକୃତିକ ଔଷଧ ଭଳି ସାମଗ୍ରୀ ସଂଗ୍ରହ କରୁଥିଲେ ।",
+"<span style='color:red;'>Q-1:</span> ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଏସିଆ ଓ ଆଫ୍ରୀକାର ଶାସନ କେମିତି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହି ମହାଦେଶମାନଙ୍କରେ ଶାସନ ଅତ୍ୟନ୍ତ ଦୁର୍ବଳ ଥିଲା ।",
 
-"<span style='color:red;'>Q-2:</span> ଆଫ୍ରିକାରୁ କେଉଁ ଦ୍ରବ୍ୟ ଇଉରୋପୀୟ ବ୍ୟବସାୟୀଙ୍କୁ ଲାଭବାନ୍ କରୁଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସୁନା, ହୀରା, ତମ୍ବା, ମୂଲ୍ୟବାନ କାଠ, ହାତୀଦାନ୍ତ, ରବର ଓ ୟୁରାନିୟମ୍‌ ଭଳି ଦ୍ରବ୍ୟ ଲାଭବାନ୍ କରୁଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> ଦୁର୍ବଳ ଶାସନର ପରିଣାମ କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଦ୍ୱାରା ଉପନିବେଶିକ ଶକ୍ତିମାନେ ଏହି ଅଞ୍ଚଳରେ ସହଜରେ ପ୍ରଭାବ ବିସ୍ତାର କରିପାରିଲେ ।",
 
-"<span style='color:red;'>Q-3:</span> ଆଫ୍ରିକାରେ ସବୁଠାରୁ ଲାଭଦାୟକ ବ୍ୟବସାୟ କ'ଣ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଦାସ ବ୍ୟବସାୟ ସବୁଠାରୁ ବେଶୀ ଲାଭଦାୟକ ଥିଲା ।",
+"<span style='color:red;'>Q-3:</span> ନୂଆ ଜାତୀୟ ରାଷ୍ଟ୍ର ସୃଷ୍ଟି ହେଲେ ମଧ୍ୟ କେଉଁ ସମସ୍ୟା ରହିଲା ?<br><br><span style='color:green;'>Answer:</span> ନୂଆ ରାଷ୍ଟ୍ରମାନଙ୍କର ଶାସନ ବ୍ୟବସ୍ଥା ମଧ୍ୟ ଦୁର୍ବଳ ରହିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> କେଉଁ ଇଉରୋପୀୟ ରାଷ୍ଟ୍ରମାନେ ଉପନିବେଶ ପାଇଁ ପ୍ରତିଦ୍ୱନ୍ଦିତା କରୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପର୍ତ୍ତୁଗାଲ, ସ୍ପେନ୍‌, ହଲାଣ୍ଡ ଓ ଫ୍ରାନ୍ସ ପ୍ରଭୃତି ରାଷ୍ଟ୍ର ଏଥିପାଇଁ ପ୍ରତିଦ୍ୱନ୍ଦିତା କରୁଥିଲେ ।"
+"<span style='color:red;'>Q-4:</span> ଦୁର୍ବଳ ଶାସନ ଉପନିବେଶବାଦକୁ କିପରି ସାହାଯ୍ୟ କଲା ?<br><br><span style='color:green;'>Answer:</span> ଦୁର୍ବଳ ଶାସନ ଥିବା ଅଞ୍ଚଳକୁ ଉପନିବେଶିକମାନେ ଅଧିକ ସହଜରେ ନିଜ ଅଧୀନକୁ ଆଣିପାରିଲେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-5: ଉପନିବେଶବାଦର କାରଣ - ଶିଳ୍ପ ବିପ୍ଳବ :-",
+heading: "NOTE-5: ଅନ୍ୟାନ୍ୟ ଅନୁକୂଳ ପରିସ୍ଥିତି :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଅଷ୍ଟାଦଶ ଶତାବ୍ଦୀରୁ ବିଂଶ ଶତାବ୍ଦୀ ମଧ୍ୟରେ ଅନେକ ନୂତନ ଯନ୍ତ୍ର ଉଦ୍ଭାବନ ହେବାରୁ ଉତ୍ପାଦନ ବଢ଼ିଲା, ଏହାକୁ ଶିଳ୍ପ ବିପ୍ଳବ କୁହାଯାଏ । ଏହା ଇଂଲାଣ୍ଡରେ ଆରମ୍ଭ ହୋଇଥିଲା ।<br><br>👉 ଉଦାହରଣ: ନିଜ ଦେଶରେ ଉତ୍ପାଦିତ ଦ୍ରବ୍ୟ ବିକ୍ରୟ ପାଇଁ ବଜାର ଖୋଜୁଥିବା ଇଉରୋପୀୟ ରାଷ୍ଟ୍ରମାନେ ଏସିଆ ଓ ଆଫ୍ରିକାରେ ବଜାର ସୃଷ୍ଟି କରି ସେଠାରୁ କୋଇଲା, ଲୁହା, ସୁନା ଭଳି କଞ୍ଚାମାଲ ମଧ୍ୟ ସଂଗ୍ରହ କରୁଥିଲେ ।",
+text:"👉 ଧାରଣା: ଏସିଆ ଓ ଆଫ୍ରୀକାର ସାମରିକ ଓ ଭୌଗୋଳିକ ଗୁରୁତ୍ୱ ଅନେକ ଉପନିବେଶିକ ରାଷ୍ଟ୍ରକୁ ଆକୃଷ୍ଟ କଲା । ଏଠାରେ ବିଜ୍ଞାନ ଓ କାରିଗରୀ ଅନୁନ୍ନତ ଥିଲା, ତେଣୁ ସ୍ଥାନୀୟ ଲୋକମାନେ ଉପନିବେଶିକ ଦେଶମାନଙ୍କ ସାମଗ୍ରୀ ଉପରେ ନିର୍ଭର କରିବାକୁ ପଡ଼ିଲା ।<br><br>👉 ଉଦାହରଣ: ଏସିଆ ଓ ଆଫ୍ରୀକାରେ ବହୁସଂଖ୍ୟାରେ ମାନବ ସମ୍ପଦ ଉପଲବ୍ଧ ଥିଲା, ଯାହା ଉପନିବେଶିକ ଶକ୍ତିମାନେ ମଜୁରି ଓ ସୈନ୍ୟ ଭାବରେ ବ୍ୟବହାର କରୁଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଶିଳ୍ପ ବିପ୍ଳବ କେଉଁଠାରେ ଆରମ୍ଭ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଶିଳ୍ପ ବିପ୍ଳବ ଇଂଲାଣ୍ଡରେ ଆରମ୍ଭ ହୋଇଥିଲା ।",
+"<span style='color:red;'>Q-1:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାର କେଉଁ ଗୁରୁତ୍ୱ ଉପନିବେଶିକ ରାଷ୍ଟ୍ରମାନଙ୍କୁ ଆକୃଷ୍ଟ କଲା ?<br><br><span style='color:green;'>Answer:</span> ସେମାନଙ୍କର ସାମରିକ ଓ ଭୌଗୋଳିକ ଗୁରୁତ୍ୱ ଉପନିବେଶିକ ରାଷ୍ଟ୍ରମାନଙ୍କୁ ଆକୃଷ୍ଟ କଲା ।",
 
-"<span style='color:red;'>Q-2:</span> ଶିଳ୍ପ ବିପ୍ଳବ ଫଳରେ କ'ଣ ଘଟିଲା ?<br><br><span style='color:green;'>Answer:</span> କଳ କାରଖାନାରେ ଅଳ୍ପ ଶ୍ରମ ଓ ସମୟରେ ଦ୍ରବ୍ୟର ଉତ୍ପାଦନ ବହୁତ ବଢ଼ିଲା ।",
+"<span style='color:red;'>Q-2:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାର ବିଜ୍ଞାନ ଓ କାରିଗରୀ ସ୍ଥିତି କେମିତି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେଠାରେ ବିଜ୍ଞାନ ଓ କାରିଗରୀ ଅନୁନ୍ନତ ଥିଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ଇଉରୋପୀୟ ରାଷ୍ଟ୍ରମାନେ ଏସିଆ ଓ ଆଫ୍ରିକାରେ ବଜାର କାହିଁକି ଖୋଜୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ନିଜ ଦେଶରେ ଅଧିକ ଉତ୍ପାଦିତ ଦ୍ରବ୍ୟ ବିକ୍ରୟ ପାଇଁ ବଜାରର ଆବଶ୍ୟକତା ପଡ଼ିଲା, ତେଣୁ ସେମାନେ ବଜାର ଖୋଜୁଥିଲେ ।",
+"<span style='color:red;'>Q-3:</span> ଅନୁନ୍ନତ କାରିଗରୀ ହେତୁ ସ୍ଥାନୀୟ ଲୋକମାନଙ୍କୁ କ'ଣ କରିବାକୁ ପଡ଼ିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ଉପନିବେଶିକ ଦେଶମାନଙ୍କ ସାମଗ୍ରୀ ଉପରେ ନିର୍ଭର କରିବାକୁ ପଡ଼ିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ଇଉରୋପୀୟ ଶିଳ୍ପ ପାଇଁ କେଉଁ କଞ୍ଚାମାଲ ଏସିଆ ଓ ଆଫ୍ରିକାରୁ ମିଳୁଥିଲା ?<br><br><span style='color:green;'>Answer:</span> କୋଇଲା, ଲୁହା, ଟିଣ, ସୁନା, ତମ୍ବା ଓ ତୈଳ ଭଳି କଞ୍ଚାମାଲ ମିଳୁଥିଲା ।"
+"<span style='color:red;'>Q-4:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାରେ କେଉଁ ସମ୍ପଦ ପ୍ରଚୁର ମାତ୍ରାରେ ଉପଲବ୍ଧ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେଠାରେ ବହୁସଂଖ୍ୟାରେ ମାନବ ସମ୍ପଦ (ମଜୁରି ଓ ସୈନ୍ୟ) ଉପଲବ୍ଧ ଥିଲା ।"
 
 ]
 }
@@ -274,13 +344,13 @@ const courseData = {
   `, 
     audio: "",
 mermaid: [
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ଉପନିବେଶବାଦର ପରିଚୟ<br/>ଓ ପ୍ରଥମ ପର୍ଯ୍ୟାୟ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଅର୍ଥ\"]\nA --> I1[\"ଉପନିବେଶର ଅର୍ଥ<br/>ବିଦେଶସ୍ଥ ଆବାସ।\"]\nA --> I2[\"ମାତୃ ଦେଶର ଲାଭ<br/>ପାଇଁ କାର୍ଯ୍ୟରେ ଲଗାଇବା।\"]\nA --> I3[\"ଏହାକୁ ଉପନିବେଶବାଦ<br/>କୁହାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ମୁଖ୍ୟ ଲକ୍ଷ୍ୟ ଓ ପର୍ଯ୍ୟାୟ\"]\nM --> M1[\"ବାଣିଜ୍ୟ ଉନ୍ନତି ଓ<br/>ଆର୍ଥିକ ସମୃଦ୍ଧି ଲକ୍ଷ୍ୟ।\"]\nM --> M2[\"ସାମ୍ରାଜ୍ୟ ବିସ୍ତାର ଓ<br/>ଧର୍ମ ପ୍ରୟ ମଧ୍ୟ କାରଣ।\"]\nM --> M3[\"ଷୋଡ଼ଶ ଶତାବ୍ଦୀରେ<br/>ପ୍ରଥମେ ଆରମ୍ଭ ହେଲା।\"]\nM --> M4[\"ଅଷ୍ଟାଦଶ ଶତାବ୍ଦୀ ଶେଷ<br/>ପର୍ଯ୍ୟନ୍ତ ପ୍ରଥମ ପର୍ଯ୍ୟାୟ।\"]\nM --> M5[\"ଊନବିଂଶ ଶତାବ୍ଦୀରେ<br/>ପୁନରୁତ୍ଥାନ ହେଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଫଳାଫଳ\"]\nC --> C1[\"ନୂତନ ପର୍ଯ୍ୟାୟକୁ ଔପନିବେଶିକ<br/>ସାମ୍ରାଜ୍ୟବାଦ କୁହାଯାଏ।\"]\nC --> C2[\"୧୯୧୪ର ପ୍ରଥମ ବିଶ୍ବଯୁଦ୍ଧର<br/>ଏହା ଏକ କାରଣ ଥିଲା।\"]\nC --> C3[\"ଭୌଗୋଳିକ, ବ୍ୟବସାୟିକ ଓ<br/>ଶିଳ୍ପ କାରଣ ଏଥିପାଇଁ ଦାୟୀ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ପରିବହନ ଓ ଯୋଗାଯୋଗର<br/>ଉନ୍ନତି\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପ୍ରଶ୍ନ\"]\nA --> I1[\"ଉପନିବେଶ ସ୍ଥାପନରେ<br/>ପରିବହନର ଭୂମିକା କ'ଣ?\"]\nA --> I2[\"ବାଷ୍ପୀୟ ଜାହାଜ ଓ<br/>ରେଳଗାଡ଼ି ଆବିଷ୍କାର ହେଲା।\"]\nA --> I3[\"ଏହା ଦୂର ଦେଶମାନଙ୍କୁ<br/>ଯିବା ସହଜ କଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉନ୍ନତିର ପ୍ରଭାବ\"]\nM --> M1[\"୧୮୧୪ରେ ଷ୍ଟିଫେନ୍‌ସନ୍‌<br/>ପ୍ରଥମ ରେଳ ଇଞ୍ଜିନ ତିଆରି କଲେ।\"]\nM --> M2[\"୧୮୨୯ରେ 'ରକେଟ୍‌'<br/>ନାମକ ଇଞ୍ଜିନ ନିର୍ମିତ ହେଲା।\"]\nM --> M3[\"ବାଷ୍ପଚାଳିତ ଜାହାଜ ଓ<br/>ଟେଲିଗ୍ରାଫ ମଧ୍ୟ ବିକଶିତ ହେଲା।\"]\nM --> M4[\"ଉପନିବେଶ ଅଞ୍ଚଳକୁ<br/>ପ୍ରଶାସନ ପରିଚାଳନା ସହଜ ହେଲା।\"]\nM --> M5[\"ପଣ୍ୟ ଓ ସୈନ୍ୟ ପରିବହନ<br/>ଅତି ଦ୍ରୁତ ହେଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ପରିବହନ ଓ ଯୋଗାଯୋଗର<br/>ଉନ୍ନତି ଉପନିବେଶ ସ୍ଥାପନକୁ<br/>ସହଜ କଲା।\"]\nC --> C2[\"ଦୂର ଦେଶ ଉପରେ ଶାସନ<br/>ପାଇଁ ଏହା ଆବଶ୍ୟକ ଥିଲା।\"]\nC --> C3[\"ଉପନିବେଶବାଦୀ ଶକ୍ତି ଏହାର<br/>ପୂର୍ଣ୍ଣ ଲାଭ ଉଠାଇଲେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ଉପନିବେଶବାଦର କାରଣ:<br/>ଭୌଗୋଳିକ ଆବିଷ୍କାର\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପୃଷ୍ଠଭୂମି\"]\nA --> I1[\"ପଞ୍ଚଦଶ, ଷୋଡ଼ଶ ଶତାବ୍ଦୀରେ<br/>ଭୌଗୋଳିକ ଆବିଷ୍କାର ହେଲା।\"]\nA --> I2[\"ଅନେକ ନୂତନ ଅଞ୍ଚଳର<br/>ସନ୍ଧାନ ମିଳିଲା।\"]\nA --> I3[\"ଏସିଆ, ଆଫ୍ରିକାକୁ ଜଳପଥ<br/>ଓ ସ୍ଥଳପଥ ଆବିଷ୍କୃତ ହେଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପ୍ରଭାବ\"]\nM --> M1[\"ଦେଶମାନଙ୍କ ମଧ୍ୟରେ ଯାତାୟାତ,<br/>ଯୋଗାଯୋଗ ସହଜ ହେଲା।\"]\nM --> M2[\"ପ୍ରତ୍ୟେକ ଦେଶ ଅନ୍ୟ ଦେଶ<br/>ବିଷୟରେ ଜ୍ଞାନ ଆହରଣ କଲେ।\"]\nM --> M3[\"ଅନୁସନ୍ଧାନକାରୀ ବ୍ୟବସାୟିକ,<br/>ରାଜନୈତିକ ଲାଭ ଉଲ୍ଲେଖ କଲେ।\"]\nM --> M4[\"ନୂତନ ଅଞ୍ଚଳ ଅନୁକୂଳ<br/>ପରିସ୍ଥିତି ଥିଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଭୌଗୋଳିକ ଆବିଷ୍କାର<br/>ଉପନିବେଶ ପାଇଁ ପଥ ଦେଖାଇଲା।\"]\nC --> C2[\"ଏହା ଉପନିବେଶବାଦର<br/>ପ୍ରଥମ ମୁଖ୍ୟ କାରଣ।\"]\nC --> C3[\"ଆବିଷ୍କାରକଙ୍କ ତାଲିକା<br/>ପ୍ରସ୍ତୁତ କରାଯିବ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ଧର୍ମ ଓ ସଂସ୍କୃତିର<br/>ପ୍ରଚାର\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପର୍ଯ୍ୟବେକ୍ଷଣ\"]\nA --> I1[\"ଖ୍ରୀଷ୍ଟିଆନ ମିଶନାରୀମାନେ<br/>ଉପନିବେଶ ଅଞ୍ଚଳକୁ ଗଲେ।\"]\nA --> I2[\"ସେମାନେ ଧର୍ମ ପ୍ରଚାର<br/>ଆରମ୍ଭ କଲେ।\"]\nA --> I3[\"ସାଙ୍ଗକୁ ପାଶ୍ଚାତ୍ୟ ସଂସ୍କୃତି<br/>ମଧ୍ୟ ଆସିଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପ୍ରଚାରର ପ୍ରଭାବ\"]\nM --> M1[\"ମିଶନାରୀ ଦେଶମାନଙ୍କରେ<br/>ବିଦ୍ୟାଳୟ ଓ ଚର୍ଚ୍ଚ ସ୍ଥାପନ କଲେ।\"]\nM --> M2[\"ପାଶ୍ଚାତ୍ୟ ଶିକ୍ଷା ଓ<br/>ମୂଲ୍ୟବୋଧର ପ୍ରସାର ହେଲା।\"]\nM --> M3[\"କେତେକ ସ୍ଥାନୀୟ ଶାସକ<br/>ଏହାର ବିରୋଧ କଲେ।\"]\nM --> M4[\"ତଥାପି ଧର୍ମାନ୍ତରଣ<br/>ଜାରି ରହିଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଧର୍ମ ଓ ସଂସ୍କୃତିର ପ୍ରଚାର<br/>ଉପନିବେଶବାଦକୁ ମଜବୁତ କଲା।\"]\nC --> C2[\"ଏହା ସ୍ଥାନୀୟ ସମାଜରେ<br/>ପାଶ୍ଚାତ୍ୟ ପ୍ରଭାବ ବଢ଼ାଇଲା।\"]\nC --> C3[\"ଉପନିବେଶବାଦୀ ଶାସନକୁ<br/>ଆଉ ଏକ ଆଧାର ମିଳିଲା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ଉପନିବେଶବାଦର କାରଣ:<br/>ଲାଭଜନକ ବ୍ୟବସାୟ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଏସିଆର ସାମଗ୍ରୀ\"]\nA --> I1[\"ମସଲା, ରେଶମ, ସୁନା,<br/>ମୁକ୍ତା ଉପଲବ୍ଧ ଥିଲା।\"]\nA --> I2[\"ଏହି ସାମଗ୍ରୀ ସଂଗ୍ରହ କରି<br/>ଇଉରୋପରେ ବିକ୍ରୟ ହେଲା।\"]\nA --> I3[\"ବ୍ୟବସାୟୀମାନେ ପ୍ରଚୁର<br/>ଲାଭ କରିଥିଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଆଫ୍ରିକାର ସାମଗ୍ରୀ ଓ ଦାସ ବ୍ୟବସାୟ\"]\nM --> M1[\"ସୁନା, ହୀରା, ତମ୍ବା,<br/>ହାତୀଦାନ୍ତ ଲାଭଦାୟକ ଥିଲା।\"]\nM --> M2[\"ଦାସ ବ୍ୟବସାୟ ସବୁଠାରୁ<br/>ବେଶୀ ଲାଭଦାୟକ ଥିଲା।\"]\nM --> M3[\"ଆଫ୍ରିକୀୟଙ୍କୁ ଦାସ ଭାବେ<br/>ଆମେରିକାକୁ ରପ୍ତାନୀ କଲେ।\"]\nM --> M4[\"ପର୍ତ୍ତୁଗାଲ, ସ୍ପେନ୍, ହଲାଣ୍ଡ,<br/>ଫ୍ରାନ୍ସ ପ୍ରତିଦ୍ୱନ୍ଦିତାରେ ଲାଗିଲେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"କ୍ରୀତଦାସ ନିଜ ସ୍ଵାଧୀନତା<br/>ବିକ୍ରୟ କରି ଗୋଲାମି କରୁଥିଲେ।\"]\nC --> C2[\"ଲାଭ ଲୋଭ ଉପନିବେଶ<br/>ସ୍ଥାପନରେ ପ୍ରେରଣା ଦେଲା।\"]\nC --> C3[\"ଏହା ଉପନିବେଶବାଦର<br/>ଦ୍ୱିତୀୟ ମୁଖ୍ୟ କାରଣ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ଦୁର୍ବଳ ଶାସନ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପର୍ଯ୍ୟବେକ୍ଷଣ\"]\nA --> I1[\"ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଏସିଆ ଓ<br/>ଆଫ୍ରୀକାର ଅନେକ ଦେଶରେ<br/>ଶାସନ ଅତ୍ୟନ୍ତ ଦୁର୍ବଳ ଥିଲା।\"]\nA --> I2[\"ପ୍ରଶାସନ ଠିକ୍‌ ଭାବେ<br/>ଚାଲୁ ନ ଥିଲା।\"]\nA --> I3[\"ଅନେକ ଅଞ୍ଚଳରେ ଦୁର୍ଭିକ୍ଷ<br/>ଓ ଅସନ୍ତୋଷ ଦେଖାଦେଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଦୁର୍ବଳତାର କାରଣ\"]\nM --> M1[\"ନୂତନ ଓ ସୁଦୃଢ଼ ଶାସନ<br/>ବ୍ୟବସ୍ଥା ନିର୍ମାଣ ହୋଇ ନ ଥିଲା।\"]\nM --> M2[\"ପୁରୁଣା ଶାସନ ପ୍ରଣାଳୀ<br/>ପରିବର୍ତ୍ତିତ ପରିସ୍ଥିତି ସହ<br/>ଖାପ ଖାଇ ପାରୁ ନ ଥିଲା।\"]\nM --> M3[\"ସ୍ଥାନୀୟ ଲୋକେ ଦୁର୍ବଳ<br/>ପ୍ରଶାସନର ପ୍ରତିରୋଧ<br/>କରି ପାରୁ ନ ଥିଲେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଦୁର୍ବଳ ଶାସନ ଉପନିବେଶବାଦୀ<br/>ଶକ୍ତିଙ୍କୁ ସହଜରେ କ୍ଷମତା<br/>ହାସଲ କରିବାର ସୁଯୋଗ ଦେଲା।\"]\nC --> C2[\"ଏଥିପାଇଁ ଏସିଆ ଓ ଆଫ୍ରୀକାର<br/>ଅନେକ ଦେଶ ଉପନିବେଶିତ ହେଲେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଉପନିବେଶବାଦର କାରଣ:<br/>ଶିଳ୍ପ ବିପ୍ଳବ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଶିଳ୍ପ ବିପ୍ଳବ\"]\nA --> I1[\"ଅଷ୍ଟାଦଶ ଶତାବ୍ଦୀରୁ<br/>ନୂତନ ଯନ୍ତ୍ର ଉଦ୍ଭାବନ ହେଲା।\"]\nA --> I2[\"ଏହା ଇଂଲାଣ୍ଡରେ<br/>ଆରମ୍ଭ ହୋଇଥିଲା।\"]\nA --> I3[\"ଅଳ୍ପ ଶ୍ରମରେ ଦ୍ରବ୍ୟ<br/>ଉତ୍ପାଦନ ବଢ଼ିଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପରିଣାମ\"]\nM --> M1[\"ଅଧ‌ିକ ଉତ୍ପାଦିତ ଦ୍ରବ୍ୟ<br/>ପାଇଁ ବଜାର ଆବଶ୍ୟକ ପଡ଼ିଲା।\"]\nM --> M2[\"ଏସିଆ, ଆଫ୍ରିକାରେ ଶିଳ୍ପ<br/>ବିପ୍ଳବ ହୋଇ ନ ଥିଲା।\"]\nM --> M3[\"ବିନା ପ୍ରତିଯୋଗିତାରେ<br/>ବଜାର ସୃଷ୍ଟି ସହଜ ହେଲା।\"]\nM --> M4[\"କୋଇଲା, ଲୁହା, ସୁନା ଭଳି<br/>କଞ୍ଚାମାଲ ସେଠାରେ ମିଳିଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ସାରାଂଶ\"]\nC --> C1[\"ବଜାର ଓ କଞ୍ଚାମାଲ<br/>ଉଭୟ ଆବଶ୍ୟକ ଥିଲା।\"]\nC --> C2[\"ଏହା ଉପନିବେଶ ସ୍ଥାପନକୁ<br/>ପ୍ରୋତ୍ସାହିତ କଲା।\"]\nC --> C3[\"ଏହା ଉପନିବେଶବାଦର<br/>ତୃତୀୟ ମୁଖ୍ୟ କାରଣ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଅନ୍ୟାନ୍ୟ ଅନୁକୂଳ<br/>ପରିସ୍ଥିତି\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପର୍ଯ୍ୟବେକ୍ଷଣ\"]\nA --> I1[\"ଏସିଆ ଓ ଆଫ୍ରୀକାର ଅନେକ<br/>ଦେଶରେ ଭୌଗୋଳିକ ଓ ସାମରିକ<br/>ଦୁର୍ବଳତା ଥିଲା।\"]\nA --> I2[\"ସେଠାରେ ମଧ୍ୟସ୍ଥ ଶାସନ<br/>ପ୍ରଚଳିତ ଥିଲା।\"]\nA --> I3[\"ଲୋକେ ସ୍ଥାନୀୟ ମୁଖ୍ୟଙ୍କ<br/>ପ୍ରତି ଆନୁଗତ୍ୟ ଦେଖାଉଥିଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଅନୁକୂଳ ପରିସ୍ଥିତିର ପ୍ରଭାବ\"]\nM --> M1[\"ବଇଥିଆ ଓ ଆଫ୍ରୀକାର ଦେଶ<br/>ଉନ୍ନତ ସୈନ୍ୟଶକ୍ତି ଗଢ଼ି<br/>ପାରି ନ ଥିଲେ।\"]\nM --> M2[\"ଫଳରେ ଉପନିବେଶବାଦୀ<br/>ରାଷ୍ଟ୍ର ସହଜରେ ସେମାନଙ୍କୁ<br/>ଅଧୀନ କରିପାରୁଥିଲେ।\"]\nM --> M3[\"ବହୁ ସ୍ଥାନୀୟ ଲୋକ ଉପନିବେଶ<br/>ବ୍ୟବସାୟ ପାଇଁ ଅଧ୍ୟବସାୟ<br/>କାରଖାନାରେ କାମ କରୁଥିଲେ।\"]\nM --> M4[\"ଏହା ଉପନିବେଶବାଦୀ<br/>ଅର୍ଥନୀତିକୁ ଆହୁରି<br/>ମଜବୁତ କଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ସାରାଂଶ\"]\nC --> C1[\"ଏହି ସବୁ ଅନୁକୂଳ ପରିସ୍ଥିତି<br/>ଉପନିବେଶ ସ୍ଥାପନରେ<br/>ସାହାଯ୍ୟ କଲା।\"]\nC --> C2[\"ଉପନିବେଶ ଶାସକମାନେ<br/>ନିଜ ଆର୍ଥିକ ଲାଭ ପାଇଁ<br/>ଶାସନ କଲେ।\"]\nC --> C3[\"ଏହିପରି ଏସିଆ ଓ ଆଫ୍ରୀକାରେ<br/>ଉପନିବେଶବାଦ ଦୃଢ଼ ଭାବେ<br/>ପ୍ରତିଷ୍ଠିତ ହେଲା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`
   ]
 
 
