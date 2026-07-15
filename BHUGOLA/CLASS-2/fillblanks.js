@@ -145,4 +145,4 @@ fillBlanks: {
             answer: "କଚ୍ଛ"
         }
     ]
-},
+};
