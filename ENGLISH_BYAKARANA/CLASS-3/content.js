@@ -16,206 +16,150 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "SENTENCE",
-            odia: "ବାକ୍ୟ",
-            emoji: "📝",
-            odiaUse: "SENTENCE ଅର୍ଥ ବାକ୍ୟ । ଆମେ ନିଜ ଭାବନା ବାକ୍ୟ ମାଧ୍ୟମରେ ପ୍ରକାଶ କରୁ ।",
+            word: "EARLY RISER",
+            odia: "ସକାଳୁ ଉଠୁଥିବା ବ୍ୟକ୍ତି",
+            emoji: "⏰",
+            odiaUse: "Early riser ଅର୍ଥ ଯିଏ ସକାଳୁ ଶୀଘ୍ର ଉଠେ । Shrinivas is not an early riser. (ଶ୍ରୀନିବାସ ସକାଳୁ ଶୀଘ୍ର ଉଠନ୍ତି ନାହିଁ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "FEELINGS",
-            odia: "ଅନୁଭୂତି",
-            emoji: "❤️",
-            odiaUse: "FEELINGS ଅର୍ଥ ଅନୁଭୂତି । ଆମେ ଆମର ଅନୁଭୂତି ବାକ୍ୟରେ କହିଥାଉ ।",
+            word: "HOBBY",
+            odia: "ସଉକ",
+            emoji: "🎨",
+            odiaUse: "Hobby ଅର୍ଥ ମନ ଭଲ ଲାଗିବା କାର୍ଯ୍ୟ ଯାହା ଆମେ ଖୁସିରେ କରୁ । Shrinivas's hobby is swimming. (ଶ୍ରୀନିବାସଙ୍କ ସଉକ ହେଉଛି ପହଁରିବା ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "VIEWS",
-            odia: "ମତାମତ",
-            emoji: "🗣️",
-            odiaUse: "VIEWS ଅର୍ଥ ମତାମତ । ଆମେ ଆମର ମତାମତ ବାକ୍ୟ ମାଧ୍ୟମରେ ପ୍ରକାଶ କରୁ ।",
+            word: "DIALOGUE",
+            odia: "ସଂଳାପ",
+            emoji: "💬",
+            odiaUse: "Dialogue ଅର୍ଥ ଦୁଇ ବ୍ୟକ୍ତିଙ୍କ ମଧ୍ୟରେ କଥୋପକଥନ । The traffic police and the bike-rider had a dialogue. (ଟ୍ରାଫିକ ପୋଲିସ ଓ ବାଇକ ଚାଳକଙ୍କ ମଧ୍ୟରେ ସଂଳାପ ହେଲା ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "MEANINGFUL",
-            odia: "ଅର୍ଥପୂର୍ଣ୍ଣ",
-            emoji: "✅",
-            odiaUse: "MEANINGFUL ଅର୍ଥ ଅର୍ଥପୂର୍ଣ୍ଣ । ବାକ୍ୟଟି ଅର୍ଥପୂର୍ଣ୍ଣ ହେବା ଆବଶ୍ୟକ ।",
+            word: "INSTRUCTIONS",
+            odia: "ନିର୍ଦ୍ଦେଶ",
+            emoji: "📋",
+            odiaUse: "Instructions ଅର୍ଥ କିଛି କରିବା ପାଇଁ ଦିଆଯାଇଥିବା ଆଦେଶ କିମ୍ବା ପଥ । The police gave instructions to reach Sainik School. (ପୋଲିସ ସୈନିକ ସ୍କୁଲ ପହଞ୍ଚିବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଦେଲେ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "EXPRESSION",
-            odia: "ପ୍ରକାଶ",
-            emoji: "💭",
-            odiaUse: "EXPRESSION ଅର୍ଥ ପ୍ରକାଶ । ବାକ୍ୟଟି ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ପ୍ରକାଶ ।",
+            word: "ROAD-MAP",
+            odia: "ରାସ୍ତା ମାନଚିତ୍ର",
+            emoji: "🗺️",
+            odiaUse: "Road-map ଅର୍ଥ ରାସ୍ତା ଦେଖାଉଥିବା ଚିତ୍ର । The traffic police drew a road-map for the bike-rider. (ଟ୍ରାଫିକ ପୋଲିସ ବାଇକ ଚାଳକଙ୍କ ପାଇଁ ରାସ୍ତା ମାନଚିତ୍ର ଆଙ୍କିଲେ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "POPULAR",
-            odia: "ଲୋକପ୍ରିୟ",
-            emoji: "⭐",
-            odiaUse: "POPULAR ଅର୍ଥ ଲୋକପ୍ରିୟ । ଦିଲିପ ତିର୍କି ଜଣେ ଲୋକପ୍ରିୟ ହକି ଖେଳାଳୀ ।",
+            word: "STRAIGHT",
+            odia: "ସିଧା",
+            emoji: "➡️",
+            odiaUse: "Straight ଅର୍ଥ ସିଧା ରାସ୍ତାରେ ଚାଲିବା । Go straight along the N.H. upto Jayadev Vihar. (ଜାତୀୟ ରାଜପଥ ଦେଇ ଜୟଦେବ ବିହାର ପର୍ଯ୍ୟନ୍ତ ସିଧା ଯାଅ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "HOCKEY",
-            odia: "ହକି",
-            emoji: "🏑",
-            odiaUse: "HOCKEY ଏକ ଖେଳ । ଦିଲିପ ତିର୍କି ଜଣେ ହକି ଖେଳାଳୀ ।",
+            word: "NATIONAL HIGHWAY",
+            odia: "ଜାତୀୟ ରାଜପଥ",
+            emoji: "🛣️",
+            odiaUse: "National Highway (N.H.) ଅର୍ଥ ବଡ଼ ଓ ମୁଖ୍ୟ ରାସ୍ତା ଯାହା ସହରକୁ ସହର ସହିତ ଯୋଡ଼େ । Go straight along the N.H. (ଜାତୀୟ ରାଜପଥ ଦେଇ ସିଧା ଯାଅ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "INDUSTRIOUS",
-            odia: "ପରିଶ୍ରମୀ",
-            emoji: "💪",
-            odiaUse: "INDUSTRIOUS ଅର୍ଥ ପରିଶ୍ରମୀ । ଚୀନା ଲୋକମାନେ ବହୁତ ପରିଶ୍ରମୀ ।",
+            word: "CHHAK",
+            odia: "ଛକ",
+            emoji: "🚦",
+            odiaUse: "Chhak ଅର୍ଥ ଯେଉଁଠାରେ ଅନେକ ରାସ୍ତା ମିଳିତ ହୁଏ । Turn right at Nalco Chhak. (ନାଲକୋ ଛକରେ ଡାହାଣକୁ ମୁଡ଼ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "OXYGEN",
-            odia: "ଅମ୍ଳଜାନ",
-            emoji: "🌬️",
-            odiaUse: "OXYGEN ଅର୍ଥ ଅମ୍ଳଜାନ । ଗଛଗୁଡ଼ିକ ଆମକୁ ଅମ୍ଳଜାନ ଦିଅନ୍ତି ।",
+            word: "STATION SQUARE",
+            odia: "ଷ୍ଟେସନ ଛକ",
+            emoji: "🚉",
+            odiaUse: "Station Square ଅର୍ଥ ଷ୍ଟେସନ ନିକଟସ୍ଥ ଛକ । Go upto the station square. (ଷ୍ଟେସନ ଛକ ପର୍ଯ୍ୟନ୍ତ ଯାଅ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "INTELLIGENT",
-            odia: "ବୁଦ୍ଧିମାନ",
-            emoji: "🧠",
-            odiaUse: "INTELLIGENT ଅର୍ଥ ବୁଦ୍ଧିମାନ । ସେହି ପିଲାଟି ବୁଦ୍ଧିମାନ ।",
+            word: "STATUE",
+            odia: "ମୂର୍ତ୍ତି",
+            emoji: "🗿",
+            odiaUse: "Statue ଅର୍ଥ ପଥର କିମ୍ବା ଧାତୁରେ ତିଆରି ମନୁଷ୍ୟ ଆକୃତି । There is a statue of S. Kundu near the road. (ରାସ୍ତା ପାଖରେ ଏସ. କୁଣ୍ଡୁଙ୍କ ମୂର୍ତ୍ତି ଅଛି ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PROOF ROAD",
+            odia: "ପ୍ରୁଫ ରୋଡ୍",
+            emoji: "🛤️",
+            odiaUse: "Proof Road ଏକ ରାସ୍ତାର ନାମ ଯାହା ମାନଚିତ୍ରରେ ଦେଖାଯାଏ । The gate of Zilla School is beside the Proof Road. (ଜିଲ୍ଲା ସ୍କୁଲର ଫାଟକ ପ୍ରୁଫ ରୋଡ୍ ପାଖରେ ଅଛି ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DAILY ROUTINE",
+            odia: "ଦୈନନ୍ଦିନ କାର୍ଯ୍ୟକ୍ରମ",
+            emoji: "📅",
+            odiaUse: "Daily Routine ଅର୍ଥ ପ୍ରତିଦିନ କରାଯାଉଥିବା କାର୍ଯ୍ୟ । Write a few sentences on your daily routine. (ନିଜର ଦୈନନ୍ଦିନ କାର୍ଯ୍ୟକ୍ରମ ଉପରେ କିଛି ବାକ୍ୟ ଲେଖ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
             word: "SUBJECT",
             odia: "କର୍ତ୍ତା",
-            emoji: "👤",
-            odiaUse: "SUBJECT ଅର୍ଥ କର୍ତ୍ତା । ବାକ୍ୟରେ ଯାହା ବିଷୟରେ କୁହାଯାଏ ତାହା SUBJECT ।",
+            emoji: "🙋",
+            odiaUse: "Subject ଅର୍ଥ ବାକ୍ୟରେ ଯାହା ବିଷୟରେ କୁହାଯାଏ । Wind is the subject in 'Wind blows.' (ପବନ 'ପବନ ପବନ ଚାଲେ' ବାକ୍ୟରେ କର୍ତ୍ତା ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
             word: "PREDICATE",
-            odia: "ବିଧେୟ",
-            emoji: "💬",
-            odiaUse: "PREDICATE ଅର୍ଥ ବିଧେୟ । SUBJECT ବିଷୟରେ ବାକ୍ୟରେ ଯାହା କୁହାଯାଏ ତାହା PREDICATE ।",
+            odia: "କ୍ରିୟା ପଦ",
+            emoji: "🏃",
+            odiaUse: "Predicate ଅର୍ଥ ବାକ୍ୟରେ କର୍ତ୍ତା ବିଷୟରେ କୁହାଯାଇଥିବା ଅଂଶ । 'Blows' is the predicate in 'Wind blows.' ('ପବନ ଚାଲେ' ବାକ୍ୟରେ 'ଚାଲେ' କ୍ରିୟା ପଦ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ORDER",
-            odia: "କ୍ରମ",
-            emoji: "🔢",
-            odiaUse: "ORDER ଅର୍ଥ କ୍ରମ । ବାକ୍ୟରେ ଶବ୍ଦଗୁଡ଼ିକ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମରେ ସଜାଯାଏ ।",
+            word: "ESSENTIAL",
+            odia: "ଅତ୍ୟାବଶ୍ୟକ",
+            emoji: "❗",
+            odiaUse: "Essential ଅର୍ଥ ଅତ୍ୟନ୍ତ ଆବଶ୍ୟକ । A sentence has two essential parts - subject and predicate. (ଏକ ବାକ୍ୟର ଦୁଇଟି ଅତ୍ୟାବଶ୍ୟକ ଅଂଶ ଅଛି - କର୍ତ୍ତା ଏବଂ କ୍ରିୟା ପଦ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PATTERN",
-            odia: "ଢାଞ୍ଚା",
-            emoji: "🧩",
-            odiaUse: "PATTERN ଅର୍ଥ ଢାଞ୍ଚା । ଶବ୍ଦଗୁଡ଼ିକ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ଢାଞ୍ଚାରେ ସଜାଯାଏ ।",
+            word: "PRONOUN",
+            odia: "ସର୍ବନାମ",
+            emoji: "🔤",
+            odiaUse: "Pronoun ଅର୍ଥ ବିଶେଷ୍ୟ ପରିବର୍ତ୍ତେ ବ୍ୟବହୃତ ଶବ୍ଦ । 'She' is a pronoun in 'She smiled.' ('ସେ ହସିଲା' ବାକ୍ୟରେ 'ସେ' ସର୍ବନାମ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ACCEPTABLE",
-            odia: "ଗ୍ରହଣୀୟ",
-            emoji: "👍",
-            odiaUse: "ACCEPTABLE ଅର୍ଥ ଗ୍ରହଣୀୟ । କିଛି ଢାଞ୍ଚା ଗ୍ରହଣୀୟ ନୁହେଁ ।",
+            word: "VERB",
+            odia: "କ୍ରିୟା",
+            emoji: "🏃‍♂️",
+            odiaUse: "Verb ଅର୍ଥ କାର୍ଯ୍ୟ ବା ଅବସ୍ଥା ଦର୍ଶାଉଥିବା ଶବ୍ଦ । 'Plays' is the verb in 'Rama plays.' ('ରାମ ଖେଳେ' ବାକ୍ୟରେ 'ଖେଳେ' କ୍ରିୟା ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CLASSICAL",
-            odia: "ଶାସ୍ତ୍ରୀୟ",
-            emoji: "🎶",
-            odiaUse: "CLASSICAL ଅର୍ଥ ଶାସ୍ତ୍ରୀୟ । ଇନ୍ଦ୍ରାଣୀ ଜଣେ ଶାସ୍ତ୍ରୀୟ ସଙ୍ଗୀତଜ୍ଞ ।",
+            word: "HEAD-WORD",
+            odia: "ମୁଖ୍ୟ ଶବ୍ଦ",
+            emoji: "👑",
+            odiaUse: "Head-word ଅର୍ଥ ମୁଖ୍ୟ ବା ପ୍ରଧାନ ଶବ୍ଦ । The head-word of the subject is a noun. (କର୍ତ୍ତାର ମୁଖ୍ୟ ଶବ୍ଦ ଏକ ବିଶେଷ୍ୟ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SINGER",
-            odia: "ଗାୟିକା",
-            emoji: "🎤",
-            odiaUse: "SINGER ଅର୍ଥ ଗାୟିକା । ଇନ୍ଦ୍ରାଣୀ ଜଣେ ଶାସ୍ତ୍ରୀୟ ଗାୟିକା ।",
+            word: "NEIGHBOUR",
+            odia: "ପଡ଼ୋଶୀ",
+            emoji: "🏠",
+            odiaUse: "Neighbour ଅର୍ଥ ପାଖରେ ରହୁଥିବା ଲୋକ । Our old neighbour has a dog. (ଆମର ପୁରୁଣା ପଡ଼ୋଶୀଙ୍କର ଏକ କୁକୁର ଅଛି ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "WAITING",
-            odia: "ଅପେକ୍ଷା",
-            emoji: "⏳",
-            odiaUse: "WAITING ଅର୍ଥ ଅପେକ୍ଷା । ତୁମେ ତାଙ୍କ ପାଇଁ ଅପେକ୍ଷା କରୁଛ କି ?",
+            word: "RULED",
+            odia: "ରାଜ୍ୟ କଲେ",
+            emoji: "👑",
+            odiaUse: "Ruled ଅର୍ଥ ରାଜ୍ୟ ଚଳାଇବା । Rama Chandra ruled over Ayodhya for many years. (ରାମ ଚନ୍ଦ୍ର ଅନେକ ବର୍ଷ ଅଯୋଧ୍ୟାରେ ରାଜ୍ୟ କଲେ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "COOKED",
-            odia: "ରାନ୍ଧିଲି",
-            emoji: "🍳",
-            odiaUse: "COOKED ଅର୍ଥ ରାନ୍ଧିଲି । ମୁଁ ତୁମ ପାଇଁ ରାନ୍ଧି ନାହିଁ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TALL",
-            odia: "ଲମ୍ବା",
-            emoji: "📏",
-            odiaUse: "TALL ଅର୍ଥ ଲମ୍ବା । ସେ ଏକ ଲମ୍ବା ପିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "NATION",
-            odia: "ଜାତି",
-            emoji: "🇮🇳",
-            odiaUse: "NATION ଅର୍ଥ ଜାତି ବା ଦେଶ । ଗାନ୍ଧିଜୀ ଆମ ଜାତିର ପିତା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "FATHER",
-            odia: "ପିତା",
-            emoji: "👨",
-            odiaUse: "FATHER ଅର୍ଥ ପିତା । ଗାନ୍ଧିଜୀ ଆମ ଜାତିର ପିତା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "GLITTERS",
-            odia: "ଚକମକ ହୁଏ",
-            emoji: "✨",
-            odiaUse: "GLITTERS ଅର୍ଥ ଚକମକ ହୁଏ । ଯାହା ଚକମକ ହୁଏ ତାହା ସବୁ ସୁନା ନୁହେଁ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "GOLD",
-            odia: "ସୁନା",
-            emoji: "🥇",
-            odiaUse: "GOLD ଅର୍ଥ ସୁନା । ଯାହା ଚକମକ ହୁଏ ତାହା ସବୁ ସୁନା ନୁହେଁ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SWEETLY",
-            odia: "ମଧୁରଭାବେ",
-            emoji: "🎵",
-            odiaUse: "SWEETLY ଅର୍ଥ ମଧୁରଭାବେ । ଅନିମା ମଧୁରଭାବେ ଗାଉଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "GUESS",
-            odia: "ଅନୁମାନ",
-            emoji: "🤔",
-            odiaUse: "GUESS ଅର୍ଥ ଅନୁମାନ କରିବା । ତୁମେ ଉତ୍ତରକୁ ଅନୁମାନ କରିପାରିବ କି ?",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "ANSWER",
-            odia: "ଉତ୍ତର",
-            emoji: "✍️",
-            odiaUse: "ANSWER ଅର୍ଥ ଉତ୍ତର । ତୁମେ ଏହି ପ୍ରଶ୍ନର ଉତ୍ତର ଅନୁମାନ କରିପାରିବ କି ?",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SUN",
-            odia: "ସୂର୍ଯ୍ୟ",
-            emoji: "☀️",
-            odiaUse: "SUN ଅର୍ଥ ସୂର୍ଯ୍ୟ । ସୂର୍ଯ୍ୟ ଆଡ଼କୁ ଚାହିଁ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "ENGINEER",
-            odia: "ଇଞ୍ଜିନିୟର",
-            emoji: "👷",
-            odiaUse: "ENGINEER ଏକ ବୃତ୍ତି । ମି. କରୁଣାକର ଜଣେ ଇଞ୍ଜିନିୟର ।",
+            word: "OBEY",
+            odia: "ମାନିବା",
+            emoji: "🙏",
+            odiaUse: "Obey ଅର୍ଥ କାହାର କଥା ମାନିବା । You should obey your parents. (ତୁମେ ତୁମର ପିତାମାତାଙ୍କ କଥା ମାନିବା ଉଚିତ୍ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
@@ -224,61 +168,101 @@ const wordData = {
 const topicsData = [
 
 {
-heading: "NOTE-1: ବାକ୍ୟ, କର୍ତ୍ତା ଓ ପ୍ରେଡିକେଟ୍ କ'ଣ ? :-",
+heading: "NOTE-1: ବାକ୍ୟର ଅଂଶ - Subject ଓ Predicate :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଆମେ ଆମର ଭାବ, ଅନୁଭୂତି ଓ ମତାମତ ବାକ୍ୟ ମାଧ୍ୟମରେ ପ୍ରକାଶ କରୁ । ବାକ୍ୟ ଶବ୍ଦରେ ଗଠିତ ହୋଇଥାଏ ଏବଂ ଏହା ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ପ୍ରକାଶ ଅଟେ । ପ୍ରତ୍ୟେକ ବାକ୍ୟର ଦୁଇଟି ମୁଖ୍ୟ ଅଂଶ ଥାଏ - କର୍ତ୍ତା (Subject) ଓ ପ୍ରେଡିକେଟ୍ (Predicate) । କର୍ତ୍ତା ହେଉଛି ଯାହା ବିଷୟରେ କୁହାଯାଏ, ପ୍ରେଡିକେଟ୍ ହେଉଛି ତାହା ବିଷୟରେ କ'ଣ କୁହାଯାଏ ।<br><br>👉 ଉଦାହରଣ: 'That boy is intelligent' ବାକ୍ୟରେ 'That boy' କର୍ତ୍ତା ଏବଂ 'is intelligent' ପ୍ରେଡିକେଟ୍ ଅଟେ । ସେହିପରି 'Trees provide us with oxygen' ରେ 'Trees' କର୍ତ୍ତା ଏବଂ 'provide us with oxygen' ପ୍ରେଡିକେଟ୍ ଅଟେ ।",
+text:"👉 ଧାରଣା: ପ୍ରତ୍ୟେକ ବାକ୍ୟର ଦୁଇଟି ମୁଖ୍ୟ ଅଂଶ ଥାଏ - Subject ଓ Predicate । Subject ହେଉଛି ସେହି ଅଂଶ, ଯାହା ବିଷୟରେ ବାକ୍ୟଟି କୁହାଯାଉଛି । Predicate ହେଉଛି ସେହି ଅଂଶ, ଯାହା Subject ବିଷୟରେ କିଛି କହେ, ଅର୍ଥାତ୍ ସେ କ'ଣ କରୁଛି ତାହା ଜଣାଏ ।<br><br>👉 ଉଦାହରଣ: 'Wind blows' ବାକ୍ୟରେ 'Wind' ହେଉଛି Subject ଏବଂ 'blows' ହେଉଛି Predicate । ସେହିପରି 'Birds fly' ରେ 'Birds' Subject ଓ 'fly' Predicate ଅଟେ, ଏବଂ 'She smiled' ରେ 'She' Subject ଓ 'smiled' Predicate ଅଟେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ବାକ୍ୟ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଶବ୍ଦରେ ଗଠିତ ହୋଇ ଅର୍ଥପୂର୍ଣ୍ଣ ପ୍ରକାଶ କରୁଥିବା ବିଷୟକୁ ବାକ୍ୟ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ବାକ୍ୟର ଦୁଇଟି ମୁଖ୍ୟ ଅଂଶ କ'ଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ବାକ୍ୟର ଦୁଇଟି ମୁଖ୍ୟ ଅଂଶ ହେଉଛି Subject ଓ Predicate ।",
 
-"<span style='color:red;'>Q-2:</span> ପ୍ରତ୍ୟେକ ବାକ୍ୟର ମୁଖ୍ୟ ଅଂଶଗୁଡ଼ିକର ନାମ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> କର୍ତ୍ତା (Subject) ଓ ପ୍ରେଡିକେଟ୍ (Predicate) ।",
+"<span style='color:red;'>Q-2:</span> Subject କ'ଣ କୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବାକ୍ୟରେ ଯାହା ବିଷୟରେ କୁହାଯାଉଛି, ସେହି ଅଂଶକୁ Subject କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-3:</span> କର୍ତ୍ତା କ'ଣ ବୁଝାଏ ?<br><br><span style='color:green;'>Answer:</span> ଯାହା ବିଷୟରେ ବାକ୍ୟରେ କୁହାଯାଏ, ତାହାକୁ କର୍ତ୍ତା କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-3:</span> Predicate କ'ଣ କାମ କରେ ?<br><br><span style='color:green;'>Answer:</span> Predicate ଏହା ଜଣାଏ ଯେ Subject କ'ଣ କରୁଛି ବା ତାହାର ଅବସ୍ଥା କ'ଣ ।",
 
-"<span style='color:red;'>Q-4:</span> 'Trees provide us with oxygen' ବାକ୍ୟରେ ପ୍ରେଡିକେଟ୍ କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> 'provide us with oxygen' ଏହି ବାକ୍ୟର ପ୍ରେଡିକେଟ୍ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> 'Birds fly' ବାକ୍ୟରେ Subject ଓ Predicate କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> ଏଥିରେ 'Birds' Subject ଏବଂ 'fly' Predicate ଅଟେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-2: ଶବ୍ଦକ୍ରମର ଗୁରୁତ୍ୱ :-",
+heading: "NOTE-2: ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Subject ଓ Predicate ର ନିୟମ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ବାକ୍ୟ ତିଆରି କରିବା ବେଳେ ଶବ୍ଦଗୁଡ଼ିକୁ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମରେ ସଜାଇବାକୁ ପଡ଼େ । ଶବ୍ଦଗୁଡ଼ିକ ଠିକ୍ ଥିଲେ ମଧ୍ୟ, ସେଗୁଡ଼ିକୁ ଭୁଲ କ୍ରମରେ ସଜାଇଲେ ବାକ୍ୟର ଅର୍ଥ ବୁଝି ହୁଏ ନାହିଁ । ଏଣୁ ସଠିକ୍ ଶବ୍ଦକ୍ରମ ବ୍ୟବହାର କରିବା ଅତ୍ୟନ୍ତ ଜରୁରୀ ।<br><br>👉 ଉଦାହରଣ: 'Indrani is a classical singer' ଏକ ସଠିକ୍ ବାକ୍ୟ, କିନ୍ତୁ 'Singer classical Indrani is a' କୌଣସି ଅର୍ଥ ଦିଏ ନାହିଁ । ସେହିପରି 'her / you / waiting / for / are' ଶବ୍ଦଗୁଡ଼ିକୁ ସଜାଇଲେ 'Are you waiting for her ?' ଏକ ସଠିକ୍ ପ୍ରଶ୍ନ ବାକ୍ୟ ହୁଏ ।",
+text:"👉 ଧାରଣା: ଯଦି ଗୋଟିଏ ବାକ୍ୟର Subject କେବଳ ଗୋଟିଏ ଶବ୍ଦରେ ତିଆରି, ତେବେ ସେହି ଶବ୍ଦଟି ହୁଏ Noun ନହେଲେ Pronoun ହୋଇଥାଏ । ସେହିପରି ଯଦି Predicate ମଧ୍ୟ ଗୋଟିଏ ଶବ୍ଦରେ ତିଆରି, ତେବେ ସେହି ଶବ୍ଦଟି ନିଶ୍ଚୟ ଏକ Verb ହୋଇଥିବ ।<br><br>👉 ଉଦାହରଣ: 'Rama plays' ବାକ୍ୟରେ 'Rama' ଏକ Noun ଅଟେ ଯାହା Subject ଅଟେ, ଏବଂ 'plays' ଏକ Verb ଅଟେ ଯାହା Predicate ଅଟେ । 'She sings' ରେ 'She' ଏକ Pronoun ଅଟେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ବାକ୍ୟ ତିଆରି କରିବା ବେଳେ ଶବ୍ଦଗୁଡ଼ିକୁ କେମିତି ସଜାଇବାକୁ ପଡ଼େ ?<br><br><span style='color:green;'>Answer:</span> ଶବ୍ଦଗୁଡ଼ିକୁ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମରେ ସଜାଇବାକୁ ପଡ଼େ ।",
+"<span style='color:red;'>Q-1:</span> ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Subject ସାଧାରଣତଃ କେଉଁ ପ୍ରକାରର ଶବ୍ଦ ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Subject ଏକ Noun ନହେଲେ ଏକ Pronoun ହୋଇଥାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ଭୁଲ ଶବ୍ଦକ୍ରମରେ ବାକ୍ୟ ଲେଖିଲେ କ'ଣ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ବାକ୍ୟର ଅର୍ଥ ବୁଝି ହୁଏ ନାହିଁ ।",
+"<span style='color:red;'>Q-2:</span> ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Predicate କେଉଁ ପ୍ରକାରର ଶବ୍ଦ ହେବାକୁ ପଡ଼େ ?<br><br><span style='color:green;'>Answer:</span> ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Predicate ନିଶ୍ଚୟ ଏକ Verb ହେବାକୁ ପଡ଼େ ।",
 
-"<span style='color:red;'>Q-3:</span> 'her / you / waiting / for / are' ଶବ୍ଦଗୁଡ଼ିକୁ ସଜାଇଲେ କେଉଁ ବାକ୍ୟ ତିଆରି ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> 'Are you waiting for her ?' ବାକ୍ୟ ତିଆରି ହୁଏ ।",
+"<span style='color:red;'>Q-3:</span> 'Time flies' ବାକ୍ୟରେ 'flies' ଶବ୍ଦଟି କେଉଁ ଶ୍ରେଣୀର ଅଟେ ?<br><br><span style='color:green;'>Answer:</span> 'flies' ଶବ୍ଦଟି ଏକ Verb ଅଟେ, କାରଣ ଏହା Predicate ଅଟେ ।",
 
-"<span style='color:red;'>Q-4:</span> ସଠିକ୍ ଶବ୍ଦକ୍ରମର ଉଦାହରଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> 'Indrani is a classical singer' ଏକ ସଠିକ୍ ଶବ୍ଦକ୍ରମର ଉଦାହରଣ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> 'He' ଭଳି ଶବ୍ଦ Subject ହେଲେ ତାହା କେଉଁ ଶ୍ରେଣୀର ?<br><br><span style='color:green;'>Answer:</span> 'He' ଭଳି ଶବ୍ଦ ଏକ Pronoun ଅଟେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-3: ସରଳ ବାକ୍ୟ ମାଧ୍ୟମରେ ବର୍ଣ୍ଣନା :-",
+heading: "NOTE-3: ବାକ୍ୟକୁ ଭାଗ କରି Verb ଚିହ୍ନଟ କରିବା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଆମେ ଛୋଟ ଓ ସରଳ ବାକ୍ୟ ମାଧ୍ୟମରେ ଜଣଙ୍କ ବିଷୟରେ ପୂରା ସୂଚନା ଦେଇପାରିବା । ପ୍ରତ୍ୟେକ ବାକ୍ୟ ଗୋଟିଏ ଗୋଟିଏ ତଥ୍ୟ କୁହେ, ଏବଂ ପ୍ରତ୍ୟେକ ବାକ୍ୟରେ କର୍ତ୍ତା ଓ ପ୍ରେଡିକେଟ୍ ଥାଏ ।<br><br>👉 ଉଦାହରଣ: 'This is Itishree.' 'She is in class X.' 'She is fourteen.' 'Mr Karunakar is her father.' 'He is an engineer.' ଏହିପରି ପ୍ରତ୍ୟେକ ସରଳ ବାକ୍ୟ ଇତିଶ୍ରୀ ବିଷୟରେ ଗୋଟିଏ ନୂଆ ତଥ୍ୟ ଦିଏ ।",
+text:"👉 ଧାରଣା: ଗୋଟିଏ ବାକ୍ୟକୁ ଆମେ ଦୁଇଟି ଭାଗରେ ଭାଗ କରିପାରିବା - ପ୍ରଥମେ Subject ଏବଂ ପରେ Predicate । ଏହା କରିବା ପରେ Predicate ଭିତରୁ Verb ଟିକୁ ଆଲଗା କରି ଚିହ୍ନଟ କରାଯାଇ ପାରିବ ।<br><br>👉 ଉଦାହରଣ: 'Rama plays' ବାକ୍ୟକୁ ଭାଗ କଲେ - Subject: Rama, Predicate: plays, ଏବଂ ଏହି ବାକ୍ୟର Verb ହେଉଛି 'plays' । ସେହିପରି 'Children laugh' ରେ Subject 'Children' ଏବଂ Verb 'laugh' ଅଟେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ସରଳ ବାକ୍ୟ ଆମକୁ କ'ଣ ଦେଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ସରଳ ବାକ୍ୟ ଆମକୁ ଜଣଙ୍କ ବିଷୟରେ ଗୋଟିଏ ଗୋଟିଏ ସ୍ପଷ୍ଟ ତଥ୍ୟ ଦେଇଥାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଗୋଟିଏ ବାକ୍ୟକୁ କେତୋଟି ଭାଗରେ ଭାଗ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଗୋଟିଏ ବାକ୍ୟକୁ ଦୁଇଟି ଭାଗରେ ଭାଗ କରାଯାଏ - Subject ଏବଂ Predicate ।",
 
-"<span style='color:red;'>Q-2:</span> 'She is in class X' ବାକ୍ୟଟି କାହା ବିଷୟରେ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଇତିଶ୍ରୀ ବିଷୟରେ ଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> Verb ଟିକୁ ବାକ୍ୟର କେଉଁ ଅଂଶରୁ ଖୋଜାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> Verb ଟିକୁ ବାକ୍ୟର Predicate ଅଂଶରୁ ଖୋଜାଯାଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ଇତିଶ୍ରୀଙ୍କ ପିତାଙ୍କ ବୃତ୍ତି କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ତାଙ୍କ ପିତା ଜଣେ ଇଞ୍ଜିନିୟର ।",
+"<span style='color:red;'>Q-3:</span> 'Children laugh' ବାକ୍ୟର Verb କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> ଏହି ବାକ୍ୟର Verb ହେଉଛି 'laugh' ।",
 
-"<span style='color:red;'>Q-4:</span> ଜଣଙ୍କ ବିଷୟରେ ପୂରା ସୂଚନା ଦେବାକୁ ଆମେ କେମିତି ବାକ୍ୟ ବ୍ୟବହାର କରୁ ?<br><br><span style='color:green;'>Answer:</span> ଆମେ ଛୋଟ ଓ ସରଳ ବାକ୍ୟ ବ୍ୟବହାର କରୁ ।"
+"<span style='color:red;'>Q-4:</span> 'You should obey your parents' ଭଳି ଲମ୍ବା ବାକ୍ୟରେ ମଧ୍ୟ ଆମେ କ'ଣ ଚିହ୍ନଟ କରିପାରିବା ?<br><br><span style='color:green;'>Answer:</span> ଏଭଳି ଲମ୍ବା ବାକ୍ୟରେ ମଧ୍ୟ ଆମେ Subject ଓ Predicate ଚିହ୍ନଟ କରି Verb ଖୋଜିପାରିବା ।"
+
+]
+},
+
+{
+heading: "NOTE-4: Subject ଓ Predicate ର Head-word ନିୟମ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଅନେକ ସମୟରେ Subject ଓ Predicate ଗୋଟିଏରୁ ଅଧିକ ଶବ୍ଦରେ ତିଆରି ହୋଇଥାଏ । ଏଭଳି କ୍ଷେତ୍ରରେ ମଧ୍ୟ ଏକ ନିୟମ ଥାଏ - Subject ର ମୁଖ୍ୟ ଶବ୍ଦ (Head-word) ସର୍ବଦା ଏକ Noun ହୋଇଥାଏ, ଏବଂ Predicate ର ମୁଖ୍ୟ ଶବ୍ଦ ସର୍ବଦା ଏକ Verb ହୋଇଥାଏ ।<br><br>👉 ଉଦାହରଣ: 'Rama Chandra, the son of Dasharatha, ruled over Ayodhya for many years' ବାକ୍ୟରେ Subject ର Head-word ହେଉଛି 'Rama Chandra' ଏବଂ Predicate ର Head-word ହେଉଛି 'ruled' ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଲମ୍ବା Subject ର Head-word କେଉଁ ଶ୍ରେଣୀର ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଲମ୍ବା Subject ର Head-word ସର୍ବଦା ଏକ Noun ହୋଇଥାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> ଲମ୍ବା Predicate ର Head-word କେଉଁ ଶ୍ରେଣୀର ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଲମ୍ବା Predicate ର Head-word ସର୍ବଦା ଏକ Verb ହୋଇଥାଏ ।",
+
+"<span style='color:red;'>Q-3:</span> 'Our old neighbour has a dog' ବାକ୍ୟରେ Subject ର Head-word କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> ଏହି ବାକ୍ୟରେ Subject ର Head-word ହେଉଛି 'neighbour' ।",
+
+"<span style='color:red;'>Q-4:</span> 'It has been raining for the last two hours' ବାକ୍ୟରେ Predicate ର Head-word କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> ଏହି ବାକ୍ୟରେ Predicate ର Head-word ହେଉଛି 'raining' ।"
+
+]
+},
+
+{
+heading: "NOTE-5: ରାସ୍ତା ବୁଝାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଲେଖିବା :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: କାହାକୁ ରାସ୍ତା ବୁଝାଇବା ପାଇଁ ଆମେ କ୍ରମାନ୍ୱୟରେ ସାଧାରଣ ନିର୍ଦ୍ଦେଶ ମୂଳକ ବାକ୍ୟ ବ୍ୟବହାର କରୁ, ଯେମିତି ସିଧା ଯିବା, ବାମକୁ ମୋଡ଼ିବା, ଡାହାଣକୁ ମୋଡ଼ିବା ଆଦି । ଏହି ପ୍ରକାର ବାକ୍ୟଗୁଡ଼ିକ ଏକ ପ୍ରକାର Predicate ଦ୍ୱାରା ଆରମ୍ଭ ହୁଏ, ଯେଉଁଠି Subject ଲୁଚି ରହିଥାଏ ।<br><br>👉 ଉଦାହରଣ: ଟ୍ରାଫିକ ପୋଲିସ ବାଇକ ଚାଳକଙ୍କୁ ସାଇନିକ ସ୍କୁଲ ଯିବାର ରାସ୍ତା ବୁଝାଇବା ପାଇଁ କୁହନ୍ତି - 'Go straight along the road', 'Turn left', 'Take the Nandankanan road', 'Turn right at Nalco Chhak' - ଏହିପରି କ୍ରମାନ୍ୱୟରେ ନିର୍ଦ୍ଦେଶ ଦିଅନ୍ତି ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ରାସ୍ତା ବୁଝାଇବା ପାଇଁ କେଉଁ ପ୍ରକାରର ବାକ୍ୟ ବ୍ୟବହାର କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ରାସ୍ତା ବୁଝାଇବା ପାଇଁ କ୍ରମାନ୍ୱୟରେ ସାଧାରଣ ନିର୍ଦ୍ଦେଶ ମୂଳକ ବାକ୍ୟ ବ୍ୟବହାର କରାଯାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> ରାସ୍ତା ବୁଝାଇବାର ବାକ୍ୟରେ ସାଧାରଣତଃ କେଉଁ କେଉଁ ଶବ୍ଦ ବ୍ୟବହାର ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> 'ସିଧା ଯିବା', 'ବାମକୁ ମୋଡ଼ିବା', 'ଡାହାଣକୁ ମୋଡ଼ିବା' ଭଳି ଶବ୍ଦ ବ୍ୟବହାର ହୁଏ ।",
+
+"<span style='color:red;'>Q-3:</span> ଏହିପରି ନିର୍ଦ୍ଦେଶ ମୂଳକ ବାକ୍ୟରେ Subject କାହିଁକି ଦେଖାଯାଏ ନାହିଁ ?<br><br><span style='color:green;'>Answer:</span> ଏଭଳି ବାକ୍ୟରେ Subject ('You') ଲୁଚି ରହିଥାଏ, ତେଣୁ ତାହା ଲେଖାଯାଏ ନାହିଁ ।",
+
+"<span style='color:red;'>Q-4:</span> ନିଜର ଦିନଚର୍ଯ୍ୟା ବିଷୟରେ ବାକ୍ୟ ଲେଖିଲା ପରେ ଆମେ କ'ଣ ଚିହ୍ନଟ କରିବା ଆବଶ୍ୟକ ?<br><br><span style='color:green;'>Answer:</span> ଆମେ ପ୍ରତ୍ୟେକ ବାକ୍ୟର Subject ଓ Predicate ଚିହ୍ନଟ କରିବା ଆବଶ୍ୟକ ।"
 
 ]
 }
@@ -353,13 +337,158 @@ const courseData = {
   `, 
     audio: "",
 mermaid: [
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>Sentence, Subject & Predicate<br/>ବାକ୍ୟ, କର୍ତ୍ତା ଓ କ୍ରିୟା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 Example / ଉଦାହରଣ\"]\nA --> I1[\"We express ideas, feelings, views in sentences.<br/>ଆମେ ଆମର ଭାବ, ଅନୁଭୂତି, ମତାମତ ବାକ୍ୟରେ ପ୍ରକାଶ କରୁ।\"]\nA --> I2[\"A sentence is made up of words.<br/>ବାକ୍ୟ ଶବ୍ଦରେ ଗଠିତ।\"]\nA --> I3[\"A sentence is a meaningful expression.<br/>ବାକ୍ୟ ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ପ୍ରକାଶ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 Subject & Predicate<br/>କର୍ତ୍ତା ଓ କ୍ରିୟା\"]\nM --> M1[\"Every sentence has two parts.<br/>ପ୍ରତ୍ୟେକ ବାକ୍ୟର ଦୁଇଟି ଅଂଶ ଥାଏ।\"]\nM --> M2[\"First part is called Subject.<br/>ପ୍ରଥମ ଅଂଶକୁ କର୍ତ୍ତା କୁହାଯାଏ।\"]\nM --> M3[\"Second part is called Predicate.<br/>ଦ୍ୱିତୀୟ ଅଂଶକୁ ପ୍ରେଡିକେଟ୍ କୁହାଯାଏ।\"]\nM --> M4[\"Subject and Predicate join to form meaning.<br/>କର୍ତ୍ତା ଓ କ୍ରିୟା ମିଶି ଅର୍ଥ ସୃଷ୍ଟି କରନ୍ତି।\"]\nM --> M5[\"Example: That boy is intelligent.<br/>ଉଦାହରଣ: ସେ ପିଲାଟି ବୁଦ୍ଧିମାନ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 Remember / ମନେରଖ\"]\nC --> C1[\"Trees provide us with oxygen.<br/>ଗଛ ଆମକୁ ଅମ୍ଳଜାନ ଦିଏ।\"]\nC --> C2[\"The cows feed on grass.<br/>ଗାଈମାନେ ଘାସ ଖାଆନ୍ତି।\"]\nC --> C3[\"Joining Subject with correct Predicate makes a sentence.<br/>ସଠିକ୍ କ୍ରିୟା ସହ କର୍ତ୍ତା ମିଶାଇଲେ ବାକ୍ୟ ସୃଷ୍ଟି ହୁଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%
+flowchart TD
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>Importance of Word Order<br/>ଶବ୍ଦକ୍ରମର ଗୁରୁତ୍ୱ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 Observation / ପର୍ଯ୍ୟବେକ୍ଷଣ\"]\nA --> I1[\"Is Indrani a classical singer?<br/>ଇନ୍ଦ୍ରାଣୀ କି ଏକ ଶାସ୍ତ୍ରୀୟ ଗାୟିକା?\"]\nA --> I2[\"Indrani is a classical singer.<br/>ଇନ୍ଦ୍ରାଣୀ ଜଣେ ଶାସ୍ତ୍ରୀୟ ଗାୟିକା।\"]\nA --> I3[\"Both sentences follow correct word order.<br/>ଉଭୟ ବାକ୍ୟ ସଠିକ୍ ଶବ୍ଦକ୍ରମ ଅନୁସରଣ କରନ୍ତି।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 Correct vs Incorrect Order<br/>ସଠିକ୍ ଓ ଭୁଲ କ୍ରମ\"]\nM --> M1[\"Words must follow a pattern.<br/>ଶବ୍ଦଗୁଡ଼ିକ ଏକ ନିୟମ ଅନୁସାରେ ସଜାଯିବା ଆବଶ୍ୟକ।\"]\nM --> M2[\"'Classical is Indrani a singer' is not acceptable.<br/>ଏହା ଗ୍ରହଣୀୟ ନୁହେଁ।\"]\nM --> M3[\"'Singer classical Indrani is a' is also wrong.<br/>ଏହା ମଧ୍ୟ ଭୁଲ।\"]\nM --> M4[\"Wrong order breaks the meaning.<br/>ଭୁଲ କ୍ରମ ଅର୍ଥକୁ ନଷ୍ଟ କରେ।\"]\nM --> M5[\"Correct order gives a meaningful sentence.<br/>ସଠିକ୍ କ୍ରମ ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ଦିଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 Practice / ଅଭ୍ୟାସ\"]\nC --> C1[\"Jumbled words must be rearranged.<br/>ଅବ୍ୟବସ୍ଥିତ ଶବ୍ଦଗୁଡ଼ିକୁ ପୁନଃ ସଜାଇବାକୁ ପଡ଼େ।\"]\nC --> C2[\"Example: her / you / waiting / for / are ?<br/>ଉଦାହରଣ: her / you / waiting / for / are ?\"]\nC --> C3[\"Answer: Are you waiting for her ?<br/>ଉତ୍ତର: Are you waiting for her ?\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+TITLE["📖 GRAPH-1:<br/>Parts of a Sentence:<br/>Subject and Predicate"]
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>Describing a Person<br/>ଜଣଙ୍କ ବିଷୟରେ ବର୍ଣ୍ଣନା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 Information / ସୂଚନା\"]\nA --> I1[\"This is Itishree.<br/>ଏହା ଇତିଶ୍ରୀ।\"]\nA --> I2[\"She is in class X.<br/>ସେ ଦଶମ ଶ୍ରେଣୀରେ ପଢ଼ନ୍ତି।\"]\nA --> I3[\"She is fourteen.<br/>ତାଙ୍କର ବୟସ ଚଉଦ ବର୍ଷ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 Family Details<br/>ପାରିବାରିକ ସୂଚନା\"]\nM --> M1[\"Mr Karunakar is her father.<br/>ଶ୍ରୀ କରୁଣାକର ତାଙ୍କର ପିତା।\"]\nM --> M2[\"He is an engineer.<br/>ସେ ଜଣେ ଇଞ୍ଜିନିୟର।\"]\nM --> M3[\"Each sentence gives one clear fact.<br/>ପ୍ରତ୍ୟେକ ବାକ୍ୟ ଏକ ସ୍ପଷ୍ଟ ତଥ୍ୟ ଦିଏ।\"]\nM --> M4[\"Simple sentences describe a person fully.<br/>ସରଳ ବାକ୍ୟଗୁଡ଼ିକ ଜଣଙ୍କୁ ସମ୍ପୂର୍ଣ୍ଣ ବର୍ଣ୍ଣନା କରନ୍ତି।\"]\nM --> M5[\"Subject and Predicate appear in every sentence.<br/>ପ୍ରତ୍ୟେକ ବାକ୍ୟରେ କର୍ତ୍ତା ଓ କ୍ରିୟା ଥାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 Summary / ସାରାଂଶ\"]\nC --> C1[\"Sentences are built with correct word order.<br/>ବାକ୍ୟ ସଠିକ୍ ଶବ୍ଦକ୍ରମରେ ତିଆରି ହୁଏ।\"]\nC --> C2[\"Subject and Predicate join to give meaning.<br/>କର୍ତ୍ତା ଓ କ୍ରିୟା ମିଶି ଅର୍ଥ ଦିଅନ୍ତି।\"]\nC --> C3[\"Practice helps in framing correct sentences.<br/>ଅଭ୍ୟାସ ସଠିକ୍ ବାକ୍ୟ ଗଠନରେ ସାହାଯ୍ୟ କରେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
-  ]
-  
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 Examples"]
+A --> I1["Wind → blows."]
+A --> I2["Birds → fly."]
+A --> I3["She → smiled."]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 The Two Parts"]
+M --> M1["A sentence has two<br/>essential parts."]
+M --> M2["Subject is who or what<br/>the sentence is about."]
+M --> M3["Predicate tells what<br/>the subject does."]
+M --> M4["Single-word subject is<br/>a noun or a pronoun."]
+M --> M5["Single-word predicate<br/>must be a Verb."]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 Key Rule"]
+C --> C1["Head-word of the subject<br/>is a noun."]
+C --> C2["Head-word of the predicate<br/>is a verb."]
+C --> C3["Both parts together give<br/>the sentence complete meaning."]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%
+flowchart TD
+
+TITLE["📖 GRAPH-2:<br/>Splitting Sentences into<br/>Subject, Predicate and Verb"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 Sample (Activity-7)"]
+A --> I1["Rama plays."]
+A --> I2["Subject - Rama."]
+A --> I3["Predicate - plays.<br/>Verb - plays."]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 Method"]
+M --> M1["First find the subject<br/>of the sentence."]
+M --> M2["Then find the predicate<br/>that follows it."]
+M --> M3["Pick out the Verb<br/>from the predicate."]
+M --> M4["Practice with: She sings,<br/>Time flies, He can write well."]
+M --> M5["Practice with: Children laugh,<br/>Rabindra can read, etc."]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 Beyond Single Words"]
+C --> C1["Subject may be a phrase:<br/>'Rama chandra, the son of Dasharatha'."]
+C --> C2["Predicate may be a phrase:<br/>'ruled over Ayodhya for many years'."]
+C --> C3["Verb identification helps<br/>understand sentence structure."]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%
+flowchart TD
+
+TITLE["📖 GRAPH-3:<br/>Applying Subject-Predicate<br/>in Real Writing (Activities 3-6)"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 Activity-3"]
+A --> I1["Write 6 sentences using<br/>info about Shrinivas."]
+A --> I2["Father, age, sister,<br/>hobby details given."]
+A --> I3["Turn short notes into<br/>full sentences."]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 Roadmap Activities"]
+M --> M1["Activity-4: Read the police-<br/>rider dialogue and roadmap."]
+M --> M2["Identify subjects and<br/>predicates in the dialogue."]
+M --> M3["Activity-5: Write 5 sentences<br/>explaining a roadmap to Swati."]
+M --> M4["Use direction instructions<br/>(go straight, turn left, etc.)."]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 Activity-6: Daily Routine"]
+C --> C1["Write a few sentences<br/>on your daily routine."]
+C --> C2["Circle the subjects in<br/>each sentence."]
+C --> C3["Underline the predicates<br/>in each sentence."]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4 body;
+class C,C1,C2,C3 conclusion;`
+]
       
 }  
 ]
