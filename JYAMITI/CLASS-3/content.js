@@ -7,335 +7,320 @@ const APP_CONFIG = {
 const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
-    audio1: "https://audio.evidya.de/S9MTG2P2-4.mp3",
-    video:  "https://www.youtube.com/embed/35h4o8ElesU?playsinline=1&rel=0&modestbranding=1&autoplay=1",
-    pdf:    "https://audio.evidya.de/S9MTG2P2-4.pdf"
+    audio1: "https://audio.evidya.de/S9MTG1P1-2.mp3",
+    video:  "https://www.youtube.com/embed/bJFHdrKDmpM?playsinline=1&rel=0&modestbranding=1&autoplay=1",
+    pdf:    "https://audio.evidya.de/S9MTG1P1-2.pdf"
 };
 
 const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "RECAPITULATION",
-            odia: "ପୁନରାବୃତ୍ତି",
-            emoji: "🔁",
-            odiaUse: "ପୁନରାବୃତ୍ତି ଅର୍ଥ ପୂର୍ବ ଶିଖିଥିବା ବିଷୟକୁ ପୁଣି ଥରେ ମନେ ପକାଇବା । ଏହି ଅଧ୍ୟାୟରେ ମୌଳିକ ଅବବୋଧର ପୁନରାବୃତ୍ତି କରାଯାଇଛି ।",
+            word: "SHAPE",
+            odia: "ଆକୃତି",
+            emoji: "🔷",
+            odiaUse: "ଆକୃତି ଅର୍ଥ ବସ୍ତୁର ରୂପ ବା ଗଠନ । ପତ୍ର, ଫୁଲ ଓ ଫଳର ଭିନ୍ନ ଭିନ୍ନ ଆକୃତି ଥାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "TERM",
-            odia: "ପଦ",
-            emoji: "🔤",
-            odiaUse: "ପଦ ଅର୍ଥ କୌଣସି ବିଶେଷ ଅର୍ଥରେ ବ୍ୟବହୃତ ଶବ୍ଦ । ପ୍ରତ୍ୟେକ ପାଠରେ କେତେକ ବିଶେଷ ଶବ୍ଦକୁ ପଦ କୁହାଯାଏ ।",
+            word: "GEOMETRY",
+            odia: "ଜ୍ୟାମିତି",
+            emoji: "📐",
+            odiaUse: "ଜ୍ୟାମିତି ଅର୍ଥ ଆକୃତି, ରେଖା, କୋଣ ଓ ମାପ ସମ୍ବନ୍ଧୀୟ ଗଣିତ ଶାସ୍ତ୍ର ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "UNDEFINED TERM",
-            odia: "ସଂଜ୍ଞାବିହୀନ ପଦ",
-            emoji: "❓",
-            odiaUse: "ସଂଜ୍ଞାବିହୀନ ପଦ ଅର୍ଥ ଯାହାର ସଂଜ୍ଞା ଦିଆଯାଇ ନଥାଏ । ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ ହେଉଛି ସଂଜ୍ଞାବିହୀନ ପଦ ।",
+            word: "EARTH",
+            odia: "ପୃଥିବୀ",
+            emoji: "🌍",
+            odiaUse: "ପୃଥିବୀ ଅର୍ଥ ଆମେ ବାସ କରୁଥିବା ଗ୍ରହ । ଜ୍ୟାମିତି ଶବ୍ଦରେ 'ଜ୍ୟା'ର ଅର୍ଥ ପୃଥିବୀ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DEFINED TERM",
-            odia: "ସଂଜ୍ଞାକୃତ ପଦ",
-            emoji: "📖",
-            odiaUse: "ସଂଜ୍ଞାକୃତ ପଦ ଅର୍ଥ ଯାହାର ସଠିକ୍ ଅର୍ଥ ବିଚାର କରି ସଂଜ୍ଞା ଦିଆଯାଇଛି । ପଦସମୂହ ଦୁଇ ପ୍ରକାର - ସଂଜ୍ଞାବିହୀନ ପଦ ଓ ସଂଜ୍ଞାକୃତ ପଦ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "DEFINITION",
-            odia: "ସଂଜ୍ଞା",
-            emoji: "📝",
-            odiaUse: "ସଂଜ୍ଞା ଅର୍ଥ କୌଣସି ପଦର ଅର୍ଥ ନିରୂପଣ କରି ଦିଆଯାଇଥିବା ବାକ୍ୟ । ଅର୍ଥନିରୂପକ ବାକ୍ୟକୁ ସଂଜ୍ଞା କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "FUNDAMENTAL TERM",
-            odia: "ମୌଳିକ ପଦ",
-            emoji: "🧱",
-            odiaUse: "ମୌଳିକ ପଦ ଅର୍ଥ ଅନ୍ୟ ପଦମାନଙ୍କର ମୂଳଭିତ୍ତି । ସଂଜ୍ଞା ନିରୂପଣ ପାଇଁ ଆଣ ପାଖରେ ପର୍ଯ୍ୟାପ୍ତ ସଂଖ୍ୟକ ମୌଳିକ ପଦ ଥାଇବା ଆବଶ୍ୟକ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "POINT",
-            odia: "ବିନ୍ଦୁ",
-            emoji: "•",
-            odiaUse: "ବିନ୍ଦୁ ଅର୍ଥ ଏକ ସ୍ଥାନ ଯାହାର କୌଣସି ଆକାର ନାହିଁ । ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ ହେଉଛି ତିନୋଟି ମୌଳିକ ପଦ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "LINE",
-            odia: "ରେଖା",
-            emoji: "➖",
-            odiaUse: "ରେଖା ଅର୍ଥ ଅସଂଖ୍ୟ ବିନ୍ଦୁର ସମାହାର ଯାହା ସିଧା ବା ବକ୍ର ହୋଇପାରେ । ଦୁଇଟି ବିନ୍ଦୁ ମଧ୍ୟ ଦେଇ ଏକ ରେଖା ଯାଇପାରେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "STRAIGHT LINE",
-            odia: "ସରଳରେଖା",
+            word: "MEASUREMENT",
+            odia: "ମାପ",
             emoji: "📏",
-            odiaUse: "ସରଳରେଖା ଅର୍ଥ ଏକ ସିଧା ରେଖା ଯାହା ବଙ୍କା ହୋଇନଥାଏ । ଦୁଇଟି ପୃଥକ୍ ବିନ୍ଦୁ ଦେଇ ଗୋଟିଏ ମାତ୍ର ସରଳରେଖା ଯାଇଥାଏ ।",
+            odiaUse: "ମାପ ଅର୍ଥ କୌଣସି ବସ୍ତୁର ଲମ୍ବ, ପ୍ରସ୍ଥ ବା ପରିମାଣ ନିର୍ଣ୍ଣୟ କରିବା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PLANE",
-            odia: "ସମତଳ",
-            emoji: "▭",
-            odiaUse: "ସମତଳ ଅର୍ଥ ଚାରିଆଡେ ଅସୀମ ଭାବେ ବିସ୍ତୃତ ଏକ ସମାନ ପୃଷ୍ଠ । ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ ତିନୋଟି ମୌଳିକ ପଦ ଅଟନ୍ତି ।",
+            word: "LAND",
+            odia: "ଜମି",
+            emoji: "🌾",
+            odiaUse: "ଜମି ଅର୍ଥ ଭୂମି । ଜମି ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହୋଇଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "AXIOM",
-            odia: "ସ୍ୱୀକାର୍ଯ୍ୟ",
-            emoji: "✅",
-            odiaUse: "ସ୍ୱୀକାର୍ଯ୍ୟ ଅର୍ଥ ଏକ ସତ୍ୟ ଯାହାକୁ ପ୍ରମାଣ ବିନା ସିଧାସଳଖ ଗ୍ରହଣ କରାଯାଏ । ସୋମାନଙ୍କର କେତେକ ଧର୍ମକୁ ସ୍ୱୀକାର୍ଯ୍ୟ ଆଖ୍ୟା ଦେଇ ମାନି ନିଆଯାଇଛି ।",
+            word: "PYRAMID",
+            odia: "ପିରାମିଡ୍",
+            emoji: "🔺",
+            odiaUse: "ପିରାମିଡ୍ ଅର୍ଥ ମିଶରର ପ୍ରସିଦ୍ଧ ବିଶାଳ ସ୍ଥାପତ୍ୟ । ଏହା ଉନ୍ନତ ଜ୍ୟାମିତି ଜ୍ଞାନର ନିଦର୍ଶନ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SET",
-            odia: "ସେଟ୍",
-            emoji: "🗃️",
-            odiaUse: "ସେଟ୍ ଅର୍ଥ କେତେକ ବସ୍ତୁର ସମାହାର ବା ସଂଗ୍ରହ । ରେଖା ବିନ୍ଦୁମାନଙ୍କର ଏକ ସେଟ୍ ବା ସମାହାର ଅଟେ ।",
+            word: "CIVILIZATION",
+            odia: "ସଭ୍ୟତା",
+            emoji: "🏛️",
+            odiaUse: "ସଭ୍ୟତା ଅର୍ଥ ମନୁଷ୍ୟ ସମାଜର ଉନ୍ନତ ଜୀବନଧାରା । ମାନବ ସଭ୍ୟତା ସହିତ ଜ୍ୟାମିତିର ବିକାଶ ଜଡ଼ିତ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "COLLINEAR POINTS",
-            odia: "ଏକରେଖୀ ବିନ୍ଦୁ",
-            emoji: "📍",
-            odiaUse: "ଏକରେଖୀ ବିନ୍ଦୁ ଅର୍ଥ ତିନି ବା ତାହାଠାରୁ ଅଧିକ ବିନ୍ଦୁ ଯାହା ଏକ ସରଳରେଖାରେ ଅବସ୍ଥିତ ହୁଅନ୍ତି । ସେମାନଙ୍କୁ ଏକରେଖୀ ବିନ୍ଦୁ କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "NON-COLLINEAR POINTS",
-            odia: "ନୈକରେଖୀ ବିନ୍ଦୁ",
-            emoji: "🔀",
-            odiaUse: "ନୈକରେଖୀ ବିନ୍ଦୁ ଅର୍ଥ ଯେଉଁ ବିନ୍ଦୁମାନେ ଏକ ସରଳରେଖାରେ ଅବସ୍ଥିତ ହୁଅନ୍ତି ନାହିଁ । ସେମାନଙ୍କୁ ନୈକରେଖୀ ବା ଅଣସରଳରେଖୀ ବିନ୍ଦୁ କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "INTERSECTION",
-            odia: "ଛେଦ",
-            emoji: "✂️",
-            odiaUse: "ଛେଦ ଅର୍ଥ ଦୁଇଟି ସେଟ୍ ର ସାଧାରଣ ଉପାଦାନମାନଙ୍କର ସେଟ୍ । ଦୁଇଟି ସରଳରେଖାର ଛେଦ ବିଷୟ ବିଚାର କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "POINT OF INTERSECTION",
-            odia: "ଛେଦବିନ୍ଦୁ",
-            emoji: "❌",
-            odiaUse: "ଛେଦବିନ୍ଦୁ ଅର୍ଥ ଦୁଇଟି ରେଖା ମିଳିତ ହେଉଥିବା ସାଧାରଣ ବିନ୍ଦୁ । ଯେଉଁଠାରେ ଦୁଇଟି ରେଖା ମିଶନ୍ତି, ତାହାକୁ ଛେଦବିନ୍ଦୁ କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "NON-INTERSECTING LINES",
-            odia: "ଅଣଛେଦୀ ରେଖା",
-            emoji: "∥",
-            odiaUse: "ଅଣଛେଦୀ ରେଖା ଅର୍ଥ ଯେଉଁ ଦୁଇଟି ରେଖାର କୌଣସି ସାଧାରଣ ବିନ୍ଦୁ ବା ଛେଦବିନ୍ଦୁ ନଥାଏ । ସେମାନଙ୍କୁ ଅଣଛେଦୀ ରେଖା କୁହାଯାଏ ।",
+            word: "FORMULA",
+            odia: "ସୂତ୍ର",
+            emoji: "📘",
+            odiaUse: "ସୂତ୍ର ଅର୍ଥ ନିୟମ ବା ସିଦ୍ଧାନ୍ତ । ପ୍ରାଚୀନ ଋଷିମାନେ ବିଭିନ୍ନ ଜ୍ୟାମିତିକ ସୂତ୍ରର ପ୍ରୟୋଗ କରୁଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
             word: "THEOREM",
             odia: "ଉପପାଦ୍ୟ",
-            emoji: "📐",
-            odiaUse: "ଉପପାଦ୍ୟ ଅର୍ଥ ଏକ ଗାଣିତିକ ପ୍ରସ୍ତାବ ଯାହାକୁ ପ୍ରମାଣ କରାଯାଏ । ସ୍ୱୀକାର୍ଯ୍ୟଙ୍କୁ ସାହାଯ୍ୟରେ ଉପପାଦ୍ୟ ପ୍ରମାଣ କରାଯାଏ ।",
+            emoji: "📝",
+            odiaUse: "ଉପପାଦ୍ୟ ଅର୍ଥ ପ୍ରମାଣ କରାଯାଇଥିବା ଗଣିତୀୟ ସତ୍ୟ । ଇଉକ୍ଲିଡ୍ ତାଙ୍କ ଗ୍ରନ୍ଥରେ ଅନେକ ଉପପାଦ୍ୟ ଦେଇଛନ୍ତି ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PROOF",
-            odia: "ପ୍ରମାଣ",
-            emoji: "🔍",
-            odiaUse: "ପ୍ରମାଣ ଅର୍ଥ ତର୍କ ଓ ଯୁକ୍ତି ମାଧ୍ୟମରେ କୌଣସି କଥାର ସତ୍ୟତା ପ୍ରତିପାଦନ କରିବା । ଉପପାଦ୍ୟର ପ୍ରମାଣ ଆବଶ୍ୟକ ହୁଏ ।",
+            word: "EXPERIMENT",
+            odia: "ପରୀକ୍ଷା",
+            emoji: "🧪",
+            odiaUse: "ପରୀକ୍ଷା ଅର୍ଥ ଯାଞ୍ଚ କରିବାର ପ୍ରକ୍ରିୟା । ପ୍ରଥମେ ଜ୍ୟାମିତିର ସୂତ୍ରଗୁଡ଼ିକ ପରୀକ୍ଷାମୂଳକ ଉପାୟରେ ନିଶ୍ଚିତ ହେଉଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "POSTULATE",
-            odia: "ସ୍ୱୀକାର୍ଯ୍ୟମାନ",
-            emoji: "📃",
-            odiaUse: "ସ୍ୱୀକାର୍ଯ୍ୟମାନ ଅର୍ଥ ମୌଳିକ ପଦମାନଙ୍କର ପାରସ୍ପରିକ ସମ୍ପର୍କକୁ ପ୍ରକାଶ କରୁଥିବା ମାନ୍ୟ ସତ୍ୟ । ଆଗକୁ ଏହି ପର୍ଯ୍ୟନ୍ତ ଜାଣିଥିବା ସ୍ୱୀକାର୍ଯ୍ୟମାନଙ୍କର ସଂକ୍ଷିପ୍ତ ପୁନରାଲୋଚନା କରାଯାଏ ।",
+            word: "OBSERVATION",
+            odia: "ପର୍ଯ୍ୟବେକ୍ଷଣ",
+            emoji: "👀",
+            odiaUse: "ପର୍ଯ୍ୟବେକ୍ଷଣ ଅର୍ଥ ଭଲଭାବେ ଦେଖି ଅଧ୍ୟୟନ କରିବା । ପର୍ଯ୍ୟବେକ୍ଷଣରୁ ଅନେକ ଜ୍ୟାମିତିକ ସୂତ୍ର ସୃଷ୍ଟି ହୋଇଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "LOGIC",
+            odia: "ତର୍କ",
+            emoji: "🧠",
+            odiaUse: "ତର୍କ ଅର୍ଥ ଯୁକ୍ତିପୂର୍ଣ୍ଣ ଚିନ୍ତା । ଗ୍ରୀକ୍ ବିଦ୍ୱାନମାନେ ତର୍କ ଦ୍ୱାରା ଜ୍ୟାମିତିର ସିଦ୍ଧାନ୍ତ ପ୍ରତିପାଦନ କରିଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "GEOMETER",
+            odia: "ଗଣିତଜ୍ଞ",
+            emoji: "👨‍🏫",
+            odiaUse: "ଗଣିତଜ୍ଞ ଅର୍ଥ ଗଣିତ ବିଷୟର ପଣ୍ଡିତ । ଇଉକ୍ଲିଡ୍ ଜଣେ ପ୍ରସିଦ୍ଧ ଗଣିତଜ୍ଞ ଥିଲେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "SET",
+            odia: "ସେଟ୍",
+            emoji: "🗂️",
+            odiaUse: "ସେଟ୍ ଅର୍ଥ ବସ୍ତୁଗୁଡ଼ିକର ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ସମୂହ । ଆଧୁନିକ ଗଣିତରେ ସେଟ୍‌ର ବ୍ୟବହାର କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PLANE GEOMETRY",
+            odia: "ସମତଳ ଜ୍ୟାମିତି",
+            emoji: "📏",
+            odiaUse: "ସମତଳ ଜ୍ୟାମିତି ଅର୍ଥ ସମତଳ ଉପରେ ରେଖା ଓ ଆକୃତିର ଅଧ୍ୟୟନ । ବିଦ୍ୟାଳୟରେ ଆମେ ସମତଳ ଜ୍ୟାମିତି ପଢ଼ୁ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
 };
-
+    
 const topicsData = [
 
 {
-heading: "NOTE-1: ପଦ (Term) କ'ଣ ? :-",
+heading: "NOTE-1: ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପ୍ରତ୍ୟେକ ପାଠରେ କିଛି ନିର୍ଦ୍ଦିଷ୍ଟ ଶବ୍ଦ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ଅର୍ଥରେ ବ୍ୟବହାର ହୁଏ । ଏହି ପ୍ରକାର ଶବ୍ଦକୁ 'ପଦ' (Term) କୁହାଯାଏ । ପାଠ ପଢ଼ିବା ପୂର୍ବରୁ ଏହି ପଦଗୁଡ଼ିକର ଠିକ ଅର୍ଥ ଜାଣିବା ଜରୁରୀ, ନହେଲେ ପାଠ ବୁଝିବାରେ ଅସୁବିଧା ହେବ ।<br><br>👉 ଉଦାହରଣ: ଗଣିତ ପାଠରେ 'ବିନ୍ଦୁ', 'ରେଖା' ଭଳି ଶବ୍ଦଗୁଡ଼ିକ ନିର୍ଦ୍ଦିଷ୍ଟ ଅର୍ଥରେ ବ୍ୟବହାର ହୁଏ, ସାଧାରଣ କଥାବାର୍ତ୍ତାରେ ଏହି ଶବ୍ଦଗୁଡ଼ିକର ଅର୍ଥ ଭିନ୍ନ ହୋଇପାରେ ।",
+text:"👉 ଧାରଣା: ଆମ ଚାରିପାଖରେ ଥିବା ପ୍ରାୟ ସମସ୍ତ ପଦାର୍ଥ ଏକ ନା ଏକ ଆକୃତି ଧାରଣ କରିଥାଏ । ଏହି ଆକୃତିଗୁଡ଼ିକର ଅଧ୍ୟୟନକୁ ଜ୍ୟାମିତି କୁହାଯାଏ । 'ଜ୍ୟାମିତି' ଶବ୍ଦର 'ଜ୍ୟା' ଅର୍ଥ ଦୂରତ୍ୱ ଓ 'ମିତି' ଅର୍ଥ ମାପ । ଇଂରାଜୀ ଶବ୍ଦ 'Geometry' ଗ୍ରୀକ୍ ଶବ୍ଦ Geo (ଭୂଖଣ୍ଡ) ଓ Metron (ମାପ) ରୁ ସୃଷ୍ଟି ହୋଇଛି ।<br><br>👉 ଉଦାହରଣ: ପତ୍ର, ଫୁଲ, ଫଳ ଆଦି ପ୍ରତ୍ୟେକ ପଦାର୍ଥ ନିଜର ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ଆକୃତି ଧାରଣ କରିଥାଏ । ଆକୃତି ଚିହ୍ନଟ କରିବାର ସାମର୍ଥ୍ୟ ମଣିଷର ଏକ ବିଶେଷତ୍ୱ, ଯାହା ଜୀବଜନ୍ତୁଙ୍କ ମଧ୍ୟରେ ଅନୁପସ୍ଥିତ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ପଦ (Term) କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ପାଠରେ ନିର୍ଦ୍ଦିଷ୍ଟ ଅର୍ଥରେ ବ୍ୟବହାର ହେଉଥିବା ଶବ୍ଦକୁ ପଦ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଜ୍ୟାମିତି କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଆକୃତିଗୁଡ଼ିକର ଅଧ୍ୟୟନକୁ ଜ୍ୟାମିତି କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ପାଠ ପଢ଼ିବା ପୂର୍ବରୁ କ'ଣ ଜାଣିବା ଜରୁରୀ ?<br><br><span style='color:green;'>Answer:</span> ପାଠରେ ବ୍ୟବହୃତ ପଦଗୁଡ଼ିକର ଠିକ ଅର୍ଥ ଜାଣିବା ଜରୁରୀ ।",
+"<span style='color:red;'>Q-2:</span> 'ଜ୍ୟା' ଓ 'ମିତି' ଶବ୍ଦର ଅର୍ଥ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> 'ଜ୍ୟା' ଅର୍ଥ ଦୂରତ୍ୱ ଓ 'ମିତି' ଅର୍ଥ ମାପ ।",
 
-"<span style='color:red;'>Q-3:</span> ଗଣିତରେ ପଦର ଉଦାହରଣ ଦିଅ ।<br><br><span style='color:green;'>Answer:</span> ବିନ୍ଦୁ ଓ ରେଖା ଗଣିତର ଦୁଇଟି ପଦ ଅଟନ୍ତି ।",
+"<span style='color:red;'>Q-3:</span> 'Geometry' ଶବ୍ଦଟି କେଉଁ ଦୁଇଟି ଗ୍ରୀକ୍ ଶବ୍ଦରୁ ସୃଷ୍ଟି ହୋଇଛି ?<br><br><span style='color:green;'>Answer:</span> Geo (ଭୂଖଣ୍ଡ) ଓ Metron (ମାପ) ରୁ ସୃଷ୍ଟି ହୋଇଛି ।",
 
-"<span style='color:red;'>Q-4:</span> ପଦର ଅର୍ଥ କାହିଁକି ଠିକ ଭାବରେ ଜାଣିବା ଦରକାର ?<br><br><span style='color:green;'>Answer:</span> ଠିକ ଅର୍ଥ ନଜାଣିଲେ ପାଠ ବୁଝିବାରେ ଗଣ୍ଡଗୋଳ ହେବ, ତେଣୁ ଠିକ ଅର୍ଥ ଜାଣିବା ଦରକାର ।"
+"<span style='color:red;'>Q-4:</span> ଆକୃତି ଚିହ୍ନଟ କରିବାର ସାମର୍ଥ୍ୟ କାହାର ବିଶେଷତ୍ୱ ?<br><br><span style='color:green;'>Answer:</span> ଆକୃତି ଚିହ୍ନଟ କରିବାର ସାମର୍ଥ୍ୟ ମଣିଷର ବିଶେଷତ୍ୱ ।"
 
 ]
 },
 
 {
-heading: "NOTE-2: ମୌଳିକ ପଦ ବା ଜ୍ଞାପିତ ପଦ କ'ଣ ? :-",
+heading: "NOTE-2: ଜ୍ୟାମିତିର ଆବଶ୍ୟକତା ଓ ଆରମ୍ଭ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: କୌଣସି ଶବ୍ଦର ଅର୍ଥ ବୁଝାଇବାକୁ ଗଲେ ଅନ୍ୟ ଶବ୍ଦମାନଙ୍କ ସାହାଯ୍ୟ ନେବାକୁ ପଡ଼େ । ଏହିପରି ଚାଲିଥିଲେ ଏହା କେବେ ଶେଷ ହେବ ନାହିଁ । ତେଣୁ ଗଣିତରେ କିଛି ପଦକୁ ବିନା ସଂଜ୍ଞାରେ ରଖାଯାଏ, ଏହାକୁ ମୌଳିକ ପଦ ବା ଜ୍ଞାପିତ ପଦ କୁହାଯାଏ । ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ ଏହିପରି ତିନୋଟି ମୌଳିକ ପଦ ।<br><br>👉 ଉଦାହରଣ: ଆମେ ବିନ୍ଦୁ କ'ଣ ତାହା ଚିତ୍ର ଦେଖାଇ ବୁଝାଇ ପାରିବା, କିନ୍ତୁ ଏହାର ଠିକ ସଂଜ୍ଞା ଦେଇ ପାରିବା ନାହିଁ । ସେହିପରି ରେଖା ଓ ସମତଳ ମଧ୍ୟ ଚିତ୍ର ମାଧ୍ୟମରେ ବୁଝାଯାଏ ।",
+text:"👉 ଧାରଣା: ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ହିଁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହୋଇଥିଲା । ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହିତ ଜ୍ୟାମିତି ମଧ୍ୟ ବିକଶିତ ହେଲା । ଚାଷ ଜମିନ ଆକାର ନିର୍ଣ୍ଣୟ, ରାସ୍ତା ଓ ବାସଗୃହ ନିର୍ମାଣରେ ପ୍ରାଚୀନ ମନୁଷ୍ୟ ଜ୍ୟାମିତି ଜ୍ଞାନର ପ୍ରୟୋଗ କରି ନିଜ ସମସ୍ୟାର ସମାଧାନ କରିଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ବନ୍ୟା ପରେ ନଦୀକୂଳର ଜମି ପୁଣି ମାପିବାକୁ ପଡ଼ୁଥିବାରୁ ପ୍ରାଚୀନ ଈଜିପ୍ଟୀୟମାନେ ଜମି ମାପିବାର ପଦ୍ଧତି ବିକଶିତ କରିଥିଲେ, ଯାହା ଜ୍ୟାମିତିର ଆଦ୍ୟ ପ୍ରୟୋଗ ଥିଲା ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ମୌଳିକ ପଦ କାହିଁକି ସଂଜ୍ଞାହୀନ ରଖାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ସଂଜ୍ଞା ଦେବାର ପ୍ରକ୍ରିୟାର କେବେ ଶେଷ ନହେବା ଏଡ଼ାଇବା ପାଇଁ କିଛି ପଦକୁ ସଂଜ୍ଞାହୀନ ରଖାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଜ୍ୟାମିତିର ସୃଷ୍ଟି କେଉଁ ଆବଶ୍ୟକତାରୁ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହେଲା ।",
 
-"<span style='color:red;'>Q-2:</span> ଗଣିତର ତିନୋଟି ମୌଳିକ ପଦର ନାମ ଲେଖ ।<br><br><span style='color:green;'>Answer:</span> ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ ଗଣିତର ତିନୋଟି ମୌଳିକ ପଦ ।",
+"<span style='color:red;'>Q-2:</span> ପ୍ରାଚୀନ ମନୁଷ୍ୟ ଜ୍ୟାମିତି ଜ୍ଞାନ କେଉଁଠି ପ୍ରୟୋଗ କରୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଚାଷ ଜମିନ ଆକାର ନିର୍ଣ୍ଣୟ, ରାସ୍ତା ଓ ବାସଗୃହ ନିର୍ମାଣରେ ପ୍ରୟୋଗ କରୁଥିଲେ ।",
 
-"<span style='color:red;'>Q-3:</span> ମୌଳିକ ପଦକୁ ଆଉ କେଉଁ ନାମରେ ଡକାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ମୌଳିକ ପଦକୁ ଜ୍ଞାପିତ ପଦ ମଧ୍ୟ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-3:</span> ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହିତ ଜ୍ୟାମିତିର କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହିତ ଜ୍ୟାମିତି ମଧ୍ୟ ବିକଶିତ ହେଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ବିନ୍ଦୁ କ'ଣ ତାହା କିପରି ବୁଝାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବିନ୍ଦୁକୁ ଚିତ୍ର ମାଧ୍ୟମରେ ଉଦାହରଣ ଦେଇ ବୁଝାଯାଏ, ସଂଜ୍ଞା ଦେଇ ନୁହେଁ ।"
+"<span style='color:red;'>Q-4:</span> ଜ୍ୟାମିତି ପ୍ରୟୋଗ କରି ପ୍ରାଚୀନ ମନୁଷ୍ୟ କ'ଣ ସାଧନ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ନିଜ ସମସ୍ୟାର ସମାଧାନ ଓ ଜ୍ଞାନର ଉତ୍କର୍ଷ ସାଧନ କରିଥିଲେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-3: ସଂଜ୍ଞା (Definition) କ'ଣ ? :-",
+heading: "NOTE-3: ଶୁଳ୍ବ ସୂତ୍ର - ବୈଦିକ ଜ୍ୟାମିତି :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: କୌଣସି ଶବ୍ଦର ଅର୍ଥକୁ ଅନ୍ୟ ପରିଚିତ ଶବ୍ଦମାନଙ୍କ ସାହାଯ୍ୟରେ ସ୍ପଷ୍ଟ ଭାବରେ ବୁଝାଇବାକୁ ସଂଜ୍ଞା କୁହାଯାଏ । ମୌଳିକ ପଦ ଛଡ଼ା ଗଣିତର ଅନ୍ୟ ସମସ୍ତ ପଦର ସଂଜ୍ଞା ଦିଆଯାଇଥାଏ ।<br><br>👉 ଉଦାହରଣ: ଯଦି ଆମେ କହୁ 'ତ୍ରିଭୁଜ ହେଉଛି ତିନୋଟି ରେଖାଖଣ୍ଡରେ ଘେରି ହୋଇଥିବା ଚିତ୍ର', ଏହା ତ୍ରିଭୁଜର ସଂଜ୍ଞା ଅଟେ, କାରଣ ଏହା ଆଗରୁ ଜଣା ଥିବା ପଦ (ରେଖାଖଣ୍ଡ) ର ସାହାଯ୍ୟ ନେଇଛି ।",
+text:"👉 ଧାରଣା: ବୈଦିକ ଯୁଗରେ ଯଜ୍ଞ ବେଦି ନିର୍ମାଣ କାର୍ଯ୍ୟରେ ପ୍ରାଚୀନ ଭାରତରେ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ ହୋଇଥିଲା । ଏହି ଜ୍ୟାମିତି ଶାଖାର ନାମ 'ଶୁଳ୍ବ ସୂତ୍ର' । ଏହା ଆନୁମାନିକ ୮୦୦ ଖ୍ରୀଷ୍ଟପୂର୍ବରୁ ୫୦୦ ଖ୍ରୀଷ୍ଟପୂର୍ବ ମଧ୍ୟରେ ଭାରତରେ ରଚିତ ହୋଇଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଶୁଳ୍ବ ଅର୍ଥାତ୍ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିର ମାପ ସମ୍ପାଦନ ସୂତ୍ରକୁ ନେଇ ଭାରତରେ ୟଜ୍ଞ ବେଦିର ସଠିକ୍ ଆକାର ଓ ଆକୃତି ନିର୍ଣ୍ଣୟ କରାଯାଉଥିଲା ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ସଂଜ୍ଞା କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> କୌଣସି ଶବ୍ଦର ଅର୍ଥକୁ ପରିଚିତ ଶବ୍ଦ ସାହାଯ୍ୟରେ ବୁଝାଇବାକୁ ସଂଜ୍ଞା କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ବୈଦିକ ଯୁଗରେ ଯଜ୍ଞ ବେଦି ନିର୍ମାଣ ପାଇଁ ପ୍ରୟୋଗ ହୋଇଥିବା ଜ୍ୟାମିତି ଶାଖାର ନାମ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଏହାର ନାମ 'ଶୁଳ୍ବ ସୂତ୍ର' ।",
 
-"<span style='color:red;'>Q-2:</span> ମୌଳିକ ପଦ ଛଡ଼ା ଅନ୍ୟ ପଦମାନଙ୍କ କ'ଣ ଦିଆଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ମୌଳିକ ପଦ ଛଡ଼ା ଅନ୍ୟ ସମସ୍ତ ପଦର ସଂଜ୍ଞା ଦିଆଯାଏ ।",
+"<span style='color:red;'>Q-2:</span> 'ଶୁଳ୍ବ' ଶବ୍ଦର ଅର୍ଥ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> 'ଶୁଳ୍ବ' ଅର୍ଥ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିର ମାପ ସମ୍ପାଦନ ।",
 
-"<span style='color:red;'>Q-3:</span> ସଂଜ୍ଞା ଦେବା ପାଇଁ କ'ଣ ଆବଶ୍ୟକ ?<br><br><span style='color:green;'>Answer:</span> ସଂଜ୍ଞା ଦେବା ପାଇଁ ଆଗରୁ ଜଣା ଥିବା ପଦର ସାହାଯ୍ୟ ଆବଶ୍ୟକ ।",
+"<span style='color:red;'>Q-3:</span> ଶୁଳ୍ବ ସୂତ୍ର ଆନୁମାନିକ କେଉଁ ସମୟ ମଧ୍ୟରେ ରଚିତ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଆନୁମାନିକ ୮୦୦ ରୁ ୫୦୦ ଖ୍ରୀଷ୍ଟପୂର୍ବ ମଧ୍ୟରେ ରଚିତ ହୋଇଥିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ତ୍ରିଭୁଜର ସଂଜ୍ଞା କେଉଁ ପଦ ସାହାଯ୍ୟରେ ଦିଆଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ତ୍ରିଭୁଜର ସଂଜ୍ଞା ରେଖାଖଣ୍ଡ ପଦ ସାହାଯ୍ୟରେ ଦିଆଯାଏ ।"
+"<span style='color:red;'>Q-4:</span> ଶୁଳ୍ବ ସୂତ୍ର ସାହାଯ୍ୟରେ କ'ଣ ନିର୍ଣ୍ଣୟ କରାଯାଉଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଯଜ୍ଞ ବେଦିର ସଠିକ୍ ଆକାର ଓ ଆକୃତି ନିର୍ଣ୍ଣୟ କରାଯାଉଥିଲା ।"
 
 ]
 },
 
 {
-heading: "NOTE-4: ସ୍ୱୀକାର୍ଯ୍ୟ (Axiom) କ'ଣ ? :-",
+heading: "NOTE-4: ପ୍ରାଚୀନ ସଭ୍ୟତାରେ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଯେଉଁ ବକ୍ତବ୍ୟକୁ ପ୍ରମାଣ ନକରି ସତ୍ୟ ବୋଲି ମାନି ନିଆଯାଏ, ତାହାକୁ ସ୍ୱୀକାର୍ଯ୍ୟ କୁହାଯାଏ । ଗଣିତ ଆଗକୁ ବଢ଼ାଇବା ପାଇଁ କିଛି ମୌଳିକ ଗୁଣକୁ ପ୍ରମାଣ ବିନା ଗ୍ରହଣ କରାଯାଏ ।<br><br>👉 ଉଦାହରଣ: 'ଦୁଇଟି ଭିନ୍ନ ବିନ୍ଦୁ ଦେଇ ଏକମାତ୍ର ସରଳରେଖା ଯାଏ' - ଏହା ଏକ ସ୍ୱୀକାର୍ଯ୍ୟ, ଆମେ ଏହାକୁ ପ୍ରମାଣ ନକରି ସତ୍ୟ ମାନି ନେଉ ।",
+text:"👉 ଧାରଣା: ପ୍ରାଚୀନ ମିଶରୀୟମାନେ ପିରାମିଡ୍ ନିର୍ମାଣରେ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ କରିଥିଲେ । ଭାରତରେ ମହେନ୍‌ଜୋଦାରୋ ଓ ହରପ୍ପାର ସଭ୍ୟତାରେ ମଧ୍ୟ ଭାସଗୃହ, ସ୍ନାନାଗାର ଓ ରାସ୍ତା ନିର୍ମାଣ କାର୍ଯ୍ୟରେ ଜ୍ୟାମିତିକ ଚିହ୍ନ ପ୍ରୟୋଗର ପ୍ରମାଣ ମିଳେ ।<br><br>👉 ଉଦାହରଣ: ପିରାମିଡ୍‌ର ସଠିକ୍ ତ୍ରିଭୁଜାକାର ଗଠନ ଓ ହରପ୍ପାର ସୁସଜ୍ଜିତ ନଗର-ଯୋଜନା ଦର୍ଶାଏ ଯେ ପ୍ରାଚୀନ ଲୋକମାନେ ଜ୍ୟାମିତି ଜ୍ଞାନରେ ପାରଙ୍ଗମ ଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ସ୍ୱୀକାର୍ଯ୍ୟ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରମାଣ ବିନା ସତ୍ୟ ବୋଲି ମାନି ନିଆଯାଇଥିବା ବକ୍ତବ୍ୟକୁ ସ୍ୱୀକାର୍ଯ୍ୟ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ମିଶରୀୟମାନେ କେଉଁ ନିର୍ମାଣରେ ଜ୍ୟାମିତି ପ୍ରୟୋଗ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପିରାମିଡ୍ ନିର୍ମାଣରେ ଜ୍ୟାମିତି ପ୍ରୟୋଗ କରିଥିଲେ ।",
 
-"<span style='color:red;'>Q-2:</span> ସ୍ୱୀକାର୍ଯ୍ୟ ଗ୍ରହଣ କରିବାର କାରଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଗଣିତକୁ ଆଗକୁ ବଢ଼ାଇବା ପାଇଁ କିଛି ମୌଳିକ ଗୁଣକୁ ପ୍ରମାଣ ବିନା ଗ୍ରହଣ କରାଯାଏ ।",
+"<span style='color:red;'>Q-2:</span> ଭାରତରେ କେଉଁ ପ୍ରାଚୀନ ସ୍ଥାନରେ ଜ୍ୟାମିତିକ ଚିହ୍ନ ମିଳେ ?<br><br><span style='color:green;'>Answer:</span> ମହେନ୍‌ଜୋଦାରୋ ଓ ହରପ୍ପାରେ ଜ୍ୟାମିତିକ ଚିହ୍ନ ମିଳେ ।",
 
-"<span style='color:red;'>Q-3:</span> ସ୍ୱୀକାର୍ଯ୍ୟର ଏକ ଉଦାହରଣ ଦିଅ ।<br><br><span style='color:green;'>Answer:</span> ଦୁଇଟି ଭିନ୍ନ ବିନ୍ଦୁ ଦେଇ ଏକମାତ୍ର ସରଳରେଖା ଯାଏ, ଏହା ଏକ ସ୍ୱୀକାର୍ଯ୍ୟର ଉଦାହରଣ ।",
+"<span style='color:red;'>Q-3:</span> ହରପ୍ପାର ସଭ୍ୟତାରେ ଜ୍ୟାମିତି କେଉଁ କାର୍ଯ୍ୟରେ ପ୍ରୟୋଗ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ବାସଗୃହ, ସ୍ନାନାଗାର ଓ ରାସ୍ତା ନିର୍ମାଣ କାର୍ଯ୍ୟରେ ପ୍ରୟୋଗ ହୋଇଥିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ସ୍ୱୀକାର୍ଯ୍ୟ ଓ ସଂଜ୍ଞା ମଧ୍ୟରେ କ'ଣ ପାର୍ଥକ୍ୟ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ସଂଜ୍ଞା ଶବ୍ଦର ଅର୍ଥ ବୁଝାଏ, କିନ୍ତୁ ସ୍ୱୀକାର୍ଯ୍ୟ ପ୍ରମାଣ ବିନା ମାନି ନିଆଯାଇଥିବା ସତ୍ୟ ବକ୍ତବ୍ୟ ।"
+"<span style='color:red;'>Q-4:</span> ପିରାମିଡ୍ ଓ ହରପ୍ପା ଉଦାହରଣ ଆମକୁ କ'ଣ ଦର୍ଶାଏ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରାଚୀନ ଲୋକମାନେ ଜ୍ୟାମିତି ଜ୍ଞାନରେ ପାରଙ୍ଗମ ଥିଲେ ବୋଲି ଦର୍ଶାଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-5: ସ୍ୱୀକାର୍ଯ୍ୟ-1 : ରେଖା ଉପରେ ଥିବା ବିନ୍ଦୁ :-",
+heading: "NOTE-5: ପରବର୍ତ୍ତୀ କାଳର ଭାରତୀୟ ଗଣିତଜ୍ଞ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ପ୍ରଥମ ସ୍ୱୀକାର୍ଯ୍ୟ ଅନୁସାରେ, ଏକ ରେଖା ଉପରେ ଅସଂଖ୍ୟ ବିନ୍ଦୁ ଥାଏ । ଯଦି P ବିନ୍ଦୁ L ରେଖା ଉପରେ ଥାଏ, ତାହାହେଲେ ଆମେ ଏହାକୁ P∈L ଲେଖି ପାରିବା । ଏହାର ଅର୍ଥ 'L ରେଖା P ବିନ୍ଦୁ ଦେଇ ଯାଏ' କିମ୍ବା 'L ରେଖା P ବିନ୍ଦୁକୁ ଧାରଣ କରେ' ।<br><br>👉 ଉଦାହରଣ: ଯଦି କୌଣସି ରେଖା L ଉପରେ ଏକ ବିନ୍ଦୁ P ଅଛି, ତାହାହେଲେ ଆମେ କହିପାରିବା ଯେ 'L ରେଖା P ବିନ୍ଦୁ ଦେଇ ଯାଉଛି' । ଏହାର ଅର୍ଥ ଆଉ କିଛି ଅଧିକ ଗଭୀର ଭାବରେ ବିଚାର କରାଯାଏ ନାହିଁ ।",
+text:"👉 ଧାରଣା: ପରବର୍ତ୍ତୀ କାଳରେ ଭାସ୍କର, ଆର୍ଯ୍ୟଭଟ, ବ୍ରହ୍ମଗୁପ୍ତ ଓ ମହାବୀର ଆଦି ମହାନ ଭାରତୀୟ ଗଣିତଜ୍ଞ ଜ୍ୟାମିତି ଶାଖାର ଉନ୍ନତି ପାଇଁ ମହତ୍ତ୍ୱପୂର୍ଣ୍ଣ ଅବଦାନ ଦେଇଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ଆର୍ଯ୍ୟଭଟ ଓ ବ୍ରହ୍ମଗୁପ୍ତଙ୍କ ପରି ଗଣିତଜ୍ଞମାନେ ନିଜ ଗ୍ରନ୍ଥରେ ବିଭିନ୍ନ ଜ୍ୟାମିତିକ ସୂତ୍ର ଓ ନିୟମ ଉଲ୍ଲେଖ କରି ଭାରତୀୟ ଜ୍ୟାମିତିକୁ ସମୃଦ୍ଧ କରିଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> P∈L ଲେଖିଲେ କ'ଣ ବୁଝାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏହା ବୁଝାଏ ଯେ P ବିନ୍ଦୁ L ରେଖା ଉପରେ ଅଛି ।",
+"<span style='color:red;'>Q-1:</span> ଜ୍ୟାମିତି ଉନ୍ନତି ପାଇଁ ଅବଦାନ ଦେଇଥିବା ଚାରିଜଣ ଭାରତୀୟ ଗଣିତଜ୍ଞଙ୍କ ନାମ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଭାସ୍କର, ଆର୍ଯ୍ୟଭଟ, ବ୍ରହ୍ମଗୁପ୍ତ ଓ ମହାବୀର ।",
 
-"<span style='color:red;'>Q-2:</span> 'ରେଖା ବିନ୍ଦୁ ଦେଇ ଯାଏ' ବୋଲି କେବେ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଯେତେବେଳେ ସେହି ବିନ୍ଦୁ ସେହି ରେଖା ଉପରେ ଅବସ୍ଥିତ ଥାଏ, ସେତେବେଳେ ଏହା କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-2:</span> ଏହି ଗଣିତଜ୍ଞମାନେ ଜ୍ୟାମିତି ପାଇଁ କ'ଣ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଜ୍ୟାମିତି ଶାଖାର ଉନ୍ନତି ପାଇଁ ମହତ୍ତ୍ୱପୂର୍ଣ୍ଣ ଅବଦାନ ଦେଇଥିଲେ ।",
 
-"<span style='color:red;'>Q-3:</span> ଏକ ରେଖା ଉପରେ କେତେ ବିନ୍ଦୁ ରହିପାରେ ?<br><br><span style='color:green;'>Answer:</span> ଏକ ରେଖା ଉପରେ ଅସଂଖ୍ୟ ବିନ୍ଦୁ ରହିପାରେ ।",
+"<span style='color:red;'>Q-3:</span> ଏହି ଗଣିତଜ୍ଞମାନେ ନିଜ ଗ୍ରନ୍ଥରେ କ'ଣ ଉଲ୍ଲେଖ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ବିଭିନ୍ନ ଜ୍ୟାମିତିକ ସୂତ୍ର ଓ ନିୟମ ଉଲ୍ଲେଖ କରିଥିଲେ ।",
 
-"<span style='color:red;'>Q-4:</span> P,L ର ସମ୍ପର୍କକୁ କ'ଣ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏହାକୁ ରେଖା ଓ ବିନ୍ଦୁର ଉପଯୋଗ ସମ୍ପର୍କ (incidence relation) କୁହାଯାଏ ।"
+"<span style='color:red;'>Q-4:</span> ଏହି ଗଣିତଜ୍ଞମାନଙ୍କ ଅବଦାନ ଫଳରେ କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଭାରତୀୟ ଜ୍ୟାମିତି ସମୃଦ୍ଧ ହେଲା ।"
 
 ]
 },
 
 {
-heading: "NOTE-6: ସ୍ୱୀକାର୍ଯ୍ୟ-2 : ଦୁଇ ବିନ୍ଦୁ ଦେଇ ଏକମାତ୍ର ରେଖା :-",
+heading: "NOTE-6: ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନଙ୍କ ଭୂମିକା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଦ୍ୱିତୀୟ ସ୍ୱୀକାର୍ଯ୍ୟ ଅନୁସାରେ, ଦୁଇଟି ଭିନ୍ନ ବିନ୍ଦୁ ମଧ୍ୟଦେଇ ସର୍ବଦା ଗୋଟିଏ ଓ କେବଳ ଗୋଟିଏ ସରଳରେଖା ଯାଏ । ଯଦି P ଓ Q ଦୁଇଟି ଭିନ୍ନ ବିନ୍ଦୁ L ରେଖା ଉପରେ ଅଛନ୍ତି, ତାହାହେଲେ ସେହି ରେଖାକୁ ରେଖା PQ କୁହାଯାଏ ।<br><br>👉 ଉଦାହରଣ: ଯଦି PQ ରେଖା ଉପରେ R ନାମକ ଆଉ ଏକ ବିନ୍ଦୁ ଥାଏ, ତାହାହେଲେ PR, RP, RQ, QR, PQ ଓ QP - ଏହି ସବୁ ନାମ ଏକା ରେଖାକୁ ହିଁ ବୁଝାଏ ।",
+text:"👉 ଧାରଣା: ଥେଲ୍ସ, ପିଥାଗୋରସ୍, ସକ୍ରେଟିସ୍, ପ୍ଲାଟୋ ଓ ଆରିଷ୍ଟଟଲ ଆଦି ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଯୁକ୍ତି ଓ ଦର୍ଶନ ପ୍ରୟୋଗ କରି ଜ୍ୟାମିତିକୁ ନୂତନ ଉଦ୍ଭାବନ କରିବାର ପ୍ରୟାସ ଆରମ୍ଭ କରିଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ପୂର୍ବେ ଜ୍ୟାମିତି କେବଳ ପରୀକ୍ଷାମୂଳକ ଭାବରେ ବ୍ୟବହୃତ ହେଉଥିଲା, କିନ୍ତୁ ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଏହାକୁ ଯୁକ୍ତିଯୁକ୍ତ ପ୍ରମାଣ ଉପରେ ଆଧାରିତ କରିବାର ପ୍ରୟାସ କଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଦ୍ୱିତୀୟ ସ୍ୱୀକାର୍ଯ୍ୟ କ'ଣ କୁହେ ?<br><br><span style='color:green;'>Answer:</span> ଦୁଇଟି ଭିନ୍ନ ବିନ୍ଦୁ ଦେଇ ସର୍ବଦା ଗୋଟିଏ ଓ କେବଳ ଗୋଟିଏ ସରଳରେଖା ଯାଏ ବୋଲି କୁହେ ।",
+"<span style='color:red;'>Q-1:</span> କେଉଁ ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଜ୍ୟାମିତିକୁ ନୂତନ ଉଦ୍ଭାବନ କରିବାର ପ୍ରୟାସ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଥେଲ୍ସ, ପିଥାଗୋରସ୍, ସକ୍ରେଟିସ୍, ପ୍ଲାଟୋ ଓ ଆରିଷ୍ଟଟଲ ।",
 
-"<span style='color:red;'>Q-2:</span> ଦୁଇଟି ବିନ୍ଦୁ P ଓ Q ଦେଇ ଯାଉଥିବା ରେଖାକୁ କ'ଣ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏହାକୁ ରେଖା PQ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-2:</span> ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଜ୍ୟାମିତିରେ କ'ଣ ପ୍ରୟୋଗ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଯୁକ୍ତି ଓ ଦର୍ଶନ ପ୍ରୟୋଗ କରିଥିଲେ ।",
 
-"<span style='color:red;'>Q-3:</span> ଯଦି PQ ରେଖା ଉପରେ R ବିନ୍ଦୁ ଥାଏ, ତାହାହେଲେ ସେହି ରେଖାର ଅନ୍ୟ ନାମଗୁଡ଼ିକ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> PR, RP, RQ, QR, PQ ଓ QP ଏହି ସବୁ ସେହି ରେଖାର ଅନ୍ୟ ନାମ ।",
+"<span style='color:red;'>Q-3:</span> ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନଙ୍କ ପୂର୍ବରୁ ଜ୍ୟାମିତି କେମିତି ବ୍ୟବହୃତ ହେଉଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ପୂର୍ବେ ଜ୍ୟାମିତି କେବଳ ପରୀକ୍ଷାମୂଳକ ଭାବରେ ବ୍ୟବହୃତ ହେଉଥିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ଏକ ରେଖାର ନାମ କେତେ ପ୍ରକାରେ ଲେଖାଯାଇପାରେ ?<br><br><span style='color:green;'>Answer:</span> ରେଖା ଉପରେ ଥିବା ଯେକୌଣସି ଦୁଇ ବିନ୍ଦୁର କ୍ରମ ଅନୁସାରେ ରେଖାର ନାମ ଲେଖାଯାଇପାରେ ।"
+"<span style='color:red;'>Q-4:</span> ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଜ୍ୟାମିତିକୁ କେଉଁ ଆଧାରରେ ପ୍ରତିଷ୍ଠିତ କରିବାକୁ ଚେଷ୍ଟା କଲେ ?<br><br><span style='color:green;'>Answer:</span> ଯୁକ୍ତିଯୁକ୍ତ ପ୍ରମାଣ ଉପରେ ଆଧାରିତ କରିବାକୁ ଚେଷ୍ଟା କଲେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-7: ଏକରେଖୀୟ ଓ ନୈକରେଖୀୟ ବିନ୍ଦୁ :-",
+heading: "NOTE-7: ଇଉକ୍ଲିଡ୍ - ଜ୍ୟାମିତିର ଜନକ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଯଦି ତିନି ବା ତିନିରୁ ଅଧିକ ବିନ୍ଦୁ ଏକ ରେଖା ଉପରେ ଅବସ୍ଥିତ ଥାନ୍ତି, ତାହାହେଲେ ସେମାନଙ୍କୁ ଏକରେଖୀୟ ବିନ୍ଦୁ କୁହାଯାଏ । ଆଉ ଯଦି ବିନ୍ଦୁଗୁଡ଼ିକ ଏକ ରେଖା ଉପରେ ନ ଥାନ୍ତି, ତାହାହେଲେ ସେମାନଙ୍କୁ ନୈକରେଖୀୟ ବିନ୍ଦୁ କୁହାଯାଏ ।<br><br>👉 ଉଦାହରଣ: ଯଦି A, B, C ତିନୋଟି ବିନ୍ଦୁ ଗୋଟିଏ ସିଧା ରେଖା ଉପରେ ଅଛନ୍ତି, ତାହାହେଲେ ଏମାନେ ଏକରେଖୀୟ ବିନ୍ଦୁ । ମାତ୍ର ଯଦି ତିନୋଟି ବିନ୍ଦୁ ମିଶି ଏକ ତ୍ରିଭୁଜ ତିଆରି କରନ୍ତି, ତାହାହେଲେ ସେମାନେ ନୈକରେଖୀୟ ବିନ୍ଦୁ ।",
+text:"👉 ଧାରଣା: ଇଉକ୍ଲିଡ୍‌ଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ' କୁହାଯାଏ । ତାଙ୍କ ନାମାନୁସାରେ ଜ୍ୟାମିତିର ନାମ 'ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି' (Euclidean Geometry) ପ୍ରଚଳିତ ହୋଇଛି । ଇଉକ୍ଲିଡ୍‌ଙ୍କ ପ୍ରସିଦ୍ଧ ଗ୍ରନ୍ଥ 'Elements' ତେର ଅଧ୍ୟାୟରେ ବିଭକ୍ତ ଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଇଉକ୍ଲିଡ୍‌ 'Elements' ଗ୍ରନ୍ଥରେ କେତେକ ପରାଖା (Postulate) ଉପାୟରେ ଅନ୍ୟ ସମସ୍ତ ସିଦ୍ଧାନ୍ତକୁ ଯୁକ୍ତି ଦ୍ୱାରା ପ୍ରତିପାଦନ କରିବାର ପ୍ରଥମ ପ୍ରୟାସ କରିଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଏକରେଖୀୟ ବିନ୍ଦୁ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏକ ରେଖା ଉପରେ ଥିବା ତିନି ବା ଅଧିକ ବିନ୍ଦୁକୁ ଏକରେଖୀୟ ବିନ୍ଦୁ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> 'ଜ୍ୟାମିତିର ଜନକ' କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଇଉକ୍ଲିଡ୍‌ଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ' କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ନୈକରେଖୀୟ ବିନ୍ଦୁ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏକ ରେଖା ଉପରେ ନ ଥିବା ବିନ୍ଦୁଗୁଡ଼ିକୁ ନୈକରେଖୀୟ ବିନ୍ଦୁ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-2:</span> ଇଉକ୍ଲିଡ୍‌ଙ୍କ ନାମାନୁସାରେ ଜ୍ୟାମିତିର କେଉଁ ନାମ ପ୍ରଚଳିତ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> 'ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି' ନାମ ପ୍ରଚଳିତ ହେଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ତିନୋଟି ବିନ୍ଦୁ ମିଶି ତ୍ରିଭୁଜ ତିଆରି କଲେ ସେମାନେ କେଉଁ ପ୍ରକାର ବିନ୍ଦୁ ହୁଅନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ନୈକରେଖୀୟ ବିନ୍ଦୁ ହୁଅନ୍ତି ।",
+"<span style='color:red;'>Q-3:</span> ଇଉକ୍ଲିଡ୍‌ଙ୍କ ପ୍ରସିଦ୍ଧ ଗ୍ରନ୍ଥର ନାମ ଓ ଅଧ୍ୟାୟ ସଂଖ୍ୟା କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଗ୍ରନ୍ଥର ନାମ 'Elements' ଓ ଏହା ତେର ଅଧ୍ୟାୟରେ ବିଭକ୍ତ ଥିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ଦ୍ୱିତୀୟ ସ୍ୱୀକାର୍ଯ୍ୟ ସହିତ ଏକରେଖୀୟ ବିନ୍ଦୁର କ'ଣ ସମ୍ପର୍କ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ଦ୍ୱିତୀୟ ସ୍ୱୀକାର୍ଯ୍ୟ ଅନୁସାରେ ଏକ ବିନ୍ଦୁ ଅନେକ ରେଖା ଉପରେ ରହିପାରେ, ଯାହା ଏକରେଖୀୟତା ବୁଝିବାରେ ସାହାଯ୍ୟ କରେ ।"
+"<span style='color:red;'>Q-4:</span> ଇଉକ୍ଲିଡ୍‌ 'Elements' ଗ୍ରନ୍ଥରେ କେଉଁ ପ୍ରୟାସ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପରାଖା ଉପାୟରେ ସିଦ୍ଧାନ୍ତକୁ ଯୁକ୍ତି ଦ୍ୱାରା ପ୍ରତିପାଦନ କରିବାର ପ୍ରଥମ ପ୍ରୟାସ କରିଥିଲେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-8: ଦୁଇଟି ସେଟ୍‌ର ଛେଦ (Intersection) :-",
+heading: "NOTE-8: ବର୍ଟ୍ରାଣ୍ଡ ରସେଲ୍‌ଙ୍କ ମତ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଦୁଇଟି ସେଟ୍ A ଓ B ର ଛେଦ (A∩B) ହେଉଛି ସେହି ସେଟ୍ ଯେଉଁଥିରେ A ଓ B ଉଭୟଙ୍କରେ ଥିବା ସାଧାରଣ ଉପାଦାନ ରହିଥାଏ । ଏଥିରେ ଦୁଇଟି ସମ୍ଭାବନା ଥାଏ - ସେମାନଙ୍କର କୌଣସି ସାଧାରଣ ଉପାଦାନ ନ ଥାଇପାରେ, କିମ୍ବା ଗୋଟିଏ ବା ଅନେକ ସାଧାରଣ ଉପାଦାନ ଥାଇପାରେ ।<br><br>👉 ଉଦାହରଣ: ଯଦି A = {1,2,3} ଏବଂ B = {3,4,5}, ତାହାହେଲେ A∩B = {3}, କାରଣ 3 ଉଭୟ ସେଟ୍‌ରେ ଅଛି । ଯଦି A ଓ B ର କୌଣସି ଉପାଦାନ ସମାନ ନ ଥାଏ, ତାହାହେଲେ A∩B = φ (ଖାଲି ସେଟ୍) ।",
+text:"👉 ଧାରଣା: ବିଖ୍ୟାତ ଦାର୍ଶନିକ ଓ ଗଣିତଜ୍ଞ ବର୍ଟ୍ରାଣ୍ଡ ରସେଲ୍ ତାଙ୍କର 'Mathematics and Metaphysics' ପୁସ୍ତକରେ ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଜ୍ୟାମିତି ସମ୍ପର୍କରେ କେତେକ ଯୁକ୍ତି ଓ ଅସଙ୍ଗତି ବିଷୟରେ ମତ ପ୍ରକାଶ କରିଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ରସେଲ୍‌ଙ୍କ ମତ ପରେ ଅନ୍ୟ ଗଣିତଜ୍ଞମାନେ ମଧ୍ୟ ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଜ୍ୟାମିତିକୁ ତ୍ରୁଟିମୁକ୍ତ କରି ଏକ ଦୃଢ଼ ଭିତ୍ତିରେ ପ୍ରତିଷ୍ଠିତ କରିବାର ଚେଷ୍ଟା ଆରମ୍ଭ କରିଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଦୁଇଟି ସେଟ୍‌ର ଛେଦ କ'ଣ ବୁଝାଏ ?<br><br><span style='color:green;'>Answer:</span> ଦୁଇଟି ସେଟ୍‌ରେ ଥିବା ସାଧାରଣ ଉପାଦାନଗୁଡ଼ିକର ସେଟ୍‌କୁ ଛେଦ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> କେଉଁ ବିଖ୍ୟାତ ଦାର୍ଶନିକ ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଜ୍ୟାମିତି ସମ୍ପର୍କରେ ମତ ପ୍ରକାଶ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ବର୍ଟ୍ରାଣ୍ଡ ରସେଲ୍ ମତ ପ୍ରକାଶ କରିଥିଲେ ।",
 
-"<span style='color:red;'>Q-2:</span> A∩B = φ ହେଲେ କ'ଣ ବୁଝାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏହା ବୁଝାଏ ଯେ A ଓ B ର କୌଣସି ସାଧାରଣ ଉପାଦାନ ନାହିଁ ।",
+"<span style='color:red;'>Q-2:</span> ରସେଲ୍‌ଙ୍କ ପୁସ୍ତକର ନାମ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ପୁସ୍ତକର ନାମ 'Mathematics and Metaphysics' ।",
 
-"<span style='color:red;'>Q-3:</span> A∩B ≠ φ ହେଲେ କ'ଣ ବୁଝାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏହା ବୁଝାଏ ଯେ A ଓ B ର ଗୋଟିଏ ବା ଅଧିକ ସାଧାରଣ ଉପାଦାନ ଅଛି ।",
+"<span style='color:red;'>Q-3:</span> ରସେଲ୍ ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଜ୍ୟାମିତି ସମ୍ପର୍କରେ କ'ଣ ମତ ଦେଇଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଏଥିରେ କେତେକ ଯୁକ୍ତି ଓ ଅସଙ୍ଗତି ଥିବା ମତ ଦେଇଥିଲେ ।",
 
-"<span style='color:red;'>Q-4:</span> A = {1,2,3} ଏବଂ B = {3,4,5} ହେଲେ A∩B କ'ଣ ହେବ ?<br><br><span style='color:green;'>Answer:</span> A∩B = {3} ହେବ ।"
+"<span style='color:red;'>Q-4:</span> ରସେଲ୍‌ଙ୍କ ମତ ପରେ ଗଣିତଜ୍ଞମାନେ କ'ଣ ଚେଷ୍ଟା କଲେ ?<br><br><span style='color:green;'>Answer:</span> ଜ୍ୟାମିତିକୁ ତ୍ରୁଟିମୁକ୍ତ କରି ଏକ ଦୃଢ଼ ଭିତ୍ତିରେ ପ୍ରତିଷ୍ଠିତ କରିବାର ଚେଷ୍ଟା କଲେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-9: ଦୁଇଟି ସରଳରେଖାର ଛେଦ :-",
+heading: "NOTE-9: ବିରକ୍‌ହଫ୍ ଓ ହିଲବର୍ଟଙ୍କ ଅବଦାନ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଦୁଇଟି ଭିନ୍ନ ରେଖା L1 ଓ L2 ଙ୍କ କ୍ଷେତ୍ରରେ ଦୁଇଟି ସମ୍ଭାବନା ଥାଏ । ଯଦି L1∩L2 = φ, ତାହାହେଲେ ଏହି ଦୁଇ ରେଖାର କୌଣସି ସାଧାରଣ ବିନ୍ଦୁ ନାହିଁ, ଏମାନଙ୍କୁ ଅଛେଦୀ ରେଖା କୁହାଯାଏ । ଆଉ ଯଦି L1∩L2 ≠ φ, ତାହାହେଲେ ରେଖା ଦୁଇଟିର ସାଧାରଣ ବିନ୍ଦୁ ଅଛି ।<br><br>👉 ଉଦାହରଣ: ଦୁଇଟି ସମାନ୍ତରାଳ ରେଖା କେବେ ମିଳନ୍ତି ନାହିଁ, ତେଣୁ ସେମାନେ ଅଛେଦୀ ରେଖା । କିନ୍ତୁ ଦୁଇଟି ରେଖା ଯଦି ଗୋଟିଏ ସ୍ଥାନରେ ମିଶନ୍ତି, ତାହାହେଲେ ସେମାନଙ୍କର ଏକ ସାଧାରଣ ବିନ୍ଦୁ ଥାଏ ।",
+text:"👉 ଧାରଣା: ଆଧୁନିକ ଗଣିତଜ୍ଞ ଜର୍ଜ ଡେଭିଡ୍ ବିରକ୍‌ହଫ୍ ଓ ଡେଭିଡ୍ ହିଲବର୍ଟ ଜ୍ୟାମିତିକୁ ତ୍ରୁଟିମୁକ୍ତ କରି ବିଦ୍ୟାଳୟ ସ୍ତର ପାଠ୍ୟକ୍ରମ ପାଇଁ ଉପଯୁକ୍ତ କରିବାରେ ପ୍ରୟାସ କରିଥିଲେ । ବିରକ୍‌ହଫ୍‌ଙ୍କ ଦ୍ୱାରା ପ୍ରସ୍ତାବିତ 'A set of postulates for plane geometry based on scale and protractor' ୧୯୩୨ ମସିହାରେ ପ୍ରକାଶିତ ହୋଇଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଏହି ପ୍ରୟାସ ଫଳରେ ଜ୍ୟାମିତି ଅଧ୍ୟୟନ ପାଇଁ ଅଧିକ ସରଳ ଓ ବ୍ୟବହାରିକ ପଦ୍ଧତି ମିଳିଲା, ଯାହା ଆଜି ମଧ୍ୟ ବିଦ୍ୟାଳୟରେ ପଢ଼ାଯାଏ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଅଛେଦୀ ରେଖା କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ଦୁଇଟି ରେଖାର କୌଣସି ସାଧାରଣ ବିନ୍ଦୁ ନାହିଁ, ସେମାନଙ୍କୁ ଅଛେଦୀ ରେଖା କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଆଧୁନିକ ଜ୍ୟାମିତିକୁ ତ୍ରୁଟିମୁକ୍ତ କରିବାରେ କେଉଁ ଦୁଇଜଣ ଗଣିତଜ୍ଞ ଅବଦାନ ଦେଇଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଜର୍ଜ ଡେଭିଡ୍ ବିରକ୍‌ହଫ୍ ଓ ଡେଭିଡ୍ ହିଲବର୍ଟ ଅବଦାନ ଦେଇଥିଲେ ।",
 
-"<span style='color:red;'>Q-2:</span> L1∩L2 ≠ φ ହେଲେ ରେଖା ଦୁଇଟି ମଧ୍ୟରେ କ'ଣ ଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ରେଖା ଦୁଇଟିର ଗୋଟିଏ ସାଧାରଣ ବିନ୍ଦୁ ବା ଛେଦବିନ୍ଦୁ ଥାଏ ।",
+"<span style='color:red;'>Q-2:</span> ବିରକ୍‌ହଫ୍‌ଙ୍କ ପ୍ରସ୍ତାବିତ ପୁସ୍ତକ କେଉଁ ମସିହାରେ ପ୍ରକାଶିତ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ୧୯୩୨ ମସିହାରେ ପ୍ରକାଶିତ ହୋଇଥିଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ଦୁଇଟି ସମାନ୍ତରାଳ ରେଖା କେଉଁ ପ୍ରକାର ରେଖା ଅଟନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ଦୁଇଟି ସମାନ୍ତରାଳ ରେଖା ଅଛେଦୀ ରେଖା ଅଟନ୍ତି ।",
+"<span style='color:red;'>Q-3:</span> ବିରକ୍‌ହଫ୍‌ଙ୍କ ପରାଖା ପଦ୍ଧତି କେଉଁ ଦୁଇଟି ଉପକରଣ ଉପରେ ଆଧାରିତ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> Scale ଓ Protractor ଉପରେ ଆଧାରିତ ଥିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ଦୁଇଟି ରେଖା ମିଶିଲେ ସେମାନଙ୍କର କେତେ ସାଧାରଣ ବିନ୍ଦୁ ରହିପାରେ ବୋଲି କ'ଣ ପ୍ରଶ୍ନ ଉଠେ ?<br><br><span style='color:green;'>Answer:</span> ଦୁଇଟି ରେଖା ମିଶିଲେ ସେମାନଙ୍କର ଗୋଟିଏରୁ ଅଧିକ ସାଧାରଣ ବିନ୍ଦୁ ରହିପାରେ କି ନାହିଁ, ସେ ପ୍ରଶ୍ନ ଉଠେ ।"
+"<span style='color:red;'>Q-4:</span> ବିରକ୍‌ହଫ୍ ଓ ହିଲବର୍ଟଙ୍କ ପ୍ରୟାସ ଫଳରେ କ'ଣ ମିଳିଲା ?<br><br><span style='color:green;'>Answer:</span> ଜ୍ୟାମିତି ଅଧ୍ୟୟନ ପାଇଁ ଅଧିକ ସରଳ ଓ ବ୍ୟବହାରିକ ପଦ୍ଧତି ମିଳିଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-10: ଆଧୁନିକ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଆଧୁନିକ ଜ୍ୟାମିତିର ଉଭୟ ତାତ୍ତ୍ୱିକ ଓ ପ୍ରୟୋଗାତ୍ମକ ଦୃଷ୍ଟିରୁ ବହୁତ ମହତ୍ତ୍ୱ ଅଛି । ଏହା ବିଜ୍ଞାନ, ପ୍ରଯୁକ୍ତିବିଦ୍ୟା ଓ ଆଧୁନିକ ଶାସ୍ତ୍ର ନିର୍ମାଣ ଆଦିରେ ବ୍ୟବହୃତ ହୋଇଥାଏ । ମାଧ୍ୟମିକ ବିଦ୍ୟାଳୟ ସ୍ତରରେ ମୁଖ୍ୟତଃ ଇଉକ୍ଲିଡ଼ୀୟ ବା ସମତଳ ଜ୍ୟାମିତି ପଢ଼ାଯାଇଥାଏ ।<br><br>👉 ଉଦାହରଣ: ଆଜିକାଲି ଜ୍ୟାମିତିକୁ 'ସେଟ୍' (Set) ମାଧ୍ୟମରେ ପ୍ରକାଶ କରାଯାଏ, ଯାହା ଏହାର ପାଠ୍ୟକ୍ରମକୁ ଅଧିକ ସ୍ପଷ୍ଟ ଓ ବିଜ୍ଞାନସମ୍ମତ କରିଥାଏ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଆଧୁନିକ ଜ୍ୟାମିତି କେଉଁ କେଉଁ କ୍ଷେତ୍ରରେ ବ୍ୟବହୃତ ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ବିଜ୍ଞାନ, ପ୍ରଯୁକ୍ତିବିଦ୍ୟା ଓ ଆଧୁନିକ ଶାସ୍ତ୍ର ନିର୍ମାଣରେ ବ୍ୟବହୃତ ହୋଇଥାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> ମାଧ୍ୟମିକ ବିଦ୍ୟାଳୟ ସ୍ତରରେ ମୁଖ୍ୟତଃ କେଉଁ ଜ୍ୟାମିତି ପଢ଼ାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଇଉକ୍ଲିଡ଼ୀୟ ବା ସମତଳ ଜ୍ୟାମିତି ପଢ଼ାଯାଏ ।",
+
+"<span style='color:red;'>Q-3:</span> ଆଜିକାଲି ଜ୍ୟାମିତିକୁ କେଉଁ ଗାଣିତିକ ମାଧ୍ୟମରେ ପ୍ରକାଶ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବେଦ (Set) ମାଧ୍ୟମରେ ପ୍ରକାଶ କରାଯାଏ ।",
+
+"<span style='color:red;'>Q-4:</span> 'ବେଦ' ମାଧ୍ୟମରେ ପ୍ରକାଶ କରିବା ଫଳରେ ଜ୍ୟାମିତିର କ'ଣ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଜ୍ୟାମିତି ପାଠ୍ୟକ୍ରମ ଅଧିକ ସ୍ପଷ୍ଟ ଓ ବିଜ୍ଞାନସମ୍ମତ ହୁଏ ।"
 
 ]
 }
@@ -410,15 +395,13 @@ const courseData = {
   `, 
     audio: "",
 mermaid: [
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ପଦ, ସଂଜ୍ଞା<br/>ଓ ମୌଳିକ ପଦ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପଠନ\"]\nA --> I1[\"ପ୍ରତ୍ୟେକ ପାଠରେ କେତେକ ବିଶେଷ<br/>ଶବ୍ଦ ନିର୍ଦ୍ଦିଷ୍ଟ ଅର୍ଥରେ ବ୍ୟବହୃତ ହୁଏ।\"]\nA --> I2[\"ଏହି ଶବ୍ଦଗୁଡ଼ିକୁ<br/>'ପଦ' (term) କୁହାଯାଏ।\"]\nA --> I3[\"ପାଠ୍ୟପୁସ୍ତକରେ ପଦର ଅର୍ଥ ପୂର୍ବରୁ<br/>ନିର୍ଦ୍ଧାରିତ ଅର୍ଥ ଦ୍ୱାରା ବୁଝାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପଦର ପ୍ରକାର\"]\nM --> M1[\"ପଦ ଦୁଇ ପ୍ରକାର - ସଂଜ୍ଞାବିହୀନ<br/>ପଦ ଓ ସଂଜ୍ଞାକୃତ ପଦ।\"]\nM --> M2[\"ସଂଜ୍ଞାକୃତ ପଦର ଅର୍ଥ<br/>'ସଂଜ୍ଞା' ଦ୍ୱାରା ନିରୂପିତ ହୁଏ।\"]\nM --> M3[\"ପ୍ରତ୍ୟେକ ସଂଜ୍ଞା ପାଇଁ ପୂର୍ବ<br/>ନିରୂପିତ ପଦ ଆବଶ୍ୟକ।\"]\nM --> M4[\"ଅସୀମିତ ପଛୁଆ ଯାତ୍ରା ରୋକିବାକୁ<br/>କିଛି ପଦ ସଂଜ୍ଞା ବିନା ଗ୍ରହଣ କରାଯାଏ।\"]\nM --> M5[\"ଏହାକୁ 'ଅନାପରିଭାଷିତ ପଦ' କିମ୍ବା<br/>'ମୌଳିକ ପଦ' କୁହାଯାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମୌଳିକ ପଦର ଉଦାହରଣ\"]\nC --> C1[\"ଜ୍ୟାମିତିରେ ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ<br/>- ଏହି ତିନୋଟି ମୌଳିକ ପଦ।\"]\nC --> C2[\"ପୂର୍ବ ଶ୍ରେଣୀରେ ଏମାନଙ୍କ ପରିଚୟ<br/>ଉଦାହରଣ ମାଧ୍ୟମରେ ଦିଆଯାଇଥିଲା।\"]\nC --> C3[\"ଏମାନଙ୍କ ସହ ଜଡ଼ିତ ସ୍ୱୀକାର୍ଯ୍ୟ<br/>(Axiom) ପୁନରାଲୋଚନା କରାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ<br/>ଓ ଆକୃତି-ସଚେତନତା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଆକୃତି\"]\nA --> I1[\"ପତ୍ର, ଫୁଲ, ଫଳ<br/>ବିଭିନ୍ନ ପ୍ରକାର ଆକୃତିରେ ଥାଏ।\"]\nA --> I2[\"ଆକୃତି-ସଚେତନତା<br/>ମଣିଷର ବିଶେଷତ୍ୱ।\"]\nA --> I3[\"ଏହା ଜୀବଜନ୍ତୁଙ୍କ ମଧ୍ୟ<br/>ପ୍ରବୃତ୍ତିଗତ ଅଟେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଜ୍ୟାମିତି ଶବ୍ଦ\"]\nM --> M1[\"ଆକୃତିତତ୍ତ୍ୱ ଜ୍ଞାନର<br/>ପ୍ରଥମ ଶାଖା ଜ୍ୟାମିତି।\"]\nM --> M2[\"'ଜ୍ୟା' ଅର୍ଥ ଦୂରତ୍ୱ<br/>ଓ 'ମିତି' ଅର୍ଥ ମାପ।\"]\nM --> M3[\"Geometry ଶବ୍ଦ Geo (ଭୂଖଣ୍ଡ)<br/>ଓ Metron (ମାପ)ରୁ ସୃଷ୍ଟି।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଆବଶ୍ୟକତା\"]\nC --> C1[\"ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ<br/>ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହେଲା।\"]\nC --> C2[\"ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି<br/>ସହିତ ଜ୍ୟାମିତି ବିକଶିତ ହେଲା।\"]\nC --> C3[\"ପ୍ରାଚୀନ ସଭ୍ୟତାର ଗୃହନିର୍ମାଣ,<br/>ରାସ୍ତା ଓ ବାସଗୃହରେ ପ୍ରୟୋଗ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ସ୍ୱୀକାର୍ଯ୍ୟ ଓ ସ୍ୱୀକାର୍ଯ୍ୟ-୧:<br/>ରେଖା ଉପରେ ବିନ୍ଦୁ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପ୍ରସ୍ତାବନା\"]\nA --> I1[\"ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ<br/>ସଂଜ୍ଞାବିହୀନ ମୌଳିକ ପଦ।\"]\nA --> I2[\"ଏମାନଙ୍କ ଗୁଣ ବର୍ଣ୍ଣନା ପାଇଁ<br/>ପ୍ରାରମ୍ଭିକ ବାକ୍ୟ ଆବଶ୍ୟକ ହୁଏ।\"]\nA --> I3[\"ଏହି ବାକ୍ୟଗୁଡ଼ିକୁ ପ୍ରମାଣ ବିନା<br/>ସତ୍ୟ ବୋଲି ମାନି ନିଆଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ସ୍ୱୀକାର୍ଯ୍ୟ (Axiom)\"]\nM --> M1[\"ପ୍ରମାଣ ଆବଶ୍ୟକ ନଥିବା ଏହି ମୂଳଭିତ୍ତି<br/>ବାକ୍ୟକୁ ସ୍ୱୀକାର୍ଯ୍ୟ କୁହାଯାଏ।\"]\nM --> M2[\"ସ୍ୱୀକାର୍ଯ୍ୟ-୧: ରେଖା ବିନ୍ଦୁମାନଙ୍କର<br/>ସମାହାର ବା ସେଟ୍।\"]\nM --> M3[\"L ରେଖା P ବିନ୍ଦୁ ଦେଇ ଗଲେ,<br/>P∈L ଲେଖାଯାଏ।\"]\nM --> M4[\"'L ସବୁ P ମଧ୍ୟ ଦେଇ ଅତିକ୍ରମ କରେ'<br/>ଓ 'L, P ବିନ୍ଦୁଗାମୀ' - ଏକାର୍ଥକ।\"]\nM --> M5[\"'P, L ଉପରିସ୍ଥ ଏକ ବିନ୍ଦୁ' ମଧ୍ୟ<br/>P∈L ର ସମାର୍ଥକ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଏକ ମାତ୍ର ଅର୍ଥ ପ୍ରକାଶ କରୁଥିବା<br/>ବାକ୍ୟ ନୂଆ ଅର୍ଥ ସୃଷ୍ଟି କରନ୍ତି ନାହିଁ।\"]\nC --> C2[\"ରେଖା ମଧ୍ୟରେ ଅସଂଖ୍ୟ<br/>ବିନ୍ଦୁ ରହିପାରେ।\"]\nC --> C3[\"ପରବର୍ତ୍ତୀ ସ୍ୱୀକାର୍ଯ୍ୟଗୁଡ଼ିକ ମଧ୍ୟ<br/>ଏହି ପଦ୍ଧତିରେ ପୁନରାଲୋଚନା କରାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ପ୍ରାଚୀନ ସଭ୍ୟତାରେ<br/>ଜ୍ୟାମିତିର ପ୍ରୟୋଗ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପ୍ରାଥମିକ ଅବସ୍ଥା\"]\nA --> I1[\"ପ୍ରାଥମିକ ଅବସ୍ଥାରେ ଜ୍ୟାମିତି<br/>ପରୀକ୍ଷାମୂଳକ ଉପାୟରେ ବିକଶିତ।\"]\nA --> I2[\"ପରାଖା ଓ ପର୍ଯ୍ୟବେକ୍ଷଣ<br/>ଆଧାରରେ ପଦ୍ଧତି ପ୍ରୟୋଗ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପ୍ରାଚୀନ ଉଦାହରଣ\"]\nM --> M1[\"ବୈଦିକ ଯୁଗରେ ଯଜ୍ଞ ବେଦି<br/>ନିର୍ମାଣରେ 'ଶୁଳ୍ବ ସୂତ୍ର' ପ୍ରୟୋଗ।\"]\nM --> M2[\"ଶୁଳ୍ବ ସୂତ୍ର ୮୦୦ ରୁ ୫୦୦<br/>ଖ୍ରୀଷ୍ଟପୂର୍ବ ମଧ୍ୟରେ ରଚିତ।\"]\nM --> M3[\"ମିଶରୀୟମାନେ ପିରାମିଡ୍<br/>ନିର୍ମାଣରେ ଜ୍ୟାମିତି ପ୍ରୟୋଗ କଲେ।\"]\nM --> M4[\"ମହେନ୍‌ଜୋଦାରୋ ଓ ହରପ୍ପାରେ<br/>ମଧ୍ୟ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ ମିଳେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ପରବର୍ତ୍ତୀ ପ୍ରୟୋଗ\"]\nC --> C1[\"ଭାୟର, ଆର୍ଯ୍ୟଭଟ, ବ୍ରହ୍ମଗୁପ୍ତ<br/>ମହାବୀର ଭାରତୀୟ ଅବଦାନକାରୀ।\"]\nC --> C2[\"ମନ୍ଦିର ନିର୍ମାଣ ଓ ନଗର<br/>ଯୋଜନାରେ ପ୍ରୟୋଗ ଚାଲିଲା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 3 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ସ୍ୱୀକାର୍ଯ୍ୟ-୨:<br/>ଦୁଇ ବିନ୍ଦୁ ଓ ଅନନ୍ୟ ରେଖା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପ୍ରସ୍ତାବନା\"]\nA --> I1[\"ଦୁଇଟି ପୃଥକ ବିନ୍ଦୁ ମଧ୍ୟ ଦେଇ<br/>କେତେଗୋଟି ରେଖା ଯାଇପାରେ?\"]\nA --> I2[\"ଏହି ପ୍ରଶ୍ନର ଉତ୍ତର ସ୍ୱୀକାର୍ଯ୍ୟ-୨<br/>ଦ୍ୱାରା ମିଳେ।\"]\nA --> I3[\"ଏହା ଜ୍ୟାମିତିର ଏକ<br/>ମୌଳିକ ସ୍ୱୀକାର୍ଯ୍ୟ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ସ୍ୱୀକାର୍ଯ୍ୟ-୨ର ବକ୍ତବ୍ୟ\"]\nM --> M1[\"ଦୁଇଟି ପୃଥକ ବିନ୍ଦୁ ମଧ୍ୟ ଦେଇ<br/>ଗୋଟିଏ ଓ କେବଳ ଗୋଟିଏ ରେଖା।\"]\nM --> M2[\"P ଓ Q ଯଦି L ରେଖାରେ ଥାଆନ୍ତି,<br/>L କୁ PQ ରେଖା କୁହାଯାଏ।\"]\nM --> M3[\"PQ ରେଖାକୁ ତୀରଚିହ୍ନ ସହିତ<br/>(↔PQ) ପ୍ରତୀକରେ ଦର୍ଶାଯାଏ।\"]\nM --> M4[\"PQ ରେଖା ଉପରିସ୍ଥ ଯେକୌଣସି<br/>ବିନ୍ଦୁ R ମଧ୍ୟ ସେହି ରେଖାରେ ରୁହେ।\"]\nM --> M5[\"PR, RP, RQ, QR, PQ, QP -<br/>ସମସ୍ତ ନାମ ଏକ ରେଖାକୁ ବୁଝାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଏକ ରେଖାକୁ ତାହା ଉପରିସ୍ଥ ଯେକୌଣସି<br/>ଦୁଇ ବିନ୍ଦୁ ନାମରେ ଡକାଯାଇପାରେ।\"]\nC --> C2[\"ଏହି ସମସ୍ତ ନାମକୁ ରେଖାର<br/>ବିନ୍ଦୁ ନାମ କୁହାଯାଏ।\"]\nC --> C3[\"ଦୁଇ ବିନ୍ଦୁ ମଧ୍ୟ ଦେଇ ଏକାଧିକ<br/>ରେଖା ଥାଇ ପାରେ ନାହିଁ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ଗ୍ରୀକ୍ ଦାର୍ଶନିକ ଓ<br/>ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଅବଦାନ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଗ୍ରୀକ୍ ଦାର୍ଶନିକ\"]\nA --> I1[\"ଥେଲ୍ସ, ପିଥାଗୋରସ୍,<br/>ସକ୍ରେଟିସ୍, ପ୍ଲାଟୋ, ଆରିଷ୍ଟଟଲ।\"]\nA --> I2[\"ଏମାନେ ଯୁକ୍ତି ଓ ଦର୍ଶନ<br/>ପ୍ରୟୋଗ କରି ଉଦ୍ଭାବନ କଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଇଉକ୍ଲିଡ୍\"]\nM --> M1[\"ଖ୍ରୀଷ୍ଟପୂର୍ବ ଚତୁର୍ଥ ଶତାବ୍ଦୀରେ<br/>ଜନ୍ମ ଏଲେକ୍ଜାଣ୍ଡ୍ରିଆରେ।\"]\nM --> M2[\"ତାଙ୍କର ଗ୍ରନ୍ଥ 'Elements'<br/>ତେର ଅଧ୍ୟାୟରେ ବିଭକ୍ତ।\"]\nM --> M3[\"ପରାଖାମାନଙ୍କ ମଧ୍ୟରୁ<br/>ଆହରଣ ମାର୍ଗ ପ୍ରଶସ୍ତ କଲେ।\"]\nM --> M4[\"ତାଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ'<br/>ବୋଲି କୁହାଯାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି\"]\nC --> C1[\"ତାଙ୍କ ନାମାନୁସାରେ<br/>'ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି' ପ୍ରଚଳିତ।\"]\nC --> C2[\"ବର୍ଟ୍ରାଣ୍ଡ ରସେଲ୍ ଏହାର<br/>ଅସଙ୍ଗତି ବିଷୟରେ ଉଲ୍ଲେଖ କଲେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 3 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଏକରେଖୀୟ ଓ<br/>ନୈକରେଖୀୟ ବିନ୍ଦୁ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପ୍ରସ୍ତାବନା\"]\nA --> I1[\"ସ୍ୱୀକାର୍ଯ୍ୟ-୨ ଅନୁଯାୟୀ ଦୁଇଟି ପୃଥକ<br/>ବିନ୍ଦୁ ସର୍ବଦା ଏକ ରେଖା ଗଠନ କରନ୍ତି।\"]\nA --> I2[\"କିନ୍ତୁ ତିନି ବା ଅଧିକ ବିନ୍ଦୁ ସର୍ବଦା<br/>ଏକ ରେଖାରେ ନ ଥାଇ ପାରନ୍ତି।\"]\nA --> I3[\"ଏହି ଅବସ୍ଥାକୁ<br/>ପରୀକ୍ଷା କରାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ସଂଜ୍ଞା\"]\nM --> M1[\"ତିନି ବା ତତୋଧିକ ବିନ୍ଦୁ ଯଦି ଏକ<br/>ସରଳରେଖାରେ ଥାଆନ୍ତି, ସେମାନଙ୍କୁ<br/>ଏକରେଖୀୟ ବିନ୍ଦୁ କୁହାଯାଏ।\"]\nM --> M2[\"ଏକରେଖୀୟ ବିନ୍ଦୁକୁ 'ସରଳରେଖୀୟ'<br/>ବିନ୍ଦୁ ମଧ୍ୟ କୁହାଯାଏ।\"]\nM --> M3[\"ଯେଉଁ ବିନ୍ଦୁ ଏକ ସାଧାରଣ ରେଖାରେ<br/>ନାହାନ୍ତି, ସେମାନେ ନୈକରେଖୀୟ ବିନ୍ଦୁ।\"]\nM --> M4[\"ନୈକରେଖୀୟ ବିନ୍ଦୁକୁ ଅସରଳରେଖୀୟ<br/>ବିନ୍ଦୁ ମଧ୍ୟ କୁହାଯାଏ।\"]\nM --> M5[\"ଦୁଇ ବିନ୍ଦୁ ସର୍ବଦା ଏକରେଖୀୟ,<br/>କାରଣ ସେମାନେ ସର୍ବଦା ଏକ<br/>ରେଖା ଗଠନ କରନ୍ତି।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଏକରେଖୀୟତା ତିନି ବା ଅଧିକ ବିନ୍ଦୁ<br/>ପାଇଁ ଏକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଗୁଣ।\"]\nC --> C2[\"ଏହା ସ୍ୱୀକାର୍ଯ୍ୟ-୨ର<br/>ପ୍ରତ୍ୟକ୍ଷ ପରିଣାମ।\"]\nC --> C3[\"ତ୍ରିଭୁଜ, ବହୁଭୁଜ ଆଦିର ପାର୍ଶ୍ୱ<br/>ନିର୍ଣ୍ଣୟ ପାଇଁ ଏହା ଉପଯୋଗୀ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
-
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-5:<br/>ଦୁଇଟି ରେଖାର ଛେଦ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ସେଟ୍‌ ର ଛେଦ\"]\nA --> I1[\"ଦୁଇଟି ସେଟ୍‌ A ଓ B ର ଛେଦ<br/>A∩B ଦ୍ୱାରା ଦର୍ଶାଯାଏ।\"]\nA --> I2[\"A∩B ଅର୍ଥ A ଓ B ରେ ଥିବା<br/>ସାଧାରଣ ଉପାଦାନମାନଙ୍କର ସେଟ୍‌।\"]\nA --> I3[\"A∩B=∅ ହୋଇପାରେ<br/>କିମ୍ବା A∩B≠∅ ହୋଇପାରେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ରେଖାର ଛେଦ\"]\nM --> M1[\"L1 ଓ L2 ଦୁଇଟି ପୃଥକ ସରଳରେଖା<br/>ହେଲେ ମଧ୍ୟ ଦୁଇଟି ସମ୍ଭାବନା ଥାଏ।\"]\nM --> M2[\"L1∩L2=∅ ହେଲେ, କୌଣସି<br/>ସାଧାରଣ ବିନ୍ଦୁ ନାହିଁ।\"]\nM --> M3[\"ଏହି ପ୍ରକାର ରେଖାଦ୍ୱୟକୁ<br/>ଅଛେଦୀ ରେଖା କୁହାଯାଏ।\"]\nM --> M4[\"L1∩L2≠∅ ହେଲେ, ରେଖାଦ୍ୱୟର<br/>ଏକ ସାଧାରଣ ବିନ୍ଦୁ ଥାଏ, ଏହାକୁ<br/>ଛେଦବିନ୍ଦୁ କୁହାଯାଏ।\"]\nM --> M5[\"ପ୍ରଶ୍ନ - ଦୁଇଟି ରେଖାର ଏକାଧିକ<br/>ସାଧାରଣ ବିନ୍ଦୁ ରହିପାରେ କି?\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଉତ୍ତର ବ୍ୟାପାଦ୍ୟ (ବିପରୀତ ମାନି<br/>ଚର୍ଚ୍ଚା) ପଦ୍ଧତିରେ ଦିଆଯାଏ।\"]\nC --> C2[\"ଦୁଇଟି ପୃଥକ ରେଖା ଅଧିକରୁ<br/>ଅଧିକ ଗୋଟିଏ ସାଧାରଣ<br/>ବିନ୍ଦୁ ରଖିପାରନ୍ତି।\"]\nC --> C3[\"ଏହା ସ୍ୱୀକାର୍ଯ୍ୟ-୨ ସହ<br/>ସିଧାସଳଖ ଜଡ଼ିତ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଆଧୁନିକ ଜ୍ୟାମିତିର<br/>ବିକାଶ ଓ ପ୍ରୟୋଗ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ତ୍ରୁଟି ସୁଧାର\"]\nA --> I1[\"ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତିରେ<br/>କେତେକ ତ୍ରୁଟି ମିଳିଥିଲା।\"]\nA --> I2[\"ଏହାକୁ ଚୂଡ଼ାନ୍ତ ରୂପ<br/>ଦେବାର ପ୍ରୟାସ ଆରମ୍ଭ ହେଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଆଧୁନିକ ଗଣିତଜ୍ଞ\"]\nM --> M1[\"ଜର୍ଜ ଡେଭିଡ୍ ବିରକ୍‌ହଫ୍<br/>ଓ ଡେଭିଡ୍ ହିଲବର୍ଟ ଅବଦାନ ଦେଲେ।\"]\nM --> M2[\"ବିରକ୍‌ହଫ୍‌ଙ୍କ ପ୍ରସ୍ତାବ<br/>1932 ମସିହାରେ ପ୍ରକାଶିତ।\"]\nM --> M3[\"'Scale ଓ Protractor'<br/>ଆଧାରିତ ପରାଖା ପ୍ରସ୍ତୁତ କଲେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ପ୍ରୟୋଗ\"]\nC --> C1[\"ବିଜ୍ଞାନ, ପ୍ରଯୁକ୍ତି ଓ<br/>ଆଧୁନିକ ଶାସ୍ତ୍ର ନିର୍ମାଣରେ ବ୍ୟବହୃତ।\"]\nC --> C2[\"ବେଦ (Set) ମାଧ୍ୟମରେ<br/>ପ୍ରକାଶ କରାଯାଏ।\"]\nC --> C3[\"ମାଧ୍ୟମିକ ବିଦ୍ୟାଳୟ ସ୍ତରରେ<br/>ମୁଖ୍ୟତଃ ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି ପଢ଼ାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 3 stroke-width:0px;\nlinkStyle 7 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`
   ]
       
 }  
