@@ -7,117 +7,145 @@ const APP_CONFIG = {
 const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
-    audio1: "https://audio.evidya.de/S9MTG1P1-2.mp3",
+    audio1: "https://audio.evidya.de/S9MTG1P2-4.mp3",
     video:  "https://www.youtube.com/embed/bJFHdrKDmpM?playsinline=1&rel=0&modestbranding=1&autoplay=1",
-    pdf:    "https://audio.evidya.de/S9MTG1P1-2.pdf"
+    pdf:    "https://audio.evidya.de/S9MTG1P2-4.pdf"
 };
 
 const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "SHAPE",
-            odia: "ଆକୃତି",
-            emoji: "🔷",
-            odiaUse: "ଆକୃତି ଅର୍ଥ ବସ୍ତୁର ରୂପ ବା ଗଠନ । ପତ୍ର, ଫୁଲ ଓ ଫଳର ଭିନ୍ନ ଭିନ୍ନ ଆକୃତି ଥାଏ ।",
+            word: "TERM",
+            odia: "ପଦ",
+            emoji: "📝",
+            odiaUse: "ପଦ ଅର୍ଥ କୌଣସି ବିଷୟରେ ବ୍ୟବହୃତ ହେଉଥିବା ନିର୍ଦ୍ଦିଷ୍ଟ ଶବ୍ଦ । ପ୍ରତ୍ୟେକ ପାଠରେ କେତେକ ବିଶେଷ ପଦ ଗୋଟିଏ ନିର୍ଦ୍ଦିଷ୍ଟ ଅର୍ଥରେ ବ୍ୟବହାର ହୁଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "GEOMETRY",
-            odia: "ଜ୍ୟାମିତି",
-            emoji: "📐",
-            odiaUse: "ଜ୍ୟାମିତି ଅର୍ଥ ଆକୃତି, ରେଖା, କୋଣ ଓ ମାପ ସମ୍ବନ୍ଧୀୟ ଗଣିତ ଶାସ୍ତ୍ର ।",
+            word: "UNDEFINED TERM",
+            odia: "ସଂଜ୍ଞାବିହୀନ ପଦ",
+            emoji: "❓",
+            odiaUse: "ସଂଜ୍ଞାବିହୀନ ପଦ ଅର୍ଥ ଯାହାର ପୂର୍ବରୁ ସଂଜ୍ଞା ଦିଆଯାଇ ନାହିଁ ଏପରି ପଦ । ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ ଏହି ତିନୋଟି ମୌଳିକ ପଦ ସଂଜ୍ଞାବିହୀନ ପଦ ଭାବେ ବ୍ୟବହାର ହୁଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "EARTH",
-            odia: "ପୃଥିବୀ",
-            emoji: "🌍",
-            odiaUse: "ପୃଥିବୀ ଅର୍ଥ ଆମେ ବାସ କରୁଥିବା ଗ୍ରହ । ଜ୍ୟାମିତି ଶବ୍ଦରେ 'ଜ୍ୟା'ର ଅର୍ଥ ପୃଥିବୀ ।",
+            word: "DEFINED TERM",
+            odia: "ସଂଜ୍ଞାକୃତ ପଦ",
+            emoji: "✅",
+            odiaUse: "ସଂଜ୍ଞାକୃତ ପଦ ଅର୍ଥ ଯାହାର ଅର୍ଥ ପୂର୍ବରୁ ଜଣାଥିବା ପଦଗୁଡ଼ିକ ମାଧ୍ୟମରେ ନିରୂପିତ ହୋଇଥାଏ । ଅଧିକାଂଶ ପଦ ସଂଜ୍ଞାକୃତ ପଦ ଭାବେ ବ୍ୟବହାର ହୁଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "MEASUREMENT",
-            odia: "ମାପ",
+            word: "DEFINITION",
+            odia: "ସଂଜ୍ଞା",
+            emoji: "📖",
+            odiaUse: "ସଂଜ୍ଞା ଅର୍ଥ ପୂର୍ବ ଜଣା ପଦଗୁଡ଼ିକ ସାହାଯ୍ୟରେ କୌଣସି ପଦର ଅର୍ଥ ବିଚାର କରି ନିର୍ଦ୍ଦିଷ୍ଟ ଅର୍ଥକୁ ଗ୍ରହଣ କରିବା । ପାଠ ଦ୍ୱାରା ନିର୍ଦ୍ଦିଷ୍ଟ ଅର୍ଥକୁ ଆମେ ପଦର ସଂଜ୍ଞା କହୁ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "FUNDAMENTAL TERM (PRIMITIVE TERM)",
+            odia: "ମୌଳିକ ପଦ",
+            emoji: "🧱",
+            odiaUse: "ମୌଳିକ ପଦ ଅର୍ଥ ଯାହା ଆଉ ଅଧିକ ସରଳ ପଦ ମାଧ୍ୟମରେ ବ୍ୟାଖ୍ୟା କରାଯାଇ ପାରେ ନାହିଁ, ଏହାକୁ ଜ୍ଞାପିତ ପଦ ବା ମୌଳିକ ପଦ ମଧ୍ୟ କୁହାଯାଏ । ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ ହେଉଛି ମୌଳିକ ପଦର ଉଦାହରଣ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "POINT",
+            odia: "ବିନ୍ଦୁ",
+            emoji: "📍",
+            odiaUse: "ବିନ୍ଦୁ ଅର୍ଥ ଅବସ୍ଥାନ ମାତ୍ର ପ୍ରକାଶ କରୁଥିବା ଏକ ମୌଳିକ ପଦ, ଯାହାର କୌଣସି ଆକାର ବା ଆୟତନ ନଥାଏ । ରେଖା P ବିନ୍ଦୁ ଦେଇ ଯାଇଥିଲେ P ∈ L ଲେଖାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "LINE",
+            odia: "ରେଖା",
+            emoji: "➖",
+            odiaUse: "ରେଖା ଅର୍ଥ ଅନେକ ବିନ୍ଦୁର ସମାହାର ବା ସେଟ୍, ଯାହା ଉଭୟ ଦିଗକୁ ଅସୀମ ଭାବେ ବିସ୍ତାରିତ ହୋଇଥାଏ । ଦୁଇଟି ପୃଥକ୍ ବିନ୍ଦୁ ମଧ୍ୟ ଦେଇ କେବଳ ଏକ ମାତ୍ର ସରଳରେଖା ଅବସ୍ଥିତ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PLANE",
+            odia: "ସମତଳ",
+            emoji: "🔲",
+            odiaUse: "ସମତଳ ଅର୍ଥ ଚାରିଆଡ଼େ ବିସ୍ତାରିତ ହୋଇଥିବା ଏକ ସପାଟ ପୃଷ୍ଠ, ଯାହା ଏକ ମୌଳିକ ପଦ ଭାବେ ବ୍ୟବହୃତ ହୁଏ । ବିନ୍ଦୁ, ରେଖା ଓ ସମତଳ ହେଉଛି ଜ୍ୟାମିତିର ତିନୋଟି ମୌଳିକ ପଦ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "AXIOM",
+            odia: "ସ୍ୱୀକାର୍ଯ୍ୟ",
+            emoji: "📜",
+            odiaUse: "ସ୍ୱୀକାର୍ଯ୍ୟ ଅର୍ଥ ପ୍ରମାଣ ବିନା ସତ୍ୟ ବୋଲି ମାନି ନିଆଯାଇଥିବା ଉକ୍ତି । ମୌଳିକ ପଦ ପରି ଏହି ଉକ୍ତିଗୁଡ଼ିକୁ ମଧ୍ୟ କୌଣସି ପ୍ରମାଣ ବିନା ସ୍ୱୀକାର କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "COLLECTION (SET)",
+            odia: "ସଂଗ୍ରହ",
+            emoji: "📦",
+            odiaUse: "ସଂଗ୍ରହ ଅର୍ଥ ଏକାଠି ରହିଥିବା ବସ୍ତୁ ବା ବିନ୍ଦୁଗୁଡ଼ିକର ସମାହାର । ରେଖା ମଧ୍ୟ ଅନେକ ବିନ୍ଦୁର ଏକ ସଂଗ୍ରହ ଭାବେ ବିଚାର କରାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "COLLINEAR POINTS",
+            odia: "ଏକରେଖୀୟ ବିନ୍ଦୁ",
             emoji: "📏",
-            odiaUse: "ମାପ ଅର୍ଥ କୌଣସି ବସ୍ତୁର ଲମ୍ବ, ପ୍ରସ୍ଥ ବା ପରିମାଣ ନିର୍ଣ୍ଣୟ କରିବା ।",
+            odiaUse: "ଏକରେଖୀୟ ବିନ୍ଦୁ ଅର୍ଥ ତିନି ବା ତାହାଠାରୁ ଅଧିକ ବିନ୍ଦୁ ଯଦି ଏକ ସରଳରେଖାରେ ଅବସ୍ଥିତ ହୁଅନ୍ତି, ତେବେ ସେମାନଙ୍କୁ ଏକରେଖା ବିନ୍ଦୁ କୁହାଯାଏ । ତିନି ବିନ୍ଦୁ ଗୋଟିଏ ରେଖା ଉପରେ ରହିଲେ ସେମାନେ ଏକରେଖୀୟ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "LAND",
-            odia: "ଜମି",
-            emoji: "🌾",
-            odiaUse: "ଜମି ଅର୍ଥ ଭୂମି । ଜମି ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହୋଇଥିଲା ।",
+            word: "NON-COLLINEAR POINTS",
+            odia: "ନୈକରେଖୀୟ ବିନ୍ଦୁ",
+            emoji: "🔀",
+            odiaUse: "ନୈକରେଖୀୟ ବିନ୍ଦୁ ଅର୍ଥ ଯେଉଁ ବିନ୍ଦୁଗୁଡ଼ିକ ଏକ ସରଳରେଖାରେ ଅବସ୍ଥିତ ନୁହଁନ୍ତି, ସେମାନଙ୍କୁ ଅଣସରଳରେଖୀୟ ବିନ୍ଦୁ ମଧ୍ୟ କୁହାଯାଏ । ତିନି ବିନ୍ଦୁ ଗୋଟିଏ ରେଖା ଉପରେ ନ ରହିଲେ ସେମାନେ ନୈକରେଖୀୟ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PYRAMID",
-            odia: "ପିରାମିଡ୍",
-            emoji: "🔺",
-            odiaUse: "ପିରାମିଡ୍ ଅର୍ଥ ମିଶରର ପ୍ରସିଦ୍ଧ ବିଶାଳ ସ୍ଥାପତ୍ୟ । ଏହା ଉନ୍ନତ ଜ୍ୟାମିତି ଜ୍ଞାନର ନିଦର୍ଶନ ।",
+            word: "INTERSECTION",
+            odia: "ଛେଦ",
+            emoji: "✂️",
+            odiaUse: "ଛେଦ ଅର୍ଥ ଦୁଇଟି ସେଟ୍ ବା ରେଖାରେ ଥିବା ସାଧାରଣ ଉପାଦାନଗୁଡ଼ିକର ସେଟ୍ । A ∩ B ଅର୍ଥ A ଓ B ର ସାଧାରଣ ଉପାଦାନ ଥିବା ସେଟ୍ ଅଟେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CIVILIZATION",
-            odia: "ସଭ୍ୟତା",
-            emoji: "🏛️",
-            odiaUse: "ସଭ୍ୟତା ଅର୍ଥ ମନୁଷ୍ୟ ସମାଜର ଉନ୍ନତ ଜୀବନଧାରା । ମାନବ ସଭ୍ୟତା ସହିତ ଜ୍ୟାମିତିର ବିକାଶ ଜଡ଼ିତ ।",
+            word: "POINT OF INTERSECTION",
+            odia: "ଛେଦବିନ୍ଦୁ",
+            emoji: "❎",
+            odiaUse: "ଛେଦବିନ୍ଦୁ ଅର୍ଥ ଦୁଇଟି ରେଖା ମିଶିବା ସ୍ଥାନରେ ରହିଥିବା ସାଧାରଣ ବିନ୍ଦୁ । ଯଦି L₁ ∩ L₂ ≠ φ, ତେବେ ଏହି ସାଧାରଣ ବିନ୍ଦୁକୁ ଛେଦବିନ୍ଦୁ କୁହାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "FORMULA",
-            odia: "ସୂତ୍ର",
-            emoji: "📘",
-            odiaUse: "ସୂତ୍ର ଅର୍ଥ ନିୟମ ବା ସିଦ୍ଧାନ୍ତ । ପ୍ରାଚୀନ ଋଷିମାନେ ବିଭିନ୍ନ ଜ୍ୟାମିତିକ ସୂତ୍ରର ପ୍ରୟୋଗ କରୁଥିଲେ ।",
+            word: "NON-INTERSECTING LINES",
+            odia: "ଅଣଛେଦୀ ରେଖା",
+            emoji: "↔️",
+            odiaUse: "ଅଣଛେଦୀ ରେଖା ଅର୍ଥ ଦୁଇଟି ରେଖା ଯାହାର କୌଣସି ସାଧାରଣ ବିନ୍ଦୁ ବା ଛେଦବିନ୍ଦୁ ନଥାଏ । L₁ ∩ L₂ = φ ହେଲେ ସେହି ରେଖାଦ୍ୱୟକୁ ଅଣଛେଦୀ ରେଖା କୁହାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
             word: "THEOREM",
             odia: "ଉପପାଦ୍ୟ",
-            emoji: "📝",
-            odiaUse: "ଉପପାଦ୍ୟ ଅର୍ଥ ପ୍ରମାଣ କରାଯାଇଥିବା ଗଣିତୀୟ ସତ୍ୟ । ଇଉକ୍ଲିଡ୍ ତାଙ୍କ ଗ୍ରନ୍ଥରେ ଅନେକ ଉପପାଦ୍ୟ ଦେଇଛନ୍ତି ।",
+            emoji: "🧮",
+            odiaUse: "ଉପପାଦ୍ୟ ଅର୍ଥ ଯୁକ୍ତି ଓ ପ୍ରମାଣ ମାଧ୍ୟମରେ ସ୍ୱୀକାର୍ଯ୍ୟଗୁଡ଼ିକ ଠାରୁ ପ୍ରତିପାଦିତ ହେଉଥିବା ଉକ୍ତି । ଏହି ଉକ୍ତିଗୁଡ଼ିକୁ ପ୍ରମାଣ କରାଗଲେ ହିଁ ସେମାନଙ୍କୁ ଉପପାଦ୍ୟ ବୋଲି ଗ୍ରହଣ କରାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "EXPERIMENT",
-            odia: "ପରୀକ୍ଷା",
-            emoji: "🧪",
-            odiaUse: "ପରୀକ୍ଷା ଅର୍ଥ ଯାଞ୍ଚ କରିବାର ପ୍ରକ୍ରିୟା । ପ୍ରଥମେ ଜ୍ୟାମିତିର ସୂତ୍ରଗୁଡ଼ିକ ପରୀକ୍ଷାମୂଳକ ଉପାୟରେ ନିଶ୍ଚିତ ହେଉଥିଲା ।",
+            word: "PROOF",
+            odia: "ପ୍ରମାଣ",
+            emoji: "🔍",
+            odiaUse: "ପ୍ରମାଣ ଅର୍ଥ ସ୍ୱୀକାର୍ଯ୍ୟ ଓ ଯୁକ୍ତି ବ୍ୟବହାର କରି ଏକ ଉକ୍ତିର ସତ୍ୟତା ପ୍ରତିପାଦନ କରିବା । ଉପପାଦ୍ୟକୁ ପ୍ରମାଣ ବିନା ଉପାଦେୟ ବୋଲି ଗ୍ରହଣ କରାଯାଏ ନାହିଁ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "OBSERVATION",
-            odia: "ପର୍ଯ୍ୟବେକ୍ଷଣ",
-            emoji: "👀",
-            odiaUse: "ପର୍ଯ୍ୟବେକ୍ଷଣ ଅର୍ଥ ଭଲଭାବେ ଦେଖି ଅଧ୍ୟୟନ କରିବା । ପର୍ଯ୍ୟବେକ୍ଷଣରୁ ଅନେକ ଜ୍ୟାମିତିକ ସୂତ୍ର ସୃଷ୍ଟି ହୋଇଥିଲା ।",
+            word: "RECAPITULATION",
+            odia: "ପୁନରାବୃତ୍ତି",
+            emoji: "🔄",
+            odiaUse: "ପୁନରାବୃତ୍ତି ଅର୍ଥ ପୂର୍ବରୁ ପଢ଼ିଥିବା ବିଷୟକୁ ପୁଣି ଥରେ ମନେ ପକାଇବା ବା ଆଲୋଚନା କରିବା । ମୌଳିକ ଅବବୋଧ ପାଇଁ ପୁନରାବୃତ୍ତି ଏକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ପଦକ୍ଷେପ ଅଟେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "LOGIC",
-            odia: "ତର୍କ",
-            emoji: "🧠",
-            odiaUse: "ତର୍କ ଅର୍ଥ ଯୁକ୍ତିପୂର୍ଣ୍ଣ ଚିନ୍ତା । ଗ୍ରୀକ୍ ବିଦ୍ୱାନମାନେ ତର୍କ ଦ୍ୱାରା ଜ୍ୟାମିତିର ସିଦ୍ଧାନ୍ତ ପ୍ରତିପାଦନ କରିଥିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "GEOMETER",
-            odia: "ଗଣିତଜ୍ଞ",
-            emoji: "👨‍🏫",
-            odiaUse: "ଗଣିତଜ୍ଞ ଅର୍ଥ ଗଣିତ ବିଷୟର ପଣ୍ଡିତ । ଇଉକ୍ଲିଡ୍ ଜଣେ ପ୍ରସିଦ୍ଧ ଗଣିତଜ୍ଞ ଥିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SET",
-            odia: "ସେଟ୍",
-            emoji: "🗂️",
-            odiaUse: "ସେଟ୍ ଅର୍ଥ ବସ୍ତୁଗୁଡ଼ିକର ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ସମୂହ । ଆଧୁନିକ ଗଣିତରେ ସେଟ୍‌ର ବ୍ୟବହାର କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PLANE GEOMETRY",
-            odia: "ସମତଳ ଜ୍ୟାମିତି",
-            emoji: "📏",
-            odiaUse: "ସମତଳ ଜ୍ୟାମିତି ଅର୍ଥ ସମତଳ ଉପରେ ରେଖା ଓ ଆକୃତିର ଅଧ୍ୟୟନ । ବିଦ୍ୟାଳୟରେ ଆମେ ସମତଳ ଜ୍ୟାମିତି ପଢ଼ୁ ।",
+            word: "LOGICAL (GRAMMATICAL) MEANING",
+            odia: "ଭାଷାଗତ ଅର୍ଥ",
+            emoji: "💬",
+            odiaUse: "ଭାଷାଗତ ଅର୍ଥ ଅର୍ଥ ଦୈନନ୍ଦିନ ଭାଷାରେ ବ୍ୟବହୃତ ହେଉଥିବା ଅର୍ଥ, ଯାହା ଗାଣିତିକ ସଂଜ୍ଞାଠାରୁ ଭିନ୍ନ ହୋଇପାରେ । ପାଠ ଦ୍ୱାରା ନିର୍ଦ୍ଦିଷ୍ଟ ଅର୍ଥକୁ ହିଁ ଗ୍ରହଣ କରିବା ଉଚିତ, ଭାଷାଗତ ଅର୍ଥକୁ ନୁହେଁ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
