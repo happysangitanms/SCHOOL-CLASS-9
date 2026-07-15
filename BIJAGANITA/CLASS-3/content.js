@@ -16,73 +16,94 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "SET",
-            odia: "ସେଟ୍",
-            emoji: "🔢",
-            odiaUse: "ସେଟ୍ ଅର୍ଥ ଏକ ଉପାଦାନ ସମୂହ । S = {1, 2, 3, 4, 5} ଏକ ସେଟ୍ ଅଟେ ।",
+            word: "UNIVERSAL SET",
+            odia: "ବ୍ୟାପକ ସେଟ୍",
+            emoji: "🌐",
+            odiaUse: "ବ୍ୟାପକ ସେଟ୍ ଅର୍ଥ ଆଲୋଚନାର ପରିସର ମଧ୍ୟରେ ଥିବା ସମସ୍ତ ସେଟ୍‌ର ମୂଳ ସେଟ୍ । ଏହାକୁ E ଚିହ୍ନ ଦ୍ୱାରା ଦର୍ଶାଯାଏ । ଉଦାହରଣ ସ୍ୱରୂପ ମନେକର ଆଲୋଚନାର ପରିସର ମଧ୍ୟରେ ପ୍ରତ୍ୟେକ ସେଟ୍ ଯଦି ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ସେଟ୍ E ର ଉପସେଟ୍ ହୁଏ, ତେବେ E କୁ ବ୍ୟାପକ ସେଟ୍ କୁହାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ELEMENT",
-            odia: "ଉପାଦାନ",
-            emoji: "🔹",
-            odiaUse: "ଉପାଦାନ ଅର୍ଥ ସେଟ୍‌ର ଅନ୍ତର୍ଗତ ବସ୍ତୁ । x ∈ S ଅର୍ଥ x, S ସେଟ୍‌ର ଉପାଦାନ ।",
+            word: "UNION",
+            odia: "ସଂଯୋଗ",
+            emoji: "🔗",
+            odiaUse: "ସଂଯୋଗ ଅର୍ଥ A ଓ B ଦ୍ୱୟରେ ଥିବା ବା ସମସ୍ତ ଉପାଦାନ ଗୁଡ଼ିକୁ ନେଇ ଗଠିତ ସେଟ୍ । A ଓ B ର ସଂଯୋଗକୁ A ∪ B ଦ୍ୱାରା ସୂଚିତ କରାଯାଏ, ଯଥା A = {1,2,3,4} ଓ B = {2,4,6,8} ହେଲେ, A ∪ B = {1,2,3,4,6,8} ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "TABULAR METHOD",
-            odia: "ତାଲିକା ପ୍ରଣାଳୀ",
-            emoji: "📋",
-            odiaUse: "ତାଲିକା ପ୍ରଣାଳୀରେ ସେଟ୍‌ର ଉପାଦାନଗୁଡ଼ିକୁ କୁଟାଙ୍କଚିହ୍ନ ମଧ୍ୟରେ ସିଧାସଳଖ ଲେଖାଯାଏ ।",
+            word: "INTERSECTION",
+            odia: "ଛେଦ",
+            emoji: "🔀",
+            odiaUse: "ଛେଦ ଅର୍ଥ A ଓ B ସେଟ୍ ଦ୍ୱୟରେ ଥିବା ଉଭୟଙ୍କ ମଧ୍ୟରେ ସାଧାରଣ ଉପାଦାନମାନଙ୍କୁ ନେଇ ଗଠିତ ସେଟ୍ । ଏହାକୁ A ∩ B ଦ୍ୱାରା ସୂଚିତ କରାଯାଏ, ଯଥା A = {1,2,3} ଓ B = {1,3,5} ହେଲେ, A ∩ B = {1,3} ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SET-BUILDER METHOD",
-            odia: "ବ୍ରୁତ ପ୍ରଣାଳୀ",
+            word: "DIFFERENCE",
+            odia: "ଅନ୍ତର",
+            emoji: "➖",
+            odiaUse: "ଅନ୍ତର ଅର୍ଥ A ସେଟ୍‌ର ଯେଉଁ ଉପାଦାନଗୁଡ଼ିକ B ରେ ନାହାନ୍ତି, ସେମାନଙ୍କୁ ନେଇ ଗଠିତ ସେଟ୍ । ଏହାକୁ A – B ଦ୍ୱାରା ସୂଚିତ କରାଯାଏ, ଯଥା A = {1,2,3,4} ଓ B = {3,4,5,6} ହେଲେ, A – B = {1,2} ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DISJOINT SET",
+            odia: "ଅଣଛେଦା ସେଟ୍",
+            emoji: "🚫",
+            odiaUse: "ଅଣଛେଦା ସେଟ୍ ଅର୍ଥ ଦୁଇଟି ସେଟ୍‌ ମଧ୍ୟରେ କୌଣସି ସାଧାରଣ ଉପାଦାନ ନ ଥିବା ସେଟ୍ । ଯଦି A ଓ B ମଧ୍ୟରେ କୌଣସି ସାଧାରଣ ଉପାଦାନ ନ ଥାଏ, ତେବେ A ଓ B ଙ୍କୁ ଅଣଛେଦା ସେଟ୍ କୁହାଯାଏ, ଅର୍ଥାତ୍ A ∩ B = ϕ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "SUBSET",
+            odia: "ଉପସେଟ୍",
             emoji: "🧩",
-            odiaUse: "ବ୍ରୁତ ପ୍ରଣାଳୀରେ ସେଟ୍‌ର ଉପାଦାନମାନଙ୍କର ସାଧାରଣ ଧର୍ମ ଉଲ୍ଲେଖ କରାଯାଏ ।",
+            odiaUse: "ଉପସେଟ୍ ଅର୍ଥ ଏକ ସେଟ୍‌ର ଉପାଦାନଗୁଡ଼ିକ ଅନ୍ୟ ଏକ ବଡ଼ ସେଟ୍‌ ମଧ୍ୟରେ ଅନ୍ତର୍ଭୁକ୍ତ ଥିଲେ ତାହାକୁ ଉପସେଟ୍ କୁହାଯାଏ, ଯଥା ଯଦି ପ୍ରତ୍ୟେକ ଉପାଦାନ E ର ଉପାଦାନ ହୁଏ, ତେବେ ସେଟ୍ ⊆ E ଅର୍ଥାତ୍ ଉପସେଟ୍ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "FINITE SET",
-            odia: "ସସୀମ ସେଟ୍",
-            emoji: "🔚",
-            odiaUse: "ସସୀମ ସେଟ୍‌ର ଉପାଦାନଗୁଡ଼ିକୁ ଗଣନା କଲେ ଗଣନ ପ୍ରକ୍ରିୟାର ପରିସମାପ୍ତି ଘଟେ ।",
+            word: "VENN DIAGRAM",
+            odia: "ଭେନ୍‌ ଚିତ୍ର",
+            emoji: "⭕",
+            odiaUse: "ଭେନ୍‌ ଚିତ୍ର ଅର୍ଥ ସେଟ୍‌ ଓ ତାହାର ଉପାଦାନଗୁଡ଼ିକୁ ଆକୃତି ଚିତ୍ର ଦ୍ୱାରା ଦର୍ଶାଇବା ପ୍ରକ୍ରିୟା । ଏଥିରେ ବ୍ୟାପକ ସେଟ୍ E କୁ ଆୟତ ଚିତ୍ର ଦ୍ୱାରା ଓ ତାହାର ଉପସେଟ୍‌ମାନଙ୍କୁ ବୃତ୍ତ ଦ୍ୱାରା ଦର୍ଶାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "INFINITE SET",
-            odia: "ଅସୀମ ସେଟ୍",
-            emoji: "♾️",
-            odiaUse: "ଅସୀମ ସେଟ୍‌ର ଉପାଦାନ ଗଣନା ପ୍ରକ୍ରିୟାର କେବେ ପରିସମାପ୍ତି ଘଟେ ନାହିଁ ।",
+            word: "COMMUTATIVE",
+            odia: "କ୍ରମବିନିମୟ",
+            emoji: "🔄",
+            odiaUse: "କ୍ରମବିନିମୟ ଅର୍ଥ ଦୁଇଟି ସେଟ୍‌ର କ୍ରମ ପରିବର୍ତ୍ତନ କଲେ ମଧ୍ୟ ଫଳାଫଳ ସମାନ ରହିବା । ଯଥା A ∪ B = B ∪ A ଓ A ∩ B = B ∩ A ଅର୍ଥାତ୍ ସଂଯୋଗ ଓ ଛେଦ ପ୍ରକ୍ରିୟା କ୍ରମବିନିମୟ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "CARDINALITY",
-            odia: "ଉପାଦାନ ସଂଖ୍ୟା",
-            emoji: "🔟",
-            odiaUse: "ଏକ ସସୀମ ସେଟ୍ A ର ଉପାଦାନ ସଂଖ୍ୟାକୁ |A| କିମ୍ବା n(A) ଦ୍ୱାରା ସୂଚାଯାଏ ।",
+            word: "ASSOCIATIVE",
+            odia: "ସହଯୋଗୀ",
+            emoji: "🤝",
+            odiaUse: "ସହଯୋଗୀ ଅର୍ଥ ତିନୋଟି ସେଟ୍‌କୁ ଯେକୌଣସି ଭାବରେ ଗୋଷ୍ଠୀକୃତ କଲେ ମଧ୍ୟ ଫଳାଫଳ ଅପରିବର୍ତ୍ତିତ ରହିବା । ଯଥା (A ∪ B) ∪ C = A ∪ (B ∪ C) ଅର୍ଥାତ୍ ସଂଯୋଗ ପ୍ରକ୍ରିୟା ସହଯୋଗୀ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DISTRIBUTIVE LAW",
+            odia: "ବଣ୍ଟନ ନିୟମ",
+            emoji: "📐",
+            odiaUse: "ବଣ୍ଟନ ନିୟମ ଅର୍ଥ ସେଟ୍ ଅଙ୍କରେ ସଂଯୋଗ ଓ ଛେଦ ପ୍ରକ୍ରିୟା ପରସ୍ପରକୁ ବଣ୍ଟନ କରିଥାନ୍ତି । ଯଥା A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) ଓ A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "BOOLEAN ALGEBRA",
+            odia: "ବୁଲିଆନ୍ ବୀଜଗଣିତ",
+            emoji: "🧮",
+            odiaUse: "ବୁଲିଆନ୍ ବୀଜଗଣିତ ଅର୍ଥ ସେଟ୍‌ମାନଙ୍କ ମଧ୍ୟରେ ବ୍ୟାକରଣର ବୃଦ୍ଧି ଚାହାଁକୁ ବୁଝାଉଥିବା ବୀଜଗଣିତ, ଯାହା ଗଣିତଜ୍ଞ ଓ ଦର୍ଶନଶାସ୍ତ୍ରବିଦ୍ ଜର୍ଜ ବୁଲ୍ ତାଙ୍କ ନାମରେ ନାମିତ କରିଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
             word: "EMPTY SET",
             odia: "ଶୂନ୍ୟ ସେଟ୍",
             emoji: "⭕",
-            odiaUse: "ଯେଉଁ ସେଟ୍‌ରେ କୌଣସି ଉପାଦାନ ନ ଥାଏ, ତାହାକୁ ଶୂନ୍ୟ ସେଟ୍ କୁହାଯାଏ, ଏହାକୁ φ ଦ୍ୱାରା ସୂଚିତ କରାଯାଏ ।",
+            odiaUse: "ଶୂନ୍ୟ ସେଟ୍ ଅର୍ଥ କୌଣସି ଉପାଦାନ ନ ଥିବା ସେଟ୍ । ଏହାକୁ ϕ ଦ୍ୱାରା ସୂଚିତ କରାଯାଏ, ଯଥା A ∩ ϕ = ϕ ଓ A ∪ ϕ = A ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SUBSET",
-            odia: "ଉପସେଟ୍",
-            emoji: "📦",
-            odiaUse: "ଯଦି A ସେଟ୍‌ର ପ୍ରତ୍ୟେକ ଉପାଦାନ B ସେଟ୍‌ର ଉପାଦାନ ହୁଏ, ତେବେ A କୁ B ର ଉପସେଟ୍ କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "UNIVERSAL SET",
-            odia: "ବ୍ୟାପକ ସେଟ୍",
-            emoji: "🌐",
-            odiaUse: "ଆଲୋଚନାରେ ବ୍ୟବହୃତ ସମସ୍ତ ସେଟ୍ ଓ ଉପାଦାନ ଥିବା ସର୍ବବୃହତ ସେଟ୍‌କୁ ବ୍ୟାପକ ସେଟ୍ କୁହାଯାଏ ।",
+            word: "IDEMPOTENT",
+            odia: "ସ୍ୱ-ପୁନରାବୃତ୍ତି",
+            emoji: "🔁",
+            odiaUse: "ସ୍ୱ-ପୁନରାବୃତ୍ତି ଅର୍ଥ ଏକ ସେଟ୍ A ର ନିଜ ସହିତ ସଂଯୋଗ ବା ଛେଦ କଲେ ମଧ୍ୟ ସେହି ସେଟ୍ A ହିଁ ରହିବା । ଯଥା A ∪ A = A ଓ A ∩ A = A ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
