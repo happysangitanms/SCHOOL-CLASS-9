@@ -16,80 +16,87 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "LETTER",
-            odia: "ବର୍ଣ୍ଣ",
-            emoji: "🔤",
-            odiaUse: "ଲିଖନ ପ୍ରକ୍ରିୟା ମାଧ୍ୟମରେ ଭାଷାକୁ ବ୍ୟକ୍ତ କରିବା ଲାଗି ଉପଯୋଗୀ ଧ୍ୱନିଗୁଡ଼ିକୁ ବର୍ଣ୍ଣ କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "VOWEL",
-            odia: "ସ୍ୱରବର୍ଣ୍ଣ",
-            emoji: "🗣️",
-            odiaUse: "ଯେଉଁ ବର୍ଣ୍ଣ ନିରପେକ୍ଷ ଭାବରେ ସ୍ୱତଃ ସ୍ପଷ୍ଟ ଉଚ୍ଚାରିତ ହୁଏ, ତାହା ସ୍ୱରବର୍ଣ୍ଣ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CONSONANT",
-            odia: "ବ୍ୟଞ୍ଜନ",
-            emoji: "🔡",
-            odiaUse: "ଯାହା ସ୍ୱରର ଅନୁଗାମୀ ବା ସ୍ୱର ବିନା ଉଚ୍ଚାରଣ ହୋଇପାରେ ନାହିଁ, ସେ ‘ବ୍ୟଞ୍ଜନ’ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SHORT VOWEL",
-            odia: "ହ୍ରସ୍ୱ ସ୍ୱର",
-            emoji: "⏱️",
-            odiaUse: "ଅ, ଇ, ଉ, ଋ, ଌ ଏହି ମୂଳସ୍ୱର ପାଞ୍ଚଗୋଟି, ଏମାନଙ୍କର ଉଚ୍ଚାରଣ କାଳ ଏକ ମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "LONG VOWEL",
-            odia: "ଦୀର୍ଘସ୍ୱର",
-            emoji: "⏳",
-            odiaUse: "ଆ, ଈ, ଊ, ଋ, ଏ, ଐ, ଓ, ଔ ଏହି ଦୀର୍ଘସ୍ୱର ଆଠଗୋଟି, ଏମାନଙ୍କର ଉଚ୍ଚାରଣ କାଳ ଦୁଇମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CLASSIFIED CONSONANT",
-            odia: "ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ",
-            emoji: "🗂️",
-            odiaUse: "ଏଗୁଡ଼ିକୁ ‘ସ୍ପର୍ଶବର୍ଣ୍ଣ’ ମଧ୍ୟ କୁହାଯାଏ । ଏମାନଙ୍କ ସଂଖ୍ୟା ସମୁଦାୟ ୨୫ ଓ ପାଞ୍ଚଗୋଟି ବର୍ଗରେ ବିଭକ୍ତ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "UNCLASSIFIED CONSONANT",
-            odia: "ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ",
-            emoji: "🧩",
-            odiaUse: "ଏମାନଙ୍କ ସଂଖ୍ୟା ସମୁଦାୟ ୮ । ଏହା ଦୁଇଭାଗରେ ବିଭକ୍ତ - ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SEMIVOWEL",
-            odia: "ଅନ୍ତଃସ୍ଥ",
-            emoji: "🔀",
-            odiaUse: "ଯ, ର, ଲ, ବ ଏହି ବର୍ଣ୍ଣମାନଙ୍କୁ ଅର୍ଦ୍ଧସ୍ୱର ମଧ୍ୟ କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SIBILANT",
-            odia: "ଉଷ୍ମ",
-            emoji: "💨",
-            odiaUse: "ଶ, ଷ, ସ, ହ ଏହି ବର୍ଣ୍ଣମାନେ ଉଷ୍ମବର୍ଣ୍ଣ ଅଟନ୍ତି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "HALANT",
-            odia: "ହଳ",
-            emoji: "➖",
-            odiaUse: "ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣକୁ ହଳ୍ ମଧ୍ୟ କୁହାଯାଏ । କେବଳ ବ୍ୟଞ୍ଜନର ପ୍ରୟୋଗ ‘ହଳ୍’ ଚିହ୍ନ ଯୋଗରେ କରାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "AYOGAVAHA",
-            odia: "ଅଯୋଗବାହ",
+            word: "ଅଯୋଗବାହ",
+            odia: "ସ୍ୱାଧୀନ ଭାବେ ବ୍ୟବହାର ନ ହେଉଥିବା ବର୍ଣ୍ଣ",
             emoji: "🔗",
-            odiaUse: "ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଏହା ସ୍ୱରବର୍ଣ୍ଣ ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣରେ ମିଶି ଉଚ୍ଚାରିତ ହୁଏ ।",
+            odiaUse: "ଅଯୋଗବାହ ଅର୍ଥ ପ୍ରତ୍ୟାହାର ନିର୍ମାଣରେ ନିରପେକ୍ଷ ଓ ଶଢାଦି ପ୍ରୟୋଗରେ ସାପେକ୍ଷ ହୋଇଥିବା ବର୍ଣ୍ଣ । ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଅନୁନାସିକଙ୍କୁ ଅଯୋଗବାହ କୁହାଯାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ଅନୁସ୍ୱାର",
+            odia: "ଂ (ନ୍ କିମ୍ବା ମ୍ ର ପରିବର୍ତ୍ତେ ଆସୁଥିବା ବର୍ଣ୍ଣ)",
+            emoji: "⚪",
+            odiaUse: "ଅନୁସ୍ୱାର କୌଣସି ସ୍ୱର ପରେ ନ୍ କିମ୍ବା ମ୍ ସ୍ଥାନରେ ଆସିଥାଏ । ଉଦାହରଣ - ଗୃହଂ ଗଛତି । ଏଠାରେ 'ଗୃହମ୍' ର ମ୍ ସ୍ଥାନରେ ପୂର୍ବବର୍ତ୍ତୀ 'ଅ' ସ୍ୱର ସହିତ ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ହୋଇଛି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ବିସର୍ଗ",
+            odia: "ଃ (ସ୍ୱର ପରେ ଆସି ପୃଥକ୍ ଉଚ୍ଚାରଣ ହେଉଥିବା ବର୍ଣ୍ଣ)",
+            emoji: "❕",
+            odiaUse: "ବିସର୍ଗର ପ୍ରୟୋଗ କୌଣସି ସ୍ୱର ପରେ ହୋଇଥାଏ ଏବଂ ଏହାର ପୃଥକ୍ ଉଚ୍ଚାରଣ ହୁଏ । ଉଦାହରଣ- ନରଃ, ସାଧୁଃ ଇତ୍ୟାଦି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ଅନୁନାସିକ",
+            odia: "ଁ (ଚନ୍ଦ୍ରବିନ୍ଦୁ ଆକୃତିର ନାକରୁ ଉଚ୍ଚାରିତ ହେଉଥିବା ବର୍ଣ୍ଣ)",
+            emoji: "👃",
+            odiaUse: "ଅନୁନାସିକର ସ୍ୱରୂପ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଅଟେ । ଯଥା- କସ୍ଁୟିତ୍, ସଁବତ୍ସରଃ ଇତ୍ୟାଦି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ପ୍ରତ୍ୟାହାର",
+            odia: "ବର୍ଣ୍ଣସମୂହକୁ ସଂକ୍ଷେପରେ ପ୍ରକାଶ କରିବା ପାଇଁ ବ୍ୟାକରଣରେ ବ୍ୟବହୃତ ପଦ୍ଧତି",
+            emoji: "📚",
+            odiaUse: "ଅଯୋଗବାହ ବର୍ଣ୍ଣମାନ ପ୍ରତ୍ୟାହାର ନିର୍ମାଣରେ ନିରପେକ୍ଷ, ଅର୍ଥାତ୍ ବ୍ୟାକରଣର ସଂକ୍ଷିପ୍ତ ବର୍ଣ୍ଣ-ସମୂହ ତିଆରି କରିବାରେ ଏମାନଙ୍କର ଆବଶ୍ୟକତା ନାହିଁ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ନିରପେକ୍ଷ",
+            odia: "କାହା ଉପରେ ନିର୍ଭର ନ କରୁଥିବା, ସ୍ୱାଧୀନ",
+            emoji: "🚫🔗",
+            odiaUse: "ଅଯୋଗବାହ ବର୍ଣ୍ଣମାନ ପ୍ରତ୍ୟାହାର ନିର୍ମାଣରେ ନିରପେକ୍ଷ ହୋଇଥାନ୍ତି, ଅର୍ଥାତ୍ ସେଠାରେ ଏମାନଙ୍କର କୌଣସି ଭୂମିକା ନାହିଁ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ସାପେକ୍ଷ",
+            odia: "କାହା ଉପରେ ନିର୍ଭର କରୁଥିବା",
+            emoji: "🔗✔️",
+            odiaUse: "ଶଢାଦି ପ୍ରୟୋଗରେ ଅଯୋଗବାହ ବର୍ଣ୍ଣମାନ ସାପେକ୍ଷ ହୋଇଥାନ୍ତି, ଅର୍ଥାତ୍ ସେଠାରେ ଏମାନଙ୍କର ପ୍ରୟୋଗ ଆବଶ୍ୟକ ହୋଇଥାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ଚନ୍ଦ୍ରବିନ୍ଦୁ",
+            odia: "ଚନ୍ଦ୍ର ଓ ବିନ୍ଦୁ ମିଶି ତିଆରି ହୋଇଥିବା ଚିହ୍ନ ( ଁ )",
+            emoji: "🌙",
+            odiaUse: "ଅନୁନାସିକର ସ୍ୱରୂପ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଅଟେ, ଯାହା ଦେଖିବାକୁ ଅର୍ଦ୍ଧଚନ୍ଦ୍ର ଉପରେ ଏକ ବିନ୍ଦୁ ପରି ଲାଗେ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ଲୌକିକ ସଂସ୍କୃତ",
+            odia: "ସାଧାରଣ ଭାବେ ଲୋକମାନଙ୍କ ଦ୍ୱାରା ବ୍ୟବହୃତ ସଂସ୍କୃତ ଭାଷା",
+            emoji: "🗣️",
+            odiaUse: "ଲୌକିକ ସଂସ୍କୃତରେ ସାଧାରଣ ଭାବେ ବ୍ୟବହୃତ ହେଉଥିବା ବର୍ଣ୍ଣମାନଙ୍କର ସଂଖ୍ୟା ଅଣଚାଶ (୪୯) ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ଅଣଚାଶ",
+            odia: "୪୯ ସଂଖ୍ୟା (ଏକଚାଳିଶ ପରେ ଓ ପଚାଶ ପୂର୍ବେ ଆସୁଥିବା ସଂଖ୍ୟା)",
+            emoji: "🔢",
+            odiaUse: "ଲୌକିକ ସଂସ୍କୃତର ମୋଟ ବର୍ଣ୍ଣ ସଂଖ୍ୟା ଅଣଚାଶ, ଯାହା ୧୩ଟି ସ୍ୱର, ୩୩ଟି ବ୍ୟଞ୍ଜନ ଓ ୩ଟି ଅଯୋଗବାହ ମିଶି ତିଆରି ହୋଇଛି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ଯ ଓ ୟ",
+            odia: "ଶବ୍ଦ ଆରମ୍ଭରେ 'ଯ' ଓ ମଧ୍ୟ/ଶେଷରେ 'ୟ' ଉଚ୍ଚାରଣ ହେବାର ନିୟମ",
+            emoji: "🔤",
+            odiaUse: "ଶବ୍ଦ ଆରମ୍ଭରେ 'ଯ' ରହେ, ମାତ୍ର ପଦ ମଧ୍ୟରେ ବା ଶେଷରେ 'ଯ' ଥିଲେ 'ୟ' ଉଚ୍ଚାରିତ ହୁଏ । ଯଥା- ଯୋଗ-ବିୟୋଗ, ଯମ-ନିୟମ ଇତ୍ୟାଦି ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ପୃଥକ୍",
+            odia: "ଅଲଗା, ଭିନ୍ନ",
+            emoji: "↔️",
+            odiaUse: "ବିସର୍ଗର ପ୍ରୟୋଗ କୌଣସି ସ୍ୱର ପରେ ହୋଇଥାଏ ଏବଂ ଏହାର ପୃଥକ୍ ଉଚ୍ଚାରଣ ହୁଏ, ଅର୍ଥାତ୍ ଏହା ପୂର୍ବବର୍ତ୍ତୀ ସ୍ୱର ସହିତ ମିଶେ ନାହିଁ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
@@ -98,202 +105,121 @@ const wordData = {
 const topicsData = [
 
 {
-heading: "NOTE-1: ବର୍ଣ୍ଣ କ'ଣ ? :-",
+heading: "NOTE-1: ଅଯୋଗବାହ ବର୍ଣ୍ଣ କ'ଣ ? :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଲିଖନ ପ୍ରକ୍ରିୟା ମାଧ୍ୟମରେ ଭାଷାକୁ ବ୍ୟକ୍ତ କରିବା ଲାଗି ଉପଯୋଗୀ ବିଶିଷ୍ଟ ଧ୍ୱନିଗୁଡ଼ିକୁ ବା ଧ୍ୱନ୍ୟାତ୍ମକ ସଙ୍କେତଗୁଡ଼ିକୁ ବର୍ଣ୍ଣ କୁହାଯାଏ । ଆମେ ଯାହା କହୁ, ତାହାକୁ ଲେଖିବା ପାଇଁ ବର୍ଣ୍ଣର ଆବଶ୍ୟକତା ପଡ଼େ ।<br><br>👉 ଉଦାହରଣ: ଆମେ ଯେତେବେଳେ 'କ' କହୁ, ସେହି ଧ୍ୱନିକୁ ଲେଖିବା ପାଇଁ ଆମେ 'କ' ବର୍ଣ୍ଣ ବ୍ୟବହାର କରୁ । ସେହିପରି 'ଅ', 'ଆ', 'ଖ' ଆଦି ମଧ୍ୟ ବର୍ଣ୍ଣ ଅଟନ୍ତି ।",
+text:"👉 ଧାରଣା: ସଂସ୍କୃତ ଭାଷାରେ ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ବ୍ୟତୀତ ତିନୋଟି ବିଶେଷ ବର୍ଣ୍ଣ ମଧ୍ୟ ବ୍ୟବହାର ହୁଏ - ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଅନୁନାସିକ । ଏହି ତିନୋଟି ବର୍ଣ୍ଣକୁ ଏକାଠି ଅଯୋଗବାହ ବର୍ଣ୍ଣ କୁହାଯାଏ । ପ୍ରତ୍ୟାହାର ତିଆରି ସମୟରେ ଏମାନେ ଆବଶ୍ୟକ ହୁଅନ୍ତି ନାହିଁ, କିନ୍ତୁ ଶବ୍ଦ ଲେଖିବା ସମୟରେ ଏମାନଙ୍କର ପ୍ରୟୋଗ ଜରୁରୀ ହୁଏ ।<br><br>👉 ଉଦାହରଣ: ଗୃହଂ ଶବ୍ଦରେ ଥିବା ଂ ଚିହ୍ନ ଏକ ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅଟେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ବର୍ଣ୍ଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଲିଖନ ପ୍ରକ୍ରିୟା ମାଧ୍ୟମରେ ଭାଷାକୁ ବ୍ୟକ୍ତ କରିବା ଲାଗି ଉପଯୋଗୀ ଧ୍ୱନ୍ୟାତ୍ମକ ସଙ୍କେତଗୁଡ଼ିକୁ ବର୍ଣ୍ଣ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଅନୁନାସିକ - ଏହି ତିନୋଟି ବର୍ଣ୍ଣକୁ ଅଯୋଗବାହ ବର୍ଣ୍ଣ କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ବର୍ଣ୍ଣର ଆବଶ୍ୟକତା କାହିଁକି ପଡ଼େ ?<br><br><span style='color:green;'>Answer:</span> ଆମେ କହୁଥିବା କଥାକୁ ଲେଖିବା ପାଇଁ ବର୍ଣ୍ଣର ଆବଶ୍ୟକତା ପଡ଼େ ।",
+"<span style='color:red;'>Q-2:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣରେ କେତୋଟି ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣରେ ତିନୋଟି ବର୍ଣ୍ଣ ଅଛି ।",
 
-"<span style='color:red;'>Q-3:</span> ବର୍ଣ୍ଣ କେଉଁ ପ୍ରକାର ଜିନିଷକୁ ବୁଝାଏ ?<br><br><span style='color:green;'>Answer:</span> ବର୍ଣ୍ଣ ଧ୍ୱନିଗୁଡ଼ିକୁ ବା ଧ୍ୱନ୍ୟାତ୍ମକ ସଙ୍କେତଗୁଡ଼ିକୁ ବୁଝାଏ ।",
+"<span style='color:red;'>Q-3:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣର ପ୍ରୟୋଗ କେଉଁ ଭାଷାରେ ଦେଖାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣର ପ୍ରୟୋଗ ସଂସ୍କୃତ ଭାଷାରେ ଦେଖାଯାଏ ।",
 
-"<span style='color:red;'>Q-4:</span> 'କ' ବର୍ଣ୍ଣର ଉଦାହରଣ କାହିଁକି ଅଟେ ?<br><br><span style='color:green;'>Answer:</span> ଆମେ 'କ' ଧ୍ୱନି କହିଲେ, ତାହାକୁ ଲେଖିବା ପାଇଁ 'କ' ବର୍ଣ୍ଣ ବ୍ୟବହାର ହୁଏ, ତେଣୁ ଏହା ବର୍ଣ୍ଣର ଉଦାହରଣ ।"
+"<span style='color:red;'>Q-4:</span> 'ଗୃହଂ' ଶବ୍ଦରେ କେଉଁ ଅଯୋଗବାହ ବର୍ଣ୍ଣ ବ୍ୟବହୃତ ହୋଇଛି ?<br><br><span style='color:green;'>Answer:</span> 'ଗୃହଂ' ଶବ୍ଦରେ ଅନୁସ୍ୱାର ବ୍ୟବହୃତ ହୋଇଛି ।"
 
 ]
 },
 
 {
-heading: "NOTE-2: ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳା :-",
+heading: "NOTE-2: ଅନୁସ୍ୱାର (ଂ) କ'ଣ ? :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାକୁ ଦୁଇଟି ପ୍ରଧାନ ଶ୍ରେଣୀରେ ବିଭକ୍ତ କରାଯାଏ - ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ । ମହର୍ଷି ପାଣିନି ଅଷ୍ଟାଧ୍ୟାୟୀରେ ୧୪ଟି ମାହେଶ୍ୱର ସୂତ୍ର ଉଲ୍ଲେଖ କରି ୯ଟି ସ୍ୱରବର୍ଣ୍ଣ ଓ ୩୩ଟି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣର ବିନ୍ୟାସ କରିଛନ୍ତି ।<br><br>👉 ଉଦାହରଣ: ମାତ୍ର ଭାଷାରେ ପାଣିନୀୟ ବର୍ଣ୍ଣମାଳା ସହ ଅଯୋଗବାହ ମିଶି ମୋଟ ୪୯ଗୋଟି ବର୍ଣ୍ଣର ବ୍ୟବହାର ଦେଖାଯାଏ ।"
-,
+text:"👉 ଧାରଣା: ଅନୁସ୍ୱାରର ଚିହ୍ନ ଂ ଅଟେ । ଏହା କୌଣସି ସ୍ୱର ପରେ ନ୍ କିମ୍ବା ମ୍ ର ସ୍ଥାନରେ ବ୍ୟବହାର ହୁଏ । ଯେତେବେଳେ ଶବ୍ଦ ଶେଷରେ ମ୍ ଥାଏ, ସେହି ମ୍ ପୂର୍ବରୁ ଥିବା ସ୍ୱର ସହିତ ମିଶି ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ହୁଏ ।<br><br>👉 ଉଦାହରଣ: ଗୃହମ୍ ଶବ୍ଦରେ ଥିବା ମ୍ ର ପୂର୍ବବର୍ତ୍ତୀ 'ଅ' ସ୍ୱର ସହିତ ମିଶି ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ହୋଇ ଗୃହଂ ହୋଇଯାଏ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାକୁ କେତେ ଶ୍ରେଣୀରେ ବିଭକ୍ତ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାକୁ ଦୁଇଟି ପ୍ରଧାନ ଶ୍ରେଣୀ, ଅର୍ଥାତ୍ ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନରେ ବିଭକ୍ତ କରାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଅନୁସ୍ୱାରର ଚିହ୍ନ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାରର ଚିହ୍ନ ଂ ଅଟେ ।",
 
-"<span style='color:red;'>Q-2:</span> ପାଣିନି କେଉଁ ଗ୍ରନ୍ଥରେ ମାହେଶ୍ୱର ସୂତ୍ର ଉଲ୍ଲେଖ କରିଛନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ପାଣିନି ଅଷ୍ଟାଧ୍ୟାୟୀ ଗ୍ରନ୍ଥରେ ମାହେଶ୍ୱର ସୂତ୍ର ଉଲ୍ଲେଖ କରିଛନ୍ତି ।",
+"<span style='color:red;'>Q-2:</span> ଅନୁସ୍ୱାର କେଉଁ ସ୍ଥାନରେ ବ୍ୟବହାର ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର କୌଣସି ସ୍ୱର ପରେ ନ୍ କିମ୍ବା ମ୍ ର ସ୍ଥାନରେ ବ୍ୟବହାର ହୁଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ପାଣିନିଙ୍କ ମତେ ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ସଂଖ୍ୟା କେତେ ?<br><br><span style='color:green;'>Answer:</span> ପାଣିନିଙ୍କ ମତେ ୯ଟି ସ୍ୱରବର୍ଣ୍ଣ ଓ ୩୩ଟି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଅଛନ୍ତି ।",
+"<span style='color:red;'>Q-3:</span> 'ଗୃହମ୍' ଶବ୍ଦ ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ପରେ କେମିତି ହୋଇଯାଏ ?<br><br><span style='color:green;'>Answer:</span> 'ଗୃହମ୍' ଶବ୍ଦ ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ପରେ 'ଗୃହଂ' ହୋଇଯାଏ ।",
 
-"<span style='color:red;'>Q-4:</span> ମାତୃଭାଷାରେ ମୋଟ କେତେଗୋଟି ବର୍ଣ୍ଣ ବ୍ୟବହାର ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ମାତୃଭାଷାରେ ପାଣିନୀୟ ବର୍ଣ୍ଣମାଳା ସହ ଅଯୋଗବାହ ମିଶି ମୋଟ ୪୯ଗୋଟି ବର୍ଣ୍ଣ ବ୍ୟବହାର ହୁଏ ।"
+"<span style='color:red;'>Q-4:</span> ଅନୁସ୍ୱାର କେଉଁ ପ୍ରକାର ବର୍ଣ୍ଣ ପୂର୍ବରୁ ଆସିଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର କୌଣସି ସ୍ୱର ପୂର୍ବରୁ ଆସିଥାଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-3: ସ୍ୱରବର୍ଣ୍ଣ :-",
+heading: "NOTE-3: ବିସର୍ଗ (ଃ) କ'ଣ ? :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଯେଉଁ ବର୍ଣ୍ଣ ନିରପେକ୍ଷ ଭାବରେ ସ୍ୱତଃ ସ୍ପଷ୍ଟ ଉଚ୍ଚାରିତ ହୁଏ, ତାହାକୁ ସ୍ୱରବର୍ଣ୍ଣ କୁହାଯାଏ । ସ୍ୱରବର୍ଣ୍ଣ ସାହାଯ୍ୟରେ ବ୍ୟଞ୍ଜନର ସ୍ପଷ୍ଟ ଉଚ୍ଚାରଣ ସମ୍ଭବ ହୁଏ । ଉଚ୍ଚାରଣ କାଳର ମାତ୍ରା ଆଧାରରେ ସ୍ୱର ତିନି ପ୍ରକାର - ହ୍ରସ୍ୱ, ଦୀର୍ଘ ଓ ପ୍ଲୁତ ।<br><br>👉 ଉଦାହରଣ: ଆମେ ମୁଖ୍ୟତଃ ହ୍ରସ୍ୱ ଓ ଦୀର୍ଘ ସ୍ୱର ଅଧ୍ୟୟନ କରୁ, ଯାହାର ମୋଟ ସଂଖ୍ୟା ୧୩ ଅଟେ ।",
+text:"👉 ଧାରଣା: ବିସର୍ଗର ଚିହ୍ନ ଃ ଅଟେ । ଏହା କୌଣସି ସ୍ୱର ପରେ ପ୍ରୟୋଗ ହୋଇଥାଏ ଏବଂ ଏହାର ନିଜସ୍ୱ ପୃଥକ୍ ଉଚ୍ଚାରଣ ହୁଏ ।<br><br>👉 ଉଦାହରଣ: ନରଃ ଓ ସାଧୁଃ ଶବ୍ଦରେ ଃ ଚିହ୍ନ ବିସର୍ଗ ଭାବେ ବ୍ୟବହୃତ ହୋଇଛି ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ସ୍ୱରବର୍ଣ୍ଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ବର୍ଣ୍ଣ ନିରପେକ୍ଷ ଭାବରେ ସ୍ୱତଃ ସ୍ପଷ୍ଟ ଉଚ୍ଚାରିତ ହୁଏ, ତାହାକୁ ସ୍ୱରବର୍ଣ୍ଣ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ବିସର୍ଗର ଚିହ୍ନ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ବିସର୍ଗର ଚିହ୍ନ ଃ ଅଟେ ।",
 
-"<span style='color:red;'>Q-2:</span> ଉଚ୍ଚାରଣ କାଳର ମାତ୍ରା ଆଧାରରେ ସ୍ୱର କେତେ ପ୍ରକାର ?<br><br><span style='color:green;'>Answer:</span> ଉଚ୍ଚାରଣ କାଳର ମାତ୍ରା ଆଧାରରେ ସ୍ୱର ତିନି ପ୍ରକାର - ହ୍ରସ୍ୱ, ଦୀର୍ଘ ଓ ପ୍ଲୁତ ।",
+"<span style='color:red;'>Q-2:</span> ବିସର୍ଗ କେଉଁଠାରେ ପ୍ରୟୋଗ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ବିସର୍ଗ କୌଣସି ସ୍ୱର ପରେ ପ୍ରୟୋଗ ହୁଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ସ୍ୱରବର୍ଣ୍ଣ ସାହାଯ୍ୟରେ କ'ଣ ସମ୍ଭବ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ସ୍ୱରବର୍ଣ୍ଣ ସାହାଯ୍ୟରେ ବ୍ୟଞ୍ଜନର ସ୍ପଷ୍ଟ ଉଚ୍ଚାରଣ ସମ୍ଭବ ହୁଏ ।",
+"<span style='color:red;'>Q-3:</span> ବିସର୍ଗର ଉଚ୍ଚାରଣ କେମିତି ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ବିସର୍ଗର ପୃଥକ୍ ଓ ନିଜସ୍ୱ ଉଚ୍ଚାରଣ ହୁଏ ।",
 
-"<span style='color:red;'>Q-4:</span> ହ୍ରସ୍ୱ ଓ ଦୀର୍ଘ ସ୍ୱରର ମୋଟ ସଂଖ୍ୟା କେତେ ?<br><br><span style='color:green;'>Answer:</span> ହ୍ରସ୍ୱ ଓ ଦୀର୍ଘ ସ୍ୱରର ମୋଟ ସଂଖ୍ୟା ୧୩ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> ବିସର୍ଗ ବ୍ୟବହୃତ ହୋଇଥିବା ଦୁଇଟି ଶବ୍ଦ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ନରଃ ଓ ସାଧୁଃ ଶବ୍ଦରେ ବିସର୍ଗ ବ୍ୟବହୃତ ହୋଇଛି ।"
 
 ]
 },
 
 {
-heading: "NOTE-4: ହ୍ରସ୍ୱ ସ୍ୱର :-",
+heading: "NOTE-4: ଅନୁନାସିକ (ँ) କ'ଣ ? :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଅ, ଇ, ଉ, ର, ଳ ଏହି ମୂଳସ୍ୱର ସମୁଦାୟ ପାଞ୍ଚଗୋଟିକୁ ହ୍ରସ୍ୱ ସ୍ୱର କୁହାଯାଏ । ଏମାନଙ୍କର ଉଚ୍ଚାରଣ କାଳ ଏକ ମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ, ଅର୍ଥାତ୍ ଏମାନେ ଅଳ୍ପ ସମୟରେ ଉଚ୍ଚାରିତ ହୁଅନ୍ତି ।<br><br>👉 ଉଦାହରଣ: 'ଅ' ଓ 'ଇ' ପରି ବର୍ଣ୍ଣକୁ ଆମେ ବେଶୀ ଟାଣି ଉଚ୍ଚାରଣ କରୁନାହୁଁ, ଏହା ହ୍ରସ୍ୱ ସ୍ୱରର ଗୁଣ ଅଟେ ।",
+text:"👉 ଧାରଣା: ଅନୁନାସିକର ସ୍ୱରୂପ ଚନ୍ଦ୍ରବିନ୍ଦୁ ( ँ ) ଅଟେ । ଏହା ମଧ୍ୟ ଅଯୋଗବାହ ବର୍ଣ୍ଣ ମଧ୍ୟରୁ ଗୋଟିଏ ଅଟେ ।<br><br>👉 ଉଦାହରଣ: କସ୍ଁଣ୍ଡିତ୍ ଓ ସଁବସରଃ ଶବ୍ଦରେ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଚିହ୍ନ ଦେଖିବାକୁ ମିଳେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ହ୍ରସ୍ୱ ସ୍ୱର କେଉଁ କେଉଁ ବର୍ଣ୍ଣ ଅଟନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ଅ, ଇ, ଉ, ର, ଳ ଏହି ପାଞ୍ଚଗୋଟି ବର୍ଣ୍ଣ ହ୍ରସ୍ୱ ସ୍ୱର ଅଟନ୍ତି ।",
+"<span style='color:red;'>Q-1:</span> ଅନୁନାସିକର ସ୍ୱରୂପ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁନାସିକର ସ୍ୱରୂପ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଅଟେ ।",
 
-"<span style='color:red;'>Q-2:</span> ହ୍ରସ୍ୱ ସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ କେତେ ?<br><br><span style='color:green;'>Answer:</span> ହ୍ରସ୍ୱ ସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ ଏକ ମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ ।",
+"<span style='color:red;'>Q-2:</span> ଅନୁନାସିକ କେଉଁ ବର୍ଗର ବର୍ଣ୍ଣ ଅଟେ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁନାସିକ ଅଯୋଗବାହ ବର୍ଣ୍ଣ ମଧ୍ୟରୁ ଗୋଟିଏ ଅଟେ ।",
 
-"<span style='color:red;'>Q-3:</span> ହ୍ରସ୍ୱ ସ୍ୱର ମୋଟ କେତେଗୋଟି ଅଛନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ହ୍ରସ୍ୱ ସ୍ୱର ମୋଟ ପାଞ୍ଚଗୋଟି ଅଛନ୍ତି ।",
+"<span style='color:red;'>Q-3:</span> ଅନୁନାସିକ ବ୍ୟବହୃତ ହୋଇଥିବା ଶବ୍ଦର ଉଦାହରଣ ଦିଅ ।<br><br><span style='color:green;'>Answer:</span> କସ୍ଁଣ୍ଡିତ୍ ଓ ସଁବସରଃ ଶବ୍ଦରେ ଅନୁନାସିକ ବ୍ୟବହୃତ ହୋଇଛି ।",
 
-"<span style='color:red;'>Q-4:</span> ହ୍ରସ୍ୱ ସ୍ୱରକୁ କାହିଁକି ଏହିପରି ନାମ ଦିଆଯାଇଛି ?<br><br><span style='color:green;'>Answer:</span> ଏମାନେ ଅଳ୍ପ ସମୟରେ ଉଚ୍ଚାରିତ ହୁଅନ୍ତି, ତେଣୁ ଏମାନଙ୍କୁ ହ୍ରସ୍ୱ ସ୍ୱର କୁହାଯାଏ ।"
+"<span style='color:red;'>Q-4:</span> ଅନୁନାସିକର ଚିହ୍ନକୁ କ'ଣ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁନାସିକର ଚିହ୍ନକୁ ଚନ୍ଦ୍ରବିନ୍ଦୁ କୁହାଯାଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-5: ଦୀର୍ଘସ୍ୱର :-",
+heading: "NOTE-5: ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାର ମୋଟ ସଂଖ୍ୟା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଆ, ଈ, ଊ, ର, ଏ, ଐ, ଓ, ଔ ସମୁଦାୟ ଆଠଗୋଟି ବର୍ଣ୍ଣକୁ ଦୀର୍ଘସ୍ୱର କୁହାଯାଏ । ଏମାନଙ୍କର ଉଚ୍ଚାରଣ କାଳ ଦୁଇମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ । ପ୍ରଥମ ଚାରିଗୋଟି ଦୀର୍ଘସ୍ୱର ଆ, ଈ, ଊ, ର ର ହ୍ରସ୍ୱରୂପ କ୍ରମଶଃ ଅ, ଇ, ଉ, ଳ ଅଟେ ।<br><br>👉 ଉଦାହରଣ: ଏ, ଐ, ଓ, ଔ ର ହ୍ରସ୍ୱରୂପ ନାହିଁ । ଏମାନେ ଯଥାକ୍ରମେ ଅ ସହିତ ଇ, ଏ, ଉ ଏବଂ ଓ ମିଳନରୁ ଉଚ୍ଚାରିତ ହୋଇଥିବାରୁ ଏମାନଙ୍କୁ ସନ୍ଧ୍ୟକ୍ଷର କୁହାଯାଏ, ଯଥା ଅ+ଇ=ଏ ।",
+text:"👉 ଧାରଣା: ଲୌକିକ ସଂସ୍କୃତରେ ସାଧାରଣତଃ ବ୍ୟବହୃତ ହେଉଥିବା ମୋଟ ବର୍ଣ୍ଣ ସଂଖ୍ୟା ଅଣଚାଶ (୪୯) ଅଟେ । ଏଥିରେ ୧୩ଟି ସ୍ୱର, ୩୩ଟି ବ୍ୟଞ୍ଜନ ଓ ୩ଟି ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅନ୍ତର୍ଭୁକ୍ତ ।<br><br>👉 ଉଦାହରଣ: ଏହି ୪୯ଟି ବର୍ଣ୍ଣ ମଧ୍ୟରୁ ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଅନୁନାସିକ ତିନୋଟି ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅଟନ୍ତି ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଦୀର୍ଘସ୍ୱର କେଉଁ କେଉଁ ବର୍ଣ୍ଣ ଅଟନ୍ତି ?<br><br><span style='color:green;'>Answer:</span> ଆ, ଈ, ଊ, ର, ଏ, ଐ, ଓ, ଔ ଏହି ଆଠଗୋଟି ବର୍ଣ୍ଣ ଦୀର୍ଘସ୍ୱର ଅଟନ୍ତି ।",
+"<span style='color:red;'>Q-1:</span> ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାରେ ମୋଟ କେତୋଟି ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାରେ ମୋଟ ଅଣଚାଶ (୪୯) ଟି ବର୍ଣ୍ଣ ଅଛି ।",
 
-"<span style='color:red;'>Q-2:</span> ଦୀର୍ଘସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ କେତେ ?<br><br><span style='color:green;'>Answer:</span> ଦୀର୍ଘସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ ଦୁଇମାତ୍ରା ସମୟ ବିଶିଷ୍ଟ ।",
+"<span style='color:red;'>Q-2:</span> ସଂସ୍କୃତରେ କେତୋଟି ସ୍ୱର ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତରେ ୧୩ଟି ସ୍ୱର ବର୍ଣ୍ଣ ଅଛି ।",
 
-"<span style='color:red;'>Q-3:</span> କେଉଁ ଦୀର୍ଘସ୍ୱରମାନଙ୍କର ହ୍ରସ୍ୱରୂପ ନାହିଁ ?<br><br><span style='color:green;'>Answer:</span> ଏ, ଐ, ଓ, ଔ ର ହ୍ରସ୍ୱରୂପ ନାହିଁ ।",
+"<span style='color:red;'>Q-3:</span> ସଂସ୍କୃତରେ କେତୋଟି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତରେ ୩୩ଟି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଅଛି ।",
 
-"<span style='color:red;'>Q-4:</span> ସନ୍ଧ୍ୟକ୍ଷର କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅ ସହିତ ଇ, ଏ, ଉ ଓ ଓ ମିଳନରୁ ଉଚ୍ଚାରିତ ହେଉଥିବା ଏ, ଐ, ଓ, ଔ ବର୍ଣ୍ଣକୁ ସନ୍ଧ୍ୟକ୍ଷର କୁହାଯାଏ ।"
+"<span style='color:red;'>Q-4:</span> ସଂସ୍କୃତରେ କେତୋଟି ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତରେ ୩ଟି ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅଛି ।"
 
 ]
 },
 
 {
-heading: "NOTE-6: ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ :-",
+heading: "NOTE-6: 'ଯ' ଓ 'ୟ' ଉଚ୍ଚାରଣ ନିୟମ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଯାହା ସ୍ୱରର ଅନୁଗାମୀ ବା ସ୍ୱର ବିନା ଯାହାର ଉଚ୍ଚାରଣ ହୋଇପାରେ ନାହିଁ, ସେ ବ୍ୟଞ୍ଜନ । ବର୍ଣ୍ଣମାଳାର 'କ' ଆଦି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ସହିତ ଯେଉଁ 'ଅ' ମିଶାଇ ଲେଖାଯାଏ, ତାହା କେବଳ ବ୍ୟଞ୍ଜନର ଉଚ୍ଚାରଣ ଲାଗି ଉଦ୍ଦିଷ୍ଟ ।<br><br>👉 ଉଦାହରଣ: ସମୁଦାୟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା ୩୩ ଅଟେ । ଏହାର ଦୁଇଟି ଭାଗ ଅଛି - ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ଓ ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ।",
+text:"👉 ଧାରଣା: ଶବ୍ଦର ଆରମ୍ଭରେ 'ଯ' ରହିଥାଏ । କିନ୍ତୁ ଶବ୍ଦ ମଧ୍ୟରେ କିମ୍ବା ଶେଷରେ 'ଯ' ଥିଲେ ତାହା 'ୟ' ଭାବେ ଉଚ୍ଚାରିତ ହୁଏ ।<br><br>👉 ଉଦାହରଣ: ଯୋଗ-ବିୟୋଗ ଓ ଯମ-ନିୟମ ଶବ୍ଦରେ ଆରମ୍ଭରେ 'ଯ' ଓ ମଧ୍ୟ/ଶେଷରେ 'ୟ' ଉଚ୍ଚାରଣ ହୋଇଥିବାର ଦେଖାଯାଏ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ବ୍ୟଞ୍ଜନ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଯାହା ସ୍ୱର ବିନା ଉଚ୍ଚାରଣ ହୋଇପାରେ ନାହିଁ, ତାହାକୁ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଶବ୍ଦ ଆରମ୍ଭରେ କେଉଁ ବର୍ଣ୍ଣ ରହେ ?<br><br><span style='color:green;'>Answer:</span> ଶବ୍ଦ ଆରମ୍ଭରେ 'ଯ' ବର୍ଣ୍ଣ ରହେ ।",
 
-"<span style='color:red;'>Q-2:</span> ମୋଟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା କେତେ ?<br><br><span style='color:green;'>Answer:</span> ମୋଟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା ୩୩ ଅଟେ ।",
+"<span style='color:red;'>Q-2:</span> ଶବ୍ଦ ମଧ୍ୟରେ ବା ଶେଷରେ 'ଯ' ଥିଲେ କେମିତି ଉଚ୍ଚାରଣ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଶବ୍ଦ ମଧ୍ୟରେ ବା ଶେଷରେ 'ଯ' ଥିଲେ 'ୟ' ଭାବେ ଉଚ୍ଚାରଣ ହୁଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ବ୍ୟଞ୍ଜନକୁ କେତେ ଭାଗରେ ବିଭକ୍ତ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବ୍ୟଞ୍ଜନକୁ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରାଯାଏ - ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ଓ ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ।",
+"<span style='color:red;'>Q-3:</span> 'ଯୋଗ-ବିୟୋଗ' ଶବ୍ଦରେ ଏହି ନିୟମ କେମିତି ଦେଖାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> 'ଯୋଗ' ଆରମ୍ଭରେ 'ଯ' ଓ 'ବିୟୋଗ' ମଧ୍ୟରେ 'ୟ' ଉଚ୍ଚାରଣ ହୋଇଥିବାର ଦେଖାଯାଏ ।",
 
-"<span style='color:red;'>Q-4:</span> ବର୍ଣ୍ଣମାଳାରେ ବ୍ୟଞ୍ଜନ ସହିତ କେଉଁ ସ୍ୱର ମିଶାଇ ଲେଖାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ସହିତ 'ଅ' ସ୍ୱର ମିଶାଇ ଲେଖାଯାଏ ।"
-
-]
-},
-
-{
-heading: "NOTE-7: ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ :-",
-
-audioPoints: [{
-text:"👉 ଧାରଣା: ଯେଉଁ ବ୍ୟଞ୍ଜନଗୁଡ଼ିକୁ ସ୍ୱର ବର୍ଣ୍ଣ ମଧ୍ୟ କୁହାଯାଏ ନାହିଁ ଓ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମରେ ପାଞ୍ଚ-ପାଞ୍ଚଟି ବର୍ଣ୍ଣକୁ ସ୍ଥାପିତ କରାଯାଇଛି, ସେମାନଙ୍କୁ ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ । ଏମାନଙ୍କ ସଂଖ୍ୟା ସମୁଦାୟ ୨୫ ।<br><br>👉 ଉଦାହରଣ: କ ବର୍ଗ - କ, ଖ, ଗ, ଘ, ଙ; ଚ ବର୍ଗ - ଚ, ଛ, ଜ, ଝ, ଞ; ଟ ବର୍ଗ - ଟ, ଠ, ଡ, ଢ, ଣ; ତ ବର୍ଗ - ତ, ଥ, ଦ, ଧ, ନ; ପ ବର୍ଗ - ପ, ଫ, ବ, ଭ, ମ ।",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ବ୍ୟଞ୍ଜନଗୁଡ଼ିକୁ ପାଞ୍ଚ-ପାଞ୍ଚଟି କରି ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମରେ ସ୍ଥାପିତ କରାଯାଇଛି, ସେମାନଙ୍କୁ ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ ।",
-
-"<span style='color:red;'>Q-2:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା କେତେ ?<br><br><span style='color:green;'>Answer:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା ସମୁଦାୟ ୨୫ ।",
-
-"<span style='color:red;'>Q-3:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କେତେ ବର୍ଗରେ ବିଭକ୍ତ ?<br><br><span style='color:green;'>Answer:</span> ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ ପାଞ୍ଚଗୋଟି ବର୍ଗରେ ବିଭକ୍ତ - କ ବର୍ଗ, ଚ ବର୍ଗ, ଟ ବର୍ଗ, ତ ବର୍ଗ ଓ ପ ବର୍ଗ ।",
-
-"<span style='color:red;'>Q-4:</span> କ ବର୍ଗର ବର୍ଣ୍ଣଗୁଡ଼ିକ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> କ ବର୍ଗର ବର୍ଣ୍ଣଗୁଡ଼ିକ ହେଲା କ, ଖ, ଗ, ଘ, ଙ ।"
-
-]
-},
-
-{
-heading: "NOTE-8: ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ - ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ :-",
-
-audioPoints: [{
-text:"👉 ଧାରଣା: ଯେଉଁ ବ୍ୟଞ୍ଜନଗୁଡ଼ିକ କୌଣସି ବର୍ଗରେ ପଡ଼ନ୍ତି ନାହିଁ, ସେମାନଙ୍କୁ ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ । ଏମାନଙ୍କ ସଂଖ୍ୟା ସମୁଦାୟ ୮ ଓ ଏହା ଦୁଇ ଭାଗରେ ବିଭକ୍ତ - ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ ।<br><br>👉 ଉଦାହରଣ: ଅନ୍ତଃସ୍ଥ ବ୍ୟଞ୍ଜନ - ଯ, ର, ଲ, ବ; ଉଷ୍ମ ବ୍ୟଞ୍ଜନ - ଶ, ଷ, ସ, ହ । ଅନ୍ତଃସ୍ଥକୁ ଅର୍ଦ୍ଧସ୍ୱର ମଧ୍ୟ କୁହାଯାଏ ।",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଯେଉଁ ବ୍ୟଞ୍ଜନଗୁଡ଼ିକ କୌଣସି ବର୍ଗରେ ପଡ଼ନ୍ତି ନାହିଁ, ସେମାନଙ୍କୁ ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ କୁହାଯାଏ ।",
-
-"<span style='color:red;'>Q-2:</span> ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନକୁ କେତେ ଭାଗରେ ବିଭକ୍ତ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନକୁ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରାଯାଏ - ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ ।",
-
-"<span style='color:red;'>Q-3:</span> ଅନ୍ତଃସ୍ଥ ବ୍ୟଞ୍ଜନ କେଉଁଗୁଡ଼ିକ ?<br><br><span style='color:green;'>Answer:</span> ଅନ୍ତଃସ୍ଥ ବ୍ୟଞ୍ଜନ ହେଲା ଯ, ର, ଲ, ବ ।",
-
-"<span style='color:red;'>Q-4:</span> ଉଷ୍ମ ବ୍ୟଞ୍ଜନ କେଉଁଗୁଡ଼ିକ ?<br><br><span style='color:green;'>Answer:</span> ଉଷ୍ମ ବ୍ୟଞ୍ଜନ ହେଲା ଶ, ଷ, ସ, ହ ।"
-
-]
-},
-
-{
-heading: "NOTE-9: ହଳ ବ୍ୟଞ୍ଜନ :-",
-
-audioPoints: [{
-text:"👉 ଧାରଣା: ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣକୁ ହଳ୍ ମଧ୍ୟ କୁହାଯାଏ । ଏହା ଅର୍ଦ୍ଧମାତ୍ରା ବିଶିଷ୍ଟ ଓ ଏହାର ଉଚ୍ଚାରଣ କାଳ ଅର୍ଦ୍ଧନିମେଷ ମାତ୍ର । କେବଳ ବ୍ୟଞ୍ଜନର ପ୍ରୟୋଗ 'ହଳ୍' ଚିହ୍ନ ଯୋଗରେ କରାଯାଏ ଏବଂ ଏହି ସଙ୍କେତ ବର୍ଣ୍ଣର ଅଧୋଭାଗରେ ଅଙ୍କିତ ରହେ ।<br><br>👉 ଉଦାହରଣ: ଯେତେବେଳେ ଆମେ ଏକ ବ୍ୟଞ୍ଜନକୁ ସ୍ୱର ବିନା ଲେଖିବାକୁ ଚାହୁଁ, ସେତେବେଳେ ତାହା ତଳେ ହଳ୍ ଚିହ୍ନ ଲଗାଇ ଲେଖାଯାଏ ।",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣକୁ ଆଉ କେଉଁ ନାମରେ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣକୁ ହଳ୍ ମଧ୍ୟ କୁହାଯାଏ ।",
-
-"<span style='color:red;'>Q-2:</span> ହଳ୍ ର ଉଚ୍ଚାରଣ କାଳ କେତେ ?<br><br><span style='color:green;'>Answer:</span> ହଳ୍ ର ଉଚ୍ଚାରଣ କାଳ ଅର୍ଦ୍ଧନିମେଷ ମାତ୍ର ।",
-
-"<span style='color:red;'>Q-3:</span> କେବଳ ବ୍ୟଞ୍ଜନର ପ୍ରୟୋଗ କେଉଁ ଚିହ୍ନ ଯୋଗରେ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> କେବଳ ବ୍ୟଞ୍ଜନର ପ୍ରୟୋଗ 'ହଳ୍' ଚିହ୍ନ ଯୋଗରେ କରାଯାଏ ।",
-
-"<span style='color:red;'>Q-4:</span> ହଳ୍ ଚିହ୍ନ ବର୍ଣ୍ଣର କେଉଁ ଭାଗରେ ଅଙ୍କିତ ରହେ ?<br><br><span style='color:green;'>Answer:</span> ହଳ୍ ଚିହ୍ନ ବର୍ଣ୍ଣର ଅଧୋଭାଗରେ ଅଙ୍କିତ ରହେ ।"
-
-]
-},
-
-{
-heading: "NOTE-10: ଅଯୋଗବାହ :-",
-
-audioPoints: [{
-text:"👉 ଧାରଣା: ଅନୁସ୍ୱାର (ଂ), ବିସର୍ଗ (ଃ) ଓ ଚନ୍ଦ୍ରବିନ୍ଦୁ (ଁ) ଏହି ତିନିଗୋଟିକୁ ଅଯୋଗବାହ କୁହାଯାଏ । ଏଗୁଡ଼ିକ ସ୍ୱରବର୍ଣ୍ଣ ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଦୁଇଟିରେ ମିଶି ଉଚ୍ଚାରିତ ହୁଅନ୍ତି, ତେଣୁ ଏମାନେ ନା ସମ୍ପୂର୍ଣ୍ଣ ସ୍ୱର, ନା ସମ୍ପୂର୍ଣ୍ଣ ବ୍ୟଞ୍ଜନ ।<br><br>👉 ଉଦାହରଣ: 'ପାଣି' ଶବ୍ଦରେ ଥିବା ଅନୁସ୍ୱାର ଓ 'ଦୁଃଖ' ଶବ୍ଦରେ ଥିବା ବିସର୍ଗ ଅଯୋଗବାହର ଉଦାହରଣ ।",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> ଅଯୋଗବାହ କେଉଁଗୁଡ଼ିକ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର (ଂ), ବିସର୍ଗ (ଃ) ଓ ଚନ୍ଦ୍ରବିନ୍ଦୁ (ଁ) ଏହି ତିନିଗୋଟି ଅଯୋଗବାହ ଅଟନ୍ତି ।",
-
-"<span style='color:red;'>Q-2:</span> ଅଯୋଗବାହ କେଉଁଠି ମିଶି ଉଚ୍ଚାରିତ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଅଯୋଗବାହ ସ୍ୱରବର୍ଣ୍ଣ ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଦୁଇଟିରେ ମିଶି ଉଚ୍ଚାରିତ ହୁଏ ।",
-
-"<span style='color:red;'>Q-3:</span> ଅନୁସ୍ୱାର ସଙ୍କେତ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର ସଙ୍କେତ ହେଲା ଂ ।",
-
-"<span style='color:red;'>Q-4:</span> 'ଦୁଃଖ' ଶବ୍ଦରେ କେଉଁ ଅଯୋଗବାହ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> 'ଦୁଃଖ' ଶବ୍ଦରେ ବିସର୍ଗ ଅଯୋଗବାହ ଅଛି ।"
+"<span style='color:red;'>Q-4:</span> ଏହି ଉଚ୍ଚାରଣ ନିୟମର ଆଉ ଗୋଟିଏ ଉଦାହରଣ ଦିଅ ।<br><br><span style='color:green;'>Answer:</span> ଯମ-ନିୟମ ଶବ୍ଦ ମଧ୍ୟ ଏହି ନିୟମର ଉଦାହରଣ ଅଟେ ।"
 
 ]
 }
@@ -369,13 +295,17 @@ const courseData = {
   `, 
     audio: "",
 mermaid: [
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ବର୍ଣ୍ଣର ପରିଚୟ ଓ<br/>ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପରିଭାଷା\"]\nA --> I1[\"ଲିଖନ ପ୍ରକ୍ରିୟା ମାଧ୍ୟମରେ<br/>ଭାଷାକୁ ବ୍ୟକ୍ତ କରାଯାଏ।\"]\nA --> I2[\"ଏଥିପାଇଁ ଉପଯୋଗୀ<br/>ଧ୍ୱନିଗୁଡ଼ିକୁ ବର୍ଣ୍ଣ କୁହାଯାଏ।\"]\nA --> I3[\"ପାଣିନି ଅଷ୍ଟାଧ୍ୟାୟୀରେ<br/>ଏହାର ବର୍ଣ୍ଣନା ଅଛି।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାର ବିଭାଜନ\"]\nM --> M1[\"ବର୍ଣ୍ଣମାଳାକୁ ଦୁଇଟି<br/>ପ୍ରଧାନ ଶ୍ରେଣୀରେ ବିଭକ୍ତ କରାଯାଏ।\"]\nM --> M2[\"ପ୍ରଥମ ଶ୍ରେଣୀ ସ୍ୱର<br/>ବର୍ଣ୍ଣ, ସଂଖ୍ୟା ୯।\"]\nM --> M3[\"ଦ୍ୱିତୀୟ ଶ୍ରେଣୀ ବ୍ୟଞ୍ଜନ<br/>ବର୍ଣ୍ଣ, ସଂଖ୍ୟା ୩୩।\"]\nM --> M4[\"ଦୀର୍ଘସ୍ୱର ୪ ଓ<br/>ଅଯୋଗବାହ ୩ ମିଶେ।\"]\nM --> M5[\"ମାତୃଭାଷାରେ ମୋଟ<br/>୪୯ଗୋଟି ବର୍ଣ୍ଣ ବ୍ୟବହୃତ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"୯ ସ୍ୱର + ୩୩ ବ୍ୟଞ୍ଜନ<br/>+ ୪ ଦୀର୍ଘ + ୩ ଅଯୋଗବାହ = ୪୯।\"]\nC --> C2[\"ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ ମିଶି<br/>ବର୍ଣ୍ଣମାଳା ଗଠିତ ହୁଏ।\"]\nC --> C3[\"ପ୍ରତ୍ୟେକ ବର୍ଣ୍ଣର ନିଜସ୍ୱ<br/>ଉଚ୍ଚାରଣ ସ୍ଥାନ ଥାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ଅଯୋଗବାହ ବର୍ଣ୍ଣ<br/>(ପରିଚୟ)\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପରିଚୟ\"]\nA --> I1[\"ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ ବ୍ୟତୀତ<br/>ତିନୋଟି ବିଶେଷ ବର୍ଣ୍ଣ ଅଛନ୍ତି।\"]\nA --> I2[\"ଏମାନେ ହେଲେ ଅନୁସ୍ୱାର,<br/>ବିସର୍ଗ ଓ ଅନୁନାସିକ।\"]\nA --> I3[\"ସଂସ୍କୃତ ଭାଷାରେ<br/>ଏମାନଙ୍କ ପ୍ରୟୋଗ ଦେଖାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ବୈଶିଷ୍ଟ୍ୟ\"]\nM --> M1[\"ପ୍ରତ୍ୟାହାର ନିର୍ମାଣରେ<br/>ଏମାନେ ନିରପେକ୍ଷ ରୁହନ୍ତି।\"]\nM --> M2[\"ଶବ୍ଦାଦି ପ୍ରୟୋଗରେ<br/>ଏମାନେ ସାପେକ୍ଷ ହୋଇଥାନ୍ତି।\"]\nM --> M3[\"ଏହି ଦୁଇ ଗୁଣ ଯୋଗୁଁ<br/>ଏମାନେ ଅଯୋଗବାହ ନାମରେ ପରିଚିତ।\"]\nM --> M4[\"ତିନୋଟି ଚିହ୍ନ:<br/>ଂ, ଃ, ँ ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଅଯୋଗବାହ ବର୍ଣ୍ଣ<br/>ସଂଖ୍ୟାରେ ତିନୋଟି।\"]\nC --> C2[\"ଏମାନେ ସ୍ୱର ବା ବ୍ୟଞ୍ଜନ<br/>ନୁହନ୍ତି, ସ୍ୱତନ୍ତ୍ର ଶ୍ରେଣୀର।\"]\nC --> C3[\"ସଂସ୍କୃତ ବ୍ୟାକରଣରେ<br/>ଏହାର ମହତ୍ୱ ରହିଛି।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ସ୍ୱରବର୍ଣ୍ଣ:<br/>ହ୍ରସ୍ୱ ଓ ଦୀର୍ଘ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ସ୍ୱର କ'ଣ\"]\nA --> I1[\"ଯେଉଁ ବର୍ଣ୍ଣ ନିରପେକ୍ଷ<br/>ଭାବରେ ଉଚ୍ଚାରିତ ହୁଏ।\"]\nA --> I2[\"ସ୍ୱରର ସାହାଯ୍ୟରେ ବ୍ୟଞ୍ଜନର<br/>ସ୍ପଷ୍ଟ ଉଚ୍ଚାରଣ ସମ୍ଭବ ହୁଏ।\"]\nA --> I3[\"ଉଚ୍ଚାରଣ କାଳର ମାତ୍ରା<br/>ଅନୁସାରେ ତିନି ପ୍ରକାର।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଦୁଇ ପ୍ରକାର ସ୍ୱର\"]\nM --> M1[\"ହ୍ରସ୍ୱ ସ୍ୱର: ଅ, ଇ, ଉ,<br/>ଋ, ୠ - ପାଞ୍ଚଗୋଟି।\"]\nM --> M2[\"ହ୍ରସ୍ୱର ଉଚ୍ଚାରଣ କାଳ<br/>ଏକମାତ୍ରା ବିଶିଷ୍ଟ।\"]\nM --> M3[\"ଦୀର୍ଘସ୍ୱର: ଆ, ଈ, ଊ, ଏ,<br/>ଐ, ଓ, ଔ - ଆଠଗୋଟି।\"]\nM --> M4[\"ଦୀର୍ଘସ୍ୱରର ଉଚ୍ଚାରଣ କାଳ<br/>ଦୁଇମାତ୍ରା ବିଶିଷ୍ଟ।\"]\nM --> M5[\"ପ୍ରଥମ ଚାରିଗୋଟି ଦୀର୍ଘସ୍ୱର<br/>ହ୍ରସ୍ୱର ମିଳନରୁ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଅ+ଅ=ଆ, ଇ+ଇ=ଈ,<br/>ଉ+ଉ=ଊ, ଋ+ଋ=ୠ।\"]\nC --> C2[\"ଏ, ଐ, ଓ, ଔର ହ୍ରସ୍ୱରୂପ<br/>ନାହିଁ, ସନ୍ଧିରୁ ଉତ୍ପନ୍ନ।\"]\nC --> C3[\"ମୋଟ ସ୍ୱର ସଂଖ୍ୟା<br/>୫+୮=୧୩।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ଅନୁସ୍ୱାର<br/>(ଂ)\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଅନୁସ୍ୱାର କ'ଣ\"]\nA --> I1[\"ଅନୁସ୍ୱାରର ଚିହ୍ନ<br/>ହେଉଛି ଂ ।\"]\nA --> I2[\"ଏହା କୌଣସି ସ୍ୱର<br/>ପରେ ପ୍ରୟୋଗ ହୁଏ।\"]\nA --> I3[\"ଏହା ନ୍ କିମ୍ବା ମ୍<br/>ର ସ୍ଥାନରେ ଆସେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଦାହରଣ ଓ ବ୍ୟାଖ୍ୟା\"]\nM --> M1[\"ଉଦାହରଣ:<br/>ଗୃହଂ ଗଛତି ।\"]\nM --> M2[\"ମୂଳ ଶବ୍ଦ ଥିଲା<br/>ଗୃହମ୍ ।\"]\nM --> M3[\"ଗୃହମ୍ ର ମ୍ ସ୍ଥାନରେ<br/>ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ହୋଇଛି।\"]\nM --> M4[\"ପୂର୍ବବର୍ତ୍ତୀ 'ଅ' ସ୍ୱର<br/>ସହିତ ଏହା ମିଶିଥାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଅନୁସ୍ୱାର ସର୍ବଦା<br/>ସ୍ୱର ପରେ ବସେ।\"]\nC --> C2[\"ଏହା ନ୍ ବା ମ୍ର<br/>ବିକଳ୍ପ ଚିହ୍ନ ଅଟେ।\"]\nC --> C3[\"ଅନୁସ୍ୱାରର ଚିହ୍ନ:<br/>ଂ ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ:<br/>ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ବ୍ୟଞ୍ଜନ କ'ଣ\"]\nA --> I1[\"ଯାହା ସ୍ୱରର ଅନୁଗାମୀ<br/>ବିନା ଉଚ୍ଚାରିତ ହୋଇପାରେ ନାହିଁ।\"]\nA --> I2[\"ମୋଟ ବ୍ୟଞ୍ଜନ<br/>ସଂଖ୍ୟା ୩୩ଗୋଟି।\"]\nA --> I3[\"ଏହା ବର୍ଗୀୟ ଓ<br/>ଅବର୍ଗୀୟ ଭାବେ ଦୁଇଭାଗ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ (୨୫ଗୋଟି)\"]\nM --> M1[\"କ ବର୍ଗ: କ, ଖ, ଗ,<br/>ଘ, ଙ।\"]\nM --> M2[\"ଚ ବର୍ଗ: ଚ, ଛ, ଜ,<br/>ଝ, ଞ।\"]\nM --> M3[\"ଟ ବର୍ଗ: ଟ, ଠ, ଡ,<br/>ଢ, ଣ।\"]\nM --> M4[\"ତ ବର୍ଗ: ତ, ଥ, ଦ,<br/>ଧ, ନ।\"]\nM --> M5[\"ପ ବର୍ଗ: ପ, ଫ, ବ,<br/>ଭ, ମ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ପ୍ରତ୍ୟେକ ବର୍ଗରେ<br/>ପାଞ୍ଚଗୋଟି ବର୍ଣ୍ଣ ଥାଏ।\"]\nC --> C2[\"ମୋଟ ୫ଗୋଟି ବର୍ଗ<br/>= ୫x୫ = ୨୫ ବର୍ଣ୍ଣ।\"]\nC --> C3[\"ଏଗୁଡ଼ିକୁ ସ୍ପର୍ଶବର୍ଣ୍ଣ<br/>ମଧ୍ୟ କୁହାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ବିସର୍ଗ<br/>(ଃ)\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ବିସର୍ଗ କ'ଣ\"]\nA --> I1[\"ବିସର୍ଗର ଚିହ୍ନ<br/>ହେଉଛି ଃ ।\"]\nA --> I2[\"ଏହା ମଧ୍ୟ କୌଣସି<br/>ସ୍ୱର ପରେ ପ୍ରୟୋଗ ହୁଏ।\"]\nA --> I3[\"ଏହାର ଉଚାରଣ<br/>ପୃଥକ ଭାବେ ହୋଇଥାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଦାହରଣ\"]\nM --> M1[\"ଉଦାହରଣ-୧:<br/>ନରଃ ।\"]\nM --> M2[\"ଉଦାହରଣ-୨:<br/>ସାଧୁଃ ।\"]\nM --> M3[\"ଏହି ଶବ୍ଦଗୁଡ଼ିକରେ ଃ<br/>ପୃଥକ ଭାବେ ଉଚାରିତ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ବିସର୍ଗ ସର୍ବଦା<br/>ସ୍ୱର ପରେ ବସେ।\"]\nC --> C2[\"ଏହାର ଉଚାରଣ<br/>ସ୍ୱତନ୍ତ୍ର ଅଟେ।\"]\nC --> C3[\"ବିସର୍ଗର ଚିହ୍ନ:<br/>ଃ ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ<br/>ଓ ଅଯୋଗବାହ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଅବର୍ଗୀୟ ବ୍ୟଞ୍ଜନ\"]\nA --> I1[\"ଏମାନଙ୍କ ସଂଖ୍ୟା<br/>ମୋଟ ୮ଗୋଟି।\"]\nA --> I2[\"ଦୁଇଭାଗରେ ବିଭକ୍ତ:<br/>ଅନ୍ତଃସ୍ଥ ଓ ଉଷ୍ମ।\"]\nA --> I3[\"ଅନ୍ତଃସ୍ଥ: ଯ, ର,<br/>ଲ, ବ - ଚାରିଗୋଟି।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଷ୍ମ ଓ ହଲ୍\"]\nM --> M1[\"ଉଷ୍ମ ବ୍ୟଞ୍ଜନ: ଶ, ଷ,<br/>ସ, ହ - ଚାରିଗୋଟି।\"]\nM --> M2[\"ଅନ୍ତଃସ୍ଥ+ଉଷ୍ମ<br/>= ୪+୪ = ୮ଗୋଟି।\"]\nM --> M3[\"ସ୍ୱର ବିନା ବ୍ୟଞ୍ଜନକୁ<br/>ହଲ୍ ମଧ୍ୟ କୁହାଯାଏ।\"]\nM --> M4[\"ହଲ୍ ଚିହ୍ନ (୍) ବର୍ଣ୍ଣର<br/>ତଳଭାଗରେ ଅଙ୍କିତ ହୁଏ।\"]\nM --> M5[\"ହଲ୍ ବ୍ୟଞ୍ଜନର ଉଚ୍ଚାରଣ<br/>ଅର୍ଦ୍ଧନିମେଷ ମାତ୍ର।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଅଯୋଗବାହ\"]\nC --> C1[\"ଅନୁସ୍ୱାର (ଂ), ବିସର୍ଗ (ଃ),<br/>ଚନ୍ଦ୍ରବିନ୍ଦୁ (ଁ) ତିନିଗୋଟି।\"]\nC --> C2[\"ଏମାନେ ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ<br/>ଦୁଇଟିରେ ମିଶି ଉଚ୍ଚାରିତ ହୁଅନ୍ତି।\"]\nC --> C3[\"ଏଥିପାଇଁ ଏମାନଙ୍କୁ<br/>ଅଯୋଗବାହ କୁହାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଅନୁନାସିକ<br/>(ँ)\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଅନୁନାସିକ କ'ଣ\"]\nA --> I1[\"ଅନୁନାସିକର ସ୍ୱରୂପ<br/>ଚନ୍ଦ୍ରବିନ୍ଦୁ ଅଟେ।\"]\nA --> I2[\"ଏହାର ଚିହ୍ନ<br/>ହେଉଛି ँ ।\"]\nA --> I3[\"ଏହା ମଧ୍ୟ ଏକ<br/>ଅଯୋଗବାହ ବର୍ଣ୍ଣ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଦାହରଣ\"]\nM --> M1[\"ଉଦାହରଣ-୧:<br/>କସ୍ମିଁସ୍ମିନ୍ ।\"]\nM --> M2[\"ଉଦାହରଣ-୨:<br/>ସଁବସରଃ ।\"]\nM --> M3[\"ଉଚାରଣ ସମୟରେ<br/>ନାସିକାର ପ୍ରୟୋଗ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଅନୁନାସିକର ଚିହ୍ନ<br/>ଚନ୍ଦ୍ରବିନ୍ଦୁ ँ ।\"]\nC --> C2[\"ଏହା ନାସିକା ଧ୍ୱନି<br/>ସହ ଉଚାରିତ ହୁଏ।\"]\nC --> C3[\"ଅନୁସ୍ୱାର ଓ ଅନୁନାସିକ<br/>ଭିନ୍ନ ଭିନ୍ନ ଚିହ୍ନ ଅଟନ୍ତି।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-5:<br/>ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାର<br/>ମୋଟ ସଂଖ୍ୟା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଲୌକିକ ସଂସ୍କୃତ ବର୍ଣ୍ଣ\"]\nA --> I1[\"ଲୌକିକ ସଂସ୍କୃତରେ<br/>ସାଧାରଣତଃ ବ୍ୟବହୃତ ବର୍ଣ୍ଣ ଅଛନ୍ତି।\"]\nA --> I2[\"ଏହି ବର୍ଣ୍ଣମାନଙ୍କ<br/>ମୋଟ ସଂଖ୍ୟା ଅଣଚାଳିଶ (୪୯)।\"]\nA --> I3[\"ଏଥିରେ ସ୍ୱର, ବ୍ୟଞ୍ଜନ<br/>ଓ ଅଯୋଗବାହ ସାମିଲ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ବିଭାଜନ\"]\nM --> M1[\"ସ୍ୱର ସଂଖ୍ୟା:<br/>୧୩ ।\"]\nM --> M2[\"ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା:<br/>୩୩ ।\"]\nM --> M3[\"ଅଯୋଗବାହ ସଂଖ୍ୟା:<br/>୩ ।\"]\nM --> M4[\"ମୋଟ:<br/>୧୩ + ୩୩ + ୩ = ୪୯ ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ମୋଟ ବର୍ଣ୍ଣ<br/>ସଂଖ୍ୟା ୪୯ ।\"]\nC --> C2[\"ତିନି ଭାଗରେ ବିଭକ୍ତ:<br/>ସ୍ୱର, ବ୍ୟଞ୍ଜନ, ଅଯୋଗବାହ।\"]\nC --> C3[\"ପରୀକ୍ଷାରେ ଏହି<br/>ପ୍ରଶ୍ନ ପ୍ରାୟତଃ ପଚରାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-6:<br/>ଯ ଓ ୟ ର<br/>ଉଚାରଣ ନିୟମ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ନିୟମ\"]\nA --> I1[\"ଶବ୍ଦ ଆରମ୍ଭରେ<br/>'ଯ' ରହେ।\"]\nA --> I2[\"ପଦ ମଧ୍ୟରେ ବା ଶେଷରେ<br/>'ଯ' ଥିଲେ 'ୟ' ଉଚାରିତ ହୁଏ।\"]\nA --> I3[\"ଏହା ଏକ<br/>ଉଚ୍ଚାରଣ ନିୟମ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଦାହରଣ\"]\nM --> M1[\"ଯୋଗ-ବିୟୋଗ:<br/>ଆରମ୍ଭରେ 'ଯ', ମଧ୍ୟରେ 'ୟ'।\"]\nM --> M2[\"ଯମ-ନିୟମ:<br/>ସମାନ ନିୟମ ପ୍ରଯୁଜ୍ୟ।\"]\nM --> M3[\"ସ୍ଥାନ ଅନୁସାରେ<br/>ଉଚାରଣ ବଦଳେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଆରମ୍ଭରେ<br/>ସର୍ବଦା 'ଯ'।\"]\nC --> C2[\"ମଧ୍ୟ ବା ଶେଷରେ<br/>'ୟ' ଉଚାରଣ।\"]\nC --> C3[\"ଉଦାହରଣ ମନେ ରଖିଲେ<br/>ନିୟମ ବୁଝି ହେବ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`
   ]
   
       
