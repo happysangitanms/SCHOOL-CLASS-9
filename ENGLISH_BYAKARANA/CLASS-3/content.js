@@ -16,209 +16,253 @@ const wordData = {
     currentWord: 0,
     words: [
         {
-            word: "ଅଯୋଗବାହ",
-            odia: "ସ୍ୱାଧୀନ ଭାବେ ବ୍ୟବହାର ନ ହେଉଥିବା ବର୍ଣ୍ଣ",
-            emoji: "🔗",
-            odiaUse: "ଅଯୋଗବାହ ଅର୍ଥ ପ୍ରତ୍ୟାହାର ନିର୍ମାଣରେ ନିରପେକ୍ଷ ଓ ଶଢାଦି ପ୍ରୟୋଗରେ ସାପେକ୍ଷ ହୋଇଥିବା ବର୍ଣ୍ଣ । ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଅନୁନାସିକଙ୍କୁ ଅଯୋଗବାହ କୁହାଯାଏ ।",
+            word: "EARLY RISER",
+            odia: "ସକାଳୁ ଉଠୁଥିବା ବ୍ୟକ୍ତି",
+            emoji: "⏰",
+            odiaUse: "Early riser ଅର୍ଥ ଯିଏ ସକାଳୁ ଶୀଘ୍ର ଉଠେ । Shrinivas is not an early riser. (ଶ୍ରୀନିବାସ ସକାଳୁ ଶୀଘ୍ର ଉଠନ୍ତି ନାହିଁ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ଅନୁସ୍ୱାର",
-            odia: "ଂ (ନ୍ କିମ୍ବା ମ୍ ର ପରିବର୍ତ୍ତେ ଆସୁଥିବା ବର୍ଣ୍ଣ)",
-            emoji: "⚪",
-            odiaUse: "ଅନୁସ୍ୱାର କୌଣସି ସ୍ୱର ପରେ ନ୍ କିମ୍ବା ମ୍ ସ୍ଥାନରେ ଆସିଥାଏ । ଉଦାହରଣ - ଗୃହଂ ଗଛତି । ଏଠାରେ 'ଗୃହମ୍' ର ମ୍ ସ୍ଥାନରେ ପୂର୍ବବର୍ତ୍ତୀ 'ଅ' ସ୍ୱର ସହିତ ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ହୋଇଛି ।",
+            word: "HOBBY",
+            odia: "ସଉକ",
+            emoji: "🎨",
+            odiaUse: "Hobby ଅର୍ଥ ମନ ଭଲ ଲାଗିବା କାର୍ଯ୍ୟ ଯାହା ଆମେ ଖୁସିରେ କରୁ । Shrinivas's hobby is swimming. (ଶ୍ରୀନିବାସଙ୍କ ସଉକ ହେଉଛି ପହଁରିବା ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ବିସର୍ଗ",
-            odia: "ଃ (ସ୍ୱର ପରେ ଆସି ପୃଥକ୍ ଉଚ୍ଚାରଣ ହେଉଥିବା ବର୍ଣ୍ଣ)",
-            emoji: "❕",
-            odiaUse: "ବିସର୍ଗର ପ୍ରୟୋଗ କୌଣସି ସ୍ୱର ପରେ ହୋଇଥାଏ ଏବଂ ଏହାର ପୃଥକ୍ ଉଚ୍ଚାରଣ ହୁଏ । ଉଦାହରଣ- ନରଃ, ସାଧୁଃ ଇତ୍ୟାଦି ।",
+            word: "DIALOGUE",
+            odia: "ସଂଳାପ",
+            emoji: "💬",
+            odiaUse: "Dialogue ଅର୍ଥ ଦୁଇ ବ୍ୟକ୍ତିଙ୍କ ମଧ୍ୟରେ କଥୋପକଥନ । The traffic police and the bike-rider had a dialogue. (ଟ୍ରାଫିକ ପୋଲିସ ଓ ବାଇକ ଚାଳକଙ୍କ ମଧ୍ୟରେ ସଂଳାପ ହେଲା ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ଅନୁନାସିକ",
-            odia: "ଁ (ଚନ୍ଦ୍ରବିନ୍ଦୁ ଆକୃତିର ନାକରୁ ଉଚ୍ଚାରିତ ହେଉଥିବା ବର୍ଣ୍ଣ)",
-            emoji: "👃",
-            odiaUse: "ଅନୁନାସିକର ସ୍ୱରୂପ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଅଟେ । ଯଥା- କସ୍ଁୟିତ୍, ସଁବତ୍ସରଃ ଇତ୍ୟାଦି ।",
+            word: "INSTRUCTIONS",
+            odia: "ନିର୍ଦ୍ଦେଶ",
+            emoji: "📋",
+            odiaUse: "Instructions ଅର୍ଥ କିଛି କରିବା ପାଇଁ ଦିଆଯାଇଥିବା ଆଦେଶ କିମ୍ବା ପଥ । The police gave instructions to reach Sainik School. (ପୋଲିସ ସୈନିକ ସ୍କୁଲ ପହଞ୍ଚିବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଦେଲେ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ପ୍ରତ୍ୟାହାର",
-            odia: "ବର୍ଣ୍ଣସମୂହକୁ ସଂକ୍ଷେପରେ ପ୍ରକାଶ କରିବା ପାଇଁ ବ୍ୟାକରଣରେ ବ୍ୟବହୃତ ପଦ୍ଧତି",
-            emoji: "📚",
-            odiaUse: "ଅଯୋଗବାହ ବର୍ଣ୍ଣମାନ ପ୍ରତ୍ୟାହାର ନିର୍ମାଣରେ ନିରପେକ୍ଷ, ଅର୍ଥାତ୍ ବ୍ୟାକରଣର ସଂକ୍ଷିପ୍ତ ବର୍ଣ୍ଣ-ସମୂହ ତିଆରି କରିବାରେ ଏମାନଙ୍କର ଆବଶ୍ୟକତା ନାହିଁ ।",
+            word: "ROAD-MAP",
+            odia: "ରାସ୍ତା ମାନଚିତ୍ର",
+            emoji: "🗺️",
+            odiaUse: "Road-map ଅର୍ଥ ରାସ୍ତା ଦେଖାଉଥିବା ଚିତ୍ର । The traffic police drew a road-map for the bike-rider. (ଟ୍ରାଫିକ ପୋଲିସ ବାଇକ ଚାଳକଙ୍କ ପାଇଁ ରାସ୍ତା ମାନଚିତ୍ର ଆଙ୍କିଲେ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ନିରପେକ୍ଷ",
-            odia: "କାହା ଉପରେ ନିର୍ଭର ନ କରୁଥିବା, ସ୍ୱାଧୀନ",
-            emoji: "🚫🔗",
-            odiaUse: "ଅଯୋଗବାହ ବର୍ଣ୍ଣମାନ ପ୍ରତ୍ୟାହାର ନିର୍ମାଣରେ ନିରପେକ୍ଷ ହୋଇଥାନ୍ତି, ଅର୍ଥାତ୍ ସେଠାରେ ଏମାନଙ୍କର କୌଣସି ଭୂମିକା ନାହିଁ ।",
+            word: "STRAIGHT",
+            odia: "ସିଧା",
+            emoji: "➡️",
+            odiaUse: "Straight ଅର୍ଥ ସିଧା ରାସ୍ତାରେ ଚାଲିବା । Go straight along the N.H. upto Jayadev Vihar. (ଜାତୀୟ ରାଜପଥ ଦେଇ ଜୟଦେବ ବିହାର ପର୍ଯ୍ୟନ୍ତ ସିଧା ଯାଅ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ସାପେକ୍ଷ",
-            odia: "କାହା ଉପରେ ନିର୍ଭର କରୁଥିବା",
-            emoji: "🔗✔️",
-            odiaUse: "ଶଢାଦି ପ୍ରୟୋଗରେ ଅଯୋଗବାହ ବର୍ଣ୍ଣମାନ ସାପେକ୍ଷ ହୋଇଥାନ୍ତି, ଅର୍ଥାତ୍ ସେଠାରେ ଏମାନଙ୍କର ପ୍ରୟୋଗ ଆବଶ୍ୟକ ହୋଇଥାଏ ।",
+            word: "NATIONAL HIGHWAY",
+            odia: "ଜାତୀୟ ରାଜପଥ",
+            emoji: "🛣️",
+            odiaUse: "National Highway (N.H.) ଅର୍ଥ ବଡ଼ ଓ ମୁଖ୍ୟ ରାସ୍ତା ଯାହା ସହରକୁ ସହର ସହିତ ଯୋଡ଼େ । Go straight along the N.H. (ଜାତୀୟ ରାଜପଥ ଦେଇ ସିଧା ଯାଅ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ଚନ୍ଦ୍ରବିନ୍ଦୁ",
-            odia: "ଚନ୍ଦ୍ର ଓ ବିନ୍ଦୁ ମିଶି ତିଆରି ହୋଇଥିବା ଚିହ୍ନ ( ଁ )",
-            emoji: "🌙",
-            odiaUse: "ଅନୁନାସିକର ସ୍ୱରୂପ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଅଟେ, ଯାହା ଦେଖିବାକୁ ଅର୍ଦ୍ଧଚନ୍ଦ୍ର ଉପରେ ଏକ ବିନ୍ଦୁ ପରି ଲାଗେ ।",
+            word: "CHHAK",
+            odia: "ଛକ",
+            emoji: "🚦",
+            odiaUse: "Chhak ଅର୍ଥ ଯେଉଁଠାରେ ଅନେକ ରାସ୍ତା ମିଳିତ ହୁଏ । Turn right at Nalco Chhak. (ନାଲକୋ ଛକରେ ଡାହାଣକୁ ମୁଡ଼ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ଲୌକିକ ସଂସ୍କୃତ",
-            odia: "ସାଧାରଣ ଭାବେ ଲୋକମାନଙ୍କ ଦ୍ୱାରା ବ୍ୟବହୃତ ସଂସ୍କୃତ ଭାଷା",
-            emoji: "🗣️",
-            odiaUse: "ଲୌକିକ ସଂସ୍କୃତରେ ସାଧାରଣ ଭାବେ ବ୍ୟବହୃତ ହେଉଥିବା ବର୍ଣ୍ଣମାନଙ୍କର ସଂଖ୍ୟା ଅଣଚାଶ (୪୯) ।",
+            word: "STATION SQUARE",
+            odia: "ଷ୍ଟେସନ ଛକ",
+            emoji: "🚉",
+            odiaUse: "Station Square ଅର୍ଥ ଷ୍ଟେସନ ନିକଟସ୍ଥ ଛକ । Go upto the station square. (ଷ୍ଟେସନ ଛକ ପର୍ଯ୍ୟନ୍ତ ଯାଅ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ଅଣଚାଶ",
-            odia: "୪୯ ସଂଖ୍ୟା (ଏକଚାଳିଶ ପରେ ଓ ପଚାଶ ପୂର୍ବେ ଆସୁଥିବା ସଂଖ୍ୟା)",
-            emoji: "🔢",
-            odiaUse: "ଲୌକିକ ସଂସ୍କୃତର ମୋଟ ବର୍ଣ୍ଣ ସଂଖ୍ୟା ଅଣଚାଶ, ଯାହା ୧୩ଟି ସ୍ୱର, ୩୩ଟି ବ୍ୟଞ୍ଜନ ଓ ୩ଟି ଅଯୋଗବାହ ମିଶି ତିଆରି ହୋଇଛି ।",
+            word: "STATUE",
+            odia: "ମୂର୍ତ୍ତି",
+            emoji: "🗿",
+            odiaUse: "Statue ଅର୍ଥ ପଥର କିମ୍ବା ଧାତୁରେ ତିଆରି ମନୁଷ୍ୟ ଆକୃତି । There is a statue of S. Kundu near the road. (ରାସ୍ତା ପାଖରେ ଏସ. କୁଣ୍ଡୁଙ୍କ ମୂର୍ତ୍ତି ଅଛି ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ଯ ଓ ୟ",
-            odia: "ଶବ୍ଦ ଆରମ୍ଭରେ 'ଯ' ଓ ମଧ୍ୟ/ଶେଷରେ 'ୟ' ଉଚ୍ଚାରଣ ହେବାର ନିୟମ",
+            word: "PROOF ROAD",
+            odia: "ପ୍ରୁଫ ରୋଡ୍",
+            emoji: "🛤️",
+            odiaUse: "Proof Road ଏକ ରାସ୍ତାର ନାମ ଯାହା ମାନଚିତ୍ରରେ ଦେଖାଯାଏ । The gate of Zilla School is beside the Proof Road. (ଜିଲ୍ଲା ସ୍କୁଲର ଫାଟକ ପ୍ରୁଫ ରୋଡ୍ ପାଖରେ ଅଛି ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "DAILY ROUTINE",
+            odia: "ଦୈନନ୍ଦିନ କାର୍ଯ୍ୟକ୍ରମ",
+            emoji: "📅",
+            odiaUse: "Daily Routine ଅର୍ଥ ପ୍ରତିଦିନ କରାଯାଉଥିବା କାର୍ଯ୍ୟ । Write a few sentences on your daily routine. (ନିଜର ଦୈନନ୍ଦିନ କାର୍ଯ୍ୟକ୍ରମ ଉପରେ କିଛି ବାକ୍ୟ ଲେଖ ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "SUBJECT",
+            odia: "କର୍ତ୍ତା",
+            emoji: "🙋",
+            odiaUse: "Subject ଅର୍ଥ ବାକ୍ୟରେ ଯାହା ବିଷୟରେ କୁହାଯାଏ । Wind is the subject in 'Wind blows.' (ପବନ 'ପବନ ପବନ ଚାଲେ' ବାକ୍ୟରେ କର୍ତ୍ତା ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PREDICATE",
+            odia: "କ୍ରିୟା ପଦ",
+            emoji: "🏃",
+            odiaUse: "Predicate ଅର୍ଥ ବାକ୍ୟରେ କର୍ତ୍ତା ବିଷୟରେ କୁହାଯାଇଥିବା ଅଂଶ । 'Blows' is the predicate in 'Wind blows.' ('ପବନ ଚାଲେ' ବାକ୍ୟରେ 'ଚାଲେ' କ୍ରିୟା ପଦ ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "ESSENTIAL",
+            odia: "ଅତ୍ୟାବଶ୍ୟକ",
+            emoji: "❗",
+            odiaUse: "Essential ଅର୍ଥ ଅତ୍ୟନ୍ତ ଆବଶ୍ୟକ । A sentence has two essential parts - subject and predicate. (ଏକ ବାକ୍ୟର ଦୁଇଟି ଅତ୍ୟାବଶ୍ୟକ ଅଂଶ ଅଛି - କର୍ତ୍ତା ଏବଂ କ୍ରିୟା ପଦ ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PRONOUN",
+            odia: "ସର୍ବନାମ",
             emoji: "🔤",
-            odiaUse: "ଶବ୍ଦ ଆରମ୍ଭରେ 'ଯ' ରହେ, ମାତ୍ର ପଦ ମଧ୍ୟରେ ବା ଶେଷରେ 'ଯ' ଥିଲେ 'ୟ' ଉଚ୍ଚାରିତ ହୁଏ । ଯଥା- ଯୋଗ-ବିୟୋଗ, ଯମ-ନିୟମ ଇତ୍ୟାଦି ।",
+            odiaUse: "Pronoun ଅର୍ଥ ବିଶେଷ୍ୟ ପରିବର୍ତ୍ତେ ବ୍ୟବହୃତ ଶବ୍ଦ । 'She' is a pronoun in 'She smiled.' ('ସେ ହସିଲା' ବାକ୍ୟରେ 'ସେ' ସର୍ବନାମ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "ପୃଥକ୍",
-            odia: "ଅଲଗା, ଭିନ୍ନ",
-            emoji: "↔️",
-            odiaUse: "ବିସର୍ଗର ପ୍ରୟୋଗ କୌଣସି ସ୍ୱର ପରେ ହୋଇଥାଏ ଏବଂ ଏହାର ପୃଥକ୍ ଉଚ୍ଚାରଣ ହୁଏ, ଅର୍ଥାତ୍ ଏହା ପୂର୍ବବର୍ତ୍ତୀ ସ୍ୱର ସହିତ ମିଶେ ନାହିଁ ।",
+            word: "VERB",
+            odia: "କ୍ରିୟା",
+            emoji: "🏃‍♂️",
+            odiaUse: "Verb ଅର୍ଥ କାର୍ଯ୍ୟ ବା ଅବସ୍ଥା ଦର୍ଶାଉଥିବା ଶବ୍ଦ । 'Plays' is the verb in 'Rama plays.' ('ରାମ ଖେଳେ' ବାକ୍ୟରେ 'ଖେଳେ' କ୍ରିୟା ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "HEAD-WORD",
+            odia: "ମୁଖ୍ୟ ଶବ୍ଦ",
+            emoji: "👑",
+            odiaUse: "Head-word ଅର୍ଥ ମୁଖ୍ୟ ବା ପ୍ରଧାନ ଶବ୍ଦ । The head-word of the subject is a noun. (କର୍ତ୍ତାର ମୁଖ୍ୟ ଶବ୍ଦ ଏକ ବିଶେଷ୍ୟ ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "NEIGHBOUR",
+            odia: "ପଡ଼ୋଶୀ",
+            emoji: "🏠",
+            odiaUse: "Neighbour ଅର୍ଥ ପାଖରେ ରହୁଥିବା ଲୋକ । Our old neighbour has a dog. (ଆମର ପୁରୁଣା ପଡ଼ୋଶୀଙ୍କର ଏକ କୁକୁର ଅଛି ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "RULED",
+            odia: "ରାଜ୍ୟ କଲେ",
+            emoji: "👑",
+            odiaUse: "Ruled ଅର୍ଥ ରାଜ୍ୟ ଚଳାଇବା । Rama Chandra ruled over Ayodhya for many years. (ରାମ ଚନ୍ଦ୍ର ଅନେକ ବର୍ଷ ଅଯୋଧ୍ୟାରେ ରାଜ୍ୟ କଲେ ।)",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "OBEY",
+            odia: "ମାନିବା",
+            emoji: "🙏",
+            odiaUse: "Obey ଅର୍ଥ କାହାର କଥା ମାନିବା । You should obey your parents. (ତୁମେ ତୁମର ପିତାମାତାଙ୍କ କଥା ମାନିବା ଉଚିତ୍ ।)",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
-};   
+};
+    
 const topicsData = [
 
 {
-heading: "NOTE-1: ଅଯୋଗବାହ ବର୍ଣ୍ଣ କ'ଣ ? :-",
+heading: "NOTE-1: ବାକ୍ୟର ଅଂଶ - Subject ଓ Predicate :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ସଂସ୍କୃତ ଭାଷାରେ ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ବ୍ୟତୀତ ତିନୋଟି ବିଶେଷ ବର୍ଣ୍ଣ ମଧ୍ୟ ବ୍ୟବହାର ହୁଏ - ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଅନୁନାସିକ । ଏହି ତିନୋଟି ବର୍ଣ୍ଣକୁ ଏକାଠି ଅଯୋଗବାହ ବର୍ଣ୍ଣ କୁହାଯାଏ । ପ୍ରତ୍ୟାହାର ତିଆରି ସମୟରେ ଏମାନେ ଆବଶ୍ୟକ ହୁଅନ୍ତି ନାହିଁ, କିନ୍ତୁ ଶବ୍ଦ ଲେଖିବା ସମୟରେ ଏମାନଙ୍କର ପ୍ରୟୋଗ ଜରୁରୀ ହୁଏ ।<br><br>👉 ଉଦାହରଣ: ଗୃହଂ ଶବ୍ଦରେ ଥିବା ଂ ଚିହ୍ନ ଏକ ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅଟେ ।",
+text:"👉 ଧାରଣା: ପ୍ରତ୍ୟେକ ବାକ୍ୟର ଦୁଇଟି ମୁଖ୍ୟ ଅଂଶ ଥାଏ - Subject ଓ Predicate । Subject ହେଉଛି ସେହି ଅଂଶ, ଯାହା ବିଷୟରେ ବାକ୍ୟଟି କୁହାଯାଉଛି । Predicate ହେଉଛି ସେହି ଅଂଶ, ଯାହା Subject ବିଷୟରେ କିଛି କହେ, ଅର୍ଥାତ୍ ସେ କ'ଣ କରୁଛି ତାହା ଜଣାଏ ।<br><br>👉 ଉଦାହରଣ: 'Wind blows' ବାକ୍ୟରେ 'Wind' ହେଉଛି Subject ଏବଂ 'blows' ହେଉଛି Predicate । ସେହିପରି 'Birds fly' ରେ 'Birds' Subject ଓ 'fly' Predicate ଅଟେ, ଏବଂ 'She smiled' ରେ 'She' Subject ଓ 'smiled' Predicate ଅଟେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଅନୁନାସିକ - ଏହି ତିନୋଟି ବର୍ଣ୍ଣକୁ ଅଯୋଗବାହ ବର୍ଣ୍ଣ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ବାକ୍ୟର ଦୁଇଟି ମୁଖ୍ୟ ଅଂଶ କ'ଣ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ବାକ୍ୟର ଦୁଇଟି ମୁଖ୍ୟ ଅଂଶ ହେଉଛି Subject ଓ Predicate ।",
 
-"<span style='color:red;'>Q-2:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣରେ କେତୋଟି ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣରେ ତିନୋଟି ବର୍ଣ୍ଣ ଅଛି ।",
+"<span style='color:red;'>Q-2:</span> Subject କ'ଣ କୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବାକ୍ୟରେ ଯାହା ବିଷୟରେ କୁହାଯାଉଛି, ସେହି ଅଂଶକୁ Subject କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣର ପ୍ରୟୋଗ କେଉଁ ଭାଷାରେ ଦେଖାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅଯୋଗବାହ ବର୍ଣ୍ଣର ପ୍ରୟୋଗ ସଂସ୍କୃତ ଭାଷାରେ ଦେଖାଯାଏ ।",
+"<span style='color:red;'>Q-3:</span> Predicate କ'ଣ କାମ କରେ ?<br><br><span style='color:green;'>Answer:</span> Predicate ଏହା ଜଣାଏ ଯେ Subject କ'ଣ କରୁଛି ବା ତାହାର ଅବସ୍ଥା କ'ଣ ।",
 
-"<span style='color:red;'>Q-4:</span> 'ଗୃହଂ' ଶବ୍ଦରେ କେଉଁ ଅଯୋଗବାହ ବର୍ଣ୍ଣ ବ୍ୟବହୃତ ହୋଇଛି ?<br><br><span style='color:green;'>Answer:</span> 'ଗୃହଂ' ଶବ୍ଦରେ ଅନୁସ୍ୱାର ବ୍ୟବହୃତ ହୋଇଛି ।"
+"<span style='color:red;'>Q-4:</span> 'Birds fly' ବାକ୍ୟରେ Subject ଓ Predicate କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> ଏଥିରେ 'Birds' Subject ଏବଂ 'fly' Predicate ଅଟେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-2: ଅନୁସ୍ୱାର (ଂ) କ'ଣ ? :-",
+heading: "NOTE-2: ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Subject ଓ Predicate ର ନିୟମ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଅନୁସ୍ୱାରର ଚିହ୍ନ ଂ ଅଟେ । ଏହା କୌଣସି ସ୍ୱର ପରେ ନ୍ କିମ୍ବା ମ୍ ର ସ୍ଥାନରେ ବ୍ୟବହାର ହୁଏ । ଯେତେବେଳେ ଶବ୍ଦ ଶେଷରେ ମ୍ ଥାଏ, ସେହି ମ୍ ପୂର୍ବରୁ ଥିବା ସ୍ୱର ସହିତ ମିଶି ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ହୁଏ ।<br><br>👉 ଉଦାହରଣ: ଗୃହମ୍ ଶବ୍ଦରେ ଥିବା ମ୍ ର ପୂର୍ବବର୍ତ୍ତୀ 'ଅ' ସ୍ୱର ସହିତ ମିଶି ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ହୋଇ ଗୃହଂ ହୋଇଯାଏ ।",
+text:"👉 ଧାରଣା: ଯଦି ଗୋଟିଏ ବାକ୍ୟର Subject କେବଳ ଗୋଟିଏ ଶବ୍ଦରେ ତିଆରି, ତେବେ ସେହି ଶବ୍ଦଟି ହୁଏ Noun ନହେଲେ Pronoun ହୋଇଥାଏ । ସେହିପରି ଯଦି Predicate ମଧ୍ୟ ଗୋଟିଏ ଶବ୍ଦରେ ତିଆରି, ତେବେ ସେହି ଶବ୍ଦଟି ନିଶ୍ଚୟ ଏକ Verb ହୋଇଥିବ ।<br><br>👉 ଉଦାହରଣ: 'Rama plays' ବାକ୍ୟରେ 'Rama' ଏକ Noun ଅଟେ ଯାହା Subject ଅଟେ, ଏବଂ 'plays' ଏକ Verb ଅଟେ ଯାହା Predicate ଅଟେ । 'She sings' ରେ 'She' ଏକ Pronoun ଅଟେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଅନୁସ୍ୱାରର ଚିହ୍ନ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାରର ଚିହ୍ନ ଂ ଅଟେ ।",
+"<span style='color:red;'>Q-1:</span> ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Subject ସାଧାରଣତଃ କେଉଁ ପ୍ରକାରର ଶବ୍ଦ ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Subject ଏକ Noun ନହେଲେ ଏକ Pronoun ହୋଇଥାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ଅନୁସ୍ୱାର କେଉଁ ସ୍ଥାନରେ ବ୍ୟବହାର ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର କୌଣସି ସ୍ୱର ପରେ ନ୍ କିମ୍ବା ମ୍ ର ସ୍ଥାନରେ ବ୍ୟବହାର ହୁଏ ।",
+"<span style='color:red;'>Q-2:</span> ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Predicate କେଉଁ ପ୍ରକାରର ଶବ୍ଦ ହେବାକୁ ପଡ଼େ ?<br><br><span style='color:green;'>Answer:</span> ଏକ-ଶବ୍ଦ ବିଶିଷ୍ଟ Predicate ନିଶ୍ଚୟ ଏକ Verb ହେବାକୁ ପଡ଼େ ।",
 
-"<span style='color:red;'>Q-3:</span> 'ଗୃହମ୍' ଶବ୍ଦ ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ପରେ କେମିତି ହୋଇଯାଏ ?<br><br><span style='color:green;'>Answer:</span> 'ଗୃହମ୍' ଶବ୍ଦ ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ପରେ 'ଗୃହଂ' ହୋଇଯାଏ ।",
+"<span style='color:red;'>Q-3:</span> 'Time flies' ବାକ୍ୟରେ 'flies' ଶବ୍ଦଟି କେଉଁ ଶ୍ରେଣୀର ଅଟେ ?<br><br><span style='color:green;'>Answer:</span> 'flies' ଶବ୍ଦଟି ଏକ Verb ଅଟେ, କାରଣ ଏହା Predicate ଅଟେ ।",
 
-"<span style='color:red;'>Q-4:</span> ଅନୁସ୍ୱାର କେଉଁ ପ୍ରକାର ବର୍ଣ୍ଣ ପୂର୍ବରୁ ଆସିଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁସ୍ୱାର କୌଣସି ସ୍ୱର ପୂର୍ବରୁ ଆସିଥାଏ ।"
+"<span style='color:red;'>Q-4:</span> 'He' ଭଳି ଶବ୍ଦ Subject ହେଲେ ତାହା କେଉଁ ଶ୍ରେଣୀର ?<br><br><span style='color:green;'>Answer:</span> 'He' ଭଳି ଶବ୍ଦ ଏକ Pronoun ଅଟେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-3: ବିସର୍ଗ (ଃ) କ'ଣ ? :-",
+heading: "NOTE-3: ବାକ୍ୟକୁ ଭାଗ କରି Verb ଚିହ୍ନଟ କରିବା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ବିସର୍ଗର ଚିହ୍ନ ଃ ଅଟେ । ଏହା କୌଣସି ସ୍ୱର ପରେ ପ୍ରୟୋଗ ହୋଇଥାଏ ଏବଂ ଏହାର ନିଜସ୍ୱ ପୃଥକ୍ ଉଚ୍ଚାରଣ ହୁଏ ।<br><br>👉 ଉଦାହରଣ: ନରଃ ଓ ସାଧୁଃ ଶବ୍ଦରେ ଃ ଚିହ୍ନ ବିସର୍ଗ ଭାବେ ବ୍ୟବହୃତ ହୋଇଛି ।",
+text:"👉 ଧାରଣା: ଗୋଟିଏ ବାକ୍ୟକୁ ଆମେ ଦୁଇଟି ଭାଗରେ ଭାଗ କରିପାରିବା - ପ୍ରଥମେ Subject ଏବଂ ପରେ Predicate । ଏହା କରିବା ପରେ Predicate ଭିତରୁ Verb ଟିକୁ ଆଲଗା କରି ଚିହ୍ନଟ କରାଯାଇ ପାରିବ ।<br><br>👉 ଉଦାହରଣ: 'Rama plays' ବାକ୍ୟକୁ ଭାଗ କଲେ - Subject: Rama, Predicate: plays, ଏବଂ ଏହି ବାକ୍ୟର Verb ହେଉଛି 'plays' । ସେହିପରି 'Children laugh' ରେ Subject 'Children' ଏବଂ Verb 'laugh' ଅଟେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ବିସର୍ଗର ଚିହ୍ନ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ବିସର୍ଗର ଚିହ୍ନ ଃ ଅଟେ ।",
+"<span style='color:red;'>Q-1:</span> ଗୋଟିଏ ବାକ୍ୟକୁ କେତୋଟି ଭାଗରେ ଭାଗ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଗୋଟିଏ ବାକ୍ୟକୁ ଦୁଇଟି ଭାଗରେ ଭାଗ କରାଯାଏ - Subject ଏବଂ Predicate ।",
 
-"<span style='color:red;'>Q-2:</span> ବିସର୍ଗ କେଉଁଠାରେ ପ୍ରୟୋଗ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ବିସର୍ଗ କୌଣସି ସ୍ୱର ପରେ ପ୍ରୟୋଗ ହୁଏ ।",
+"<span style='color:red;'>Q-2:</span> Verb ଟିକୁ ବାକ୍ୟର କେଉଁ ଅଂଶରୁ ଖୋଜାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> Verb ଟିକୁ ବାକ୍ୟର Predicate ଅଂଶରୁ ଖୋଜାଯାଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ବିସର୍ଗର ଉଚ୍ଚାରଣ କେମିତି ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ବିସର୍ଗର ପୃଥକ୍ ଓ ନିଜସ୍ୱ ଉଚ୍ଚାରଣ ହୁଏ ।",
+"<span style='color:red;'>Q-3:</span> 'Children laugh' ବାକ୍ୟର Verb କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> ଏହି ବାକ୍ୟର Verb ହେଉଛି 'laugh' ।",
 
-"<span style='color:red;'>Q-4:</span> ବିସର୍ଗ ବ୍ୟବହୃତ ହୋଇଥିବା ଦୁଇଟି ଶବ୍ଦ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ନରଃ ଓ ସାଧୁଃ ଶବ୍ଦରେ ବିସର୍ଗ ବ୍ୟବହୃତ ହୋଇଛି ।"
+"<span style='color:red;'>Q-4:</span> 'You should obey your parents' ଭଳି ଲମ୍ବା ବାକ୍ୟରେ ମଧ୍ୟ ଆମେ କ'ଣ ଚିହ୍ନଟ କରିପାରିବା ?<br><br><span style='color:green;'>Answer:</span> ଏଭଳି ଲମ୍ବା ବାକ୍ୟରେ ମଧ୍ୟ ଆମେ Subject ଓ Predicate ଚିହ୍ନଟ କରି Verb ଖୋଜିପାରିବା ।"
 
 ]
 },
 
 {
-heading: "NOTE-4: ଅନୁନାସିକ (ँ) କ'ଣ ? :-",
+heading: "NOTE-4: Subject ଓ Predicate ର Head-word ନିୟମ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଅନୁନାସିକର ସ୍ୱରୂପ ଚନ୍ଦ୍ରବିନ୍ଦୁ ( ँ ) ଅଟେ । ଏହା ମଧ୍ୟ ଅଯୋଗବାହ ବର୍ଣ୍ଣ ମଧ୍ୟରୁ ଗୋଟିଏ ଅଟେ ।<br><br>👉 ଉଦାହରଣ: କସ୍ଁଣ୍ଡିତ୍ ଓ ସଁବସରଃ ଶବ୍ଦରେ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଚିହ୍ନ ଦେଖିବାକୁ ମିଳେ ।",
+text:"👉 ଧାରଣା: ଅନେକ ସମୟରେ Subject ଓ Predicate ଗୋଟିଏରୁ ଅଧିକ ଶବ୍ଦରେ ତିଆରି ହୋଇଥାଏ । ଏଭଳି କ୍ଷେତ୍ରରେ ମଧ୍ୟ ଏକ ନିୟମ ଥାଏ - Subject ର ମୁଖ୍ୟ ଶବ୍ଦ (Head-word) ସର୍ବଦା ଏକ Noun ହୋଇଥାଏ, ଏବଂ Predicate ର ମୁଖ୍ୟ ଶବ୍ଦ ସର୍ବଦା ଏକ Verb ହୋଇଥାଏ ।<br><br>👉 ଉଦାହରଣ: 'Rama Chandra, the son of Dasharatha, ruled over Ayodhya for many years' ବାକ୍ୟରେ Subject ର Head-word ହେଉଛି 'Rama Chandra' ଏବଂ Predicate ର Head-word ହେଉଛି 'ruled' ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଅନୁନାସିକର ସ୍ୱରୂପ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁନାସିକର ସ୍ୱରୂପ ଚନ୍ଦ୍ରବିନ୍ଦୁ ଅଟେ ।",
+"<span style='color:red;'>Q-1:</span> ଲମ୍ବା Subject ର Head-word କେଉଁ ଶ୍ରେଣୀର ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଲମ୍ବା Subject ର Head-word ସର୍ବଦା ଏକ Noun ହୋଇଥାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ଅନୁନାସିକ କେଉଁ ବର୍ଗର ବର୍ଣ୍ଣ ଅଟେ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁନାସିକ ଅଯୋଗବାହ ବର୍ଣ୍ଣ ମଧ୍ୟରୁ ଗୋଟିଏ ଅଟେ ।",
+"<span style='color:red;'>Q-2:</span> ଲମ୍ବା Predicate ର Head-word କେଉଁ ଶ୍ରେଣୀର ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଲମ୍ବା Predicate ର Head-word ସର୍ବଦା ଏକ Verb ହୋଇଥାଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ଅନୁନାସିକ ବ୍ୟବହୃତ ହୋଇଥିବା ଶବ୍ଦର ଉଦାହରଣ ଦିଅ ।<br><br><span style='color:green;'>Answer:</span> କସ୍ଁଣ୍ଡିତ୍ ଓ ସଁବସରଃ ଶବ୍ଦରେ ଅନୁନାସିକ ବ୍ୟବହୃତ ହୋଇଛି ।",
+"<span style='color:red;'>Q-3:</span> 'Our old neighbour has a dog' ବାକ୍ୟରେ Subject ର Head-word କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> ଏହି ବାକ୍ୟରେ Subject ର Head-word ହେଉଛି 'neighbour' ।",
 
-"<span style='color:red;'>Q-4:</span> ଅନୁନାସିକର ଚିହ୍ନକୁ କ'ଣ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଅନୁନାସିକର ଚିହ୍ନକୁ ଚନ୍ଦ୍ରବିନ୍ଦୁ କୁହାଯାଏ ।"
+"<span style='color:red;'>Q-4:</span> 'It has been raining for the last two hours' ବାକ୍ୟରେ Predicate ର Head-word କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> ଏହି ବାକ୍ୟରେ Predicate ର Head-word ହେଉଛି 'raining' ।"
 
 ]
 },
 
 {
-heading: "NOTE-5: ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାର ମୋଟ ସଂଖ୍ୟା :-",
+heading: "NOTE-5: ରାସ୍ତା ବୁଝାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଲେଖିବା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଲୌକିକ ସଂସ୍କୃତରେ ସାଧାରଣତଃ ବ୍ୟବହୃତ ହେଉଥିବା ମୋଟ ବର୍ଣ୍ଣ ସଂଖ୍ୟା ଅଣଚାଶ (୪୯) ଅଟେ । ଏଥିରେ ୧୩ଟି ସ୍ୱର, ୩୩ଟି ବ୍ୟଞ୍ଜନ ଓ ୩ଟି ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅନ୍ତର୍ଭୁକ୍ତ ।<br><br>👉 ଉଦାହରଣ: ଏହି ୪୯ଟି ବର୍ଣ୍ଣ ମଧ୍ୟରୁ ଅନୁସ୍ୱାର, ବିସର୍ଗ ଓ ଅନୁନାସିକ ତିନୋଟି ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅଟନ୍ତି ।",
+text:"👉 ଧାରଣା: କାହାକୁ ରାସ୍ତା ବୁଝାଇବା ପାଇଁ ଆମେ କ୍ରମାନ୍ୱୟରେ ସାଧାରଣ ନିର୍ଦ୍ଦେଶ ମୂଳକ ବାକ୍ୟ ବ୍ୟବହାର କରୁ, ଯେମିତି ସିଧା ଯିବା, ବାମକୁ ମୋଡ଼ିବା, ଡାହାଣକୁ ମୋଡ଼ିବା ଆଦି । ଏହି ପ୍ରକାର ବାକ୍ୟଗୁଡ଼ିକ ଏକ ପ୍ରକାର Predicate ଦ୍ୱାରା ଆରମ୍ଭ ହୁଏ, ଯେଉଁଠି Subject ଲୁଚି ରହିଥାଏ ।<br><br>👉 ଉଦାହରଣ: ଟ୍ରାଫିକ ପୋଲିସ ବାଇକ ଚାଳକଙ୍କୁ ସାଇନିକ ସ୍କୁଲ ଯିବାର ରାସ୍ତା ବୁଝାଇବା ପାଇଁ କୁହନ୍ତି - 'Go straight along the road', 'Turn left', 'Take the Nandankanan road', 'Turn right at Nalco Chhak' - ଏହିପରି କ୍ରମାନ୍ୱୟରେ ନିର୍ଦ୍ଦେଶ ଦିଅନ୍ତି ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାରେ ମୋଟ କେତୋଟି ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାରେ ମୋଟ ଅଣଚାଶ (୪୯) ଟି ବର୍ଣ୍ଣ ଅଛି ।",
+"<span style='color:red;'>Q-1:</span> ରାସ୍ତା ବୁଝାଇବା ପାଇଁ କେଉଁ ପ୍ରକାରର ବାକ୍ୟ ବ୍ୟବହାର କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ରାସ୍ତା ବୁଝାଇବା ପାଇଁ କ୍ରମାନ୍ୱୟରେ ସାଧାରଣ ନିର୍ଦ୍ଦେଶ ମୂଳକ ବାକ୍ୟ ବ୍ୟବହାର କରାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ସଂସ୍କୃତରେ କେତୋଟି ସ୍ୱର ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତରେ ୧୩ଟି ସ୍ୱର ବର୍ଣ୍ଣ ଅଛି ।",
+"<span style='color:red;'>Q-2:</span> ରାସ୍ତା ବୁଝାଇବାର ବାକ୍ୟରେ ସାଧାରଣତଃ କେଉଁ କେଉଁ ଶବ୍ଦ ବ୍ୟବହାର ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> 'ସିଧା ଯିବା', 'ବାମକୁ ମୋଡ଼ିବା', 'ଡାହାଣକୁ ମୋଡ଼ିବା' ଭଳି ଶବ୍ଦ ବ୍ୟବହାର ହୁଏ ।",
 
-"<span style='color:red;'>Q-3:</span> ସଂସ୍କୃତରେ କେତୋଟି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତରେ ୩୩ଟି ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ ଅଛି ।",
+"<span style='color:red;'>Q-3:</span> ଏହିପରି ନିର୍ଦ୍ଦେଶ ମୂଳକ ବାକ୍ୟରେ Subject କାହିଁକି ଦେଖାଯାଏ ନାହିଁ ?<br><br><span style='color:green;'>Answer:</span> ଏଭଳି ବାକ୍ୟରେ Subject ('You') ଲୁଚି ରହିଥାଏ, ତେଣୁ ତାହା ଲେଖାଯାଏ ନାହିଁ ।",
 
-"<span style='color:red;'>Q-4:</span> ସଂସ୍କୃତରେ କେତୋଟି ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅଛି ?<br><br><span style='color:green;'>Answer:</span> ସଂସ୍କୃତରେ ୩ଟି ଅଯୋଗବାହ ବର୍ଣ୍ଣ ଅଛି ।"
-
-]
-},
-
-{
-heading: "NOTE-6: 'ଯ' ଓ 'ୟ' ଉଚ୍ଚାରଣ ନିୟମ :-",
-
-audioPoints: [{
-text:"👉 ଧାରଣା: ଶବ୍ଦର ଆରମ୍ଭରେ 'ଯ' ରହିଥାଏ । କିନ୍ତୁ ଶବ୍ଦ ମଧ୍ୟରେ କିମ୍ବା ଶେଷରେ 'ଯ' ଥିଲେ ତାହା 'ୟ' ଭାବେ ଉଚ୍ଚାରିତ ହୁଏ ।<br><br>👉 ଉଦାହରଣ: ଯୋଗ-ବିୟୋଗ ଓ ଯମ-ନିୟମ ଶବ୍ଦରେ ଆରମ୍ଭରେ 'ଯ' ଓ ମଧ୍ୟ/ଶେଷରେ 'ୟ' ଉଚ୍ଚାରଣ ହୋଇଥିବାର ଦେଖାଯାଏ ।",
-audio:"audio-url-here"}],
-
-questions:[
-
-"<span style='color:red;'>Q-1:</span> ଶବ୍ଦ ଆରମ୍ଭରେ କେଉଁ ବର୍ଣ୍ଣ ରହେ ?<br><br><span style='color:green;'>Answer:</span> ଶବ୍ଦ ଆରମ୍ଭରେ 'ଯ' ବର୍ଣ୍ଣ ରହେ ।",
-
-"<span style='color:red;'>Q-2:</span> ଶବ୍ଦ ମଧ୍ୟରେ ବା ଶେଷରେ 'ଯ' ଥିଲେ କେମିତି ଉଚ୍ଚାରଣ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଶବ୍ଦ ମଧ୍ୟରେ ବା ଶେଷରେ 'ଯ' ଥିଲେ 'ୟ' ଭାବେ ଉଚ୍ଚାରଣ ହୁଏ ।",
-
-"<span style='color:red;'>Q-3:</span> 'ଯୋଗ-ବିୟୋଗ' ଶବ୍ଦରେ ଏହି ନିୟମ କେମିତି ଦେଖାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> 'ଯୋଗ' ଆରମ୍ଭରେ 'ଯ' ଓ 'ବିୟୋଗ' ମଧ୍ୟରେ 'ୟ' ଉଚ୍ଚାରଣ ହୋଇଥିବାର ଦେଖାଯାଏ ।",
-
-"<span style='color:red;'>Q-4:</span> ଏହି ଉଚ୍ଚାରଣ ନିୟମର ଆଉ ଗୋଟିଏ ଉଦାହରଣ ଦିଅ ।<br><br><span style='color:green;'>Answer:</span> ଯମ-ନିୟମ ଶବ୍ଦ ମଧ୍ୟ ଏହି ନିୟମର ଉଦାହରଣ ଅଟେ ।"
+"<span style='color:red;'>Q-4:</span> ନିଜର ଦିନଚର୍ଯ୍ୟା ବିଷୟରେ ବାକ୍ୟ ଲେଖିଲା ପରେ ଆମେ କ'ଣ ଚିହ୍ନଟ କରିବା ଆବଶ୍ୟକ ?<br><br><span style='color:green;'>Answer:</span> ଆମେ ପ୍ରତ୍ୟେକ ବାକ୍ୟର Subject ଓ Predicate ଚିହ୍ନଟ କରିବା ଆବଶ୍ୟକ ।"
 
 ]
 }
@@ -293,18 +337,158 @@ const courseData = {
   `, 
     audio: "",
 mermaid: [
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ଅଯୋଗବାହ ବର୍ଣ୍ଣ<br/>(ପରିଚୟ)\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପରିଚୟ\"]\nA --> I1[\"ସ୍ୱର ଓ ବ୍ୟଞ୍ଜନ ବ୍ୟତୀତ<br/>ତିନୋଟି ବିଶେଷ ବର୍ଣ୍ଣ ଅଛନ୍ତି।\"]\nA --> I2[\"ଏମାନେ ହେଲେ ଅନୁସ୍ୱାର,<br/>ବିସର୍ଗ ଓ ଅନୁନାସିକ।\"]\nA --> I3[\"ସଂସ୍କୃତ ଭାଷାରେ<br/>ଏମାନଙ୍କ ପ୍ରୟୋଗ ଦେଖାଯାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ବୈଶିଷ୍ଟ୍ୟ\"]\nM --> M1[\"ପ୍ରତ୍ୟାହାର ନିର୍ମାଣରେ<br/>ଏମାନେ ନିରପେକ୍ଷ ରୁହନ୍ତି।\"]\nM --> M2[\"ଶବ୍ଦାଦି ପ୍ରୟୋଗରେ<br/>ଏମାନେ ସାପେକ୍ଷ ହୋଇଥାନ୍ତି।\"]\nM --> M3[\"ଏହି ଦୁଇ ଗୁଣ ଯୋଗୁଁ<br/>ଏମାନେ ଅଯୋଗବାହ ନାମରେ ପରିଚିତ।\"]\nM --> M4[\"ତିନୋଟି ଚିହ୍ନ:<br/>ଂ, ଃ, ँ ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଅଯୋଗବାହ ବର୍ଣ୍ଣ<br/>ସଂଖ୍ୟାରେ ତିନୋଟି।\"]\nC --> C2[\"ଏମାନେ ସ୍ୱର ବା ବ୍ୟଞ୍ଜନ<br/>ନୁହନ୍ତି, ସ୍ୱତନ୍ତ୍ର ଶ୍ରେଣୀର।\"]\nC --> C3[\"ସଂସ୍କୃତ ବ୍ୟାକରଣରେ<br/>ଏହାର ମହତ୍ୱ ରହିଛି।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%
+flowchart TD
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ଅନୁସ୍ୱାର<br/>(ଂ)\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଅନୁସ୍ୱାର କ'ଣ\"]\nA --> I1[\"ଅନୁସ୍ୱାରର ଚିହ୍ନ<br/>ହେଉଛି ଂ ।\"]\nA --> I2[\"ଏହା କୌଣସି ସ୍ୱର<br/>ପରେ ପ୍ରୟୋଗ ହୁଏ।\"]\nA --> I3[\"ଏହା ନ୍ କିମ୍ବା ମ୍<br/>ର ସ୍ଥାନରେ ଆସେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଦାହରଣ ଓ ବ୍ୟାଖ୍ୟା\"]\nM --> M1[\"ଉଦାହରଣ:<br/>ଗୃହଂ ଗଛତି ।\"]\nM --> M2[\"ମୂଳ ଶବ୍ଦ ଥିଲା<br/>ଗୃହମ୍ ।\"]\nM --> M3[\"ଗୃହମ୍ ର ମ୍ ସ୍ଥାନରେ<br/>ଅନୁସ୍ୱାର ପ୍ରୟୋଗ ହୋଇଛି।\"]\nM --> M4[\"ପୂର୍ବବର୍ତ୍ତୀ 'ଅ' ସ୍ୱର<br/>ସହିତ ଏହା ମିଶିଥାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଅନୁସ୍ୱାର ସର୍ବଦା<br/>ସ୍ୱର ପରେ ବସେ।\"]\nC --> C2[\"ଏହା ନ୍ ବା ମ୍ର<br/>ବିକଳ୍ପ ଚିହ୍ନ ଅଟେ।\"]\nC --> C3[\"ଅନୁସ୍ୱାରର ଚିହ୍ନ:<br/>ଂ ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`,
+TITLE["📖 GRAPH-1:<br/>Parts of a Sentence:<br/>Subject and Predicate"]
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ବିସର୍ଗ<br/>(ଃ)\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ବିସର୍ଗ କ'ଣ\"]\nA --> I1[\"ବିସର୍ଗର ଚିହ୍ନ<br/>ହେଉଛି ଃ ।\"]\nA --> I2[\"ଏହା ମଧ୍ୟ କୌଣସି<br/>ସ୍ୱର ପରେ ପ୍ରୟୋଗ ହୁଏ।\"]\nA --> I3[\"ଏହାର ଉଚାରଣ<br/>ପୃଥକ ଭାବେ ହୋଇଥାଏ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଦାହରଣ\"]\nM --> M1[\"ଉଦାହରଣ-୧:<br/>ନରଃ ।\"]\nM --> M2[\"ଉଦାହରଣ-୨:<br/>ସାଧୁଃ ।\"]\nM --> M3[\"ଏହି ଶବ୍ଦଗୁଡ଼ିକରେ ଃ<br/>ପୃଥକ ଭାବେ ଉଚାରିତ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ବିସର୍ଗ ସର୍ବଦା<br/>ସ୍ୱର ପରେ ବସେ।\"]\nC --> C2[\"ଏହାର ଉଚାରଣ<br/>ସ୍ୱତନ୍ତ୍ର ଅଟେ।\"]\nC --> C3[\"ବିସର୍ଗର ଚିହ୍ନ:<br/>ଃ ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`,
+TITLE --> INTRO
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଅନୁନାସିକ<br/>(ँ)\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଅନୁନାସିକ କ'ଣ\"]\nA --> I1[\"ଅନୁନାସିକର ସ୍ୱରୂପ<br/>ଚନ୍ଦ୍ରବିନ୍ଦୁ ଅଟେ।\"]\nA --> I2[\"ଏହାର ଚିହ୍ନ<br/>ହେଉଛି ँ ।\"]\nA --> I3[\"ଏହା ମଧ୍ୟ ଏକ<br/>ଅଯୋଗବାହ ବର୍ଣ୍ଣ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଦାହରଣ\"]\nM --> M1[\"ଉଦାହରଣ-୧:<br/>କସ୍ମିଁସ୍ମିନ୍ ।\"]\nM --> M2[\"ଉଦାହରଣ-୨:<br/>ସଁବସରଃ ।\"]\nM --> M3[\"ଉଚାରଣ ସମୟରେ<br/>ନାସିକାର ପ୍ରୟୋଗ ହୁଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଅନୁନାସିକର ଚିହ୍ନ<br/>ଚନ୍ଦ୍ରବିନ୍ଦୁ ँ ।\"]\nC --> C2[\"ଏହା ନାସିକା ଧ୍ୱନି<br/>ସହ ଉଚାରିତ ହୁଏ।\"]\nC --> C3[\"ଅନୁସ୍ୱାର ଓ ଅନୁନାସିକ<br/>ଭିନ୍ନ ଭିନ୍ନ ଚିହ୍ନ ଅଟନ୍ତି।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`,
+subgraph INTRO[ ]
+direction LR
+A["🟡 Examples"]
+A --> I1["Wind → blows."]
+A --> I2["Birds → fly."]
+A --> I3["She → smiled."]
+end
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-5:<br/>ସଂସ୍କୃତ ବର୍ଣ୍ଣମାଳାର<br/>ମୋଟ ସଂଖ୍ୟା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଲୌକିକ ସଂସ୍କୃତ ବର୍ଣ୍ଣ\"]\nA --> I1[\"ଲୌକିକ ସଂସ୍କୃତରେ<br/>ସାଧାରଣତଃ ବ୍ୟବହୃତ ବର୍ଣ୍ଣ ଅଛନ୍ତି।\"]\nA --> I2[\"ଏହି ବର୍ଣ୍ଣମାନଙ୍କ<br/>ମୋଟ ସଂଖ୍ୟା ଅଣଚାଳିଶ (୪୯)।\"]\nA --> I3[\"ଏଥିରେ ସ୍ୱର, ବ୍ୟଞ୍ଜନ<br/>ଓ ଅଯୋଗବାହ ସାମିଲ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ବିଭାଜନ\"]\nM --> M1[\"ସ୍ୱର ସଂଖ୍ୟା:<br/>୧୩ ।\"]\nM --> M2[\"ବ୍ୟଞ୍ଜନ ସଂଖ୍ୟା:<br/>୩୩ ।\"]\nM --> M3[\"ଅଯୋଗବାହ ସଂଖ୍ୟା:<br/>୩ ।\"]\nM --> M4[\"ମୋଟ:<br/>୧୩ + ୩୩ + ୩ = ୪୯ ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ମୋଟ ବର୍ଣ୍ଣ<br/>ସଂଖ୍ୟା ୪୯ ।\"]\nC --> C2[\"ତିନି ଭାଗରେ ବିଭକ୍ତ:<br/>ସ୍ୱର, ବ୍ୟଞ୍ଜନ, ଅଯୋଗବାହ।\"]\nC --> C3[\"ପରୀକ୍ଷାରେ ଏହି<br/>ପ୍ରଶ୍ନ ପ୍ରାୟତଃ ପଚରାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`,
+INTRO --> MAIN
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-6:<br/>ଯ ଓ ୟ ର<br/>ଉଚାରଣ ନିୟମ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ନିୟମ\"]\nA --> I1[\"ଶବ୍ଦ ଆରମ୍ଭରେ<br/>'ଯ' ରହେ।\"]\nA --> I2[\"ପଦ ମଧ୍ୟରେ ବା ଶେଷରେ<br/>'ଯ' ଥିଲେ 'ୟ' ଉଚାରିତ ହୁଏ।\"]\nA --> I3[\"ଏହା ଏକ<br/>ଉଚ୍ଚାରଣ ନିୟମ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଉଦାହରଣ\"]\nM --> M1[\"ଯୋଗ-ବିୟୋଗ:<br/>ଆରମ୍ଭରେ 'ଯ', ମଧ୍ୟରେ 'ୟ'।\"]\nM --> M2[\"ଯମ-ନିୟମ:<br/>ସମାନ ନିୟମ ପ୍ରଯୁଜ୍ୟ।\"]\nM --> M3[\"ସ୍ଥାନ ଅନୁସାରେ<br/>ଉଚାରଣ ବଦଳେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ମନେରଖ\"]\nC --> C1[\"ଆରମ୍ଭରେ<br/>ସର୍ବଦା 'ଯ'।\"]\nC --> C2[\"ମଧ୍ୟ ବା ଶେଷରେ<br/>'ୟ' ଉଚାରଣ।\"]\nC --> C3[\"ଉଦାହରଣ ମନେ ରଖିଲେ<br/>ନିୟମ ବୁଝି ହେବ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`
-  ]
+subgraph MAIN[ ]
+direction LR
+M["🟢 The Two Parts"]
+M --> M1["A sentence has two<br/>essential parts."]
+M --> M2["Subject is who or what<br/>the sentence is about."]
+M --> M3["Predicate tells what<br/>the subject does."]
+M --> M4["Single-word subject is<br/>a noun or a pronoun."]
+M --> M5["Single-word predicate<br/>must be a Verb."]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 Key Rule"]
+C --> C1["Head-word of the subject<br/>is a noun."]
+C --> C2["Head-word of the predicate<br/>is a verb."]
+C --> C3["Both parts together give<br/>the sentence complete meaning."]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%
+flowchart TD
+
+TITLE["📖 GRAPH-2:<br/>Splitting Sentences into<br/>Subject, Predicate and Verb"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 Sample (Activity-7)"]
+A --> I1["Rama plays."]
+A --> I2["Subject - Rama."]
+A --> I3["Predicate - plays.<br/>Verb - plays."]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 Method"]
+M --> M1["First find the subject<br/>of the sentence."]
+M --> M2["Then find the predicate<br/>that follows it."]
+M --> M3["Pick out the Verb<br/>from the predicate."]
+M --> M4["Practice with: She sings,<br/>Time flies, He can write well."]
+M --> M5["Practice with: Children laugh,<br/>Rabindra can read, etc."]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 Beyond Single Words"]
+C --> C1["Subject may be a phrase:<br/>'Rama chandra, the son of Dasharatha'."]
+C --> C2["Predicate may be a phrase:<br/>'ruled over Ayodhya for many years'."]
+C --> C3["Verb identification helps<br/>understand sentence structure."]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4,M5 body;
+class C,C1,C2,C3 conclusion;`,
+
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%
+flowchart TD
+
+TITLE["📖 GRAPH-3:<br/>Applying Subject-Predicate<br/>in Real Writing (Activities 3-6)"]
+
+TITLE --> INTRO
+
+subgraph INTRO[ ]
+direction LR
+A["🟡 Activity-3"]
+A --> I1["Write 6 sentences using<br/>info about Shrinivas."]
+A --> I2["Father, age, sister,<br/>hobby details given."]
+A --> I3["Turn short notes into<br/>full sentences."]
+end
+
+INTRO --> MAIN
+
+subgraph MAIN[ ]
+direction LR
+M["🟢 Roadmap Activities"]
+M --> M1["Activity-4: Read the police-<br/>rider dialogue and roadmap."]
+M --> M2["Identify subjects and<br/>predicates in the dialogue."]
+M --> M3["Activity-5: Write 5 sentences<br/>explaining a roadmap to Swati."]
+M --> M4["Use direction instructions<br/>(go straight, turn left, etc.)."]
+end
+
+MAIN --> CONCLUSION
+
+subgraph CONCLUSION[ ]
+direction LR
+C["🔵 Activity-6: Daily Routine"]
+C --> C1["Write a few sentences<br/>on your daily routine."]
+C --> C2["Circle the subjects in<br/>each sentence."]
+C --> C3["Underline the predicates<br/>in each sentence."]
+end
+
+linkStyle 0 stroke-width:0px;
+linkStyle 4 stroke-width:0px;
+linkStyle 10 stroke-width:0px;
+
+classDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;
+classDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;
+classDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;
+classDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;
+
+class TITLE title;
+class A,I1,I2,I3 intro;
+class M,M1,M2,M3,M4 body;
+class C,C1,C2,C3 conclusion;`
+]
       
 }  
 ]
