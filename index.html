@@ -12,7 +12,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Class-IX">
     <meta name="theme-color" content="#667eea">
-    <link rel="apple-touch-icon" href="./icon-192.png">
+   <link rel="apple-touch-icon" href="./icon-192.png">
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
     <style>
         * {
@@ -639,6 +642,73 @@
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
+.rollgate-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 99998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.rollgate-box {
+    background: white;
+    border-radius: 20px;
+    padding: 28px 22px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.rollgate-box h2 {
+    color: #667eea;
+    font-size: 1.2em;
+    margin-bottom: 6px;
+}
+
+.rollgate-box p {
+    color: #666;
+    font-size: 0.85em;
+    margin-bottom: 16px;
+}
+
+.rollgate-input {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 14px;
+    outline: none;
+    text-align: center;
+}
+
+.rollgate-input:focus { border-color: #667eea; }
+
+.rollgate-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.rollgate-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.rollgate-error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 10px;
+    min-height: 18px;
+}
         
     </style>
 </head>
@@ -670,9 +740,21 @@
             line-height: 1.5;
         "></div>
 
-        <button class="proceed-button" onclick="closeSplash()">ଆଗକୁ ଯାଅନ୍ତୁ ...</button>
+      <button class="proceed-button" onclick="closeSplash()">ଆଗକୁ ଯାଅନ୍ତୁ ...</button>
     </div>
 </div>
+
+<!-- ── Roll Number Gate (determines which classes are unlocked) ── -->
+<div class="rollgate-screen" id="rollgateScreen" style="display:none;">
+    <div class="rollgate-box">
+        <h2>🔑 ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ</h2>
+        <p>ଆପଣଙ୍କ ପାଇଁ କେଉଁ କେଉଁ କ୍ଲାସ୍ ଅନଲକ୍ ହୋଇଛି ଦେଖିବା ପାଇଁ ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ ।</p>
+        <input type="tel" id="rollgateInput" class="rollgate-input" placeholder="ରୋଲ୍ ନମ୍ବର" inputmode="numeric">
+        <button class="rollgate-btn" id="rollgateBtn" onclick="checkRollGate()">ଆଗକୁ ଯାଅନ୍ତୁ</button>
+        <div class="rollgate-error" id="rollgateError"></div>
+    </div>
+</div>
+
 <!-- ── PWA Install Modal (Android/Chrome) ── -->
 <div class="pwa-overlay" id="pwaModal">
     <div class="pwa-box">
@@ -753,6 +835,106 @@
 </div><!-- /container -->
 
 <script>
+    /* ════════════════════════════════════════════
+       FIREBASE + ROLL GATE
+    ════════════════════════════════════════════ */
+    const firebaseConfig = {
+        apiKey: "AIzaSyA3-rvQJ1g9K-1l8-_PXX8IffG8W4qU7AE",
+        authDomain: "evidya-academy.firebaseapp.com",
+        projectId: "evidya-academy",
+        storageBucket: "evidya-academy.firebasestorage.app",
+        messagingSenderId: "86172698431",
+        appId: "1:86172698431:web:eb3bd5b2887cda88eb358a"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const gateDb = firebase.firestore();
+    const GATE_CLASS_NAME = "school9";
+
+    let studentRegisteredAt = null;
+    let unlockedClassCount = 0;
+
+    function computeUnlockedCount(registeredAtISO) {
+        if (!registeredAtISO) return 1;
+
+        function dateOnly(d) {
+            return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+        }
+
+        const start = dateOnly(new Date(registeredAtISO));
+        const today = dateOnly(new Date());
+
+        let count = 1; // registration day = Class 1
+        let cursor = new Date(start);
+
+        while (cursor < today) {
+            cursor.setDate(cursor.getDate() + 1);
+            if (cursor.getDay() !== 0) count++; // skip Sundays
+        }
+
+        return count;
+    }
+
+    function getNextUnlockDateText() {
+        let d = new Date();
+        d.setDate(d.getDate() + 1);
+        while (d.getDay() === 0) d.setDate(d.getDate() + 1);
+        return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+    }
+
+    async function checkRollGate() {
+        const rollNumber = document.getElementById('rollgateInput').value.trim();
+        const errorDiv = document.getElementById('rollgateError');
+        const btn = document.getElementById('rollgateBtn');
+        errorDiv.textContent = '';
+
+        if (!rollNumber) {
+            errorDiv.textContent = 'ଦୟାକରି ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ ।';
+            return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = '⏳ ଅପେକ୍ଷା କରନ୍ତୁ...';
+
+        try {
+            const doc = await gateDb.collection('students').doc(rollNumber).get();
+
+            if (!doc.exists) {
+                errorDiv.textContent = 'ରୋଲ୍ ନମ୍ବର ମିଳିଲା ନାହିଁ ।';
+                btn.disabled = false;
+                btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+                return;
+            }
+
+            const data = doc.data();
+
+            if (data.className !== GATE_CLASS_NAME) {
+                errorDiv.textContent = 'ଏହି ରୋଲ୍ ନମ୍ବର ଏହି କ୍ଲାସ୍ ପାଇଁ ନୁହେଁ ।';
+                btn.disabled = false;
+                btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+                return;
+            }
+
+            if (data.status === 'BLOCKED') {
+                errorDiv.textContent = 'ଆପଣଙ୍କ ଆକ୍ସେସ୍ ବ୍ଲକ୍ ହୋଇଛି । ଶିକ୍ଷକଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ।';
+                btn.disabled = false;
+                btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+                return;
+            }
+
+            studentRegisteredAt = data.registeredAt || new Date().toISOString();
+            unlockedClassCount = computeUnlockedCount(studentRegisteredAt);
+
+            document.getElementById('rollgateScreen').style.display = 'none';
+            showSubjects();
+
+        } catch (err) {
+            console.error(err);
+            errorDiv.textContent = 'ସଂଯୋଗ ସମସ୍ୟା । ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ ।';
+            btn.disabled = false;
+            btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+        }
+    }
+
     /* ════════════════════════════════════════════
        DATA
     ════════════════════════════════════════════ */
@@ -946,7 +1128,10 @@ const classSchedule = {
         return parseDate(dateStr).toLocaleString('en-US', { month:'short', day:'numeric', hour:'numeric', minute:'2-digit', hour12:true });
     }
 
-    function isClassAvailable(classKey) {
+   function isClassAvailable(classKey) {
+        const classNum = parseInt(classKey.split('-').pop());
+        if (unlockedClassCount > 0 && classNum > unlockedClassCount) return false;
+
         const s = classSchedule[classKey];
         if (!s) return true;
         if (s.available) return true;
@@ -1018,14 +1203,26 @@ function createMaintenanceCard() {
             `;
         } else {
             card.classList.add('locked');
-            const countdown = getTimeRemaining(schedule.releaseDate);
-            card.innerHTML = `
-                <div class="lock-icon">🔒</div>
-                <div class="class-number">Class ${classNum}</div>
-                <div class="class-title">${className}</div>
-                <div class="scheduled-message">Available on<br>${formatReleaseDate(schedule.releaseDate)}</div>
-                ${countdown ? `<div class="countdown">⏱️ ${countdown}</div>` : ''}
-            `;
+            const classNumForMsg = parseInt(classKey.split('-').pop());
+            const isDailyLock = unlockedClassCount > 0 && classNumForMsg > unlockedClassCount;
+
+            if (isDailyLock) {
+                card.innerHTML = `
+                    <div class="lock-icon">🔒</div>
+                    <div class="class-number">Class ${classNum}</div>
+                    <div class="class-title">${className}</div>
+                    <div class="scheduled-message">ଆପଣଙ୍କ ପାଇଁ ଏହି କ୍ଲାସ୍ ଏପର୍ଯ୍ୟନ୍ତ ଅନଲକ୍ ହୋଇନାହିଁ ।<br>ପରବର୍ତ୍ତୀ କ୍ଲାସ୍: ${getNextUnlockDateText()}</div>
+                `;
+            } else {
+                const countdown = getTimeRemaining(schedule.releaseDate);
+                card.innerHTML = `
+                    <div class="lock-icon">🔒</div>
+                    <div class="class-number">Class ${classNum}</div>
+                    <div class="class-title">${className}</div>
+                    <div class="scheduled-message">Available on<br>${formatReleaseDate(schedule.releaseDate)}</div>
+                    ${countdown ? `<div class="countdown">⏱️ ${countdown}</div>` : ''}
+                `;
+            }
         }
         return card;
     }
@@ -1262,10 +1459,10 @@ function createMaintenanceCard() {
         });
     }
 
-    /* ════════════════════════════════════════════
+   /* ════════════════════════════════════════════
        INIT
     ════════════════════════════════════════════ */
-    showSubjects();
+    // showSubjects() now runs after the roll-number gate succeeds (see checkRollGate above)
 
   function playWelcomeVideo() {
     document.getElementById('videoThumbWrap').style.display = 'none';
@@ -1280,6 +1477,7 @@ function closeSplash() {
         splash.classList.add('hide');
         setTimeout(() => splash.remove(), 600);
     }
+    document.getElementById('rollgateScreen').style.display = 'flex';
 }
 
 function setDailyUpdateMessage() {
