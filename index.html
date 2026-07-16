@@ -653,11 +653,22 @@
                  style="display: block; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; object-position: center top;"
                  onerror="this.parentElement.style.display='none'">
         </div>
-        <p style="margin-top: 14px; font-size: 15px; color: white; font-weight: 800;">
+<p style="margin-top: 14px; font-size: 15px; color: white; font-weight: 800;">
             🌹 ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ ।🌹
         </p>
 
-       
+        <div id="dailyUpdateMsg" style="
+            margin-top: 12px;
+            padding: 10px 16px;
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 12px;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            max-width: 320px;
+            line-height: 1.5;
+        "></div>
 
         <button class="proceed-button" onclick="closeSplash()">ଆଗକୁ ଯାଅନ୍ତୁ ...</button>
     </div>
@@ -1270,6 +1281,19 @@ function closeSplash() {
         setTimeout(() => splash.remove(), 600);
     }
 }
+
+function setDailyUpdateMessage() {
+    const msgBox = document.getElementById('dailyUpdateMsg');
+    if (!msgBox) return;
+
+    const isSunday = new Date().getDay() === 0;
+
+    msgBox.textContent = isSunday
+        ? '🌹 ଆଜି ରବିବାର, ତେଣୁ ନୂତନ କ୍ଲାସ୍ ନାହିଁ । ଅବସର ନିଅନ୍ତୁ, ଆସନ୍ତାକାଲି ପୁଣି ମିଳିବା ।'
+        : '🌹 ଆଜି ପ୍ରତ୍ୟେକ ବିଷୟରେ ନୂତନ କ୍ଲାସ୍ ଅପଲୋଡ୍ ହୋଇଛି । ଆସନ୍ତୁ ପଢିବା ।';
+}
+
+setDailyUpdateMessage();
 </script>
 
 </body>
