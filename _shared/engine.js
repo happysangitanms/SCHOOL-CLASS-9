@@ -3391,10 +3391,23 @@ initCustomAudioPlayer('3');
         }
     }
     
-    const savedRoll = localStorage.getItem('userRollNumber');
+  const savedRoll = localStorage.getItem('userRollNumber');
     if (savedRoll) {
         document.getElementById('rollNumberInput').value = savedRoll;
     }
+
+    // Auto-continue if the student just verified their roll number one screen ago
+    try {
+        const gateRoll = sessionStorage.getItem('gateRollNumber');
+        if (gateRoll && document.getElementById('consentCheck')) {
+            document.getElementById('rollNumberInput').value = gateRoll;
+            document.getElementById('consentCheck').checked = true;
+            sessionStorage.removeItem('gateRollNumber');
+            setTimeout(() => {
+                document.getElementById('loginBtn').click();
+            }, 300);
+        }
+    } catch(e) {}
    // Save roll number when login button is clicked
 document.getElementById('loginBtn').addEventListener('click', function() {
     const rollNumber = document.getElementById('rollNumberInput').value;
