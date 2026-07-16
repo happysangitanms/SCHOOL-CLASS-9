@@ -3407,7 +3407,7 @@ initCustomAudioPlayer('3');
             sessionStorage.removeItem('gateRollNumber');
             setTimeout(() => {
                 document.getElementById('loginBtn').click();
-            }, 50);
+            }, 1);
         }
     } catch(e) {}
    // Save roll number when login button is clicked
