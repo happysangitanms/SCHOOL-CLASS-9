@@ -1307,6 +1307,7 @@ function createMaintenanceCard() {
 
     Object.keys(classNames)
         .filter(k => k.startsWith(subjectKey + '-'))
+        .filter(k => isClassAvailable(k))
         .forEach(k => {
             const num = k.split('-').pop();
             grid.appendChild(createClassCard(subjectKey, num));
