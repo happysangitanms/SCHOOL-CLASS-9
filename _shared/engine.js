@@ -3397,15 +3397,17 @@ initCustomAudioPlayer('3');
     }
 
     // Auto-continue if the student just verified their roll number one screen ago
-    try {
+   try {
         const gateRoll = sessionStorage.getItem('gateRollNumber');
         if (gateRoll && document.getElementById('consentCheck')) {
+            const loginScreenEl = document.getElementById('loginScreen');
+            if (loginScreenEl) loginScreenEl.style.visibility = 'hidden';
             document.getElementById('rollNumberInput').value = gateRoll;
             document.getElementById('consentCheck').checked = true;
             sessionStorage.removeItem('gateRollNumber');
             setTimeout(() => {
                 document.getElementById('loginBtn').click();
-            }, 300);
+            }, 50);
         }
     } catch(e) {}
    // Save roll number when login button is clicked
