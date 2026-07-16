@@ -146,11 +146,12 @@ document.getElementById('loginBtn').addEventListener('click', async function() {
             return;
         }
 
-      // SUCCESS - show welcome message
+     // SUCCESS - show welcome message
         const studentName = data.name || rollNumber;
       sessionData.studentName = studentName;
       sessionData.registeredAt = data.registeredAt || new Date().toISOString();
 localStorage.removeItem('savedScores'); // clear any stale scores from previous sessions
+try { localStorage.setItem('classConsentGiven', '1'); } catch(e) {}
        const welcomeOverlay = document.createElement('div');
         welcomeOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;text-align:center;padding:20px;';
         welcomeOverlay.innerHTML = '<div style="color:white;font-size:28px;margin-bottom:15px;">🌹</div>'
@@ -3401,11 +3402,15 @@ initCustomAudioPlayer('3');
         }
     }
     
-  const savedRoll = localStorage.getItem('userRollNumber');
+const savedRoll = localStorage.getItem('userRollNumber');
     if (savedRoll) {
         document.getElementById('rollNumberInput').value = savedRoll;
     }
-
+    try {
+        if (localStorage.getItem('classConsentGiven') === '1' && document.getElementById('consentCheck')) {
+            document.getElementById('consentCheck').checked = true;
+        }
+    } catch(e) {}
     // Auto-continue if the student just verified their roll number one screen ago
    try {
         const gateRoll = sessionStorage.getItem('gateRollNumber');
