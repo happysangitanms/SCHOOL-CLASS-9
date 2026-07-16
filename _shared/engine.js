@@ -50,11 +50,40 @@ function getDeviceId() {
     return deviceId;
 }
 
+function getContentDayIndex(registeredAtISO, totalAvailable) {
+    if (!registeredAtISO) return 0;
+
+    function toISTDateOnly(d) {
+        const istOffsetMs = 5.5 * 60 * 60 * 1000;
+        const ist = new Date(d.getTime() + istOffsetMs);
+        return new Date(Date.UTC(ist.getUTCFullYear(), ist.getUTCMonth(), ist.getUTCDate()));
+    }
+
+    const startDate = toISTDateOnly(new Date(registeredAtISO));
+    const todayDate = toISTDateOnly(new Date());
+
+    let index = 0;
+    let cursor = new Date(startDate);
+
+    while (cursor < todayDate) {
+        cursor.setUTCDate(cursor.getUTCDate() + 1);
+        if (cursor.getUTCDay() !== 0) {
+            index++;
+        }
+    }
+
+    const maxIndex = Math.max(0, (totalAvailable || 1) - 1);
+    if (index > maxIndex) index = maxIndex;
+    if (index < 0) index = 0;
+    return index;
+}
+
 let sessionData = {
     rollNumber: null,
     deviceId: getDeviceId(),
     className: CLASS_NAME,
-    loginTime: null
+    loginTime: null,
+    registeredAt: null
 };
 
 document.getElementById('loginBtn').addEventListener('click', async function() {
@@ -110,9 +139,10 @@ document.getElementById('loginBtn').addEventListener('click', async function() {
             return;
         }
 
-        // SUCCESS - show welcome message
+      // SUCCESS - show welcome message
         const studentName = data.name || rollNumber;
       sessionData.studentName = studentName;
+      sessionData.registeredAt = data.registeredAt || new Date().toISOString();
 localStorage.removeItem('savedScores'); // clear any stale scores from previous sessions
         const welcomeOverlay = document.createElement('div');
         welcomeOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;text-align:center;padding:20px;';
@@ -136,11 +166,12 @@ localStorage.removeItem('savedScores'); // clear any stale scores from previous 
         sessionData.loginTime = new Date();
         docRef.update({ lastLogin: new Date().toISOString() }).catch(e => console.log(e));
 
-        setTimeout(() => {
+     setTimeout(() => {
             welcomeOverlay.remove();
             document.getElementById('loginScreen').style.display = 'none';
             document.querySelector('.container').classList.add('authenticated');
-            loadSentence(0);
+            const dayIndex = getContentDayIndex(sessionData.registeredAt, courseData.sentences.length);
+            loadSentence(dayIndex);
             startActivityTracking();
         }, 2400);
 
