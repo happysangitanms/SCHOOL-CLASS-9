@@ -782,6 +782,147 @@
 .gate-consent-box a {
     color: #667eea;
 }
+
+
+
+   /* ── Student Account Button ── */
+.account-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 320px;
+    margin: 14px auto 0;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+}
+.account-btn:active { transform: scale(0.97); }
+
+/* ── Fee Reminder Banner ── */
+@keyframes feeReminderPulse {
+    0%, 100% { box-shadow: 0 6px 20px rgba(220,38,38,0.5), 0 0 0 0 rgba(220,38,38,0.6); }
+    50%      { box-shadow: 0 6px 26px rgba(220,38,38,0.7), 0 0 0 10px rgba(220,38,38,0); }
+}
+.fee-reminder-card {
+    max-width: 320px;
+    width: 100%;
+    margin: 14px auto 0;
+    background: linear-gradient(135deg, #dc2626, #991b1b);
+    border-radius: 16px;
+    padding: 14px 16px;
+    text-align: center;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.5);
+    animation: feeReminderPulse 1.8s infinite;
+}
+.fee-reminder-card.overdue {
+    background: linear-gradient(135deg, #7f1d1d, #450a0a);
+}
+.fee-reminder-icon { font-size: 1.6em; margin-bottom: 4px; }
+.fee-reminder-title { font-size: 14px; font-weight: 900; margin-bottom: 4px; }
+.fee-reminder-text  { font-size: 12.5px; font-weight: 600; line-height: 1.5; opacity: 0.95; }
+.fee-reminder-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: white;
+    color: #b91c1c;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* ── Account Modal ── */
+.account-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 9500;
+    justify-content: center; align-items: center;
+    padding: 20px;
+}
+.account-overlay.active { display: flex; }
+
+.account-box {
+    background: white;
+    border-radius: 22px;
+    padding: 26px 22px;
+    max-width: 360px;
+    width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.account-avatar {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6em; font-weight: 900;
+    margin: 0 auto 10px;
+    box-shadow: 0 4px 14px rgba(102,126,234,0.4);
+}
+
+.account-name { font-size: 1.15em; font-weight: 900; color: #333; margin-bottom: 2px; }
+.account-roll { font-size: 0.85em; color: #888; font-weight: 700; margin-bottom: 16px; }
+
+.account-info-grid {
+    display: grid;
+    gap: 8px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+.account-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 13px;
+}
+.account-info-label { color: #666; font-weight: 600; }
+.account-info-value { color: #222; font-weight: 800; }
+.account-info-value.due-soon { color: #dc2626; }
+.account-info-value.paid-ok  { color: #059669; }
+
+.account-qr-wrap {
+    background: #f9fafb;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+.account-qr-wrap img { width: 160px; height: 160px; border-radius: 10px; }
+.account-qr-caption { font-size: 11.5px; color: #888; font-weight: 600; margin-top: 8px; }
+
+.account-pay-btn {
+    display: block;
+    background: linear-gradient(135deg, #c8962a, #e4b84a);
+    color: #0a1628;
+    padding: 13px;
+    border-radius: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.account-close-btn {
+    background: none; border: none; color: #aaa;
+    font-size: 0.85em; cursor: pointer; padding: 8px; text-decoration: underline;
+}     
         
     </style>
 </head>
@@ -815,6 +956,11 @@
 "></div>
 
       <button class="proceed-button" onclick="closeSplash()">ଆଗକୁ ଯାଅନ୍ତୁ ...</button>
+        <div id="feeReminderBox"></div>
+
+<button class="account-btn" onclick="openAccountModal()">
+    👤 ମୋର ଆକାଉଣ୍ଟ ଓ ପେମେଣ୍ଟ ବିବରଣୀ
+</button>
     </div>
 </div>
 <!-- ── Roll Number Gate (determines which classes are unlocked) ── -->
@@ -837,12 +983,6 @@
             📋 ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ ।
         </button>
 
-        <div style="text-align:center; margin-top:12px;">
-            <a href="https://evidya-admin.pages.dev/payment/" target="_blank" rel="noopener noreferrer"
-               style="display:inline-block; padding:12px 28px; background:linear-gradient(135deg,#c8962a,#e4b84a); color:#0a1628; font-size:0.9rem; font-weight:700; text-decoration:none; border-radius:50px; box-shadow:0 6px 20px rgba(200,150,42,0.35);">
-                🌹 ପେମେଣ୍ଟ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । →
-            </a>
-        </div>
 
         <div style="margin-top:20px; text-align:center;">
             <div style="display:inline-block; padding:10px; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); border-radius:50%; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
@@ -854,7 +994,7 @@
         </div>
 
         <div style="text-align:center; margin-top:12px;">
-            <a href="https://evidya-admin.pages.dev/contact/" target="_blank" rel="noopener noreferrer"
+            <a href="https://evidya.de/Contact/" target="_blank" rel="noopener noreferrer"
                style="display:inline-block; padding:12px 28px; background:linear-gradient(135deg,#1e3a8a,#2563eb); color:#ffffff; font-size:0.9rem; font-weight:700; text-decoration:none; border-radius:50px; box-shadow:0 6px 20px rgba(37,99,235,0.35);">
                 🌹 ଆମ୍ଭ ସହିତ ଯୋଗାଯୋଗ ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । →
             </a>
@@ -889,6 +1029,41 @@
     </div>
 </div>
 
+
+<!-- ── Student Account Modal ── -->
+<div class="account-overlay" id="accountModal">
+    <div class="account-box">
+        <div class="account-avatar" id="accountAvatar">?</div>
+        <div class="account-name" id="accountName">—</div>
+        <div class="account-roll" id="accountRoll">Roll: —</div>
+
+        <div class="account-info-grid">
+            <div class="account-info-row">
+                <span class="account-info-label">📅 ଯୋଗଦାନ ତାରିଖ</span>
+                <span class="account-info-value" id="accountJoinDate">—</span>
+            </div>
+            <div class="account-info-row">
+                <span class="account-info-label">💰 ମାସିକ ଫି</span>
+                <span class="account-info-value">₹250</span>
+            </div>
+            <div class="account-info-row">
+                <span class="account-info-label">⏳ ପରବର୍ତ୍ତୀ ପେମେଣ୍ଟ</span>
+                <span class="account-info-value" id="accountNextDue">—</span>
+            </div>
+        </div>
+
+        <div class="account-qr-wrap">
+            <img id="accountQrImg" src="" alt="Payment QR">
+            <div class="account-qr-caption">QR କୋଡ୍ ସ୍କାନ୍ କରି ପେମେଣ୍ଟ ପୃଷ୍ଠାକୁ ଯାଆନ୍ତୁ</div>
+        </div>
+
+        <a class="account-pay-btn" href="https://evidya-admin.pages.dev/payment/" target="_blank" rel="noopener noreferrer">
+            🌹 ଏବେ ପେମେଣ୍ଟ କରନ୍ତୁ
+        </a>
+        <button class="account-close-btn" onclick="closeAccountModal()">Close</button>
+    </div>
+</div>
+    
 <!-- ── PWA Floating Button ── -->
 <button id="pwaBtn" onclick="doInstall()">⬇️ Install App</button>
 <button id="iosInstallBtn" onclick="showIosModal()">📱 Install App</button>
@@ -957,8 +1132,9 @@
     const gateDb = firebase.firestore();
     const GATE_CLASS_NAME = "school9";
 
-    let studentRegisteredAt = null;
-    let unlockedClassCount = 0;
+ let studentRegisteredAt = null;
+let unlockedClassCount = 0;
+let currentStudentData = null;
 
     function computeUnlockedCount(registeredAtISO) {
         if (!registeredAtISO) return 1;
@@ -987,6 +1163,115 @@
         while (d.getDay() === 0) d.setDate(d.getDate() + 1);
         return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
     }
+
+
+/* ════════════════════════════════════════════
+   FEE / PAYMENT HELPERS
+════════════════════════════════════════════ */
+const MONTHLY_FEE = 250;
+
+// Adds N months to a date, keeping the same day-of-month
+// (safely handles months that are shorter, e.g. joined on the 31st)
+function addMonthsSafe(date, months) {
+    const d = new Date(date);
+    const targetMonth = d.getMonth() + months;
+    const day = d.getDate();
+    const candidate = new Date(d.getFullYear(), targetMonth, 1);
+    const lastDayOfTargetMonth = new Date(candidate.getFullYear(), candidate.getMonth() + 1, 0).getDate();
+    candidate.setDate(Math.min(day, lastDayOfTargetMonth));
+    return candidate;
+}
+
+// Finds the next upcoming due date (same day-of-month as joining, recurring monthly)
+function getNextPaymentDate(registeredAtISO) {
+    const start = new Date(registeredAtISO);
+    const today = new Date();
+    let months = 1;
+    let next = addMonthsSafe(start, months);
+    while (next <= today) {
+        months++;
+        next = addMonthsSafe(start, months);
+    }
+    return next;
+}
+
+function formatDateOdia(date) {
+    return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function daysUntil(date) {
+    const d1 = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.round((d1 - today) / 86400000);
+}
+
+/* ════════════════════════════════════════════
+   ACCOUNT MODAL
+════════════════════════════════════════════ */
+function openAccountModal() {
+    if (!currentStudentData) return;
+
+    const nextDue = getNextPaymentDate(currentStudentData.registeredAt);
+    const remaining = daysUntil(nextDue);
+
+    document.getElementById('accountAvatar').textContent =
+        currentStudentData.name.trim().charAt(0).toUpperCase();
+    document.getElementById('accountName').textContent = currentStudentData.name;
+    document.getElementById('accountRoll').textContent = 'Roll: ' + currentStudentData.rollNumber;
+    document.getElementById('accountJoinDate').textContent =
+        formatDateOdia(new Date(currentStudentData.registeredAt));
+
+    const dueEl = document.getElementById('accountNextDue');
+    dueEl.textContent = formatDateOdia(nextDue) + (remaining <= 3 ? ' ⚠️' : '');
+    dueEl.className = 'account-info-value ' + (remaining <= 3 ? 'due-soon' : 'paid-ok');
+
+    // QR encodes a link to your payment page, tagged with the roll number.
+    // If you have a fixed UPI ID, you can swap qrData for a UPI deep link instead — see note below.
+    const qrData = `https://evidya-admin.pages.dev/payment/?roll=${currentStudentData.rollNumber}`;
+    document.getElementById('accountQrImg').src =
+        'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(qrData);
+
+    document.getElementById('accountModal').classList.add('active');
+}
+
+function closeAccountModal() {
+    document.getElementById('accountModal').classList.remove('active');
+}
+
+/* ════════════════════════════════════════════
+   FEE REMINDER BANNER (auto, starts 3 days before due date)
+════════════════════════════════════════════ */
+function renderFeeReminder() {
+    const box = document.getElementById('feeReminderBox');
+    if (!box || !currentStudentData) return;
+
+    const nextDue = getNextPaymentDate(currentStudentData.registeredAt);
+    const remaining = daysUntil(nextDue);
+
+    if (remaining > 3) {
+        box.innerHTML = '';
+        return;
+    }
+
+    const overdue = remaining < 0;
+    const text = overdue
+        ? `ଆପଣଙ୍କ ମାସିକ ଫି (₹${MONTHLY_FEE}) ର ଦେୟ ତାରିଖ ପାର ହୋଇଯାଇଛି । ଦୟାକରି ଶୀଘ୍ର ପେମେଣ୍ଟ କରନ୍ତୁ ।`
+        : remaining === 0
+            ? `ଆଜି ଆପଣଙ୍କ ମାସିକ ଫି (₹${MONTHLY_FEE}) ଦେୟ ତାରିଖ ।`
+            : `ଆପଣଙ୍କ ମାସିକ ଫି (₹${MONTHLY_FEE}) ଆଉ ${remaining} ଦିନରେ ଦେୟ ହେବ (${formatDateOdia(nextDue)}) ।`;
+
+    box.innerHTML = `
+        <div class="fee-reminder-card ${overdue ? 'overdue' : ''}">
+            <div class="fee-reminder-icon">${overdue ? '🚨' : '⏰'}</div>
+            <div class="fee-reminder-title">${overdue ? 'ଫି ଦେୟ ତାରିଖ ପାର ହୋଇଛି !' : 'ଫି ପେମେଣ୍ଟ ମନେ ପକାଇବା'}</div>
+            <div class="fee-reminder-text">${text}</div>
+            <a class="fee-reminder-btn" href="#" onclick="event.preventDefault(); openAccountModal();">ବିବରଣୀ ଓ QR ଦେଖନ୍ତୁ →</a>
+        </div>
+    `;
+}
+
+    
 
     async function checkRollGate() {
         const rollNumber = document.getElementById('rollgateInput').value.trim();
@@ -1037,6 +1322,12 @@
           studentRegisteredAt = data.registeredAt || new Date().toISOString();
             unlockedClassCount = computeUnlockedCount(studentRegisteredAt);
 
+            currentStudentData = {
+    rollNumber: rollNumber,
+    name: data.name || rollNumber,
+    registeredAt: studentRegisteredAt
+};
+
            try {
                 sessionStorage.setItem('gateRollNumber', rollNumber);
                 localStorage.setItem('userRollNumber', rollNumber);
@@ -1059,7 +1350,8 @@ function showGateWelcome(studentName) {
     const nameEl = document.getElementById('splashWelcomeName');
     if (nameEl) nameEl.textContent = '🌹 ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '! 🌹';
 
-    setDailyUpdateMessage();
+   setDailyUpdateMessage();
+renderFeeReminder();
 
     const splash = document.getElementById('splashScreen');
     if (splash) {
