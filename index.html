@@ -1565,15 +1565,6 @@ function closeSplash() {
     showSubjects();
 }
 
-function getLatestClassForSubject(subjectKey) {
-    const nums = Object.keys(classNames)
-        .filter(k => k.startsWith(subjectKey + '-'))
-        .map(k => parseInt(k.split('-').pop()));
-    if (nums.length === 0) return null;
-    const maxNum = Math.max(...nums);
-    return { num: maxNum, title: classNames[subjectKey + '-' + maxNum] };
-}
-
 function setDailyUpdateMessage() {
     const msgBox = document.getElementById('dailyUpdateMsg');
     if (!msgBox) return;
@@ -1585,13 +1576,22 @@ function setDailyUpdateMessage() {
         return;
     }
 
-    let html = '🌹 ପ୍ରତ୍ୟେକ ବିଷୟରେ ବର୍ତ୍ତମାନ ଉପଲବ୍ଧ ନୂତନତମ କ୍ଲାସ୍ :<br><br>';
+    const todaysClassNum = unlockedClassCount || 1;
+    let html = '🌹 ଆଜି ଆପଣଙ୍କ ପାଇଁ ନୂତନ ଅନଲକ୍ ହୋଇଥିବା କ୍ଲାସ୍ :<br><br>';
+    let anyFound = false;
+
     for (const subjectKey in subjects) {
-        const latest = getLatestClassForSubject(subjectKey);
-        if (latest) {
-            html += '📘 <b>' + subjects[subjectKey].name + '</b> — Class ' + latest.num + ': ' + latest.title.replace(/<br>/g, ' ') + '<br><br>';
+        const key = subjectKey + '-' + todaysClassNum;
+        if (classNames[key]) {
+            html += '📘 <b>' + subjects[subjectKey].name + '</b> — Class ' + todaysClassNum + ': ' + classNames[key].replace(/<br>/g, ' ') + '<br><br>';
+            anyFound = true;
         }
     }
+
+    if (!anyFound) {
+        html = '🌹 ଆଜି ପାଇଁ ନୂତନ କ୍ଲାସ୍ ଉପଲବ୍ଧ ନାହିଁ । ଆପଣ ପୂର୍ବ କ୍ଲାସ୍ ଗୁଡ଼ିକ ପଢିପାରିବେ ।';
+    }
+
     msgBox.innerHTML = html;
 }
 
