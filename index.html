@@ -761,57 +761,6 @@
     min-height: 18px;
 }
 
-.account-button {
-    display: block;
-    width: 100%;
-    max-width: 320px;
-    margin: 12px auto 0;
-    padding: 12px;
-    background: linear-gradient(135deg, #10b981, #059669);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-}
-
-.account-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.75);
-    z-index: 9500;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-.account-overlay.active { display: flex; }
-
-.account-box {
-    background: white;
-    border-radius: 20px;
-    padding: 24px 20px;
-    max-width: 380px;
-    width: 100%;
-    max-height: 85vh;
-    overflow-y: auto;
-    position: relative;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-}
-
-.account-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px dashed #eee;
-    font-size: 13px;
-}
-.account-row span { color: #666; }
-.account-row b { color: #222; text-align: right; }
-        
         .gate-consent-box {
     display: flex;
     align-items: flex-start;
@@ -865,20 +814,7 @@
     box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 "></div>
 
-    <div id="feeReminderBanner" style="display:none; margin-top:12px; max-width:320px;"></div>
-
-        <button class="account-button" onclick="showAccountModal()">🧾 ମୋର ଖାତା ଓ ପେମେଣ୍ଟ ବିବରଣୀ</button>
-
       <button class="proceed-button" onclick="closeSplash()">ଆଗକୁ ଯାଅନ୍ତୁ ...</button>
-    </div>
-</div>
-
-<!-- ── Account / Payment Modal ── -->
-<div class="account-overlay" id="accountModal">
-    <div class="account-box">
-        <button onclick="closeAccountModal()" style="position:absolute; top:14px; right:14px; background:rgba(0,0,0,0.06); border:none; width:32px; height:32px; border-radius:50%; font-size:16px; cursor:pointer;">✕</button>
-        <h2 style="color:#667eea; font-size:1.2em; font-weight:900; text-align:center; margin-bottom:14px;">🧾 ମୋର ଖାତା</h2>
-        <div id="accountModalBody"></div>
     </div>
 </div>
 <!-- ── Roll Number Gate (determines which classes are unlocked) ── -->
@@ -901,7 +837,12 @@
             📋 ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ ।
         </button>
 
-
+        <div style="text-align:center; margin-top:12px;">
+            <a href="https://evidya-admin.pages.dev/payment/" target="_blank" rel="noopener noreferrer"
+               style="display:inline-block; padding:12px 28px; background:linear-gradient(135deg,#c8962a,#e4b84a); color:#0a1628; font-size:0.9rem; font-weight:700; text-decoration:none; border-radius:50px; box-shadow:0 6px 20px rgba(200,150,42,0.35);">
+                🌹 ପେମେଣ୍ଟ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । →
+            </a>
+        </div>
 
         <div style="margin-top:20px; text-align:center;">
             <div style="display:inline-block; padding:10px; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); border-radius:50%; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
@@ -1040,79 +981,6 @@
         return count;
     }
 
-function formatDateOdia(d) {
-    if (!d) return 'N/A';
-    return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
-}
-
-function computeNextPaymentDate(registeredAtISO) {
-    if (!registeredAtISO) return null;
-    const reg = new Date(registeredAtISO);
-    const joinDay = reg.getDate();
-    const now = new Date();
-    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-
-    function clampedDate(year, month, day) {
-        const lastDay = new Date(year, month + 1, 0).getDate();
-        return new Date(year, month, Math.min(day, lastDay));
-    }
-
-    let next = clampedDate(today.getFullYear(), today.getMonth(), joinDay);
-    if (next < today) {
-        next = clampedDate(today.getFullYear(), today.getMonth() + 1, joinDay);
-    }
-    return next;
-}
-
-function showAccountModal() {
-    const data = window.currentStudentData || {};
-    const nextPay = computeNextPaymentDate(studentRegisteredAt);
-
-    document.getElementById('accountModalBody').innerHTML = `
-        <div class="account-row"><span>ଛାତ୍ର/ଛାତ୍ରୀଙ୍କ ନାମ:</span><b>${data.name || 'N/A'}</b></div>
-        <div class="account-row"><span>ରୋଲ୍ ନମ୍ବର:</span><b>${data.rollNumber || ''}</b></div>
-        <div class="account-row"><span>ଯୋଗଦାନ ତାରିଖ:</span><b>${formatDateOdia(new Date(studentRegisteredAt))}</b></div>
-        <div class="account-row"><span>ମାସିକ ଫି:</span><b>₹250</b></div>
-        <div class="account-row"><span>ପରବର୍ତ୍ତୀ ପେମେଣ୍ଟ ତାରିଖ:</span><b style="color:#dc2626;">${formatDateOdia(nextPay)}</b></div>
-        <div style="text-align:center; margin-top:16px;">
-            <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/QR%20OF%20MANASI.jpeg" alt="Payment QR" style="width:200px; height:200px; border-radius:12px; border:3px solid #667eea; box-shadow:0 4px 14px rgba(0,0,0,0.2);" onerror="this.style.display='none'">
-            <p style="font-size:12px; color:#666; margin-top:8px; font-weight:700;">📱 ଉପରୋକ୍ତ QR କୋଡ୍ ସ୍କାନ୍ କରି ପେମେଣ୍ଟ କରନ୍ତୁ...</p>
-        </div>
-    `;
-    document.getElementById('accountModal').classList.add('active');
-}
-
-function closeAccountModal() {
-    document.getElementById('accountModal').classList.remove('active');
-}
-
-function checkFeeReminder() {
-    const banner = document.getElementById('feeReminderBanner');
-    if (!banner || !studentRegisteredAt) return;
-
-    const nextPay = computeNextPaymentDate(studentRegisteredAt);
-    const now = new Date();
-    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    const daysLeft = Math.round((nextPay - today) / 86400000);
-
-    if (daysLeft >= 0 && daysLeft <= 3) {
-        const msg = daysLeft === 0
-            ? '⚠️ ଦୟାକରି ଧ୍ୟାନ ଦିଅନ୍ତୁ । ଆଜି ଆପଣଙ୍କ ମାସିକ ଫି (₹250) ଦେୟ ତାରିଖ । କ୍ଲାସ୍ ଜାରିରଖିବା ପାଇଁ ଦୟାକରି ଶୀଘ୍ର ପେମେଣ୍ଟ କରନ୍ତୁ ।'
-            : `⚠️ ଦୟାକରି ଧ୍ୟାନ ଦିଅନ୍ତୁ । ଆପଣଙ୍କ ମାସିକ ଫି (₹250) ଆଉ ${daysLeft} ଦିନ ପରେ ଦେୟ ହେବ (${formatDateOdia(nextPay)}) । କ୍ଲାସ୍ ପ୍ରବାହ ଜାରିରଖିବା ପାଇଁ ଆପଣ ଏବେ ପେମେଣ୍ଟ କରିପାରିବେ ।`;
-        banner.innerHTML = `
-            <div style="background:linear-gradient(135deg,#fbbf24,#f59e0b); color:#78350f; padding:10px 14px; border-radius:12px; font-size:13px; font-weight:800; text-align:center; box-shadow:0 4px 14px rgba(0,0,0,0.2); cursor:pointer;" onclick="showAccountModal()">
-                ${msg}<br><span style="font-size:11px; font-weight:600;">(ପେମେଣ୍ଟ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ)</span>
-            </div>`;
-        banner.style.display = 'block';
-    } else {
-        banner.style.display = 'none';
-        banner.innerHTML = '';
-    }
-}
-
-
-
-    
     function getNextUnlockDateText() {
         let d = new Date();
         d.setDate(d.getDate() + 1);
@@ -1166,9 +1034,8 @@ function checkFeeReminder() {
                 return;
             }
 
-       studentRegisteredAt = data.registeredAt || new Date().toISOString();
+          studentRegisteredAt = data.registeredAt || new Date().toISOString();
             unlockedClassCount = computeUnlockedCount(studentRegisteredAt);
-            window.currentStudentData = data;
 
            try {
                 sessionStorage.setItem('gateRollNumber', rollNumber);
@@ -1193,7 +1060,6 @@ function showGateWelcome(studentName) {
     if (nameEl) nameEl.textContent = '🌹 ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '! 🌹';
 
     setDailyUpdateMessage();
-    checkFeeReminder();
 
     const splash = document.getElementById('splashScreen');
     if (splash) {
