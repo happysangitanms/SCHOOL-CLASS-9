@@ -615,6 +615,57 @@
     border: none;
 }
 
+@keyframes dailyCardIn {
+    from { opacity: 0; transform: translateY(10px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.daily-card {
+    position: relative;
+    border-radius: 12px;
+    padding: 10px 12px 10px 14px;
+    text-align: left;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    opacity: 0;
+    animation: dailyCardIn 0.45s ease-out forwards;
+    overflow: hidden;
+}
+
+.daily-card::before {
+    content: '';
+    position: absolute;
+    top: -30%; right: -10%;
+    width: 90px; height: 90px;
+    background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.daily-card-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.3);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.daily-card-subject {
+    color: white;
+    font-size: 13.5px;
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+
+.daily-card-title {
+    color: rgba(255,255,255,0.92);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+        
 .proceed-button {
     display: block;
     margin: 18px auto 0;
@@ -750,21 +801,18 @@
             🌹 ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ ।🌹
         </p>
 
-        <div id="dailyUpdateMsg" style="
-            margin-top: 12px;
-            padding: 12px 16px;
-            background: rgba(255,255,255,0.18);
-            border: 1px solid rgba(255,255,255,0.4);
-            border-radius: 12px;
-            color: white;
-            font-size: 13px;
-            font-weight: 700;
-            max-width: 320px;
-            max-height: 260px;
-            overflow-y: auto;
-            line-height: 1.5;
-            text-align: left;
-        "></div>
+       <div id="dailyUpdateMsg" style="
+    margin-top: 14px;
+    padding: 14px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 16px;
+    max-width: 320px;
+    width: 100%;
+    max-height: 280px;
+    overflow-y: auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+"></div>
 
       <button class="proceed-button" onclick="closeSplash()">ଆଗକୁ ଯାଅନ୍ତୁ ...</button>
     </div>
@@ -1565,6 +1613,12 @@ function closeSplash() {
     showSubjects();
 }
 
+const dailyCardColors = [
+    ['#f59e0b', '#d97706'], ['#ec4899', '#be185d'], ['#10b981', '#059669'],
+    ['#3b82f6', '#1d4ed8'], ['#8b5cf6', '#6d28d9'], ['#ef4444', '#b91c1c'],
+    ['#14b8a6', '#0f766e'], ['#f97316', '#c2410c']
+];
+
 function setDailyUpdateMessage() {
     const msgBox = document.getElementById('dailyUpdateMsg');
     if (!msgBox) return;
@@ -1572,27 +1626,55 @@ function setDailyUpdateMessage() {
     const isSunday = new Date().getDay() === 0;
 
     if (isSunday) {
-        msgBox.innerHTML = '🌹 ଆଜି ରବିବାର, ତେଣୁ ନୂତନ କ୍ଲାସ୍ ନାହିଁ । ଅବସର ନିଅନ୍ତୁ, ଆସନ୍ତାକାଲି ପୁଣି ମିଳିବା ।';
+        msgBox.innerHTML = `
+            <div style="text-align:center; padding:14px 8px;">
+                <div style="font-size:26px; margin-bottom:6px;">😴</div>
+                <div style="color:white; font-size:14px; font-weight:800; line-height:1.6;">
+                    ଆଜି ରବିବାର, ତେଣୁ ନୂତନ କ୍ଲାସ୍ ନାହିଁ ।<br>ଅବସର ନିଅନ୍ତୁ, ଆସନ୍ତାକାଲି ପୁଣି ମିଳିବା ।
+                </div>
+            </div>`;
         return;
     }
 
     const todaysClassNum = unlockedClassCount || 1;
-    let html = '🌹 ଆଜି ଆପଣଙ୍କ ପାଇଁ ନୂତନ ଅନଲକ୍ ହୋଇଥିବା କ୍ଲାସ୍ :<br><br>';
-    let anyFound = false;
+    let cardsHtml = '';
+    let count = 0;
 
     for (const subjectKey in subjects) {
         const key = subjectKey + '-' + todaysClassNum;
         if (classNames[key]) {
-            html += '📘 <b>' + subjects[subjectKey].name + '</b> — Class ' + todaysClassNum + ': ' + classNames[key].replace(/<br>/g, ' ') + '<br><br>';
-            anyFound = true;
+            const colors = dailyCardColors[count % dailyCardColors.length];
+            const delay = (count * 0.08).toFixed(2);
+            cardsHtml += `
+                <div class="daily-card" style="
+                    background: linear-gradient(135deg, ${colors[0]}, ${colors[1]});
+                    animation-delay: ${delay}s;
+                ">
+                    <div class="daily-card-badge">Class ${todaysClassNum}</div>
+                    <div class="daily-card-subject">${subjects[subjectKey].name}</div>
+                    <div class="daily-card-title">${classNames[key]}</div>
+                </div>`;
+            count++;
         }
     }
 
-    if (!anyFound) {
-        html = '🌹 ଆଜି ପାଇଁ ନୂତନ କ୍ଲାସ୍ ଉପଲବ୍ଧ ନାହିଁ । ଆପଣ ପୂର୍ବ କ୍ଲାସ୍ ଗୁଡ଼ିକ ପଢିପାରିବେ ।';
+    if (count === 0) {
+        msgBox.innerHTML = `
+            <div style="text-align:center; padding:14px 8px;">
+                <div style="font-size:26px; margin-bottom:6px;">📭</div>
+                <div style="color:white; font-size:14px; font-weight:800; line-height:1.6;">
+                    ଆଜି ପାଇଁ ନୂତନ କ୍ଲାସ୍ ଉପଲବ୍ଧ ନାହିଁ ।<br>ଆପଣ ପୂର୍ବ କ୍ଲାସ୍ ଗୁଡ଼ିକ ପଢିପାରିବେ ।
+                </div>
+            </div>`;
+        return;
     }
 
-    msgBox.innerHTML = html;
+    msgBox.innerHTML = `
+        <div style="text-align:center; color:white; font-size:14px; font-weight:900; margin-bottom:10px; letter-spacing:0.3px;">
+            🔔 ଆଜିର ନୂତନ କ୍ଲାସ୍ ଗୁଡ଼ିକ
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">${cardsHtml}</div>
+    `;
 }
 
 setDailyUpdateMessage();
