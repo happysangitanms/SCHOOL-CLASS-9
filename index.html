@@ -1438,6 +1438,7 @@ function closeAccountModal() {
     function dateOnly(d) {
         return new Date(d.getFullYear(), d.getMonth(), d.getDate());
     }
+      
     const start = new Date(registeredAtISO);
     const todayOnly = dateOnly(new Date());
     const periods = [];
@@ -1452,6 +1453,16 @@ function closeAccountModal() {
     }
     return periods;
 }
+
+
+function getPeriodEndDate(registeredAtISO, period) {
+    const start = new Date(registeredAtISO);
+    const end = addMonthsSafe(start, period.index);
+    end.setDate(end.getDate() - 1);
+    return end;
+}
+
+    
 async function openBillHistory() {
     document.getElementById('billHistoryModal').classList.add('active');
     const wrap = document.getElementById('billListWrap');
@@ -1490,7 +1501,7 @@ async function openBillHistory() {
                         <div class="bill-card-row"><span>ଛାତ୍ର/ଛାତ୍ରୀଙ୍କ ନାମ</span><span>${currentStudentData.name}</span></div>
                         <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
                         <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
-                        <div class="bill-card-row"><span>ଏହି ମାସର ଦେୟ ତାରିଖ</span><span>${formatBillDate(period.dueDate)}</span></div>
+                        <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
                         <div class="bill-card-row"><span>ପେମେଣ୍ଟ ତାରିଖ</span><span>${formatBillDate(paidAt)}</span></div>
                        <div class="bill-card-footer">✅ ପେମେଣ୍ଟ ସଫଳ ହୋଇଛି</div>
                         <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ</button>
@@ -1506,7 +1517,7 @@ async function openBillHistory() {
                         <div class="bill-card-row"><span>ଛାତ୍ର/ଛାତ୍ରୀଙ୍କ ନାମ</span><span>${currentStudentData.name}</span></div>
                         <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
                         <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
-                        <div class="bill-card-row"><span>ଦେୟ ତାରିଖ</span><span>${formatBillDate(period.dueDate)}</span></div>
+                        <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
                       <div class="bill-card-footer" style="color:#dc2626;">⏳ ପେମେଣ୍ଟ ବକୟା ଅଛି</div>
                         <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ</button>
                     </div>`;
@@ -1544,7 +1555,8 @@ async function generateBillPDF(periodIndex, btnEl) {
     document.getElementById('invStudentName').textContent = currentStudentData.name;
     document.getElementById('invRoll').textContent = currentStudentData.rollNumber;
     document.getElementById('invPeriodDesc').textContent = 'Monthly Learning Fee of Digital Book — Class IX';
-    document.getElementById('invDueDate').textContent = formatBillDate(period.dueDate);
+    const periodEnd = getPeriodEndDate(currentStudentData.registeredAt, period);
+    document.getElementById('invDueDate').textContent = formatBillDate(period.dueDate) + ' - ' + formatBillDate(periodEnd);
     document.getElementById('invAmount').textContent = '₹' + MONTHLY_FEE;
     document.getElementById('invTotal').textContent = '₹' + MONTHLY_FEE;
 
