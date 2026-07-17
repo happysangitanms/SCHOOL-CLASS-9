@@ -1352,6 +1352,7 @@ async function openBillHistory() {
                         <div class="bill-card-row"><span>ନାମ</span><span>${currentStudentData.name}</span></div>
                         <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
                         <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
+                        <div class="bill-card-row"><span>ଏହି ମାସର ଦେୟ ତାରିଖ</span><span>${formatBillDate(period.dueDate)}</span></div>
                         <div class="bill-card-row"><span>ପେମେଣ୍ଟ ତାରିଖ</span><span>${formatBillDate(paidAt)}</span></div>
                         <div class="bill-card-footer">✅ ପେମେଣ୍ଟ ସଫଳ ହୋଇଛି</div>
                     </div>`;
