@@ -14,8 +14,10 @@
     <meta name="theme-color" content="#667eea">
    <link rel="apple-touch-icon" href="./icon-192.png">
 
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <style>
         * {
@@ -961,6 +963,21 @@
     font-weight: 800; color: #059669;
 }     
 
+        .bill-download-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 9px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.bill-download-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
         .account-close-x {
     position: absolute;
     top: 12px;
@@ -973,6 +990,52 @@
     cursor: pointer;
     padding: 4px 8px;
 }
+
+        .invoice-page {
+    position: fixed;
+    left: -9999px;
+    top: 0;
+    width: 780px;
+    background: #ffffff;
+    padding: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1f2937;
+}
+.inv-header { display: flex; align-items: center; gap: 18px; }
+.inv-logo { width: 70px; height: auto; }
+.inv-org-name { font-size: 24px; font-weight: 900; color: #4c1d95; }
+.inv-org-tagline { font-size: 12px; color: #666; margin-top: 2px; font-weight: 600; }
+.inv-org-contact { font-size: 11px; color: #888; margin-top: 6px; line-height: 1.6; }
+.inv-divider { height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); margin: 20px 0; border-radius: 3px; }
+.inv-meta-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 22px; }
+.inv-meta-label { font-size: 10px; color: #999; letter-spacing: 0.6px; font-weight: 700; }
+.inv-meta-value { font-size: 15px; font-weight: 800; color: #333; }
+.inv-stamp {
+    font-size: 18px; font-weight: 900; padding: 8px 22px;
+    border-radius: 8px; transform: rotate(8deg); letter-spacing: 1px;
+}
+.inv-stamp-paid { color: #059669; border: 3px solid #059669; background: rgba(5,150,105,0.08); }
+.inv-stamp-due { color: #dc2626; border: 3px solid #dc2626; background: rgba(220,38,38,0.08); }
+.inv-billto-box { background: #f9fafb; border-left: 4px solid #667eea; border-radius: 6px; padding: 14px 18px; margin-bottom: 22px; }
+.inv-billto-label { font-size: 10px; color: #667eea; font-weight: 800; letter-spacing: 0.6px; margin-bottom: 4px; }
+.inv-billto-name { font-size: 19px; font-weight: 900; color: #1f2937; }
+.inv-billto-sub { font-size: 12.5px; color: #555; margin-top: 3px; }
+.inv-table { width: 100%; border-collapse: collapse; margin-bottom: 6px; }
+.inv-table th {
+    background: #4c1d95; color: white; text-align: left;
+    font-size: 11px; padding: 10px 12px; letter-spacing: 0.4px;
+}
+.inv-table th:last-child, .inv-table td:last-child { text-align: right; }
+.inv-table td { padding: 12px; font-size: 13px; border-bottom: 1px solid #eee; }
+.inv-total-row td { font-weight: 900; font-size: 15px; background: #f9fafb; color: #1f2937; }
+.inv-paid-row {
+    display: flex; justify-content: space-between; font-size: 12.5px;
+    color: #059669; font-weight: 700; padding: 8px 12px; margin-bottom: 26px;
+}
+.inv-footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 40px; }
+.inv-signature { text-align: center; font-size: 11px; color: #666; }
+.inv-signature-line { width: 140px; border-top: 1.5px solid #999; margin-bottom: 6px; }
+.inv-thankyou { text-align: right; font-size: 12px; color: #764ba2; font-weight: 700; line-height: 1.6; max-width: 320px; }
         
     </style>
 </head>
@@ -1118,6 +1181,72 @@
     </div>
 </div>
 
+
+<!-- ── Hidden Professional Invoice Template (used for PDF generation) ── -->
+<div id="invoiceTemplate" class="invoice-page">
+    <div class="inv-header">
+        <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/LOGO.png" class="inv-logo" alt="Logo">
+        <div class="inv-org-info">
+            <div class="inv-org-name">E-Vidya Academy</div>
+            <div class="inv-org-tagline">Digital Learning • Class IX Supplementary Material</div>
+            <div class="inv-org-contact">
+                ⚠️EDIT: Your full address here, City, Odisha, PIN<br>
+                📞 ⚠️EDIT: Phone Number &nbsp;|&nbsp; ✉️ ⚠️EDIT: Email Address
+            </div>
+        </div>
+    </div>
+
+    <div class="inv-divider"></div>
+
+    <div class="inv-meta-row">
+        <div>
+            <div class="inv-meta-label">INVOICE NO.</div>
+            <div class="inv-meta-value" id="invNumber">—</div>
+            <div class="inv-meta-label" style="margin-top:8px;">DATE</div>
+            <div class="inv-meta-value" id="invDate">—</div>
+        </div>
+        <div class="inv-stamp" id="invStamp">—</div>
+    </div>
+
+    <div class="inv-billto-box">
+        <div class="inv-billto-label">BILL TO (Parent/Guardian)</div>
+        <div class="inv-billto-name" id="invGuardianName">—</div>
+        <div class="inv-billto-sub">Contact: <span id="invPhone">—</span></div>
+        <div class="inv-billto-sub">Student: <span id="invStudentName">—</span> &nbsp;(Roll No. <span id="invRoll">—</span>)</div>
+    </div>
+
+    <table class="inv-table">
+        <thead>
+            <tr><th>DESCRIPTION</th><th>BILLING PERIOD</th><th>AMOUNT</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="invPeriodDesc">—</td>
+                <td id="invDueDate">—</td>
+                <td id="invAmount">—</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="inv-total-row"><td colspan="2">TOTAL</td><td id="invTotal">—</td></tr>
+        </tfoot>
+    </table>
+
+    <div class="inv-paid-row" id="invPaidDateRow">
+        <span>Payment Received On</span><span id="invPaidDate">—</span>
+    </div>
+
+    <div class="inv-footer">
+        <div class="inv-signature">
+            <div class="inv-signature-line"></div>
+            <div>Authorized Signatory</div>
+        </div>
+        <div class="inv-thankyou">
+            🌹 Thank you for being a part of E-Vidya Academy! 🌹<br>
+            <span style="font-size:9px;color:#999;">This is a computer-generated invoice and does not require a physical signature.</span>
+        </div>
+    </div>
+</div>
+    
 <!-- ── Payment Bill History Modal ── -->
 <div class="account-overlay" id="billHistoryModal">
     <div class="account-box">
@@ -1335,6 +1464,10 @@ async function openBillHistory() {
         const paidCount = payments.length;
         const periods = getBillPeriods(currentStudentData.registeredAt);
 
+        window.currentBillPeriods = periods;
+        window.currentBillPayments = payments;
+        window.currentBillPaidCount = paidCount;
+
         let html = '';
         for (let i = periods.length - 1; i >= 0; i--) {
             const period = periods[i];
@@ -1355,9 +1488,10 @@ async function openBillHistory() {
                         <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
                         <div class="bill-card-row"><span>ଏହି ମାସର ଦେୟ ତାରିଖ</span><span>${formatBillDate(period.dueDate)}</span></div>
                         <div class="bill-card-row"><span>ପେମେଣ୍ଟ ତାରିଖ</span><span>${formatBillDate(paidAt)}</span></div>
-                        <div class="bill-card-footer">✅ ପେମେଣ୍ଟ ସଫଳ ହୋଇଛି</div>
+                       <div class="bill-card-footer">✅ ପେମେଣ୍ଟ ସଫଳ ହୋଇଛି</div>
+                        <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ</button>
                     </div>`;
-           } else {
+            } else {
                 html += `
                     <div class="bill-card bill-card-unpaid">
                         <div class="bill-card-header">
@@ -1369,7 +1503,8 @@ async function openBillHistory() {
                         <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
                         <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
                         <div class="bill-card-row"><span>ଦେୟ ତାରିଖ</span><span>${formatBillDate(period.dueDate)}</span></div>
-                        <div class="bill-card-footer" style="color:#dc2626;">⏳ ପେମେଣ୍ଟ ବକୟା ଅଛି</div>
+                      <div class="bill-card-footer" style="color:#dc2626;">⏳ ପେମେଣ୍ଟ ବକୟା ଅଛି</div>
+                        <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ</button>
                     </div>`;
             }
         }
@@ -1391,6 +1526,60 @@ function formatBillDate(dateInput) {
     } catch { return dateInput; }
 }
 
+async function generateBillPDF(periodIndex, btnEl) {
+    const period = window.currentBillPeriods.find(p => p.index === periodIndex);
+    if (!period) return;
+
+    const isPaid = periodIndex <= window.currentBillPaidCount;
+    const paidAt = isPaid ? window.currentBillPayments[periodIndex - 1].paidAt : null;
+
+    document.getElementById('invNumber').textContent = 'EVA-' + currentStudentData.rollNumber + '-' + String(periodIndex).padStart(3, '0');
+    document.getElementById('invDate').textContent = formatBillDate(new Date());
+    document.getElementById('invGuardianName').textContent = currentStudentData.guardianName;
+    document.getElementById('invPhone').textContent = currentStudentData.phone;
+    document.getElementById('invStudentName').textContent = currentStudentData.name;
+    document.getElementById('invRoll').textContent = currentStudentData.rollNumber;
+    document.getElementById('invPeriodDesc').textContent = 'Monthly Tuition Fee — Class IX';
+    document.getElementById('invDueDate').textContent = formatBillDate(period.dueDate);
+    document.getElementById('invAmount').textContent = '₹' + MONTHLY_FEE;
+    document.getElementById('invTotal').textContent = '₹' + MONTHLY_FEE;
+
+    const stampEl = document.getElementById('invStamp');
+    const paidRow = document.getElementById('invPaidDateRow');
+    if (isPaid) {
+        stampEl.textContent = '✅ PAID';
+        stampEl.className = 'inv-stamp inv-stamp-paid';
+        paidRow.style.display = 'flex';
+        document.getElementById('invPaidDate').textContent = formatBillDate(paidAt);
+    } else {
+        stampEl.textContent = '⏳ DUE';
+        stampEl.className = 'inv-stamp inv-stamp-due';
+        paidRow.style.display = 'none';
+    }
+
+    const originalLabel = btnEl.textContent;
+    btnEl.textContent = '⏳ ତିଆରି ହେଉଛି...';
+    btnEl.disabled = true;
+
+    try {
+        const invoiceEl = document.getElementById('invoiceTemplate');
+        const canvas = await html2canvas(invoiceEl, { scale: 2, useCORS: true });
+        const imgData = canvas.toDataURL('image/png');
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        pdf.save('EVidya_Bill_' + currentStudentData.rollNumber + '_' + periodIndex + '.pdf');
+    } catch (err) {
+        console.error(err);
+        alert('PDF ତିଆରି ହେବାରେ ସମସ୍ୟା ହେଲା । ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ ।');
+    } finally {
+        btnEl.textContent = originalLabel;
+        btnEl.disabled = false;
+    }
+}
+    
 /* ════════════════════════════════════════════
    FEE REMINDER BANNER (auto, starts 3 days before due date)
 ════════════════════════════════════════════ */
@@ -1474,10 +1663,11 @@ function renderFeeReminder() {
           studentRegisteredAt = data.registeredAt || new Date().toISOString();
             unlockedClassCount = computeUnlockedCount(studentRegisteredAt);
 
-           currentStudentData = {
+          currentStudentData = {
     rollNumber: rollNumber,
     name: data.name || rollNumber,
     guardianName: data.guardianName || data.name || rollNumber,
+    phone: data.phone || '—',
     registeredAt: studentRegisteredAt
 };
 
