@@ -846,7 +846,7 @@
     display: none;
     position: fixed; inset: 0;
     background: rgba(0,0,0,0.75);
-    z-index: 10000;
+   z-index: 100000;
     justify-content: center; align-items: center;
     padding: 20px;
 }
@@ -863,6 +863,7 @@
     text-align: center;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    position: relative;
 }
 
 .account-avatar {
@@ -923,6 +924,19 @@
     background: none; border: none; color: #aaa;
     font-size: 0.85em; cursor: pointer; padding: 8px; text-decoration: underline;
 }     
+
+        .account-close-x {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    line-height: 1;
+    color: #999;
+    cursor: pointer;
+    padding: 4px 8px;
+}
         
     </style>
 </head>
@@ -1032,8 +1046,9 @@
 
 <!-- ── Student Account Modal ── -->
 <div class="account-overlay" id="accountModal">
-    <div class="account-box">
-        <div class="account-avatar" id="accountAvatar">?</div>
+<div class="account-box">
+    <button class="account-close-x" onclick="closeAccountModal()">&times;</button>
+    <div class="account-avatar" id="accountAvatar">?</div>
         <div class="account-name" id="accountName">—</div>
         <div class="account-roll" id="accountRoll">Roll: —</div>
 
@@ -1052,15 +1067,13 @@
             </div>
         </div>
 
-        <div class="account-qr-wrap">
-            <img id="accountQrImg" src="" alt="Payment QR">
-            <div class="account-qr-caption">QR କୋଡ୍ ସ୍କାନ୍ କରି ପେମେଣ୍ଟ ପୃଷ୍ଠାକୁ ଯାଆନ୍ତୁ</div>
-        </div>
-
-        <a class="account-pay-btn" href="https://evidya-admin.pages.dev/payment/" target="_blank" rel="noopener noreferrer">
-            🌹 ଏବେ ପେମେଣ୍ଟ କରନ୍ତୁ
-        </a>
-        <button class="account-close-btn" onclick="closeAccountModal()">Close</button>
+<div class="account-qr-wrap">
+    <a href="upi://pay?pa=7735772693@jio&pn=E-Vidya%20Academy&am=250&cu=INR">
+        <img id="accountQrImg" src="https://raw.githubusercontent.com/happysangitanms/assets/main/QR%20OF%20MANASI.jpeg" alt="Payment QR">
+    </a>
+    <div class="account-qr-caption">QR କୋଡ୍ ଉପରେ କ୍ଲିକ୍ କରି ସିଧାସଳଖ ₹250 ପେମେଣ୍ଟ କରନ୍ତୁ</div>
+</div>
+        <button class="account-close-btn" onclick="closeAccountModal()">ବନ୍ଦ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । </button>
     </div>
 </div>
     
@@ -1228,9 +1241,7 @@ function openAccountModal() {
 
     // QR encodes a link to your payment page, tagged with the roll number.
     // If you have a fixed UPI ID, you can swap qrData for a UPI deep link instead — see note below.
-    const qrData = `https://evidya-admin.pages.dev/payment/?roll=${currentStudentData.rollNumber}`;
-    document.getElementById('accountQrImg').src =
-        'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(qrData);
+  
 
     document.getElementById('accountModal').classList.add('active');
 }
