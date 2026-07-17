@@ -1543,7 +1543,7 @@ async function generateBillPDF(periodIndex, btnEl) {
     document.getElementById('invPhone').textContent = currentStudentData.phone;
     document.getElementById('invStudentName').textContent = currentStudentData.name;
     document.getElementById('invRoll').textContent = currentStudentData.rollNumber;
-    document.getElementById('invPeriodDesc').textContent = 'Monthly Fee for Learning Digital Book — Class IX';
+    document.getElementById('invPeriodDesc').textContent = 'Monthly Learning Fee of Digital Book — Class IX';
     document.getElementById('invDueDate').textContent = formatBillDate(period.dueDate);
     document.getElementById('invAmount').textContent = '₹' + MONTHLY_FEE;
     document.getElementById('invTotal').textContent = '₹' + MONTHLY_FEE;
