@@ -932,6 +932,35 @@
     font-size: 0.85em; cursor: pointer; padding: 8px; text-decoration: underline;
 }     
 
+
+   .bill-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e7eb;
+}
+.bill-card-unpaid {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+.bill-card-header {
+    display: flex; justify-content: space-between;
+    font-size: 12px; font-weight: 800; color: #667eea;
+    margin-bottom: 8px; padding-bottom: 6px;
+    border-bottom: 1px dashed #d1d5db;
+}
+.bill-card-row {
+    display: flex; justify-content: space-between;
+    font-size: 12.5px; color: #333; margin-bottom: 4px;
+}
+.bill-card-row span:first-child { color: #888; font-weight: 600; }
+.bill-card-row span:last-child { font-weight: 800; }
+.bill-card-footer {
+    text-align: center; margin-top: 8px; font-size: 11.5px;
+    font-weight: 800; color: #059669;
+}     
+
         .account-close-x {
     position: absolute;
     top: 12px;
@@ -1068,10 +1097,17 @@
                 <span class="account-info-label">💰 ମାସିକ ଫି</span>
                 <span class="account-info-value">₹250</span>
             </div>
-            <div class="account-info-row">
+            
+  <div class="account-info-row">
                 <span class="account-info-label">⏳ ପରବର୍ତ୍ତୀ ପେମେଣ୍ଟ</span>
                 <span class="account-info-value" id="accountNextDue">—</span>
             </div>
+        </div>
+
+        <div style="text-align:center; margin-bottom:14px;">
+            <a href="#" onclick="event.preventDefault(); openBillHistory();" style="color:#667eea; font-size:13px; font-weight:700; text-decoration:underline;">
+                🧾 ପୂର୍ବ ପେମେଣ୍ଟ ଗୁଡ଼ିକର ବିଲ୍ ଦେଖନ୍ତୁ
+            </a>
         </div>
 
 <div class="account-qr-wrap">
@@ -1079,6 +1115,16 @@
     <div class="account-qr-caption">ଉପରୋକ୍ତ QR କୋଡ୍ ସ୍କାନ୍ କରି ₹250 ପେମେଣ୍ଟ କରନ୍ତୁ</div>
 </div>
         <button class="account-close-btn" onclick="closeAccountModal()">ବନ୍ଦ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । </button>
+    </div>
+</div>
+
+<!-- ── Payment Bill History Modal ── -->
+<div class="account-overlay" id="billHistoryModal">
+    <div class="account-box">
+        <button class="account-close-x" onclick="closeBillHistory()">&times;</button>
+        <div class="account-name" style="margin-bottom:14px;">🧾 ପେମେଣ୍ଟ ବିଲ୍ ଗୁଡ଼ିକ</div>
+        <div id="billListWrap" style="text-align:left;"></div>
+        <button class="account-close-btn" onclick="closeBillHistory()">Close</button>
     </div>
 </div>
     
@@ -1253,6 +1299,90 @@ function openAccountModal() {
 
 function closeAccountModal() {
     document.getElementById('accountModal').classList.remove('active');
+}
+
+    function getBillPeriods(registeredAtISO) {
+    const start = new Date(registeredAtISO);
+    const today = new Date();
+    const periods = [];
+    let months = 1;
+    let due = addMonthsSafe(start, months);
+    while (true) {
+        periods.push({ index: months, dueDate: due });
+        if (due > today) break;
+        months++;
+        due = addMonthsSafe(start, months);
+    }
+    return periods;
+}
+
+async function openBillHistory() {
+    document.getElementById('billHistoryModal').classList.add('active');
+    const wrap = document.getElementById('billListWrap');
+    wrap.innerHTML = '<div style="text-align:center;color:#888;padding:20px;">⏳ ଲୋଡ୍ ହେଉଛି...</div>';
+
+    try {
+        const snap = await gateDb.collection('students')
+            .doc(currentStudentData.rollNumber)
+            .collection('payments')
+            .orderBy('paidAt', 'asc')
+            .get();
+
+        const payments = snap.docs.map(d => d.data());
+        const paidCount = payments.length;
+        const periods = getBillPeriods(currentStudentData.registeredAt);
+
+        let html = '';
+        for (let i = periods.length - 1; i >= 0; i--) {
+            const period = periods[i];
+            const isPaid = period.index <= paidCount;
+            const receiptNo = period.index;
+
+            if (isPaid) {
+                const paidAt = payments[period.index - 1].paidAt;
+                html += `
+                    <div class="bill-card">
+                        <div class="bill-card-header">
+                            <span>🌹 E-Vidya Academy</span>
+                            <span>ରସିଦ୍ #${receiptNo}</span>
+                        </div>
+                        <div class="bill-card-row"><span>ନାମ</span><span>${currentStudentData.name}</span></div>
+                        <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
+                        <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
+                        <div class="bill-card-row"><span>ପେମେଣ୍ଟ ତାରିଖ</span><span>${formatBillDate(paidAt)}</span></div>
+                        <div class="bill-card-footer">✅ ପେମେଣ୍ଟ ସଫଳ ହୋଇଛି</div>
+                    </div>`;
+            } else {
+                html += `
+                    <div class="bill-card bill-card-unpaid">
+                        <div class="bill-card-header">
+                            <span>🌹 E-Vidya Academy</span>
+                            <span>ବିଲ୍ #${receiptNo}</span>
+                        </div>
+                        <div class="bill-card-row"><span>ନାମ</span><span>${currentStudentData.name}</span></div>
+                        <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
+                        <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
+                        <div class="bill-card-row"><span>ଦେୟ ତାରିଖ</span><span>${formatBillDate(period.dueDate)}</span></div>
+                        <div class="bill-card-footer" style="color:#dc2626;">⏳ ପେମେଣ୍ଟ ବକୟା ଅଛି</div>
+                    </div>`;
+            }
+        }
+
+        wrap.innerHTML = html || '<div style="text-align:center;color:#888;padding:20px;">କୌଣସି ବିଲ୍ ନାହିଁ ।</div>';
+    } catch (err) {
+        console.error(err);
+        wrap.innerHTML = '<div style="text-align:center;color:#dc2626;padding:20px;">ବିଲ୍ ଲୋଡ୍ ହେବାରେ ସମସ୍ୟା ହେଲା ।</div>';
+    }
+}
+
+function closeBillHistory() {
+    document.getElementById('billHistoryModal').classList.remove('active');
+}
+
+function formatBillDate(dateInput) {
+    try {
+        return new Date(dateInput).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' });
+    } catch { return dateInput; }
 }
 
 /* ════════════════════════════════════════════
