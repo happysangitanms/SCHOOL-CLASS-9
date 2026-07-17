@@ -1357,14 +1357,15 @@ async function openBillHistory() {
                         <div class="bill-card-row"><span>ପେମେଣ୍ଟ ତାରିଖ</span><span>${formatBillDate(paidAt)}</span></div>
                         <div class="bill-card-footer">✅ ପେମେଣ୍ଟ ସଫଳ ହୋଇଛି</div>
                     </div>`;
-            } else {
+           } else {
                 html += `
                     <div class="bill-card bill-card-unpaid">
                         <div class="bill-card-header">
                             <span>🌹 E-Vidya Academy</span>
                             <span>ବିଲ୍ #${receiptNo}</span>
                         </div>
-                        <div class="bill-card-row"><span>ନାମ</span><span>${currentStudentData.name}</span></div>
+                        <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ</span><span>${currentStudentData.guardianName}</span></div>
+                        <div class="bill-card-row"><span>ଛାତ୍ର/ଛାତ୍ରୀଙ୍କ ନାମ</span><span>${currentStudentData.name}</span></div>
                         <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
                         <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
                         <div class="bill-card-row"><span>ଦେୟ ତାରିଖ</span><span>${formatBillDate(period.dueDate)}</span></div>
