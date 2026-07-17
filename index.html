@@ -1349,7 +1349,8 @@ async function openBillHistory() {
                             <span>🌹 E-Vidya Academy</span>
                             <span>ରସିଦ୍ #${receiptNo}</span>
                         </div>
-                        <div class="bill-card-row"><span>ନାମ</span><span>${currentStudentData.name}</span></div>
+                       <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ</span><span>${currentStudentData.guardianName}</span></div>
+                        <div class="bill-card-row"><span>ଛାତ୍ର/ଛାତ୍ରୀଙ୍କ ନାମ</span><span>${currentStudentData.name}</span></div>
                         <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
                         <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
                         <div class="bill-card-row"><span>ଏହି ମାସର ଦେୟ ତାରିଖ</span><span>${formatBillDate(period.dueDate)}</span></div>
@@ -1472,9 +1473,10 @@ function renderFeeReminder() {
           studentRegisteredAt = data.registeredAt || new Date().toISOString();
             unlockedClassCount = computeUnlockedCount(studentRegisteredAt);
 
-            currentStudentData = {
+           currentStudentData = {
     rollNumber: rollNumber,
     name: data.name || rollNumber,
+    guardianName: data.guardianName || data.name || rollNumber,
     registeredAt: studentRegisteredAt
 };
 
