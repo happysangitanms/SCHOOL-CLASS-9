@@ -1301,21 +1301,22 @@ function closeAccountModal() {
     document.getElementById('accountModal').classList.remove('active');
 }
 
-    function getBillPeriods(registeredAtISO) {
+   function getBillPeriods(registeredAtISO) {
     const start = new Date(registeredAtISO);
     const today = new Date();
     const periods = [];
-    let months = 1;
-    let due = addMonthsSafe(start, months);
+    let periodNum = 1;
+    let monthOffset = 0;
+    let due = addMonthsSafe(start, monthOffset);
     while (true) {
-        periods.push({ index: months, dueDate: due });
+        periods.push({ index: periodNum, dueDate: due });
         if (due > today) break;
-        months++;
-        due = addMonthsSafe(start, months);
+        periodNum++;
+        monthOffset++;
+        due = addMonthsSafe(start, monthOffset);
     }
     return periods;
 }
-
 async function openBillHistory() {
     document.getElementById('billHistoryModal').classList.add('active');
     const wrap = document.getElementById('billListWrap');
