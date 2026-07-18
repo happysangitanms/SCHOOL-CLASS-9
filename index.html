@@ -1676,6 +1676,27 @@ function renderFeeReminder() {
                 return;
             }
 
+            if (data.registeredAt) {
+                const paySnap = await gateDb.collection('students').doc(rollNumber).collection('payments').get();
+                const paidCount = paySnap.size;
+                const periods = getBillPeriods(data.registeredAt);
+                if (periods.length > 0 && paidCount < 1) {
+                    const graceEnd = new Date(periods[0].dueDate);
+                    graceEnd.setDate(graceEnd.getDate() + 3);
+                    if (new Date() > graceEnd) {
+                        try {
+                            await gateDb.collection('students').doc(rollNumber).update({
+                                status: 'BLOCKED', autoBlocked: true, autoBlockedAt: new Date().toISOString()
+                            });
+                        } catch (e) { console.error(e); }
+                        errorDiv.textContent = 'ଆପଣଙ୍କ ପ୍ରଥମ ମାସିକ ଫି ଦେୟ ତାରିଖ ଠାରୁ ୩ ଦିନ ପାର ହୋଇଥିବାରୁ ଆକ୍ସେସ୍ ବ୍ଲକ୍ ହୋଇଛି । ଦୟାକରି ପେମେଣ୍ଟ କରି ଶିକ୍ଷକଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ।';
+                        btn.disabled = false;
+                        btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+                        return;
+                    }
+                }
+            }
+
           studentRegisteredAt = data.registeredAt || new Date().toISOString();
             unlockedClassCount = computeUnlockedCount(studentRegisteredAt);
 
