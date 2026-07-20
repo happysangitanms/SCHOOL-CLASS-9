@@ -1,0 +1,1 @@
+const testData = DSDFFDS FFFFGH FFFGFGHF FFFHGJFGG; export default testData;
