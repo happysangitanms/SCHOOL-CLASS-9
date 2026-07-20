@@ -1082,7 +1082,7 @@
         <h2 style="text-align:center;">ଇ-ବିଦ୍ୟା ଏକାଡେମି ଦ୍ଵାରା ପ୍ରସ୍ତୁତ</h2>
         <p style="text-align:center;"><b>🌹ଏହି ସ୍ଵତନ୍ତ୍ର ମଞ୍ଚରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ🌹</b></p>
 
-        <input type="tel" id="rollgateInput" class="rollgate-input" placeholder="ଦୟାକରି ଏଠାରେ ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ..." inputmode="numeric" pattern="[0-9]*">
+        <input type="tel" id="rollgateInput" class="rollgate-input" placeholder="ଦୟାକରି ଏଠାରେ ଆପଣଙ୍କ ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ଲେଖନ୍ତୁ..." inputmode="numeric" pattern="[0-9]*">
 
         <div class="gate-consent-box">
             <input type="checkbox" id="rollgateConsent">
@@ -1093,7 +1093,7 @@
         <div class="rollgate-error" id="rollgateError"></div>
 
         <button onclick="window.open('https://evidya-admin.pages.dev/school9/', '_blank')" style="width:100%; margin-top:10px; padding:12px; background:#FF6B6B; border:none; border-radius:8px; color:white; font-size:14px; font-weight:bold; cursor:pointer;">
-            📋 ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ ।
+            📋 ଆପଣଙ୍କ ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ ।
         </button>
 
 
@@ -1498,8 +1498,7 @@ async function openBillHistory() {
                             <span>ରସିଦ୍ #${receiptNo}</span>
                         </div>
                        <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ</span><span>${currentStudentData.guardianName}</span></div>
-                        <div class="bill-card-row"><span>ଛାତ୍ର/ଛାତ୍ରୀଙ୍କ ନାମ</span><span>${currentStudentData.name}</span></div>
-                        <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
+                        <div class="bill-card-row"><span>ଶିକ୍ଷାର୍ଥୀ କୋଡ୍</span><span>${currentStudentData.rollNumber}</span></div>
                         <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
                         <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
                         <div class="bill-card-row"><span>ପେମେଣ୍ଟ ତାରିଖ</span><span>${formatBillDate(paidAt)}</span></div>
@@ -1514,8 +1513,7 @@ async function openBillHistory() {
                             <span>ବିଲ୍ #${receiptNo}</span>
                         </div>
                         <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ</span><span>${currentStudentData.guardianName}</span></div>
-                        <div class="bill-card-row"><span>ଛାତ୍ର/ଛାତ୍ରୀଙ୍କ ନାମ</span><span>${currentStudentData.name}</span></div>
-                        <div class="bill-card-row"><span>ରୋଲ୍ ନମ୍ବର</span><span>${currentStudentData.rollNumber}</span></div>
+                        <div class="bill-card-row"><span>ଶିକ୍ଷାର୍ଥୀ କୋଡ୍</span><span>${currentStudentData.rollNumber}</span></div>
                         <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
                         <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
                       <div class="bill-card-footer" style="color:#dc2626;">⏳ ପେମେଣ୍ଟ ବକୟା ଅଛି</div>
@@ -1637,7 +1635,7 @@ function renderFeeReminder() {
         errorDiv.textContent = '';
 
         if (!rollNumber) {
-            errorDiv.textContent = 'ଦୟାକରି ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ ।';
+            errorDiv.textContent = 'ଦୟାକରି ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ଲେଖନ୍ତୁ ।';
             return;
         }
 
@@ -1654,7 +1652,7 @@ function renderFeeReminder() {
             const doc = await gateDb.collection('students').doc(rollNumber).get();
 
             if (!doc.exists) {
-                errorDiv.textContent = 'ରୋଲ୍ ନମ୍ବର ମିଳିଲା ନାହିଁ ।';
+                errorDiv.textContent = 'ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ମିଳିଲା ନାହିଁ ।';
                 btn.disabled = false;
                 btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
                 return;
@@ -1663,7 +1661,7 @@ function renderFeeReminder() {
             const data = doc.data();
 
             if (data.className !== GATE_CLASS_NAME) {
-                errorDiv.textContent = 'ଏହି ରୋଲ୍ ନମ୍ବର ଏହି କ୍ଲାସ୍ ପାଇଁ ନୁହେଁ ।';
+                errorDiv.textContent = 'ଏହି ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ଏହି କ୍ଲାସ୍ ପାଇଁ ନୁହେଁ ।';
                 btn.disabled = false;
                 btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
                 return;
@@ -2350,9 +2348,11 @@ function setDailyUpdateMessage() {
 }
 
 setDailyUpdateMessage();
-    (function() {
+ (function() {
     try {
-        const savedRoll = localStorage.getItem('userRollNumber');
+        const params = new URLSearchParams(window.location.search);
+        const urlCode = params.get('code');
+        const savedRoll = urlCode || localStorage.getItem('userRollNumber');
         const savedConsent = localStorage.getItem('gateConsentGiven');
         if (savedRoll) {
             document.getElementById('rollgateInput').value = savedRoll;
