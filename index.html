@@ -2348,7 +2348,7 @@ function setDailyUpdateMessage() {
 }
 
 setDailyUpdateMessage();
- (function() {
+(function() {
     try {
         const params = new URLSearchParams(window.location.search);
         const urlCode = params.get('code');
@@ -2359,6 +2359,9 @@ setDailyUpdateMessage();
         }
         if (savedConsent === '1') {
             document.getElementById('rollgateConsent').checked = true;
+        }
+        if (urlCode) {
+            history.replaceState(null, '', window.location.pathname);
         }
     } catch(e) {}
 })();
