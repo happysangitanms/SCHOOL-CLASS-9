@@ -1212,7 +1212,7 @@
         <div class="inv-billto-label">BILL TO (Parent/Guardian)</div>
         <div class="inv-billto-name" id="invGuardianName">—</div>
         <div class="inv-billto-sub">Contact: <span id="invPhone">—</span></div>
-        <div class="inv-billto-sub">Student: <span id="invStudentName">—</span> &nbsp;(Roll No. <span id="invRoll">—</span>)</div>
+        <div class="inv-billto-sub">Name of the Parent/Guardian: <span id="invStudentName">—</span> &nbsp;(Student Code. <span id="invRoll">—</span>)</div>
     </div>
 
     <table class="inv-table">
@@ -1497,13 +1497,13 @@ async function openBillHistory() {
                             <span>🌹 E-Vidya Academy</span>
                             <span>ରସିଦ୍ #${receiptNo}</span>
                         </div>
-                       <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ</span><span>${currentStudentData.guardianName}</span></div>
-                        <div class="bill-card-row"><span>ଶିକ୍ଷାର୍ଥୀ କୋଡ୍</span><span>${currentStudentData.rollNumber}</span></div>
-                        <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
-                        <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
-                        <div class="bill-card-row"><span>ପେମେଣ୍ଟ ତାରିଖ</span><span>${formatBillDate(paidAt)}</span></div>
-                       <div class="bill-card-footer">✅ ପେମେଣ୍ଟ ସଫଳ ହୋଇଛି</div>
-                        <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ</button>
+                       <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ :</span><span>${currentStudentData.guardianName}</span></div>
+                        <div class="bill-card-row"><span>ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ :</span><span>${currentStudentData.rollNumber}</span></div>
+                        <div class="bill-card-row"><span>ପେମେଣ୍ଟ ପରିମାଣ :</span><span>₹${MONTHLY_FEE}</span></div>
+                        <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି :</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
+                        <div class="bill-card-row"><span>ପେମେଣ୍ଟ ତାରିଖ :</span><span>${formatBillDate(paidAt)}</span></div>
+                       <div class="bill-card-footer">✅ ପେମେଣ୍ଟ ସଫଳ ହୋଇଛି..</div>
+                        <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ..</button>
                     </div>`;
             } else {
                 html += `
@@ -1512,12 +1512,12 @@ async function openBillHistory() {
                             <span>🌹 E-Vidya Academy</span>
                             <span>ବିଲ୍ #${receiptNo}</span>
                         </div>
-                        <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ</span><span>${currentStudentData.guardianName}</span></div>
-                        <div class="bill-card-row"><span>ଶିକ୍ଷାର୍ଥୀ କୋଡ୍</span><span>${currentStudentData.rollNumber}</span></div>
-                        <div class="bill-card-row"><span>ପରିମାଣ</span><span>₹${MONTHLY_FEE}</span></div>
-                        <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
-                      <div class="bill-card-footer" style="color:#dc2626;">⏳ ପେମେଣ୍ଟ ବକୟା ଅଛି</div>
-                        <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ</button>
+                        <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ :</span><span>${currentStudentData.guardianName}</span></div>
+                        <div class="bill-card-row"><span>ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ :</span><span>${currentStudentData.rollNumber}</span></div>
+                        <div class="bill-card-row"><span>ପେମେଣ୍ଟ ପରିମାଣ :</span><span>₹${MONTHLY_FEE}</span></div>
+                        <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି :</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
+                      <div class="bill-card-footer" style="color:#dc2626;">⏳ ପେମେଣ୍ଟ ବକୟା ଅଛି..</div>
+                        <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ..</button>
                     </div>`;
             }
         }
@@ -1687,7 +1687,7 @@ function renderFeeReminder() {
                                 status: 'BLOCKED', autoBlocked: true, autoBlockedAt: new Date().toISOString()
                             });
                         } catch (e) { console.error(e); }
-                        errorDiv.textContent = 'ଆପଣଙ୍କ ପ୍ରଥମ ମାସିକ ଫି ଦେୟ ତାରିଖ ଠାରୁ ୩ ଦିନ ପାର ହୋଇଥିବାରୁ ଆକ୍ସେସ୍ ବ୍ଲକ୍ ହୋଇଛି । ଦୟାକରି ପେମେଣ୍ଟ କରି ଶିକ୍ଷକଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ।';
+                        errorDiv.textContent = 'ଆପଣଙ୍କ ପ୍ରଥମ ମାସିକ ଫି ଦେୟ ତାରିଖ ଠାରୁ ୩ ଦିନ ପାର ହୋଇଥିବାରୁ ଆକ୍ସେସ୍ ବ୍ଲକ୍ ହୋଇଛି । ଦୟାକରି ପେମେଣ୍ଟ କରି ଅଫିସ୍ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ।';
                         btn.disabled = false;
                         btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
                         return;
