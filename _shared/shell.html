@@ -5,6 +5,22 @@
 </div>
 <style>@keyframes entrySpin{to{transform:rotate(360deg);}}</style>
 
+<script>
+setTimeout(function() {
+    const eo = document.getElementById('entryLoadingOverlay');
+    if (eo && document.body.contains(eo)) {
+        eo.innerHTML = `
+            <div style="background:white;border-radius:20px;padding:32px 24px;max-width:340px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+                <div style="font-size:44px;margin-bottom:10px;">😔</div>
+                <h2 style="color:#dc2626;font-size:17px;font-weight:900;margin-bottom:10px;">କ୍ଲାସ୍-ରୁମ୍ ଖୋଲିବାରେ ସମସ୍ୟା ହେଉଛି</h2>
+                <p style="color:#555;font-size:13px;line-height:1.6;margin-bottom:18px;">ଦୟାକରି ନିମ୍ନ ବଟନ୍ ରେ କ୍ଲିକ୍ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ, କିମ୍ବା ଆମ୍ଭ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ ।</p>
+                <a href="https://wa.me/916372296357" target="_blank" style="display:block;background:#25D366;color:white;padding:13px;border-radius:12px;font-weight:800;text-decoration:none;font-size:14px;margin-bottom:10px;">📲 ଅଫିସ୍ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ</a>
+                <button onclick="window.location.reload()" style="width:100%;padding:12px;background:#f3f4f6;color:#555;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;">🔄 ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ</button>
+            </div>`;
+    }
+}, 8000);
+</script>
+
 <div style="background: #ff9800; padding: 8px; color: white; font-weight: bold; position: fixed; top: 0; left: 0; right: 0; z-index: 99999; overflow: hidden; margin: 0;">
     <marquee behavior="scroll" direction="left" style="margin: 0;">
         © 2026 • This is the property of E-Vidya Academy, Bhadrak, Odisha • For Educational Use Only • Copying & Distribution Prohibited • All Rights Reserved
