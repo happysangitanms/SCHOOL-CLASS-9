@@ -1,4 +1,4 @@
-const matching: {
+const matchingData = {
     pairs: [
         { left: "ବିଭିନ୍ନତା", right: "🌈 ପାରିପାର୍ଶ୍ୱିକ ପରିବେଶରେ ଥିବା ଭିନ୍ନତା ।" },
         { left: "ଅଙ୍ଗୁଳି ଚିହ୍ନ", right: "👆 ପ୍ରତି ମଣିଷର ଭିନ୍ନ ଭିନ୍ନ ।" },
