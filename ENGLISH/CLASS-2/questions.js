@@ -38,7 +38,7 @@ points: [
 ],
 conclusion: "The girl looked sad and interested in the narrator. (ଝିଅଟି ଦୁଃଖିତ ଦେଖାଯାଉଥିଲା ଏବଂ ବର୍ଣ୍ଣନାକାରୀଙ୍କ ପ୍ରତି ଆଗ୍ରହୀ ଥିଲା ।)"
 }
-]
+];
 
 
     
