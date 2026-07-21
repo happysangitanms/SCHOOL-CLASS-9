@@ -10,7 +10,7 @@ const APP_CONFIG = {
 const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
-    summaryPdf: "https://audio.evidya.de/S9TLS1P1-2S.pdf"
+    summaryPdf: "https://audio.evidya.de/S9TLS1P2-3S.pdf"
 };
 
 
