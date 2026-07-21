@@ -11,5 +11,4 @@ const matching: {
         { left: "Correct word order", right: "✅ Indrani is a classical singer." },
         { left: "Itishree", right: "👧 A student of Class X." }
     ]
-},
-
+};
