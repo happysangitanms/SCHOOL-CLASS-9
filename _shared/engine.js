@@ -97,8 +97,18 @@ async function autoEnterClassroom(rollNumber) {
         }
 
         const data = doc.data();
-        const currentDevice = sessionData.deviceId;
 
+        if (data.className !== CLASS_NAME) {
+            window.location.href = '../../';
+            return;
+        }
+
+        if (data.status === 'BLOCKED') {
+            window.location.href = '../../';
+            return;
+        }
+
+        const currentDevice = sessionData.deviceId;
         const studentName = data.name || rollNumber;
         sessionData.studentName = studentName;
         sessionData.registeredAt = data.registeredAt || new Date().toISOString();
