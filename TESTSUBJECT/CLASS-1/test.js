@@ -1,1 +1,0 @@
-const testData = The solar system consists of the Sun and everything bound to it by gravity, including eight planets, dozens of moons, and millions of asteroids and comets.; export default testData;
