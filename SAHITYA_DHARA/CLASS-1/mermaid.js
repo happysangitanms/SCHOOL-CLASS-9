@@ -1,4 +1,4 @@
-const mermaid: [
+const mermaidGraphs = [
 `%%{init: {
 'theme': 'base',
 'themeVariables': {
