@@ -1,4 +1,4 @@
-mermaid: [
+const mermaidGraphs = [
     `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%
 flowchart TD
 
