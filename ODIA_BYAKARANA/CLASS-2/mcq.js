@@ -1,4 +1,4 @@
-const mcq: {
+const mcqData = {
     questions: [
 
         // =========================
