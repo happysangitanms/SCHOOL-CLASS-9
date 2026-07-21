@@ -1,4 +1,4 @@
-matching: {
+const matchingData = {
     pairs: [
         { left: "Geometry", right: "🔤 Geo (ଭୂଖଣ୍ଡ) ଓ Metron (ମାପ) ରୁ ସୃଷ୍ଟି ।" },
         { left: "କୃଷିକାର୍ଯ୍ୟ", right: "🌾 ଜ୍ୟାମିତି ଜ୍ଞାନ ପ୍ରୟୋଗର ଆଦ୍ୟ କାରଣ ।" },
