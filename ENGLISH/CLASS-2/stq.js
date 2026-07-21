@@ -86,6 +86,5 @@ const stqData = {
             answer: "I asked about the girl sitting outside.\n\n(ମୁଁ ବାହାରେ ବସିଥିବା ଝିଅଟି ବିଷୟରେ ପଚାରିଲି ।)"
         }
     ]
-}
-},
-],
+};
+
