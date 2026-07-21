@@ -149,4 +149,4 @@ const wordData = {
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
-};;
+};
