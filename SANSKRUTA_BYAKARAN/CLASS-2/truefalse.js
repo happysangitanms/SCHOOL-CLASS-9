@@ -1,4 +1,4 @@
-const trueFalse: {
+const trueFalseData = {    
     questions: [
 
         // =========================
