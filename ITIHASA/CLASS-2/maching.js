@@ -1,4 +1,4 @@
-const matching: {
+const matchingData = {
     pairs: [
         { left: "ଉପନିବେଶ", right: "🌍 ବିଦେଶସ୍ଥ ଆବାସ ।" },
         { left: "ଉପନିବେଶବାଦ", right: "🏛️ ମାତୃଦେଶର ଲାଭ ପାଇଁ ଶାସନ ।" },
