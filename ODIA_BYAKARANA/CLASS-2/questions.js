@@ -1,4 +1,4 @@
-constquestions: [
+const summaryQuestions = [
 {
 audio: "",
 question: "ପ୍ରଥମଧାଡ଼ିର ‘ଚଅ’, ‘ଶଠ’ ଓ ‘ରହଡ଼’ ରେ କାହିଁକି କୌଣସି ଅର୍ଥ ପ୍ରକାଶ ପାଏନାହିଁ ?",
