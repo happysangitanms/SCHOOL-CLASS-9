@@ -1,8 +1,5 @@
 
-summary: {
-    audio: "",
-
-    content: {
+const summaryContent = {
         introduction: "The narrator went to a vegetarian restaurant. There he saw a young girl. The girl's behaviour surprised him. Let us learn why he became curious about her. (କଥକ ଏକ ଶାକାହାରୀ ରେଷ୍ଟୁରାଣ୍ଟକୁ ଯାଇଥିଲେ । ସେଠାରେ ସେ ଜଣେ ଛୋଟ ଝିଅକୁ ଦେଖିଲେ । ଝିଅଟିର ବ୍ୟବହାର ତାଙ୍କୁ ଆଶ୍ଚର୍ଯ୍ୟ କରିଦେଲା । ଆସନ୍ତୁ ଜାଣିବା ସେ କାହିଁକି ତା ବିଷୟରେ କୌତୁହଳୀ ହୋଇଥିଲେ ।)",
 
         sentences: [
@@ -29,5 +26,5 @@ summary: {
         ],
 
         conclusion: "The narrator became curious because the young girl kept looking at him and asked whether he was an Indian. Her sad eyes and unusual behaviour surprised him. Therefore, he wanted to know more about her. (ଛୋଟ ଝିଅଟି ବାରମ୍ବାର ତାଙ୍କୁ ଚାହିଁବା ଏବଂ ସେ ଭାରତୀୟ କି ନାହିଁ ପଚାରିବାରୁ କଥକ କୌତୁହଳୀ ହୋଇଥିଲେ । ତାର ଦୁଃଖିତ ଆଖି ଓ ଅସାଧାରଣ ବ୍ୟବହାର ତାଙ୍କୁ ଆଶ୍ଚର୍ଯ୍ୟ କରିଥିଲା । ତେଣୁ ସେ ତା ବିଷୟରେ ଅଧିକ ଜାଣିବାକୁ ଚାହୁଁଥିଲେ ।)"
-    }, 
+    };
     
