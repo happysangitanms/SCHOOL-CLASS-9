@@ -86,70 +86,30 @@ let sessionData = {
     registeredAt: null
 };
 
-document.getElementById('loginBtn').addEventListener('click', async function() {
-    const rollNumber = document.getElementById('rollNumberInput').value.trim();
-    const consent = document.getElementById('consentCheck').checked;
-    const errorDiv = document.getElementById('loginError');
-    errorDiv.textContent = '';
-
-    if (!rollNumber) {
-        errorDiv.textContent = 'ଦୟାକରି ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ ।';
-        return;
-    }
-    if (!consent) {
-        errorDiv.textContent = 'ଦୟାକରି ସର୍ତ୍ତାବଳୀରେ ସହମତି ଜଣାଇବା ପାଇଁ ଛୋଟ ଚେକ୍-ବାକ୍ସ ରେ କ୍ଲିକ୍ କରନ୍ତୁ ।';
-        return;
-    }
-
-    this.disabled = true;
-    this.innerHTML = '⏳ ଦୟାକରି ଅପେକ୍ଷା କରନ୍ତୁ...';
-
+async function autoEnterClassroom(rollNumber) {
     try {
         const docRef = db.collection('students').doc(rollNumber);
         const doc = await docRef.get();
 
         if (!doc.exists) {
-            errorDiv.textContent = 'ରୋଲ୍ ନମ୍ବର ମିଳିଲା ନାହିଁ । ଦୟାକରି ସଠିକ୍ ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ ।';
-            this.disabled = false;
-            this.innerHTML = 'ଉପରୋକ୍ତ ଛୋଟ ବାକ୍ସରେ କ୍ଲିକ୍ କରିସାରିବା ପରେ ଏଠାରେ କ୍ଲିକ୍ କରି କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରନ୍ତୁ ।';
+            window.location.href = '../../';
             return;
         }
 
         const data = doc.data();
-
-        if (data.className !== CLASS_NAME) {
-            errorDiv.textContent = 'ଏହି ରୋଲ୍ ନମ୍ବର ଏହି କ୍ଲାସ୍ ପାଇଁ ନୁହେଁ ।';
-            this.disabled = false;
-            this.innerHTML = 'ଉପରୋକ୍ତ ଛୋଟ ବାକ୍ସରେ କ୍ଲିକ୍ କରିସାରିବା ପରେ ଏଠାରେ କ୍ଲିକ୍ କରି କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରନ୍ତୁ ।';
-            return;
-        }
-
-        if (data.status === 'BLOCKED') {
-            errorDiv.textContent = 'ଆପଣଙ୍କ ଆକ୍ସେସ୍ ବ୍ଲକ୍ ହୋଇଛି । ଶିକ୍ଷକଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ।';
-            this.disabled = false;
-            this.innerHTML = 'ଉପରୋକ୍ତ ଛୋଟ ବାକ୍ସରେ କ୍ଲିକ୍ କରିସାରିବା ପରେ ଏଠାରେ କ୍ଲିକ୍ କରି କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରନ୍ତୁ ।';
-            return;
-        }
-
         const currentDevice = sessionData.deviceId;
-        if (data.deviceId && data.deviceId !== '' && data.deviceId !== currentDevice) {
-            errorDiv.textContent = 'ଏହି ରୋଲ୍ ନମ୍ବର ଅନ୍ୟ ଡିଭାଇସ୍ ରେ ବ୍ୟବହୃତ ହୋଇଛି । ଆପଣ ଏହାକୁ ଏଠାରୁ ଖୋଲି ପାରିବେ ନାହିଁ ।';
-            this.disabled = false;
-            this.innerHTML = 'ଉପରୋକ୍ତ ଛୋଟ ବାକ୍ସରେ କ୍ଲିକ୍ କରିସାରିବା ପରେ ଏଠାରେ କ୍ଲିକ୍ କରି କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରନ୍ତୁ ।';
-            return;
-        }
 
-     // SUCCESS - show welcome message
         const studentName = data.name || rollNumber;
-      sessionData.studentName = studentName;
-      sessionData.registeredAt = data.registeredAt || new Date().toISOString();
-localStorage.removeItem('savedScores'); // clear any stale scores from previous sessions
-try { localStorage.setItem('classConsentGiven', '1'); } catch(e) {}
-       const welcomeOverlay = document.createElement('div');
+        sessionData.studentName = studentName;
+        sessionData.registeredAt = data.registeredAt || new Date().toISOString();
+        localStorage.removeItem('savedScores');
+        try { localStorage.setItem('classConsentGiven', '1'); } catch(e) {}
+
+        const welcomeOverlay = document.createElement('div');
         welcomeOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;text-align:center;padding:20px;';
         welcomeOverlay.innerHTML = '<div style="color:white;font-size:28px;margin-bottom:15px;">🌹</div>'
             + '<div style="color:white;font-size:22px;font-weight:bold;">ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '!</div>'
-        + '<div style="color:rgba(255,255,255,0.85);font-size:16px;margin-top:12px;">ଆପଣ ' + APP_CONFIG.sreni + ' କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିଛନ୍ତି ।</div>'
+            + '<div style="color:rgba(255,255,255,0.85);font-size:16px;margin-top:12px;">ଆପଣ ' + APP_CONFIG.sreni + ' କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିଛନ୍ତି ।</div>'
             + '<div style="color:rgba(255,255,255,0.7);font-size:13px;margin-top:8px;">(ଏବେ ଆପଣଙ୍କ ପାଠ ସାମଗ୍ରୀ ଲୋଡ୍ ହେଉଛି)</div>';
         document.body.appendChild(welcomeOverlay);
 
@@ -170,7 +130,7 @@ try { localStorage.setItem('classConsentGiven', '1'); } catch(e) {}
         sessionData.loginTime = new Date();
         docRef.update({ lastLogin: new Date().toISOString() }).catch(e => console.log(e));
 
-     setTimeout(() => {
+        setTimeout(() => {
             welcomeOverlay.remove();
             document.getElementById('loginScreen').style.display = 'none';
             document.querySelector('.container').classList.add('authenticated');
@@ -180,12 +140,10 @@ try { localStorage.setItem('classConsentGiven', '1'); } catch(e) {}
         }, 2400);
 
     } catch (error) {
-        errorDiv.textContent = 'ସଂଯୋଗ ସମସ୍ୟା । ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ ।';
-        console.error('Login error:', error);
-        this.disabled = false;
-        this.innerHTML = 'ଉପରୋକ୍ତ ଛୋଟ ବାକ୍ସରେ କ୍ଲିକ୍ କରିସାରିବା ପରେ ଏଠାରେ କ୍ଲିକ୍ କରି କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରନ୍ତୁ ।';
+        console.error('Auto-login error:', error);
+        setTimeout(() => { autoEnterClassroom(rollNumber); }, 3000);
     }
-});
+}
 
 function startActivityTracking() {
     ['click', 'keypress', 'scroll', 'touchstart'].forEach(event => {
@@ -3395,36 +3353,13 @@ initCustomAudioPlayer('3');
         }
     }
     
+sessionStorage.removeItem('gateRollNumber');
 const savedRoll = localStorage.getItem('userRollNumber');
-    if (savedRoll) {
-        document.getElementById('rollNumberInput').value = savedRoll;
-    }
-    try {
-        if (localStorage.getItem('classConsentGiven') === '1' && document.getElementById('consentCheck')) {
-            document.getElementById('consentCheck').checked = true;
-        }
-    } catch(e) {}
-    // Auto-continue if the student just verified their roll number one screen ago
-   try {
-        const gateRoll = sessionStorage.getItem('gateRollNumber');
-        if (gateRoll && document.getElementById('consentCheck')) {
-            const loginScreenEl = document.getElementById('loginScreen');
-            if (loginScreenEl) loginScreenEl.style.visibility = 'hidden';
-            document.getElementById('rollNumberInput').value = gateRoll;
-            document.getElementById('consentCheck').checked = true;
-            sessionStorage.removeItem('gateRollNumber');
-            setTimeout(() => {
-                document.getElementById('loginBtn').click();
-            }, 1);
-        }
-    } catch(e) {}
-   // Save roll number when login button is clicked
-document.getElementById('loginBtn').addEventListener('click', function() {
-    const rollNumber = document.getElementById('rollNumberInput').value;
-    if (rollNumber) {
-        localStorage.setItem('userRollNumber', rollNumber);
+if (savedRoll) {
+    autoEnterClassroom(savedRoll);
+} else {
+    window.location.href = '../../';
 }
-});
 
 setTimeout(() => {
     const img = document.getElementById('welcomeRoundImg');
