@@ -1,4 +1,4 @@
-const arrange: {
+arrange: {
     questions: [
 
         // =========================
