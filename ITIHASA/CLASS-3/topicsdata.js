@@ -154,6 +154,7 @@ const wordData = {
             emoji: "🏗️",
             odiaUse: "ପ୍ରତିଷ୍ଠିତ ଅର୍ଥ ସ୍ଥାପିତ ହୋଇ ମଜବୁତ ହୋଇଥିବା । ଏହି ପରିସ୍ଥିତିରେ ଉପନିବେଶବାଦୀମାନେ ପ୍ରତିଷ୍ଠିତ ଖଣି ଓ କାରଖାନାରୁ ଲାଭ ଉଠାଇଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        }
-    ]
-};
+      ]
+}
+
+];
