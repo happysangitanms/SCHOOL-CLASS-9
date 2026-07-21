@@ -1,10 +1,3 @@
-(function() {
-    if (!sessionStorage.getItem('gateRollNumber')) {
-        const eo = document.getElementById('entryLoadingOverlay');
-        if (eo) eo.remove();
-    }
-})();
-
 const PDF_URL = MEDIA_CONFIG.pdf;
 // Global variable to store animation frame ID
 window.alphabetAnimationFrame = null;
