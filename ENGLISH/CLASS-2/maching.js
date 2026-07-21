@@ -16,4 +16,4 @@ const matchingData = {
         { left: "Newspaper", right: "📰 Read by the narrator." },
         { left: "Girl Sitting Outside", right: "🚪 Person mentioned to the waiter." }
     ]
-},
+};
