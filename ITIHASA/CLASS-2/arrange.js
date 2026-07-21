@@ -1,4 +1,4 @@
-const arrange: {
+const arrangeData = {
     questions: [
         {
             words: ["ଉପନିବେଶ", "ବିଦେଶସ୍ଥ", "ଆବାସ", "ଅଟେ"],
