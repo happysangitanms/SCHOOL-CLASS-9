@@ -1,160 +1,103 @@
-const wordData = {
-    currentWord: 0,
-    words: [
-        {
-            word: "IMPERIALISM",
-            odia: "ସାମ୍ରାଜ୍ୟବାଦ",
-            emoji: "👑",
-            odiaUse: "ସାମ୍ରାଜ୍ୟବାଦ ଅର୍ଥ ଅନ୍ୟ ଦେଶ ଉପରେ ଶାସନ ବିସ୍ତାର କରିବାର ନୀତି । ପାଶ୍ଚାତ୍ୟ ଦେଶମାନେ ସାମ୍ରାଜ୍ୟବାଦ ନୀତି ଅନୁସରଣ କରି ଏସିଆ ଓ ଆଫ୍ରିକାରେ ଉପନିବେଶ ସ୍ଥାପନ କଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "COLONY",
-            odia: "ଉପନିବେଶ",
-            emoji: "🏴",
-            odiaUse: "ଉପନିବେଶ ଅର୍ଥ ପରାଧୀନ ଦେଶ, ଯାହା ଅନ୍ୟ ଏକ ଶକ୍ତିଶାଳୀ ଦେଶ ଦ୍ୱାରା ଶାସିତ ହୁଏ । ଏସିଆ ଓ ଆଫ୍ରିକାର ଅନେକ ଦେଶ ଉପନିବେଶରେ ପରିଣତ ହେଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CONTINENT",
-            odia: "ମହାଦେଶ",
-            emoji: "🌍",
-            odiaUse: "ମହାଦେଶ ଅର୍ଥ ପୃଥିବୀର ବଡ଼ ଭୂଖଣ୍ଡ । ଏସିଆ ଓ ଆଫ୍ରିକା ମହାଦେଶର ଦେଶମାନେ ପାଶ୍ଚାତ୍ୟ ପ୍ରଭାବରେ ପଡ଼ିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "STEAMSHIP",
-            odia: "ବାଷ୍ପୀୟ ଜାହାଜ",
-            emoji: "🚢",
-            odiaUse: "ବାଷ୍ପୀୟ ଜାହାଜ ଅର୍ଥ ବାଷ୍ପ ଶକ୍ତିରେ ଚାଲୁଥିବା ଜାହାଜ । ବାଷ୍ପୀୟ ଜାହାଜର ଉଭାବନ ଯୋଗେ ସମୁଦ୍ର ଯାତ୍ରା ସହଜ ହେଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "STEAM ENGINE",
-            odia: "ବାଷ୍ପୀୟ ଇଞ୍ଜିନ",
-            emoji: "🚂",
-            odiaUse: "ବାଷ୍ପୀୟ ଇଞ୍ଜିନ ଅର୍ଥ ବାଷ୍ପ ଶକ୍ତିରେ ଚାଲୁଥିବା ଯନ୍ତ୍ର । ଷ୍ଟିଫେନସନ ପ୍ରଥମ ବାଷ୍ପୀୟ ଇଞ୍ଜିନ ନିର୍ମାଣ କଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "RAILWAY",
-            odia: "ରେଳପଥ",
-            emoji: "🛤️",
-            odiaUse: "ରେଳପଥ ଅର୍ଥ ରେଳ ଗାଡ଼ି ଚାଲିବା ପାଇଁ ତିଆରି ହୋଇଥିବା ପଥ । ରେଳପଥର ନିର୍ମାଣ ଯୋଗେ ଉପନିବେଶ ଅଞ୍ଚଳରେ ପରିବହନ ସହଜ ହେଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TRANSPORT",
-            odia: "ପରିବହନ",
-            emoji: "🚗",
-            odiaUse: "ପରିବହନ ଅର୍ଥ ଏକ ସ୍ଥାନରୁ ଅନ୍ୟ ସ୍ଥାନକୁ ଲୋକ ବା ଦ୍ରବ୍ୟ ନେବା ବ୍ୟବସ୍ଥା । ପରିବହନ ଓ ଯୋଗାଯୋଗର ଉନ୍ନତି ଯୋଗେ ଦୂର ଦେଶ ପାଖକୁ ଆସିଗଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "COMMUNICATION",
-            odia: "ଯୋଗାଯୋଗ",
-            emoji: "📡",
-            odiaUse: "ଯୋଗାଯୋଗ ଅର୍ଥ ଖବର ବା ସୂଚନା ଆଦାନ-ପ୍ରଦାନ କରିବା ବ୍ୟବସ୍ଥା । ଯୋଗାଯୋଗର ଉନ୍ନତି ପାଶ୍ଚାତ୍ୟ ଓ ଉପନିବେଶ ମଧ୍ୟରେ ସମ୍ପର୍କ ବଢ଼ାଇଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "INVENTION",
-            odia: "ଉଭାବନ",
-            emoji: "💡",
-            odiaUse: "ଉଭାବନ ଅର୍ଥ ନୂଆ କିଛି ତିଆରି କରିବା । ବାଷ୍ପୀୟ ଜାହାଜ ଓ ଇଞ୍ଜିନର ଉଭାବନ ପାଶ୍ଚାତ୍ୟ ଦେଶକୁ ଶକ୍ତିଶାଳୀ କଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "PROPAGATION",
-            odia: "ପ୍ରଚାର",
-            emoji: "📢",
-            odiaUse: "ପ୍ରଚାର ଅର୍ଥ କୌଣସି ବିଷୟକୁ ବ୍ୟାପକ ଭାବେ ଫଇଲାଇବା । ଧର୍ମ ଓ ସଂସ୍କୃତିର ପ୍ରଚାର ଉପନିବେଶବାଦକୁ ବଢ଼ାଇବାରେ ସାହାଯ୍ୟ କଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CHRISTIANITY",
-            odia: "ଖ୍ରୀଷ୍ଟଧର୍ମ",
-            emoji: "✝️",
-            odiaUse: "ଖ୍ରୀଷ୍ଟଧର୍ମ ଅର୍ଥ ଯୀଶୁ ଖ୍ରୀଷ୍ଟଙ୍କ ଶିକ୍ଷାରେ ଆଧାରିତ ଧର୍ମ । ମିଶନାରୀମାନେ ଉପନିବେଶ ଅଞ୍ଚଳରେ ଖ୍ରୀଷ୍ଟଧର୍ମର ପ୍ରଚାର କଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "MISSIONARY",
-            odia: "ମିଶନାରୀ",
-            emoji: "⛪",
-            odiaUse: "ମିଶନାରୀ ଅର୍ଥ ଧର୍ମ ପ୍ରଚାର କରିବା ପାଇଁ ପଠାଯାଇଥିବା ବ୍ୟକ୍ତି । ମିଶନାରୀମାନେ ଶିକ୍ଷା ଓ ସ୍ୱାସ୍ଥ୍ୟ ସେବା ମାଧ୍ୟମରେ ଧର୍ମ ପ୍ରଚାର କଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CIVILIZATION",
-            odia: "ସଭ୍ୟତା",
-            emoji: "🏛️",
-            odiaUse: "ସଭ୍ୟତା ଅର୍ଥ ଏକ ଉନ୍ନତ ସାମାଜିକ ଓ ସାଂସ୍କୃତିକ ଜୀବନଶୈଳୀ । ପାଶ୍ଚାତ୍ୟ ଦେଶମାନେ ନିଜକୁ ଶ୍ରେଷ୍ଠ ସଭ୍ୟତାର ବାହକ ବୋଲି ଭାବୁଥିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "ADMINISTRATION",
-            odia: "ଶାସନ",
-            emoji: "🏢",
-            odiaUse: "ଶାସନ ଅର୍ଥ ଦେଶ ବା ରାଜ୍ୟ ଚଳାଇବା ବ୍ୟବସ୍ଥା । ଅନେକ ଏସିଆ ଓ ଆଫ୍ରିକୀୟ ଦେଶରେ ଦୁର୍ବଳ ଶାସନ ଥିଲା, ଯାହା ଉପନିବେଶବାଦକୁ ସହଜ କଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "WEAK RULE",
-            odia: "ଦୁର୍ବଳ ଶାସନ",
-            emoji: "😔",
-            odiaUse: "ଦୁର୍ବଳ ଶାସନ ଅର୍ଥ ଅଦକ୍ଷ ଓ ଅସକ୍ଷମ ପ୍ରଶାସନ । ଉନବିଂଶ ଶତାବ୍ଦୀରେ ଏସିଆ ଓ ଆଫ୍ରିକାର ଅନେକ ଦେଶରେ ଶାସନ ଅତ୍ୟନ୍ତ ଦୁର୍ବଳ ଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "BACKWARD",
-            odia: "ଅନୁନ୍ନତ",
-            emoji: "📉",
-            odiaUse: "ଅନୁନ୍ନତ ଅର୍ଥ ବିକାଶ ନହୋଇଥିବା ବା ପଛରେ ପଡ଼ିଥିବା । ଆଫ୍ରିକାର ଦେଶମାନଙ୍କରେ ବିଜ୍ଞାନ ଓ କାରିଗରୀ ବିଦ୍ୟା ଅନୁନ୍ନତ ପର୍ଯ୍ୟାୟରେ ଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TECHNOLOGY",
-            odia: "କାରିଗରୀ ବିଦ୍ୟା",
-            emoji: "⚙️",
-            odiaUse: "କାରିଗରୀ ବିଦ୍ୟା ଅର୍ଥ ଯନ୍ତ୍ର ଓ ଉପକରଣ ତିଆରି କରିବାର ଜ୍ଞାନ । ଆଫ୍ରିକୀୟ ଦେଶମାନଙ୍କରେ ବିଜ୍ଞାନ ଓ କାରିଗରୀ ବିଦ୍ୟା ଉନ୍ନତ ପର୍ଯ୍ୟାୟରେ ପହଞ୍ଚି ପାରି ନ ଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "SELF-DEFENSE",
-            odia: "ଆତ୍ମରକ୍ଷା",
-            emoji: "🛡️",
-            odiaUse: "ଆତ୍ମରକ୍ଷା ଅର୍ଥ ନିଜକୁ ବିପଦରୁ ରକ୍ଷା କରିବା । ଅନୁନ୍ନତ ପ୍ରଯୁକ୍ତି ଯୋଗୁଁ ସେହି ଲୋକମାନେ ଆକ୍ରମଣକାରୀଙ୍କ ବିରୁଦ୍ଧରେ ଆତ୍ମରକ୍ଷା କରିପାରିଲେ ନାହିଁ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "EXPLOITATION",
-            odia: "ଶୋଷଣ",
-            emoji: "⛏️",
-            odiaUse: "ଶୋଷଣ ଅର୍ଥ କାହାର ଅନ୍ୟାୟ ଲାଭ ଉଠାଇବା । ଉପନିବେଶବାଦୀମାନେ ଆକ୍ରାନ୍ତ ଦେଶର ଧନ-ସମ୍ପତ୍ତିର ଶୋଷଣ କରୁଥିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "MILITARY SUPERIORITY",
-            odia: "ସାମରିକ ଶ୍ରେଷ୍ଠତା",
-            emoji: "⚔️",
-            odiaUse: "ସାମରିକ ଶ୍ରେଷ୍ଠତା ଅର୍ଥ ଅସ୍ତ୍ରଶସ୍ତ୍ର ଓ ସେନାରେ ଅନ୍ୟଠାରୁ ଅଧିକ ଶକ୍ତିଶାଳୀ ହେବା । ପାଶ୍ଚାତ୍ୟ ଦେଶମାନେ ସାମରିକ ଶ୍ରେଷ୍ଠତା ଯୋଗୁଁ ଅନ୍ୟ ଦେଶକୁ ଜୟ କରିପାରିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "FAVOURABLE CIRCUMSTANCES",
-            odia: "ଅନୁକୂଳ ପରିସ୍ଥିତି",
-            emoji: "✅",
-            odiaUse: "ଅନୁକୂଳ ପରିସ୍ଥିତି ଅର୍ଥ କାର୍ଯ୍ୟ ସଫଳ ହେବା ପାଇଁ ସହାୟକ ଅବସ୍ଥା । ଅନେକ ଅନୁକୂଳ ପରିସ୍ଥିତି ଯୋଗେ ଉପନିବେଶବାଦୀମାନେ ସହଜରେ ଦେଶ ଅଧିକାର କରିପାରିଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "ESTABLISHED",
-            odia: "ପ୍ରତିଷ୍ଠିତ",
-            emoji: "🏗️",
-            odiaUse: "ପ୍ରତିଷ୍ଠିତ ଅର୍ଥ ସ୍ଥାପିତ ହୋଇ ମଜବୁତ ହୋଇଥିବା । ଏହି ପରିସ୍ଥିତିରେ ଉପନିବେଶବାଦୀମାନେ ପ୍ରତିଷ୍ଠିତ ଖଣି ଓ କାରଖାନାରୁ ଲାଭ ଉଠାଇଲେ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-      ]
+const topicsData = [
+
+{
+heading: "NOTE-1: ଏସିଆ ଓ ଆଫ୍ରୀକାରେ ପ୍ରତିରୋଧର ଅଭାବ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଏସିଆ ଓ ଆଫ୍ରୀକାରେ ପୂର୍ବରୁ ମଧ୍ୟସ୍ଥାୟୀ ଶାସନ ଚଳୁଥିଲା । ଲୋକମାନେ ଏକ ବଡ଼ ଶାସକ ପରିବର୍ତ୍ତେ ନିଜ ନିଜ ସ୍ଥାନୀୟ ମୁଖ୍ୟଙ୍କ ପ୍ରତି ଆନୁଗତ୍ୟ ପ୍ରଦର୍ଶନ କରୁଥିଲେ । ସେମାନଙ୍କ ପାଖରେ ଉନ୍ନତ ପ୍ରତିରକ୍ଷା ବ୍ୟବସ୍ଥା ନ ଥିଲା, ତେଣୁ ଉପନିବେଶିକ ଶକ୍ତିମାନେ ସହଜରେ ସେମାନଙ୍କୁ ପରାସ୍ତ କରିପାରୁଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ପାରିଶ୍ରମିକ ପାଇବା ଆଶାରେ ଅନେକ ଏସିଆ ଓ ଆଫ୍ରୀକୀ ଲୋକ ଉପନିବେଶିକ ସୈନ୍ୟବାହିନୀରେ ଯୋଗ ଦେଇ କାମ କରୁଥିଲେ । ଏହାଦ୍ୱାରା ନିଜ ଦେଶର ପ୍ରତିରୋଧ ଶକ୍ତି ଆହୁରି ଦୁର୍ବଳ ହୋଇଗଲା ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାର ଲୋକମାନେ କାହା ପ୍ରତି ଆନୁଗତ୍ୟ ପ୍ରଦର୍ଶନ କରୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ନିଜ ନିଜ ସ୍ଥାନୀୟ ମୁଖ୍ୟଙ୍କ ପ୍ରତି ଆନୁଗତ୍ୟ ପ୍ରଦର୍ଶନ କରୁଥିଲେ ।",
+
+"<span style='color:red;'>Q-2:</span> ଉପନିବେଶିକ ଶାସକମାନେ ଏସିଆ ଓ ଆଫ୍ରୀକାକୁ କାହିଁକି ସହଜରେ ଜୟ କରିପାରିଲେ ?<br><br><span style='color:green;'>Answer:</span> କାରଣ ସେଠାରେ ଉନ୍ନତ ପ୍ରତିରକ୍ଷା ବ୍ୟବସ୍ଥା ନ ଥିଲା ଓ ଶାସନ ମଧ୍ୟସ୍ଥାୟୀ ଥିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> କେଉଁ ଲୋକମାନେ ଉପନିବେଶିକ ସୈନ୍ୟବାହିନୀରେ ଯୋଗ ଦେଉଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପାରିଶ୍ରମିକ ପାଇବା ଆଶାରେ ଅନେକ ଏସିଆ ଓ ଆଫ୍ରୀକୀ ଲୋକ ଉପନିବେଶିକ ସୈନ୍ୟବାହିନୀରେ ଯୋଗ ଦେଉଥିଲେ ।",
+
+"<span style='color:red;'>Q-4:</span> ସ୍ଥାନୀୟ ଲୋକମାନେ ସୈନ୍ୟବାହିନୀରେ ଯୋଗ ଦେବାର ପରିଣାମ କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହାଦ୍ୱାରା ସେମାନଙ୍କ ନିଜ ଦେଶର ପ୍ରତିରୋଧ ଶକ୍ତି ଆହୁରି ଦୁର୍ବଳ ହୋଇଗଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-2: ପରିବହନ ଓ ଯୋଗାଯୋଗର ଉନ୍ନତି :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ବାଷ୍ପୀୟ ଜାହାଜର ଉଭାବନ ଦ୍ୱାରା ଏସିଆ ଓ ଆଫ୍ରୀକାକୁ ଯାତାୟାତ ସହଜ ଓ ଶୀଘ୍ର ହୋଇଗଲା । ରେଳପଥ, ସ୍ଥଳପଥ ଓ ଜଳପଥ ନିର୍ମାଣ ହେବା ଫଳରେ ଦୂର ଅଞ୍ଚଳକୁ ସୈନ୍ୟ ଓ ସାମଗ୍ରୀ ପଠାଇବା ସହଜ ହେଲା ।<br><br>👉 ଉଦାହରଣ: ୧୮୨୯ ମସିହାରେ ଜେଓର୍ଜ ଷ୍ଟିଫେନ୍‌ସନ୍‌ 'ରକେଟ' ନାମକ ପ୍ରଥମ ବାଷ୍ପଚାଳିତ ରେଳଗାଡ଼ି ଲିଭରପୁଲରୁ ମାଞ୍ଚେଷ୍ଟର ପର୍ଯ୍ୟନ୍ତ ଚଳାଇଥିଲେ । ୧୮୪୧ ମସିହାରେ ଆଫ୍ରୀକାରେ ପ୍ରଥମ ରେଳବାଇ ଆରମ୍ଭ ହୋଇଥିଲା ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ବାଷ୍ପୀୟ ଜାହାଜର ଉଭାବନ ଉପନିବେଶ ସ୍ଥାପନରେ କିପରି ସାହାଯ୍ୟ କଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଦ୍ୱାରା ଏସିଆ ଓ ଆଫ୍ରୀକାକୁ ଯାତାୟାତ ସହଜ ଓ ଶୀଘ୍ର ହେଲା ।",
+
+"<span style='color:red;'>Q-2:</span> ରେଳପଥ ନିର୍ମାଣ ଉପନିବେଶ ରାଷ୍ଟ୍ରମାନଙ୍କୁ କେଉଁ ସୁବିଧା ଦେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଦ୍ୱାରା ଦୂର ଅଞ୍ଚଳକୁ ସୈନ୍ୟ ଓ ସାମଗ୍ରୀ ପଠାଇବା ସହଜ ହେଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ପ୍ରଥମ ବାଷ୍ପଚାଳିତ ରେଳଗାଡ଼ି କେଉଁ ନାମରେ ପରିଚିତ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା 'ରକେଟ' ନାମରେ ପରିଚିତ ଥିଲା, ଯାହା ଜେଓର୍ଜ ଷ୍ଟିଫେନ୍‌ସନ୍‌ ନିର୍ମାଣ କରିଥିଲେ ।",
+
+"<span style='color:red;'>Q-4:</span> ଆଫ୍ରୀକାରେ ପ୍ରଥମ ରେଳବାଇ କେବେ ଆରମ୍ଭ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ୧୮୪୧ ମସିହାରେ ଆଫ୍ରୀକାରେ ପ୍ରଥମ ରେଳବାଇ ଆରମ୍ଭ ହୋଇଥିଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-3: ଧର୍ମ ଓ ସଂସ୍କୃତିର ପ୍ରଚାର :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଉପନିବେଶିକ ଶକ୍ତିମାନେ ନିଜର ପାଶ୍ଚାତ୍ୟ ଧର୍ମ ଓ ସଂସ୍କୃତିକୁ ଅନ୍ୟ ଅଞ୍ଚଳରେ ବିସ୍ତାର କରିବାକୁ ଚାହୁଁଥିଲେ । ସେମାନେ ଏହାକୁ ନିଜର ନୈତିକ କର୍ତ୍ତବ୍ୟ ବୋଲି ମାନୁଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ଏସିଆ ଓ ଆଫ୍ରୀକାର ମୂଳ ଅଧିବାସୀମାନେ ଉପନିବେଶିକମାନଙ୍କୁ ସଭ୍ୟ ଓ ସମୃଦ୍ଧ ଭାବି ସେମାନଙ୍କ ଧର୍ମ ଓ ଆଚରଣକୁ ଅନୁସରଣ କରିବାକୁ ଲାଗିଲେ । ଏହା ଉପନିବେଶିକମାନଙ୍କୁ ଅଧିକ ଅଞ୍ଚଳରେ ଉପନିବେଶ ସ୍ଥାପନ କରିବାକୁ ଉତ୍ସାହିତ କଲା ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଉପନିବେଶିକ ଶକ୍ତିମାନେ କେଉଁ ଉଦ୍ଦେଶ୍ୟରେ ପାଶ୍ଚାତ୍ୟ ସଂସ୍କୃତି ପ୍ରଚାର କରୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ନିଜ ଧର୍ମ ଓ ସଂସ୍କୃତିକୁ ଅନ୍ୟ ଅଞ୍ଚଳରେ ବିସ୍ତାର କରିବାକୁ ଚାହୁଁଥିଲେ ।",
+
+"<span style='color:red;'>Q-2:</span> ଉପନିବେଶିକମାନେ ଉପନିବେଶ ସ୍ଥାପନକୁ କେଉଁ ଭାବରେ ଦେଖୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ଏହାକୁ ନିଜର ନୈତିକ କର୍ତ୍ତବ୍ୟ ବୋଲି ଭାବୁଥିଲେ ।",
+
+"<span style='color:red;'>Q-3:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାର ମୂଳ ଅଧିବାସୀମାନେ କ'ଣ କଲେ ?<br><br><span style='color:green;'>Answer:</span> ଅନେକ ମୂଳ ଅଧିବାସୀ ଉପନିବେଶିକମାନଙ୍କ ଧର୍ମ ଓ ଆଚରଣକୁ ଅନୁସରଣ କରିବାକୁ ଲାଗିଲେ ।",
+
+"<span style='color:red;'>Q-4:</span> ଏହି ପ୍ରଚାର ଉପନିବେଶ ସ୍ଥାପନରେ କେଉଁ ଭୂମିକା ନେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଉପନିବେଶିକମାନଙ୍କୁ ଉତ୍ସାହିତ କରି ଅଧିକ ଅଞ୍ଚଳରେ ଉପନିବେଶ ସ୍ଥାପନ କରାଇଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-4: ଦୁର୍ବଳ ଶାସନ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଏସିଆ ଓ ଆଫ୍ରୀକା ମହାଦେଶରେ ଶାସନ ଅତ୍ୟନ୍ତ ଦୁର୍ବଳ ଥିଲା । ଅନେକ ନୂଆ ଜାତୀୟ ରାଷ୍ଟ୍ର ସୃଷ୍ଟି ହୋଇଥିଲେ ମଧ୍ୟ ସେମାନଙ୍କ ଶାସନ ବ୍ୟବସ୍ଥା ମଜବୁତ ନ ଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଦୁର୍ବଳ ଶାସନ ଥିବା ଅଞ୍ଚଳକୁ ଉପନିବେଶିକ ଶକ୍ତିମାନେ ଅଧିକ ସହଜରେ ନିଜ ଅଧୀନକୁ ଆଣିପାରୁଥିଲେ, ଯେହେତୁ ସେଠାରେ ପ୍ରତିରୋଧ କରିବାକୁ ମଜବୁତ ଶାସକ ନ ଥିଲେ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଊନବିଂଶ ଶତାବ୍ଦୀରେ ଏସିଆ ଓ ଆଫ୍ରୀକାର ଶାସନ କେମିତି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହି ମହାଦେଶମାନଙ୍କରେ ଶାସନ ଅତ୍ୟନ୍ତ ଦୁର୍ବଳ ଥିଲା ।",
+
+"<span style='color:red;'>Q-2:</span> ଦୁର୍ବଳ ଶାସନର ପରିଣାମ କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଏହା ଦ୍ୱାରା ଉପନିବେଶିକ ଶକ୍ତିମାନେ ଏହି ଅଞ୍ଚଳରେ ସହଜରେ ପ୍ରଭାବ ବିସ୍ତାର କରିପାରିଲେ ।",
+
+"<span style='color:red;'>Q-3:</span> ନୂଆ ଜାତୀୟ ରାଷ୍ଟ୍ର ସୃଷ୍ଟି ହେଲେ ମଧ୍ୟ କେଉଁ ସମସ୍ୟା ରହିଲା ?<br><br><span style='color:green;'>Answer:</span> ନୂଆ ରାଷ୍ଟ୍ରମାନଙ୍କର ଶାସନ ବ୍ୟବସ୍ଥା ମଧ୍ୟ ଦୁର୍ବଳ ରହିଲା ।",
+
+"<span style='color:red;'>Q-4:</span> ଦୁର୍ବଳ ଶାସନ ଉପନିବେଶବାଦକୁ କିପରି ସାହାଯ୍ୟ କଲା ?<br><br><span style='color:green;'>Answer:</span> ଦୁର୍ବଳ ଶାସନ ଥିବା ଅଞ୍ଚଳକୁ ଉପନିବେଶିକମାନେ ଅଧିକ ସହଜରେ ନିଜ ଅଧୀନକୁ ଆଣିପାରିଲେ ।"
+
+]
+},
+
+{
+heading: "NOTE-5: ଅନ୍ୟାନ୍ୟ ଅନୁକୂଳ ପରିସ୍ଥିତି :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଏସିଆ ଓ ଆଫ୍ରୀକାର ସାମରିକ ଓ ଭୌଗୋଳିକ ଗୁରୁତ୍ୱ ଅନେକ ଉପନିବେଶିକ ରାଷ୍ଟ୍ରକୁ ଆକୃଷ୍ଟ କଲା । ଏଠାରେ ବିଜ୍ଞାନ ଓ କାରିଗରୀ ଅନୁନ୍ନତ ଥିଲା, ତେଣୁ ସ୍ଥାନୀୟ ଲୋକମାନେ ଉପନିବେଶିକ ଦେଶମାନଙ୍କ ସାମଗ୍ରୀ ଉପରେ ନିର୍ଭର କରିବାକୁ ପଡ଼ିଲା ।<br><br>👉 ଉଦାହରଣ: ଏସିଆ ଓ ଆଫ୍ରୀକାରେ ବହୁସଂଖ୍ୟାରେ ମାନବ ସମ୍ପଦ ଉପଲବ୍ଧ ଥିଲା, ଯାହା ଉପନିବେଶିକ ଶକ୍ତିମାନେ ମଜୁରି ଓ ସୈନ୍ୟ ଭାବରେ ବ୍ୟବହାର କରୁଥିଲେ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାର କେଉଁ ଗୁରୁତ୍ୱ ଉପନିବେଶିକ ରାଷ୍ଟ୍ରମାନଙ୍କୁ ଆକୃଷ୍ଟ କଲା ?<br><br><span style='color:green;'>Answer:</span> ସେମାନଙ୍କର ସାମରିକ ଓ ଭୌଗୋଳିକ ଗୁରୁତ୍ୱ ଉପନିବେଶିକ ରାଷ୍ଟ୍ରମାନଙ୍କୁ ଆକୃଷ୍ଟ କଲା ।",
+
+"<span style='color:red;'>Q-2:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାର ବିଜ୍ଞାନ ଓ କାରିଗରୀ ସ୍ଥିତି କେମିତି ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେଠାରେ ବିଜ୍ଞାନ ଓ କାରିଗରୀ ଅନୁନ୍ନତ ଥିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ଅନୁନ୍ନତ କାରିଗରୀ ହେତୁ ସ୍ଥାନୀୟ ଲୋକମାନଙ୍କୁ କ'ଣ କରିବାକୁ ପଡ଼ିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେମାନେ ଉପନିବେଶିକ ଦେଶମାନଙ୍କ ସାମଗ୍ରୀ ଉପରେ ନିର୍ଭର କରିବାକୁ ପଡ଼ିଲା ।",
+
+"<span style='color:red;'>Q-4:</span> ଏସିଆ ଓ ଆଫ୍ରୀକାରେ କେଉଁ ସମ୍ପଦ ପ୍ରଚୁର ମାତ୍ରାରେ ଉପଲବ୍ଧ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସେଠାରେ ବହୁସଂଖ୍ୟାରେ ମାନବ ସମ୍ପଦ (ମଜୁରି ଓ ସୈନ୍ୟ) ଉପଲବ୍ଧ ଥିଲା ।"
+
+]
 }
 
 ];
