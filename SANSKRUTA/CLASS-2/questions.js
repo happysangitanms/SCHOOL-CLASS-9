@@ -1,4 +1,4 @@
-const questions: [
+const summaryQuestions = [
 {
 audio: "",
 question: "ସିଂହ ଓ ବନର ପଶୁମାନଙ୍କ ମଧ୍ୟରେ କେଉଁ ଚୁକ୍ତି ହୋଇଥିଲା ?",
