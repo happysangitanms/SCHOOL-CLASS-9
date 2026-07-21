@@ -1,4 +1,4 @@
-const questions: [
+const summaryQuestions = [
 {
 audio: "",
 question: "ଜୀବ ବିବିଧତା (Biodiversity) କାହାକୁ କୁହାଯାଏ ?",
