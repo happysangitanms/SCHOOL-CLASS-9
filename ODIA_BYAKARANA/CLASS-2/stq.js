@@ -1,4 +1,4 @@
-const stq: {
+const stqData = {
 questions: [
     // =========================
     // CONCEPT NO.- 1
