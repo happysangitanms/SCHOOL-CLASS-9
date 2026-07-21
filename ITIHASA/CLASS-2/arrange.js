@@ -1,4 +1,4 @@
-arrange: {
+const arrange: {
     questions: [
         {
             words: ["ଉପନିବେଶ", "ବିଦେଶସ୍ଥ", "ଆବାସ", "ଅଟେ"],
