@@ -1,5 +1,5 @@
-trueFalse: {
-questions: [
+const trueFalseData = {
+    questions: [
     // =========================
     // CONCEPT NO.- 1
     // =========================
