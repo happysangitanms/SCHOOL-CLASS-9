@@ -1,5 +1,5 @@
 
-constquestions: [
+const summaryQuestions = [
 {
 audio: "",
 question: "ବର୍ଣ୍ଣ କାହାକୁ କୁହାଯାଏ ?",
