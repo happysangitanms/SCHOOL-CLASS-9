@@ -1,4 +1,4 @@
-const questions: [
+const summaryQuestions = [
     {
         audio: "",
         question: "'କାହା ମୁଖ ଅନାଇ ବଞ୍ଚିବି' କବିତାରେ ମା’ ଯଶୋଦାଙ୍କ ବିଚ୍ଛେଦ ବେଦନା ବିଷୟରେ ଲେଖ ।",
