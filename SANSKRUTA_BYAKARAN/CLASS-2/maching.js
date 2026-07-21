@@ -1,4 +1,4 @@
-matching: {
+const matchingData = {
     pairs: [
         { left: "ବର୍ଣ୍ଣ", right: "🔤 ଧ୍ୱନିର ଲିଖିତ ସଙ୍କେତ ।" },
         { left: "ସ୍ୱରବର୍ଣ୍ଣ", right: "🎵 ସ୍ୱତଃ ଉଚ୍ଚାରିତ ହେଉଥିବା ବର୍ଣ୍ଣ ।" },
