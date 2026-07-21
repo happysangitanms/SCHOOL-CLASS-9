@@ -1,4 +1,4 @@
-trueFalse: {
+const trueFalseData = {
     questions: [
 
         // =========================
@@ -205,5 +205,5 @@ trueFalse: {
             correct: false
         }
     ]
-},
+};
 
