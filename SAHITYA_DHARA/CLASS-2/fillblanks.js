@@ -1,4 +1,4 @@
-const fillBlanks: {
+fillBlanks: {
     questions: [
 
         // =========================
