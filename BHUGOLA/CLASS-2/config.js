@@ -3,7 +3,7 @@ const CLASS_MODE = "practice";
 const APP_CONFIG = {
     sreni: "ନବମ",
     subject: "ଭୂଗୋଳ",
-    classCode: "ଭୂଗୋଳ: ପ୍ରଥମ ଅଧ୍ୟାୟ (ପୃଷ୍ଠା 1-2)"
+    classCode: "ଭୂଗୋଳ: ....."
 };
 
 const CLASS_NAME = "school9";
