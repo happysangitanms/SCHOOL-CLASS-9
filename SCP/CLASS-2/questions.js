@@ -1,4 +1,4 @@
-const questions: [
+const summaryQuestions = [
     {
         audio: "",
         question: "ପଦାର୍ଥର ଅର୍ଥ ଓ ଏହାର ମୌଳିକ ଗୁଣଗୁଡ଼ିକ ବିଷୟରେ ଲେଖ ।",
