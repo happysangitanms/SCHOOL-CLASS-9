@@ -1,4 +1,4 @@
-const summary: {
+const summaryContent = {
     audio: "",
 
     content: {
