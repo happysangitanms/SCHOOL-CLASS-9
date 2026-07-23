@@ -1,4 +1,4 @@
-const topicsData = const topicsData = [
+const topicsData = [
 
 {
 heading: "NOTE-1: ଆକୃତି ଓ ଜ୍ୟାମିତିର ପ୍ରାରମ୍ଭିକ ଧାରଣା :-",
