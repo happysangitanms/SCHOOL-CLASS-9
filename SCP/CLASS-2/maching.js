@@ -1,4 +1,4 @@
-const matching: {
+const matchingData = {
     pairs: [
         { left: "ପଦାର୍ଥ", right: "🧪 ଯେଉଁ ଦ୍ରବ୍ୟକୁ ନେଇ ସମସ୍ତ ବସ୍ତୁ ଗଢ଼ାଯାଇଛି ।" },
         { left: "ବାୟୁ", right: "💨 ଏକ ପଦାର୍ଥ ଅଟେ ।" },
