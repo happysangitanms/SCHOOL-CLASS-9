@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Vidya Academy</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Class-IX">
+    <meta name="theme-color" content="#667eea">
+   <link rel="apple-touch-icon" href="./icon-192.png">
+
+   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 12px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 16px 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ── Logo ── */
+        .logo-wrap { text-align: center; margin-bottom: 10px; }
+        .logo-wrap img { width: 200px; max-width: 80%; height: auto; }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 0.85em;
+            font-weight: 900;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 600px) {
+            h1 { font-size: 1.1em; }
+        }
+
+        @media (min-width: 900px) {
+            h1 { font-size: 1.4em; }
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 12px;
+            font-size: 0.85em;
+        }
+
+        .search-box {
+            margin-bottom: 16px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s;
+            background: #f9fafb;
+        }
+
+        .search-box input:focus {
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        /* ── Clone / Selected Class Card ── */
+        .clone-container {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: none;
+            animation: slideDown 0.4s ease-out;
+        }
+
+        .clone-container.active {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 20px rgba(245,158,11,0.6), 0 0 0 0 rgba(245,158,11,0.7); }
+            50%       { box-shadow: 0 8px 30px rgba(245,158,11,0.8), 0 0 0 15px rgba(245,158,11,0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-8px); }
+        }
+
+        @keyframes shimmer {
+            0%   { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes rotateBorder {
+            to { transform: rotate(360deg); }
+        }
+
+        .clone-card {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+            border-radius: 14px;
+            padding: 20px 16px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: pulse 2s infinite, bounce 1.5s ease-in-out infinite;
+            box-shadow: 0 8px 20px rgba(59,130,246,0.6);
+            border: 3px solid rgba(255,255,255,0.6);
+            overflow: hidden;
+        }
+
+        .clone-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        .clone-card::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 14px;
+            padding: 3px;
+            background: linear-gradient(45deg, #f59e0b, #eab308, #f59e0b, #eab308);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rotateBorder 3s linear infinite;
+            z-index: -1;
+        }
+
+        .clone-card:active { transform: scale(0.98); }
+
+        .clone-instruction {
+            font-size: 0.75em; margin-bottom: 8px; font-weight: 600;
+            opacity: 0.95; letter-spacing: 0.5px; text-transform: uppercase;
+            background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px;
+        }
+
+        .clone-number {
+            font-size: 0.95em; font-weight: 700; margin-bottom: 6px;
+            opacity: 0.95; letter-spacing: 0.8px; text-transform: uppercase;
+        }
+
+        .clone-title {
+            font-size: 1.4em; font-weight: 700;
+            letter-spacing: 0.2px; line-height: 1.25; margin-bottom: 8px;
+        }
+
+        .clone-prompt {
+            font-size: 0.8em; font-weight: 500; opacity: 0.95; margin-top: 6px;
+            padding: 6px 14px; background: rgba(255,255,255,0.25);
+            border-radius: 8px; display: inline-block;
+        }
+
+        .clone-card .click-feedback {
+            position: absolute; inset: 0;
+            background: rgba(0,0,0,0.5); border-radius: 14px;
+            display: flex; justify-content: center; align-items: center;
+            opacity: 0; transform: scale(0.8); transition: all 0.3s ease;
+        }
+
+        .clone-card .click-feedback::before {
+            content: ''; width: 120px; height: 120px; background: white;
+            border-radius: 50%; position: absolute;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+
+        .clone-card .click-feedback::after {
+            content: ''; width: 30px; height: 60px;
+            border: solid #10b981; border-width: 0 8px 8px 0;
+            transform: rotate(45deg); display: block; z-index: 1;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .clone-card.clicked .click-feedback {
+            opacity: 1; transform: scale(1);
+        }
+
+        /* ── Main Grid ── */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        /* ── Subject Cards ── */
+        .subject-card {
+            border-radius: 16px;
+            padding: 18px 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 130px;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255,255,255,0.4);
+            overflow: hidden;
+        }
+
+.subject-card[data-subject="FLO"]   { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
+.subject-card[data-subject="FLOG"]  { background: linear-gradient(135deg, #0e7490 0%, #164e63 100%); }
+.subject-card[data-subject="SLE"]   { background: linear-gradient(135deg, #b45309 0%, #78350f 100%); }
+.subject-card[data-subject="SLEG"]  { background: linear-gradient(135deg, #be185d 0%, #881337 100%); }
+.subject-card[data-subject="TLS"]   { background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%); }
+.subject-card[data-subject="TLSG"]  { background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%); }
+.subject-card[data-subject="MTA"]   { background: linear-gradient(135deg, #a16207 0%, #713f12 100%); }
+.subject-card[data-subject="MTG"]   { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
+.subject-card[data-subject="SCL"]   { background: linear-gradient(135deg, #0e7490 0%, #164e63 100%); }
+.subject-card[data-subject="SCP"]   { background: linear-gradient(135deg, #b45309 0%, #78350f 100%); }
+.subject-card[data-subject="SSH"]   { background: linear-gradient(135deg, #be185d 0%, #881337 100%); }
+.subject-card[data-subject="SSG"]   { background: linear-gradient(135deg, #0369a1 0%, #1e3a5f 100%); }
+
+
+        .subject-card::before {
+            content: '';
+            position: absolute; top: -50%; right: -10%;
+            width: 150px; height: 150px;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* ── Code-2 feature: active tap animation for subject cards ── */
+        .subject-card:active {
+            transform: scale(0.96);
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+            box-shadow: 0 6px 20px rgba(29,78,216,0.5);
+        }
+
+        .subject-name      { font-size: 1.2em; font-weight: 900; letter-spacing: 0.3px; margin-bottom: 6px; line-height: 1.2; }
+        .subject-full-name { font-size: 1.0em; opacity: 0.95; font-weight: 700; line-height: 1.3; margin-top: 2px; }
+
+        /* ── Code-2 feature: subject count badge ── */
+        .subject-count {
+            margin-top: 8px;
+            font-size: 0.68em;
+            font-weight: 700;
+            background: rgba(255,255,255,0.25);
+            padding: 3px 10px;
+            border-radius: 12px;
+        }
+
+        /* ── Class Cards — updated to Code-2's deep-blue style ── */
+        .class-card {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+            border-radius: 14px;
+            padding: 16px 12px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 110px;
+            position: relative;
+            box-shadow: 0 6px 18px rgba(102,126,234,0.35);
+            border: 3px solid rgba(255,255,255,0.4);
+            overflow: hidden;
+        }
+
+        /* Code-2 radial glow inside class card */
+        .class-card::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -8%;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* Code-2 feature: active tap animation for class cards */
+        .class-card:active {
+            transform: scale(0.96);
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+            box-shadow: 0 6px 20px rgba(29,78,216,0.5);
+        }
+
+        .class-card.locked {
+            background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+            cursor: default;
+            box-shadow: 0 4px 12px rgba(156,163,175,0.3);
+        }
+
+        .class-card.selected {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 6px 16px rgba(16,185,129,0.4);
+        }
+
+        /* Code-2 style: pill badge for class number */
+        .class-number {
+            font-size: 0.72em;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            background: rgba(255,255,255,0.25);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+
+        .class-title     { font-size: 1.0em; font-weight: 700; letter-spacing: 0.2px; line-height: 1.3; padding: 0 4px; }
+        .lock-icon       { font-size: 1.3em; margin-bottom: 4px; }
+        .checkmark       { font-size: 1em; margin-left: 6px; }
+
+        .scheduled-message { font-size: 0.6em; margin-top: 6px; opacity: 0.95; line-height: 1.2; font-weight: 500; }
+        .countdown         { font-size: 0.65em; margin-top: 5px; font-weight: 700; background: rgba(255,255,255,0.25); padding: 3px 8px; border-radius: 5px; display: inline-block; letter-spacing: 0.3px; }
+
+        /* ── Code-2 feature: Coming Soon card ── */
+        .class-card.coming-soon {
+            background: linear-gradient(135deg, #1e3a8a 0%, #374151 100%);
+            box-shadow: 0 4px 12px rgba(100,116,139,0.3);
+            cursor: default;
+            border: 3px dashed rgba(255,255,255,0.45);
+        }
+
+        .coming-icon { font-size: 1.6em; margin-bottom: 6px; }
+        .coming-text { font-size: 0.78em; font-weight: 700; opacity: 0.9; line-height: 1.5; }
+
+        /* ── Misc ── */
+        .no-results { text-align: center; padding: 40px 20px; color: #9ca3af; font-size: 0.95em; display: none; }
+
+        .back-button {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 30px; padding: 12px 24px;
+            text-decoration: none; color: white; font-weight: 700; font-size: 16px;
+            box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 16px; border: none; cursor: pointer;
+        }
+
+        .back-button:active { transform: scale(0.95); }
+        .back-icon { font-size: 20px; }
+
+        .button-container { text-align: center; margin-bottom: 8px; }
+
+        /* ── PWA Modal (Android/Chrome) ── */
+        .pwa-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.75); z-index: 9000;
+            justify-content: center; align-items: center; padding: 20px;
+        }
+        .pwa-overlay.active { display: flex; }
+
+        .pwa-box {
+            background: white; border-radius: 24px; padding: 32px 24px;
+            max-width: 340px; width: 100%; text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1);
+            border: 3px solid rgba(102,126,234,0.3);
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.88); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
+        }
+
+        .pwa-icon  { font-size: 3em; margin-bottom: 10px; }
+        .pwa-title { color: #667eea; font-size: 1.4em; font-weight: 900; margin-bottom: 8px; }
+        .pwa-sub   { color: #764ba2; font-size: 0.85em; font-weight: 700; margin-bottom: 18px; line-height: 1.5; }
+
+        .pwa-install {
+            display: block; width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; border: none; padding: 15px; border-radius: 14px;
+            font-size: 1em; font-weight: 800; cursor: pointer; margin-bottom: 10px;
+            box-shadow: 0 4px 15px rgba(102,126,234,0.5);
+        }
+
+        .pwa-dismiss {
+            background: none; border: none; color: #aaa;
+            font-size: 0.85em; cursor: pointer; padding: 8px; text-decoration: underline;
+        }
+
+        /* ── iOS Install Instructions Modal ── */
+        .ios-steps {
+            text-align: left;
+            margin-bottom: 18px;
+        }
+        .ios-step {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #333;
+        }
+        .ios-step-num {
+            flex-shrink: 0;
+            width: 26px; height: 26px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85em; font-weight: 800;
+        }
+        .ios-step-icon { font-size: 1.2em; }
+
+        /* ── PWA Floating Button ── */
+        #pwaBtn {
+            display: none; position: fixed; bottom: 20px;
+            left: 50%; transform: translateX(-50%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; border: none; padding: 14px 28px;
+            border-radius: 25px; font-size: 15px; font-weight: 700; cursor: pointer;
+            box-shadow: 0 6px 20px rgba(102,126,234,0.5); z-index: 9999; white-space: nowrap;
+        }
+
+        #iosInstallBtn {
+            display: none; position: fixed; bottom: 20px;
+            left: 50%; transform: translateX(-50%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; border: none; padding: 14px 28px;
+            border-radius: 25px; font-size: 15px; font-weight: 700; cursor: pointer;
+            box-shadow: 0 6px 20px rgba(102,126,234,0.5); z-index: 9999; white-space: nowrap;
+        }
+
+        /* ── Responsive ── */
+        @media (min-width: 600px) {
+            .container { padding: 28px 22px; max-width: 700px; }
+            .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .subject-card { min-height: 160px; padding: 28px 20px; }
+            .class-card   { min-height: 130px; padding: 20px 16px; }
+        }
+
+        @media (min-width: 900px) {
+            .container    { max-width: 1000px; padding: 40px; }
+            .grid         { gap: 18px; }
+            .subject-card { min-height: 180px; }
+            .subject-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+            .class-card:hover   { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(102,126,234,0.4); }
+        }
+
+
+.maintenance-box {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 16px;
+    border: 2px dashed #d97706;
+    color: #78350f;
+    grid-column: 1 / -1;
+}
+.maintenance-box .m-icon { font-size: 2.4em; margin-bottom: 10px; }
+.maintenance-box .m-title { font-size: 1.2em; font-weight: 800; margin-bottom: 8px; }
+.maintenance-box .m-text { font-size: 0.9em; font-weight: 500; line-height: 1.5; }
+
+        .maintenance-box .m-image {
+    width: 140px;
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 14px;
+}
+
+        .splash-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.splash-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.splash-content {
+    text-align: center;
+    padding: 20px;
+    animation: splashPop 0.6s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+@keyframes splashPop {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+      .video-thumb-wrap {
+    position: relative;
+    width: 100%;
+    margin: 16px 0 0;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.5);
+    box-sizing: border-box;
+}
+
+.video-thumb-wrap img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.video-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.video-play-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.video-play-icon::after {
+    content: '';
+    border-style: solid;
+    border-width: 8px 0 8px 14px;
+    border-color: transparent transparent transparent #667eea;
+    margin-left: 3px;
+}
+
+.video-thumb-text {
+    color: #ffffff;
+    font-size: 0.95em;
+    font-weight: 900;
+    line-height: 1.5;
+    text-shadow: none;
+}
+
+.video-embed-wrap {
+    position: relative;
+    width: 100%;
+    margin: 16px 0 0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+.video-embed-wrap iframe {
+    display: block;
+    width: 100% !important;
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    border: none;
+}
+
+@keyframes dailyCardIn {
+    from { opacity: 0; transform: translateY(10px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.daily-card {
+    position: relative;
+    border-radius: 12px;
+    padding: 10px 12px 10px 14px;
+    text-align: left;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    opacity: 0;
+    animation: dailyCardIn 0.45s ease-out forwards;
+    overflow: hidden;
+}
+
+.daily-card::before {
+    content: '';
+    position: absolute;
+    top: -30%; right: -10%;
+    width: 90px; height: 90px;
+    background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.daily-card-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.3);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.daily-card-subject {
+    color: white;
+    font-size: 13.5px;
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+
+.daily-card-title {
+    color: rgba(255,255,255,0.92);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+        
+.proceed-button {
+    display: block;
+    margin: 18px auto 0;
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.splash-loader {
+    width: 36px;
+    height: 36px;
+    border: 4px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    margin: 16px auto 0;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.rollgate-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 99998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.rollgate-box {
+    background: white;
+    border-radius: 20px;
+    padding: 28px 22px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.rollgate-box h2 {
+    color: #667eea;
+    font-size: 1.2em;
+    margin-bottom: 6px;
+}
+
+.rollgate-box p {
+    color: #666;
+    font-size: 0.85em;
+    margin-bottom: 16px;
+}
+
+.rollgate-input {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 14px;
+    outline: none;
+    text-align: center;
+}
+
+.rollgate-input:focus { border-color: #667eea; }
+
+.rollgate-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.rollgate-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.rollgate-error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 10px;
+    min-height: 18px;
+}
+
+        .gate-consent-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: justify;
+    font-size: 12px;
+    color: #555;
+    margin: 14px 0;
+}
+
+        .gate-consent-box label {
+    text-align: justify;
+}
+        
+.gate-consent-box input[type="checkbox"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+.gate-consent-box a {
+    color: #667eea;
+}
+
+
+
+   /* ── Student Account Button ── */
+.account-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 320px;
+    margin: 14px auto 0;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+}
+.account-btn:active { transform: scale(0.97); }
+
+/* ── Fee Reminder Banner ── */
+@keyframes feeReminderPulse {
+    0%, 100% { box-shadow: 0 6px 20px rgba(220,38,38,0.5), 0 0 0 0 rgba(220,38,38,0.6); }
+    50%      { box-shadow: 0 6px 26px rgba(220,38,38,0.7), 0 0 0 10px rgba(220,38,38,0); }
+}
+.fee-reminder-card {
+    max-width: 320px;
+    width: 100%;
+    margin: 14px auto 0;
+    background: linear-gradient(135deg, #dc2626, #991b1b);
+    border-radius: 16px;
+    padding: 14px 16px;
+    text-align: center;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.5);
+    animation: feeReminderPulse 1.8s infinite;
+}
+.fee-reminder-card.overdue {
+    background: linear-gradient(135deg, #7f1d1d, #450a0a);
+}
+.fee-reminder-icon { font-size: 1.6em; margin-bottom: 4px; }
+.fee-reminder-title { font-size: 14px; font-weight: 900; margin-bottom: 4px; }
+.fee-reminder-text  { font-size: 12.5px; font-weight: 600; line-height: 1.5; opacity: 0.95; }
+.fee-reminder-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: white;
+    color: #b91c1c;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* ── Account Modal ── */
+.account-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.75);
+   z-index: 100000;
+    justify-content: center; align-items: center;
+    padding: 20px;
+}
+.account-overlay.active { display: flex; }
+
+.account-box {
+    background: white;
+    border-radius: 22px;
+    padding: 26px 22px;
+    max-width: 360px;
+    width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    position: relative;
+}
+
+.account-avatar {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6em; font-weight: 900;
+    margin: 0 auto 10px;
+    box-shadow: 0 4px 14px rgba(102,126,234,0.4);
+}
+
+.account-name { font-size: 1.15em; font-weight: 900; color: #333; margin-bottom: 2px; }
+.account-roll { font-size: 0.85em; color: #888; font-weight: 700; margin-bottom: 16px; }
+
+.account-info-grid {
+    display: grid;
+    gap: 8px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+.account-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 13px;
+}
+.account-info-label { color: #666; font-weight: 600; }
+.account-info-value { color: #222; font-weight: 800; }
+.account-info-value.due-soon { color: #dc2626; }
+.account-info-value.paid-ok  { color: #059669; }
+
+.account-qr-wrap {
+    background: #f9fafb;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+.account-qr-wrap img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.account-qr-caption { font-size: 11.5px; color: #888; font-weight: 600; margin-top: 8px; }
+
+.account-pay-btn {
+    display: block;
+    background: linear-gradient(135deg, #c8962a, #e4b84a);
+    color: #0a1628;
+    padding: 13px;
+    border-radius: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.account-close-btn {
+    background: none; border: none; color: #aaa;
+    font-size: 0.85em; cursor: pointer; padding: 8px; text-decoration: underline;
+}     
+
+
+   .bill-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e7eb;
+}
+.bill-card-unpaid {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+.bill-card-header {
+    display: flex; justify-content: space-between;
+    font-size: 12px; font-weight: 800; color: #667eea;
+    margin-bottom: 8px; padding-bottom: 6px;
+    border-bottom: 1px dashed #d1d5db;
+}
+.bill-card-row {
+    display: flex; justify-content: space-between;
+    font-size: 12.5px; color: #333; margin-bottom: 4px;
+}
+.bill-card-row span:first-child { color: #888; font-weight: 600; }
+.bill-card-row span:last-child { font-weight: 800; }
+.bill-card-footer {
+    text-align: center; margin-top: 8px; font-size: 11.5px;
+    font-weight: 800; color: #059669;
+}     
+
+        .bill-download-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 9px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.bill-download-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+        .account-close-x {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    line-height: 1;
+    color: #999;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+        .invoice-page {
+    position: fixed;
+    left: -9999px;
+    top: 0;
+    width: 780px;
+    background: #ffffff;
+    padding: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1f2937;
+}
+.inv-header { display: flex; align-items: center; gap: 18px; }
+.inv-logo { width: 70px; height: auto; }
+.inv-org-name { font-size: 24px; font-weight: 900; color: #4c1d95; }
+.inv-org-tagline { font-size: 12px; color: #666; margin-top: 2px; font-weight: 600; }
+.inv-org-contact { font-size: 11px; color: #888; margin-top: 6px; line-height: 1.6; }
+.inv-divider { height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); margin: 20px 0; border-radius: 3px; }
+.inv-meta-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 22px; }
+.inv-meta-label { font-size: 10px; color: #999; letter-spacing: 0.6px; font-weight: 700; }
+.inv-meta-value { font-size: 15px; font-weight: 800; color: #333; }
+.inv-stamp {
+    font-size: 18px; font-weight: 900; padding: 8px 22px;
+    border-radius: 8px; transform: rotate(8deg); letter-spacing: 1px;
+}
+.inv-stamp-paid { color: #059669; border: 3px solid #059669; background: rgba(5,150,105,0.08); }
+.inv-stamp-due { color: #dc2626; border: 3px solid #dc2626; background: rgba(220,38,38,0.08); }
+.inv-billto-box { background: #f9fafb; border-left: 4px solid #667eea; border-radius: 6px; padding: 14px 18px; margin-bottom: 22px; }
+.inv-billto-label { font-size: 10px; color: #667eea; font-weight: 800; letter-spacing: 0.6px; margin-bottom: 4px; }
+.inv-billto-name { font-size: 19px; font-weight: 900; color: #1f2937; }
+.inv-billto-sub { font-size: 12.5px; color: #555; margin-top: 3px; }
+.inv-table { width: 100%; border-collapse: collapse; margin-bottom: 6px; }
+.inv-table th {
+    background: #4c1d95; color: white; text-align: left;
+    font-size: 11px; padding: 10px 12px; letter-spacing: 0.4px;
+}
+.inv-table th:last-child, .inv-table td:last-child { text-align: right; }
+.inv-table td { padding: 12px; font-size: 13px; border-bottom: 1px solid #eee; }
+.inv-total-row td { font-weight: 900; font-size: 15px; background: #f9fafb; color: #1f2937; }
+.inv-paid-row {
+    display: flex; justify-content: space-between; font-size: 12.5px;
+    color: #059669; font-weight: 700; padding: 8px 12px; margin-bottom: 26px;
+}
+.inv-footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 40px; }
+.inv-signature { text-align: center; font-size: 11px; color: #666; }
+.inv-signature-line { width: 140px; border-top: 1.5px solid #999; margin-bottom: 6px; }
+.inv-thankyou { text-align: right; font-size: 12px; color: #764ba2; font-weight: 700; line-height: 1.6; max-width: 320px; }
+        
+    </style>
+</head>
+<body>
+<!-- ── Welcome Splash Screen ── -->
+<div class="splash-screen" id="splashScreen" style="display:none;">
+    <div class="splash-content">
+        <div style="display: inline-block; padding: 4px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <img id="welcomeRoundImg"
+                 src="https://raw.githubusercontent.com/happysangitanms/assets/main/welcome%20image.gif"
+                 alt="Welcome"
+                 style="display: block; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; object-position: center top;"
+                 onerror="this.parentElement.style.display='none'">
+        </div>
+<p id="splashWelcomeName" style="margin-top: 14px; font-size: 16px; color: white; font-weight: 900;"></p>
+<p style="margin-top: 6px; font-size: 15px; color: white; font-weight: 800;">
+            🌹 ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ ।🌹
+        </p>
+
+       <div id="dailyUpdateMsg" style="
+    margin-top: 14px;
+    padding: 14px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 16px;
+    max-width: 320px;
+    width: 100%;
+    max-height: 280px;
+    overflow-y: auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+"></div>
+
+      <button class="proceed-button" onclick="closeSplash()">ଆଗକୁ ଯାଆନ୍ତୁ ...</button>
+        <div id="feeReminderBox"></div>
+
+<button class="account-btn" onclick="openAccountModal()">
+    👤 ମୋର ଆକାଉଣ୍ଟ ଓ ପେମେଣ୍ଟ ବିବରଣୀ
+</button>
+    </div>
+</div>
+<!-- ── Roll Number Gate (determines which classes are unlocked) ── -->
+<div class="rollgate-screen" id="rollgateScreen">
+    <div class="rollgate-box">
+        <h2 style="text-align:center;">ଇ-ବିଦ୍ୟା ଏକାଡେମି ଦ୍ଵାରା ପ୍ରସ୍ତୁତ</h2>
+        <p style="text-align:center;"><b>🌹ଏହି ସ୍ଵତନ୍ତ୍ର ମଞ୍ଚରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ🌹</b></p>
+
+      <input type="password" id="rollgateInput" class="rollgate-input" placeholder="ଦୟାକରି ଏଠାରେ ଆପଣଙ୍କ ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ଲେଖନ୍ତୁ..." autocomplete="off">
+
+        <div class="gate-consent-box">
+            <input type="checkbox" id="rollgateConsent">
+            <label for="rollgateConsent">I agree to device tracking, usage monitoring, audio playback, internet access, data storage, and all <a href="https://evidya.de/" target="_blank">terms &amp; conditions</a> of E-Vidya Academy.</label>
+        </div>
+
+        <button class="rollgate-btn" id="rollgateBtn" onclick="checkRollGate()">ଆଗକୁ ଯାଆନ୍ତୁ ...</button>
+        <div class="rollgate-error" id="rollgateError"></div>
+
+        <button onclick="window.open('https://evidya-admin.pages.dev/school9/', '_blank')" style="width:100%; margin-top:10px; padding:12px; background:#FF6B6B; border:none; border-radius:8px; color:white; font-size:14px; font-weight:bold; cursor:pointer;">
+            📋 ଆପଣଙ୍କ ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ ।
+        </button>
+
+
+        <div style="margin-top:20px; text-align:center;">
+            <div style="display:inline-block; padding:10px; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); border-radius:50%; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+                <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/bot%20image-2.gif" alt="AI Assistant" style="display:block; width:100px; height:100px; border-radius:50%; object-fit:contain; background:white;">
+            </div>
+            <p style="margin-top:15px; font-size:14px; color:#000000; font-weight:bold;">
+                📚 ଶିକ୍ଷାରେ ଡିଜିଟାଲ ଯୁଗର ଆରମ୍ଭ – ଆପଣଙ୍କ ସହିତ ।
+            </p>
+        </div>
+
+        <div style="text-align:center; margin-top:12px;">
+            <a href="https://evidya.de/Contact/" target="_blank" rel="noopener noreferrer"
+               style="display:inline-block; padding:12px 28px; background:linear-gradient(135deg,#1e3a8a,#2563eb); color:#ffffff; font-size:0.9rem; font-weight:700; text-decoration:none; border-radius:50px; box-shadow:0 6px 20px rgba(37,99,235,0.35);">
+                🌹 ଆମ୍ଭ ସହିତ ଯୋଗାଯୋଗ ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । →
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ── PWA Install Modal (Android/Chrome) ── -->
+<div class="pwa-overlay" id="pwaModal">
+    <div class="pwa-box">
+        <div class="pwa-icon">📲</div>
+        <h2 class="pwa-title">Install App</h2>
+        <p class="pwa-sub">Install this app on your device for quick and easy access anytime!</p>
+        <button class="pwa-install" onclick="doInstall()">⬇️ Install Now</button>
+        <button class="pwa-dismiss" onclick="dismissPwa()">Not Now</button>
+    </div>
+</div>
+
+<!-- ── iOS Install Instructions Modal ── -->
+<div class="pwa-overlay" id="iosModal">
+    <div class="pwa-box">
+        <div class="pwa-icon">📱</div>
+        <h2 class="pwa-title">Install App</h2>
+        <p class="pwa-sub">Add E-Vidya Academy to your Home Screen for quick access — just like a real app!</p>
+        <div class="ios-steps">
+            <div class="ios-step"><span class="ios-step-num">1</span><span>Tap the <b>Share</b> button <span class="ios-step-icon">⬆️</span> below</span></div>
+            <div class="ios-step"><span class="ios-step-num">2</span><span>Scroll down the menu</span></div>
+            <div class="ios-step"><span class="ios-step-num">3</span><span>Tap <b>"Add to Home Screen"</b></span></div>
+            <div class="ios-step"><span class="ios-step-num">4</span><span>Tap <b>"Add"</b> — Done! 🎉</span></div>
+        </div>
+        <button class="pwa-dismiss" onclick="dismissIos()">Got it</button>
+    </div>
+</div>
+
+
+<!-- ── Student Account Modal ── -->
+<div class="account-overlay" id="accountModal">
+<div class="account-box">
+    <button class="account-close-x" onclick="closeAccountModal()">&times;</button>
+    <div class="account-avatar" id="accountAvatar">?</div>
+        <div class="account-name" id="accountName">—</div>
+        <div class="account-roll" id="accountRoll">Roll: —</div>
+
+        <div class="account-info-grid">
+            <div class="account-info-row">
+                <span class="account-info-label">📅 ଯୋଗଦାନ ତାରିଖ</span>
+                <span class="account-info-value" id="accountJoinDate">—</span>
+            </div>
+            <div class="account-info-row">
+                <span class="account-info-label">💰 ମାସିକ ଫି</span>
+                <span class="account-info-value">₹250</span>
+            </div>
+            
+  <div class="account-info-row">
+                <span class="account-info-label">⏳ ପରବର୍ତ୍ତୀ ପେମେଣ୍ଟ</span>
+                <span class="account-info-value" id="accountNextDue">—</span>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-bottom:14px;">
+            <a href="#" onclick="event.preventDefault(); openBillHistory();" style="color:#667eea; font-size:13px; font-weight:700; text-decoration:underline;">
+                🧾 ପୂର୍ବ ପେମେଣ୍ଟ ଗୁଡ଼ିକର ବିଲ୍ ଦେଖନ୍ତୁ
+            </a>
+        </div>
+
+<div class="account-qr-wrap">
+    <img id="accountQrImg" src="https://raw.githubusercontent.com/happysangitanms/assets/main/QR%20of%20SR.jpeg" alt="Payment QR">
+    <div class="account-qr-caption">ଉପରୋକ୍ତ QR କୋଡ୍ ସ୍କାନ୍ କରି ₹250 ପେମେଣ୍ଟ କରନ୍ତୁ</div>
+</div>
+        <button class="account-close-btn" onclick="closeAccountModal()">ବନ୍ଦ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । </button>
+    </div>
+</div>
+
+
+<!-- ── Hidden Professional Invoice Template (used for PDF generation) ── -->
+<div id="invoiceTemplate" class="invoice-page">
+    <div class="inv-header">
+        <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/LOGO.png" class="inv-logo" alt="Logo">
+        <div class="inv-org-info">
+            <div class="inv-org-name">E-Vidya Academy</div>
+            <div class="inv-org-tagline">Digital Learning • Class IX Supplementary Material</div>
+            <div class="inv-org-contact">
+                Bhadrak, Odisha<br>
+                📞 6372296357 &nbsp;|&nbsp; ✉️ evidya2026@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <div class="inv-divider"></div>
+
+    <div class="inv-meta-row">
+        <div>
+            <div class="inv-meta-label">INVOICE NO.</div>
+            <div class="inv-meta-value" id="invNumber">—</div>
+            <div class="inv-meta-label" style="margin-top:8px;">DATE</div>
+            <div class="inv-meta-value" id="invDate">—</div>
+        </div>
+        <div class="inv-stamp" id="invStamp">—</div>
+    </div>
+
+    <div class="inv-billto-box">
+        <div class="inv-billto-label">BILL TO (Parent/Guardian)</div>
+        <div class="inv-billto-name" id="invGuardianName">—</div>
+        <div class="inv-billto-sub">Contact: <span id="invPhone">—</span></div>
+        <div class="inv-billto-sub">Name of the Parent/Guardian: <span id="invStudentName">—</span> &nbsp;(Student Code. <span id="invRoll">—</span>)</div>
+    </div>
+
+    <table class="inv-table">
+        <thead>
+            <tr><th>DESCRIPTION</th><th>BILLING PERIOD</th><th>AMOUNT</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="invPeriodDesc">—</td>
+                <td id="invDueDate">—</td>
+                <td id="invAmount">—</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="inv-total-row"><td colspan="2">TOTAL</td><td id="invTotal">—</td></tr>
+        </tfoot>
+    </table>
+
+    <div class="inv-paid-row" id="invPaidDateRow">
+        <span>Payment Received On</span><span id="invPaidDate">—</span>
+    </div>
+
+    <div class="inv-footer">
+       <div class="inv-signature">
+            <div style="font-size:14px; font-weight:700; color:#1f2937; margin-bottom:2px;">K. ROUT</div>
+            <div class="inv-signature-line"></div>
+            <div>Authorized Signatory</div>
+            <div style="font-size:10px; margin-top:4px; line-height:1.5; color:#555;">
+        
+            </div>
+        </div>
+        <div class="inv-thankyou">
+            🌹 Thank you for being a part of E-Vidya Academy! 🌹<br>
+            <span style="font-size:9px;color:#999;">This is a computer-generated invoice and does not require a physical signature.</span>
+        </div>
+    </div>
+</div>
+    
+<!-- ── Payment Bill History Modal ── -->
+<div class="account-overlay" id="billHistoryModal">
+    <div class="account-box">
+        <button class="account-close-x" onclick="closeBillHistory()">&times;</button>
+        <div class="account-name" style="margin-bottom:14px;">🧾 ପେମେଣ୍ଟ ବିଲ୍ ଗୁଡ଼ିକ</div>
+        <div id="billListWrap" style="text-align:left;"></div>
+        <button class="account-close-btn" onclick="closeBillHistory()">Close</button>
+    </div>
+</div>
+    
+<!-- ── PWA Floating Button ── -->
+<button id="pwaBtn" onclick="doInstall()">⬇️ Install App</button>
+<button id="iosInstallBtn" onclick="showIosModal()">📱 Install App</button>
+
+<div class="container">
+
+    <div class="clone-container" id="cloneContainer">
+        <a href="#" class="clone-card" id="cloneCard">
+            <div class="clone-instruction">👆 Click to Enter</div>
+            <div class="clone-number">Class 1</div>
+            <div class="clone-title">Introduction</div>
+            <div class="clone-prompt">କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ →</div>
+        </a>
+    </div>
+
+    <!-- ── Code-2 feature: Logo ── -->
+    <div class="logo-wrap">
+        <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/LOGO.png"
+             alt="E-Vidya Academy"
+             onerror="this.style.display='none'">
+    </div>
+
+    <h1>📚 Supplementary Material 📚<br>
+        Digital Classes for Class-9 Students<br>
+        🌹 E-Vidya Academy 🌹<br>
+    </h1>
+
+
+
+    <div class="button-container">
+        <button class="back-button" id="backButton" style="display:none;">
+            <span class="back-icon">←</span>
+            <span id="backButtonText">Back</span>
+        </button>
+    </div>
+
+    <p class="subtitle" id="subtitle">Select a subject to begin</p>
+
+    <div class="search-box">
+        <input type="text" id="searchInput"
+               placeholder="🔍 Search for a class or subject..."
+               autocomplete="off">
+    </div>
+
+    <div class="grid" id="mainGrid"></div>
+
+    <div class="no-results" id="noResults">
+        No results found matching your search.
+    </div>
+
+</div><!-- /container -->
+
+<script>
+    /* ════════════════════════════════════════════
+       FIREBASE + ROLL GATE
+    ════════════════════════════════════════════ */
+    const firebaseConfig = {
+        apiKey: "AIzaSyA3-rvQJ1g9K-1l8-_PXX8IffG8W4qU7AE",
+        authDomain: "evidya-academy.firebaseapp.com",
+        projectId: "evidya-academy",
+        storageBucket: "evidya-academy.firebasestorage.app",
+        messagingSenderId: "86172698431",
+        appId: "1:86172698431:web:eb3bd5b2887cda88eb358a"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const gateDb = firebase.firestore();
+    const GATE_CLASS_NAME = "school9";
+
+ let studentRegisteredAt = null;
+let unlockedClassCount = 0;
+let currentStudentData = null;
+
+    function computeUnlockedCount(registeredAtISO) {
+        if (!registeredAtISO) return 1;
+
+        function dateOnly(d) {
+            return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+        }
+
+        const start = dateOnly(new Date(registeredAtISO));
+        const today = dateOnly(new Date());
+
+        let count = 1; // registration day = Class 1
+        let cursor = new Date(start);
+
+        while (cursor < today) {
+            cursor.setDate(cursor.getDate() + 1);
+            if (cursor.getDay() !== 0) count++; // skip Sundays
+        }
+
+        return count;
+    }
+
+    function getNextUnlockDateText() {
+        let d = new Date();
+        d.setDate(d.getDate() + 1);
+        while (d.getDay() === 0) d.setDate(d.getDate() + 1);
+        return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+    }
+
+
+/* ════════════════════════════════════════════
+   FEE / PAYMENT HELPERS
+════════════════════════════════════════════ */
+const MONTHLY_FEE = 250;
+
+// Adds N months to a date, keeping the same day-of-month
+// (safely handles months that are shorter, e.g. joined on the 31st)
+function addMonthsSafe(date, months) {
+    const d = new Date(date);
+    const targetMonth = d.getMonth() + months;
+    const day = d.getDate();
+    const candidate = new Date(d.getFullYear(), targetMonth, 1);
+    const lastDayOfTargetMonth = new Date(candidate.getFullYear(), candidate.getMonth() + 1, 0).getDate();
+    candidate.setDate(Math.min(day, lastDayOfTargetMonth));
+    return candidate;
+}
+
+// Finds the next upcoming due date (same day-of-month as joining, recurring monthly)
+function getNextPaymentDate(registeredAtISO) {
+    const start = new Date(registeredAtISO);
+    const today = new Date();
+    let months = 1;
+    let next = addMonthsSafe(start, months);
+    while (next <= today) {
+        months++;
+        next = addMonthsSafe(start, months);
+    }
+    return next;
+}
+
+function formatDateOdia(date) {
+    return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function daysUntil(date) {
+    const d1 = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.round((d1 - today) / 86400000);
+}
+
+/* ════════════════════════════════════════════
+   ACCOUNT MODAL
+════════════════════════════════════════════ */
+function openAccountModal() {
+    if (!currentStudentData) return;
+
+    const nextDue = getNextPaymentDate(currentStudentData.registeredAt);
+    const remaining = daysUntil(nextDue);
+
+    document.getElementById('accountAvatar').textContent =
+        currentStudentData.name.trim().charAt(0).toUpperCase();
+    document.getElementById('accountName').textContent = currentStudentData.name;
+    document.getElementById('accountRoll').textContent = 'Roll: ' + currentStudentData.rollNumber;
+    document.getElementById('accountJoinDate').textContent =
+        formatDateOdia(new Date(currentStudentData.registeredAt));
+
+    const dueEl = document.getElementById('accountNextDue');
+    dueEl.textContent = formatDateOdia(nextDue) + (remaining <= 3 ? ' ⚠️' : '');
+    dueEl.className = 'account-info-value ' + (remaining <= 3 ? 'due-soon' : 'paid-ok');
+
+    // QR encodes a link to your payment page, tagged with the roll number.
+    // If you have a fixed UPI ID, you can swap qrData for a UPI deep link instead — see note below.
+  
+
+    document.getElementById('accountModal').classList.add('active');
+}
+
+function closeAccountModal() {
+    document.getElementById('accountModal').classList.remove('active');
+}
+
+  function getBillPeriods(registeredAtISO) {
+    function dateOnly(d) {
+        return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    }
+      
+    const start = new Date(registeredAtISO);
+    const todayOnly = dateOnly(new Date());
+    const periods = [];
+    let periodNum = 1;
+    let monthOffset = 0;
+    let due = addMonthsSafe(start, monthOffset);
+    while (dateOnly(due) <= todayOnly) {
+        periods.push({ index: periodNum, dueDate: due });
+        periodNum++;
+        monthOffset++;
+        due = addMonthsSafe(start, monthOffset);
+    }
+    return periods;
+}
+
+
+function getPeriodEndDate(registeredAtISO, period) {
+    const start = new Date(registeredAtISO);
+    const end = addMonthsSafe(start, period.index);
+    end.setDate(end.getDate() - 1);
+    return end;
+}
+
+    
+async function openBillHistory() {
+    document.getElementById('billHistoryModal').classList.add('active');
+    const wrap = document.getElementById('billListWrap');
+    wrap.innerHTML = '<div style="text-align:center;color:#888;padding:20px;">⏳ ଲୋଡ୍ ହେଉଛି...</div>';
+
+    try {
+        const snap = await gateDb.collection('students')
+            .doc(currentStudentData.rollNumber)
+            .collection('payments')
+            .orderBy('paidAt', 'asc')
+            .get();
+
+        const payments = snap.docs.map(d => d.data());
+        const paidCount = payments.length;
+        const periods = getBillPeriods(currentStudentData.registeredAt);
+
+        window.currentBillPeriods = periods;
+        window.currentBillPayments = payments;
+        window.currentBillPaidCount = paidCount;
+
+        let html = '';
+        for (let i = periods.length - 1; i >= 0; i--) {
+            const period = periods[i];
+            const isPaid = period.index <= paidCount;
+            const receiptNo = period.index;
+
+            if (isPaid) {
+                const paidAt = payments[period.index - 1].paidAt;
+                html += `
+                    <div class="bill-card">
+                        <div class="bill-card-header">
+                            <span>🌹 E-Vidya Academy</span>
+                            <span>ରସିଦ୍ #${receiptNo}</span>
+                        </div>
+                       <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ :</span><span>${currentStudentData.guardianName}</span></div>
+                        <div class="bill-card-row"><span>ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ :</span><span>${currentStudentData.rollNumber}</span></div>
+                        <div class="bill-card-row"><span>ପେମେଣ୍ଟ ପରିମାଣ :</span><span>₹${MONTHLY_FEE}</span></div>
+                        <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି :</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
+                        <div class="bill-card-row"><span>ପେମେଣ୍ଟ ତାରିଖ :</span><span>${formatBillDate(paidAt)}</span></div>
+                       <div class="bill-card-footer">✅ ପେମେଣ୍ଟ ସଫଳ ହୋଇଛି..</div>
+                        <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ..</button>
+                    </div>`;
+            } else {
+                html += `
+                    <div class="bill-card bill-card-unpaid">
+                        <div class="bill-card-header">
+                            <span>🌹 E-Vidya Academy</span>
+                            <span>ବିଲ୍ #${receiptNo}</span>
+                        </div>
+                        <div class="bill-card-row"><span>ଅଭିଭାବକଙ୍କ ନାମ :</span><span>${currentStudentData.guardianName}</span></div>
+                        <div class="bill-card-row"><span>ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ :</span><span>${currentStudentData.rollNumber}</span></div>
+                        <div class="bill-card-row"><span>ପେମେଣ୍ଟ ପରିମାଣ :</span><span>₹${MONTHLY_FEE}</span></div>
+                        <div class="bill-card-row"><span>ବିଲିଂ ଅବଧି :</span><span>${formatBillDate(period.dueDate)} - ${formatBillDate(getPeriodEndDate(currentStudentData.registeredAt, period))}</span></div>
+                      <div class="bill-card-footer" style="color:#dc2626;">⏳ ପେମେଣ୍ଟ ବକୟା ଅଛି..</div>
+                        <button class="bill-download-btn" onclick="generateBillPDF(${period.index}, this)">📄⬇️ PDF ଡାଉନଲୋଡ୍ କରନ୍ତୁ..</button>
+                    </div>`;
+            }
+        }
+
+        wrap.innerHTML = html || '<div style="text-align:center;color:#888;padding:20px;">କୌଣସି ବିଲ୍ ନାହିଁ ।</div>';
+    } catch (err) {
+        console.error(err);
+        wrap.innerHTML = '<div style="text-align:center;color:#dc2626;padding:20px;">ବିଲ୍ ଲୋଡ୍ ହେବାରେ ସମସ୍ୟା ହେଲା ।</div>';
+    }
+}
+
+function closeBillHistory() {
+    document.getElementById('billHistoryModal').classList.remove('active');
+}
+
+function formatBillDate(dateInput) {
+    try {
+        return new Date(dateInput).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' });
+    } catch { return dateInput; }
+}
+
+async function generateBillPDF(periodIndex, btnEl) {
+    const period = window.currentBillPeriods.find(p => p.index === periodIndex);
+    if (!period) return;
+
+    const isPaid = periodIndex <= window.currentBillPaidCount;
+    const paidAt = isPaid ? window.currentBillPayments[periodIndex - 1].paidAt : null;
+
+    document.getElementById('invNumber').textContent = 'EVA-' + currentStudentData.rollNumber + '-' + String(periodIndex).padStart(3, '0');
+    document.getElementById('invDate').textContent = formatBillDate(new Date());
+    document.getElementById('invGuardianName').textContent = currentStudentData.guardianName;
+    document.getElementById('invPhone').textContent = currentStudentData.phone;
+    document.getElementById('invStudentName').textContent = currentStudentData.name;
+    document.getElementById('invRoll').textContent = currentStudentData.rollNumber;
+    document.getElementById('invPeriodDesc').textContent = 'Monthly Learning Fee of Digital Book — Class IX';
+    const periodEnd = getPeriodEndDate(currentStudentData.registeredAt, period);
+    document.getElementById('invDueDate').textContent = formatBillDate(period.dueDate) + ' - ' + formatBillDate(periodEnd);
+    document.getElementById('invAmount').textContent = '₹' + MONTHLY_FEE;
+    document.getElementById('invTotal').textContent = '₹' + MONTHLY_FEE;
+
+    const stampEl = document.getElementById('invStamp');
+    const paidRow = document.getElementById('invPaidDateRow');
+    if (isPaid) {
+        stampEl.textContent = '✅ PAID';
+        stampEl.className = 'inv-stamp inv-stamp-paid';
+        paidRow.style.display = 'flex';
+        document.getElementById('invPaidDate').textContent = formatBillDate(paidAt);
+    } else {
+        stampEl.textContent = '⏳ DUE';
+        stampEl.className = 'inv-stamp inv-stamp-due';
+        paidRow.style.display = 'none';
+    }
+
+    const originalLabel = btnEl.textContent;
+    btnEl.textContent = '⏳ ତିଆରି ହେଉଛି...';
+    btnEl.disabled = true;
+
+    try {
+        const invoiceEl = document.getElementById('invoiceTemplate');
+        const canvas = await html2canvas(invoiceEl, { scale: 2, useCORS: true });
+        const imgData = canvas.toDataURL('image/png');
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        pdf.save('EVidya_Bill_' + currentStudentData.rollNumber + '_' + periodIndex + '.pdf');
+    } catch (err) {
+        console.error(err);
+        alert('PDF ତିଆରି ହେବାରେ ସମସ୍ୟା ହେଲା । ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ ।');
+    } finally {
+        btnEl.textContent = originalLabel;
+        btnEl.disabled = false;
+    }
+}
+    
+/* ════════════════════════════════════════════
+   FEE REMINDER BANNER (auto, starts 3 days before due date)
+════════════════════════════════════════════ */
+function renderFeeReminder() {
+    const box = document.getElementById('feeReminderBox');
+    if (!box || !currentStudentData) return;
+
+    const nextDue = getNextPaymentDate(currentStudentData.registeredAt);
+    const remaining = daysUntil(nextDue);
+
+    if (remaining > 3) {
+        box.innerHTML = '';
+        return;
+    }
+
+    const overdue = remaining < 0;
+    const text = overdue
+        ? `ଆପଣଙ୍କ ମାସିକ ଫି (₹${MONTHLY_FEE}) ର ଦେୟ ତାରିଖ ପାର ହୋଇଯାଇଛି । ଦୟାକରି ଶୀଘ୍ର ପେମେଣ୍ଟ କରନ୍ତୁ ।`
+        : remaining === 0
+            ? `ଆଜି ଆପଣଙ୍କ ମାସିକ ଫି (₹${MONTHLY_FEE}) ଦେୟ ତାରିଖ ।`
+            : `ଆପଣଙ୍କ ମାସିକ ଫି (₹${MONTHLY_FEE}) ଆଉ ${remaining} ଦିନରେ ଦେୟ ହେବ (${formatDateOdia(nextDue)}) ।`;
+
+    box.innerHTML = `
+        <div class="fee-reminder-card ${overdue ? 'overdue' : ''}">
+            <div class="fee-reminder-icon">${overdue ? '🚨' : '⏰'}</div>
+            <div class="fee-reminder-title">${overdue ? 'ଫି ଦେୟ ତାରିଖ ପାର ହୋଇଛି !' : 'ଫି ପେମେଣ୍ଟ ମନେ ପକାଇବା'}</div>
+            <div class="fee-reminder-text">${text}</div>
+            <a class="fee-reminder-btn" href="#" onclick="event.preventDefault(); openAccountModal();">ବିବରଣୀ ଓ QR ଦେଖନ୍ତୁ →</a>
+        </div>
+    `;
+}
+
+    
+
+    async function checkRollGate() {
+        const rollNumber = document.getElementById('rollgateInput').value.trim();
+        const errorDiv = document.getElementById('rollgateError');
+        const btn = document.getElementById('rollgateBtn');
+        errorDiv.textContent = '';
+
+        if (!rollNumber) {
+            errorDiv.textContent = 'ଦୟାକରି ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ଲେଖନ୍ତୁ ।';
+            return;
+        }
+
+        if (!document.getElementById('rollgateConsent').checked) {
+            errorDiv.textContent = 'ଦୟାକରି ସର୍ତ୍ତାବଳୀରେ ସହମତି ଜଣାଇବା ପାଇଁ ଛୋଟ ଚେକ୍-ବାକ୍ସ ରେ କ୍ଲିକ୍ କରନ୍ତୁ ।';
+            return;
+        }
+
+        
+        btn.disabled = true;
+        btn.textContent = '⏳ ଅପେକ୍ଷା କରନ୍ତୁ...';
+
+        try {
+            const doc = await gateDb.collection('students').doc(rollNumber).get();
+
+            if (!doc.exists) {
+                errorDiv.textContent = 'ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ମିଳିଲା ନାହିଁ ।';
+                btn.disabled = false;
+                btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+                return;
+            }
+
+            const data = doc.data();
+
+            if (data.className !== GATE_CLASS_NAME) {
+                errorDiv.textContent = 'ଏହି ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ଏହି କ୍ଲାସ୍ ପାଇଁ ନୁହେଁ ।';
+                btn.disabled = false;
+                btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+                return;
+            }
+
+            if (data.status === 'BLOCKED') {
+                errorDiv.textContent = 'ଆପଣଙ୍କ ଆକ୍ସେସ୍ ବ୍ଲକ୍ ହୋଇଛି । ଅଫିସ୍ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ।';
+                btn.disabled = false;
+                btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+                return;
+            }
+
+            if (data.registeredAt) {
+                const paySnap = await gateDb.collection('students').doc(rollNumber).collection('payments').get();
+                const paidCount = paySnap.size;
+                const periods = getBillPeriods(data.registeredAt);
+                if (periods.length > 0 && paidCount < 1) {
+                    const graceEnd = new Date(periods[0].dueDate);
+                    graceEnd.setDate(graceEnd.getDate() + 3);
+                    if (new Date() > graceEnd) {
+                        try {
+                            await gateDb.collection('students').doc(rollNumber).update({
+                                status: 'BLOCKED', autoBlocked: true, autoBlockedAt: new Date().toISOString()
+                            });
+                        } catch (e) { console.error(e); }
+                        errorDiv.textContent = 'ଆପଣଙ୍କ ପ୍ରଥମ ମାସିକ ଫି ଦେୟ ତାରିଖ ଠାରୁ ୩ ଦିନ ପାର ହୋଇଥିବାରୁ ଆକ୍ସେସ୍ ବ୍ଲକ୍ ହୋଇଛି । ଦୟାକରି ପେମେଣ୍ଟ କରି ଅଫିସ୍ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ।';
+                        btn.disabled = false;
+                        btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+                        return;
+                    }
+                }
+            }
+
+          studentRegisteredAt = data.registeredAt || new Date().toISOString();
+            unlockedClassCount = computeUnlockedCount(studentRegisteredAt);
+
+          currentStudentData = {
+    rollNumber: rollNumber,
+    name: data.name || rollNumber,
+    guardianName: data.guardianName || data.name || rollNumber,
+    phone: data.phone || '—',
+    registeredAt: studentRegisteredAt
+};
+
+           try {
+                sessionStorage.setItem('gateRollNumber', rollNumber);
+                localStorage.setItem('userRollNumber', rollNumber);
+                localStorage.setItem('gateConsentGiven', '1');
+            } catch(e) {}
+            
+            showGateWelcome(data.name || rollNumber);
+        } catch (err) {
+            console.error(err);
+            errorDiv.textContent = 'ସଂଯୋଗ ସମସ୍ୟା । ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ ।';
+            btn.disabled = false;
+            btn.textContent = 'ଆଗକୁ ଯାଅନ୍ତୁ';
+        }
+    }
+
+
+function showGateWelcome(studentName) {
+    document.getElementById('rollgateScreen').style.display = 'none';
+
+    const nameEl = document.getElementById('splashWelcomeName');
+    if (nameEl) nameEl.textContent = '🌹 ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '! 🌹';
+
+   setDailyUpdateMessage();
+renderFeeReminder();
+
+    const splash = document.getElementById('splashScreen');
+    if (splash) {
+        splash.classList.remove('hide');
+        splash.style.display = 'flex';
+    }
+}
+    /* ════════════════════════════════════════════
+       DATA
+    ════════════════════════════════════════════ */
+
+const subjects = {
+    'FLO':   { name: 'ସାହିତ୍ୟ',            fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'FLOG':  { name: 'ଓଡିଆ ବ୍ଯାକରଣ',        fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SLE':   { name: 'ଇଂରାଜୀ',             fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SLEG':  { name: 'ଇଂରାଜୀ ବ୍ୟାକରଣ',      fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'TLS':   { name: 'ସଂସ୍କୃତ',             fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'TLSG':  { name: 'ସଂସ୍କୃତ ବ୍ୟାକରଣ',      fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'MTA':   { name: 'ବୀଜଗଣିତ',            fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'MTG':   { name: 'ଜ୍ୟାମିତି',            fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SCL':   { name: 'ଜୀବ ବିଜ୍ଞାନ',         fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SCP':   { name: 'ଭୌତିକ ବିଜ୍ଞାନ',       fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SSH':   { name: 'ଇତିହାସ',             fullName: 'ନବମ ଶ୍ରେଣୀ' },
+    'SSG':   { name: 'ଭୂଗୋଳ',              fullName: 'ନବମ ଶ୍ରେଣୀ' }
+};
+
+
+
+const MAINTENANCE = {
+    global: false,
+    subjects: {
+
+    'FLO':  false,
+    'FLOG': false,
+    'SLE': false,
+    'SLEG':  false,
+    'TLS':   false,
+    'TLSG': false,
+    'MTA':  false,
+    'MTG':  false,
+    'SCL': false,
+    'SCP': false,
+    'SSH': false,
+    'SSG': false,
+ 
+    },
+    
+    image: 'https://raw.githubusercontent.com/eguruOdisha/ASSETS/main/bot%20image-2.gif', // 👈 your image
+    message: {
+        title: '🛠️ Under Maintenance <br>(ମୁଁ ଅପ୍-ଡେଟ୍ ହେଉଛି ଆଜ୍ଞା) ',
+        text: 'କ୍ଲାସ୍ ଗୁଡିକର ଅପ୍-ଡେଟ୍ ପ୍ରକ୍ରିୟା ଜାରିରହିଛି । <br>ଦୟାକରି କିଛି ସମୟ ପରେ ଆସନ୍ତୁ ।'
+    }
+};
+    
+
+const classNames = {
+    'FLO-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1',
+    'FLOG-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'FLOG-2':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'FLOG-3':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'SLE-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1',
+    'SLEG-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1',
+    'TLS-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1',
+    'TLSG-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1',
+    'MTA-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ସେଟ୍‌ର ମୂଳ ଧାରଣା',
+    'MTG-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଜ୍ୟାମିତିର ପ୍ରାରମ୍ଭିକ ପରିଚୟ',
+    'SCP-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ପଦାର୍ଥ ଓ ତାହାର କଣିକା',
+    'SCP-2':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'SCP-3':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'SCP-4':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'SCL-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+     'SCL-2':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'SSH-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'SSH-2':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'SSH-3':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'SSG-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+    'SSG-2':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>',
+   'SSG-3':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br>'
+
+    
+};
+
+const classSchedule = {
+    'FLO-1':  { available: false },
+    'FLOG-1':  { available: true },
+    'FLOG-2':  { available:  true },
+    'FLOG-3':  { available:  true },
+    'SLE-1':  { available: false },
+    'SLEG-1':  { available: false },
+    'TLS-1':  { available: false },
+    'TLSG-1':  { available: false },
+    'MTA-1':  { available: true  },
+    'MTG-1':  { available: true  },
+    'SCL-1':  { available: true },
+    'SCL-2':  { available: true },
+    'SCP-1':  { available: true  },
+    'SCP-2':  { available: true  },
+    'SCP-3':  { available: true  },
+    'SCP-4':  { available: true  },
+    'SSH-1':  { available: true },
+    'SSH-2':  { available: true },
+    'SSH-3':  { available: true },
+    'SSG-1':  { available: true },
+    'SSG-2':  { available: true },
+    'SSG-3':  { available: true }
+};
+    /* ════════════════════════════════════════════
+       STATE
+    ════════════════════════════════════════════ */
+    let viewMode = 'subjects';
+    let selectedSubject = null;
+    let selectedClass = null;
+
+    /* ════════════════════════════════════════════
+       HELPERS
+    ════════════════════════════════════════════ */
+    function parseDate(dateStr) {
+        return new Date(dateStr.replace(' ', 'T'));
+    }
+
+    function getTimeRemaining(releaseDate) {
+        const diff = parseDate(releaseDate) - new Date();
+        if (diff <= 0) return null;
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        return d > 0 ? `${d}d ${h}h` : h > 0 ? `${h}h ${m}m` : `${m}m`;
+    }
+
+    function formatReleaseDate(dateStr) {
+        return parseDate(dateStr).toLocaleString('en-US', { month:'short', day:'numeric', hour:'numeric', minute:'2-digit', hour12:true });
+    }
+
+   function isClassAvailable(classKey) {
+        const classNum = parseInt(classKey.split('-').pop());
+        if (unlockedClassCount > 0 && classNum > unlockedClassCount) return false;
+
+        const s = classSchedule[classKey];
+        if (!s) return true;
+        if (s.available) return true;
+        if (s.releaseDate) return new Date() >= parseDate(s.releaseDate);
+        return true;
+    }
+
+
+function createMaintenanceCard() {
+    const div = document.createElement('div');
+    div.className = 'maintenance-box';
+    div.innerHTML = `
+        ${MAINTENANCE.image ? `<img src="${MAINTENANCE.image}" alt="Maintenance" class="m-image" onerror="this.style.display='none'">` : `<div class="m-icon">🛠️</div>`}
+        <div class="m-title">${MAINTENANCE.message.title}</div>
+        <div class="m-text">${MAINTENANCE.message.text}</div>
+    `;
+    return div;
+}
+
+    
+    /* ════════════════════════════════════════════
+       CARD BUILDERS
+    ════════════════════════════════════════════ */
+
+    /* ── Code-2 feature: count available classes per subject ── */
+    function countAvailableClasses(subjectKey) {
+        return Object.keys(classNames)
+            .filter(k => k.startsWith(subjectKey + '-') && isClassAvailable(k))
+            .length;
+    }
+
+    function createSubjectCard(subjectKey) {
+        const sub   = subjects[subjectKey];
+        const count = countAvailableClasses(subjectKey);
+
+        const card = document.createElement('div');
+        card.className = 'subject-card';
+        card.setAttribute('data-subject', subjectKey);
+        card.setAttribute('data-search', (sub.name + ' ' + sub.fullName).toLowerCase());
+        card.onclick = () => showClasses(subjectKey);
+
+        /* Code-2 feature: count badge added below full name */
+        card.innerHTML = `
+            <div class="subject-name">${sub.name}</div>
+            <div class="subject-full-name">(${sub.fullName})</div>
+            <div class="subject-count">${count} Class${count !== 1 ? 'es' : ''} Available</div>
+        `;
+        return card;
+    }
+
+    function createClassCard(subjectKey, classNum) {
+        const classKey  = `${subjectKey}-${classNum}`;
+        const className = classNames[classKey] || `Class ${classNum}`;
+        const schedule  = classSchedule[classKey];
+        const available = isClassAvailable(classKey);
+
+        const card = document.createElement('div');
+        card.className = 'class-card';
+        card.setAttribute('data-class', classKey);
+        card.setAttribute('data-name', className);
+        card.setAttribute('data-search', ('class ' + classNum + ' ' + className).toLowerCase());
+
+        if (available) {
+            card.onclick = () => showCloneCard(subjectKey, classNum, className);
+            if (selectedClass === classKey) card.classList.add('selected');
+            card.innerHTML = `
+                <div class="class-number">Class ${classNum}</div>
+                <div class="class-title">${className}${selectedClass === classKey ? '<span class="checkmark">✓</span>' : ''}</div>
+            `;
+        } else {
+            card.classList.add('locked');
+            const classNumForMsg = parseInt(classKey.split('-').pop());
+            const isDailyLock = unlockedClassCount > 0 && classNumForMsg > unlockedClassCount;
+
+            if (isDailyLock) {
+                card.innerHTML = `
+                    <div class="lock-icon">🔒</div>
+                    <div class="class-number">Class ${classNum}</div>
+                    <div class="class-title">${className}</div>
+                    <div class="scheduled-message">ଆପଣଙ୍କ ପାଇଁ ଏହି କ୍ଲାସ୍ ଏପର୍ଯ୍ୟନ୍ତ ଅନଲକ୍ ହୋଇନାହିଁ ।<br>ପରବର୍ତ୍ତୀ କ୍ଲାସ୍: ${getNextUnlockDateText()}</div>
+                `;
+            } else {
+                const countdown = getTimeRemaining(schedule.releaseDate);
+                card.innerHTML = `
+                    <div class="lock-icon">🔒</div>
+                    <div class="class-number">Class ${classNum}</div>
+                    <div class="class-title">${className}</div>
+                    <div class="scheduled-message">Available on<br>${formatReleaseDate(schedule.releaseDate)}</div>
+                    ${countdown ? `<div class="countdown">⏱️ ${countdown}</div>` : ''}
+                `;
+            }
+        }
+        return card;
+    }
+
+    /* ── Code-2 feature: Coming Soon placeholder card ── */
+    function createComingSoonCard() {
+        const div = document.createElement('div');
+        div.className = 'class-card coming-soon';
+        div.innerHTML = `
+            <div class="coming-icon">🔜</div>
+            <div class="class-number">Next Class</div>
+            <div class="coming-text">Coming Soon<br>ଶୀଘ୍ର ଆସୁଛି...</div>
+        `;
+        return div;
+    }
+
+    /* ════════════════════════════════════════════
+       VIEW: SUBJECTS
+    ════════════════════════════════════════════ */
+ function showSubjects() {
+    viewMode = 'subjects';
+    selectedSubject = null;
+    selectedClass = null;
+
+    document.getElementById('backButton').style.display = 'none';
+    document.getElementById('cloneContainer').classList.remove('active');
+    document.getElementById('searchInput').value = '';
+    document.getElementById('noResults').style.display = 'none';
+
+    const grid = document.getElementById('mainGrid');
+    grid.innerHTML = '';
+
+    if (MAINTENANCE.global) {
+        document.getElementById('subtitle').textContent = 'Site under maintenance';
+        document.getElementById('searchInput').style.display = 'none';
+        grid.appendChild(createMaintenanceCard());
+        return;
+    }
+    document.getElementById('searchInput').style.display = '';
+
+    document.getElementById('subtitle').textContent = 'Select a subject to begin';
+    for (const key in subjects) grid.appendChild(createSubjectCard(key));
+}
+    /* ════════════════════════════════════════════
+       VIEW: CLASSES
+    ════════════════════════════════════════════ */
+  function showClasses(subjectKey) {
+    viewMode = 'classes';
+    selectedSubject = subjectKey;
+
+    const sub = subjects[subjectKey];
+    document.getElementById('backButton').style.display = 'inline-flex';
+    document.getElementById('backButtonText').textContent = 'Back to Subjects';
+    document.getElementById('cloneContainer').classList.remove('active');
+    document.getElementById('searchInput').value = '';
+    document.getElementById('noResults').style.display = 'none';
+
+    const grid = document.getElementById('mainGrid');
+    grid.innerHTML = '';
+
+    // ── Maintenance check ──
+    if (MAINTENANCE.global || MAINTENANCE.subjects[subjectKey]) {
+        document.getElementById('subtitle').textContent = sub.fullName + ' — under maintenance';
+        document.getElementById('searchInput').style.display = 'none';
+        grid.appendChild(createMaintenanceCard());
+        return;
+    }
+    document.getElementById('searchInput').style.display = '';
+
+    document.getElementById('subtitle').textContent = sub.fullName;
+
+    Object.keys(classNames)
+        .filter(k => k.startsWith(subjectKey + '-'))
+        .filter(k => isClassAvailable(k))
+        .forEach(k => {
+            const num = k.split('-').pop();
+            grid.appendChild(createClassCard(subjectKey, num));
+        });
+
+    grid.appendChild(createComingSoonCard());
+}
+    /* ════════════════════════════════════════════
+       SHOW CLONE / ENTRY CARD
+    ════════════════════════════════════════════ */
+    function showCloneCard(subjectKey, classNum, className) {
+        const classKey = `${subjectKey}-${classNum}`;
+        selectedClass = classKey;
+
+        document.querySelectorAll('.class-card').forEach(c => c.classList.remove('selected'));
+        const sel = document.querySelector(`[data-class="${classKey}"]`);
+        if (sel) sel.classList.add('selected');
+
+        const oldCard = document.getElementById('cloneCard');
+        const newCard = oldCard.cloneNode(false);
+        oldCard.parentNode.replaceChild(newCard, oldCard);
+
+        newCard.href = `./${subjectKey}/CLASS-${classNum}/`;
+        newCard.innerHTML = `
+            <div class="clone-instruction">👆 Click to Enter</div>
+            <div class="clone-number">${subjectKey} - Class ${classNum}</div>
+            <div class="clone-title">${className}</div>
+            <div class="clone-prompt">କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ →</div>
+        `;
+
+        newCard.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!this.querySelector('.click-feedback')) {
+                const fb = document.createElement('div');
+                fb.className = 'click-feedback';
+                this.appendChild(fb);
+            }
+            this.classList.add('clicked');
+            setTimeout(() => {
+                this.classList.remove('clicked');
+                window.location.href = this.href;
+            }, 500);
+        });
+
+        document.getElementById('cloneContainer').classList.add('active');
+        setTimeout(() => {
+            document.getElementById('cloneContainer').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+    }
+
+    /* ════════════════════════════════════════════
+       BACK BUTTON
+    ════════════════════════════════════════════ */
+    document.getElementById('backButton').addEventListener('click', e => {
+        e.preventDefault();
+        showSubjects();
+    });
+
+    /* ════════════════════════════════════════════
+       SEARCH
+    ════════════════════════════════════════════ */
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        const noResults = document.getElementById('noResults');
+
+        if (!q) {
+            document.querySelectorAll('[data-search]').forEach(c => c.style.display = '');
+            noResults.style.display = 'none';
+            return;
+        }
+
+        let found = 0;
+        document.querySelectorAll('[data-search]').forEach(c => {
+            const match = c.getAttribute('data-search').includes(q);
+            c.style.display = match ? '' : 'none';
+            if (match) found++;
+        });
+        noResults.style.display = found ? 'none' : 'block';
+    });
+
+    /* ════════════════════════════════════════════
+       AUTO-REFRESH COUNTDOWN (every 60s)
+    ════════════════════════════════════════════ */
+    setInterval(() => {
+        if (viewMode === 'classes') showClasses(selectedSubject);
+    }, 60000);
+
+    /* ════════════════════════════════════════════
+       PWA — ANDROID / CHROME
+    ════════════════════════════════════════════ */
+    let deferredPrompt;
+
+    window.addEventListener('beforeinstallprompt', e => {
+        e.preventDefault();
+        deferredPrompt = e;
+        document.getElementById('pwaBtn').style.display = 'block';
+        document.getElementById('pwaModal').classList.add('active');
+    });
+
+    function doInstall() {
+        dismissPwa();
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(r => {
+                if (r.outcome === 'accepted') document.getElementById('pwaBtn').style.display = 'none';
+                deferredPrompt = null;
+            });
+        }
+    }
+
+    function dismissPwa() {
+        document.getElementById('pwaModal').classList.remove('active');
+    }
+
+    window.addEventListener('appinstalled', () => {
+        document.getElementById('pwaBtn').style.display = 'none';
+        dismissPwa();
+        deferredPrompt = null;
+    });
+
+
+    /* ════════════════════════════════════════════
+       PWA — iOS / iPhone / iPad (manual instructions)
+    ════════════════════════════════════════════ */
+    function isIos() {
+        return /iphone|ipad|ipod/i.test(window.navigator.userAgent);
+    }
+
+    function isInStandaloneMode() {
+        return ('standalone' in window.navigator) && (window.navigator.standalone);
+    }
+
+    function showIosModal() {
+        document.getElementById('iosModal').classList.add('active');
+    }
+
+    function dismissIos() {
+        document.getElementById('iosModal').classList.remove('active');
+        try { localStorage.setItem('iosInstallDismissed', '1'); } catch (e) {}
+    }
+
+    if (isIos() && !isInStandaloneMode()) {
+        let alreadyDismissed = false;
+        try { alreadyDismissed = localStorage.getItem('iosInstallDismissed') === '1'; } catch (e) {}
+
+        document.getElementById('iosInstallBtn').style.display = 'block';
+
+      if (!alreadyDismissed) {
+    showIosModal();
+}
+    }
+
+    /* ════════════════════════════════════════════
+       SERVICE WORKER
+    ════════════════════════════════════════════ */
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then(r => console.log('SW registered:', r.scope))
+                .catch(e => console.log('SW error:', e));
+        });
+    }
+
+   /* ════════════════════════════════════════════
+       INIT
+    ════════════════════════════════════════════ */
+    // showSubjects() now runs after the roll-number gate succeeds (see checkRollGate above)
+
+  function playWelcomeVideo() {
+    document.getElementById('videoThumbWrap').style.display = 'none';
+    const embedWrap = document.getElementById('videoEmbedWrap');
+    embedWrap.style.display = 'block';
+    embedWrap.innerHTML = '<iframe src="https://www.youtube.com/embed/WFwdjNk5JT8?autoplay=1" title="Tutorial" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+}
+
+function closeSplash() {
+    const splash = document.getElementById('splashScreen');
+    if (splash) {
+        splash.classList.add('hide');
+        setTimeout(() => splash.remove(), 600);
+    }
+    showSubjects();
+}
+
+const dailyCardColors = [
+    ['#f59e0b', '#d97706'], ['#ec4899', '#be185d'], ['#10b981', '#059669'],
+    ['#3b82f6', '#1d4ed8'], ['#8b5cf6', '#6d28d9'], ['#ef4444', '#b91c1c'],
+    ['#14b8a6', '#0f766e'], ['#f97316', '#c2410c']
+];
+
+function setDailyUpdateMessage() {
+    const msgBox = document.getElementById('dailyUpdateMsg');
+    if (!msgBox) return;
+
+    const isSunday = new Date().getDay() === 0;
+
+    if (isSunday) {
+        msgBox.innerHTML = `
+            <div style="text-align:center; padding:14px 8px;">
+                <div style="font-size:26px; margin-bottom:6px;">😴</div>
+                <div style="color:white; font-size:14px; font-weight:800; line-height:1.6;">
+                    ଆଜି ରବିବାର, ତେଣୁ ନୂତନ କ୍ଲାସ୍ ନାହିଁ ।<br>ଅବସର ନିଅନ୍ତୁ, ଆସନ୍ତାକାଲି ପୁଣି ନୂଆ ପାଠ ପଢିବା । ଆପଣ ପୂର୍ବ କ୍ଲାସ୍ ଗୁଡ଼ିକ ରିଭିଜନ୍ କରିପାରିବେ ।
+                </div>
+            </div>`;
+        return;
+    }
+
+    const todaysClassNum = unlockedClassCount || 1;
+    let cardsHtml = '';
+    let count = 0;
+
+    for (const subjectKey in subjects) {
+        const key = subjectKey + '-' + todaysClassNum;
+        if (classNames[key]) {
+            const colors = dailyCardColors[count % dailyCardColors.length];
+            const delay = (count * 0.08).toFixed(2);
+            cardsHtml += `
+                <div class="daily-card" style="
+                    background: linear-gradient(135deg, ${colors[0]}, ${colors[1]});
+                    animation-delay: ${delay}s;
+                ">
+                    <div class="daily-card-badge">Class ${todaysClassNum}</div>
+                    <div class="daily-card-subject">${subjects[subjectKey].name}</div>
+                    <div class="daily-card-title">${classNames[key]}</div>
+                </div>`;
+            count++;
+        }
+    }
+
+    if (count === 0) {
+        msgBox.innerHTML = `
+            <div style="text-align:center; padding:14px 8px;">
+                <div style="font-size:26px; margin-bottom:6px;">📭</div>
+                <div style="color:white; font-size:14px; font-weight:800; line-height:1.6;">
+                    ଆଜି ପାଇଁ ନୂତନ କ୍ଲାସ୍ ଉପଲବ୍ଧ ନାହିଁ ।<br>ଆପଣ ପୂର୍ବ କ୍ଲାସ୍ ଗୁଡ଼ିକ ପଢିପାରିବେ ।
+                </div>
+            </div>`;
+        return;
+    }
+
+    msgBox.innerHTML = `
+        <div style="text-align:center; color:white; font-size:14px; font-weight:900; margin-bottom:10px; letter-spacing:0.3px;">
+            🔔 ଆଜିର ନୂତନ କ୍ଲାସ୍ ଗୁଡ଼ିକ :
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">${cardsHtml}</div>
+    `;
+}
+
+setDailyUpdateMessage();
+(function() {
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const urlCode = params.get('code');
+        const savedRoll = urlCode || localStorage.getItem('userRollNumber');
+        const savedConsent = localStorage.getItem('gateConsentGiven');
+        if (savedRoll) {
+            document.getElementById('rollgateInput').value = savedRoll;
+        }
+        if (savedConsent === '1') {
+            document.getElementById('rollgateConsent').checked = true;
+        }
+        if (urlCode) {
+            history.replaceState(null, '', window.location.pathname);
+        }
+    } catch(e) {}
+})();
+</script>
+
+</body>
+</html>
