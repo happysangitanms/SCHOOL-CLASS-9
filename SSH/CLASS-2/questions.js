@@ -1,4 +1,4 @@
-const summary questions: [
+const summaryquestions: [
 {
 audio: "",
 question: "ଉପନିବେଶବାଦ କାହାକୁ କୁହାଯାଏ ?",
