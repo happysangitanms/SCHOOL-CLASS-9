@@ -43,6 +43,8 @@ const firebaseConfig = {
     appId: "1:86172698431:web:eb3bd5b2887cda88eb358a"
 };
 firebase.initializeApp(firebaseConfig);
+  const appCheck = firebase.appCheck();
+appCheck.activate('6LeJgWMtAAAAAOeGJV17W9m1RIoBpixRTMPAKYou', true);
 const db = firebase.firestore();
 
 const FALLBACK_AUDIO_URL = "https://raw.githubusercontent.com/happysangitanms/assets/main/fallback%20audio.m4a";
